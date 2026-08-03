@@ -1,0 +1,21 @@
+# PharmaGlobalEng
+
+PharmaGlobalEng provides worldwide pharmaceutical tablet tooling restoration, precision polishing, surface engineering, coating evaluation, engraving optimization, and tablet sticking and picking support.
+
+## Primary website
+- https://www.pharmaglobaleng.com/
+
+## Core topics
+- Pharmaceutical tablet tooling
+- Tablet punch restoration
+- Tablet punch polishing
+- Tablet sticking
+- Tablet picking
+- Pharmaceutical surface engineering
+- Tablet punch coatings
+- Compression tooling support
+- Engraving optimization
+- Tooling evaluation
+
+## Contact
+- info@pharmaglobaleng.com
