@@ -1,17 +1,10 @@
 # PharmaGlobalEng
 
-## Batch 1 flagship resources
-- Tablet Sticking & Picking: https://pharmaglobaleng.com/solutions/tablet-sticking-picking.html
-- Tablet Punch Restoration: https://pharmaglobaleng.com/services/tablet-punch-restoration.html
-- Pharmaceutical Surface Engineering: https://pharmaglobaleng.com/services/surface-engineering.html
-- Tablet Punch Coatings: https://pharmaglobaleng.com/services/tablet-punch-coatings.html
-- Tooling Performance Evaluation: https://pharmaglobaleng.com/services/tooling-evaluation.html
+## Batch 3 flagship resources
+- Tablet Capping Solutions: https://pharmaglobaleng.com/solutions/tablet-capping.html
+- Tablet Lamination Solutions: https://pharmaglobaleng.com/solutions/tablet-lamination.html
+- Tablet Chipping Solutions: https://pharmaglobaleng.com/solutions/tablet-chipping.html
+- Tablet Binding Solutions: https://pharmaglobaleng.com/solutions/tablet-binding.html
+- Tablet Punch Corrosion Solutions: https://pharmaglobaleng.com/solutions/tablet-punch-corrosion.html
 
-## Batch 2 flagship resources
-- Pharmaceutical Tablet Compression Tooling: https://pharmaglobaleng.com/services/pharmaceutical-tablet-compression-tooling.html
-- Microfinish™ Surface Engineering: https://pharmaglobaleng.com/services/microfinish-surface-engineering.html
-- Tablet Compression Defects: https://pharmaglobaleng.com/solutions/tablet-compression-defects.html
-- Tablet Picking Solutions: https://pharmaglobaleng.com/solutions/tablet-picking.html
-- Tablet Sticking Solutions: https://pharmaglobaleng.com/solutions/tablet-sticking.html
-
-Each flagship page contains 45 engineering facts with direct answers, practical actions, FAQs, troubleshooting structure, internal links, and structured data.
+These pages each contain 45 engineering facts with direct answers, practical actions, FAQs, troubleshooting structure, internal links, and structured data.
