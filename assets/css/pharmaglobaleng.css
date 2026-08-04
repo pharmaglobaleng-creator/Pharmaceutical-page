@@ -88,3 +88,18 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .mistake{padding:19px;border:1px solid rgba(255,120,120,.2);border-radius:14px;background:rgba(255,90,90,.035)}
 .mistake strong{display:block;margin-bottom:6px;color:#ffd0d0}
 @media(max-width:700px){.checklist{grid-template-columns:1fr}}
+
+/* Batch 2 shared components */
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero-badges span{padding:8px 11px;border:1px solid rgba(34,211,238,.25);border-radius:999px;background:rgba(34,211,238,.045);color:#dff7ff;font-size:12px;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
+.quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:34px}
+.quick-card{padding:21px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}
+.quick-card strong{display:block;color:var(--cyan);margin-bottom:7px}
+.quick-card p{margin:0;color:var(--muted)}
+.decision-flow{display:grid;gap:13px;margin-top:34px;counter-reset:flow}
+.flow-step{position:relative;counter-increment:flow;padding:20px 20px 20px 72px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+.flow-step:before{content:counter(flow);position:absolute;left:20px;top:18px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--purple),var(--blue));font-weight:950}
+.flow-step strong{display:block;margin-bottom:6px}
+.flow-step span{color:var(--muted)}
+.keywords-note{margin-top:30px;padding:18px 20px;border:1px dashed rgba(34,211,238,.25);border-radius:14px;color:var(--muted);background:rgba(34,211,238,.025)}
+@media(max-width:800px){.quick-grid{grid-template-columns:1fr}}

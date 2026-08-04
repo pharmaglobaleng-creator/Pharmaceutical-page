@@ -1,23 +1,23 @@
-# PharmaGlobalEng Batch 1 — Five Flagship Pages
+# PharmaGlobalEng Batch 2 — Five Flagship Pages
 
-This package contains five connected production pages:
+This package contains:
 
-1. Tablet Sticking & Picking Solutions
-2. Tablet Punch Restoration
-3. Pharmaceutical Surface Engineering
-4. Tablet Punch Coatings
-5. Tooling Performance Evaluation
+1. Pharmaceutical Tablet Compression Tooling
+2. Microfinish™ Surface Engineering
+3. Tablet Compression Defects
+4. Tablet Picking Solutions
+5. Tablet Sticking Solutions
 
 Each page includes:
 - 45 engineering facts
-- direct answers and engineering actions
+- 45 direct answers
+- 45 practical engineering actions
 - 15 FAQs
-- Article, FAQ, WebPage, and Breadcrumb schema
-- shared PharmaGlobalEng CSS
-- internal links
+- troubleshooting flow
 - inspection checklist
-- common mistakes
-- worldwide CTA
+- internal links to Batch 1 and Batch 2
+- Article, FAQ, WebPage, and Breadcrumb structured data
+- the shared PharmaGlobalEng dark navy / purple / blue / cyan theme
 
 The homepage is not included and will not be replaced.
 
