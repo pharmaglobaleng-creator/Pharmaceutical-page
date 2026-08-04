@@ -1,21 +1,6 @@
 # PharmaGlobalEng
 
-PharmaGlobalEng provides worldwide pharmaceutical tablet tooling restoration, precision polishing, surface engineering, coating evaluation, engraving optimization, and tablet sticking and picking support.
+## Flagship technical resource
+- Tablet Sticking & Picking Solutions: https://pharmaglobaleng.com/solutions/tablet-sticking-picking.html
 
-## Primary website
-- https://www.pharmaglobaleng.com/
-
-## Core topics
-- Pharmaceutical tablet tooling
-- Tablet punch restoration
-- Tablet punch polishing
-- Tablet sticking
-- Tablet picking
-- Pharmaceutical surface engineering
-- Tablet punch coatings
-- Compression tooling support
-- Engraving optimization
-- Tooling evaluation
-
-## Contact
-- info@pharmaglobaleng.com
+This page contains 45 engineering facts with direct answers covering pharmaceutical tablet compression, sticking, picking, polishing, restoration, surface engineering, coatings, formulation variables, tooling geometry, and troubleshooting.
