@@ -1,9 +1,0 @@
-{
-  "name": "PharmaGlobalEng",
-  "short_name": "PharmaGlobalEng",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#030611",
-  "theme_color": "#050816",
-  "description": "Worldwide pharmaceutical tablet tooling and surface engineering support."
-}
