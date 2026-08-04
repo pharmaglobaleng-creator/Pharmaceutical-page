@@ -1,6 +1,10 @@
-# PharmaGlobalEng
+# PharmaGlobalEng Batch 1
 
-## Flagship technical resource
+## Flagship engineering resources
 - Tablet Sticking & Picking Solutions: https://pharmaglobaleng.com/solutions/tablet-sticking-picking.html
+- Tablet Punch Restoration: https://pharmaglobaleng.com/services/tablet-punch-restoration.html
+- Pharmaceutical Surface Engineering: https://pharmaglobaleng.com/services/surface-engineering.html
+- Tablet Punch Coatings: https://pharmaglobaleng.com/services/tablet-punch-coatings.html
+- Tooling Performance Evaluation: https://pharmaglobaleng.com/services/tooling-evaluation.html
 
-This page contains 45 engineering facts with direct answers covering pharmaceutical tablet compression, sticking, picking, polishing, restoration, surface engineering, coatings, formulation variables, tooling geometry, and troubleshooting.
+Each page contains 45 engineering facts with direct answers, practical actions, FAQs, internal links, and structured data.
