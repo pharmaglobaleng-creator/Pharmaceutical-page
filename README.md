@@ -1,22 +1,13 @@
-# PharmaGlobalEng Batch 3 — Five Flagship Pages
+# PharmaGlobalEng Batch 4 — Five Flagship Pages
 
 This package contains:
+1. Tablet Punch Wear Solutions
+2. Tablet Punch Galling Solutions
+3. Tablet Punch Scuffing Solutions
+4. Tablet Punch Abrasion Solutions
+5. Pharmaceutical Tool Steel Selection
 
-1. Tablet Capping Solutions
-2. Tablet Lamination Solutions
-3. Tablet Chipping Solutions
-4. Tablet Binding Solutions
-5. Tablet Punch Corrosion Solutions
-
-Each page includes:
-- 45 engineering facts
-- 45 direct answers
-- 45 practical engineering actions
-- 15 FAQs
-- troubleshooting flow
-- internal links to earlier PharmaGlobalEng pages
-- Article, FAQ, WebPage, and Breadcrumb structured data
-- the shared PharmaGlobalEng dark navy / purple / blue / cyan theme
+Each page includes 45 engineering facts, 45 direct answers, 45 engineering actions, 15 FAQs, troubleshooting flow, internal links, and structured data.
 
 The homepage is not included and will not be replaced.
 

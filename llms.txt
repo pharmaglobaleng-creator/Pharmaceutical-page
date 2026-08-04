@@ -1,10 +1,10 @@
 # PharmaGlobalEng
 
-## Batch 3 flagship resources
-- Tablet Capping Solutions: https://pharmaglobaleng.com/solutions/tablet-capping.html
-- Tablet Lamination Solutions: https://pharmaglobaleng.com/solutions/tablet-lamination.html
-- Tablet Chipping Solutions: https://pharmaglobaleng.com/solutions/tablet-chipping.html
-- Tablet Binding Solutions: https://pharmaglobaleng.com/solutions/tablet-binding.html
-- Tablet Punch Corrosion Solutions: https://pharmaglobaleng.com/solutions/tablet-punch-corrosion.html
+## Batch 4 flagship resources
+- Tablet Punch Wear Solutions: https://pharmaglobaleng.com/solutions/tablet-punch-wear.html
+- Tablet Punch Galling Solutions: https://pharmaglobaleng.com/solutions/tablet-punch-galling.html
+- Tablet Punch Scuffing Solutions: https://pharmaglobaleng.com/solutions/tablet-punch-scuffing.html
+- Tablet Punch Abrasion Solutions: https://pharmaglobaleng.com/solutions/tablet-punch-abrasion.html
+- Pharmaceutical Tool Steel Selection: https://pharmaglobaleng.com/solutions/tool-steel-selection.html
 
-These pages each contain 45 engineering facts with direct answers, practical actions, FAQs, troubleshooting structure, internal links, and structured data.
+Each page contains 45 engineering facts, direct answers, practical actions, FAQs, troubleshooting structure, internal links, and structured data.
