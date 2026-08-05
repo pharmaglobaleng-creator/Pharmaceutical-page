@@ -1,34 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pharmaglobaleng.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-sticking-picking.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/tablet-punch-restoration.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/surface-engineering.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/tablet-punch-coatings.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/tooling-evaluation.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/pharmaceutical-tablet-compression-tooling.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/microfinish-surface-engineering.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-compression-defects.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-picking.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-sticking.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-capping.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-lamination.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-chipping.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-binding.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-punch-corrosion.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-punch-wear.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-punch-galling.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-punch-scuffing.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-punch-abrasion.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tool-steel-selection.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-punch-cracking.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/tablet-punch-fatigue.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/tablet-punch-polishing.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/tablet-tooling-preventive-maintenance.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/tablet-tooling-inspection.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/compression-force-optimization.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/solutions/dwell-time-optimization.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/die-maintenance.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/tablet-press-troubleshooting.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://pharmaglobaleng.com/services/punch-die-maintenance.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-sticking-picking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-punch-restoration.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/surface-engineering.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-punch-coatings.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tooling-evaluation.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/pharmaceutical-tablet-compression-tooling.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/microfinish-surface-engineering.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-compression-defects.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-picking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-sticking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-capping.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-lamination.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-chipping.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-binding.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-corrosion.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-wear.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-galling.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-scuffing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-abrasion.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tool-steel-selection.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-cracking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-fatigue.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-punch-polishing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-tooling-preventive-maintenance.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-tooling-inspection.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/compression-force-optimization.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/dwell-time-optimization.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/die-maintenance.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-press-troubleshooting.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/punch-die-maintenance.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-hardness-optimization.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-tooling-failure-analysis.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-tooling-lifecycle-management.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/services/pharmaceutical-tooling-documentation.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
