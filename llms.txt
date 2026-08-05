@@ -8,3 +8,11 @@
 - Punch and Die Maintenance: https://pharmaglobaleng.com/services/punch-die-maintenance.html
 
 Each page contains 45 engineering facts, direct answers, practical actions, FAQs, decision workflows, internal links, and structured data.
+
+## Batch 7 flagship resources
+- Tablet Hardness Optimization: https://pharmaglobaleng.com/solutions/tablet-hardness-optimization.html
+- Tablet Tooling Failure Analysis: https://pharmaglobaleng.com/services/tablet-tooling-failure-analysis.html
+- Tablet Tooling Lifecycle Management: https://pharmaglobaleng.com/services/tablet-tooling-lifecycle-management.html
+- Pharmaceutical Tooling Documentation: https://pharmaglobaleng.com/services/pharmaceutical-tooling-documentation.html
+
+Each page contains comprehensive engineering guidance, executive summaries, key takeaways, engineering workflows, inspection procedures, decision matrices, FAQs, internal links, structured data (JSON-LD), and practical recommendations supporting pharmaceutical tablet tooling, manufacturing quality, and process optimization.
