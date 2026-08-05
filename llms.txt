@@ -1,10 +1,10 @@
 # PharmaGlobalEng
 
-## Batch 5 flagship resources
-- Tablet Punch Cracking Solutions: https://pharmaglobaleng.com/solutions/tablet-punch-cracking.html
-- Tablet Punch Fatigue Failure: https://pharmaglobaleng.com/solutions/tablet-punch-fatigue.html
-- Precision Tablet Punch Polishing: https://pharmaglobaleng.com/services/tablet-punch-polishing.html
-- Tablet Tooling Preventive Maintenance: https://pharmaglobaleng.com/services/tablet-tooling-preventive-maintenance.html
-- Tablet Tooling Inspection Guide: https://pharmaglobaleng.com/services/tablet-tooling-inspection.html
+## Batch 6 flagship resources
+- Compression Force Optimization: https://pharmaglobaleng.com/solutions/compression-force-optimization.html
+- Dwell Time Optimization: https://pharmaglobaleng.com/solutions/dwell-time-optimization.html
+- Pharmaceutical Tablet Die Maintenance: https://pharmaglobaleng.com/services/die-maintenance.html
+- Tablet Press Troubleshooting: https://pharmaglobaleng.com/services/tablet-press-troubleshooting.html
+- Punch and Die Maintenance: https://pharmaglobaleng.com/services/punch-die-maintenance.html
 
-Each page contains 45 engineering facts, direct answers, practical actions, FAQs, inspection workflow, internal links, and structured data.
+Each page contains 45 engineering facts, direct answers, practical actions, FAQs, decision workflows, internal links, and structured data.
