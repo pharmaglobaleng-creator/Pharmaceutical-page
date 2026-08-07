@@ -19,6 +19,46 @@
     </script>
 </head>
 <body>
+<header class="sr-only">
+  <h1>PharmaGlobalEng Worldwide Pharmaceutical Tablet Tooling and Surface Engineering</h1>
+  <nav aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <div class="dropdown">
+        <a href="/services/">Services ▼</a>
+        <div class="dropdown-content">
+            <a href="/services/">Services Hub</a>
+            <a href="/services/tablet-tooling-inspection.html">Tablet Tooling Inspection</a>
+            <a href="/services/tablet-tooling-failure-analysis.html">Tablet Tooling Failure Analysis</a>
+            <a href="/services/tablet-punch-restoration.html">Tablet Punch Restoration</a>
+            <a href="/services/tablet-punch-polishing.html">Tablet Punch Polishing</a>
+            <a href="/services/surface-engineering.html">Surface Engineering</a>
+            <a href="/services/tablet-punch-coatings.html">Tablet Punch Coatings</a>
+            <a href="/services/tablet-tooling-preventive-maintenance.html">Preventive Maintenance</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="/solutions/">Solutions ▼</a>
+        <div class="dropdown-content">
+            <a href="/solutions/">Solutions Hub</a>
+            <a href="/solutions/tablet-sticking.html">Tablet Sticking</a>
+            <a href="/solutions/tablet-picking.html">Tablet Picking</a>
+            <a href="/solutions/tablet-capping.html">Tablet Capping</a>
+            <a href="/solutions/tablet-lamination.html">Tablet Lamination</a>
+            <a href="/solutions/tablet-hardness-optimization.html">Tablet Hardness Optimization</a>
+            <a href="/solutions/compression-force-optimization.html">Compression Force Optimization</a>
+            <a href="/solutions/dwell-time-optimization.html">Dwell Time Optimization</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="/resources/">Knowledge Center ▼</a>
+        <div class="dropdown-content">
+            <a href="/tablet-weight-variation.html">Tablet Weight Variation</a>
+        </div>
+    </div>
+    <a href="/about/">About Us</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</header>
 
 <header class="hero">
     <div class="container">
@@ -80,5 +120,15 @@
     </div>
 </footer>
 
+<script>
+    document.querySelectorAll('.dropdown > a').forEach(item => {
+        item.addEventListener('click', event => {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                item.parentElement.classList.toggle('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>
