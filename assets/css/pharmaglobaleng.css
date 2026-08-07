@@ -154,6 +154,7 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
         display: block;
     }
 }
+.visual-shell { position: relative; }
 .dropdown-menu {
     position:absolute;
     top:80px;
@@ -164,8 +165,12 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
     border-radius:15px;
     padding:25px;
     display:none;
-    z-index:20;
+    z-index:100;
     box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.dropdown-menu.show {
+    display: block;
 }
 
 .dropdown-menu a {
@@ -180,12 +185,5 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
     border-radius:8px;
 }
 
-.services-link:hover + .dropdown-menu,
-.dropdown-menu:hover,
-.solutions-link:hover + .solutions-dropdown,
-.solutions-dropdown:hover,
-.knowledge-link:hover + .knowledge-dropdown,
-.knowledge-dropdown:hover {
-    display:block;
-}
+
 

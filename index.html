@@ -1656,13 +1656,28 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
 
 </section>
 <script>
-    document.querySelectorAll('.dropdown > a').forEach(item => {
-        item.addEventListener('click', event => {
-            if (window.innerWidth <= 768) {
-                event.preventDefault();
-                item.parentElement.classList.toggle('active');
+    document.querySelector('.services-link').addEventListener('click', function() {
+        document.querySelector('.services-dropdown').classList.toggle('show');
+    });
+
+    document.querySelector('.solutions-link').addEventListener('click', function() {
+        document.querySelector('.solutions-dropdown').classList.toggle('show');
+    });
+
+    document.querySelector('.knowledge-link').addEventListener('click', function() {
+        document.querySelector('.knowledge-dropdown').classList.toggle('show');
+    });
+
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.hotspot')) {
+            var dropdowns = document.getElementsByClassName("dropdown-menu");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
             }
-        });
+        }
     });
 </script>
 </body>
