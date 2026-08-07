@@ -169,6 +169,46 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
     box-shadow:0 20px 60px rgba(0,0,0,.5);
 }
 
+.dropdown-menu a {
+    display:block;
+    color:white;
+    padding:10px;
+    text-decoration:none;
+}
+
+.dropdown-menu a:hover {
+    background:#9d35ff;
+    border-radius:8px;
+}
+
+.services-link:hover + .services-dropdown,
+.services-dropdown:hover {
+    display:block;
+}
+
+.solutions-link:hover + .solutions-dropdown,
+.solutions-dropdown:hover {
+    display:block;
+}
+
+.knowledge-link:hover + .knowledge-dropdown,
+.knowledge-dropdown:hover {
+    display:block;
+}
+.dropdown-menu {
+    position:absolute;
+    top:80px;
+    left:35%;
+    width:350px;
+    background:#071126;
+    border:1px solid #9d35ff;
+    border-radius:15px;
+    padding:25px;
+    display:none;
+    z-index:100;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
 .dropdown-menu.show {
     display: block;
 }
