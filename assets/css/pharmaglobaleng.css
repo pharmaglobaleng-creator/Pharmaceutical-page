@@ -120,3 +120,16 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .fact-context{font-size:14px}
 .fact-source{display:inline-block;margin-top:8px;color:var(--cyan);font-weight:800}
 @media(max-width:800px){.fact-library-nav,.fact-card-grid{grid-template-columns:1fr}.engineering-fact{min-width:0;padding:20px}.fact-library-page .nav{flex-wrap:wrap}.fact-library-page .nav-links{width:100%;min-width:0;overflow-x:auto;padding-bottom:12px;gap:14px}.engineering-fact h3,.engineering-fact p,.fact-source{overflow-wrap:anywhere}}
+
+/* Knowledge Center articles */
+.article-body{max-width:900px}
+.article-body h2{margin-top:58px;font-size:clamp(30px,4vw,46px)}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{margin:30px 0 8px;font-size:24px}
+.article-body p,.article-body li{color:var(--muted);font-size:18px}
+.article-body li+li{margin-top:10px}
+.article-body a{color:var(--cyan)}
+.article-callout{margin:30px 0;padding:22px 24px;border-left:4px solid var(--cyan);border-radius:0 16px 16px 0;background:rgba(34,211,238,.055)}
+.article-callout strong{color:var(--text)}
+.references{margin-top:34px;padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}
+.references h2{margin-top:0;font-size:30px}
