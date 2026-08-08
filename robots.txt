@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.pharmaglobaleng.com/sitemap.xml
+Sitemap: https://pharmaglobaleng.com/sitemap.xml
