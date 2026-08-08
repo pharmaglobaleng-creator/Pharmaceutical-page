@@ -38,6 +38,18 @@
   </url>
 
   <url>
+    <loc>https://pharmaglobaleng.com/parts/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://pharmaglobaleng.com/parts/korsch/korsch-300/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
     <loc>https://pharmaglobaleng.com/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.70</priority>
