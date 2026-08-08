@@ -103,3 +103,20 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .flow-step span{color:var(--muted)}
 .keywords-note{margin-top:30px;padding:18px 20px;border:1px dashed rgba(34,211,238,.25);border-radius:14px;color:var(--muted);background:rgba(34,211,238,.025)}
 @media(max-width:800px){.quick-grid{grid-template-columns:1fr}}
+
+/* Reviewed engineering fact library */
+.source-scope{max-width:920px;margin:24px 0 0;padding:16px 18px;border-left:4px solid var(--cyan);background:rgba(34,211,238,.055);color:var(--muted)}
+.fact-library-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:54px}
+.fact-library-nav a{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03);text-decoration:none;font-weight:750}
+.fact-topic{margin-top:64px}
+.fact-topic:first-of-type{margin-top:0}
+.fact-topic>h2{font-size:clamp(30px,4vw,46px)}
+.fact-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.engineering-fact{padding:24px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(145deg,rgba(18,18,55,.86),rgba(3,10,26,.96))}
+.engineering-fact h3{margin:8px 0 12px;font-size:21px}
+.engineering-fact p{color:var(--muted)}
+.fact-id{margin:0;color:var(--cyan)!important;font-size:12px;font-weight:850;letter-spacing:.05em;text-transform:uppercase}
+.fact-explanation{padding-top:12px;border-top:1px solid var(--line)}
+.fact-context{font-size:14px}
+.fact-source{display:inline-block;margin-top:8px;color:var(--cyan);font-weight:800}
+@media(max-width:800px){.fact-library-nav,.fact-card-grid{grid-template-columns:1fr}.engineering-fact{min-width:0;padding:20px}.fact-library-page .nav{flex-wrap:wrap}.fact-library-page .nav-links{width:100%;min-width:0;overflow-x:auto;padding-bottom:12px;gap:14px}.engineering-fact h3,.engineering-fact p,.fact-source{overflow-wrap:anywhere}}

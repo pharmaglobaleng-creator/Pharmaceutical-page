@@ -253,4 +253,35 @@
     <priority>0.80</priority>
   </url>
 
+  <url>
+    <loc>https://pharmaglobaleng.com/knowledge-center/quality-facilities.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/knowledge-center/equipment-materials.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/knowledge-center/production.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/knowledge-center/packaging-holding.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/knowledge-center/laboratory.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/knowledge-center/records-returns.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
 </urlset>
