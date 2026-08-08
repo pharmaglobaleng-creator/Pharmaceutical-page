@@ -290,4 +290,10 @@
     <priority>0.40</priority>
   </url>
 
+  <url><loc>https://pharmaglobaleng.com/knowledge-center/tablet-tooling-lifecycle-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://pharmaglobaleng.com/knowledge-center/tablet-defect-investigation-evidence-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://pharmaglobaleng.com/knowledge-center/tablet-tooling-inspection-measurement-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://pharmaglobaleng.com/knowledge-center/pharmaceutical-tooling-surface-engineering-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://pharmaglobaleng.com/knowledge-center/pharmaceutical-tooling-documentation-change-control.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
+
 </urlset>
