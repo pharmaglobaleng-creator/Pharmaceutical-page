@@ -38,62 +38,84 @@
     <div class="wrap nav">
       <a class="brand" href="/">PharmaGlobal<span>Eng</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a class="hide-tablet" href="/services/">Services</a>
-        <a class="hide-tablet" href="/solutions/">Solutions</a>
+        <a href="/services/">Services</a>
+        <a href="/solutions/">Solutions</a>
         <a href="/parts/" aria-current="page">Parts Store</a>
-        <a class="nav-cta" href="#cart">Cart <span data-cart-count>0</span></a>
+        <a class="hide-tablet" href="/knowledge-center/">Knowledge Center</a>
+        <a class="hide-tablet" href="/contact.html">Contact</a>
+        <a class="nav-cart" href="#cart" aria-label="Open quote cart">Cart <span data-cart-count>0</span></a>
       </nav>
     </div>
   </header>
 
+  <section class="catalog-command" aria-label="Parts catalog navigation">
+    <div class="wrap">
+      <div class="catalog-search">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <label class="visually-hidden" for="part-search">Search Korsch 300 parts</label>
+        <input id="part-search" type="search" placeholder="Search by machine, part name, or PGE number" autocomplete="off">
+        <span class="search-result-count"><strong id="visible-count">49</strong> results</span>
+      </div>
+
+      <button class="machine-menu-toggle" id="machine-menu-toggle" type="button" aria-expanded="true" aria-controls="machine-menu">
+        <span>Tablet Press Parts</span><span aria-hidden="true">⌃</span>
+      </button>
+      <div class="machine-menu" id="machine-menu">
+        <div class="machine-family-block">
+          <span class="machine-icon" aria-hidden="true">▦</span>
+          <div><strong>Tablet Press Parts</strong><span>Choose manufacturer and model</span></div>
+        </div>
+        <div class="mega-column">
+          <p class="mega-label">Manufacturers</p>
+          <div class="mega-list" id="manufacturer-list">
+            <button type="button" data-manufacturer="Fette">Fette <span>›</span></button>
+            <button type="button" data-manufacturer="Kilian">Kilian <span>›</span></button>
+            <button class="selected" type="button" data-manufacturer="Korsch" aria-pressed="true">Korsch <span>›</span></button>
+            <button type="button" data-manufacturer="Manesty">Manesty <span>›</span></button>
+            <button type="button" data-manufacturer="Kikusui">Kikusui <span>›</span></button>
+            <button type="button" data-manufacturer="Courtoy">Courtoy <span>›</span></button>
+            <button type="button" data-manufacturer="Stokes">Stokes <span>›</span></button>
+          </div>
+        </div>
+        <div class="mega-column">
+          <p class="mega-label" id="model-list-title">Korsch Models</p>
+          <div class="mega-list model-list" id="model-list">
+            <button class="selected" type="button" data-model="300" aria-current="page">300 <span>›</span></button>
+            <button type="button" data-model="800">800 <span>›</span></button>
+            <button type="button" data-model="XL-400">XL-400 <span>›</span></button>
+            <button type="button" data-model="XL-800">XL-800 <span>›</span></button>
+          </div>
+          <p class="model-status" id="model-status" role="status" aria-live="polite">Korsch 300 catalog open</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main>
     <section class="store-hero">
       <div class="wrap">
-        <div class="crumb"><a href="/">Home</a> / <a href="/parts/">Replacement Parts</a> / Korsch 300</div>
-        <p class="eyebrow">Tablet press parts catalog</p>
+        <div class="crumb"><a href="/parts/">Parts Store</a> / Tablet Press Parts / Korsch / <span>Korsch 300</span></div>
         <h1>Korsch 300 Replacement Parts</h1>
-        <p class="lead">Select the components you need and add them to one cart. PharmaGlobalEng reviews each request against machine identification, dimensions, drawings, materials, and available references before confirming price and issuing a private checkout code.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#catalog">Browse 49 Part Types</a>
-          <a class="btn" href="#how-it-works">How Checkout Works</a>
-        </div>
-        <div class="notice"><strong>Compatibility notice:</strong> A model name alone is not sufficient to approve a replacement part. Final compatibility, supply, material, price, and lead time require review. No public price or stock claim is made on this page.</div>
-      </div>
-    </section>
-
-    <div class="trust-row" id="how-it-works">
-      <div class="trust-item"><strong>01 · Add to cart</strong><span>Select every part needed for the request.</span></div>
-      <div class="trust-item"><strong>02 · Contact us</strong><span>Send machine and component references.</span></div>
-      <div class="trust-item"><strong>03 · Receive code</strong><span>Get a unique code after quote approval.</span></div>
-      <div class="trust-item"><strong>04 · Secure checkout</strong><span>Unlock the approved price and payment step.</span></div>
-    </div>
-
-    <section class="catalog-tools" aria-label="Catalog search and filters">
-      <div class="wrap">
-        <div class="tool-row">
-          <div class="search-box">
-            <label for="part-search">Search Korsch 300 parts</label>
-            <input id="part-search" type="search" placeholder="Search part name, family, or PharmaGlobalEng number…" autocomplete="off">
-          </div>
-          <div class="quote-counter"><strong data-cart-count>0</strong> parts in cart</div>
-        </div>
+        <p class="lead">Select quantities and build one technical quote cart. Pricing and compatibility are confirmed after machine and part-reference review.</p>
         <div class="filter-row" role="group" aria-label="Filter parts by family">
-          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All parts</button>
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All Parts</button>
           <button class="filter-btn" type="button" data-filter="compression" aria-pressed="false">Compression</button>
-          <button class="filter-btn" type="button" data-filter="feed-system" aria-pressed="false">Feed system</button>
-          <button class="filter-btn" type="button" data-filter="cams-shafts" aria-pressed="false">Cams &amp; shafts</button>
-          <button class="filter-btn" type="button" data-filter="punch-track" aria-pressed="false">Punch track</button>
-          <button class="filter-btn" type="button" data-filter="seals-bearings" aria-pressed="false">Seals &amp; bearings</button>
+          <button class="filter-btn" type="button" data-filter="feed-system" aria-pressed="false">Feed System</button>
+          <button class="filter-btn" type="button" data-filter="cams-shafts" aria-pressed="false">Cams &amp; Shafts</button>
+          <button class="filter-btn" type="button" data-filter="punch-track" aria-pressed="false">Punch Track</button>
+          <button class="filter-btn" type="button" data-filter="seals-bearings" aria-pressed="false">Seals &amp; Bearings</button>
           <button class="filter-btn" type="button" data-filter="discharge" aria-pressed="false">Discharge</button>
-          <button class="filter-btn" type="button" data-filter="sensors-mounts" aria-pressed="false">Sensors &amp; mounts</button>
+          <button class="filter-btn" type="button" data-filter="sensors-mounts" aria-pressed="false">Sensors &amp; Mounts</button>
         </div>
       </div>
     </section>
 
     <section class="section" id="catalog">
       <div class="wrap">
-        <div class="catalog-meta"><span><strong id="visible-count">49</strong> matching part types</span><span>Pricing available after review</span></div>
-        <div class="product-grid" id="product-grid">
+        <div class="store-layout">
+          <div class="catalog-column">
+            <div class="catalog-meta"><span><strong data-visible-summary>49</strong> matching part types</span><span>Representative visuals · verified photos added after review</span></div>
+            <div class="product-grid" id="product-grid">
           <article class="product-card" id="pge-k300-001" data-sku="PGE-K300-001" data-name="Main Roller Bearing" data-family="seals-bearings"><div class="product-visual"><span class="product-symbol">BRG</span></div><div class="product-content"><p class="product-family">Seals &amp; bearings</p><h3>Main Roller Bearing</h3><p class="sku">PGE-K300-001</p><p class="product-copy">Bearing request for the main roller assembly. Confirm bearing designation, dimensions, load interface, and machine reference.</p><div class="product-actions"><span class="availability">Quote review</span><button class="btn small cart-toggle" type="button" aria-pressed="false">Add to cart</button></div></div></article>
           <article class="product-card" id="pge-k300-002" data-sku="PGE-K300-002" data-name="Journal Bearing Upper Pre-Compression" data-family="seals-bearings compression"><div class="product-visual"><span class="product-symbol">JRN</span></div><div class="product-content"><p class="product-family">Seals &amp; bearings</p><h3>Journal Bearing — Upper Pre-Compression</h3><p class="sku">PGE-K300-002</p><p class="product-copy">Upper pre-compression journal-bearing request requiring confirmation of bore, outside diameter, width, material, lubrication, and mating shaft.</p><div class="product-actions"><span class="availability">Quote review</span><button class="btn small cart-toggle" type="button" aria-pressed="false">Add to cart</button></div></div></article>
           <article class="product-card" id="pge-k300-003" data-sku="PGE-K300-003" data-name="Main Compression Roller" data-family="compression"><div class="product-visual"><span class="product-symbol">MCR</span></div><div class="product-content"><p class="product-family">Compression</p><h3>Main Compression Roller</h3><p class="sku">PGE-K300-003</p><p class="product-copy">Main-compression roller request. Verify roller diameter, width, bearing arrangement, shaft interface, and press configuration.</p><div class="product-actions"><span class="availability">Quote review</span><button class="btn small cart-toggle" type="button" aria-pressed="false">Add to cart</button></div></div></article>
@@ -143,30 +165,35 @@
           <article class="product-card" id="pge-k300-047" data-sku="PGE-K300-047" data-name="Ejection Cam Ramp" data-family="punch-track cams-shafts discharge"><div class="product-visual"><span class="product-symbol">ECR</span></div><div class="product-content"><p class="product-family">Punch track · discharge</p><h3>Ejection Cam Ramp</h3><p class="sku">PGE-K300-047</p><p class="product-copy">Ejection cam-ramp request. Confirm ramp profile, punch travel, mounting pattern, direction, transition points, and press configuration.</p><div class="product-actions"><span class="availability">Quote review</span><button class="btn small cart-toggle" type="button" aria-pressed="false">Add to cart</button></div></div></article>
           <article class="product-card" id="pge-k300-048" data-sku="PGE-K300-048" data-name="Ejection Segment" data-family="punch-track discharge"><div class="product-visual"><span class="product-symbol">EJS</span></div><div class="product-content"><p class="product-family">Punch track · discharge</p><h3>Ejection Segment</h3><p class="sku">PGE-K300-048</p><p class="product-copy">Ejection-segment request requiring segment profile, position, mounting details, punch interface, transition geometry, and wear review.</p><div class="product-actions"><span class="availability">Quote review</span><button class="btn small cart-toggle" type="button" aria-pressed="false">Add to cart</button></div></div></article>
           <article class="product-card" id="pge-k300-049" data-sku="PGE-K300-049" data-name="Oil Pipe Cam" data-family="cams-shafts"><div class="product-visual"><span class="product-symbol">OPC</span></div><div class="product-content"><p class="product-family">Cams &amp; shafts</p><h3>Oil Pipe Cam</h3><p class="sku">PGE-K300-049</p><p class="product-copy">Oil-pipe cam request. Confirm operating position, cam profile, pipe or follower interface, mounting pattern, material, and machine build.</p><div class="product-actions"><span class="availability">Quote review</span><button class="btn small cart-toggle" type="button" aria-pressed="false">Add to cart</button></div></div></article>
-        </div>
+            </div>
 
-        <p id="no-results" class="notice" hidden><strong>No matching part was found.</strong> Try a shorter search or contact PharmaGlobalEng with the machine model, reference number, photograph, or drawing.</p>
-
-        <section class="quote-panel" id="cart" aria-labelledby="cart-title">
-          <div class="quote-panel-head"><div><p class="eyebrow">Your parts cart</p><h2 id="cart-title">Cart ready for review</h2><p>Add parts above, then email the cart to begin compatibility and pricing review.</p></div><span class="status-pill"><span data-cart-count>0</span>&nbsp; selected</span></div>
-          <ul class="quote-list" id="cart-list"><li class="empty-quote">Your cart is empty.</li></ul>
-          <div class="quote-actions">
-            <button class="btn primary" type="button" id="request-quote" disabled>Email Cart for Quote</button>
-            <button class="btn" type="button" id="clear-cart" disabled>Clear Cart</button>
+            <p id="no-results" class="notice" hidden><strong>No matching part was found.</strong> Try a shorter search or contact PharmaGlobalEng with the machine model, reference number, photograph, or drawing.</p>
           </div>
 
-          <div class="checkout-lock" style="margin-top:28px;padding-top:26px;border-top:1px solid var(--store-line)">
+        <aside class="quote-panel" id="cart" aria-labelledby="cart-title">
+          <div class="quote-panel-head"><div><p class="eyebrow">Quote Cart</p><h2 id="cart-title"><span data-cart-count>0</span> selected parts</h2><p>Build one cart for technical and pricing review.</p></div><button class="cart-collapse" id="cart-collapse" type="button" aria-label="Collapse quote cart" aria-expanded="true">⌃</button></div>
+          <div id="cart-body">
+          <ul class="quote-list" id="cart-list"><li class="empty-quote">Your cart is empty.</li></ul>
+          <div class="quote-actions">
+            <button class="btn primary full" type="button" id="request-quote" disabled>Request Pricing</button>
+            <button class="text-button" type="button" id="clear-cart" disabled>Clear Cart</button>
+          </div>
+
+          <div class="checkout-lock">
             <p class="eyebrow">Approved customers</p>
-            <h3 style="font-size:25px;margin:0 0 8px">Have a checkout code?</h3>
-            <p>After PharmaGlobalEng approves your cart and price, your unique code will unlock the secure payment step. Code validation is performed privately and is never stored in this public page.</p>
-            <form id="checkout-code-form" class="quote-actions">
+            <h3>Have an approved checkout code?</h3>
+            <p>Your unique code will unlock only the reviewed quotation and price.</p>
+            <form id="checkout-code-form">
               <label class="visually-hidden" for="checkout-code">Checkout code</label>
-              <input id="checkout-code" name="code" type="text" inputmode="text" autocomplete="one-time-code" placeholder="Enter approved checkout code" style="min-height:50px;min-width:min(100%,300px);padding:0 16px;border:1px solid var(--store-border);border-radius:12px;color:var(--store-text);background:#071024;font:inherit" required>
-              <button class="btn" type="submit">Continue to Secure Checkout</button>
+              <input id="checkout-code" name="code" type="text" inputmode="text" autocomplete="one-time-code" placeholder="Enter checkout code" required>
+              <button class="btn full" type="submit">Unlock Checkout</button>
             </form>
             <p id="checkout-message" role="status" aria-live="polite" style="margin-bottom:0"></p>
           </div>
-        </section>
+          <div class="cart-review-note"><span aria-hidden="true">ⓘ</span><p>Pricing and compatibility confirmed after review.</p></div>
+          </div>
+        </aside>
+        </div>
 
         <div class="notice"><strong>Independent-supplier notice:</strong> PharmaGlobalEng is not represented on this page as the original equipment manufacturer. Manufacturer and model names are used only to identify the equipment for which compatibility is being evaluated. Final fit must be verified before purchase.</div>
       </div>
@@ -208,36 +235,104 @@
     const quoteButton = document.getElementById('request-quote');
     const clearButton = document.getElementById('clear-cart');
     const visibleCount = document.getElementById('visible-count');
+    const visibleSummaries = [...document.querySelectorAll('[data-visible-summary]')];
     const noResults = document.getElementById('no-results');
     const codeForm = document.getElementById('checkout-code-form');
     const checkoutMessage = document.getElementById('checkout-message');
+    const menuToggle = document.getElementById('machine-menu-toggle');
+    const machineMenu = document.getElementById('machine-menu');
+    const manufacturerButtons = [...document.querySelectorAll('[data-manufacturer]')];
+    const modelList = document.getElementById('model-list');
+    const modelListTitle = document.getElementById('model-list-title');
+    const modelStatus = document.getElementById('model-status');
+    const cartCollapse = document.getElementById('cart-collapse');
+    const cartBody = document.getElementById('cart-body');
     let activeFilter = 'all';
-    let cart = new Set(JSON.parse(localStorage.getItem(storageKey) || '[]'));
+    const storedCart = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    let cart = Array.isArray(storedCart)
+      ? Object.fromEntries(storedCart.map(sku => [sku, 1]))
+      : storedCart;
+
+    const manufacturerModels = {
+      Fette: ['2100', '3100', 'P2090', 'P3000', 'P3090', 'P3200'],
+      Kilian: ['S-250', 'T-400'],
+      Korsch: ['300', '800', 'XL-400', 'XL-800'],
+      Manesty: ['Mark IV', 'Novapress', 'Nova Diamond'],
+      Kikusui: ['Gemini', 'Libra'],
+      Courtoy: ['200'],
+      Stokes: ['328', '754']
+    };
 
     const cardData = card => ({ sku: card.dataset.sku, name: card.dataset.name });
-    const save = () => localStorage.setItem(storageKey, JSON.stringify([...cart]));
+    const cartSize = () => Object.keys(cart).length;
+    const save = () => localStorage.setItem(storageKey, JSON.stringify(cart));
+    const quantityFor = card => Number(card.dataset.quantity || 1);
+
+    function setQuantity(card, value) {
+      const quantity = Math.max(1, Math.min(99, Number(value) || 1));
+      card.dataset.quantity = quantity;
+      card.querySelector('.quantity-value').textContent = quantity;
+      if (cart[card.dataset.sku]) {
+        cart[card.dataset.sku] = quantity;
+        renderCart();
+      }
+    }
+
+    cards.forEach(card => {
+      const actions = card.querySelector('.product-actions');
+      const cartButton = card.querySelector('.cart-toggle');
+      const quantity = document.createElement('div');
+      quantity.className = 'quantity-control';
+      quantity.setAttribute('aria-label', `Quantity for ${card.dataset.name}`);
+      quantity.innerHTML = '<button type="button" class="quantity-minus" aria-label="Decrease quantity">−</button><span class="quantity-value" aria-live="polite">1</span><button type="button" class="quantity-plus" aria-label="Increase quantity">+</button>';
+      card.dataset.quantity = cart[card.dataset.sku] || 1;
+      quantity.querySelector('.quantity-value').textContent = card.dataset.quantity;
+      actions.insertBefore(quantity, cartButton);
+      cartButton.textContent = 'Add to Quote Cart';
+
+      const details = document.createElement('button');
+      details.className = 'details-toggle';
+      details.type = 'button';
+      details.textContent = 'View Details ›';
+      details.setAttribute('aria-expanded', 'false');
+      card.querySelector('.product-content').appendChild(details);
+
+      quantity.querySelector('.quantity-minus').addEventListener('click', () => setQuantity(card, quantityFor(card) - 1));
+      quantity.querySelector('.quantity-plus').addEventListener('click', () => setQuantity(card, quantityFor(card) + 1));
+      details.addEventListener('click', () => {
+        const expanded = details.getAttribute('aria-expanded') === 'true';
+        details.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        details.textContent = expanded ? 'View Details ›' : 'Hide Details ↑';
+        card.classList.toggle('details-open', !expanded);
+      });
+    });
 
     function renderCart() {
-      document.querySelectorAll('[data-cart-count]').forEach(node => node.textContent = cart.size);
+      document.querySelectorAll('[data-cart-count]').forEach(node => node.textContent = cartSize());
       cards.forEach(card => {
         const button = card.querySelector('.cart-toggle');
-        const selected = cart.has(card.dataset.sku);
+        const selected = Boolean(cart[card.dataset.sku]);
         button.setAttribute('aria-pressed', selected ? 'true' : 'false');
-        button.textContent = selected ? 'Remove' : 'Add to cart';
+        button.textContent = selected ? 'Remove from Cart' : 'Add to Quote Cart';
         button.classList.toggle('added', selected);
       });
       cartList.innerHTML = '';
-      if (!cart.size) {
+      if (!cartSize()) {
         cartList.innerHTML = '<li class="empty-quote">Your cart is empty.</li>';
       } else {
-        cards.filter(card => cart.has(card.dataset.sku)).forEach(card => {
+        cards.filter(card => cart[card.dataset.sku]).forEach(card => {
           const item = document.createElement('li');
-          item.innerHTML = `<span>${card.dataset.name}</span><strong>${card.dataset.sku}</strong>`;
+          const symbol = card.querySelector('.product-symbol').textContent;
+          item.innerHTML = `<span class="cart-thumb" aria-hidden="true">${symbol}</span><span class="cart-copy"><strong>${card.dataset.name}</strong><small>${card.dataset.sku}</small></span><span class="cart-quantity">${cart[card.dataset.sku]}</span><button class="cart-remove" type="button" aria-label="Remove ${card.dataset.name}">×</button>`;
+          item.querySelector('.cart-remove').addEventListener('click', () => {
+            delete cart[card.dataset.sku];
+            renderCart();
+          });
           cartList.appendChild(item);
         });
       }
-      quoteButton.disabled = !cart.size;
-      clearButton.disabled = !cart.size;
+      quoteButton.disabled = !cartSize();
+      clearButton.disabled = !cartSize();
       save();
     }
 
@@ -252,12 +347,14 @@
         if (!card.hidden) count += 1;
       });
       visibleCount.textContent = count;
+      visibleSummaries.forEach(node => node.textContent = count);
       noResults.hidden = count !== 0;
     }
 
     cards.forEach(card => card.querySelector('.cart-toggle').addEventListener('click', () => {
       const { sku } = cardData(card);
-      cart.has(sku) ? cart.delete(sku) : cart.add(sku);
+      if (cart[sku]) delete cart[sku];
+      else cart[sku] = quantityFor(card);
       renderCart();
     }));
 
@@ -268,13 +365,55 @@
     }));
 
     search.addEventListener('input', applyFilters);
-    clearButton.addEventListener('click', () => { cart.clear(); renderCart(); });
+    clearButton.addEventListener('click', () => { cart = {}; renderCart(); });
 
     quoteButton.addEventListener('click', () => {
-      const lines = cards.filter(card => cart.has(card.dataset.sku)).map(card => `- ${card.dataset.name} (${card.dataset.sku})`);
+      const lines = cards.filter(card => cart[card.dataset.sku]).map(card => `- ${card.dataset.name} (${card.dataset.sku}) — Qty ${cart[card.dataset.sku]}`);
       const subject = encodeURIComponent('Korsch 300 parts cart — compatibility and price request');
-      const body = encodeURIComponent(`Hello PharmaGlobalEng,\n\nPlease review this Korsch 300 parts cart:\n\n${lines.join('\n')}\n\nMachine serial/configuration:\nExisting part or drawing references:\nQuantity for each item:\nShipping destination:\nRequired timing:\n\nI understand compatibility, availability, lead time, and pricing require confirmation before checkout.`);
+      const body = encodeURIComponent(`Hello PharmaGlobalEng,\n\nPlease review this Korsch 300 parts cart:\n\n${lines.join('\n')}\n\nMachine serial/configuration:\nExisting part or drawing references:\nShipping destination:\nRequired timing:\n\nI understand compatibility, availability, lead time, and pricing require confirmation before checkout.`);
       window.location.href = `mailto:info@pharmaglobaleng.com?subject=${subject}&body=${body}`;
+    });
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      machineMenu.hidden = expanded;
+    });
+
+    manufacturerButtons.forEach(button => button.addEventListener('click', () => {
+      const manufacturer = button.dataset.manufacturer;
+      manufacturerButtons.forEach(item => {
+        item.classList.toggle('selected', item === button);
+        item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+      });
+      modelListTitle.textContent = `${manufacturer} Models`;
+      modelList.innerHTML = '';
+      manufacturerModels[manufacturer].forEach(model => {
+        const modelButton = document.createElement('button');
+        const current = manufacturer === 'Korsch' && model === '300';
+        modelButton.type = 'button';
+        modelButton.dataset.model = model;
+        modelButton.className = current ? 'selected' : '';
+        if (current) modelButton.setAttribute('aria-current', 'page');
+        modelButton.innerHTML = `${model} <span>›</span>`;
+        modelButton.addEventListener('click', () => {
+          if (current) {
+            modelStatus.textContent = 'Korsch 300 catalog open';
+            document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+          } else {
+            modelStatus.textContent = `${manufacturer} ${model} catalog is being prepared. Contact us to request parts now.`;
+          }
+        });
+        modelList.appendChild(modelButton);
+      });
+      modelStatus.textContent = manufacturer === 'Korsch' ? 'Korsch 300 catalog open' : `Select a ${manufacturer} model`;
+    }));
+
+    cartCollapse.addEventListener('click', () => {
+      const expanded = cartCollapse.getAttribute('aria-expanded') === 'true';
+      cartCollapse.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      cartCollapse.textContent = expanded ? '⌄' : '⌃';
+      cartBody.hidden = expanded;
     });
 
     codeForm.addEventListener('submit', event => {
