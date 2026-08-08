@@ -467,6 +467,9 @@ body{
   left:0;
   z-index:1100;
   width:290px;
+  max-height:min(70vh,680px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
   padding:10px;
   border:1px solid rgba(121,76,255,.42);
   border-radius:15px;
@@ -481,6 +484,12 @@ body{
   opacity:1;
   visibility:visible;
   transform:translateY(0);
+}
+.nav-item.has-dropdown:hover>.dropdown-trigger,
+.nav-item.has-dropdown:focus-within>.dropdown-trigger,
+.nav-item.dropdown-open>.dropdown-trigger{
+  color:#fff;
+  background:rgba(121,76,255,.28);
 }
 .submenu a{
   display:block;
@@ -510,7 +519,7 @@ body{
   .nav-list{display:block}
   .nav-link,.dropdown-trigger{width:100%;justify-content:space-between;padding:0 14px}
   .submenu{position:static;width:auto;margin:0 10px;padding:0 8px;max-height:0;overflow:hidden;border:0;box-shadow:none;opacity:1;visibility:hidden;transform:none;transition:max-height .22s ease,padding .22s ease,visibility .22s}
-  .nav-item.dropdown-open>.submenu{max-height:600px;padding:8px;visibility:visible}
+  .nav-item.dropdown-open>.submenu{max-height:70vh;padding:8px;overflow-y:auto;visibility:visible}
 }
 .visual-shell{
   position:relative;
@@ -724,12 +733,22 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
           <button class="dropdown-trigger" type="button" aria-expanded="false" aria-controls="services-menu">Services</button>
           <ul class="submenu" id="services-menu">
             <li><a class="view-all" href="/services/">View All Services</a></li>
+            <li><a href="/services/pharmaceutical-tablet-compression-tooling.html">Tablet Compression Tooling</a></li>
+            <li><a href="/services/tooling-evaluation.html">Tooling Evaluation</a></li>
+            <li><a href="/services/tablet-tooling-inspection.html">Tooling Inspection</a></li>
+            <li><a href="/services/tablet-tooling-failure-analysis.html">Failure Analysis</a></li>
+            <li><a href="/services/tablet-tooling-lifecycle-management.html">Lifecycle Management</a></li>
+            <li><a href="/services/tablet-tooling-preventive-maintenance.html">Preventive Maintenance</a></li>
+            <li><a href="/services/pharmaceutical-tooling-documentation.html">Tooling Documentation</a></li>
             <li><a href="/services/tablet-punch-restoration.html">Tablet Punch Restoration</a></li>
             <li><a href="/services/tablet-punch-polishing.html">Tablet Punch Polishing</a></li>
-            <li><a href="/services/tablet-tooling-inspection.html">Tablet Tooling Inspection</a></li>
+            <li><a href="/services/punch-die-maintenance.html">Punch and Die Maintenance</a></li>
+            <li><a href="/services/die-maintenance.html">Die Maintenance</a></li>
             <li><a href="/services/surface-engineering.html">Surface Engineering</a></li>
+            <li><a href="/services/microfinish-surface-engineering.html">Microfinish Engineering</a></li>
             <li><a href="/services/tablet-punch-coatings.html">Tablet Punch Coatings</a></li>
-            <li><a href="/services/tooling-evaluation.html">Tooling Evaluation</a></li>
+            <li><a href="/services/engraving-optimization.html">Engraving Optimization</a></li>
+            <li><a href="/services/tablet-press-troubleshooting.html">Tablet Press Troubleshooting</a></li>
           </ul>
         </li>
         <li class="nav-item has-dropdown">
@@ -740,13 +759,56 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
             <li><a href="/solutions/tablet-picking.html">Tablet Picking</a></li>
             <li><a href="/solutions/tablet-capping.html">Tablet Capping</a></li>
             <li><a href="/solutions/tablet-lamination.html">Tablet Lamination</a></li>
-            <li><a href="/solutions/poor-tablet-release.html">Poor Tablet Release</a></li>
-            <li><a href="/solutions/compression-defects.html">Compression Defects</a></li>
+            <li><a href="/solutions/tablet-chipping.html">Tablet Chipping</a></li>
+            <li><a href="/solutions/tablet-binding.html">Tablet Binding</a></li>
+            <li><a href="/solutions/tablet-sticking-picking.html">Sticking and Picking Guide</a></li>
+            <li><a href="/solutions/tablet-compression-defects.html">Compression Defects Guide</a></li>
+            <li><a href="/solutions/tablet-weight-variation.html">Tablet Weight Variation</a></li>
+            <li><a href="/solutions/tablet-hardness-optimization.html">Hardness Optimization</a></li>
+            <li><a href="/solutions/compression-force-optimization.html">Compression Force</a></li>
+            <li><a href="/solutions/dwell-time-optimization.html">Dwell Time</a></li>
+            <li><a href="/solutions/tablet-punch-wear.html">Punch Wear</a></li>
+            <li><a href="/solutions/tablet-punch-corrosion.html">Punch Corrosion</a></li>
+            <li><a href="/solutions/tablet-punch-galling.html">Punch Galling</a></li>
+            <li><a href="/solutions/tablet-punch-scuffing.html">Punch Scuffing</a></li>
+            <li><a href="/solutions/tablet-punch-abrasion.html">Punch Abrasion</a></li>
+            <li><a href="/solutions/tablet-punch-cracking.html">Punch Cracking</a></li>
+            <li><a href="/solutions/tablet-punch-fatigue.html">Punch Fatigue</a></li>
+            <li><a href="/solutions/tool-steel-selection.html">Tool Steel Selection</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="/components/">Components</a></li>
-        <li class="nav-item"><a class="nav-link" href="/coatings/">Coatings</a></li>
-        <li class="nav-item"><a class="nav-link" href="/knowledge-center/">Knowledge Center</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="dropdown-trigger" type="button" aria-expanded="false" aria-controls="components-menu">Components</button>
+          <ul class="submenu" id="components-menu">
+            <li><a class="view-all" href="/components/">View All Components</a></li>
+            <li><a href="/components/tablet-punches.html">Tablet Punches</a></li>
+            <li><a href="/components/tablet-dies.html">Tablet Dies</a></li>
+            <li><a href="/components/feed-frames.html">Feed Frames</a></li>
+            <li><a href="/components/capsule-machine-components.html">Capsule Machine Components</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-dropdown">
+          <button class="dropdown-trigger" type="button" aria-expanded="false" aria-controls="coatings-menu">Coatings</button>
+          <ul class="submenu" id="coatings-menu">
+            <li><a class="view-all" href="/coatings/">View All Coatings</a></li>
+            <li><a href="/coatings/chromium-nitride-crn.html">Chromium Nitride (CrN)</a></li>
+            <li><a href="/coatings/diamond-like-carbon-dlc.html">Diamond-Like Carbon (DLC)</a></li>
+            <li><a href="/coatings/titanium-carbonitride-ticn.html">Titanium Carbonitride (TiCN)</a></li>
+            <li><a href="/coatings/titanium-nitride-tin.html">Titanium Nitride (TiN)</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-dropdown">
+          <button class="dropdown-trigger" type="button" aria-expanded="false" aria-controls="knowledge-menu">Knowledge Center</button>
+          <ul class="submenu" id="knowledge-menu">
+            <li><a class="view-all" href="/knowledge-center/">View Knowledge Center</a></li>
+            <li><a href="/knowledge-center/quality-facilities.html">Quality and Facilities</a></li>
+            <li><a href="/knowledge-center/equipment-materials.html">Equipment and Materials</a></li>
+            <li><a href="/knowledge-center/production.html">Production</a></li>
+            <li><a href="/knowledge-center/packaging-holding.html">Packaging and Holding</a></li>
+            <li><a href="/knowledge-center/laboratory.html">Laboratory Controls</a></li>
+            <li><a href="/knowledge-center/records-returns.html">Records and Returns</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
       </ul>
