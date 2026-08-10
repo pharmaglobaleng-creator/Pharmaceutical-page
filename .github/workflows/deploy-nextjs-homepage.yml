@@ -1,0 +1,78 @@
+name: Deploy Validated Next.js Homepage
+
+on:
+  push:
+    branches: [nextjs-migration]
+    paths:
+      - 'next-app/**'
+      - 'index.html'
+      - '.github/workflows/deploy-nextjs-homepage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pharmaglobaleng-nextjs-homepage-production
+  cancel-in-progress: false
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout migration branch with history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: nextjs-migration
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: next-app
+        run: npm install
+
+      - name: Build and validate safe hybrid export
+        working-directory: next-app
+        run: npm run build:safe
+
+      - name: Stage only validated Next.js homepage files
+        run: |
+          rm -rf /tmp/pge-next-production
+          mkdir -p /tmp/pge-next-production
+          cp next-app/out/index.html /tmp/pge-next-production/index.html
+          cp next-app/out/index.txt /tmp/pge-next-production/index.txt
+          cp next-app/out/__next.__PAGE__.txt /tmp/pge-next-production/__next.__PAGE__.txt
+          cp next-app/out/__next._full.txt /tmp/pge-next-production/__next._full.txt
+          cp next-app/out/__next._tree.txt /tmp/pge-next-production/__next._tree.txt
+          cp -R next-app/out/_next /tmp/pge-next-production/_next
+
+      - name: Verify main has not changed unexpectedly and deploy atomically
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
+          rm -rf _next
+          rm -f index.txt __next.__PAGE__.txt __next._full.txt __next._tree.txt
+          cp /tmp/pge-next-production/index.html index.html
+          cp /tmp/pge-next-production/index.txt index.txt
+          cp /tmp/pge-next-production/__next.__PAGE__.txt __next.__PAGE__.txt
+          cp /tmp/pge-next-production/__next._full.txt __next._full.txt
+          cp /tmp/pge-next-production/__next._tree.txt __next._tree.txt
+          cp -R /tmp/pge-next-production/_next _next
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html index.txt __next.__PAGE__.txt __next._full.txt __next._tree.txt _next
+
+          if git diff --cached --quiet; then
+            echo "Production already matches validated build."
+            exit 0
+          fi
+
+          git commit -m "Deploy validated Next.js homepage"
+          git push origin main
