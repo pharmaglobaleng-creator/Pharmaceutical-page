@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:safe": "next build && node scripts/assemble-safe-export.mjs && node scripts/validate-safe-export.mjs",
     "start": "next start"
   },
   "dependencies": {
