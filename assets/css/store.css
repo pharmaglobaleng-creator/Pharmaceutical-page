@@ -455,3 +455,4 @@ footer { padding: 32px 0; border-top: 1px solid var(--store-line); color: var(--
 @media (prefers-reduced-motion: no-preference) {
   .btn, .filter-btn, .category-card, .machine-card, .product-card { transition: transform .18s ease, border-color .18s ease, background-color .18s ease; }
 }
+@import url('/assets/css/korsch-catalog.css');
