@@ -11,6 +11,25 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
 
 
+def load_approved_oem_references() -> dict[str, dict[str, str]]:
+    source = ROOT / "data/oem-cross-reference-audit.csv"
+    if not source.exists():
+        return {}
+    with source.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    return {
+        row["sku"]: row
+        for row in rows
+        if row.get("oem_part_number", "").strip()
+        and row.get("oem_number_status", "").strip().lower() == "verified"
+        and row.get("approved_for_publication", "").strip().lower() == "yes"
+        and row.get("source_url", "").strip()
+    }
+
+
+APPROVED_OEM_REFERENCES = load_approved_oem_references()
+
+
 @dataclass(frozen=True)
 class Part:
     sku: str
@@ -45,6 +64,13 @@ def text_only(value: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", unescape(value))).strip()
 
 
+def write_if_changed(path: Path, content: str) -> bool:
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        return False
+    path.write_text(content, encoding="utf-8")
+    return True
+
+
 def aliases(part: Part) -> list[str]:
     values = [
         part.name,
@@ -54,6 +80,15 @@ def aliases(part: Part) -> list[str]:
         part.sku.replace("-", " "),
         part.sku.replace("-", ""),
     ]
+    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    if oem:
+        number = oem["oem_part_number"].strip()
+        values.extend((
+            number,
+            f"{part.brand} {number}",
+            f"{part.brand} {part.model} {number}",
+            f"replacement for {number}",
+        ))
     if "&" in part.name:
         values.append(part.name.replace("&", "and"))
     if "—" in part.name:
@@ -144,28 +179,40 @@ def image_parts(slug: str, brand: str, prefix: str) -> list[Part]:
 
 
 def description(part: Part) -> str:
-    return (
+    text = (
         f"PharmaGlobalEng independently manufactures the {part.name} for {equipment_reference(part)}. "
         "Our engineering process establishes the correct "
         "dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing."
     )
+    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    if oem:
+        text += f" Verified OEM cross-reference {oem['oem_part_number']} is provided solely for identification and compatibility research."
+    return text
 
 
 def json_ld(part: Part) -> str:
+    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    properties = [
+        {"@type": "PropertyValue", "name": "Compatibility reference", "value": equipment_reference(part).capitalize()},
+        {"@type": "PropertyValue", "name": "Engineering verification", "value": "PharmaGlobalEng verifies dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing"},
+        {"@type": "PropertyValue", "name": "Supplier relationship", "value": "Independent replacement-part manufacturer; not OEM affiliated or endorsed"},
+    ]
+    if oem:
+        properties.append({
+            "@type": "PropertyValue",
+            "name": "Verified OEM cross-reference",
+            "value": oem["oem_part_number"],
+        })
     data = {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "Product", "@id": part.url + "#product", "name": f"PGE {part.name}",
+                "@type": "Product", "@id": part.url + "#product", "name": f"{part.name} for {title_reference(part)} compatibility",
                 "alternateName": aliases(part), "sku": part.sku, "url": part.url,
                 "description": description(part), "image": SITE + part.image,
                 "category": part.family, "brand": {"@type": "Brand", "name": "PharmaGlobalEng"},
                 "manufacturer": {"@type": "Organization", "name": "PharmaGlobalEng", "url": SITE + "/"},
-                "additionalProperty": [
-                    {"@type": "PropertyValue", "name": "Compatibility reference", "value": equipment_reference(part).capitalize()},
-                    {"@type": "PropertyValue", "name": "Engineering verification", "value": "PharmaGlobalEng verifies dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing"},
-                    {"@type": "PropertyValue", "name": "Supplier relationship", "value": "Independent replacement-part manufacturer; not OEM affiliated or endorsed"},
-                ],
+                "additionalProperty": properties,
             },
             {
                 "@type": "BreadcrumbList", "itemListElement": [
@@ -184,18 +231,40 @@ def build_page(part: Part) -> str:
     confirmed = ""
     if part.confirmed_copy:
         confirmed = f'<div class="detail-box"><h2>Catalog engineering note</h2><p>{escape(part.confirmed_copy)}</p></div>'
-    title = f"PGE {part.name} for {title_reference(part)} compatibility | PharmaGlobalEng"
+    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    oem_title = f" | OEM Ref. {oem['oem_part_number']}" if oem else ""
+    oem_detail = ""
+    if oem:
+        oem_detail = (
+            f'<div><dt>Verified OEM cross-reference</dt><dd>{escape(oem["oem_part_number"])}</dd></div>'
+        )
+    title = f"PGE {part.name} for {title_reference(part)} compatibility{oem_title} | PharmaGlobalEng"
     meta = description(part)
+    image_url = SITE + part.image
+    image_alt = f"Representative visualization of {part.name} for {title_reference(part)} tablet press compatibility"
+    fit_question = f"Will this {part.name} fit a {title_reference(part)} tablet press?"
+    fit_answer = (
+        f"This independently manufactured {part.name} is cataloged for {equipment_reference(part)}. "
+        "Compatibility is established during engineering review by confirming the machine configuration, "
+        "applicable cross-reference, critical dimensions, mounting arrangement, material, finish, and operating geometry. "
+        "It is not represented as a genuine OEM component."
+    )
     return f'''<!doctype html>
 <html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title><meta name="description" content="{escape(meta)}"><meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="{part.url}"><link rel="stylesheet" href="/assets/css/pharmaglobaleng.css"><link rel="stylesheet" href="/assets/css/part-detail.css">
+<link rel="canonical" href="{part.url}">
+<meta property="og:type" content="product"><meta property="og:site_name" content="PharmaGlobalEng"><meta property="og:locale" content="en_US">
+<meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(meta)}"><meta property="og:url" content="{part.url}">
+<meta property="og:image" content="{image_url}"><meta property="og:image:alt" content="{escape(image_alt)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(meta)}"><meta name="twitter:image" content="{image_url}"><meta name="twitter:image:alt" content="{escape(image_alt)}">
+<link rel="stylesheet" href="/assets/css/pharmaglobaleng.css"><link rel="stylesheet" href="/assets/css/part-detail.css">
 <script type="application/ld+json">{json_ld(part)}</script></head>
 <body><header class="site-header"><div class="wrap nav"><a class="brand" href="/">PharmaGlobal<span>Eng</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/parts/" aria-current="page">Parts Store</a><a class="nav-cta" href="/contact.html">Contact</a></nav></div></header>
 <main><div class="wrap"><div class="part-crumb"><a href="/parts/">Parts Store</a> / <a href="{part.catalog_url}">{escape(part.brand)} parts</a> / {escape(part.sku)}</div>
-<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="Representative visualization of PGE {escape(part.name)}, an independently manufactured replacement component for {escape(equipment_reference(part))}" width="960" height="720"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>PGE {escape(part.name)}</h1><span class="sku-badge">{escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><a class="btn primary quote-cta" href="/contact.html?part={escape(part.sku)}">Request compatibility and quote review</a></div></section></div>
-<section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>Component details</h2><dl><div><dt>PGE number</dt><dd>{escape(part.sku)}</dd></div><div><dt>Part family</dt><dd>{escape(part.family)}</dd></div><div><dt>Compatibility reference</dt><dd>{escape(equipment_reference(part).capitalize())}</dd></div><div><dt>Manufacturing</dt><dd>Made to confirmed sample, drawing, or dimensional specification</dd></div><div><dt>Availability</dt><dd>Quotation and engineering review</dd></div></dl></div><div class="detail-box"><h2>PharmaGlobalEng fit-verification process</h2><p>Our engineering team establishes the correct:</p><ul><li>Component dimensions and critical tolerances</li><li>Mounting points and installation configuration</li><li>Material specification and required finish</li><li>Operating geometry and interface requirements</li><li>Manufacturing and inspection requirements</li></ul><p>These details are verified through the quotation and engineering-review process.</p></div>{confirmed}</div></section>
+<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="960" height="720" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(part.name)} for {escape(title_reference(part))} Tablet Press</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><a class="btn primary quote-cta" href="/contact.html?part={escape(part.sku)}">Request compatibility and quote review</a></div></section></div>
+<section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>Component details</h2><dl><div><dt>PGE number</dt><dd>{escape(part.sku)}</dd></div>{oem_detail}<div><dt>Part family</dt><dd>{escape(part.family)}</dd></div><div><dt>Compatibility reference</dt><dd>{escape(equipment_reference(part).capitalize())}</dd></div><div><dt>Manufacturing</dt><dd>Made to confirmed sample, drawing, or dimensional specification</dd></div><div><dt>Availability</dt><dd>Quotation and engineering review</dd></div></dl></div><div class="detail-box"><h2>PharmaGlobalEng fit-verification process</h2><p>Our engineering team establishes the correct:</p><ul><li>Component dimensions and critical tolerances</li><li>Mounting points and installation configuration</li><li>Material specification and required finish</li><li>Operating geometry and interface requirements</li><li>Manufacturing and inspection requirements</li></ul><p>These details are verified through the quotation and engineering-review process.</p></div>{confirmed}</div></section>
 <section class="detail-section"><div class="wrap"><h2>Find this part using similar terms</h2><p class="section-copy">Parts Store search recognizes the PGE number, equipment model, punctuation and spacing variations, and small spelling differences.</p><div class="aliases">{alias_chips}</div></div></section>
+<section class="detail-section"><div class="wrap"><div class="detail-box"><h2>{escape(fit_question)}</h2><p>{escape(fit_answer)}</p></div></div></section>
 <section class="detail-section"><div class="wrap"><div class="notice"><strong>Independent supplier and trademark notice:</strong> PharmaGlobalEng is not affiliated with, authorized by, sponsored by, or endorsed by {escape(part.brand)} or its trademark owner. The {escape(part.brand)} name and any displayed model references are used solely to identify potential equipment compatibility. All trademarks belong to their respective owners. Product images are representative visualizations, not OEM photographs.</div></div></section></main>
 <footer><div class="wrap footer"><span>© PharmaGlobalEng</span><a href="/parts/">All parts</a><a href="/contact.html">Parts inquiry</a></div></footer></body></html>'''
 
@@ -275,7 +344,7 @@ def main() -> None:
     for part in parts:
         destination = ROOT / "parts" / part.slug / "index.html"
         destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_text(build_page(part), encoding="utf-8")
+        write_if_changed(destination, build_page(part))
     add_detail_links_to_korsch([part for part in parts if part.brand == "Korsch"])
     update_sitemaps(parts)
     write_content_audit(parts)
