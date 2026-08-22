@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://pharmaglobaleng.com/sitemap.xml
+Sitemap: https://pharmaglobaleng.com/sitemap-parts-images.xml
