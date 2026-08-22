@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import csv
 from dataclasses import dataclass
 from html import escape, unescape
 from pathlib import Path
@@ -57,6 +58,17 @@ def aliases(part: Part) -> list[str]:
         values.append(part.name.replace("&", "and"))
     if "—" in part.name:
         values.append(part.name.replace("—", " "))
+    replacements = (
+        ("Assembly", "Assy"), ("Stainless Steel", "SS"),
+        ("Left Hand", "LH"), ("Right Hand", "RH"),
+        ("Upper", "Top"), ("Lower", "Bottom"),
+        ("Bushing", "Bush"), ("Bushings", "Bushes"),
+        ("Feed Frame", "Feeder Frame"), ("Feeder Paddle", "Feed Paddle"),
+        ("Anti Vibration", "Antivibration"), ("Handwheel", "Hand Wheel"),
+    )
+    for original, alternative in replacements:
+        if original.lower() in part.name.lower():
+            values.append(re.sub(re.escape(original), alternative, part.name, flags=re.I))
     result = []
     for value in values:
         clean = re.sub(r"\s+", " ", value).strip()
@@ -233,6 +245,24 @@ def update_sitemaps(parts: list[Part]) -> None:
     robots.write_text(text, encoding="utf-8")
 
 
+def write_content_audit(parts: list[Part]) -> None:
+    destination = ROOT / "data/part-content-audit.csv"
+    with destination.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.writer(handle, lineterminator="\n")
+        writer.writerow((
+            "sku", "part_name", "manufacturer_reference", "model_reference", "image_path",
+            "identity_source", "technical_description_status", "search_alias_status", "landing_page",
+        ))
+        for part in parts:
+            writer.writerow((
+                part.sku, part.name, part.brand, part.model, part.image,
+                "Existing catalog card and image-path model folder",
+                "Catalog-confirmed engineering note" if part.confirmed_copy else "Identity confirmed; detailed function pending technical review",
+                "Format and terminology variants generated from confirmed part name",
+                f"/parts/{part.slug}/",
+            ))
+
+
 def main() -> None:
     parts = parse_korsch()
     parts += image_parts("manesty", "Manesty", "MAN")
@@ -248,6 +278,7 @@ def main() -> None:
         destination.write_text(build_page(part), encoding="utf-8")
     add_detail_links_to_korsch([part for part in parts if part.brand == "Korsch"])
     update_sitemaps(parts)
+    write_content_audit(parts)
     print(f"Generated {len(parts)} canonical part pages")
 
 

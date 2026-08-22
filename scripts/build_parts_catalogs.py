@@ -1,5 +1,6 @@
 from html import escape
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 BRANDS = {
@@ -13,6 +14,22 @@ def label(value: str) -> str:
     return value.replace("-", " ").replace("_", " ").title()
 
 
+def search_aliases(name: str, model: str, brand: str, sku: str) -> list[str]:
+    values = [name, f"{model} {name}", f"{brand} {model} {name}", sku, sku.replace("-", " "), sku.replace("-", "")]
+    replacements = (
+        ("Assembly", "Assy"), ("Stainless Steel", "SS"),
+        ("Left Hand", "LH"), ("Right Hand", "RH"),
+        ("Upper", "Top"), ("Lower", "Bottom"),
+        ("Bushing", "Bush"), ("Bushings", "Bushes"),
+        ("Feed Frame", "Feeder Frame"), ("Feeder Paddle", "Feed Paddle"),
+        ("Anti Vibration", "Antivibration"), ("Handwheel", "Hand Wheel"),
+    )
+    for original, alternative in replacements:
+        if original.lower() in name.lower():
+            values.append(re.sub(re.escape(original), alternative, name, flags=re.I))
+    return list(dict.fromkeys(values))
+
+
 def build_catalog(slug: str, brand: str, prefix: str) -> None:
     image_root = ROOT / "assets/images/parts" / slug
     images = sorted(image_root.rglob("*.webp"))
@@ -23,7 +40,7 @@ def build_catalog(slug: str, brand: str, prefix: str) -> None:
         name = label(image.stem)
         sku = f"PGE-{prefix}-{number:03d}"
         product_url = f"/parts/{sku.lower()}/"
-        search_terms = " | ".join((name, f"{model} {name}", f"{brand} {model} {name}", sku, sku.replace("-", " "), sku.replace("-", "")))
+        search_terms = " | ".join(search_aliases(name, model, brand, sku))
         cards.append(
             f'<article class="product-card" data-name="{escape(name)}" data-model="{escape(model)}" data-sku="{sku}" data-search="{escape(search_terms)}">'
             f'<div class="product-visual"><img src="/{relative}" alt="Representative visualization of {escape(name)} for {brand} equipment — confirm compatibility" width="960" height="720" loading="lazy" decoding="async"></div>'
