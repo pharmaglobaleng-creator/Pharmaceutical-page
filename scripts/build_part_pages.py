@@ -65,8 +65,6 @@ def text_only(value: str) -> str:
 
 
 def write_if_changed(path: Path, content: str) -> bool:
-    if path.exists() and path.read_text(encoding="utf-8") == content:
-        return False
     path.write_text(content, encoding="utf-8")
     return True
 
@@ -190,6 +188,72 @@ def description(part: Part) -> str:
     return text
 
 
+def application_guidance(part: Part) -> tuple[str, str, tuple[str, ...]]:
+    """Return cautious, useful guidance supported by the cataloged component name."""
+    lower = part.name.lower()
+    rules = [
+        (("cam", "track"),
+         "Cam and track components establish a guided motion path for the mechanisms that follow their working profile.",
+         "Wear, profile geometry, mounting position, and the relationship to the mating follower can affect movement through the operating cycle.",
+         ("Working profile and follower contact area", "Mounting-hole pattern and installed orientation", "Clearance through the complete operating path")),
+        (("roller", "compression"),
+         "Compression-component geometry supports the controlled loading stage used during tablet formation.",
+         "The roller diameter, bearing or journal interface, installed position, and alignment with the compression mechanism must agree with the machine configuration.",
+         ("Roller diameter and working-face geometry", "Bearing, journal, or shaft interface", "Installed alignment and running clearance")),
+        (("bearing", "bush", "bushing"),
+         "Bearing and bushing components support a rotating or sliding interface while helping maintain alignment between mating parts.",
+         "Bore, outside diameter, length, fit, lubrication conditions, and the supported shaft or housing are important identification points.",
+         ("Bore, outside diameter, and overall length", "Shaft and housing fit", "Lubrication and operating environment")),
+        (("seal", "o-ring", "gasket"),
+         "Sealing components help control material, lubricant, air, or contaminant movement at a defined equipment interface.",
+         "Cross-section, sealing diameter, groove geometry, material compatibility, and the operating environment must be established before manufacture.",
+         ("Seal cross-section and installed diameter", "Groove or mating-surface geometry", "Product, lubricant, and cleaning exposure")),
+        (("feeder", "feed frame", "paddle", "hopper", "chute"),
+         "Feed-system components participate in presenting or directing material through the tablet press product path.",
+         "Installed height, product-contact geometry, rotation or travel direction, clearances, and adjacent feed-system components determine the required configuration.",
+         ("Product-contact geometry and clearances", "Rotation, travel direction, and installed height", "Interfaces with the hopper, feed frame, or discharge path")),
+        (("take off", "take-off", "scraper", "eject", "discharge"),
+         "Take-off and discharge components help guide formed tablets away from the compression area and into the discharge path.",
+         "The working edge, installed angle, height, clearance, and relationship to the turret or discharge chute must match the application.",
+         ("Working-edge profile and installed angle", "Height and clearance at the tablet path", "Mounting and discharge-chute interface")),
+        (("gear", "sprocket", "pulley", "belt"),
+         "Drive components transfer or coordinate motion between connected tablet press mechanisms.",
+         "Tooth or groove form, pitch, bore, keying, alignment, and the mating drive component are essential compatibility details.",
+         ("Tooth, groove, or pitch geometry", "Bore, keyway, and shaft connection", "Alignment with the mating drive component")),
+        (("shaft", "spindle", "pin", "stud"),
+         "Shaft, spindle, and pin components locate, support, or transmit movement between connected mechanisms.",
+         "Diameters, shoulders, lengths, threads, keyways, surface condition, and mating interfaces distinguish similar-looking configurations.",
+         ("Critical diameters, shoulders, and lengths", "Threads, keyways, or retaining features", "Mating bearings, housings, and driven components")),
+        (("guard", "cover", "door", "panel"),
+         "Guard and cover components provide separation or controlled access around a defined machine area.",
+         "Envelope dimensions, hinge or fastener locations, interlock provisions, openings, and adjacent assemblies must match the installed equipment.",
+         ("Overall envelope and required openings", "Hinge, latch, and fastener locations", "Interlock and adjacent-assembly interfaces")),
+        (("spring",),
+         "Spring components apply or return force within a defined mechanism and operating range.",
+         "Free length, coil geometry, end form, installed length, travel, and required force characteristics distinguish applications.",
+         ("Free and installed length", "Coil, wire, and end-form geometry", "Working travel and force requirement")),
+        (("handwheel", "hand wheel", "adjust", "knob"),
+         "Adjustment components provide a manual interface for positioning or setting a tablet press mechanism.",
+         "Connection geometry, direction of adjustment, available travel, scale or indicator relationship, and surrounding clearance must be confirmed.",
+         ("Shaft, thread, or key connection", "Adjustment direction and usable travel", "Indicator relationship and surrounding clearance")),
+    ]
+    for needles, function, context, checks in rules:
+        if any(needle in lower for needle in needles):
+            return function, context, checks
+    return (
+        f"The {part.name} is a cataloged component within the {part.family.lower()} group for the referenced tablet press application.",
+        "Its exact function and configuration depend on where it is installed and the components with which it interfaces; visual similarity alone is not sufficient to establish fit.",
+        ("Critical dimensions and component geometry", "Mounting method and installed orientation", "Mating components and operating clearance"),
+    )
+
+
+def related_parts(part: Part, parts: list[Part], limit: int = 4) -> list[Part]:
+    same_model = [candidate for candidate in parts if candidate.sku != part.sku and candidate.brand == part.brand and candidate.model == part.model and candidate.family == part.family]
+    same_family = [candidate for candidate in parts if candidate.sku != part.sku and candidate.brand == part.brand and candidate.family == part.family and candidate not in same_model]
+    same_model_other = [candidate for candidate in parts if candidate.sku != part.sku and candidate.brand == part.brand and candidate.model == part.model and candidate not in same_model]
+    return (same_model + same_family + same_model_other)[:limit]
+
+
 def json_ld(part: Part) -> str:
     oem = APPROVED_OEM_REFERENCES.get(part.sku)
     properties = [
@@ -226,7 +290,7 @@ def json_ld(part: Part) -> str:
     return json.dumps(data, ensure_ascii=False, separators=(",", ":"))
 
 
-def build_page(part: Part) -> str:
+def build_page(part: Part, parts: list[Part]) -> str:
     alias_chips = "".join(f'<span class="alias">{escape(item)}</span>' for item in aliases(part))
     confirmed = ""
     if part.confirmed_copy:
@@ -249,6 +313,16 @@ def build_page(part: Part) -> str:
         "applicable cross-reference, critical dimensions, mounting arrangement, material, finish, and operating geometry. "
         "It is not represented as a genuine OEM component."
     )
+    function_note, application_note, verification_checks = application_guidance(part)
+    check_items = "".join(f"<li>{escape(item)}</li>" for item in verification_checks)
+    related = related_parts(part, parts)
+    related_items = "".join(
+        f'<li><a href="/parts/{item.slug}/">{escape(item.name)}</a> <span>({escape(item.sku)})</span></li>'
+        for item in related
+    )
+    related_section = ""
+    if related_items:
+        related_section = f'''<section class="detail-section"><div class="wrap"><div class="detail-box"><h2>Related {escape(part.brand)} {escape(part.model)} components</h2><p>Compare other cataloged components in the same machine or component family:</p><ul class="related-parts">{related_items}</ul></div></div></section>'''
     return f'''<!doctype html>
 <html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title><meta name="description" content="{escape(meta)}"><meta name="robots" content="index,follow,max-image-preview:large">
@@ -264,7 +338,9 @@ def build_page(part: Part) -> str:
 <section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="960" height="720" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(part.name)} for {escape(title_reference(part))} Tablet Press</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><a class="btn primary quote-cta" href="/contact.html?part={escape(part.sku)}">Request compatibility and quote review</a></div></section></div>
 <section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>Component details</h2><dl><div><dt>PGE number</dt><dd>{escape(part.sku)}</dd></div>{oem_detail}<div><dt>Part family</dt><dd>{escape(part.family)}</dd></div><div><dt>Compatibility reference</dt><dd>{escape(equipment_reference(part).capitalize())}</dd></div><div><dt>Manufacturing</dt><dd>Made to confirmed sample, drawing, or dimensional specification</dd></div><div><dt>Availability</dt><dd>Quotation and engineering review</dd></div></dl></div><div class="detail-box"><h2>PharmaGlobalEng fit-verification process</h2><p>Our engineering team establishes the correct:</p><ul><li>Component dimensions and critical tolerances</li><li>Mounting points and installation configuration</li><li>Material specification and required finish</li><li>Operating geometry and interface requirements</li><li>Manufacturing and inspection requirements</li></ul><p>These details are verified through the quotation and engineering-review process.</p></div>{confirmed}</div></section>
 <section class="detail-section"><div class="wrap"><h2>Find this part using similar terms</h2><p class="section-copy">Parts Store search recognizes the PGE number, equipment model, punctuation and spacing variations, and small spelling differences.</p><div class="aliases">{alias_chips}</div></div></section>
+<section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>What does the {escape(part.name)} do?</h2><p>{escape(function_note)}</p><p>{escape(application_note)}</p></div><div class="detail-box"><h2>Part-specific verification checkpoints</h2><p>For {escape(part.sku)}, the engineering review focuses on:</p><ul>{check_items}</ul><p>The existing component, drawing, or dimensional record is used to resolve the final manufacturing configuration.</p></div></div></section>
 <section class="detail-section"><div class="wrap"><div class="detail-box"><h2>{escape(fit_question)}</h2><p>{escape(fit_answer)}</p></div></div></section>
+{related_section}
 <section class="detail-section"><div class="wrap"><div class="notice"><strong>Independent supplier and trademark notice:</strong> PharmaGlobalEng is not affiliated with, authorized by, sponsored by, or endorsed by {escape(part.brand)} or its trademark owner. The {escape(part.brand)} name and any displayed model references are used solely to identify potential equipment compatibility. All trademarks belong to their respective owners. Product images are representative visualizations, not OEM photographs.</div></div></section></main>
 <footer><div class="wrap footer"><span>© PharmaGlobalEng</span><a href="/parts/">All parts</a><a href="/contact.html">Parts inquiry</a></div></footer></body></html>'''
 
@@ -344,7 +420,7 @@ def main() -> None:
     for part in parts:
         destination = ROOT / "parts" / part.slug / "index.html"
         destination.parent.mkdir(parents=True, exist_ok=True)
-        write_if_changed(destination, build_page(part))
+        write_if_changed(destination, build_page(part, parts))
     add_detail_links_to_korsch([part for part in parts if part.brand == "Korsch"])
     update_sitemaps(parts)
     write_content_audit(parts)
