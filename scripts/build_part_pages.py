@@ -6,6 +6,7 @@ import csv
 from dataclasses import dataclass
 from html import escape, unescape
 from pathlib import Path
+from urllib.parse import urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
@@ -115,6 +116,23 @@ def equipment_reference(part: Part) -> str:
     if part.model.lower() in generic:
         return f"selected {part.brand} tablet press configurations"
     return f"selected {part.brand} {part.model} tablet press configurations"
+
+
+def inquiry_url(part: Part) -> str:
+    subject = f"Part inquiry | {part.sku} | {part.name}"
+    body = (
+        "Hello PharmaGlobalEng,\n\n"
+        "I would like compatibility and quotation information for this part:\n\n"
+        f"Part name: {part.name}\n"
+        f"PGE number: {part.sku}\n"
+        f"Manufacturer reference: {part.brand}\n"
+        f"Model reference: {part.model}\n\n"
+        "Quantity required:\n"
+        "Machine serial number/configuration:\n"
+        "Existing part or drawing reference:\n"
+        "Additional information:\n"
+    )
+    return "mailto:info@pharmaglobaleng.com?" + urlencode({"subject": subject, "body": body})
 
 
 def title_reference(part: Part) -> str:
@@ -335,7 +353,7 @@ def build_page(part: Part, parts: list[Part]) -> str:
 <script type="application/ld+json">{json_ld(part)}</script></head>
 <body><header class="site-header"><div class="wrap nav"><a class="brand" href="/">PharmaGlobal<span>Eng</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/parts/" aria-current="page">Parts Store</a><a class="nav-cta" href="/contact.html">Contact</a></nav></div></header>
 <main><div class="wrap"><div class="part-crumb"><a href="/parts/">Parts Store</a> / <a href="{part.catalog_url}">{escape(part.brand)} parts</a> / {escape(part.sku)}</div>
-<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="960" height="720" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(part.name)} for {escape(title_reference(part))} Tablet Press</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><a class="btn primary quote-cta" href="/contact.html?part={escape(part.sku)}">Request compatibility and quote review</a></div></section></div>
+<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="960" height="720" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(part.name)} for {escape(title_reference(part))} Tablet Press</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><a class="btn primary quote-cta email-part-inquiry" href="{escape(inquiry_url(part))}">Email compatibility and quote request</a></div></section></div>
 <section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>Component details</h2><dl><div><dt>PGE number</dt><dd>{escape(part.sku)}</dd></div>{oem_detail}<div><dt>Part family</dt><dd>{escape(part.family)}</dd></div><div><dt>Compatibility reference</dt><dd>{escape(equipment_reference(part).capitalize())}</dd></div><div><dt>Manufacturing</dt><dd>Made to confirmed sample, drawing, or dimensional specification</dd></div><div><dt>Availability</dt><dd>Quotation and engineering review</dd></div></dl></div><div class="detail-box"><h2>PharmaGlobalEng fit-verification process</h2><p>Our engineering team establishes the correct:</p><ul><li>Component dimensions and critical tolerances</li><li>Mounting points and installation configuration</li><li>Material specification and required finish</li><li>Operating geometry and interface requirements</li><li>Manufacturing and inspection requirements</li></ul><p>These details are verified through the quotation and engineering-review process.</p></div>{confirmed}</div></section>
 <section class="detail-section"><div class="wrap"><h2>Find this part using similar terms</h2><p class="section-copy">Parts Store search recognizes the PGE number, equipment model, punctuation and spacing variations, and small spelling differences.</p><div class="aliases">{alias_chips}</div></div></section>
 <section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>What does the {escape(part.name)} do?</h2><p>{escape(function_note)}</p><p>{escape(application_note)}</p></div><div class="detail-box"><h2>Part-specific verification checkpoints</h2><p>For {escape(part.sku)}, the engineering review focuses on:</p><ul>{check_items}</ul><p>The existing component, drawing, or dimensional record is used to resolve the final manufacturing configuration.</p></div></div></section>
@@ -365,6 +383,41 @@ def add_detail_links_to_korsch(parts: list[Part]) -> None:
     if shared not in page:
         page = page.replace('<script>\n  (() => {', shared + '<script>\n  (() => {', 1)
     path.write_text(page, encoding="utf-8")
+
+
+def add_email_links_to_catalogs(parts: list[Part]) -> None:
+    catalog_paths = {
+        "korsch-300": ROOT / "parts/korsch/korsch-300/index.html",
+        "manesty": ROOT / "parts/manesty/index.html",
+        "kikusui": ROOT / "parts/kikusui/index.html",
+        "stokes": ROOT / "parts/stokes/index.html",
+    }
+    for brand_slug, path in catalog_paths.items():
+        page = path.read_text(encoding="utf-8")
+        for part in (item for item in parts if item.brand_slug == brand_slug):
+            article_pattern = re.compile(
+                rf'(<article class="product-card"[^>]*data-sku="{re.escape(part.sku)}".*?</article>)',
+                re.S,
+            )
+            match = article_pattern.search(page)
+            if not match:
+                continue
+            article = match.group(1)
+            if "email-part-inquiry" in article:
+                continue
+            email_link = (
+                f'<a class="btn small email-part-inquiry" href="{escape(inquiry_url(part))}">'
+                "Email inquiry</a>"
+            )
+            article = re.sub(
+                r'(<div class="product-actions">.*?)(</div>)',
+                rf'\1{email_link}\2',
+                article,
+                count=1,
+                flags=re.S,
+            )
+            page = page[:match.start()] + article + page[match.end():]
+        path.write_text(page, encoding="utf-8")
 
 
 def update_sitemaps(parts: list[Part]) -> None:
@@ -422,6 +475,7 @@ def main() -> None:
         destination.parent.mkdir(parents=True, exist_ok=True)
         write_if_changed(destination, build_page(part, parts))
     add_detail_links_to_korsch([part for part in parts if part.brand == "Korsch"])
+    add_email_links_to_catalogs(parts)
     update_sitemaps(parts)
     write_content_audit(parts)
     print(f"Generated {len(parts)} canonical part pages")
