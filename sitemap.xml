@@ -44,6 +44,12 @@
   </url>
 
   <url>
+    <loc>https://pharmaglobaleng.com/parts/identify/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
     <loc>https://pharmaglobaleng.com/parts/korsch/korsch-300/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
