@@ -189,7 +189,9 @@ def image_parts(slug: str, brand: str, prefix: str) -> list[Part]:
     image_root = ROOT / "assets/images/parts" / slug
     parts = []
     for number, image in enumerate(sorted(image_root.rglob("*.webp")), 1):
-        model = label(image.relative_to(image_root).parts[0])
+        # Legacy model folders are not evidence that a synthetic rendering
+        # depicts an actual component for that machine.
+        model = "Model unresolved"
         name = label(image.stem)
         parts.append(Part(
             sku=f"PGE-{prefix}-{number:03d}", name=name, brand=brand, brand_slug=slug,

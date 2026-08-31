@@ -36,15 +36,17 @@ def build_catalog(slug: str, brand: str, prefix: str) -> None:
     cards = []
     for number, image in enumerate(images, 1):
         relative = image.relative_to(ROOT).as_posix()
-        model = label(image.relative_to(image_root).parts[0])
+        # Directory names reflect the legacy catalog classification, not an
+        # independently verified image-to-machine identification.
+        model = "Model unresolved"
         name = label(image.stem)
         sku = f"PGE-{prefix}-{number:03d}"
         product_url = f"/parts/{sku.lower()}/"
         search_terms = " | ".join(search_aliases(name, model, brand, sku))
         cards.append(
             f'<article class="product-card" data-name="{escape(name)}" data-model="{escape(model)}" data-sku="{sku}" data-search="{escape(search_terms)}">'
-            f'<div class="product-visual"><img src="/{relative}" alt="Representative visualization of {escape(name)} for {brand} equipment — confirm compatibility" width="960" height="720" loading="lazy" decoding="async"></div>'
-            f'<div class="product-content"><p class="product-family">{escape(model)}</p><h3><a href="{product_url}">{escape(name)}</a></h3><p class="sku">{sku}</p><a class="part-page-link" href="{product_url}">View {sku} part page →</a>'
+            f'<div class="product-visual"><img src="/{relative}" alt="Synthetic visualization labeled {escape(name)} - component identity and model unresolved" width="960" height="720" loading="lazy" decoding="async"></div>'
+            f'<div class="product-content"><p class="product-family">{escape(model)}</p><h3><a href="{product_url}">{escape(name)}</a></h3><p class="identity-warning">Image identity and exact model unresolved</p><p class="sku">{sku}</p><a class="part-page-link" href="{product_url}">View {sku} part page →</a>'
             f'<p class="product-copy">Independently manufactured replacement component. PharmaGlobalEng verifies dimensions, mounting configuration, material, finish, and application requirements through engineering review.</p>'
             f'<div class="product-actions"><span class="availability">Quote review</span><a class="btn small" href="{product_url}">View part</a></div></div></article>'
         )

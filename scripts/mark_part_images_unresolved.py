@@ -13,13 +13,17 @@ EVIDENCE_NOTE = (
 )
 
 
+def in_scope(sku: str) -> bool:
+    return sku.startswith(("PGE-K300-", "PGE-MAN-", "PGE-KIK-", "PGE-STK-"))
+
+
 def update_oem_audit() -> None:
     path = ROOT / "data/oem-cross-reference-audit.csv"
     with path.open(encoding="utf-8", newline="") as handle:
         rows = list(csv.DictReader(handle))
         fieldnames = list(rows[0])
     for row in rows:
-        if not row["sku"].startswith("PGE-K300-"):
+        if not in_scope(row["sku"]):
             continue
         row.update(
             manufacturer_reference="Korsch",
@@ -46,7 +50,7 @@ def update_content_audit() -> None:
         rows = list(csv.DictReader(handle))
         fieldnames = list(rows[0])
     for row in rows:
-        if not row["sku"].startswith("PGE-K300-"):
+        if not in_scope(row["sku"]):
             continue
         row["model_reference"] = "Model unresolved"
         row["identity_source"] = "Unverified synthetic visualization; no traceable source image or record-to-OEM mapping"
