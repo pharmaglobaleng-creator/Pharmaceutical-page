@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import csv
+import sys
 from dataclasses import dataclass
 from html import escape, unescape
 from pathlib import Path
@@ -66,6 +67,8 @@ def text_only(value: str) -> str:
 
 
 def write_if_changed(path: Path, content: str) -> bool:
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        return False
     path.write_text(content, encoding="utf-8")
     return True
 
@@ -191,8 +194,9 @@ def image_parts(slug: str, brand: str, prefix: str) -> list[Part]:
     for number, image in enumerate(sorted(image_root.rglob("*.webp")), 1):
         # Legacy model folders are not evidence that a synthetic rendering
         # depicts an actual component for that machine.
-        model = "Model unresolved"
-        name = label(image.stem)
+        approved = APPROVED_OEM_REFERENCES.get(f"PGE-{prefix}-{number:03d}", {})
+        model = approved.get("model_reference", "Model unresolved")
+        name = approved.get("part_name", label(image.stem))
         parts.append(Part(
             sku=f"PGE-{prefix}-{number:03d}", name=name, brand=brand, brand_slug=slug,
             model=model, image="/" + image.relative_to(ROOT).as_posix(), family=family_for(name),
@@ -208,7 +212,7 @@ def description(part: Part) -> str:
     )
     oem = APPROVED_OEM_REFERENCES.get(part.sku)
     if oem:
-        text += f" Verified OEM cross-reference {oem['oem_part_number']} is provided solely for identification and compatibility research."
+        text += f" Replacement part for OEM #{oem['oem_part_number']}. The OEM number is used solely for identification and compatibility research."
     return text
 
 
@@ -288,7 +292,7 @@ def json_ld(part: Part) -> str:
     if oem:
         properties.append({
             "@type": "PropertyValue",
-            "name": "Verified OEM cross-reference",
+            "name": "Replacement part for OEM number",
             "value": oem["oem_part_number"],
         })
     data = {
@@ -320,11 +324,11 @@ def build_page(part: Part, parts: list[Part]) -> str:
     if part.confirmed_copy:
         confirmed = f'<div class="detail-box"><h2>Catalog engineering note</h2><p>{escape(part.confirmed_copy)}</p></div>'
     oem = APPROVED_OEM_REFERENCES.get(part.sku)
-    oem_title = f" | OEM Ref. {oem['oem_part_number']}" if oem else ""
+    oem_title = f" | Replacement for OEM #{oem['oem_part_number']}" if oem else ""
     oem_detail = ""
     if oem:
         oem_detail = (
-            f'<div><dt>Verified OEM cross-reference</dt><dd>{escape(oem["oem_part_number"])}</dd></div>'
+            f'<div><dt>Replacement part for OEM number</dt><dd>#{escape(oem["oem_part_number"])}</dd></div>'
         )
     title = f"PGE {part.name} for {title_reference(part)} compatibility{oem_title} | PharmaGlobalEng"
     meta = description(part)
@@ -494,10 +498,21 @@ def main() -> None:
         raise SystemExit(f"Expected 384 parts, found {len(parts)}")
     if len({part.sku for part in parts}) != 384:
         raise SystemExit("Duplicate SKU detected")
-    for part in parts:
+    verified_only = "--verified-only" in sys.argv[1:]
+    generated = 0
+    selected = [part for part in parts if not verified_only or part.sku in APPROVED_OEM_REFERENCES]
+    for part in selected:
         destination = ROOT / "parts" / part.slug / "index.html"
         destination.parent.mkdir(parents=True, exist_ok=True)
-        write_if_changed(destination, build_page(part, parts))
+        content = build_page(part, parts)
+        if verified_only:
+            destination.write_text(content, encoding="utf-8")
+        else:
+            write_if_changed(destination, content)
+        generated += 1
+    if verified_only:
+        print(f"Generated {generated} verified canonical part pages")
+        return
     add_detail_links_to_korsch([part for part in parts if part.brand == "Korsch"])
     add_email_links_to_catalogs(parts)
     update_sitemaps(parts)

@@ -1,8 +1,26 @@
 from html import escape
 from pathlib import Path
 import re
+import csv
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def approved_references() -> dict[str, dict[str, str]]:
+    path = ROOT / "data/oem-cross-reference-audit.csv"
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8", newline="") as handle:
+        return {
+            row["sku"]: row
+            for row in csv.DictReader(handle)
+            if row.get("oem_number_status", "").lower() == "verified"
+            and row.get("approved_for_publication", "").lower() == "yes"
+            and row.get("source_url", "").strip()
+        }
+
+
+APPROVED_REFERENCES = approved_references()
 BRANDS = {
     "manesty": ("Manesty", "MAN"),
     "kikusui": ("Kikusui", "KIK"),
@@ -36,17 +54,21 @@ def build_catalog(slug: str, brand: str, prefix: str) -> None:
     cards = []
     for number, image in enumerate(images, 1):
         relative = image.relative_to(ROOT).as_posix()
+        sku = f"PGE-{prefix}-{number:03d}"
         # Directory names reflect the legacy catalog classification, not an
         # independently verified image-to-machine identification.
-        model = "Model unresolved"
-        name = label(image.stem)
-        sku = f"PGE-{prefix}-{number:03d}"
+        approved = APPROVED_REFERENCES.get(sku, {})
+        model = approved.get("model_reference", "Model unresolved")
+        name = approved.get("part_name", label(image.stem))
         product_url = f"/parts/{sku.lower()}/"
         search_terms = " | ".join(search_aliases(name, model, brand, sku))
+        oem_number = approved.get("oem_part_number", "").strip()
+        oem_note = f'<p class="oem-reference">Replacement part for OEM #{escape(oem_number)}</p>' if oem_number else ""
+        identity_note = "Image identity requires final dimensional confirmation" if oem_number else "Image identity and exact model unresolved"
         cards.append(
             f'<article class="product-card" data-name="{escape(name)}" data-model="{escape(model)}" data-sku="{sku}" data-search="{escape(search_terms)}">'
             f'<div class="product-visual"><img src="/{relative}" alt="Synthetic visualization labeled {escape(name)} - component identity and model unresolved" width="960" height="720" loading="lazy" decoding="async"></div>'
-            f'<div class="product-content"><p class="product-family">{escape(model)}</p><h3><a href="{product_url}">{escape(name)}</a></h3><p class="identity-warning">Image identity and exact model unresolved</p><p class="sku">{sku}</p><a class="part-page-link" href="{product_url}">View {sku} part page →</a>'
+            f'<div class="product-content"><p class="product-family">{escape(model)}</p><h3><a href="{product_url}">{escape(name)}</a></h3>{oem_note}<p class="identity-warning">{identity_note}</p><p class="sku">{sku}</p><a class="part-page-link" href="{product_url}">View {sku} part page →</a>'
             f'<p class="product-copy">Independently manufactured replacement component. PharmaGlobalEng verifies dimensions, mounting configuration, material, finish, and application requirements through engineering review.</p>'
             f'<div class="product-actions"><span class="availability">Quote review</span><a class="btn small" href="{product_url}">View part</a></div></div></article>'
         )

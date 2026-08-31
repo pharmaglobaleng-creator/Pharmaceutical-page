@@ -25,6 +25,8 @@ def update_oem_audit() -> None:
     for row in rows:
         if not in_scope(row["sku"]):
             continue
+        if row.get("oem_number_status", "").lower() == "verified" and row.get("approved_for_publication", "").lower() == "yes":
+            continue
         row.update(
             manufacturer_reference="Korsch",
             model_reference="Model unresolved",
