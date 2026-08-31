@@ -1,55 +1,55 @@
 sku,part_name,manufacturer_reference,model_reference,oem_part_number,oem_number_status,configuration_or_variant,source_title,source_url,source_type,evidence_notes,reviewed_on,approved_for_publication
-PGE-K300-001,Main Roller Bearing,Korsch,300,,not researched,,,,,,,no
-PGE-K300-002,Journal Bearing Upper Pre-Compression,Korsch,300,,not researched,,,,,,,no
-PGE-K300-003,Main Compression Roller,Korsch,300,,not researched,,,,,,,no
-PGE-K300-004,Main Compression Roller Alternate Configuration,Korsch,300,,not researched,,,,,,,no
-PGE-K300-005,Pre-Compression Roller,Korsch,300,,not researched,,,,,,,no
-PGE-K300-006,Pre-Compression Roller ML,Korsch,300,,not researched,,,,,,,no
-PGE-K300-007,Pre-Compression Shaft,Korsch,300,,not researched,,,,,,,no
-PGE-K300-008,Pre-Compression Upper Inner Arm,Korsch,300,,not researched,,,,,,,no
-PGE-K300-009,Pre-Compression Upper Outer Arm,Korsch,300,,not researched,,,,,,,no
-PGE-K300-010,Eccentric Shaft Lower Pre-Compression,Korsch,300,,not researched,,,,,,,no
-PGE-K300-011,Cam Behind Upper Roller,Korsch,300,,not researched,,,,,,,no
-PGE-K300-012,Guide Dosing Cam Bolt,Korsch,300,,not researched,,,,,,,no
-PGE-K300-013,Feeder Paddle Right,Korsch,300,,not researched,,,,,,,no
-PGE-K300-014,Feeder Paddle Left,Korsch,300,,not researched,,,,,,,no
-PGE-K300-015,PTFE Seal With Lip,Korsch,300,,not researched,,,,,,,no
-PGE-K300-016,Three Quarter Inch Punch Seal,Korsch,300,,not researched,,,,,,,no
-PGE-K300-017,Discharge Chute Sensor Holder,Korsch,300,,not researched,,,,,,,no
-PGE-K300-018,Bearing Block Lower Pre-Compression,Korsch,300,,not researched,,,,,,,no
-PGE-K300-019,Bearing Block Upper Pre-Compression,Korsch,300,,not researched,,,,,,,no
-PGE-K300-020,Eccentric Shaft Upper Pre-Compression,Korsch,300,,not researched,,,,,,,no
-PGE-K300-021,Transition Cam Fill to Dosing,Korsch,300,,not researched,,,,,,,no
-PGE-K300-022,Transition Cam Dosing to Pre-Compression,Korsch,300,,not researched,,,,,,,no
-PGE-K300-023,Upper Punch Tight Toe Cam,Korsch,300,,not researched,,,,,,,no
-PGE-K300-024,Feeder Paddle Gear,Korsch,300,,not researched,,,,,,,no
-PGE-K300-025,Zero Clearance Feeder Pan Assembly,Korsch,300,,not researched,,,,,,,no
-PGE-K300-026,Zero Clearance Feeder Pan,Korsch,300,,not researched,,,,,,,no
-PGE-K300-027,Stripper for Feeder,Korsch,300,,not researched,,,,,,,no
-PGE-K300-028,Tablet Sticking Device,Korsch,300,,not researched,,,,,,,no
-PGE-K300-029,Tail Over Die,Korsch,300,,not researched,,,,,,,no
-PGE-K300-030,Lower Punch Safety Rail,Korsch,300,,not researched,,,,,,,no
-PGE-K300-031,Lower Punch Tight,Korsch,300,,not researched,,,,,,,no
-PGE-K300-032,Lower Punch Hold Down,Korsch,300,,not researched,,,,,,,no
-PGE-K300-033,Upper Tight Cam,Korsch,300,,not researched,,,,,,,no
-PGE-K300-034,Upper Punch Access Cam,Korsch,300,,not researched,,,,,,,no
-PGE-K300-035,Fill Cam Rail Pin,Korsch,300,,not researched,,,,,,,no
-PGE-K300-036,Hopper Sensor Holder,Korsch,300,,not researched,,,,,,,no
-PGE-K300-037,Inner Arm Pre-Compression Lower,Korsch,300,,not researched,,,,,,,no
-PGE-K300-038,Outer Arm Pre-Compression Lower,Korsch,300,,not researched,,,,,,,no
-PGE-K300-039,Pressure Spring,Korsch,300,,not researched,,,,,,,no
-PGE-K300-040,Scraper,Korsch,300,,not researched,,,,,,,no
-PGE-K300-041,Scraper Mount,Korsch,300,,not researched,,,,,,,no
-PGE-K300-042,Sensor Cover Discharge Area,Korsch,300,,not researched,,,,,,,no
-PGE-K300-043,Sensor Cover Hopper Area,Korsch,300,,not researched,,,,,,,no
-PGE-K300-044,Tail Over Die Mount,Korsch,300,,not researched,,,,,,,no
-PGE-K300-045,Feeder Insert,Korsch,300,,not researched,,,,,,,no
-PGE-K300-046,Feeder Paddle,Korsch,300,,not researched,,,,,,,no
-PGE-K300-047,Ejection Cam Ramp,Korsch,300,,not researched,,,,,,,no
-PGE-K300-048,Ejection Segment,Korsch,300,,not researched,,,,,,,no
-PGE-K300-049,Oil Pipe Cam,Korsch,300,,not researched,,,,,,,no
+PGE-K300-001,Main Roller Bearing,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-002,Journal Bearing Upper Pre-Compression,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-003,Main Compression Roller,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-004,Main Compression Roller Alternate Configuration,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-005,Pre-Compression Roller,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-006,Pre-Compression Roller ML,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-007,Pre-Compression Shaft,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-008,Pre-Compression Upper Inner Arm,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-009,Pre-Compression Upper Outer Arm,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-010,Eccentric Shaft Lower Pre-Compression,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-011,Cam Behind Upper Roller,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-012,Guide Dosing Cam Bolt,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-013,Feeder Paddle Right,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-014,Feeder Paddle Left,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-015,PTFE Seal With Lip,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-016,Three Quarter Inch Punch Seal,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-017,Discharge Chute Sensor Holder,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-018,Bearing Block Lower Pre-Compression,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-019,Bearing Block Upper Pre-Compression,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-020,Eccentric Shaft Upper Pre-Compression,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-021,Transition Cam Fill to Dosing,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-022,Transition Cam Dosing to Pre-Compression,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-023,Upper Punch Tight Toe Cam,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-024,Feeder Paddle Gear,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-025,Zero Clearance Feeder Pan Assembly,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-026,Zero Clearance Feeder Pan,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-027,Stripper for Feeder,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-028,Tablet Sticking Device,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-029,Tail Over Die,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-030,Lower Punch Safety Rail,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-031,Lower Punch Tight,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-032,Lower Punch Hold Down,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-033,Upper Tight Cam,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-034,Upper Punch Access Cam,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-035,Fill Cam Rail Pin,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-036,Hopper Sensor Holder,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-037,Inner Arm Pre-Compression Lower,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-038,Outer Arm Pre-Compression Lower,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-039,Pressure Spring,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-040,Scraper,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-041,Scraper Mount,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-042,Sensor Cover Discharge Area,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-043,Sensor Cover Hopper Area,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-044,Tail Over Die Mount,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-045,Feeder Insert,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-046,Feeder Paddle,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-047,Ejection Cam Ramp,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-048,Ejection Segment,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
+PGE-K300-049,Oil Pipe Cam,Korsch,Model unresolved,,unresolved,,Internet and supplied-catalog review,,visual audit,"Synthetic visualization has no traceable markings, dimensions, provenance, or defensible record-to-OEM mapping; current descriptive label is unverified.",2026-08-31,no
 PGE-MAN-001,Hopper With Bracket,Manesty,B3B,,not researched,,,,,,,no
-PGE-MAN-002,Lower Cam Track,Manesty,B3B,35172,candidate - configuration confirmation required,B3B lower camtrack,"Manesty Press Replacement Parts","https://dh4b13or2bqf5.cloudfront.net/uploads/2015/12/Manesty-Press-Replacement-Parts.pdf",independent replacement-parts catalog,"Catalog associates LOWER CAMTRACK / M5-72 / OEM 35172 with B3B. Other Manesty lower-cam variants use different numbers; confirm the PGE photograph or drawing matches this exact configuration before publication.",2026-08-22,no
+PGE-MAN-002,Lower Cam Track,Manesty,B3B,35172,candidate - configuration confirmation required,B3B lower camtrack,Manesty Press Replacement Parts,https://dh4b13or2bqf5.cloudfront.net/uploads/2015/12/Manesty-Press-Replacement-Parts.pdf,independent replacement-parts catalog,Catalog associates LOWER CAMTRACK / M5-72 / OEM 35172 with B3B. Other Manesty lower-cam variants use different numbers; confirm the PGE photograph or drawing matches this exact configuration before publication.,2026-08-22,no
 PGE-MAN-003,Left Hand Feeder Paddle,Manesty,Bb4,,not researched,,,,,,,no
 PGE-MAN-004,Right Hand Feeder Paddle,Manesty,Bb4,,not researched,,,,,,,no
 PGE-MAN-005,2 Inch Round Nut,Manesty,Betapress,,not researched,,,,,,,no

@@ -174,7 +174,11 @@ def parse_korsch() -> list[Part]:
         name = text_only(name_match.group(1))
         parts.append(Part(
             sku=sku_match.group(1), name=name, brand="Korsch", brand_slug="korsch-300",
-            model="300", image=image_match.group(1),
+            # The legacy Korsch images are synthetic visualizations without
+            # traceable source photographs, dimensions, markings, or a
+            # record-to-OEM mapping. Do not infer a machine model from the
+            # legacy k300 filename or catalog route.
+            model="Model unresolved", image=image_match.group(1),
             family=text_only(family_match.group(1)) if family_match else family_for(name),
             confirmed_copy=text_only(copy_match.group(1)) if copy_match else "",
         ))
