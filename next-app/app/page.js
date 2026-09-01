@@ -20,7 +20,45 @@ function readLegacyHomepage() {
   let body = bodyMatch ? bodyMatch[1] : '';
   body = body.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
 
-  return { body, css: styleBlocks.join('\n'), scripts };
+  const animatedLogoMarkup = `
+    <img
+      class="pge-animated-logo"
+      src="/assets/images/pge-animated-logo.svg"
+      width="300"
+      height="300"
+      loading="eager"
+      decoding="async"
+      alt="Pharma Global Eng PGE logo with rotating globe"
+    >`;
+
+  if (!body.includes('pge-animated-logo')) {
+    body = body.replace(
+      /(<section class=["']visual-shell["'][^>]*>)/i,
+      `$1${animatedLogoMarkup}`,
+    );
+  }
+
+  const animatedLogoCss = `
+.pge-animated-logo {
+  position: absolute;
+  z-index: 2;
+  top: 4.8%;
+  right: 2.8%;
+  width: clamp(170px, 18vw, 300px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 18px 35px rgba(0,0,0,.6));
+}
+@media (max-width: 700px) {
+  .pge-animated-logo {
+    width: 150px;
+    top: 2.5%;
+    right: 12px;
+  }
+}
+`;
+
+  return { body, css: `${styleBlocks.join('\n')}\n${animatedLogoCss}`, scripts };
 }
 
 export default function HomePage() {
