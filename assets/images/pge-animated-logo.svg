@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+<defs>
+ <radialGradient id="ocean" cx="35%" cy="28%" r="78%"><stop offset="0" stop-color="#62c7ff"/><stop offset=".42" stop-color="#155bce"/><stop offset=".78" stop-color="#15106e"/><stop offset="1" stop-color="#05051f"/></radialGradient>
+ <linearGradient id="bronze" x1="0" x2="1"><stop stop-color="#6b2e0a"/><stop offset=".25" stop-color="#e7a15a"/><stop offset=".5" stop-color="#8a3f12"/><stop offset=".78" stop-color="#f0b46d"/><stop offset="1" stop-color="#5b2108"/></linearGradient>
+ <linearGradient id="steel" x1="0" x2="1"><stop stop-color="#4d5560"/><stop offset=".2" stop-color="#f2f6fa"/><stop offset=".45" stop-color="#8d98a5"/><stop offset=".7" stop-color="#f8fbff"/><stop offset="1" stop-color="#4b5360"/></linearGradient>
+ <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cf32ff"/><stop offset=".5" stop-color="#6631ff"/><stop offset="1" stop-color="#16a8ff"/></linearGradient>
+ <clipPath id="globeClip"><circle cx="150" cy="103" r="59"/></clipPath>
+ <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <g id="tooth"><rect x="145" y="28" width="10" height="18" rx="2" fill="#46305e" stroke="#aa45ff"/></g>
+</defs>
+<rect width="300" height="300" fill="none"/>
+<g opacity=".95" filter="url(#glow)">
+ <circle cx="150" cy="103" r="72" fill="none" stroke="url(#purple)" stroke-width="6"/>
+ <use href="#tooth"/><use href="#tooth" transform="rotate(45 150 103)"/><use href="#tooth" transform="rotate(90 150 103)"/><use href="#tooth" transform="rotate(135 150 103)"/><use href="#tooth" transform="rotate(180 150 103)"/><use href="#tooth" transform="rotate(225 150 103)"/><use href="#tooth" transform="rotate(270 150 103)"/><use href="#tooth" transform="rotate(315 150 103)"/>
+ <path d="M76 84A79 79 0 0 1 210 46" fill="none" stroke="#b13cff" stroke-width="2"/>
+ <path d="M220 50A79 79 0 0 1 229 130" fill="none" stroke="#1fa9ff" stroke-width="3"/>
+</g>
+<circle cx="150" cy="103" r="59" fill="url(#ocean)" stroke="#6ed8ff" stroke-width="1.5"/>
+<g clip-path="url(#globeClip)">
+ <g id="world" fill="#e2ebf4" opacity=".93">
+  <g>
+   <path d="M95 71l12-8 13 4 8 10-5 8 9 6-4 12-13 3-9-9-7-2-9-10z"/>
+   <path d="M122 110l10 6 5 15-7 23-8 8-7-15 2-16-7-12z"/>
+   <path d="M155 67l13-5 15 4 6 8 10 2 5 9-8 7-11-5-8 7-7-5-6 9-7-6-10-3 3-10z"/>
+   <path d="M178 101l12 5 8 13-6 15-9 3-8-18z"/>
+   <path d="M209 122l9 4 4 8-7 5-10-4z"/>
+  </g>
+  <g transform="translate(118 0)">
+   <path d="M95 71l12-8 13 4 8 10-5 8 9 6-4 12-13 3-9-9-7-2-9-10z"/>
+   <path d="M122 110l10 6 5 15-7 23-8 8-7-15 2-16-7-12z"/>
+   <path d="M155 67l13-5 15 4 6 8 10 2 5 9-8 7-11-5-8 7-7-5-6 9-7-6-10-3 3-10z"/>
+   <path d="M178 101l12 5 8 13-6 15-9 3-8-18z"/>
+   <path d="M209 122l9 4 4 8-7 5-10-4z"/>
+  </g>
+  <animateTransform attributeName="transform" type="translate" from="0 0" to="-118 0" dur="5.5s" repeatCount="indefinite"/>
+ </g>
+ <g fill="none" stroke="#94e7ff" stroke-opacity=".42" stroke-width=".8">
+  <ellipse cx="150" cy="103" rx="24" ry="59"/><ellipse cx="150" cy="103" rx="45" ry="59"/>
+  <ellipse cx="150" cy="103" rx="56" ry="12"/><ellipse cx="150" cy="83" rx="51" ry="8"/><ellipse cx="150" cy="123" rx="51" ry="8"/>
+ </g>
+ <circle cx="150" cy="103" r="59" fill="none" stroke="#090421" stroke-opacity=".38" stroke-width="9"/>
+</g>
+<text x="38" y="145" font-family="Arial Black,Arial,sans-serif" font-size="100" font-weight="900" fill="url(#bronze)" stroke="#ff9d6b" stroke-width="1.1" filter="url(#glow)">P</text>
+<text x="103" y="145" font-family="Arial Black,Arial,sans-serif" font-size="100" font-weight="900" fill="url(#steel)" stroke="#62b9ff" stroke-width="1.1" filter="url(#glow)">G</text>
+<g transform="translate(206 67)" filter="url(#glow)">
+ <rect x="0" y="0" width="16" height="83" rx="5" fill="url(#steel)" stroke="#7a57ff"/>
+ <g fill="url(#steel)" stroke="#745bff">
+  <rect x="10" y="3" width="47" height="18" rx="8"/><rect x="10" y="33" width="39" height="17" rx="8"/><rect x="10" y="63" width="47" height="18" rx="8"/>
+ </g>
+ <g fill="#c4ccda"><rect x="50" y="8" width="10" height="8" rx="2"/><rect x="42" y="38" width="10" height="7" rx="2"/><rect x="50" y="68" width="10" height="8" rx="2"/></g>
+</g>
+<circle cx="150" cy="174" r="10" fill="#18203a" stroke="#8a5cff" stroke-width="3"/><circle cx="150" cy="174" r="4" fill="#54d8ff"/>
+<text x="150" y="222" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="900" letter-spacing="1.5" fill="url(#purple)">PHARMA GLOBAL ENG</text>
+<line x1="27" y1="244" x2="67" y2="244" stroke="#a236ff" stroke-width="2"/><line x1="233" y1="244" x2="273" y2="244" stroke="#1d9fff" stroke-width="2"/>
+<text x="150" y="249" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="700" letter-spacing="3.1" fill="#dceaff">PHARMACEUTICAL PARTS</text>
+</svg>
