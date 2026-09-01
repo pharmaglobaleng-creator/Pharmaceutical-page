@@ -42,13 +42,14 @@ jobs:
       - name: Stage only validated Next.js homepage files
         run: |
           rm -rf /tmp/pge-next-production
-          mkdir -p /tmp/pge-next-production
+          mkdir -p /tmp/pge-next-production/assets/images
           cp next-app/out/index.html /tmp/pge-next-production/index.html
           cp next-app/out/index.txt /tmp/pge-next-production/index.txt
           cp next-app/out/__next.__PAGE__.txt /tmp/pge-next-production/__next.__PAGE__.txt
           cp next-app/out/__next._full.txt /tmp/pge-next-production/__next._full.txt
           cp next-app/out/__next._tree.txt /tmp/pge-next-production/__next._tree.txt
           cp -R next-app/out/_next /tmp/pge-next-production/_next
+          cp next-app/out/assets/images/pge-animated-logo.svg /tmp/pge-next-production/assets/images/pge-animated-logo.svg
 
       - name: Verify main has not changed unexpectedly and deploy atomically
         run: |
@@ -64,10 +65,12 @@ jobs:
           cp /tmp/pge-next-production/__next._full.txt __next._full.txt
           cp /tmp/pge-next-production/__next._tree.txt __next._tree.txt
           cp -R /tmp/pge-next-production/_next _next
+          mkdir -p assets/images
+          cp /tmp/pge-next-production/assets/images/pge-animated-logo.svg assets/images/pge-animated-logo.svg
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html index.txt __next.__PAGE__.txt __next._full.txt __next._tree.txt _next
+          git add index.html index.txt __next.__PAGE__.txt __next._full.txt __next._tree.txt _next assets/images/pge-animated-logo.svg
 
           if git diff --cached --quiet; then
             echo "Production already matches validated build."
