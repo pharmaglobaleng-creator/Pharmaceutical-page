@@ -1,0 +1,101 @@
+position,sku,make,model,part_name,category,oem_number,oem_status,catalog_page,image_path,landing_page
+1,PGE-FET-001,Fette,1090i WiP,12MM FILL CAM - EU 1”,Lower Cam Tracks,3105598,catalog-supplied,17,/assets/images/parts/fette/pge-fet-001.png,/parts/pge-fet-001/
+2,PGE-FET-002,Fette,1090i WiP,WEAR PLATE,Lower Cam Tracks,3113915,catalog-supplied,17,/assets/images/parts/fette/pge-fet-002.png,/parts/pge-fet-002/
+3,PGE-FET-003,Fette,1090i WiP,12MM FILL CAM - IPT 19,Lower Cam Tracks,Needed,needed,17,/assets/images/parts/fette/pge-fet-003.png,/parts/pge-fet-003/
+4,PGE-FET-004,Fette,1090i WiP,TOOTHED BELT FOR F-O-M,Product Control,3795305,catalog-supplied,17,/assets/images/parts/fette/pge-fet-004.png,/parts/pge-fet-004/
+5,PGE-FET-005,Fette,1090i WiP,PUNCH SEALS LOWER “B”,Turret Hardware,3115546,catalog-supplied,17,/assets/images/parts/fette/pge-fet-005.png,/parts/pge-fet-005/
+6,PGE-FET-006,Fette,1090i WiP,17 STATION TURRET ASSEMBLY*,Turrets,Needed,needed,17,/assets/images/parts/fette/pge-fet-006.png,/parts/pge-fet-006/
+7,PGE-FET-007,Fette,1090i WiP,OUTER SHANK FELT 66.3x26x5,Upper Cam Tracks,3126487,catalog-supplied,17,/assets/images/parts/fette/pge-fet-007.png,/parts/pge-fet-007/
+8,PGE-FET-008,Fette,1200i,BUSHING FOR SPINDLE (CAP FOR ROTOR SHAFT),Drive Components,Needed,needed,18,/assets/images/parts/fette/pge-fet-008.png,/parts/pge-fet-008/
+9,PGE-FET-009,Fette,1200i,WEAR PLATE,Lower Cam Tracks,3113915,catalog-supplied,18,/assets/images/parts/fette/pge-fet-009.png,/parts/pge-fet-009/
+10,PGE-FET-010,Fette,1200i,THRUST PIECE (EJECTION RAMP),Lower Cam Tracks,3113765,catalog-supplied,18,/assets/images/parts/fette/pge-fet-010.png,/parts/pge-fet-010/
+11,PGE-FET-011,Fette,1200i,TIGHT PUNCH CONTROL DOSING,Lower Cam Tracks,3113816,catalog-supplied,18,/assets/images/parts/fette/pge-fet-011.png,/parts/pge-fet-011/
+12,PGE-FET-012,Fette,1200i,COLLECTOR RAIL - EU 1,Lower Cam Tracks,3137335,catalog-supplied,18,/assets/images/parts/fette/pge-fet-012.png,/parts/pge-fet-012/
+13,PGE-FET-013,Fette,1200i,TRANSITION CAM - MAIN COMPRESSION,Lower Cam Tracks,3113723,catalog-supplied,18,/assets/images/parts/fette/pge-fet-013.png,/parts/pge-fet-013/
+14,PGE-FET-014,Fette,1200i,BASE PLATE FOR EJECTOR,Lower Cam Tracks,3113900,catalog-supplied,18,/assets/images/parts/fette/pge-fet-014.png,/parts/pge-fet-014/
+15,PGE-FET-015,Fette,1200i,COLLECTOR RAIL - EU 1,Lower Cam Tracks,3114838,catalog-supplied,18,/assets/images/parts/fette/pge-fet-015.png,/parts/pge-fet-015/
+16,PGE-FET-016,Fette,1200i,PRESSURE LEDGE,Lower Cam Tracks,3113888,catalog-supplied,18,/assets/images/parts/fette/pge-fet-016.png,/parts/pge-fet-016/
+17,PGE-FET-017,Fette,1200i,12MM FILL CAM - EU-B,Lower Cam Tracks,3114746,catalog-supplied,18,/assets/images/parts/fette/pge-fet-017.png,/parts/pge-fet-017/
+18,PGE-FET-018,Fette,1200i,14MM FILL CAM - EU 19,Lower Cam Tracks,3115809,catalog-supplied,18,/assets/images/parts/fette/pge-fet-018.png,/parts/pge-fet-018/
+19,PGE-FET-019,Fette,1200i,6MM FILL CAM - EU-19,Lower Cam Tracks,3114744,catalog-supplied,18,/assets/images/parts/fette/pge-fet-019.png,/parts/pge-fet-019/
+20,PGE-FET-020,Fette,1200i,8MM FILL CAM EU-B,Lower Cam Tracks,3114745,catalog-supplied,18,/assets/images/parts/fette/pge-fet-020.png,/parts/pge-fet-020/
+21,PGE-FET-021,Fette,1200i,10MM FILL CAM EU19,Lower Cam Tracks,3114807,catalog-supplied,18,/assets/images/parts/fette/pge-fet-021.png,/parts/pge-fet-021/
+22,PGE-FET-022,Fette,1200i,SHIMS FOR EJECTOR PLATE,Lower Cam Tracks,3113959,catalog-supplied,18,/assets/images/parts/fette/pge-fet-022.png,/parts/pge-fet-022/
+23,PGE-FET-023,Fette,1200i,TRANSFER CAM FOR PRE & MAIN PRESSURE STATIONS,Lower Cam Tracks,Needed,needed,19,/assets/images/parts/fette/pge-fet-023.png,/parts/pge-fet-023/
+24,PGE-FET-024,Fette,1200i,8MM FILL CAM - IPT 19,Lower Cam Tracks,Needed,needed,19,/assets/images/parts/fette/pge-fet-024.png,/parts/pge-fet-024/
+25,PGE-FET-025,Fette,1200i,10MM FILL CAM - IPT 19,Lower Cam Tracks,Needed,needed,19,/assets/images/parts/fette/pge-fet-025.png,/parts/pge-fet-025/
+26,PGE-FET-026,Fette,1200i,12MM FILL CAM - IPT 19,Lower Cam Tracks,Needed,needed,19,/assets/images/parts/fette/pge-fet-026.png,/parts/pge-fet-026/
+27,PGE-FET-027,Fette,1200i,18MM FILL CAM - IPT 19,Lower Cam Tracks,Needed,needed,19,/assets/images/parts/fette/pge-fet-027.png,/parts/pge-fet-027/
+28,PGE-FET-028,Fette,1200i,20MM FILL CAM - IPT 19,Lower Cam Tracks,Needed,needed,19,/assets/images/parts/fette/pge-fet-028.png,/parts/pge-fet-028/
+29,PGE-FET-029,Fette,1200i,DRAIN PLUG,Miscellaneous,Needed,needed,19,/assets/images/parts/fette/pge-fet-029.png,/parts/pge-fet-029/
+30,PGE-FET-030,Fette,1200i,PRESSURE ROLL W/O BEARING,Pressure Rolls & Components,3114089,catalog-supplied,19,/assets/images/parts/fette/pge-fet-030.png,/parts/pge-fet-030/
+31,PGE-FET-031,Fette,1200i,PRESSURE ROLL W/BEARING,Pressure Rolls & Components,3114089,catalog-supplied,19,/assets/images/parts/fette/pge-fet-031.png,/parts/pge-fet-031/
+32,PGE-FET-032,Fette,1200i,11MM SLIDE IN BRONZE SEAL,Product Control,3136191,catalog-supplied,19,/assets/images/parts/fette/pge-fet-032.png,/parts/pge-fet-032/
+33,PGE-FET-033,Fette,1200i,16MM SLIDE IN BRONZE SEAL,Product Control,3136192,catalog-supplied,19,/assets/images/parts/fette/pge-fet-033.png,/parts/pge-fet-033/
+34,PGE-FET-034,Fette,1200i,RECEIVER BLOCK,Product Control,Needed,needed,19,/assets/images/parts/fette/pge-fet-034.png,/parts/pge-fet-034/
+35,PGE-FET-035,Fette,1200i,11MM SLIDE IN SEAL - PEEK,Product Control,Needed,needed,19,/assets/images/parts/fette/pge-fet-035.png,/parts/pge-fet-035/
+36,PGE-FET-036,Fette,1200i,25MM SLIDE IN SEAL - PEEK,Product Control,9178794,catalog-supplied,20,/assets/images/parts/fette/pge-fet-036.png,/parts/pge-fet-036/
+37,PGE-FET-037,Fette,1200i,F-O-M BASE PLATE FOR BRONZE SEAL,Product Control,3136190,catalog-supplied,20,/assets/images/parts/fette/pge-fet-037.png,/parts/pge-fet-037/
+38,PGE-FET-038,Fette,1200i,COVER PLATE,Product Control,3117696,catalog-supplied,20,/assets/images/parts/fette/pge-fet-038.png,/parts/pge-fet-038/
+39,PGE-FET-039,Fette,1200i,FILLING WHEEL - PLOW,Product Control,Needed,needed,20,/assets/images/parts/fette/pge-fet-039.png,/parts/pge-fet-039/
+40,PGE-FET-040,Fette,1200i,REVERSE DOSING WHEEL W/ FLAT RODS - PLOW,Product Control,Needed,needed,20,/assets/images/parts/fette/pge-fet-040.png,/parts/pge-fet-040/
+41,PGE-FET-041,Fette,1200i,F-O-M BASE PLATE FOR BRONZE SEAL,Product Control,3113711,catalog-supplied,20,/assets/images/parts/fette/pge-fet-041.png,/parts/pge-fet-041/
+42,PGE-FET-042,Fette,1200i,25MM SLIDE IN BRONZE SEAL,Product Control,3136193,catalog-supplied,20,/assets/images/parts/fette/pge-fet-042.png,/parts/pge-fet-042/
+43,PGE-FET-043,Fette,1200i,25MM SLIDE IN SEAL - TITANIUM,Product Control,Needed,needed,20,/assets/images/parts/fette/pge-fet-043.png,/parts/pge-fet-043/
+44,PGE-FET-044,Fette,1200i,16 MM SLIDE IN PEEK SEAL,Product Control,9178765,catalog-supplied,20,/assets/images/parts/fette/pge-fet-044.png,/parts/pge-fet-044/
+45,PGE-FET-045,Fette,1200i,24 STATION TURRET ASSEMBLY*,Turrets,Needed,needed,20,/assets/images/parts/fette/pge-fet-045.png,/parts/pge-fet-045/
+46,PGE-FET-046,Fette,1200i,24 STATION TURRET - EU B,Turrets,Needed,needed,20,/assets/images/parts/fette/pge-fet-046.png,/parts/pge-fet-046/
+47,PGE-FET-047,Fette,1200i,PUNCH RESTRAINER O-RING 165X3,Turret Hardware,3722106,catalog-supplied,20,/assets/images/parts/fette/pge-fet-047.png,/parts/pge-fet-047/
+48,PGE-FET-048,Fette,1200i,HOLD DOWN LEDGE - EU 1,Turret Hardware,3114836,catalog-supplied,20,/assets/images/parts/fette/pge-fet-048.png,/parts/pge-fet-048/
+49,PGE-FET-049,Fette,1200i,PUNCH GUIDE SEAL - 1” - UNKEYED,Turret Hardware,2214624,catalog-supplied,20,/assets/images/parts/fette/pge-fet-049.png,/parts/pge-fet-049/
+50,PGE-FET-050,Fette,1200i,PUNCH RESTRAINER 19,Turret Hardware,3733406,catalog-supplied,20,/assets/images/parts/fette/pge-fet-050.png,/parts/pge-fet-050/
+51,PGE-FET-051,Fette,1200i,PUNCH GUIDE SEAL - 3/4”/19 MM,Turret Hardware,2147667,catalog-supplied,21,/assets/images/parts/fette/pge-fet-051.png,/parts/pge-fet-051/
+52,PGE-FET-052,Fette,1200i,THREADED SPINDLE (ROTOR SHAFT),Turret Hardware,Needed,needed,21,/assets/images/parts/fette/pge-fet-052.png,/parts/pge-fet-052/
+53,PGE-FET-053,Fette,1200i,PUSH DOWN RAIL PRE- MAIN COMPRESSION,Upper Cam Tracks,Needed,needed,21,/assets/images/parts/fette/pge-fet-053.png,/parts/pge-fet-053/
+54,PGE-FET-054,Fette,1200i,DWELL CAM FOR PUNCH,Upper Cam Tracks,3117707,catalog-supplied,21,/assets/images/parts/fette/pge-fet-054.png,/parts/pge-fet-054/
+55,PGE-FET-055,Fette,1200i,UPPER LOWERING CAM WITH HEAD LUBE - EU 19,Upper Cam Tracks,3112485,catalog-supplied,21,/assets/images/parts/fette/pge-fet-055.png,/parts/pge-fet-055/
+56,PGE-FET-056,Fette,1200i,UPPER RAISING CAM - EU 1”- STEEL,Upper Cam Tracks,3118356,catalog-supplied,21,/assets/images/parts/fette/pge-fet-056.png,/parts/pge-fet-056/
+57,PGE-FET-057,Fette,1200i,TRANSITION CAM - MAIN COMPRESSION,Upper Cam Tracks,3113723,catalog-supplied,21,/assets/images/parts/fette/pge-fet-057.png,/parts/pge-fet-057/
+58,PGE-FET-058,Fette,1200i,PRE-MAIN DWELL CAM - EU “1”,Upper Cam Tracks,3117701,catalog-supplied,21,/assets/images/parts/fette/pge-fet-058.png,/parts/pge-fet-058/
+59,PGE-FET-059,Fette,1200i,UPPER LOWERING CAM WITH HEAD LUBE - EU 1”- PLASTIC,Upper Cam Tracks,3112484,catalog-supplied,21,/assets/images/parts/fette/pge-fet-059.png,/parts/pge-fet-059/
+60,PGE-FET-060,Fette,1200i,LUBE FELT FOR PUNCH SHANK (WIPING FELT),Upper Cam Tracks,3101612,catalog-supplied,21,/assets/images/parts/fette/pge-fet-060.png,/parts/pge-fet-060/
+61,PGE-FET-061,Fette,1200i,PRESSURE LEDGE- DELRIN,Upper Cam Tracks,3113888P,catalog-supplied,21,/assets/images/parts/fette/pge-fet-061.png,/parts/pge-fet-061/
+62,PGE-FET-062,Fette,1200i,UPPER LOWERING CAM WITH HEAD LUBE - EU1-441-PLASTIC,Upper Cam Tracks,3118825,catalog-supplied,21,/assets/images/parts/fette/pge-fet-062.png,/parts/pge-fet-062/
+63,PGE-FET-063,Fette,1200i,UPPER RAISING CAM - EU1-441-STEEL,Upper Cam Tracks,3118643,catalog-supplied,21,/assets/images/parts/fette/pge-fet-063.png,/parts/pge-fet-063/
+64,PGE-FET-064,Fette,1200i,LOWER PRESSURE RAIL EU1-441,Upper Cam Tracks,3114521,catalog-supplied,21,/assets/images/parts/fette/pge-fet-064.png,/parts/pge-fet-064/
+65,PGE-FET-065,Fette,2000i,18 MM FILL CAM - EU1 - 441,Lower Cam Tracks,Needed,needed,22,/assets/images/parts/fette/pge-fet-065.png,/parts/pge-fet-065/
+66,PGE-FET-066,Fette,2000i,12 MM FILL CAM - EU1 - 441,Lower Cam Tracks,Needed,needed,22,/assets/images/parts/fette/pge-fet-066.png,/parts/pge-fet-066/
+67,PGE-FET-067,Fette,2000i,16 MM FILL CAM - EU1 - 441,Lower Cam Tracks,Needed,needed,22,/assets/images/parts/fette/pge-fet-067.png,/parts/pge-fet-067/
+68,PGE-FET-068,Fette,2090i,WEIGHT ADJUSTER,Lower Cam Tracks,3134086,catalog-supplied,23,/assets/images/parts/fette/pge-fet-068.png,/parts/pge-fet-068/
+69,PGE-FET-069,Fette,2090i,LEAD PIECE - EJECTOR - 32 STATION,Lower Cam Tracks,3113374,catalog-supplied,23,/assets/images/parts/fette/pge-fet-069.png,/parts/pge-fet-069/
+70,PGE-FET-070,Fette,2090i,12MM FILL CAM EU 19,Lower Cam Tracks,3111444,catalog-supplied,23,/assets/images/parts/fette/pge-fet-070.png,/parts/pge-fet-070/
+71,PGE-FET-071,Fette,2090i,6MM FILL CAM EU 19,Lower Cam Tracks,3110898,catalog-supplied,23,/assets/images/parts/fette/pge-fet-071.png,/parts/pge-fet-071/
+72,PGE-FET-072,Fette,2090i,16MM FILL CAM EU 19,Lower Cam Tracks,3110899,catalog-supplied,23,/assets/images/parts/fette/pge-fet-072.png,/parts/pge-fet-072/
+73,PGE-FET-073,Fette,2090i,18MM FILL CAM - EU 19,Lower Cam Tracks,3110900,catalog-supplied,23,/assets/images/parts/fette/pge-fet-073.png,/parts/pge-fet-073/
+74,PGE-FET-074,Fette,2090i,14MM FILL CAM IPT 1”,Lower Cam Tracks,3114434,catalog-supplied,23,/assets/images/parts/fette/pge-fet-074.png,/parts/pge-fet-074/
+75,PGE-FET-075,Fette,2090i,12MM FILL CAM IPT 1”,Lower Cam Tracks,3114433,catalog-supplied,23,/assets/images/parts/fette/pge-fet-075.png,/parts/pge-fet-075/
+76,PGE-FET-076,Fette,2090i,10MM FILL CAM IPT 1”,Lower Cam Tracks,3114432,catalog-supplied,23,/assets/images/parts/fette/pge-fet-076.png,/parts/pge-fet-076/
+77,PGE-FET-077,Fette,2090i,8MM FILL CAM IPT-19,Lower Cam Tracks,3114410,catalog-supplied,23,/assets/images/parts/fette/pge-fet-077.png,/parts/pge-fet-077/
+78,PGE-FET-078,Fette,2090i,HOLDING LEDGE FOR LOWER CAMS IPT 19,Lower Cam Tracks,3110919,catalog-supplied,23,/assets/images/parts/fette/pge-fet-078.png,/parts/pge-fet-078/
+79,PGE-FET-079,Fette,2090i,9 HOLD DOWN LEDGE - IPT 19,Lower Cam Tracks,3110929,catalog-supplied,23,/assets/images/parts/fette/pge-fet-079.png,/parts/pge-fet-079/
+80,PGE-FET-080,Fette,2090i,HOLD DOWN LEDGE IPT 1”,Lower Cam Tracks,3112017,catalog-supplied,23,/assets/images/parts/fette/pge-fet-080.png,/parts/pge-fet-080/
+81,PGE-FET-081,Fette,2090i,FILLING CAM - 8MM - EU19,Lower Cam Tracks,3110858,catalog-supplied,23,/assets/images/parts/fette/pge-fet-081.png,/parts/pge-fet-081/
+82,PGE-FET-082,Fette,2090i,FILLING CAM - 12MM - EU1-441,Lower Cam Tracks,Needed,needed,24,/assets/images/parts/fette/pge-fet-082.png,/parts/pge-fet-082/
+83,PGE-FET-083,Fette,2090i,FILLING CAM - 10MM - EU19,Lower Cam Tracks,3110614,catalog-supplied,24,/assets/images/parts/fette/pge-fet-083.png,/parts/pge-fet-083/
+84,PGE-FET-084,Fette,2090i,FILL CAM 10MM FS12,Lower Cam Tracks,Needed,needed,24,/assets/images/parts/fette/pge-fet-084.png,/parts/pge-fet-084/
+85,PGE-FET-085,Fette,2090i,FILLING CAM 6MM - EU1,Lower Cam Tracks,Needed,needed,24,/assets/images/parts/fette/pge-fet-085.png,/parts/pge-fet-085/
+86,PGE-FET-086,Fette,2090i,FILLING CAM - 20MM - IPT 1”,Lower Cam Tracks,Needed,needed,24,/assets/images/parts/fette/pge-fet-086.png,/parts/pge-fet-086/
+87,PGE-FET-087,Fette,2090i,PULL DOWN CAM - PLASTIC - EU 19,Lower Cam Tracks,Needed,needed,24,/assets/images/parts/fette/pge-fet-087.png,/parts/pge-fet-087/
+88,PGE-FET-088,Fette,2090i,FILLING CAM-14MM - EU 19,Lower Cam Tracks,Needed,needed,24,/assets/images/parts/fette/pge-fet-088.png,/parts/pge-fet-088/
+89,PGE-FET-089,Fette,2090i,GRIP LEDGE - EU 19,Lower Cam Tracks,Needed,needed,24,/assets/images/parts/fette/pge-fet-089.png,/parts/pge-fet-089/
+90,PGE-FET-090,Fette,2090i,PRESSURE ROLL W/O BEARING,Pressure Rolls & Components,3114089,catalog-supplied,24,/assets/images/parts/fette/pge-fet-090.png,/parts/pge-fet-090/
+91,PGE-FET-091,Fette,2090i,PRESSURE ROLL W/BEARING,Pressure Rolls & Components,3114089,catalog-supplied,24,/assets/images/parts/fette/pge-fet-091.png,/parts/pge-fet-091/
+92,PGE-FET-092,Fette,2090i,S.H. SET SCREW,Pressure Rolls & Components,Needed,needed,24,/assets/images/parts/fette/pge-fet-092.png,/parts/pge-fet-092/
+93,PGE-FET-093,Fette,2090i,SLIDE IN BRONZE SEAL FOR STANDARD F-O-M TABLETS UP TO 11MM,Product Control,3127034,catalog-supplied,24,/assets/images/parts/fette/pge-fet-093.png,/parts/pge-fet-093/
+94,PGE-FET-094,Fette,2090i,SLIDE IN BRONZE SEAL FOR STANDARD F-O-M TABLETS UP TO 16MM,Product Control,3127035,catalog-supplied,24,/assets/images/parts/fette/pge-fet-094.png,/parts/pge-fet-094/
+95,PGE-FET-095,Fette,2090i,SLIDE-IN BRONZE SEAL FOR STANDARD F-O-M TABLETS UP TO 25MM,Product Control,3127036,catalog-supplied,24,/assets/images/parts/fette/pge-fet-095.png,/parts/pge-fet-095/
+96,PGE-FET-096,Fette,2090i,SCRAPER BAR - BRONZE,Product Control,3106361C,catalog-supplied,24,/assets/images/parts/fette/pge-fet-096.png,/parts/pge-fet-096/
+97,PGE-FET-097,Fette,2090i,F-O-M BASE PLATE FOR BRONZE SEAL,Product Control,3127032,catalog-supplied,25,/assets/images/parts/fette/pge-fet-097.png,/parts/pge-fet-097/
+98,PGE-FET-098,Fette,2090i,FILLING WHEEL - PLOW,Product Control,3501464,catalog-supplied,25,/assets/images/parts/fette/pge-fet-098.png,/parts/pge-fet-098/
+99,PGE-FET-099,Fette,2090i,REVERSE DOSING WHEEL W/ FLAT RODS - PLOW,Product Control,Needed,needed,25,/assets/images/parts/fette/pge-fet-099.png,/parts/pge-fet-099/
+100,PGE-FET-100,Fette,2090i,SLIDE IN PEEK SEAL FOR STANDARD F-O-M TABLETS UP TO 25MM,Product Control,3134636,catalog-supplied,25,/assets/images/parts/fette/pge-fet-100.png,/parts/pge-fet-100/
