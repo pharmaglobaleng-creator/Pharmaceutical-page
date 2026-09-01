@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:T331f,
+2:T3462,
 :root {
   --bg:#030611;
   --panel:#071126;
@@ -353,8 +353,27 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
 .site-breadcrumb a{color:var(--cyan);text-decoration:none;font-weight:700}
 .site-breadcrumb span{margin-left:8px}
 
+
+
+.pge-animated-logo {
+  position: absolute;
+  z-index: 2;
+  top: 4.8%;
+  right: 2.8%;
+  width: clamp(170px, 18vw, 300px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 18px 35px rgba(0,0,0,.6));
+}
+@media (max-width: 700px) {
+  .pge-animated-logo {
+    width: 150px;
+    top: 2.5%;
+    right: 12px;
+  }
+}
 8:X
-0:{"buildId":"lfGZCqdKpSmdEz0D_0Qo4","data":[{"rsc":["$","$1","c",{"children":[[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3",["$L4","$L5"]],null,"$L6"]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":"$L9","isPartial":"$@a","staleTime":"$8","varyParams":null},{"rsc":"$Lb","isPartial":"$@c","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@d","rootVaryParams":null,"needsRuntimeRequest":"$@e"}
+0:{"buildId":"ALLrEnqxRTClAi6Cij-NY","data":[{"rsc":["$","$1","c",{"children":[[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3",["$L4","$L5"]],null,"$L6"]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":"$L9","isPartial":"$@a","staleTime":"$8","varyParams":null},{"rsc":"$Lb","isPartial":"$@c","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@d","rootVaryParams":null,"needsRuntimeRequest":"$@e"}
 12:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
 13:"$Sreact.suspense"
 15:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
@@ -362,7 +381,7 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
 17:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
 18:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
 :HL["/_next/static/chunks/1ywccti8eh6rv.css","style"]
-f:Ta877,
+f:Ta964,
 
 <header class="site-header">
   <div class="nav-shell">
@@ -487,6 +506,15 @@ f:Ta877,
 
 <main id="home">
   <section class="visual-shell" aria-label="PharmaGlobalEng homepage">
+    <img
+      class="pge-animated-logo"
+      src="/assets/images/pge-animated-logo.svg"
+      width="300"
+      height="300"
+      loading="eager"
+      decoding="async"
+      alt="Pharma Global Eng PGE logo with rotating globe"
+    >
     <img class="masterpiece" src="/assets/images/pharmaglobaleng-homepage.webp" width="1024" height="1536" fetchpriority="high" decoding="async" alt="PharmaGlobalEng pharmaceutical tablet tooling and surface engineering homepage with chrome tooling, purple and blue lighting, service cards, company metrics, industry solutions, and contact calls to action">
 
     <span class="tablet-punch-cursor" aria-hidden="true">
