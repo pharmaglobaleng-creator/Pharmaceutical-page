@@ -28,7 +28,7 @@ function readLegacyHomepage() {
       height="300"
       loading="eager"
       decoding="async"
-      alt="Pharma Global Eng PGE logo with rotating globe"
+      alt="Pharma Global Eng PGE pharmaceutical parts and coating logo"
     >`;
 
   if (!body.includes('pge-animated-logo')) {
