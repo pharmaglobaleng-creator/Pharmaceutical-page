@@ -1,1 +1,0 @@
-About page uses native-resolution image sizing overrides in assets/css/pharmaglobaleng.css. This note is non-rendered and may be removed after verification.
