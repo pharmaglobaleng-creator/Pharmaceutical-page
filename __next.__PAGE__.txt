@@ -373,7 +373,7 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
   }
 }
 8:X
-0:{"buildId":"4MJnukdXu-4AB7BtYp92o","data":[{"rsc":["$","$1","c",{"children":[[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3",["$L4","$L5"]],null,"$L6"]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":"$L9","isPartial":"$@a","staleTime":"$8","varyParams":null},{"rsc":"$Lb","isPartial":"$@c","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@d","rootVaryParams":null,"needsRuntimeRequest":"$@e"}
+0:{"buildId":"4R9FD5_1PMi1ef5i6QHWe","data":[{"rsc":["$","$1","c",{"children":[[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],"$L3",["$L4","$L5"]],null,"$L6"]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":"$L9","isPartial":"$@a","staleTime":"$8","varyParams":null},{"rsc":"$Lb","isPartial":"$@c","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@d","rootVaryParams":null,"needsRuntimeRequest":"$@e"}
 12:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
 13:"$Sreact.suspense"
 15:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
@@ -381,7 +381,7 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
 17:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
 18:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
 :HL["/_next/static/chunks/1ywccti8eh6rv.css","style"]
-f:Ta971,
+f:Ta972,
 
 <header class="site-header">
   <div class="nav-shell">
@@ -490,7 +490,7 @@ f:Ta971,
             <li><a href="/knowledge-center/pharmaceutical-tooling-documentation-change-control.html">Documentation Guide</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
       </ul>
     </nav>
