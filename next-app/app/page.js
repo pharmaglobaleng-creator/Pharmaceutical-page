@@ -20,6 +20,14 @@ function readLegacyHomepage() {
   let body = bodyMatch ? bodyMatch[1] : '';
   body = body.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
   body = body.replace(/href=["']#about["']/gi, 'href="/about/"');
+  body = body.replace(
+    'Built for Engineers, Production Teams, Tooling Specialists, and AI Search',
+    'Built for Engineers, Production Teams, and Tooling Specialists',
+  );
+  body = body.replace(
+    'The PharmaGlobalEng website will organize your complete keyword research into focused service pages, solution pages, component pages, coating guides, technical articles, case studies, FAQs, and glossary definitions. The homepage introduces the main topics; each supporting page will answer one subject in greater depth without keyword stuffing.',
+    'Explore practical technical resources on tablet tooling, sticking and picking, coatings, surface engineering, restoration, replacement parts, and compression performance. Each guide focuses on a specific engineering subject with clear information for pharmaceutical manufacturing teams.',
+  );
 
   const animatedLogoMarkup = `
     <img
