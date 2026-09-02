@@ -1,4 +1,3 @@
-
 :root{
   --bg:#030611;
   --bg-alt:#070c1d;
@@ -80,7 +79,6 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:920px){.nav-links .hide{display:none}.grid-3,.toc,.related{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.grid-3,.grid-2,.toc,.related{grid-template-columns:1fr}.hero,.section,.final-cta{padding-left:0;padding-right:0}.fact{padding:23px}.fact-top{gap:13px}.fact-num{flex-basis:42px;width:42px;height:42px}}
-
 .category-label{display:inline-flex;margin-top:12px;padding:7px 10px;border:1px solid rgba(34,211,238,.25);border-radius:999px;color:var(--cyan);font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
 .checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:32px}
 .check{padding:17px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03);color:var(--muted)}
@@ -88,8 +86,6 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .mistake{padding:19px;border:1px solid rgba(255,120,120,.2);border-radius:14px;background:rgba(255,90,90,.035)}
 .mistake strong{display:block;margin-bottom:6px;color:#ffd0d0}
 @media(max-width:700px){.checklist{grid-template-columns:1fr}}
-
-/* Batch 2 shared components */
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .hero-badges span{padding:8px 11px;border:1px solid rgba(34,211,238,.25);border-radius:999px;background:rgba(34,211,238,.045);color:#dff7ff;font-size:12px;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
 .quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:34px}
@@ -103,8 +99,6 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .flow-step span{color:var(--muted)}
 .keywords-note{margin-top:30px;padding:18px 20px;border:1px dashed rgba(34,211,238,.25);border-radius:14px;color:var(--muted);background:rgba(34,211,238,.025)}
 @media(max-width:800px){.quick-grid{grid-template-columns:1fr}}
-
-/* Reviewed engineering fact library */
 .source-scope{max-width:920px;margin:24px 0 0;padding:16px 18px;border-left:4px solid var(--cyan);background:rgba(34,211,238,.055);color:var(--muted)}
 .fact-library-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:54px}
 .fact-library-nav a{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03);text-decoration:none;font-weight:750}
@@ -120,8 +114,6 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .fact-context{font-size:14px}
 .fact-source{display:inline-block;margin-top:8px;color:var(--cyan);font-weight:800}
 @media(max-width:800px){.fact-library-nav,.fact-card-grid{grid-template-columns:1fr}.engineering-fact{min-width:0;padding:20px}.fact-library-page .nav{flex-wrap:wrap}.fact-library-page .nav-links{width:100%;min-width:0;overflow-x:auto;padding-bottom:12px;gap:14px}.engineering-fact h3,.engineering-fact p,.fact-source{overflow-wrap:anywhere}}
-
-/* Knowledge Center articles */
 .article-body{max-width:900px}
 .article-body h2{margin-top:58px;font-size:clamp(30px,4vw,46px)}
 .article-body h2:first-child{margin-top:0}
@@ -133,3 +125,9 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .article-callout strong{color:var(--text)}
 .references{margin-top:34px;padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}
 .references h2{margin-top:0;font-size:30px}
+/* About page image clarity: keep raster assets at <=2x native CSS size on high-density displays. */
+body .hero-logo{width:min(310px,100%)!important;height:auto!important}
+body .hero-logo-panel{min-height:340px!important}
+body .facility-visual{width:min(410px,100%)!important;justify-self:center!important}
+body .facility-photo{width:100%!important;height:auto!important;image-rendering:auto!important}
+@media(max-width:980px){body .hero-logo{max-width:310px!important}body .facility-visual{margin-inline:auto!important}}
