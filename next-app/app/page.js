@@ -19,6 +19,7 @@ function readLegacyHomepage() {
 
   let body = bodyMatch ? bodyMatch[1] : '';
   body = body.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
+  body = body.replace(/href=["']#about["']/gi, 'href="/about/"');
 
   const animatedLogoMarkup = `
     <img
