@@ -125,9 +125,3 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .article-callout strong{color:var(--text)}
 .references{margin-top:34px;padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}
 .references h2{margin-top:0;font-size:30px}
-/* About page image clarity: keep raster assets at <=2x native CSS size on high-density displays. */
-body .hero-logo{width:min(310px,100%)!important;height:auto!important}
-body .hero-logo-panel{min-height:340px!important}
-body .facility-visual{width:min(410px,100%)!important;justify-self:center!important}
-body .facility-photo{width:100%!important;height:auto!important;image-rendering:auto!important}
-@media(max-width:980px){body .hero-logo{max-width:310px!important}body .facility-visual{margin-inline:auto!important}}
