@@ -125,3 +125,8 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
 .article-callout strong{color:var(--text)}
 .references{margin-top:34px;padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}
 .references h2{margin-top:0;font-size:30px}
+
+/* About page: use the working site logo instead of the broken uploaded SVG wrapper. */
+.hero-logo-panel .hero-logo{display:none!important}
+.hero-logo-panel::after{content:"";position:relative;z-index:1;display:block;width:min(500px,100%);aspect-ratio:1/1;background:url('/assets/images/pge-animated-logo.svg') center/contain no-repeat;filter:drop-shadow(0 28px 55px rgba(0,0,0,.45)) drop-shadow(0 0 28px rgba(72,90,255,.22))}
+@media(max-width:980px){.hero-logo-panel::after{width:min(460px,100%)}}
