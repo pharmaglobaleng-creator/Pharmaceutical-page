@@ -10,6 +10,7 @@ from urllib.parse import urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
+GENERIC_MODELS = {"general", "model unconfirmed", "model unspecified", "model unresolved", "multi model"}
 
 
 def load_approved_oem_references() -> dict[str, dict[str, str]]:
@@ -112,8 +113,7 @@ def aliases(part: Part) -> list[str]:
 
 
 def equipment_reference(part: Part) -> str:
-    generic = {"general", "model unconfirmed", "model unspecified", "multi model"}
-    if part.model.lower() in generic:
+    if part.model.lower() in GENERIC_MODELS:
         return f"selected {part.brand} tablet press configurations"
     return f"selected {part.brand} {part.model} tablet press configurations"
 
@@ -136,8 +136,7 @@ def inquiry_url(part: Part) -> str:
 
 
 def title_reference(part: Part) -> str:
-    generic = {"general", "model unconfirmed", "model unspecified", "multi model"}
-    if part.model.lower() in generic:
+    if part.model.lower() in GENERIC_MODELS:
         return f"{part.brand} equipment"
     return f"{part.brand} {part.model}"
 
@@ -324,7 +323,12 @@ def build_page(part: Part, parts: list[Part]) -> str:
     meta = description(part)
     image_url = SITE + part.image
     image_alt = f"Representative visualization of {part.name} for {title_reference(part)} tablet press compatibility"
-    fit_question = f"Will this {part.name} fit a {title_reference(part)} tablet press?"
+    if part.model.lower() in GENERIC_MODELS:
+        page_heading = f"{part.name} for {title_reference(part)}"
+        fit_question = f"Is this {part.name} compatible with selected {part.brand} tablet press configurations?"
+    else:
+        page_heading = f"{part.name} for {title_reference(part)} Tablet Press"
+        fit_question = f"Will this {part.name} fit a {title_reference(part)} tablet press?"
     fit_answer = (
         f"This independently manufactured {part.name} is cataloged for {equipment_reference(part)}. "
         "Compatibility is established during engineering review by confirming the machine configuration, "
@@ -353,7 +357,7 @@ def build_page(part: Part, parts: list[Part]) -> str:
 <script type="application/ld+json">{json_ld(part)}</script></head>
 <body><header class="site-header"><div class="wrap nav"><a class="brand" href="/">PharmaGlobal<span>Eng</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/parts/" aria-current="page">Parts Store</a><a class="nav-cta" href="/contact.html">Contact</a></nav></div></header>
 <main><div class="wrap"><div class="part-crumb"><a href="/parts/">Parts Store</a> / <a href="{part.catalog_url}">{escape(part.brand)} parts</a> / {escape(part.sku)}</div>
-<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="960" height="720" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(part.name)} for {escape(title_reference(part))} Tablet Press</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><div class="part-quote-actions"><button class="btn primary quote-cta" type="button" data-pge-cart-add data-part-sku="{escape(part.sku)}" data-part-name="{escape(part.name)}" data-part-brand="{escape(part.brand)}" data-part-model="{escape(part.model)}" data-part-url="/parts/{part.slug}/">Add to Quote Cart</button><a class="btn secondary email-part-inquiry" href="{escape(inquiry_url(part))}">Email this part</a></div></div></section></div>
+<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="960" height="720" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(page_heading)}</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><div class="part-quote-actions"><button class="btn primary quote-cta" type="button" data-pge-cart-add data-part-sku="{escape(part.sku)}" data-part-name="{escape(part.name)}" data-part-brand="{escape(part.brand)}" data-part-model="{escape(part.model)}" data-part-url="/parts/{part.slug}/">Add to Quote Cart</button><a class="btn secondary email-part-inquiry" href="{escape(inquiry_url(part))}">Email this part</a></div></div></section></div>
 <section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>Component details</h2><dl><div><dt>PGE number</dt><dd>{escape(part.sku)}</dd></div>{oem_detail}<div><dt>Part family</dt><dd>{escape(part.family)}</dd></div><div><dt>Compatibility reference</dt><dd>{escape(equipment_reference(part).capitalize())}</dd></div><div><dt>Manufacturing</dt><dd>Made to confirmed sample, drawing, or dimensional specification</dd></div><div><dt>Availability</dt><dd>Quotation and engineering review</dd></div></dl></div><div class="detail-box"><h2>PharmaGlobalEng fit-verification process</h2><p>Our engineering team establishes the correct:</p><ul><li>Component dimensions and critical tolerances</li><li>Mounting points and installation configuration</li><li>Material specification and required finish</li><li>Operating geometry and interface requirements</li><li>Manufacturing and inspection requirements</li></ul><p>These details are verified through the quotation and engineering-review process.</p></div>{confirmed}</div></section>
 <section class="detail-section"><div class="wrap"><h2>Find this part using similar terms</h2><p class="section-copy">Parts Store search recognizes the PGE number, equipment model, punctuation and spacing variations, and small spelling differences.</p><div class="aliases">{alias_chips}</div></div></section>
 <section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>What does the {escape(part.name)} do?</h2><p>{escape(function_note)}</p><p>{escape(application_note)}</p></div><div class="detail-box"><h2>Part-specific verification checkpoints</h2><p>For {escape(part.sku)}, the engineering review focuses on:</p><ul>{check_items}</ul><p>The existing component, drawing, or dimensional record is used to resolve the final manufacturing configuration.</p></div></div></section>

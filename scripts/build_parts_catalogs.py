@@ -1,4 +1,5 @@
 from html import escape
+import json
 from pathlib import Path
 import re
 
@@ -49,12 +50,21 @@ def build_catalog(slug: str, brand: str, prefix: str) -> None:
             f'<div class="product-actions"><span class="availability">Quote review</span><a class="btn small" href="{product_url}">View part</a></div></div></article>'
         )
 
+    breadcrumb = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Parts Store", "item": "https://pharmaglobaleng.com/parts/"},
+            {"@type": "ListItem", "position": 2, "name": f"{brand} Parts", "item": f"https://pharmaglobaleng.com/parts/{slug}/"},
+        ],
+    }, separators=(",", ":"))
+
     page = f'''<!doctype html>
 <html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{brand} Tablet Press Replacement Parts | PharmaGlobalEng</title>
 <meta name="description" content="Browse {len(images)} representative {brand} tablet press replacement-part images and request compatibility and pricing review.">
 <meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://pharmaglobaleng.com/parts/{slug}/">
-<link rel="stylesheet" href="/assets/css/pharmaglobaleng.css"><link rel="stylesheet" href="/assets/css/store.css"><script src="/assets/js/parts-search.js?v=1"></script></head>
+<link rel="stylesheet" href="/assets/css/pharmaglobaleng.css"><link rel="stylesheet" href="/assets/css/store.css"><script src="/assets/js/parts-search.js?v=1"></script><script type="application/ld+json">{breadcrumb}</script></head>
 <body><header class="site-header"><div class="wrap nav"><a class="brand" href="/">PharmaGlobal<span>Eng</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/parts/" aria-current="page">Parts Store</a><a href="/contact.html">Contact</a></nav></div></header>
 <main><section class="store-hero"><div class="wrap"><div class="crumb"><a href="/parts/">Parts Store</a> / {brand}</div><p class="eyebrow">Independent replacement-part library</p><h1>Replacement Parts Compatible with Selected {brand} Equipment</h1><p class="lead">Browse {len(images)} representative visualizations of independently produced parts. Every item requires model, serial, dimensional, material, availability, and compatibility review before quotation.</p><div class="catalog-search"><label class="visually-hidden" for="part-search">Search {brand} parts</label><input id="part-search" type="search" placeholder="Search part name, model, or PGE number" autocomplete="off"><span class="search-result-count"><strong id="visible-count">{len(images)}</strong> results</span></div></div></section>
 <section class="section" id="catalog"><div class="wrap"><div class="catalog-meta"><span><strong>{len(images)}</strong> representative part images</span><span>Independent supplier · compatibility confirmation required</span></div><div class="product-grid" id="product-grid">{''.join(cards)}</div><p id="no-results" class="notice" hidden><strong>No matching part was found.</strong> Try a shorter search or send a photograph or drawing.</p><div class="notice"><strong>Independent supplier and trademark notice:</strong> PharmaGlobalEng is not affiliated with, authorized by, sponsored by, or endorsed by {brand} or its trademark owner. The manufacturer name identifies equipment compatibility only. All trademarks belong to their respective owners. Product images are representative visualizations, not OEM photographs.</div></div></section></main>
