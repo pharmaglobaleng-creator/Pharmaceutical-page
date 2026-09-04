@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
 DATA_PATH = ROOT / "data/kikusui-parts.csv"
 IMAGE_DIR = ROOT / "assets/images/parts/kikusui"
-TOTAL_SITE_PARTS = 3410
+TOTAL_SITE_PARTS = 3211
 
 
 def clean(value: object) -> str:

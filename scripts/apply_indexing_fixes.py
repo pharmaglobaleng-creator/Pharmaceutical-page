@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 import re
-import sys
 from pathlib import Path
 
 
@@ -40,30 +39,6 @@ def add_breadcrumb(path: Path, items: list[tuple[str, str]]) -> bool:
         raise RuntimeError(f"Missing closing head tag: {path}")
     path.write_text(page.replace("</head>", script + "</head>", 1), encoding="utf-8")
     return True
-
-
-def restore_manesty_page() -> None:
-    sys.path.insert(0, str(ROOT / "scripts"))
-    import build_part_pages as builder
-
-    generated = builder.image_parts("manesty", "Manesty", "MAN")
-    source = next(item for item in generated if item.sku == "PGE-MAN-019")
-    target = builder.Part(
-        sku=source.sku,
-        name=source.name,
-        brand=source.brand,
-        brand_slug=source.brand_slug,
-        model="Model unresolved",
-        image=source.image,
-        family=source.family,
-        confirmed_copy=(
-            "The part name and image record are cataloged. The exact machine model and OEM "
-            "cross-reference remain unresolved and must be confirmed during quotation."
-        ),
-    )
-    related = [target if item.sku == target.sku else item for item in generated]
-    destination = ROOT / "parts/pge-man-019/index.html"
-    destination.write_text(builder.build_page(target, related), encoding="utf-8")
 
 
 def write_legacy_redirect() -> None:
@@ -114,7 +89,7 @@ def main() -> None:
         raise SystemExit(f"Expected 2,000 Stokes pages, found {len(stokes_pages)}")
 
     changed_pages = 0
-    modified_urls = {f"{SITE}/parts/stokes/", f"{SITE}/parts/pge-man-019/"}
+    modified_urls = {f"{SITE}/parts/stokes/"}
     for path in stokes_pages:
         sku = path.parent.name.upper()
         url = f"{SITE}/parts/{path.parent.name}/"
@@ -128,7 +103,6 @@ def main() -> None:
     catalog_names = {
         "fette": "Fette Parts",
         "kikusui": "Kikusui Parts",
-        "manesty": "Manesty Parts",
         "stokes": "Stokes Parts",
     }
     changed_catalogs = 0
@@ -140,13 +114,11 @@ def main() -> None:
             (name, url),
         ]))
 
-    restore_manesty_page()
     write_legacy_redirect()
     sitemap_changes = update_lastmod(modified_urls)
 
     print(f"Stokes breadcrumb pages updated: {changed_pages}")
     print(f"Catalog breadcrumb pages updated: {changed_catalogs}")
-    print("Restored: parts/pge-man-019/index.html")
     print("Redirected legacy URL: tablet-punch-coatings.html")
     print(f"Sitemap lastmod entries updated: {sitemap_changes}")
 

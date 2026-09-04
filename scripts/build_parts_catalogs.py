@@ -5,7 +5,6 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 BRANDS = {
-    "manesty": ("Manesty", "MAN"),
     "stokes": ("Stokes", "STK"),
 }
 

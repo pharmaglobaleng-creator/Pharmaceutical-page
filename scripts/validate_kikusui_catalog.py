@@ -133,8 +133,8 @@ if f"{SITE}/parts/kikusui/" not in sitemap:
     errors.append("Kikusui collection URL is missing from the main sitemap")
 
 parts_index = (ROOT / "parts/index.html").read_text(encoding="utf-8")
-if "Browse 3410 independently produced replacement-part records." not in parts_index:
-    errors.append("Parts Store total was not updated to 3410")
+if "Browse 3211 independently produced replacement-part records." not in parts_index:
+    errors.append("Parts Store total is not 3211 after the Manesty catalog retirement")
 if '<span class="status-pill">158 parts</span>' not in parts_index:
     errors.append("Kikusui Parts Store badge was not updated to 158 parts")
 

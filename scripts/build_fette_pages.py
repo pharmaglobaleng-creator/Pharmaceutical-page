@@ -242,7 +242,7 @@ def update_parts_index() -> None:
     page = page.replace("Browse 484 representative visualizations", "Browse 584 representative visualizations")
     page = page.replace("Browse 384 representative visualizations", "Browse 584 representative visualizations")
     page = page.replace("Korsch, Manesty, Kikusui, Stokes, or", "Korsch, Fette, Manesty, Kikusui, Stokes, or")
-    marker = '<a class="machine-card" href="/parts/manesty/">'
+    marker = '<a class="machine-card" href="/parts/kikusui/">'
     card = '''<a class="machine-card" href="/parts/fette/"><span class="status-pill">200 parts</span><div class="card-mark" aria-hidden="true">FT</div><h3>Replacement Parts Compatible with Selected Fette Equipment</h3><p>Browse independently manufactured components organized by Fette model and catalog-supplied OEM cross-reference.</p><span class="card-link">Browse compatible parts →</span></a>'''
     page = re.sub(r'<a class="machine-card" href="/parts/fette/">.*?</a>', '', page, count=1, flags=re.S)
     page = page.replace(marker, card + marker, 1)

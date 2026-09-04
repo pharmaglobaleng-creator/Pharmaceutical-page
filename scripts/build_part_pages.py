@@ -392,7 +392,6 @@ def add_detail_links_to_korsch(parts: list[Part]) -> None:
 def add_email_links_to_catalogs(parts: list[Part]) -> None:
     catalog_paths = {
         "korsch-300": ROOT / "parts/korsch/korsch-300/index.html",
-        "manesty": ROOT / "parts/manesty/index.html",
         "kikusui": ROOT / "parts/kikusui/index.html",
         "stokes": ROOT / "parts/stokes/index.html",
     }
@@ -485,7 +484,6 @@ def write_content_audit(parts: list[Part]) -> None:
 
 def main() -> None:
     parts = parse_korsch()
-    parts += image_parts("manesty", "Manesty", "MAN")
     parts += image_parts("kikusui", "Kikusui", "KIK")
     parts += image_parts("stokes", "Stokes", "STK")
     if len(parts) != 384:
