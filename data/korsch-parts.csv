@@ -1,0 +1,285 @@
+sku,make,model,category,part_name,oem_number,catalog_part_number,catalog_page,image_status,image_path
+PGE-KOR-001,Korsch,PH106,Product Control,FEED FRAME ASSEMBLY,N/A,KO-024,8,Catalog photo,/assets/images/parts/korsch/pge-kor-001.webp
+PGE-KOR-002,Korsch,PH106,Product Control,SCRAPER BLADE 1,N/A,KO-024-2,8,Catalog photo,/assets/images/parts/korsch/pge-kor-002.webp
+PGE-KOR-003,Korsch,PH106,Product Control,SCRAPER BLADE 2,N/A,KO-024-3,8,Catalog photo,/assets/images/parts/korsch/pge-kor-003.webp
+PGE-KOR-004,Korsch,PH106,Product Control,SCRAPER BLADE 3,N/A,KO-024-4,8,Catalog photo,/assets/images/parts/korsch/pge-kor-004.webp
+PGE-KOR-005,Korsch,PH106,Turret Hardware,DIE LOCK SCREW,N/A,DL-6,8,Catalog photo,/assets/images/parts/korsch/pge-kor-005.webp
+PGE-KOR-006,Korsch,PH230,Lower Cam Tracks,EJECTION CAM,70150069,KO12-069,9,Catalog photo,/assets/images/parts/korsch/pge-kor-006.webp
+PGE-KOR-007,Korsch,PH230,Product Control,FEEDER BASE PLATE,73100057,KO12-057,9,Catalog photo,/assets/images/parts/korsch/pge-kor-007.webp
+PGE-KOR-008,Korsch,PH230,Product Control,FEEDER BASE PLATE WEAR INSERT,N/A,KO12-057/1,9,Catalog photo,/assets/images/parts/korsch/pge-kor-008.webp
+PGE-KOR-009,Korsch,PH230,Product Control,FEEDER BASE PLATE BRACKET,N/A,KO12-057/2,9,Catalog photo,/assets/images/parts/korsch/pge-kor-009.webp
+PGE-KOR-010,Korsch,PH230,Product Control,FEEDER COVER,2080142,KO12-142,9,Catalog photo,/assets/images/parts/korsch/pge-kor-010.webp
+PGE-KOR-011,Korsch,PH230,Product Control,FEEDER COVER WINDOW,N/A,KO12-142/1,9,Catalog photo,/assets/images/parts/korsch/pge-kor-011.webp
+PGE-KOR-012,Korsch,PH230,Product Control,EXCESS MATERIAL SCRAPER ASSEMBLY,76900145,KO12-145,9,Catalog photo,/assets/images/parts/korsch/pge-kor-012.webp
+PGE-KOR-013,Korsch,PH230,Upper Cam Tracks,UPPER PUNCH CAM,71120096,KO12-096,9,Catalog photo,/assets/images/parts/korsch/pge-kor-013.webp
+PGE-KOR-014,Korsch,PH230,Upper Cam Tracks,UPPER LIFTING CAM,71120204,KO12-204,9,Catalog photo,/assets/images/parts/korsch/pge-kor-014.webp
+PGE-KOR-015,Korsch,PH230,Upper Cam Tracks,HOLD DOWN DEVICE,71120209,KO12-209,9,Catalog photo,/assets/images/parts/korsch/pge-kor-015.webp
+PGE-KOR-016,Korsch,PH230,Upper Cam Tracks,LOWERING CAM,71120213,KO12-213,9,Catalog photo,/assets/images/parts/korsch/pge-kor-016.webp
+PGE-KOR-017,Korsch,PH230,Upper Cam Tracks,DWELL CAM,71120406,KO12-406,9,Catalog photo,/assets/images/parts/korsch/pge-kor-017.webp
+PGE-KOR-018,Korsch,PH300,Lower Cam Tracks,DOSING RAIL,70150458,KO-458,10,Catalog photo,/assets/images/parts/korsch/pge-kor-018.webp
+PGE-KOR-019,Korsch,PH300,Lower Cam Tracks,HOLD DOWN DEVICE 2 AMPCO EU “D”,N/A,KO-294,10,Catalog photo,/assets/images/parts/korsch/pge-kor-019.webp
+PGE-KOR-020,Korsch,PH300,Lower Cam Tracks,LOWERING RAIL EU “D”,N/A,KO-169,10,Catalog photo,/assets/images/parts/korsch/pge-kor-020.webp
+PGE-KOR-021,Korsch,PH300,Lower Cam Tracks,EJECTION RAIL,N/A,KO-08,10,Catalog photo,/assets/images/parts/korsch/pge-kor-021.webp
+PGE-KOR-022,Korsch,PH300,Lower Cam Tracks,SEGMENT,N/A,KO-270,10,Catalog photo,/assets/images/parts/korsch/pge-kor-022.webp
+PGE-KOR-023,Korsch,PH300,Lower Cam Tracks,DOSING RAIL TRANSITION CAM,70150459,KO-459,10,Catalog photo,/assets/images/parts/korsch/pge-kor-023.webp
+PGE-KOR-024,Korsch,PH300,Pressure Rolls & Components,COMPRESSION ROLLER,7.138.0018,KO-018,10,Catalog photo,/assets/images/parts/korsch/pge-kor-024.webp
+PGE-KOR-025,Korsch,PH300,Product Control,TABLET TAKE OFF ASSEMBLY,N/A,KO-074,10,Catalog photo,/assets/images/parts/korsch/pge-kor-025.webp
+PGE-KOR-026,Korsch,PH300,Product Control,TABLET TAKE OFF RAMP,N/A,KO-074-1,10,Photo not available,/assets/images/parts/korsch/pge-kor-026.webp
+PGE-KOR-027,Korsch,PH300,Upper Cam Tracks,UPPER RAISING CAM EU “D”,N/A,KO-255,10,Catalog photo,/assets/images/parts/korsch/pge-kor-027.webp
+PGE-KOR-028,Korsch,PH423,Turrets,23 STATION TURRET ASSEMBLY*,N/A,KO42-23T/A,11,Stock photo,/assets/images/parts/korsch/pge-kor-028.webp
+PGE-KOR-029,Korsch,PH423,Turret Hardware,DIE SEAT LOCK,N/A,KO42-DSL,11,Catalog photo,/assets/images/parts/korsch/pge-kor-029.webp
+PGE-KOR-030,Korsch,PH800,Pressure Rolls & Components,COMPRESSION ROLLER,7.138.0018,KO-018,12,Catalog photo,/assets/images/parts/korsch/pge-kor-030.webp
+PGE-KOR-031,Korsch,PH800,Product Control,FEEDER PADDLE (LEFT) (HOOKED),76850027,KO8-7027,12,Catalog photo,/assets/images/parts/korsch/pge-kor-031.webp
+PGE-KOR-032,Korsch,PH800,Product Control,FEEDER PADDLE (RIGHT),76850028,KO8-7028,12,Catalog photo,/assets/images/parts/korsch/pge-kor-032.webp
+PGE-KOR-033,Korsch,PH800,Product Control,FEEDER PAN INSERT,73100049,KO8-7049,12,Catalog photo,/assets/images/parts/korsch/pge-kor-033.webp
+PGE-KOR-034,Korsch,PH800,Product Control,MODIFIED FEEDER PAN INSERT - DELRIN (ALL SERIES),N/A,KO8-7049/1,12,Catalog photo,/assets/images/parts/korsch/pge-kor-034.webp
+PGE-KOR-035,Korsch,PH800,Product Control,FEEDER PAN,73100066,KO8-7066,12,Catalog photo,/assets/images/parts/korsch/pge-kor-035.webp
+PGE-KOR-036,Korsch,PH800,Product Control,SPRING FOR FEEDER PAN INSERT SPRING (ALL SERIES),N/A,KO8-7066/P1,12,Catalog photo,/assets/images/parts/korsch/pge-kor-036.webp
+PGE-KOR-037,Korsch,PH800,Product Control,MODIFIED FEEDER PAN WEAR STRIP SET (ALL SERIES),N/A,KO8-WST,12,Catalog photo,/assets/images/parts/korsch/pge-kor-037.webp
+PGE-KOR-038,Korsch,PH800,Product Control,MODIFIED 14.5MM FEEDER PAN WITH WEAR STRIP,N/A,KO8-7066/1,12,Catalog photo,/assets/images/parts/korsch/pge-kor-038.webp
+PGE-KOR-039,Korsch,PH800,Product Control,MODIFIED 20MM FEEDER PAN WITH WEAR STRIP,N/A,KO8-7066/2,12,Catalog photo,/assets/images/parts/korsch/pge-kor-039.webp
+PGE-KOR-040,Korsch,PH800,Product Control,MODIFIED 6MM FEEDER PAN WITH WEAR STRIP,N/A,KO8-7066/3,12,Catalog photo,/assets/images/parts/korsch/pge-kor-040.webp
+PGE-KOR-041,Korsch,XL100,Product Control,FEEDER PAN ASSEMBLY,85950119,KO-119,13,Catalog photo,/assets/images/parts/korsch/pge-kor-041.webp
+PGE-KOR-042,Korsch,XL100,Product Control,TABLET TAKE-OFF,N/A,KO-119-1,13,Catalog photo,/assets/images/parts/korsch/pge-kor-042.webp
+PGE-KOR-043,Korsch,XL100,Product Control,SCRAPER BLADE - LONG (PEEK),N/A,KO-119-2,13,Catalog photo,/assets/images/parts/korsch/pge-kor-043.webp
+PGE-KOR-044,Korsch,XL100,Product Control,SCRAPER BLADE - SHORT (PEEK),N/A,KO-373,13,Catalog photo,/assets/images/parts/korsch/pge-kor-044.webp
+PGE-KOR-045,Korsch,XL100,Product Control,FEEDER PADDLE,N/A,KO-96-1/P,13,Photo not available,/assets/images/parts/korsch/pge-kor-045.webp
+PGE-KOR-046,Korsch,XL100,Product Control,FEEDER PADDLE ASSEMBLY - PLOW,N/A,KO-96/P/A,13,Photo not available,/assets/images/parts/korsch/pge-kor-046.webp
+PGE-KOR-047,Korsch,XL100,Upper Cam Tracks,INNER CAM TRACK,71121417,KO1-141,13,Catalog photo,/assets/images/parts/korsch/pge-kor-047.webp
+PGE-KOR-048,Korsch,XL100,Upper Cam Tracks,UPPER CAM RING- “B”,N/A,KO1-449,13,Catalog photo,/assets/images/parts/korsch/pge-kor-048.webp
+PGE-KOR-049,Korsch,XL200,Product Control,COVER STRIP FOR ROTARY FEEDER - TAIL OVER DIE,70910020,KO-020,14,Catalog photo,/assets/images/parts/korsch/pge-kor-049.webp
+PGE-KOR-050,Korsch,XL200,Product Control,INSERT FOR ROTARY FEEDER (INSERT AT EXIT),73100302,KO-302,14,Catalog photo,/assets/images/parts/korsch/pge-kor-050.webp
+PGE-KOR-051,Korsch,XL200,Product Control,MATERIAL STRIPPING DEVICE FOR ROTARY FEEDER-SCRAPER BLADE,76900349,KO-349,14,Catalog photo,/assets/images/parts/korsch/pge-kor-051.webp
+PGE-KOR-052,Korsch,XL200,Turrets,25 STATION TURRET ASSEMBLY*,N/A,KO2-25T/A,14,Stock photo,/assets/images/parts/korsch/pge-kor-052.webp
+PGE-KOR-053,Korsch,XL400,Complete Upper Cam Sustainer,RETAINING RING A12 X 1 DIN471,12080004,KO-004,15,Catalog photo,/assets/images/parts/korsch/pge-kor-053.webp
+PGE-KOR-054,Korsch,XL400,Complete Upper Cam Sustainer,PARALLEL PIN - 6M6 x 6 x 30MM ISO 2338-ST,12090008,KO-008,15,Catalog photo,/assets/images/parts/korsch/pge-kor-054.webp
+PGE-KOR-055,Korsch,XL400,Complete Upper Cam Sustainer,OIL PIPE 3,71300026,KO-026,15,Catalog photo,/assets/images/parts/korsch/pge-kor-055.webp
+PGE-KOR-056,Korsch,XL400,Complete Upper Cam Sustainer,RETAINING RING A120MM X 4MM DIN471,12080045,KO-045,15,Catalog photo,/assets/images/parts/korsch/pge-kor-056.webp
+PGE-KOR-057,Korsch,XL400,Complete Upper Cam Sustainer,PRESSURE SPRING - RAM,9030070,KO-070,15,Catalog photo,/assets/images/parts/korsch/pge-kor-057.webp
+PGE-KOR-058,Korsch,XL400,Complete Upper Cam Sustainer,TAPPET,75100078,KO-078,15,Catalog photo,/assets/images/parts/korsch/pge-kor-058.webp
+PGE-KOR-059,Korsch,XL400,Complete Upper Cam Sustainer,OIL PIPE 1,71300079,KO-079,15,Catalog photo,/assets/images/parts/korsch/pge-kor-059.webp
+PGE-KOR-060,Korsch,XL400,Complete Upper Cam Sustainer,DEEP GROOVE BALL BEARING - CAM SUSTAINER,5000091,KO-091,15,Catalog photo,/assets/images/parts/korsch/pge-kor-060.webp
+PGE-KOR-061,Korsch,XL400,Complete Upper Cam Sustainer,PRESSURE SPRING DIN 2076-C,9030105,KO-105,15,Catalog photo,/assets/images/parts/korsch/pge-kor-061.webp
+PGE-KOR-062,Korsch,XL400,Complete Upper Cam Sustainer,STAND OFF,71760165,KO-165,15,Catalog photo,/assets/images/parts/korsch/pge-kor-062.webp
+PGE-KOR-063,Korsch,XL400,Complete Upper Cam Sustainer,M8 X 20MM METRIC HEAD HEX BOLT,12010170,KO-170,15,Catalog photo,/assets/images/parts/korsch/pge-kor-063.webp
+PGE-KOR-064,Korsch,XL400,Complete Upper Cam Sustainer,GUIDE SLEEVE,71700172,KO-172,15,Catalog photo,/assets/images/parts/korsch/pge-kor-064.webp
+PGE-KOR-065,Korsch,XL400,Complete Upper Cam Sustainer,FLANGE FOR CAM SUSTAINER,71200178,KO-178,15,Catalog photo,/assets/images/parts/korsch/pge-kor-065.webp
+PGE-KOR-066,Korsch,XL400,Complete Upper Cam Sustainer,SPRING RECEIVER,71200186,KO-186,15,Catalog photo,/assets/images/parts/korsch/pge-kor-066.webp
+PGE-KOR-067,Korsch,XL400,Complete Upper Cam Sustainer,CAM SUSTAINER,71960254,KO-254,15,Catalog photo,/assets/images/parts/korsch/pge-kor-067.webp
+PGE-KOR-068,Korsch,XL400,Complete Upper Cam Sustainer,PLAIN WASHER D95 X D22 X 10,71360310,KO-310,16,Catalog photo,/assets/images/parts/korsch/pge-kor-068.webp
+PGE-KOR-069,Korsch,XL400,Complete Upper Cam Sustainer,PLAIN WASHER D95 X D22 X 28,71360311,KO-311,16,Catalog photo,/assets/images/parts/korsch/pge-kor-069.webp
+PGE-KOR-070,Korsch,XL400,Complete Upper Cam Sustainer,BEARING PILLAR,75000139,KO-39,16,Catalog photo,/assets/images/parts/korsch/pge-kor-070.webp
+PGE-KOR-071,Korsch,XL400,Complete Upper Cam Sustainer,LOCKING PIN,71720390,KO-390,16,Catalog photo,/assets/images/parts/korsch/pge-kor-071.webp
+PGE-KOR-072,Korsch,XL400,Complete Upper Cam Sustainer,RING SET D149.5X D140 X 38 x /D130 x D120.5 x 38,71340444,KO-444,16,Catalog photo,/assets/images/parts/korsch/pge-kor-072.webp
+PGE-KOR-073,Korsch,XL400,Complete Upper Cam Sustainer,DISTANCE DISK D135 X D120.2 X 7,71340445,KO-445,16,Catalog photo,/assets/images/parts/korsch/pge-kor-073.webp
+PGE-KOR-074,Korsch,XL400,Complete Upper Cam Sustainer,RING SEGMENT,71340471,KO-471,16,Catalog photo,/assets/images/parts/korsch/pge-kor-074.webp
+PGE-KOR-075,Korsch,XL400,Complete Upper Cam Sustainer,PLUNGER,71121485-1,KO-485-1,16,Catalog photo,/assets/images/parts/korsch/pge-kor-075.webp
+PGE-KOR-076,Korsch,XL400,Complete Upper Cam Sustainer,ORIENTATION PIN,71121485-3,KO-485-3,16,Catalog photo,/assets/images/parts/korsch/pge-kor-076.webp
+PGE-KOR-077,Korsch,XL400,Complete Upper Cam Sustainer,DISTANCE RING D20 x D12H7 x 2,71340524,KO-524,16,Catalog photo,/assets/images/parts/korsch/pge-kor-077.webp
+PGE-KOR-078,Korsch,XL400,Complete Upper Cam Sustainer,STRIP,73080176,KO-76,16,Catalog photo,/assets/images/parts/korsch/pge-kor-078.webp
+PGE-KOR-079,Korsch,XL400,Complete Upper Cam Sustainer,SPHERICAL BUTTON,N/A,KO-89,16,Catalog photo,/assets/images/parts/korsch/pge-kor-079.webp
+PGE-KOR-080,Korsch,XL400,Complete Upper Cam Sustainer,HEX HEAD CAP SCREW,N/A,M10 X 45,16,Catalog photo,/assets/images/parts/korsch/pge-kor-080.webp
+PGE-KOR-081,Korsch,XL400,Complete Upper Cam Sustainer,MACHINE SCREW M20 X 360 ISO 4762 - 12.9 -ROTOR LOCK,12110065,SHCS-M20X360,16,Photo not available,/assets/images/parts/korsch/pge-kor-081.webp
+PGE-KOR-082,Korsch,XL400,Complete Upper Cam Sustainer,UPPER CAM SUSTAINER ASSEMBLY,85500015,KO-8015,16,Photo not available,/assets/images/parts/korsch/pge-kor-082.webp
+PGE-KOR-083,Korsch,XL400,Complete Upper Cam Sustainer,MACHINE SCREW M10 x 30MM ISO 4762 -8.8-AOU,12000088,SHCS-M10X30,17,Catalog photo,/assets/images/parts/korsch/pge-kor-083.webp
+PGE-KOR-084,Korsch,XL400,Complete Upper Cam Sustainer,MACHINE SCREW M10 x 35MM ISO 4762-8.8 AOU,12000089,SHCS-M10X35,17,Catalog photo,/assets/images/parts/korsch/pge-kor-084.webp
+PGE-KOR-085,Korsch,XL400,Complete Upper Cam Sustainer,MACHINE SCREW M12 x 130MM ISO 4762-8.8-AOU,12000125,SHCS-M12X130,17,Catalog photo,/assets/images/parts/korsch/pge-kor-085.webp
+PGE-KOR-086,Korsch,XL400,Complete Upper Cam Sustainer,MACHINE SCREW M16 x 30MM MODIFY TO 29MM,78100073,SHCS-M16X30/M,17,Catalog photo,/assets/images/parts/korsch/pge-kor-086.webp
+PGE-KOR-087,Korsch,XL400,Complete Upper Cam Sustainer,MACHINE SCREW M8 x 35MM DIN912,12000071,SHCS-M8X35,17,Catalog photo,/assets/images/parts/korsch/pge-kor-087.webp
+PGE-KOR-088,Korsch,XL400,Drive Components,SHAFT,71760190,KO-190,17,Catalog photo,/assets/images/parts/korsch/pge-kor-088.webp
+PGE-KOR-089,Korsch,XL400,Drive Components,SPRING BUSH,71320388,KO-388,17,Catalog photo,/assets/images/parts/korsch/pge-kor-089.webp
+PGE-KOR-090,Korsch,XL400,Drive Components,BUSH,71320389,KO-389,17,Catalog photo,/assets/images/parts/korsch/pge-kor-090.webp
+PGE-KOR-091,Korsch,XL400,Lower Cam Track,FILL CAM 10MM 35/44 EU-B,80200113,KO-0113,17,Catalog photo,/assets/images/parts/korsch/pge-kor-091.webp
+PGE-KOR-092,Korsch,XL400,Lower Cam Track,FILL CAM 14MM 35/44 EU-B,80200114,KO-0114,17,Catalog photo,/assets/images/parts/korsch/pge-kor-092.webp
+PGE-KOR-093,Korsch,XL400,Lower Cam Track,FILL CAM 6MM 35/44 TSM-B,80200116,KO-0116,17,Catalog photo,/assets/images/parts/korsch/pge-kor-093.webp
+PGE-KOR-094,Korsch,XL400,Lower Cam Track,FILL CAM 10MM EU-D,N/A,KO-0123,17,Catalog photo,/assets/images/parts/korsch/pge-kor-094.webp
+PGE-KOR-095,Korsch,XL400,Lower Cam Track,EJECTION RAIL,70120064,KO-064,17,Catalog photo,/assets/images/parts/korsch/pge-kor-095.webp
+PGE-KOR-096,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 14MM 35/44 EU-B,85200148,KO-148,17,Catalog photo,/assets/images/parts/korsch/pge-kor-096.webp
+PGE-KOR-097,Korsch,XL400,Lower Cam Track,FILL CAM 14 MM EU-D,N/A,KO-173-1,17,Catalog photo,/assets/images/parts/korsch/pge-kor-097.webp
+PGE-KOR-098,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 18MM 29 EU”D”,85200174,KO-174,18,Catalog photo,/assets/images/parts/korsch/pge-kor-098.webp
+PGE-KOR-099,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 10MM 35/44 TSM-B,85200182,KO-182,18,Catalog photo,/assets/images/parts/korsch/pge-kor-099.webp
+PGE-KOR-100,Korsch,XL400,Lower Cam Track,LOWER RAIL AMPCO EU”D”,70151223,KO-223,18,Catalog photo,/assets/images/parts/korsch/pge-kor-100.webp
+PGE-KOR-101,Korsch,XL400,Lower Cam Track,LOWERING RAIL AMPCO EU”B”,70151227,KO-227,18,Catalog photo,/assets/images/parts/korsch/pge-kor-101.webp
+PGE-KOR-102,Korsch,XL400,Lower Cam Track,EJECTION CAM,70150279,KO-279,18,Catalog photo,/assets/images/parts/korsch/pge-kor-102.webp
+PGE-KOR-103,Korsch,XL400,Lower Cam Track,DOSING RAIL,70150458,KO-458,18,Catalog photo,/assets/images/parts/korsch/pge-kor-103.webp
+PGE-KOR-104,Korsch,XL400,Lower Cam Track,DOSING RAIL TRANSITION CAM,70150459,KO-459,18,Catalog photo,/assets/images/parts/korsch/pge-kor-104.webp
+PGE-KOR-105,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 6MM 35/44 EU”B”,85200146,KO-46,18,Catalog photo,/assets/images/parts/korsch/pge-kor-105.webp
+PGE-KOR-106,Korsch,XL400,Lower Cam Track,HOLDER FOR BUSH,70050470,KO-470,18,Catalog photo,/assets/images/parts/korsch/pge-kor-106.webp
+PGE-KOR-107,Korsch,XL400,Lower Cam Track,SAFETY RAIL 1 EU”D”,70150575,KO-575,18,Catalog photo,/assets/images/parts/korsch/pge-kor-107.webp
+PGE-KOR-108,Korsch,XL400,Lower Cam Track,SAFETY RAIL 1 FOR LOWER CAM TRACK TSM,70150618,BKO-618,18,Catalog photo,/assets/images/parts/korsch/pge-kor-108.webp
+PGE-KOR-109,Korsch,XL400,Lower Cam Track,SAFETY RAIL 2 TSM B,70150619,KO-619,18,Catalog photo,/assets/images/parts/korsch/pge-kor-109.webp
+PGE-KOR-110,Korsch,XL400,Lower Cam Track,RAIL TO LOWER PRECOMPRESSION ROLLER,70150660,KO-660,18,Catalog photo,/assets/images/parts/korsch/pge-kor-110.webp
+PGE-KOR-111,Korsch,XL400,Lower Cam Track,PUNCH CONTROL PLATE,70150873,KO-873,18,Catalog photo,/assets/images/parts/korsch/pge-kor-111.webp
+PGE-KOR-112,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 14MM 35/44 TSM-B,85200190,KO-90,18,Catalog photo,/assets/images/parts/korsch/pge-kor-112.webp
+PGE-KOR-113,Korsch,XL400,Lower Cam Track,FILL CAM 10MM 35/44 TSM-B,80200117,KO-0117,19,Catalog photo,/assets/images/parts/korsch/pge-kor-113.webp
+PGE-KOR-114,Korsch,XL400,Lower Cam Track,FILL CAM 14MM 35/44 TSM-B,80200118,KO-0118,19,Catalog photo,/assets/images/parts/korsch/pge-kor-114.webp
+PGE-KOR-115,Korsch,XL400,Lower Cam Track,FILL CAM 18MM 35/44 EU-B,80200115,KO-0115,19,Catalog photo,/assets/images/parts/korsch/pge-kor-115.webp
+PGE-KOR-116,Korsch,XL400,Lower Cam Track,FILL CAM 18MM 35/44 TSM-B,80200119,KO-0119,19,Catalog photo,/assets/images/parts/korsch/pge-kor-116.webp
+PGE-KOR-117,Korsch,XL400,Lower Cam Track,FILL CAM 6MM 35/44 EU-B,80200112,KO-0112,19,Catalog photo,/assets/images/parts/korsch/pge-kor-117.webp
+PGE-KOR-118,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 10MM EU-D,85200187,KO-187,19,Catalog photo,/assets/images/parts/korsch/pge-kor-118.webp
+PGE-KOR-119,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 10MM 35/44 EU-B,85200188,KO-188,19,Catalog photo,/assets/images/parts/korsch/pge-kor-119.webp
+PGE-KOR-120,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 18MM 35/44 EU-B,85200149,KO-149,19,Catalog photo,/assets/images/parts/korsch/pge-kor-120.webp
+PGE-KOR-121,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 18MM 35/44 TSM-B,85200191,KO-191,19,Catalog photo,/assets/images/parts/korsch/pge-kor-121.webp
+PGE-KOR-122,Korsch,XL400,Lower Cam Track,FILL CAM ASSEMBLY 6MM 35/44 TSM-B,85200189,KO-189,19,Catalog photo,/assets/images/parts/korsch/pge-kor-122.webp
+PGE-KOR-123,Korsch,XL400,Lower Cam Tracks,14MM FILL CAM ASSEMBLY - TSM “B” - WIP,N/A,KO-04,19,Catalog photo,/assets/images/parts/korsch/pge-kor-123.webp
+PGE-KOR-124,Korsch,XL400,Lower Cam Tracks,8MM FILL CAM - EU “D”,N/A,KO-29-1,19,Catalog photo,/assets/images/parts/korsch/pge-kor-124.webp
+PGE-KOR-125,Korsch,XL400,Lower Cam Tracks,10MM FILL CAM ASSEMBLY - EU “D”,N/A,KO-29/A,19,Catalog photo,/assets/images/parts/korsch/pge-kor-125.webp
+PGE-KOR-126,Korsch,XL400,Lower Cam Tracks,6MM FILL CAM ASSEMBLY - TSM “B” - WIP,N/A,KO-478,19,Catalog photo,/assets/images/parts/korsch/pge-kor-126.webp
+PGE-KOR-127,Korsch,XL400,Lower Cam Tracks,10MM FILL CAM ASSEMBLY - TSM “B” - WIP,N/A,KO-479,19,Catalog photo,/assets/images/parts/korsch/pge-kor-127.webp
+PGE-KOR-128,Korsch,XL400,Lower Cam Tracks,14MM FILL CAM ASSEMBLY - TSM “B” (CAM & PLUG ONLY),N/A,KO-480,20,Catalog photo,/assets/images/parts/korsch/pge-kor-128.webp
+PGE-KOR-129,Korsch,XL400,Lower Cam Tracks,18MM FILL CAM - TSM “B” - WIP,N/A,KO-481,20,Catalog photo,/assets/images/parts/korsch/pge-kor-129.webp
+PGE-KOR-130,Korsch,XL400,Lower Cam Tracks,6MM FILL CAM ASSEMBLY - TSM “B” - WIP,N/A,KO-502,20,Catalog photo,/assets/images/parts/korsch/pge-kor-130.webp
+PGE-KOR-131,Korsch,XL400,Lower Cam Tracks,10 MM FILL CAM ASSEMBLY - TSM “B” - WIP,N/A,KO-503,20,Catalog photo,/assets/images/parts/korsch/pge-kor-131.webp
+PGE-KOR-132,Korsch,XL400,Lower Cam Tracks,18MM FILL CAM ASSEMBLY - TSM “B” - WIP,N/A,KO-505,20,Catalog photo,/assets/images/parts/korsch/pge-kor-132.webp
+PGE-KOR-133,Korsch,XL400,Lower Cam Tracks,6MM FILL CAM - TSM “B” - WIP,N/A,KO-862,20,Catalog photo,/assets/images/parts/korsch/pge-kor-133.webp
+PGE-KOR-134,Korsch,XL400,Lower Cam Tracks,10MM FILL CAM - TSM “B” - WIP,N/A,KO-863,20,Catalog photo,/assets/images/parts/korsch/pge-kor-134.webp
+PGE-KOR-135,Korsch,XL400,Lower Cam Tracks,14MM FILL CAM - TSM “B” - WIP,N/A,KO-864,20,Catalog photo,/assets/images/parts/korsch/pge-kor-135.webp
+PGE-KOR-136,Korsch,XL400,Lower Cam Tracks,18MM FILL CAM - TSM “B” - WIP,N/A,KO-865,20,Catalog photo,/assets/images/parts/korsch/pge-kor-136.webp
+PGE-KOR-137,Korsch,XL400,Lower Cam Tracks,FILL CAM LUBE HARDWARE,N/A,KO-FCL-1,20,Photo not available,/assets/images/parts/korsch/pge-kor-137.webp
+PGE-KOR-138,Korsch,XL400,Lower Cam Tracks,FILL CAM LUBE HARDWARE,N/A,KO-FCL-2,20,Photo not available,/assets/images/parts/korsch/pge-kor-138.webp
+PGE-KOR-139,Korsch,XL400,Other,RAM,N/A,KO-21,20,Catalog photo,/assets/images/parts/korsch/pge-kor-139.webp
+PGE-KOR-140,Korsch,XL400,Pressure Rolls & Components,COMPRESSION ROLLER,713.800.53,KO4-053,20,Catalog photo,/assets/images/parts/korsch/pge-kor-140.webp
+PGE-KOR-141,Korsch,XL400,Product Control,FEEDER PAN INSERT (PEEK MATERIAL),73100176,KO-017,20,Catalog photo,/assets/images/parts/korsch/pge-kor-141.webp
+PGE-KOR-142,Korsch,XL400,Product Control,TABLET STRIPPING DEVICE,70120060,KO-060,20,Catalog photo,/assets/images/parts/korsch/pge-kor-142.webp
+PGE-KOR-143,Korsch,XL400,Product Control,COMPLETE SORTING GATE ASSEMBLY,80750094,KO-094,21,Catalog photo,/assets/images/parts/korsch/pge-kor-143.webp
+PGE-KOR-144,Korsch,XL400,Product Control,COMPLETE TABLET STRIPPING DEVICE W/SINGLE SORTING ASSEMBLY,80700117,KO-117,21,Catalog photo,/assets/images/parts/korsch/pge-kor-144.webp
+PGE-KOR-145,Korsch,XL400,Product Control,"RIGHT ROTARY VANE,STANDARD",80700153,KO-153,21,Catalog photo,/assets/images/parts/korsch/pge-kor-145.webp
+PGE-KOR-146,Korsch,XL400,Product Control,FEEDER PADDLES VANE - DELRIN,80700153,KO-153-D,21,Catalog photo,/assets/images/parts/korsch/pge-kor-146.webp
+PGE-KOR-147,Korsch,XL400,Product Control,"LEFT ROTARY VANE,STANDARD",80700154,KO-154,21,Catalog photo,/assets/images/parts/korsch/pge-kor-147.webp
+PGE-KOR-148,Korsch,XL400,Product Control,FEEDER PADDLES VANE - DELRIN,90800154,KO-154-D,21,Catalog photo,/assets/images/parts/korsch/pge-kor-148.webp
+PGE-KOR-149,Korsch,XL400,Product Control,DOSING VANE STANDARD,80700155,KO-155,21,Catalog photo,/assets/images/parts/korsch/pge-kor-149.webp
+PGE-KOR-150,Korsch,XL400,Product Control,DUCTOR FOR MATERIAL STRIPPING DEVICE,76900286,KO-286,21,Catalog photo,/assets/images/parts/korsch/pge-kor-150.webp
+PGE-KOR-151,Korsch,XL400,Product Control,EXCESS MATERIAL SCRAPER BLADE-PEEK,76900287,KO-287,21,Catalog photo,/assets/images/parts/korsch/pge-kor-151.webp
+PGE-KOR-152,Korsch,XL400,Product Control,EXCESS MATERIAL SCRAPER BLADE-BRONZE,76900287,KO-287-B,21,Catalog photo,/assets/images/parts/korsch/pge-kor-152.webp
+PGE-KOR-153,Korsch,XL400,Product Control,EXCESS MATERIAL SCRAPER BLADE-DELRIN,76900287,KO-287-D,21,Catalog photo,/assets/images/parts/korsch/pge-kor-153.webp
+PGE-KOR-154,Korsch,XL400,Product Control,FEEDER PAN,73100307,KO-307,21,Catalog photo,/assets/images/parts/korsch/pge-kor-154.webp
+PGE-KOR-155,Korsch,XL400,Product Control,CENTERING PIN FOR DISCHARGE CHUTE,71720425,KO-425,21,Catalog photo,/assets/images/parts/korsch/pge-kor-155.webp
+PGE-KOR-156,Korsch,XL400,Product Control,ADJUSTMENT SHAFT,71121487-3,KO-487-3,21,Catalog photo,/assets/images/parts/korsch/pge-kor-156.webp
+PGE-KOR-157,Korsch,XL400,Product Control,COVER STRIP FOR MATERIAL STRIPPING DEVICE,70901605,KO-605,21,Catalog photo,/assets/images/parts/korsch/pge-kor-157.webp
+PGE-KOR-158,Korsch,XL400,Product Control,COVER STRIP FOR MATERIAL STRIPPING DEVICE-PEEK(TAIL OVER DIE),70900922,KO-922,22,Catalog photo,/assets/images/parts/korsch/pge-kor-158.webp
+PGE-KOR-159,Korsch,XL400,Product Control,PRESSURE PIECE L=14 = BM,N/A,KO-94,22,Catalog photo,/assets/images/parts/korsch/pge-kor-159.webp
+PGE-KOR-160,Korsch,XL400,Product Control,SCRAPER SPRING,N/A,KO-SP1,22,Catalog photo,/assets/images/parts/korsch/pge-kor-160.webp
+PGE-KOR-161,Korsch,XL400,Product Control,EXCESS MATERIAL SCRAPER BLADE ASSEMBLY - PEEK,80700179,KO-179,22,Photo not available,/assets/images/parts/korsch/pge-kor-161.webp
+PGE-KOR-162,Korsch,XL400,Product Control,EXCESS MATERIAL SCRAPER BLADE - STAINLESS STEEL,76900287,KO-287-S,22,Catalog photo,/assets/images/parts/korsch/pge-kor-162.webp
+PGE-KOR-163,Korsch,XL400,Product Control,TEFLON WEAR STRIP,N/A,KO-133,22,Catalog photo,/assets/images/parts/korsch/pge-kor-163.webp
+PGE-KOR-164,Korsch,XL400,Product Control,FEEDER PADDLE - PLOW DESIGN,N/A,KO-153/PL,22,Photo not available,/assets/images/parts/korsch/pge-kor-164.webp
+PGE-KOR-165,Korsch,XL400,Product Control,FEEDER PAN WITH SEALING - 30 MM,N/A,KO-307/1,22,Photo not available,/assets/images/parts/korsch/pge-kor-165.webp
+PGE-KOR-166,Korsch,XL400,Product Control,INSERT AT EXIT - PEEK - 15MM,N/A,KO-992/P,22,Catalog photo,/assets/images/parts/korsch/pge-kor-166.webp
+PGE-KOR-167,Korsch,XL400,Product Control,FEEDER PLATE 15 MM W/ SEALING,N/A,KO-997/1,22,Catalog photo,/assets/images/parts/korsch/pge-kor-167.webp
+PGE-KOR-168,Korsch,XL400,Torque Converter Assembly,PIVOT BRACKET BUSHING/ GLIDE J FLANGE BEARING,5260005,KO-005,22,Catalog photo,/assets/images/parts/korsch/pge-kor-168.webp
+PGE-KOR-169,Korsch,XL400,Torque Converter Assembly,CONTROL PIN,71950021,KO-021,22,Catalog photo,/assets/images/parts/korsch/pge-kor-169.webp
+PGE-KOR-170,Korsch,XL400,Torque Converter Assembly,PIVOT PIN,12090047,KO-047,22,Catalog photo,/assets/images/parts/korsch/pge-kor-170.webp
+PGE-KOR-171,Korsch,XL400,Torque Converter Assembly,MACHINE SCREW M8 x 100MM DIN912 -PIVOT BRACKET,12000081,KO-081,22,Catalog photo,/assets/images/parts/korsch/pge-kor-171.webp
+PGE-KOR-172,Korsch,XL400,Torque Converter Assembly,NUT FOR LEVELING SCREW,12060146,KO-146,22,Catalog photo,/assets/images/parts/korsch/pge-kor-172.webp
+PGE-KOR-173,Korsch,XL400,Torque Converter Assembly,PIVOT BRACKET,75000159,KO-159,23,Catalog photo,/assets/images/parts/korsch/pge-kor-173.webp
+PGE-KOR-174,Korsch,XL400,Torque Converter Assembly,LEVELING SCREW,12100005,KO-5,23,Catalog photo,/assets/images/parts/korsch/pge-kor-174.webp
+PGE-KOR-175,Korsch,XL400,Torque Converter Assembly,PIVOT BRACKET DOWEL PIN,12020167,KO-67,23,Catalog photo,/assets/images/parts/korsch/pge-kor-175.webp
+PGE-KOR-176,Korsch,XL400,Torque Converter Assembly,YOKE,73000847,KO-847,23,Catalog photo,/assets/images/parts/korsch/pge-kor-176.webp
+PGE-KOR-177,Korsch,XL400,Torque Converter Assembly,TORQUE CONVERTER ASSEMBLY,80100264,KO-8264,23,Photo not available,/assets/images/parts/korsch/pge-kor-177.webp
+PGE-KOR-178,Korsch,XL400,Turret Hardware,DIE LOCK SCREW,80900016,DL-124,23,Catalog photo,/assets/images/parts/korsch/pge-kor-178.webp
+PGE-KOR-179,Korsch,XL400,Turret Hardware,LOWER PUNCH SCRAPER SEAL 1”D”,N/A,KO-100,23,Catalog photo,/assets/images/parts/korsch/pge-kor-179.webp
+PGE-KOR-180,Korsch,XL400,Turret Hardware,PUNCH RETAINER “D” TOOLING,N/A,KO-128,23,Catalog photo,/assets/images/parts/korsch/pge-kor-180.webp
+PGE-KOR-181,Korsch,XL400,Turret Hardware,PUNCH SEAL “B”,N/A,KO-79,23,Catalog photo,/assets/images/parts/korsch/pge-kor-181.webp
+PGE-KOR-182,Korsch,XL400,Turret Hardware,PUNCH RETAINER STEEL BLACK,N/A,KO-PR1,23,Catalog photo,/assets/images/parts/korsch/pge-kor-182.webp
+PGE-KOR-183,Korsch,XL400,Turret Hardware,PRESSURE SPRING,N/A,KO-130,23,Catalog photo,/assets/images/parts/korsch/pge-kor-183.webp
+PGE-KOR-184,Korsch,XL400,Turrets,35 STATION TURRET ASSEMBLY*,N/A,KO4-35T,23,Stock photo,/assets/images/parts/korsch/pge-kor-184.webp
+PGE-KOR-185,Korsch,XL400,Turrets,"35 STATION TURRET ASSEMBLY* “D” PUNCH,”B” 1.1875 DIES",N/A,KO4-35T/1,23,Stock photo,/assets/images/parts/korsch/pge-kor-185.webp
+PGE-KOR-186,Korsch,XL400,Turrets,37 STATION TURRET ASSEMBLY*,N/A,KO4-37T,23,Stock photo,/assets/images/parts/korsch/pge-kor-186.webp
+PGE-KOR-187,Korsch,XL400,Turrets,44 STATION TURRET ASSEMBLY*,N/A,KO4-44T,23,Stock photo,/assets/images/parts/korsch/pge-kor-187.webp
+PGE-KOR-188,Korsch,XL400,Upper Cam Tracks,HOLD DOWN DEVICE 2 AMPCO EU-B,71122019,KO-019,24,Catalog photo,/assets/images/parts/korsch/pge-kor-188.webp
+PGE-KOR-189,Korsch,XL400,Upper Cam Tracks,SAFETY RAIL,71121066,KO-066,24,Catalog photo,/assets/images/parts/korsch/pge-kor-189.webp
+PGE-KOR-190,Korsch,XL400,Upper Cam Tracks,UPPER PUNCH CAM # 1 EU”D”,71121092,KO-092,24,Catalog photo,/assets/images/parts/korsch/pge-kor-190.webp
+PGE-KOR-191,Korsch,XL400,Upper Cam Tracks,LIFTING CAM - EU “B”,71121098,KO-098,24,Catalog photo,/assets/images/parts/korsch/pge-kor-191.webp
+PGE-KOR-192,Korsch,XL400,Upper Cam Tracks,HOLD DOWN DEVICE -2 AMPCO EU”D”,71122018,KO-18,24,Catalog photo,/assets/images/parts/korsch/pge-kor-192.webp
+PGE-KOR-193,Korsch,XL400,Upper Cam Tracks,UPPER PUNCH CAM #3 EU”D”,71121045,KO-45,24,Catalog photo,/assets/images/parts/korsch/pge-kor-193.webp
+PGE-KOR-194,Korsch,XL400,Upper Cam Tracks,HOLD DOWN DEVICE 1 TSM B,71120412,KO-412,24,Catalog photo,/assets/images/parts/korsch/pge-kor-194.webp
+PGE-KOR-195,Korsch,XL400,Upper Cam Tracks,UPPER RAISING CAM - TSM B,71121485,KO-485,24,Catalog photo,/assets/images/parts/korsch/pge-kor-195.webp
+PGE-KOR-196,Korsch,XL400,Upper Cam Tracks,UPPER PUNCH REMOVAL CAM - TSM B,71121486,KO-486,24,Catalog photo,/assets/images/parts/korsch/pge-kor-196.webp
+PGE-KOR-197,Korsch,XL400,Upper Cam Tracks,UPPER CAM TRACK - TSM B,71121487,KO-487,24,Catalog photo,/assets/images/parts/korsch/pge-kor-197.webp
+PGE-KOR-198,Korsch,XL400,Upper Cam Tracks,UPPER CAM TRACK BLUE,71121488,KO-488,24,Catalog photo,/assets/images/parts/korsch/pge-kor-198.webp
+PGE-KOR-199,Korsch,XL400,Upper Cam Tracks,SAFETY RAIL 2 EU “B”,70150492,KO-492,24,Catalog photo,/assets/images/parts/korsch/pge-kor-199.webp
+PGE-KOR-200,Korsch,XL400,Upper Cam Tracks,SAFETY RAIL 2 EU”D”,70150579,KO-579,24,Catalog photo,/assets/images/parts/korsch/pge-kor-200.webp
+PGE-KOR-201,Korsch,XL400,Upper Cam Tracks,RAIL,70150610,KO-610,24,Catalog photo,/assets/images/parts/korsch/pge-kor-201.webp
+PGE-KOR-202,Korsch,XL400,Upper Cam Tracks,STRIP 29 X 83 X 100,70150611,KO-611,24,Catalog photo,/assets/images/parts/korsch/pge-kor-202.webp
+PGE-KOR-203,Korsch,XL400,Upper Cam Tracks,CAM TRACK EU”D”,70150654,KO-654,25,Catalog photo,/assets/images/parts/korsch/pge-kor-203.webp
+PGE-KOR-204,Korsch,XL400,Upper Cam Tracks,CAM TRACK EU “B”,70150656,KO-656,25,Catalog photo,/assets/images/parts/korsch/pge-kor-204.webp
+PGE-KOR-205,Korsch,XL400,Upper Cam Tracks,LOWERING CAM EU “B”,71121070,KO-70,25,Catalog photo,/assets/images/parts/korsch/pge-kor-205.webp
+PGE-KOR-206,Korsch,XL400,Upper Cam Tracks,UPPER PUNCH CAM #4 EU”B”,71120835,KO-835,25,Catalog photo,/assets/images/parts/korsch/pge-kor-206.webp
+PGE-KOR-207,Korsch,XL400,Upper Cam Tracks,COMPRESSION KEEPING PLATE FOR TRANSITION RAIL,73000843,KO-843,25,Catalog photo,/assets/images/parts/korsch/pge-kor-207.webp
+PGE-KOR-208,Korsch,XL400,Upper Cam Tracks,PUNCH REMOVAL CAM INSERT,70150870,KO-870,25,Catalog photo,/assets/images/parts/korsch/pge-kor-208.webp
+PGE-KOR-209,Korsch,XL400,Upper Cam Tracks,CAM COVER BLUE,70150872,KO-872,25,Catalog photo,/assets/images/parts/korsch/pge-kor-209.webp
+PGE-KOR-210,Korsch,XL400,Upper Cam Tracks,LIFTING CAM EU”D”,71121905,KO-905,25,Catalog photo,/assets/images/parts/korsch/pge-kor-210.webp
+PGE-KOR-211,Korsch,XL400,Upper Cam Tracks,UPPER CAM PUNCH #4 EU “D”,71121070,KO-906,25,Catalog photo,/assets/images/parts/korsch/pge-kor-211.webp
+PGE-KOR-212,Korsch,XL400,Upper Cam Tracks,LOWERING CAM EU”D”,71121907,KO-907,25,Catalog photo,/assets/images/parts/korsch/pge-kor-212.webp
+PGE-KOR-213,Korsch,XL400,Upper Cam Tracks,SPRING PIECE,73000921,KO-921,25,Catalog photo,/assets/images/parts/korsch/pge-kor-213.webp
+PGE-KOR-214,Korsch,XL400,Upper Cam Tracks,HOLD DOWN DEVICE EU “D”,71120295,KO-95,25,Catalog photo,/assets/images/parts/korsch/pge-kor-214.webp
+PGE-KOR-215,Korsch,XL400,Upper Cam Tracks,INSIDE PUNCH REMOVAL - LONG - TSM “B” - BRONZE,N/A,KO-336/B,25,Photo not available,/assets/images/parts/korsch/pge-kor-215.webp
+PGE-KOR-216,Korsch,XL400,Upper Cam Tracks,INSIDE PUNCH REMOVAL - SHORT - TSM “B” - BRONZE,N/A,KO-337/B,25,Photo not available,/assets/images/parts/korsch/pge-kor-216.webp
+PGE-KOR-217,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,RETAINING RING A12 X 1 DIN471,12080004,KO-004,26,Catalog photo,/assets/images/parts/korsch/pge-kor-217.webp
+PGE-KOR-218,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,OIL PIPE 3,71300026,KO-026,26,Catalog photo,/assets/images/parts/korsch/pge-kor-218.webp
+PGE-KOR-219,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,PRESSURE SPRING - RAM,9030070,KO-070,26,Catalog photo,/assets/images/parts/korsch/pge-kor-219.webp
+PGE-KOR-220,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,MODIFIED SCREW,12030076,KO-076,26,Catalog photo,/assets/images/parts/korsch/pge-kor-220.webp
+PGE-KOR-221,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,OIL PIPE 1,71300079,KO-079,26,Catalog photo,/assets/images/parts/korsch/pge-kor-221.webp
+PGE-KOR-222,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,PRESSURE SPRING DIN 2076-C,9030105,KO-105,26,Catalog photo,/assets/images/parts/korsch/pge-kor-222.webp
+PGE-KOR-223,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,RAM,75100111,KO-111,26,Catalog photo,/assets/images/parts/korsch/pge-kor-223.webp
+PGE-KOR-224,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,RAM END PLATE,75100111-1,KO-111-1,26,Catalog photo,/assets/images/parts/korsch/pge-kor-224.webp
+PGE-KOR-225,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,BEARING COLUMN,75500139,KO-139,26,Catalog photo,/assets/images/parts/korsch/pge-kor-225.webp
+PGE-KOR-226,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,HOUSING,70200167,KO-167,26,Catalog photo,/assets/images/parts/korsch/pge-kor-226.webp
+PGE-KOR-227,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,GUIDE SLEEVE,71700172,KO-172,26,Catalog photo,/assets/images/parts/korsch/pge-kor-227.webp
+PGE-KOR-228,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,SPRING RECEIVER,71200186,KO-186,26,Catalog photo,/assets/images/parts/korsch/pge-kor-228.webp
+PGE-KOR-229,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,RAM,71700225,KO-225,26,Catalog photo,/assets/images/parts/korsch/pge-kor-229.webp
+PGE-KOR-230,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,ROTOR REMOVAL FLANGE,71200263,KO-263,26,Catalog photo,/assets/images/parts/korsch/pge-kor-230.webp
+PGE-KOR-231,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,THING ANNEXED,71200265,KO-265,26,Catalog photo,/assets/images/parts/korsch/pge-kor-231.webp
+PGE-KOR-232,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,SLEEVE,71300295,KO-295,27,Catalog photo,/assets/images/parts/korsch/pge-kor-232.webp
+PGE-KOR-233,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,PLAIN WASHER D95 x D22 x 28,71360311,KO-311,27,Catalog photo,/assets/images/parts/korsch/pge-kor-233.webp
+PGE-KOR-234,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,UPPER CAM SUSTAINER,71960395,KO-395,27,Catalog photo,/assets/images/parts/korsch/pge-kor-234.webp
+PGE-KOR-235,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,ADAPTER PLATE,73100433,KO-433,27,Catalog photo,/assets/images/parts/korsch/pge-kor-235.webp
+PGE-KOR-236,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,ADJUSTMENT SLEEVE,71121487-4,KO-487-4,27,Catalog photo,/assets/images/parts/korsch/pge-kor-236.webp
+PGE-KOR-237,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,DISTANCE RING D20 x D12H7 x 2,71340524,KO-524,27,Catalog photo,/assets/images/parts/korsch/pge-kor-237.webp
+PGE-KOR-238,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,PLAIN WASHER D130 x D22 x 20,71360525,KO-525,27,Catalog photo,/assets/images/parts/korsch/pge-kor-238.webp
+PGE-KOR-239,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,SPRING RAM,71720600,KO-600,27,Catalog photo,/assets/images/parts/korsch/pge-kor-239.webp
+PGE-KOR-240,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,DISTANCE SLEEVE,71360653,KO-653,27,Catalog photo,/assets/images/parts/korsch/pge-kor-240.webp
+PGE-KOR-241,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,SUPPORT RING,KO-696,KO-696,27,Catalog photo,/assets/images/parts/korsch/pge-kor-241.webp
+PGE-KOR-242,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,COVER,71240186,KO-86,27,Catalog photo,/assets/images/parts/korsch/pge-kor-242.webp
+PGE-KOR-243,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,COUNTERSUNK SCREW M4 x 18 DIN 7991 A2,12200088,FHCS-M4X18,27,Photo not available,/assets/images/parts/korsch/pge-kor-243.webp
+PGE-KOR-244,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,HEXAGON HEAD SCREW M10 x 45 ISO 4017-A2-70,12010190,HHCS-M10X45,27,Catalog photo,/assets/images/parts/korsch/pge-kor-244.webp
+PGE-KOR-245,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,LOW HEAD MACHINE SCREW M8 x 20 DIN 6912 A2,"12010106, 12030055",LSHCS-M8X20,27,Catalog photo,/assets/images/parts/korsch/pge-kor-245.webp
+PGE-KOR-246,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,PLAIN WASHER 10 ISO 7089-200HV-A2,12170004,FW-M10X20,27,Photo not available,/assets/images/parts/korsch/pge-kor-246.webp
+PGE-KOR-247,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,SET SCREW M6 x 6 DIN 913 A2,12030065,SS-M6X6,28,Photo not available,/assets/images/parts/korsch/pge-kor-247.webp
+PGE-KOR-248,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,SHCS-M12 x 130,12000125,KO-125,28,Catalog photo,/assets/images/parts/korsch/pge-kor-248.webp
+PGE-KOR-249,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,CYLINDRICAL ROLLER BEARING,5030012,NP-CRB1,28,Catalog photo,/assets/images/parts/korsch/pge-kor-249.webp
+PGE-KOR-250,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,THRUST ROLLER BEARING,5090005,NP-THRB1,28,Catalog photo,/assets/images/parts/korsch/pge-kor-250.webp
+PGE-KOR-251,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,TAPERED ROLLER BEARING,5070017,NP-TRB1,28,Catalog photo,/assets/images/parts/korsch/pge-kor-251.webp
+PGE-KOR-252,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,MACHINE SCREW M10 x 20 ISO 4762 - A2-70,12010037,SHCS-M10X20,28,Catalog photo,/assets/images/parts/korsch/pge-kor-252.webp
+PGE-KOR-253,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,MACHINE SCREW M10 x 25 ISO 4762-A2-70,12010038,SHCS-M10X25,28,Catalog photo,/assets/images/parts/korsch/pge-kor-253.webp
+PGE-KOR-254,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,MACHINE SCREW M10 x 35MM ISO 4762-8.8 AOU,12000089,SHCS-M10X35,28,Catalog photo,/assets/images/parts/korsch/pge-kor-254.webp
+PGE-KOR-255,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,MACHINE SCREW M16 x 30MM MODIFY TO 29MM,78100073,SHCS-M16X30/M,28,Catalog photo,/assets/images/parts/korsch/pge-kor-255.webp
+PGE-KOR-256,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,MACHINE SCREW M8 X 16 ISO 4762-A2-70,12010032,SHCS-M8X16,28,Catalog photo,/assets/images/parts/korsch/pge-kor-256.webp
+PGE-KOR-257,Korsch,XL400 BI,Complete Upper Cam Sustainer Assembly,MACHINE SCREW M8 X 20 ISO 4762-A2-70,12010106,SHCS-M8X20,28,Catalog photo,/assets/images/parts/korsch/pge-kor-257.webp
+PGE-KOR-258,Korsch,XL400FT,Lower Cam Track,10 MM FILL CAM - TSM B’,N/A,KO-288,29,Catalog photo,/assets/images/parts/korsch/pge-kor-258.webp
+PGE-KOR-259,Korsch,XL400FT,Lower Cam Track,DOSING CAM - TSM B,N/A,KO-338,29,Catalog photo,/assets/images/parts/korsch/pge-kor-259.webp
+PGE-KOR-260,Korsch,XL400FT,Lower Cam Track,FILL CAM - 14 MM - TSM B,N/A,KO-289,29,Catalog photo,/assets/images/parts/korsch/pge-kor-260.webp
+PGE-KOR-261,Korsch,XL400FT,Lower Cam Track,SAFETY RAIL 139.5 - TSM B,N/A,KO-339,29,Catalog photo,/assets/images/parts/korsch/pge-kor-261.webp
+PGE-KOR-262,Korsch,XL400FT,Lower Cam Track,SAFETY RAIL 71.0 - TSM B,N/A,KO-340,29,Catalog photo,/assets/images/parts/korsch/pge-kor-262.webp
+PGE-KOR-263,Korsch,XL400FT,Product Control,LEFT ROTARY VANE -3PC DELRIN,N/A,KO-204/2-D,29,Catalog photo,/assets/images/parts/korsch/pge-kor-263.webp
+PGE-KOR-264,Korsch,XL400FT,Product Control,ROTARY VANE STRAIGHT- 3 PC DELRIN,N/A,KO-205/1-D,29,Catalog photo,/assets/images/parts/korsch/pge-kor-264.webp
+PGE-KOR-265,Korsch,XL400FT,Turret Hardware,UPPER CAM SUSTAINER,N/A,KO-363,29,Catalog photo,/assets/images/parts/korsch/pge-kor-265.webp
+PGE-KOR-266,Korsch,XL400FT,Turret Hardware,A BEARING BLOCK LEFT,N/A,KO-283,29,Photo not available,/assets/images/parts/korsch/pge-kor-266.webp
+PGE-KOR-267,Korsch,XL400FT,Turret Hardware,A BEARING BLOCK RIGHT,N/A,KO-284,29,Photo not available,/assets/images/parts/korsch/pge-kor-267.webp
+PGE-KOR-268,Korsch,XL400FT,Turret Hardware,CLAMPING FLANGE,N/A,KO-280,29,Photo not available,/assets/images/parts/korsch/pge-kor-268.webp
+PGE-KOR-269,Korsch,XL400FT,Turret Hardware,DIE LOCK ASSEMBLY - 8MM HEX,N/A,DL-124/PS,29,Catalog photo,/assets/images/parts/korsch/pge-kor-269.webp
+PGE-KOR-270,Korsch,XL400FT,Turret Hardware,LOWER CAM SUSTAINER,N/A,KO-374,29,Photo not available,/assets/images/parts/korsch/pge-kor-270.webp
+PGE-KOR-271,Korsch,XL400FT,Turret Hardware,TORQUE CONVERTER BEARING,N/A,KO-512,29,Photo not available,/assets/images/parts/korsch/pge-kor-271.webp
+PGE-KOR-272,Korsch,XL400FT,Upper Cam Track,COVER FOR INSERT,N/A,KO-285-6,29,Catalog photo,/assets/images/parts/korsch/pge-kor-272.webp
+PGE-KOR-273,Korsch,XL400FT,Upper Cam Track,GUIDE,N/A,KO-720,30,Photo not available,/assets/images/parts/korsch/pge-kor-273.webp
+PGE-KOR-274,Korsch,XL400FT,Upper Cam Track,GUIDE BLOCK,N/A,KO-285-1,30,Catalog photo,/assets/images/parts/korsch/pge-kor-274.webp
+PGE-KOR-275,Korsch,XL400FT,Upper Cam Track,INSIDE PUNCH REMOVAL - LONG - TSM B,N/A,KO-336,30,Catalog photo,/assets/images/parts/korsch/pge-kor-275.webp
+PGE-KOR-276,Korsch,XL400FT,Upper Cam Track,INSIDE PUNCH REMOVAL - SHORT - TSM B,N/A,KO-337,30,Catalog photo,/assets/images/parts/korsch/pge-kor-276.webp
+PGE-KOR-277,Korsch,XL400FT,Upper Cam Track,LIFTING CAM,N/A,KO-2286,30,Catalog photo,/assets/images/parts/korsch/pge-kor-277.webp
+PGE-KOR-278,Korsch,XL800,Lower Cam Tracks,16MM FILL CAM - TSM “D”,N/A,KO-201,31,Catalog photo,/assets/images/parts/korsch/pge-kor-278.webp
+PGE-KOR-279,Korsch,XL800,Pressure Rolls & Components,PRESSURE ROLLER - BHT LATHE,N/A,KO-4,31,Photo not available,/assets/images/parts/korsch/pge-kor-279.webp
+PGE-KOR-280,Korsch,XL800,Product Control,SCRAPER BLADE - PEEK,76900417,KO-417,31,Catalog photo,/assets/images/parts/korsch/pge-kor-280.webp
+PGE-KOR-281,Korsch,XL800,Product Control,PRE TAIL OVER DIE - INSERT AT EXIT,73100570,KO-570,31,Catalog photo,/assets/images/parts/korsch/pge-kor-281.webp
+PGE-KOR-282,Korsch,XL800,Product Control,SCRAPER SPRING,N/A,KO-SP1,31,Catalog photo,/assets/images/parts/korsch/pge-kor-282.webp
+PGE-KOR-283,Korsch,XL800,Turrets,59 STATION TURRET ASSEMBLY* - D”,N/A,KO11-59T/A,31,Stock photo,/assets/images/parts/korsch/pge-kor-283.webp
+PGE-KOR-284,Korsch,XL800,Upper Cam Tracks,UPPER CAM TSM “B”,70150954,KO-954,31,Catalog photo,/assets/images/parts/korsch/pge-kor-284.webp
