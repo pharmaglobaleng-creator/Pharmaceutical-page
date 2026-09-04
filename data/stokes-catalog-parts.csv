@@ -1,0 +1,1001 @@
+sku,make,model,category,part_name,catalog_part_number,oem_number,catalog_page,grid_position,image_status,image_path
+PGE-STK-0001,Stokes,328,Drive Components,ANGULAR CONTACT BEARING,S35-132,N/A,35,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0001.webp
+PGE-STK-0002,Stokes,328,Drive Components,BEARING ROLLER,S35-102,11-BC-102,35,R1C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0003,Stokes,328,Drive Components,DRIVE PULLEY,S35-021,08-EM-001,35,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0003.webp
+PGE-STK-0004,Stokes,328,Drive Components,RING GEAR,S35-858,D-236-858-1,35,R2C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0005,Stokes,328,Drive Components,FLANGED IDLER PULLEY,S-894,085-018-894,35,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0005.webp
+PGE-STK-0006,Stokes,328,Drive Components,IDLER SHAFT,S-893/1,N/A,35,R2C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0007,Stokes,328,Drive Components,WORM SHAFT BEARING PLATE,S35-158,B-296-158-001,35,R3C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0008,Stokes,328,Drive Components,ROLLER BEARING AND RACE,S35-646,085-6-646,35,R3C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0009,Stokes,328,Drive Components,RATCHET WRENCH,S35-028,10-BC-028,35,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0009.webp
+PGE-STK-0010,Stokes,328,Drive Components,CRANK PIN SCREW,S35-031,01-BHA-031-A,35,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0010.webp
+PGE-STK-0011,Stokes,328,Drive Components,RETAINING PLATE,S35-085,233-085-003,35,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0011.webp
+PGE-STK-0012,Stokes,328,Drive Components,RADIAL BALL BEARING REAR- CLUTCH SIDE,S35-190,11-AB-090,35,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0012.webp
+PGE-STK-0013,Stokes,328,Drive Components,DRIVE SHAFT SPROCKET,S35-223,B-294-223-016,35,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0013.webp
+PGE-STK-0014,Stokes,328,Drive Components,WORMSHAFT HOUSING COVER,S35-228,B-294-228-001,35,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0014.webp
+PGE-STK-0015,Stokes,328,Drive Components,GENERATOR SPROCKET,S35-230,B-294-223-017,35,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0015.webp
+PGE-STK-0016,Stokes,328,Drive Components,SEAL CARRIER - WORM DRIVE ASSEMBLY,S35-244,B-233-244-001,36,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0016.webp
+PGE-STK-0017,Stokes,328,Drive Components,PILLOW BEARING,S35-262,085-007-262,36,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0017.webp
+PGE-STK-0018,Stokes,328,Drive Components,MOTOR BASE SHAFT EXTENSION,S35-284,B-294-284-004,36,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0018.webp
+PGE-STK-0019,Stokes,328,Drive Components,CRANK PIN,S35-290,A-234-901-2,36,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0019.webp
+PGE-STK-0020,Stokes,328,Drive Components,O RING FOR WORMSHAFT HOUSING COVER,S35-31,022-2-31,36,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0020.webp
+PGE-STK-0021,Stokes,328,Drive Components,KEY FOR DRIVE SHAFT,S35-311/1,N/A,36,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0021.webp
+PGE-STK-0022,Stokes,328,Drive Components,WORM SHAFT,S35-311,C-233-311-009,36,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0022.webp
+PGE-STK-0023,Stokes,328,Drive Components,CRANK PIN WASHER,S35-327,085-012-327,36,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0023.webp
+PGE-STK-0024,Stokes,328,Drive Components,WORM SHAFT BRACKET,S35-491,C-248-491-004,36,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0024.webp
+PGE-STK-0025,Stokes,328,Drive Components,WASHER BELT TENSIONER PULLEY,S35-501,A-294-501-002,36,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0025.webp
+PGE-STK-0026,Stokes,328,Drive Components,COVER PLATE FINISH STRIP,S35-561,B-297-561-001,36,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0026.webp
+PGE-STK-0027,Stokes,328,Drive Components,COMPLETE CLUTCH ASSEMBLY,S35-565,N/A,36,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0027.webp
+PGE-STK-0028,Stokes,328,Drive Components,BEARING SET OF 2 FOR CLUTCH PULLEY,S35-610,085-012-610,36,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0028.webp
+PGE-STK-0029,Stokes,328,Drive Components,BEARING FOR WORMSHAFT BEARING PLATE,S35-611,085-012-611,36,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0029.webp
+PGE-STK-0030,Stokes,328,Drive Components,TACHOMETER - STANDCO 450/5M TPM,S35-665/1,N/A,36,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0030.webp
+PGE-STK-0031,Stokes,328,Drive Components,WORM SHAFT - THICKNESS CONTROL,S35-824,A-233-824-001,37,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0031.webp
+PGE-STK-0032,Stokes,328,Drive Components,LOWER ROLL HANDWHEEL SHAFT,S35-829,A-233-829-2,37,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0032.webp
+PGE-STK-0033,Stokes,328,Drive Components,INNER BEARING FOR UPPER ROLL PIN,S35-911/1,N/A,37,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0033.webp
+PGE-STK-0034,Stokes,328,Drive Components,COLLAR,S35-967,A-266-967-001,37,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0034.webp
+PGE-STK-0035,Stokes,328,Drive Components,DRIVE TENSIONER,S-893,085-018-893,37,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0035.webp
+PGE-STK-0036,Stokes,328,Drive Components,WOODRUFF KEY,SC-020,006-001-020,37,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0036.webp
+PGE-STK-0037,Stokes,328,Drive Components,SET SCREW,SC-031,01-DR-031,37,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0037.webp
+PGE-STK-0038,Stokes,328,Drive Components,LOCK PLATE,SC-051,013-002-051,37,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0038.webp
+PGE-STK-0039,Stokes,328,Drive Components,RELEASE SPRING PIN,SC-055,013-002-055,37,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0039.webp
+PGE-STK-0040,Stokes,328,Drive Components,SCREW FOR STEPPED DRIVE KEY,SC-058/1,013-002-058,37,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0040.webp
+PGE-STK-0041,Stokes,328,Drive Components,BACK PLATE,SC-059,013-002-059,37,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0041.webp
+PGE-STK-0042,Stokes,328,Drive Components,ADJUSTING LOCK PIN,SC-061,013-2-061,37,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0042.webp
+PGE-STK-0043,Stokes,328,Drive Components,SNAP RING,SC-063,013-002-063,37,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0043.webp
+PGE-STK-0044,Stokes,328,Drive Components,LOCK SCREW,SC-082,01-DC-082-A,37,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0044.webp
+PGE-STK-0045,Stokes,328,Drive Components,ADJUSTING LOCK PIN SPRING,SC-146,013-2-146,37,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0045.webp
+PGE-STK-0046,Stokes,328,Drive Components,CLUTCH DRIVING RING,SC-44,013-2-44,38,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0046.webp
+PGE-STK-0047,Stokes,328,Drive Components,ADJUSTING RING,SC-45,013-002-045,38,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0047.webp
+PGE-STK-0048,Stokes,328,Drive Components,CLUTCH HUB,SC-455,085-020-455,38,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0048.webp
+PGE-STK-0049,Stokes,328,Drive Components,ENGAGING CONE,SC-456,085-20-456,38,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0049.webp
+PGE-STK-0050,Stokes,328,Drive Components,FINGER LEVER,SC-461,085-020-461,38,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0050.webp
+PGE-STK-0051,Stokes,328,Drive Components,DRIVING PLATE - FIBER,SC-48,013-002-048,38,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0051.webp
+PGE-STK-0052,Stokes,328,Drive Components,DRIVEN PLATE - STEEL,SC-49,013-002-049,38,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0052.webp
+PGE-STK-0053,Stokes,328,Drive Components,ROLLER RING,SC-50,013-2-50,38,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0053.webp
+PGE-STK-0054,Stokes,328,Drive Components,CLUTCH SHIFTER LINK MOUNTING BOLT,SC-551/1,N/A,38,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0054.webp
+PGE-STK-0055,Stokes,328,Drive Components,RELEASE SPRING,SC-56,013-2-56,38,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0055.webp
+PGE-STK-0056,Stokes,328,Drive Components,STEPPED DRIVE KEY,SC-58,013-2-58,38,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0056.webp
+PGE-STK-0057,Stokes,328,Drive Components,CLUTCH SHIFTER SHOE - PAIR,SC-65,B-248-565-1,38,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0057.webp
+PGE-STK-0058,Stokes,328,Drive Components,CLUTCH SHIFTER SHAFT,SC-957,A-233-957-003,38,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0058.webp
+PGE-STK-0059,Stokes,328,Drive Components,JACKSHAFT,S35-765,B-248-765-002,38,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0059.webp
+PGE-STK-0060,Stokes,328,Drive Components,OIL SEAL - MAIN DRIVE WORM SHAFT,S35-782,085-6-782,38,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0060.webp
+PGE-STK-0061,Stokes,328,Guarding,APRON - LEFT SIDE- INCLUDES APRON CHUTE INSERT,S35-406LA,N/A,39,R1C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0062,Stokes,328,Guarding,APRON - RIGHT SIDE INCLUDES APRON CHUTE INSERT,S35-406RA,N/A,39,R1C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0063,Stokes,328,Guarding,"APRON SEAL KEEPER, L.F & R.R",S-419,C-297-419-001,39,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0063.webp
+PGE-STK-0064,Stokes,328,Guarding,UPPER GUARD SET COMPLETE- 328 NEW STYLE,S-UGS/2,N/A,39,R2C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0065,Stokes,328,Guarding,UPPER GUARD SET COMPLETE - 328 NEW STYLE,S-UGS1,N/A,39,R2C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0066,Stokes,328,Guarding,DOOR HOLDER,S-121,01-ZD-121,39,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0066.webp
+PGE-STK-0067,Stokes,328,Guarding,GAS CYLINDER BRACKET - BOTTOM,S-188,B-297-188-001,39,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0067.webp
+PGE-STK-0068,Stokes,328,Guarding,COVER PLATE,S35-017,B-297-017-002,39,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0068.webp
+PGE-STK-0069,Stokes,328,Guarding,VIBRATION ISOLATOR,S35-107,30-HA-107,39,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0069.webp
+PGE-STK-0070,Stokes,328,Guarding,ACCESS COVER,S35-151,A-290-151-001,39,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0070.webp
+PGE-STK-0071,Stokes,328,Guarding,LOWER GUARD PLATE,S35-162,B-298-162-001,39,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0071.webp
+PGE-STK-0072,Stokes,328,Guarding,ACCESS COVER GASKET,S35-234,A-294-234-001,39,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0072.webp
+PGE-STK-0073,Stokes,328,Guarding,UPPER FRAME MOUNTING BOLT,S35-26-1,N/A,39,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0073.webp
+PGE-STK-0074,Stokes,328,Guarding,UPPER FRAME COVER,S35-36,D-232-736-3,39,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0074.webp
+PGE-STK-0075,Stokes,328,Guarding,"UPPER FRAME COVER PLUG - 1""-8 X 1.5""",S35-36-1,N/A,39,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0075.webp
+PGE-STK-0076,Stokes,328,Guarding,INSPECTION COVER - REAR,S35-451,A-236-451-001,40,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0076.webp
+PGE-STK-0077,Stokes,328,Guarding,INSPECTION COVER GASKET - REAR,S35-452,A-236-452-001,40,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0077.webp
+PGE-STK-0078,Stokes,328,Guarding,INSPECTION COVER - SIDE,S35-475,A-236-475-002,40,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0078.webp
+PGE-STK-0079,Stokes,328,Guarding,INSPECTION COVER GASKET - SIDE,S35-476,A-236-476-002,40,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0079.webp
+PGE-STK-0080,Stokes,328,Guarding,LIMIT SWITCH ACTUATOR COLLAR,S35-621,A-297-621-001,40,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0080.webp
+PGE-STK-0081,Stokes,328,Guarding,"APRON SEAL KEEPER, R.F &L.R",S-418,C-297-418-001,40,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0081.webp
+PGE-STK-0082,Stokes,328,Guarding,GAS CYLINDER,S-802,08-GJ-002,40,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0082.webp
+PGE-STK-0083,Stokes,328,Guarding,GAS CYLINDER BRACKET (TOP & BOTTOM),S-802/1,N/A,40,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0083.webp
+PGE-STK-0084,Stokes,328,Guarding,GAS CYLINDER STUD,S-802-3,N/A,40,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0084.webp
+PGE-STK-0085,Stokes,328,Guarding,GAS CYLINDER BRACKET - TOP,S-88,B-297-188-003,40,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0085.webp
+PGE-STK-0086,Stokes,328,Guarding,APRON LEFT,S35-406-1,N/A,40,R4C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0087,Stokes,328,Guarding,APRON - RIGHT SIDE,S35-406R,N/A,40,R4C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0088,Stokes,328,Hydraulic & Lubrication Components,PULLEY - OIL PUMP,S-524,085-10-524,40,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0088.webp
+PGE-STK-0089,Stokes,328,Hydraulic & Lubrication Components,OIL RESERVOIR,S35-632,D-241-632-008,40,R5C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0090,Stokes,328,Hydraulic & Lubrication Components,LUBRICATION MANIFOLD CLAMP,S-077,B-296-077-001,40,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0090.webp
+PGE-STK-0091,Stokes,328,Hydraulic & Lubrication Components,OIL PRESSURE GAUGE - 15 P.S.I.,S-162,085-10-162,41,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0091.webp
+PGE-STK-0092,Stokes,328,Hydraulic & Lubrication Components,OIL LEVEL WINDOW,S-165,085-7-165,41,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0092.webp
+PGE-STK-0093,Stokes,328,Hydraulic & Lubrication Components,OIL FILTER ELEMENT,S-30,N/A,41,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0093.webp
+PGE-STK-0094,Stokes,328,Hydraulic & Lubrication Components,OIL FILTER ASSEMBLY HEAD & ELEMENT,S-30H,N/A,41,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0094.webp
+PGE-STK-0095,Stokes,328,Hydraulic & Lubrication Components,OIL SEAL - END PLATE,S35-026,085-026-212,41,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0095.webp
+PGE-STK-0096,Stokes,328,Hydraulic & Lubrication Components,BELT FOR PUMP,S35-3,012-4-3,41,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0096.webp
+PGE-STK-0097,Stokes,328,Hydraulic & Lubrication Components,WORM SPLASH GUARD,S35-4,B-247-644-1,41,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0097.webp
+PGE-STK-0098,Stokes,328,Hydraulic & Lubrication Components,PISTON,S35-513,B-244-513-001,41,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0098.webp
+PGE-STK-0099,Stokes,328,Hydraulic & Lubrication Components,SUMP CLEAN-OUT BEZEL,S35-962,B-297-962-002,41,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0099.webp
+PGE-STK-0100,Stokes,328,Hydraulic & Lubrication Components,OIL RESERVOIR GASKET,S35-972,A-233-972-002,41,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0100.webp
+PGE-STK-0101,Stokes,328,Hydraulic & Lubrication Components,PISTON & SPINDLE CAP O'RING (NEW STYLE),S35-022,07-FD-022-P,41,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0101.webp
+PGE-STK-0102,Stokes,328,Hydraulic & Lubrication Components,TONNAGE GAUGE - 10 TON,S-575,085-10-575,41,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0102.webp
+PGE-STK-0103,Stokes,328,Hydraulic & Lubrication Components,PULLEY ON JACKSHAFT,S-901,085-17-901,41,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0103.webp
+PGE-STK-0104,Stokes,328,Hydraulic & Lubrication Components,PUMP MOUNTING BRACKET,SP-664,085-12-664,41,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0104.webp
+PGE-STK-0105,Stokes,328,Hydraulic & Lubrication Components,OIL PUMP SUPPORT,SP-778,A-241-778-001,41,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0105.webp
+PGE-STK-0106,Stokes,328,Hydraulic & Lubrication Components,OIL PUMP,SP-A2,085-10-525,42,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0106.webp
+PGE-STK-0107,Stokes,328,Hydraulic & Lubrication Components,OIL/HYDRAULIC VALVE ASSEMBLY,S-VA,N/A,42,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0107.webp
+PGE-STK-0108,Stokes,328,Hydraulic & Lubrication Components,SUMP CLEAN-OUT COVER,S35-701,B-297-701-005,42,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0108.webp
+PGE-STK-0109,Stokes,328,Hydraulic & Lubrication Components,SUMP CLEAN-OUT GASKET,S35-702,B-297-702-005,42,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0109.webp
+PGE-STK-0110,Stokes,328,Hydraulic & Lubrication Components,STRAINER FOR OIL PUMP,SP-A3,N/A,42,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0110.webp
+PGE-STK-0111,Stokes,328,Lower Cam Tracks,"BILAYER FILLER PLATE 11/16"" FILL",S35-BFP-69,N/A,42,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0111.webp
+PGE-STK-0112,Stokes,328,Lower Cam Tracks,HOLD DOWN INSERT - 33 STATION,S35-706/2,N/A,42,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0112.webp
+PGE-STK-0113,Stokes,328,Lower Cam Tracks,NON-DROP INSERT - EARLY MODEL,S-316,D-233-316-3,42,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0113.webp
+PGE-STK-0114,Stokes,328,Lower Cam Tracks,EJECTION CAM - STEEL,S35-2,C-236-641-13,42,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0114.webp
+PGE-STK-0115,Stokes,328,Lower Cam Tracks,ANTI-FLIGHT CAM - EJECTION (45 STATION),S35-2/1,N/A,42,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0115.webp
+PGE-STK-0116,Stokes,328,Lower Cam Tracks,EJECTION CAM - BRONZE,S35-2/B,C-236-641-13,42,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0116.webp
+PGE-STK-0117,Stokes,328,Lower Cam Tracks,ANTI-FLIGHT CAM - EJECTION (33 STATION),S35-2/2,N/A,42,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0117.webp
+PGE-STK-0118,Stokes,328,Lower Cam Tracks,NON-DROP CAM SUPPORT,S35-401,C-290-401-003,42,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0118.webp
+PGE-STK-0119,Stokes,328,Lower Cam Tracks,LOWER PUNCH TAKE OUT,S35-548,C-233-548-001,42,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0119.webp
+PGE-STK-0120,Stokes,328,Lower Cam Tracks,HOLD-DOWN INSERT- 45 STATION,S35-706,D-295-706-002,42,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0120.webp
+PGE-STK-0121,Stokes,328,Lower Cam Tracks,LOWER PUNCH TAKE-OUT STUD ASSEMBLY,S35-760,A-233-576-001,43,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0121.webp
+PGE-STK-0122,Stokes,328,Lower Cam Tracks,"LOWER PULL-DOWN CAM (1-3/8"" FILL)",S35-864-138,B-236-873-009,43,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0122.webp
+PGE-STK-0123,Stokes,328,Lower Cam Tracks,LOWER PULL-DOWN CAM (11/16 FILL),S35-864-69,D-236-864-002,43,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0123.webp
+PGE-STK-0124,Stokes,328,Lower Cam Tracks,"LOWER PULL-DOWN CAM (7/8"" FILL)",S35-864-88,B-236-873-008,43,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0124.webp
+PGE-STK-0125,Stokes,328,Lower Cam Tracks,"LOWER PULL DOWN CAM 1-3/8"" - 33 STATION",S35-865-138,N/A,43,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0125.webp
+PGE-STK-0126,Stokes,328,Lower Cam Tracks,"LOWER PULL DOWN CAM - 11/16"" - 33 STATION",S35-865-69,D-236-864-002,43,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0126.webp
+PGE-STK-0127,Stokes,328,Lower Cam Tracks,"LOWER PULL DOWN CAM - 7/8"" - 33 STATION",S35-865-88,D-236-865-002,43,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0127.webp
+PGE-STK-0128,Stokes,328,Lower Cam Tracks,"INSERT CAM (1-3/8"" FILL)",S35-873-138,B-236-873-009,43,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0128.webp
+PGE-STK-0129,Stokes,328,Lower Cam Tracks,"INSERT CAM (11/16"" FILL)",S35-873-69,B-236-873-002,43,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0129.webp
+PGE-STK-0130,Stokes,328,Lower Cam Tracks,"INSERT CAM (7/8"" FILL)",S35-873-88,B-236-873-008,43,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0130.webp
+PGE-STK-0131,Stokes,328,Guarding,DOOR MOUNTED ACTUATOR,S35-002,15-FMA-002,43,R4C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0132,Stokes,328,Guarding,FRONT PANEL AND INSERT,S-109,D-234-109-022,43,R4C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0133,Stokes,328,Guarding,PRESSURE SWITCH,S-122,15-BJ-122,43,R5C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0134,Stokes,328,Pressure Rolls & Components,BUSHING FOR PRESSURE ROLL,N-328,N/A,43,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0134.webp
+PGE-STK-0135,Stokes,328,Pressure Rolls & Components,LOWER ROLL SHAFT,S-036,C-290-403-006,43,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0135.webp
+PGE-STK-0136,Stokes,328,Pressure Rolls & Components,LOWER ROLL SHAFT,S-039,D-290-403-009,44,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0136.webp
+PGE-STK-0137,Stokes,328,Pressure Rolls & Components,UPPER PRESSURE ROLL BEARING STYLE (LATE MODEL),S-044,C-232-513-044,44,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0137.webp
+PGE-STK-0138,Stokes,328,Pressure Rolls & Components,LOWER PRESSURE ROLL BEARING STYLE (LATE MODEL),S-045,C-232-523-045,44,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0138.webp
+PGE-STK-0139,Stokes,328,Pressure Rolls & Components,"SEAL, PRESSURE ROLL",S-267,7BA267,44,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0139.webp
+PGE-STK-0140,Stokes,328,Pressure Rolls & Components,UPPER FRAME OIL SEAL - UPPER ROLL PIN,S-277,085-026-277,44,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0140.webp
+PGE-STK-0141,Stokes,328,Pressure Rolls & Components,LOWER PRESSURE ROLL - W/SEALS,S-311,B-232-513-11,44,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0141.webp
+PGE-STK-0142,Stokes,328,Pressure Rolls & Components,UPPER PRESSURE ROLL - W/SEALS,S-312,B-232-513-12,44,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0142.webp
+PGE-STK-0143,Stokes,328,Pressure Rolls & Components,HANDLE FOR END CAP,S-343-H,N/A,44,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0143.webp
+PGE-STK-0144,Stokes,328,Pressure Rolls & Components,UPPER ROLL SHAFT-EARLY MODEL-LUBRICATED,S-348,C-291-348-2,44,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0144.webp
+PGE-STK-0145,Stokes,328,Pressure Rolls & Components,UPPER ROLL SHAFT-NON LUBRICATED,S-348/1,D-291-348-005,44,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0145.webp
+PGE-STK-0146,Stokes,328,Pressure Rolls & Components,LOADING BEAM PIN,S35-011/B,01-PAL-011-B,44,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0146.webp
+PGE-STK-0147,Stokes,328,Pressure Rolls & Components,O RING - LOWER ROLL SHAFT,S35-103,07-FC-013-P,44,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0147.webp
+PGE-STK-0148,Stokes,328,Pressure Rolls & Components,LOWER ROLL SHAFT-EARLY MODEL-LUBRICATED,S35-12,C-233-312-3,44,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0148.webp
+PGE-STK-0149,Stokes,328,Pressure Rolls & Components,UPPER OR LOWER PRESSURE ROLL,S35-13,B-232-513-5,44,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0149.webp
+PGE-STK-0150,Stokes,328,Pressure Rolls & Components,PRESSURE ROLL WITH BUSHING,S35-13/WB,B-232-513-5,44,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0150.webp
+PGE-STK-0151,Stokes,328,Pressure Rolls & Components,LOWER ROLL SHAFT BUSHING,S35-134,A-233-313-004,45,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0151.webp
+PGE-STK-0152,Stokes,328,Pressure Rolls & Components,UPPER ROLL SHAFT KEY,S35-181,A-233-181-002,45,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0152.webp
+PGE-STK-0153,Stokes,328,Pressure Rolls & Components,LOWER ROLL HANDWHEEL SHAFT MITER GEAR,S35-21,A-224-112-1,45,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0153.webp
+PGE-STK-0154,Stokes,328,Pressure Rolls & Components,RING LOWER ROLL SHAFT CARRIER #227,S35-240,N/A,45,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0154.webp
+PGE-STK-0155,Stokes,328,Pressure Rolls & Components,WORM GEAR FOR LOWER ROLL SHAFT (OLD STYLE LG BORE),S35-248,B-233-248-2,45,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0155.webp
+PGE-STK-0156,Stokes,328,Pressure Rolls & Components,WORM GEAR FOR LOWER ROLL SHAFT (NEW STYLE SM BORE),S35-248/1,B-233-248-003,45,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0156.webp
+PGE-STK-0157,Stokes,328,Pressure Rolls & Components,UPPER ROLL SHAFT O RING,S35-34,022-002-234,45,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0157.webp
+PGE-STK-0158,Stokes,328,Pressure Rolls & Components,END PLATE CAP,S35-343,D-291-343-001,45,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0158.webp
+PGE-STK-0159,Stokes,328,Pressure Rolls & Components,END PLATE THUMB SCREW,S35-343/1,N/A,45,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0159.webp
+PGE-STK-0160,Stokes,328,Pressure Rolls & Components,LOADING BEAM,S35-474,B-248-474-001,45,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0160.webp
+PGE-STK-0161,Stokes,328,Pressure Rolls & Components,LOADING BEAM INSERT,S35-492,A-232-492-001,45,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0161.webp
+PGE-STK-0162,Stokes,328,Pressure Rolls & Components,PRESSURE SPRING,S35-493,"B-232-493-1, B-232-493-001",45,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0162.webp
+PGE-STK-0163,Stokes,328,Pressure Rolls & Components,OIL SLINGER - LOWER ROLL,S35-510,A-232-510-2,45,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0163.webp
+PGE-STK-0164,Stokes,328,Pressure Rolls & Components,UPPER PUNCH ADJUSTMENT SCREW EARLY MODEL (SHORT),S35-55,A-234-555-4,45,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0164.webp
+PGE-STK-0165,Stokes,328,Pressure Rolls & Components,UPPER PUNCH ADJUSTMENT SCREW LATE MODEL,S35-55/1,A-234-555-009,45,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0165.webp
+PGE-STK-0166,Stokes,328,Pressure Rolls & Components,LOADING CRANK,S35-647,C-236-647-004,46,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0166.webp
+PGE-STK-0167,Stokes,328,Pressure Rolls & Components,CLAMPING HANDLE,S35-825,A-233-825-1,46,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0167.webp
+PGE-STK-0168,Stokes,328,Pressure Rolls & Components,CLAMPING SHAFT (LEFT SIDE),S35-826,"A-233-826-1, A-233-826-2",46,R1C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0169,Stokes,328,Pressure Rolls & Components,LOWER ROLL HANDWHEEL SHAFT - RIGHT SIDE,S35-828,A-233-828-2,46,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0169.webp
+PGE-STK-0170,Stokes,328,Pressure Rolls & Components,PRESSURE COLUMN GUIDE,S35-847,C-236-847-001,46,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0170.webp
+PGE-STK-0171,Stokes,328,Pressure Rolls & Components,NARROW INNER BEARING FOR END CAP,S35-910,085-6-910,46,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0171.webp
+PGE-STK-0172,Stokes,328,Pressure Rolls & Components,WIDE OUTER BEARING FOR ENDCAP,S35-910/1,N/A,46,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0172.webp
+PGE-STK-0173,Stokes,328,Pressure Rolls & Components,CENTER AND OUTER BEAR- ING FOR UPPER ROLL PIN,S35-911,085-6-911,46,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0173.webp
+PGE-STK-0174,Stokes,328,Pressure Rolls & Components,SLIDER BLOCK,S-405,B-290-405-1,46,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0174.webp
+PGE-STK-0175,Stokes,328,Pressure Rolls & Components,"THRUST PLATE, LOWER ROLL - BRASS",S-486,A-294-486-1,46,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0175.webp
+PGE-STK-0176,Stokes,328,Pressure Rolls & Components,"THRUST PLATE, LOWER ROLL - STEEL",S-486/A2,N/A,46,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0176.webp
+PGE-STK-0177,Stokes,328,Pressure Rolls & Components,"SPACER, UPPER PUNCH ADJUSTING SCREW",S-500,B-297-005-002,46,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0177.webp
+PGE-STK-0178,Stokes,328,Pressure Rolls & Components,HANDWHEEL - SUPPORT PRESSURE ADJUSTING,S-549,B-298-549-M01,46,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0178.webp
+PGE-STK-0179,Stokes,328,Pressure Rolls & Components,WORM SHAFT MITER GEAR,S35-302,017-003-022,46,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0179.webp
+PGE-STK-0180,Stokes,328,Pressure Rolls & Components,UPPER ROLL BEARING PLATE,S35-74,A-291-374-001,46,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0180.webp
+PGE-STK-0181,Stokes,328,Pressure Rolls & Components,OIL RECEIVER COVER,S35-786,B-241-786-1,47,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0181.webp
+PGE-STK-0182,Stokes,328,Pressure Rolls & Components,UPPER ROLL SHAFT,S35-82,C-233-182-2,47,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0182.webp
+PGE-STK-0183,Stokes,328,Pressure Rolls & Components,UPPER PRESSURE ROLL BEARING STYLE (LATE MODEL) ASSEMBLY,S-044/A,N/A,47,R1C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0184,Stokes,328,Pressure Rolls & Components,LOWER PRESSURE ROLL BEARING STYLE (LATE MODEL) ASSEMBLY,S-045/A,N/A,47,R2C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0185,Stokes,328,Pressure Rolls & Components,LOWER PRESSURE ROLL - W/ SEALS ASSEMBLY,S-311/A,N/A,47,R2C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0186,Stokes,328,Product Control,FEED SPOUT BRACKET,S35-428,C-297-428-002,47,R2C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0187,Stokes,328,Product Control,OPEN FEED FRAME - LEFT,S35-66/L,N/A,47,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0187.webp
+PGE-STK-0188,Stokes,328,Product Control,OPEN FEED FRAME - RIGHT,S35-66/R,D-242-766-6,47,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0188.webp
+PGE-STK-0189,Stokes,328,Product Control,HOPPER - NEW STYLE,S35-444,D-295-444-007,47,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0189.webp
+PGE-STK-0190,Stokes,328,Product Control,FEED FRAME STUD,S-185,A-276-185-003,47,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0190.webp
+PGE-STK-0191,Stokes,328,Product Control,LOWER SPOUT,S35-110,C-777-110-003,47,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0191.webp
+PGE-STK-0192,Stokes,328,Product Control,TABLET GUIDE,S35-22,A-242-822-1,47,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0192.webp
+PGE-STK-0193,Stokes,328,Product Control,TAKE-OFF PLATE - LEFT,S35-23,A-242-823-4,47,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0193.webp
+PGE-STK-0194,Stokes,328,Product Control,TAKE-OFF PLATE - RIGHT,S35-24,A-242-823-1D,47,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0194.webp
+PGE-STK-0195,Stokes,328,Product Control,LOADING COLUMN,S35-326,B-232-326-011,47,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0195.webp
+PGE-STK-0196,Stokes,328,Product Control,FEED FRAME SCRAPE-OFF,S35-35,A-242-825-4,48,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0196.webp
+PGE-STK-0197,Stokes,328,Product Control,KEYED SLIDER PLATE,S35-400,C-290-400-002,48,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0197.webp
+PGE-STK-0198,Stokes,328,Product Control,APRON HOLD-DOWN HANDLE,S35-406-AH,N/A,48,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0198.webp
+PGE-STK-0199,Stokes,328,Product Control,TABLET CHUTE,S35-408,C-297-408-001,48,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0199.webp
+PGE-STK-0200,Stokes,328,Product Control,FEED SPOUT - GRAVITY FEEDER,S35-427,D-297-427-005,48,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0200.webp
+PGE-STK-0201,Stokes,328,Product Control,FEEDER BOWL,S35-427/1,D-297-427-005,48,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0201.webp
+PGE-STK-0202,Stokes,328,Product Control,VACUUM MANIFOLD - COMPLETE ASSEMBLY,S35-439/A,N/A,48,R3C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0203,Stokes,328,Product Control,FEEDER PAN - BRONZE ( NEW STYLE ),S35-52,293-452-021,48,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0203.webp
+PGE-STK-0204,Stokes,328,Product Control,INSERT FEED FRAME,S35-540,298-054-002,48,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0204.webp
+PGE-STK-0205,Stokes,328,Product Control,OPEN FEED FRAME - LEFT ASSEMBLY,S35-66/L/A,D-242-766-5,48,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0206,Stokes,328,Product Control,OPEN FEED FRAME - RIGHT ASSEMBLY,S35-66/R/A,D-242-766-6,48,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0206.webp
+PGE-STK-0207,Stokes,328,Product Control,FORCED FEEDER,S35-FC1,N/A,48,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0208,Stokes,328,Product Control,FEEDER MOTOR COUPLING,S35-FC1/MC2,N/A,48,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0208.webp
+PGE-STK-0209,Stokes,328,Product Control,FEEDER PAN - ASSEMBLY,S35-FC1-1,N/A,48,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0209.webp
+PGE-STK-0210,Stokes,328,Product Control,PADDLE SHAFT,S35-FC1-10,N/A,48,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0210.webp
+PGE-STK-0211,Stokes,328,Product Control,FEEDER PADDLE LARGE,S35-FC1-11,N/A,49,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0211.webp
+PGE-STK-0212,Stokes,328,Product Control,SMALL FEEDER PADDLE,S35-FC1-12,N/A,49,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0212.webp
+PGE-STK-0213,Stokes,328,Product Control,SCRAPER,S35-FC1-13,N/A,49,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0214,Stokes,328,Product Control,INPUT SHAFT BUSHING,S35-FC1-20,N/A,49,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0214.webp
+PGE-STK-0215,Stokes,328,Product Control,BUSHING,S35-FC1-21,N/A,49,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0216,Stokes,328,Product Control,PUNCH RETAINER SPRING,S35-FC1-24,N/A,49,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0216.webp
+PGE-STK-0217,Stokes,328,Product Control,SPRING,S35-FC1-24A,328,49,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0217.webp
+PGE-STK-0218,Stokes,328,Product Control,WEAR STRIP SET,S35-FC1-WST,N/A,49,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0218.webp
+PGE-STK-0219,Stokes,328,Product Control,RETURN SCRAPER,S35-FC1-26,N/A,49,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0219.webp
+PGE-STK-0220,Stokes,328,Product Control,DRIVE SHAFT COUPLING,S35-FC1-30,N/A,49,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0220.webp
+PGE-STK-0221,Stokes,328,Product Control,HOPPER ADJUSTING SCREW,S-36/2,1-EC36,49,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0222,Stokes,328,Product Control,HOPPER ADJUSTING SCREW ASSEMBLY,S-36,D-290-403-009,49,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0222.webp
+PGE-STK-0223,Stokes,328,Product Control,HOPPER ADJUSTING NUT,S-36/1,N/A,49,R5C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0224,Stokes,328,Product Control,FEED FRAME LEVELING SCREW,S-479,"A-234-479-1, A-234-479-5",49,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0224.webp
+PGE-STK-0225,Stokes,328,Product Control,SCRAPER SPRING,SP-8,"37077, 35018, 36062",49,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0225.webp
+PGE-STK-0226,Stokes,328,Product Control,FEEDER PADDLE - SMALL W/PLOW,S35-FC1-12-DP,N/A,50,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0226.webp
+PGE-STK-0227,Stokes,328,Product Control,FEEDER COVER,S35-FC1-2,N/A,50,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0227.webp
+PGE-STK-0228,Stokes,328,Thickness/Hardness Components,WORM - THICKNESS CONTROL,S35-247,A-233-247-001,50,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0228.webp
+PGE-STK-0229,Stokes,328,Turret Hardware,DIE LOCK SCREW MAXI HEAD 45 STATION,DL-137/45,N/A,50,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0230,Stokes,328,Turret Hardware,DIE LOCK SCREW ASSEMBLY - MAXI,DL-137-33,C-241-633-006,50,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0230.webp
+PGE-STK-0231,Stokes,328,Turret Hardware,DIE LOCK SCREW,DL-91,230-091-1,50,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0232,Stokes,328,Turret Hardware,SPINDLE - EARLY MODEL,S35-633,C-241-633-1,50,R3C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0233,Stokes,328,Turret Hardware,SPINDLE - LATE MODEL,S35-633/6,C-241-633-006,50,R3C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0234,Stokes,328,Turret Hardware,SPINDLE AIR BLEED O RING,S35-088,07-FD-088-P,50,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0234.webp
+PGE-STK-0235,Stokes,328,Turret Hardware,"SPRING, LOWER PUNCH SUPPORT",S-115,12AA115,50,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0236,Stokes,328,Turret Hardware,SPINDLE CAP GASKET,S35-012,07-FA-012-BQ,50,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0236.webp
+PGE-STK-0237,Stokes,328,Turret Hardware,SPINDLE SHIM (LAMINATED),S35-396,A-236-396-1,50,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0238,Stokes,328,Turret Hardware,PISTON & SPINDLE CAP O RING (OLD STYLE),S35-212,022-2-212,50,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0238.webp
+PGE-STK-0239,Stokes,328,Turret Hardware,O RING FOR SPINDLE O.D.,S35-28,022-002-228,50,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0240,Stokes,328,Turret Hardware,RACE FOR SPINDLE BEARING,S35-646-2,085-6-646/2,50,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0240.webp
+PGE-STK-0241,Stokes,328,Turret Hardware,SPRING GUIDE,S35-512,A-232-512-001,51,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0242,Stokes,328,Turret Hardware,SPINDLE BEARING,S35-646-1,085-6-646/1,51,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0242.webp
+PGE-STK-0243,Stokes,328,Turret Hardware,LOWER PUNCH RETAINER,S35-899,A-293-899-6,51,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0244,Stokes,328,Turret Hardware,SPINDLE CAP - LATE MODEL,S35-835,B-241-835-009,51,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0244.webp
+PGE-STK-0245,Stokes,328,Turret Hardware,SPINDLE CLAMP RING,S35-837,B-241-837-001,51,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0246,Stokes,328,Turret Hardware,"SET SCREW, LOWER PUNCH SUPPORT",S-4,01BD002A,51,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0246.webp
+PGE-STK-0247,Stokes,328,Turret Hardware,RETAINING PIN - CORE ROD,RP-1,N/A,51,R3C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0248,Stokes,328,Turrets,STOCK PHOTO 45 STATION TURRET ASSEMBLY*,S35-45T,D-232-253-049,51,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0248.webp
+PGE-STK-0249,Stokes,328,Turrets,STOCK PHOTO 33 STATION TURRET ASSEMBLY*,S35-33T,D-232-253-55,51,R3C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0250,Stokes,328,Turrets,STOCK PHOTO 45 STATION TURRET ASSEMBLY* - CORE ROD,S35-45T-CR,D-232-253-55,51,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0250.webp
+PGE-STK-0251,Stokes,328,Upper Cam Tracks,UPPER LOWERING CAM - 33 STATION (EARLY MODEL),S35-823/1,D-232-823-002,51,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0252,Stokes,328,Upper Cam Tracks,HOLD-DOWN CAM,S35-023,C-296-023-001,51,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0252.webp
+PGE-STK-0253,Stokes,328,Upper Cam Tracks,HOLD-DOWN BAR (SET OF 2),S35-024,B-296-024-005,51,R5C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0254,Stokes,328,Upper Cam Tracks,HOLD-DOWN BAR (1 OF 2),S35-024/1,B-296-024-005,51,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0254.webp
+PGE-STK-0255,Stokes,328,Upper Cam Tracks,HOLD DOWN BAR (2 OF 2),S35-024/2,B-296-024-005,51,R5C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0256,Stokes,328,Upper Cam Tracks,UPPER RAISING CAM - 45 STATION (EARLY MODEL),S35-822,D-232-822-001,52,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0256.webp
+PGE-STK-0257,Stokes,328,Upper Cam Tracks,UPPER RAISING CAM - 33 STATION (EARLY MODEL),S35-822/1,D-232-822-002,52,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0258,Stokes,328,Upper Cam Tracks,UPPER RAISING CAM - 33 STATION (LATE MODEL),S35-822/2,D-232-822-002,52,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0258.webp
+PGE-STK-0259,Stokes,328,Upper Cam Tracks,UPPER RAISING CAM - 45 STATION (LATE MODEL),S35-822/6,D-232-822-006,52,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0260,Stokes,328,Upper Cam Tracks,UPPER LOWERING CAM - 45 STATION (LATE MODEL),S35-823,D-232-823-007,52,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0260.webp
+PGE-STK-0261,Stokes,328,Upper Cam Tracks,UPPER LOWERING CAM - 33 STATION (LATE MODEL),S35-823/2,N/A,52,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0262,Stokes,328,Upper Cam Tracks,UPPER LOWERING CAM - 45 STATION EARLY MODEL- GRAVITY FEEDER ONLY,S35-823/3,N/A,52,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0262.webp
+PGE-STK-0263,Stokes,328,Upper Cam Tracks,UPPER DWELL CAM - 45 STATION,S35-890,B-236-890-002,52,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0264,Stokes,328,Upper Cam Tracks,UPPER DWELL CAM - 33 STATION,S35-890/1,B-236-890-001,52,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0264.webp
+PGE-STK-0265,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER SHAFT (RIGHT SIDE),S35-819,A-233-819-002,52,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0266,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER SHAFT (LEFT SIDE),S35-820,A-233-820-002,52,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0266.webp
+PGE-STK-0267,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER SIDE PLATE,S35-372,A-233-372-002,52,R4C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0268,Stokes,328,Weight Adjusting Components,WEIGHT/PRESSURE ADJ. WHEEL SPRING,S-204,A-200-204-1,52,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0268.webp
+PGE-STK-0269,Stokes,328,Weight Adjusting Components,ADJUSTING SCREW LOCK NUT,S35-011/A,01-FD-011-A,52,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0270,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER WHEEL,S35-035,A-220-035-7,52,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0270.webp
+PGE-STK-0271,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER BODY,S35-319,C-233-319-001,53,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0272,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER BOTTOM PLATE,S35-320,A-233-320-002,53,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0272.webp
+PGE-STK-0273,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER BEVEL PINION,S35-373,A-233-373-001,53,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0274,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER BEVEL GEAR,S35-374,A-233-374-002,53,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0274.webp
+PGE-STK-0275,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER CAM ASSEMBLY,S35-916,"D-236-916-1, D-236-916-2",53,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0276,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER LEAD SCREW,S35-916A,D-236-916-1,53,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0276.webp
+PGE-STK-0277,Stokes,328,Weight Adjusting Components,WEIGHT ADJUSTER CAM HEAD,S35-916B,D-236-916-1,53,R3C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0278,Stokes,340,Lower Cam Tracks,1/2 FILL CAM,S34-033,340-033-001,54,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0279,Stokes,340,Lower Cam Tracks,3/4 FILL CAM,S34-034,340-034-002,54,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0280,Stokes,340,Lower Cam Tracks,EJECTION CAM,S34-035,340-035-001F,54,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0280.webp
+PGE-STK-0281,Stokes,340,Lower Cam Tracks,RAISING CAM,S34-058,D-340-059-1,54,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0282,Stokes,340,Lower Cam Tracks,LOWERING CAM,S34-059,340-059-002,54,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0282.webp
+PGE-STK-0283,Stokes,340,Lower Cam Tracks,UPPER DWELL CAM,S34-065,340-059-002,54,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0284,Stokes,533,Drive Components,DRIVE PULLEY,S35-021,08-EM-001,55,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0284.webp
+PGE-STK-0285,Stokes,533,Drive Components,FLANGED IDLER PULLEY,S-894,085-018-894,55,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0286,Stokes,533,Drive Components,IDLER SHAFT,S-893/1,N/A,55,R1C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0287,Stokes,533,Drive Components,WORM SHAFT BEARING PLATE,S35-158,B-296-158-001,55,R2C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0288,Stokes,533,Drive Components,CRANK PIN NUT,S35-008,01-FAS-008-A,55,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0288.webp
+PGE-STK-0289,Stokes,533,Drive Components,RATCHET WRENCH,S35-028,10-BC-028,55,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0290,Stokes,533,Drive Components,DRIVE BELT- MATCHED SET OF 2 - V BELT,S35-043,08-CBC-043-B,55,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0290.webp
+PGE-STK-0291,Stokes,533,Drive Components,RETAINING PLATE,S35-085,233-085-003,55,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0292,Stokes,533,Drive Components,WORMSHAFT HOUSING COVER,S35-228,B-294-228-001,55,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0292.webp
+PGE-STK-0293,Stokes,533,Drive Components,GENERATOR SPROCKET,S35-230,B-294-223-017,55,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0294,Stokes,533,Drive Components,SEAL CARRIER - WORM DRIVE ASSEMBLY,S35-244,B-233-244-001,55,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0295,Stokes,533,Drive Components,PILLOW BEARING,S35-262,085-007-262,55,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0296,Stokes,533,Drive Components,KEY FOR DRIVE SHAFT,S35-311/1,N/A,55,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0296.webp
+PGE-STK-0297,Stokes,533,Drive Components,WORM SHAFT,S35-311,C-233-311-009,55,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0298,Stokes,533,Drive Components,WORM SHAFT BRACKET,S35-491,C-248-491-004,55,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0298.webp
+PGE-STK-0299,Stokes,533,Drive Components,COVER PLATE FINISH STRIP,S35-561,B-297-561-001,56,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0300,Stokes,533,Drive Components,COMPLETE CLUTCH ASSEMBLY,S35-565,N/A,56,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0301,Stokes,533,Drive Components,BEARING SET OF 2 FOR CLUTCH PULLEY,S35-610,085-012-610,56,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0301.webp
+PGE-STK-0302,Stokes,533,Drive Components,BEARING FOR WORM- SHAFT BEARING PLATE,S35-611,085-012-611,56,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0302.webp
+PGE-STK-0303,Stokes,533,Drive Components,JACKSHAFT,S35-765,B-248-765-002,56,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0303.webp
+PGE-STK-0304,Stokes,533,Drive Components,OIL SEAL - MAIN DRIVE WORM SHAFT,S35-782,085-6-782,56,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0304.webp
+PGE-STK-0305,Stokes,533,Drive Components,WORM SHAFT - THICKNESS CONTROL,S35-824,A-233-824-001,56,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0305.webp
+PGE-STK-0306,Stokes,533,Drive Components,INNER BEARING FOR UPPER ROLL PN,S35-911/1,N/A,56,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0306.webp
+PGE-STK-0307,Stokes,533,Drive Components,COLLAR,S35-967,A-266-967-001,56,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0307.webp
+PGE-STK-0308,Stokes,533,Drive Components,DRIVE TENSIONER,S-893,085-018-893,56,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0308.webp
+PGE-STK-0309,Stokes,533,Drive Components,WOODRUFF KEY,SC-020,006-001-020,56,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0309.webp
+PGE-STK-0310,Stokes,533,Drive Components,SET SCREW,SC-031,01-DR-031,56,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0310.webp
+PGE-STK-0311,Stokes,533,Drive Components,LOCK PLATE,SC-051,013-002-051,56,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0311.webp
+PGE-STK-0312,Stokes,533,Drive Components,RELEASE SPRING PIN,SC-055,013-002-055,56,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0312.webp
+PGE-STK-0313,Stokes,533,Drive Components,SCREW FOR STEPPED DRIVE KEY,SC-058/1,013-002-058,56,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0313.webp
+PGE-STK-0314,Stokes,533,Drive Components,BACK PLATE,SC-059,013-002-059,57,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0314.webp
+PGE-STK-0315,Stokes,533,Drive Components,ADJUSTING LOCK PIN,SC-061,013-2-061,57,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0315.webp
+PGE-STK-0316,Stokes,533,Drive Components,SNAP RING,SC-063,013-002-063,57,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0316.webp
+PGE-STK-0317,Stokes,533,Drive Components,LOCK SCREW,SC-082,01-DC-082-A,57,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0317.webp
+PGE-STK-0318,Stokes,533,Drive Components,ADJUSTING LOCK PIN SPRING,SC-146,013-2-146,57,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0318.webp
+PGE-STK-0319,Stokes,533,Drive Components,CLUTCH DRIVING RING,SC-44,013-2-44,57,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0319.webp
+PGE-STK-0320,Stokes,533,Drive Components,ADJUSTING RING,SC-45,013-002-045,57,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0320.webp
+PGE-STK-0321,Stokes,533,Drive Components,CLUTCH HUB,SC-455,085-020-455,57,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0321.webp
+PGE-STK-0322,Stokes,533,Drive Components,ENGAGING CONE,SC-456,085-20-456,57,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0322.webp
+PGE-STK-0323,Stokes,533,Drive Components,DRIVING PLATE - FIBER,SC-48,013-002-048,57,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0323.webp
+PGE-STK-0324,Stokes,533,Drive Components,DRIVEN PLATE - STEEL,SC-49,013-002-049,57,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0324.webp
+PGE-STK-0325,Stokes,533,Drive Components,ROLLER RING,SC-50,013-2-50,57,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0325.webp
+PGE-STK-0326,Stokes,533,Drive Components,RELEASE SPRING,SC-56,013-2-56,57,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0326.webp
+PGE-STK-0327,Stokes,533,Drive Components,STEPPED DRIVE KEY,SC-58,013-2-58,57,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0327.webp
+PGE-STK-0328,Stokes,533,Drive Components,CLUTCH SHIFTER SHOE - PAIR,SC-65,B-248-565-1,57,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0328.webp
+PGE-STK-0329,Stokes,533,Guarding,"BOTTOM CROSS BRACE, FRONT AND REAR - UPPER GUARDS",S35-416,D-297-416-001,58,R1C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0330,Stokes,533,Guarding,DOOR HOLDER,S-121,01-ZD-121,58,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0330.webp
+PGE-STK-0331,Stokes,533,Guarding,GAS CYLINDER BRACKET - BOTTOM,S-188,B-297-188-001,58,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0331.webp
+PGE-STK-0332,Stokes,533,Guarding,COVER PLATE,S35-017,B-297-017-002,58,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0332.webp
+PGE-STK-0333,Stokes,533,Guarding,VIBRATION ISOLATOR,S35-107,30-HA-107,58,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0333.webp
+PGE-STK-0334,Stokes,533,Guarding,ACCESS COVER,S35-151,A-290-151-001,58,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0334.webp
+PGE-STK-0335,Stokes,533,Guarding,ACCESS COVER GASKET,S35-234,A-294-234-001,58,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0335.webp
+PGE-STK-0336,Stokes,533,Guarding,UPPER FRAME COVER,S35-36,D-232-736-3,58,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0336.webp
+PGE-STK-0337,Stokes,533,Guarding,"UPPER FRAME COVER PLUG - 1""-8 X 1.5""",S35-36-1,N/A,58,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0337.webp
+PGE-STK-0338,Stokes,533,Guarding,INSPECTION COVER - REAR,S35-451,A-236-451-001,58,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0338.webp
+PGE-STK-0339,Stokes,533,Guarding,INSPECTION COVER GASKET - REAR,S35-452,A-236-452-001,58,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0339.webp
+PGE-STK-0340,Stokes,533,Guarding,INSPECTION COVER - SIDE,S35-475,A-236-475-002,58,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0340.webp
+PGE-STK-0341,Stokes,533,Guarding,INSPECTION COVER GASKET - SIDE,S35-476,A-236-476-002,58,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0341.webp
+PGE-STK-0342,Stokes,533,Guarding,LIMIT SWITCH ACTUATOR COLLAR,S35-621,A-297-621-001,58,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0342.webp
+PGE-STK-0343,Stokes,533,Hydraulic & Lubrication Components,OIL RESERVOIR,S35-632,D-241-632-008,58,R5C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0344,Stokes,533,Hydraulic & Lubrication Components,LUBRICATION MANIFOLD CLAMP,S-077,B-296-077-001,59,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0344.webp
+PGE-STK-0345,Stokes,533,Hydraulic & Lubrication Components,OIL PRESSURE GAUGE - 15 P.S.I,S-162,085-10-162,59,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0345.webp
+PGE-STK-0346,Stokes,533,Hydraulic & Lubrication Components,OIL LEVEL WINDOW,S-165,085-7-165,59,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0346.webp
+PGE-STK-0347,Stokes,533,Hydraulic & Lubrication Components,OIL FILTER ELEMENT,S-30,N/A,59,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0347.webp
+PGE-STK-0348,Stokes,533,Hydraulic & Lubrication Components,OIL FILTER ASSEMBLY HEAD & ELEMENT,S-30H,N/A,59,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0348.webp
+PGE-STK-0349,Stokes,533,Hydraulic & Lubrication Components,BELT FOR PUMP,S35-3,012-4-3,59,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0349.webp
+PGE-STK-0350,Stokes,533,Hydraulic & Lubrication Components,WORM SPLASH GUARD,S35-4,B-247-644-1,59,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0350.webp
+PGE-STK-0351,Stokes,533,Hydraulic & Lubrication Components,PISTON,S35-513,B-244-513-001,59,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0351.webp
+PGE-STK-0352,Stokes,533,Hydraulic & Lubrication Components,SUMP CLEAN-OUT COVER,S35-701,B-297-701-005,59,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0352.webp
+PGE-STK-0353,Stokes,533,Hydraulic & Lubrication Components,SUMP CLEAN-OUT GASKET,S35-702,B-297-702-005,59,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0353.webp
+PGE-STK-0354,Stokes,533,Hydraulic & Lubrication Components,SUMP CLEAN-OUT BEZEL,S35-962,B-297-962-002,59,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0354.webp
+PGE-STK-0355,Stokes,533,Hydraulic & Lubrication Components,OIL RESERVOIR GASKET,S35-972,A-233-972-002,59,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0355.webp
+PGE-STK-0356,Stokes,533,Hydraulic & Lubrication Components,PISTON & SPINDLE CAP O RING (NEW STYLE),S35-022,07-FD-022-P,59,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0356.webp
+PGE-STK-0357,Stokes,533,Hydraulic & Lubrication Components,TONNAGE GAUGE - 10 TON,S-575,085-10-575,59,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0357.webp
+PGE-STK-0358,Stokes,533,Hydraulic & Lubrication Components,PULLEY ON JACKSHAFT,S-901,085-17-901,59,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0358.webp
+PGE-STK-0359,Stokes,533,Hydraulic & Lubrication Components,PUMP MOUNTING BRACKET,SP-664,085-12-664,60,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0359.webp
+PGE-STK-0360,Stokes,533,Hydraulic & Lubrication Components,OIL PUMP SUPPORT,SP-778,A-241-778-001,60,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0360.webp
+PGE-STK-0361,Stokes,533,Hydraulic & Lubrication Components,OIL PUMP,SP-A2,085-10-526,60,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0361.webp
+PGE-STK-0362,Stokes,533,Hydraulic & Lubrication Components,STRAINER FOR OIL PUMP,SP-A3,N/A,60,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0362.webp
+PGE-STK-0363,Stokes,533,Hydraulic & Lubrication Components,OIL/HYDRAULIC VALVE ASSEMBLY,S-VA,N/A,60,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0363.webp
+PGE-STK-0364,Stokes,533,Lower Cam Tracks,HOLD DOWN INSERT - 33 STATION,S35-706/2,N/A,60,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0364.webp
+PGE-STK-0365,Stokes,533,Lower Cam Tracks,NON DROP INSERT - LATE MODEL,S-316/1,N/A,60,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0365.webp
+PGE-STK-0366,Stokes,533,Lower Cam Tracks,EJECTION CAM - STEEL,S35-2,C-236-641-13,60,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0366.webp
+PGE-STK-0367,Stokes,533,Lower Cam Tracks,ANTI-FLIGHT CAM - EJECTION (45 STATION),S35-2/1,N/A,60,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0367.webp
+PGE-STK-0368,Stokes,533,Lower Cam Tracks,EJECTION CAM - BRONZE,S35-2/B,C-236-641-13,60,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0368.webp
+PGE-STK-0369,Stokes,533,Lower Cam Tracks,ANTI-FLIGHT CAM - EJECTION (33 STATION),S35-2/2,N/A,60,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0369.webp
+PGE-STK-0370,Stokes,533,Lower Cam Tracks,LOWER PUNCH TAKE OUT,S35-548,C-233-548-001,60,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0370.webp
+PGE-STK-0371,Stokes,533,Lower Cam Tracks,LEVELING ECCENTRIC,S35-575,A-233-575-2,60,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0371.webp
+PGE-STK-0372,Stokes,533,Lower Cam Tracks,HOLD-DOWN INSERT- 45 STATION,S35-706,D-295-706-002,60,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0372.webp
+PGE-STK-0373,Stokes,533,Lower Cam Tracks,LOWER PUNCH TAKE-OUT STUD ASSEMBLY,S35-760,A-233-576-001,60,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0373.webp
+PGE-STK-0374,Stokes,533,Lower Cam Tracks,"LOWER PULL-DOWN CAM (1-3/8"" FILL)",S35-864-138,B-236-873-009,61,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0374.webp
+PGE-STK-0375,Stokes,533,Lower Cam Tracks,"LOWER PULL-DOWN CAM (11/16"" FILL)",S35-864-69,D-236-864-002,61,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0375.webp
+PGE-STK-0376,Stokes,533,Lower Cam Tracks,"LOWER PULL-DOWN CAM (7/8"" FILL)",S35-864-88,B-236-873-008,61,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0376.webp
+PGE-STK-0377,Stokes,533,Lower Cam Tracks,LOWER PULL DOWN CAM 1-3/8' - 33 STATION,S35-865-138,N/A,61,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0377.webp
+PGE-STK-0378,Stokes,533,Lower Cam Tracks,"LOWER PULL DOWN CAM - 11/16"" - 33 STATION",S35-865-69,D-236-864-002,61,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0378.webp
+PGE-STK-0379,Stokes,533,Lower Cam Tracks,"LOWER PULL DOWN CAM - 7/8"" - 33 STATION",S35-865-88,D-236-865-002,61,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0379.webp
+PGE-STK-0380,Stokes,533,Lower Cam Tracks,"INSERT CAM (1-3/8"" FILL)",S35-873-138,B-236-873-009,61,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0380.webp
+PGE-STK-0381,Stokes,533,Lower Cam Tracks,"INSERT CAM (11/16"" FILL)",S35-873-69,B-236-873-002,61,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0381.webp
+PGE-STK-0382,Stokes,533,Lower Cam Tracks,"INSERT CAM (7/8"" FILL)",S35-873-88,D-236-865-002,61,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0382.webp
+PGE-STK-0383,Stokes,533,Guarding,DOOR MOUNTED ACTUATOR,S35-002,15-FMA-002,61,R4C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0384,Stokes,533,Guarding,FRONT PANEL AND INSERT,S-109,D-234-109-022,61,R4C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0385,Stokes,533,Guarding,PRESSURE SWITCH,S-122,15-BJ-122,61,R4C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0386,Stokes,533,Guarding,"CLAMP, GAS CYLINDER BRACKET",S-054/1,01-MG-054,61,R5C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0387,Stokes,533,Guarding,HINGE - RIGHT HAND ASSEMBLY,S-060,10-AC-060,61,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0387.webp
+PGE-STK-0388,Stokes,533,Guarding,VERTICAL SUPPORT BLOCK,S-047,B-297-047-001,61,R5C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0389,Stokes,533,Pressure Rolls & Components,BUSHING FOR PRESSURE ROLL,N-328,N/A,62,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0389.webp
+PGE-STK-0390,Stokes,533,Pressure Rolls & Components,LOWER ROLL SHAFT,S-036,C-290-403-006,62,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0390.webp
+PGE-STK-0391,Stokes,533,Pressure Rolls & Components,LOWER ROLL SHAFT,S-039,D-290-403-009,62,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0391.webp
+PGE-STK-0392,Stokes,533,Pressure Rolls & Components,UPPER PRESSURE ROLL BEARING STYLE (LATE MODEL),S-044,C-232-513-044,62,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0392.webp
+PGE-STK-0393,Stokes,533,Pressure Rolls & Components,LOWER PRESSURE ROLL BEARING STYLE (LATE MODEL),S-045,C-232-523-045,62,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0393.webp
+PGE-STK-0394,Stokes,533,Pressure Rolls & Components,UPPER FRAME OIL SEAL - UPPER ROLL PIN,S-277,085-026-277,62,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0394.webp
+PGE-STK-0395,Stokes,533,Pressure Rolls & Components,LOADING BEAM PIN,S35-011/B,01-PAL-011-B,62,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0395.webp
+PGE-STK-0396,Stokes,533,Pressure Rolls & Components,CRANK PIN SCREW,S35-031,01-BHA-031-A,62,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0396.webp
+PGE-STK-0397,Stokes,533,Pressure Rolls & Components,O RING - LOWER ROLL SHAFT,S35-103,07-FC-013-P,62,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0397.webp
+PGE-STK-0398,Stokes,533,Pressure Rolls & Components,LOWER ROLL SHAFT-EARLY MODEL-LUBRICATED,S35-12,C-233-312-3,62,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0398.webp
+PGE-STK-0399,Stokes,533,Pressure Rolls & Components,UPPER OR LOWER PRESSURE ROLL,S35-13,B-232-513-5,62,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0399.webp
+PGE-STK-0400,Stokes,533,Pressure Rolls & Components,PRESSURE ROLL WITH BUSHING,S35-13/WB,B-232-513-5,62,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0400.webp
+PGE-STK-0401,Stokes,533,Pressure Rolls & Components,LOWER ROLL SHAFT BUSHING,S35-134,A-233-313-004,62,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0401.webp
+PGE-STK-0402,Stokes,533,Pressure Rolls & Components,UPPER ROLL SHAFT KEY,S35-181,A-233-181-002,62,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0402.webp
+PGE-STK-0403,Stokes,533,Pressure Rolls & Components,LOWER ROLL HANDWHEEL SHAFT MITER GEAR,S35-21,A-224-112-1,62,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0403.webp
+PGE-STK-0404,Stokes,533,Pressure Rolls & Components,WORM GEAR FOR LOWER ROLL SHAFT (OLD STYLE LG BORE),S35-248,B-233-248-2,63,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0404.webp
+PGE-STK-0405,Stokes,533,Pressure Rolls & Components,WORM GEAR FOR LOWER ROLL SHAFT (NEW STYLE SM BORE),S35-248/1,N/A,63,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0405.webp
+PGE-STK-0406,Stokes,533,Pressure Rolls & Components,CRANK PIN,S35-290,A-234-901-2,63,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0406.webp
+PGE-STK-0407,Stokes,533,Pressure Rolls & Components,WORM SHAFT MITER GEAR,S35-302,017-003-022,63,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0407.webp
+PGE-STK-0408,Stokes,533,Pressure Rolls & Components,OIL SLINGER - UPPER ROLL,S35-321,A-248-321-1,63,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0408.webp
+PGE-STK-0409,Stokes,533,Pressure Rolls & Components,LOADING COLUMN,S35-326,B-232-326-011,63,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0409.webp
+PGE-STK-0410,Stokes,533,Pressure Rolls & Components,CRANK PIN WASHER,S35-327,085-012-327,63,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0410.webp
+PGE-STK-0411,Stokes,533,Pressure Rolls & Components,UPPER ROLL SHAFT O RING,S35-34,022-002-234,63,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0411.webp
+PGE-STK-0412,Stokes,533,Pressure Rolls & Components,KEYED SLIDER PLATE,S35-400,C-290-400-002,63,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0412.webp
+PGE-STK-0413,Stokes,533,Pressure Rolls & Components,LOADING BEAM,S35-474,B-248-474-001,63,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0413.webp
+PGE-STK-0414,Stokes,533,Pressure Rolls & Components,LOADING BEAM INSERT,S35-492,A-232-492-001,63,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0414.webp
+PGE-STK-0415,Stokes,533,Pressure Rolls & Components,PRESSURE SPRING,S35-493,"B-232-493-1, B-232-493-001",63,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0415.webp
+PGE-STK-0416,Stokes,533,Pressure Rolls & Components,OIL SLINGER - LOWER ROLL,S35-510,A-232-510-2,63,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0416.webp
+PGE-STK-0417,Stokes,533,Pressure Rolls & Components,UPPER PUNCH ADJ. SCREW EARLY MODEL (SHORT),S35-55,A-234-555-4,63,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0417.webp
+PGE-STK-0418,Stokes,533,Pressure Rolls & Components,UPPER PUNCH ADJUSTMENT SCREW LATE MODEL,S35-55/1,N/A,63,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0418.webp
+PGE-STK-0419,Stokes,533,Pressure Rolls & Components,LOADING CRANK,S35-647,C-236-647-004,64,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0419.webp
+PGE-STK-0420,Stokes,533,Pressure Rolls & Components,UPPER ROLL BEARING PLATE,S35-74,A-291-374-001,64,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0420.webp
+PGE-STK-0421,Stokes,533,Pressure Rolls & Components,OIL RECEIVER COVER,S35-786,B-241-786-1,64,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0421.webp
+PGE-STK-0422,Stokes,533,Pressure Rolls & Components,UPPER ROLL SHAFT,S35-82,C-233-182-2,64,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0422.webp
+PGE-STK-0423,Stokes,533,Pressure Rolls & Components,CLAMPING HANDLE,S35-825,A-233-825-1,64,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0423.webp
+PGE-STK-0424,Stokes,533,Pressure Rolls & Components,CLAMPING SHAFT (LEFT SIDE),S35-826,"A-233-826-1, A-233-826-2",64,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0424.webp
+PGE-STK-0425,Stokes,533,Pressure Rolls & Components,LOWER ROLL HANDWHEEL SHAFT - RIGHT SIDE,S35-828,A-233-828-2,64,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0425.webp
+PGE-STK-0426,Stokes,533,Pressure Rolls & Components,PRESSURE COLUMN GUIDE,S35-847,C-236-847-001,64,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0426.webp
+PGE-STK-0427,Stokes,533,Pressure Rolls & Components,NARROW INNER BEARING FOR END CAP,S35-910,085-6-910,64,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0427.webp
+PGE-STK-0428,Stokes,533,Pressure Rolls & Components,WIDE OUTER BEARING FOR ENDCAP,S35-910/1,N/A,64,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0428.webp
+PGE-STK-0429,Stokes,533,Pressure Rolls & Components,CENTER AND OUTER BEAR- ING FOR UPPER ROLL PIN,S35-911,085-6-911,64,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0429.webp
+PGE-STK-0430,Stokes,533,Pressure Rolls & Components,"SPACER, UPPER PUNCH ADJUSTING SCREW",S-500,B-297-005-002,64,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0430.webp
+PGE-STK-0431,Stokes,533,Pressure Rolls & Components,UPPER PRESSURE ROLL BEARING STYLE (LATE MODEL) ASSEMBLY,S-044/A,N/A,64,R5C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0432,Stokes,533,Pressure Rolls & Components,LOWER PRESSURE ROLL BEARING STYLE (LATE MODEL) ASSEMBLY,S-045/A,N/A,64,R5C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0433,Stokes,533,Product Control,FEED SPOUT BRACKET,S35-428,C-297-428-002,64,R5C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0434,Stokes,533,Product Control,FEED FRAME STUD,S-185,A-276-185-003,65,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0434.webp
+PGE-STK-0435,Stokes,533,Product Control,TABLET GUIDE,S35-22,A-242-822-1,65,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0435.webp
+PGE-STK-0436,Stokes,533,Product Control,TAKE-OFF PLATE - LEFT,S35-23,A-242-823-4,65,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0436.webp
+PGE-STK-0437,Stokes,533,Product Control,TAKE-OFF PLATE - RIGHT,S35-24,A-242-823-1D,65,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0437.webp
+PGE-STK-0438,Stokes,533,Product Control,FEED FRAME SCRAPE-OFF,S35-35,A-242-825-4,65,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0438.webp
+PGE-STK-0439,Stokes,533,Product Control,FEED SPOUT - GRAVITY FEEDER,S35-427,D-297-427-005,65,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0439.webp
+PGE-STK-0440,Stokes,533,Product Control,OPEN FEED FRAME,S35-66,N/A,65,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0440.webp
+PGE-STK-0441,Stokes,533,Product Control,OPEN FEED FRAME - LEFT ASSEMBLY,S35-66/L/A,D-242-766-5,65,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0441.webp
+PGE-STK-0442,Stokes,533,Product Control,OPEN FEED FRAME - RIGHT ASSEMBLY,S35-66/R/A,D-242-766-6,65,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0442.webp
+PGE-STK-0443,Stokes,533,Product Control,FORCED FEEDER,S35-FC1,N/A,65,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0443.webp
+PGE-STK-0444,Stokes,533,Product Control,HOPPER ADJUSTING SCREW ASSEMBLY,S-36,D-290-403-010,65,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0444.webp
+PGE-STK-0445,Stokes,533,Product Control,HOPPER ADJUSTING NUT,S-36/1,N/A,65,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0445.webp
+PGE-STK-0446,Stokes,533,Product Control,HOPPER ADJUSTING SCREW,S-36/2,1-EC36,65,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0446.webp
+PGE-STK-0447,Stokes,533,Product Control,FEED FRAME LEVELING SCREW,S-479,"A-234-479-1, A-234-479-5",65,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0447.webp
+PGE-STK-0448,Stokes,533,Product Control,SCRAPER SPRING,SP-8,"37077, 35018, 36062",65,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0448.webp
+PGE-STK-0449,Stokes,533,Thickness/Hardness Components,WORM - THICKNESS CONTROL,S35-247,A-233-247-001,66,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0449.webp
+PGE-STK-0450,Stokes,533,Turret Hardware,DIE LOCK SCREW,DL-91,230-091-1,66,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0450.webp
+PGE-STK-0451,Stokes,533,Turret Hardware,RING GEAR,S35-858,D-236-858-1,66,R1C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0452,Stokes,533,Turret Hardware,ROLLER BEARING AND RACE,S35-646,085-6-646,66,R2C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0453,Stokes,533,Turret Hardware,SPINDLE - EARLY MODEL,S35-633,C-241-633-1,66,R2C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0454,Stokes,533,Turret Hardware,SPINDLE - LATE MODEL,S35-633/6,C-241-633-006,66,R2C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0455,Stokes,533,Turret Hardware,SPINDLE CAP GASKET,S35-012,07-FA-012-BQ,66,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0455.webp
+PGE-STK-0456,Stokes,533,Turret Hardware,SPINDLE AIR BLEED O-RING,S35-088,07-FD-088-P,66,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0456.webp
+PGE-STK-0457,Stokes,533,Turret Hardware,O'RING FOR SPINDLE O.D.,S35-28,022-002-228,66,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0457.webp
+PGE-STK-0458,Stokes,533,Turret Hardware,SPRING GUIDE,S35-512,A-232-512-001,66,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0458.webp
+PGE-STK-0459,Stokes,533,Turret Hardware,SPINDLE BEARING,S35-646-1,085-6-646/1,66,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0459.webp
+PGE-STK-0460,Stokes,533,Turret Hardware,RACE FOR SPINDLE BEARING,S35-646-2,085-6-646/2,66,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0460.webp
+PGE-STK-0461,Stokes,533,Turret Hardware,SPINDLE CAP - LATE MODEL,S35-835,B-241-835-009,66,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0461.webp
+PGE-STK-0462,Stokes,533,Turret Hardware,SPINDLE CLAMP RING,S35-837,B-241-837-001,66,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0462.webp
+PGE-STK-0463,Stokes,533,Turrets,STOCK PHOTO 45 STATION TURRET ASSEMBLY*,S35-45T/A,N/A,66,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0463.webp
+PGE-STK-0464,Stokes,533,Turrets,STOCK PHOTO 33 STATION TURRET ASSEMBLY*,S35-33T,D-232-253-55,67,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0464.webp
+PGE-STK-0465,Stokes,533,Turrets,STOCK PHOTO 45 STATION TURRET-AS- SEMBLY* - CORE ROD,S35-45T-CR,N/A,67,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0465.webp
+PGE-STK-0466,Stokes,533,Upper Cam Tracks,UPPER LOWERING CAM - 33 STATION (EARLY MODEL),S35-823/1,D-232-823-002,67,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0466.webp
+PGE-STK-0467,Stokes,533,Upper Cam Tracks,HOLD-DOWN CAM,S35-023,C-296-023-001,67,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0467.webp
+PGE-STK-0468,Stokes,533,Upper Cam Tracks,HOLD-DOWN BAR (SET OF 2),S35-024,B-296-024-005,67,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0468.webp
+PGE-STK-0469,Stokes,533,Upper Cam Tracks,HOLD-DOWN BAR (1 OF 2),S35-024/1,B-296-024-005,67,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0469.webp
+PGE-STK-0470,Stokes,533,Upper Cam Tracks,HOLD DOWN BAR (2 OF 2),S35-024/2,B-296-024-005,67,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0470.webp
+PGE-STK-0471,Stokes,533,Upper Cam Tracks,UPPER RAISING CAM - 45 STATION (EARLY MODEL),S35-822,D-232-822-001,67,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0471.webp
+PGE-STK-0472,Stokes,533,Upper Cam Tracks,UPPER RAISING CAM - 33 STATION (EARLY MODEL),S35-822/1,D-232-822-002,67,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0472.webp
+PGE-STK-0473,Stokes,533,Upper Cam Tracks,UPPER RAISING CAM - 33 STATION (LATE MODEL),S35-822/2,D-232-822-002,67,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0473.webp
+PGE-STK-0474,Stokes,533,Upper Cam Tracks,UPPER RAISING CAM - 45 STATION (LATE MODEL),S35-822/6,D-232-822-006,67,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0474.webp
+PGE-STK-0475,Stokes,533,Upper Cam Tracks,UPPER LOWERING CAM - 45 STATION (LATE MODEL),S35-823,D-232-823-007,67,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0475.webp
+PGE-STK-0476,Stokes,533,Upper Cam Tracks,UPPER LOWERING CAM - 33 STATION (LATE MODEL),S35-823/2,N/A,67,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0476.webp
+PGE-STK-0477,Stokes,533,Upper Cam Tracks,UPPER LOWERING CAM - 45 STATION EARLY MODEL- GRAVITY FEEDER ONLY,S35-823/3,N/A,67,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0477.webp
+PGE-STK-0478,Stokes,533,Upper Cam Tracks,UPPER DWELL CAM - 45 STATION,S35-890,B-236-890-002,67,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0478.webp
+PGE-STK-0479,Stokes,533,Upper Cam Tracks,UPPER DWELL CAM - 33 STATION,S35-890/1,B-236-890-001,68,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0479.webp
+PGE-STK-0480,Stokes,533,Weight Adjusting Components,WEIGHT/PRESSURE ADJ. WHEEL SPRING,S-204,A-200-204-1,68,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0480.webp
+PGE-STK-0481,Stokes,533,Weight Adjusting Components,ADJUSTING SCREW LOCK NUT,S35-011/A,01-FD-011-A,68,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0481.webp
+PGE-STK-0482,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER WHEEL,S35-035,A-220-035-7,68,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0482.webp
+PGE-STK-0483,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER BODY,S35-319,C-233-319-001,68,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0483.webp
+PGE-STK-0484,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER BOTTOM PLATE,S35-320,A-233-320-002,68,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0484.webp
+PGE-STK-0485,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER BEVEL PINION,S35-373,A-233-373-001,68,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0485.webp
+PGE-STK-0486,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER BEVEL GEAR,S35-374,A-233-374-002,68,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0486.webp
+PGE-STK-0487,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER SHAFT (RIGHT SIDE),S35-819,A-233-819-002,68,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0487.webp
+PGE-STK-0488,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER SHAFT (LEFT SIDE),S35-820,A-233-820-002,68,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0488.webp
+PGE-STK-0489,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER CAM ASSEMBLY,S35-916,"D-236-916-1, D-236-916-2",68,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0489.webp
+PGE-STK-0490,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER LEAD SCREW,S35-916A,D-236-916-1,68,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0490.webp
+PGE-STK-0491,Stokes,533,Weight Adjusting Components,WEIGHT ADJUSTER CAM HEAD,S35-916B,D-236-916-1,68,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0491.webp
+PGE-STK-0492,Stokes,540,Drive Components,ROTATING HANDWHEEL,S51-668,B-233-668-4,69,R1C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0493,Stokes,540,Drive Components,PILLOW BEARING - JACK SHAFT,S51-19,N/A,69,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0493.webp
+PGE-STK-0494,Stokes,540,Drive Components,PULLEY ON JACKSHAFT,S51-526,085-10-526,69,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0494.webp
+PGE-STK-0495,Stokes,540,Drive Components,V/S BELT FOR PULLEY,S51-563,085-13-563,69,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0495.webp
+PGE-STK-0496,Stokes,540,Drive Components,CLUTCH SHIFTER SHOE,S51-722,085-8-722,69,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0496.webp
+PGE-STK-0497,Stokes,540,Drive Components,PIN FOR SHOE,S51-723,085-8-723,69,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0497.webp
+PGE-STK-0498,Stokes,540,Drive Components,"TIMING BELT-30"" O.L.",S51-78,085-8-778,69,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0498.webp
+PGE-STK-0499,Stokes,540,Drive Components,BUSHING FOR SPRING ROD BRG.,S51-830,085-8-830,69,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0499.webp
+PGE-STK-0500,Stokes,540,Hydraulic & Lubrication Components,SPINDLE,S51-971,C-239-971-1,69,R3C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0501,Stokes,540,Hydraulic & Lubrication Components,OIL PRESSURE GAUGE - 15 P.S.I,S-162,085-10-162,69,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0501.webp
+PGE-STK-0502,Stokes,540,Hydraulic & Lubrication Components,OIL FILTER ELEMENT,S-30,N/A,69,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0502.webp
+PGE-STK-0503,Stokes,540,Hydraulic & Lubrication Components,OIL FILTER ASSEMBLY HEAD & ELEMENT,S-30H,N/A,69,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0503.webp
+PGE-STK-0504,Stokes,540,Hydraulic & Lubrication Components,TONNAGE GAUGE (0-4 TONS),S-43,085-10-435,69,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0504.webp
+PGE-STK-0505,Stokes,540,Hydraulic & Lubrication Components,O RING FOR SPINDLE PISTON,S51-125,022-2-125,69,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0505.webp
+PGE-STK-0506,Stokes,540,Hydraulic & Lubrication Components,RESERVOIR GASKET,S51-594,B-236-594-1,69,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0506.webp
+PGE-STK-0507,Stokes,540,Hydraulic & Lubrication Components,END PLATE GASKET,S51-672,A-278-672-2,70,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0507.webp
+PGE-STK-0508,Stokes,540,Hydraulic & Lubrication Components,CUP RING FOR SPINDLE PISTON,S51-788,A-241-778-001,70,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0508.webp
+PGE-STK-0509,Stokes,540,Hydraulic & Lubrication Components,PUMP MOUNTING BRACKET,SP-664,085-12-664,70,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0509.webp
+PGE-STK-0510,Stokes,540,Hydraulic & Lubrication Components,OIL PUMP SUPPORT,SP-778,A-241-778-001,70,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0510.webp
+PGE-STK-0511,Stokes,540,Hydraulic & Lubrication Components,OIL PUMP,SP-A2,085-10-525,70,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0511.webp
+PGE-STK-0512,Stokes,540,Hydraulic & Lubrication Components,STRAINER FOR OIL PUMP,SP-A3,N/A,70,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0512.webp
+PGE-STK-0513,Stokes,540,Hydraulic & Lubrication Components,OIL/HYDRAULIC VALVE ASSEMBLY,S-VA,N/A,70,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0513.webp
+PGE-STK-0514,Stokes,540,Lower Cam Tracks,LOWER PUNCH TAKE-OUT,S51-061,B-236-061-3,70,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0514.webp
+PGE-STK-0515,Stokes,540,Lower Cam Tracks,LOWER DWELL CAM,S51-210,C-236-210-5,70,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0515.webp
+PGE-STK-0516,Stokes,540,Lower Cam Tracks,EJECTION CAM,S51-211,C-236-211-2,70,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0516.webp
+PGE-STK-0517,Stokes,540,Lower Cam Tracks,PULL DOWN CAM - OLD STYLE,S51-212,D-236-212-3,70,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0517.webp
+PGE-STK-0518,Stokes,540,Lower Cam Tracks,LEVELING ECCENTRIC,S51-71,A-236-071-2,70,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0518.webp
+PGE-STK-0519,Stokes,540,Lower Cam Tracks,LOWER PUNCH TAKE-OUT STUD,S51-73,A-236-073-1,70,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0519.webp
+PGE-STK-0520,Stokes,540,Lower Cam Tracks,NEW STYLE EJECTION CAM,S51-754,A-236-754-1,70,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0520.webp
+PGE-STK-0521,Stokes,540,Pressure Rolls & Components,LOWER ROLL SHAFT,S51-3,C-263-003-2,70,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0521.webp
+PGE-STK-0522,Stokes,540,Pressure Rolls & Components,UPPER ROLL SHAFT,S51-45,C-236-145-1,71,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0522.webp
+PGE-STK-0523,Stokes,540,Pressure Rolls & Components,PRESSURE ROLL,S51-60,B-242-600-17,71,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0523.webp
+PGE-STK-0524,Stokes,540,Product Control,FEED FRAME - RIGHT- WITH NYLON INSERT ASSEMBLY,S51-50/R-1/A,N/A,71,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0524.webp
+PGE-STK-0525,Stokes,540,Product Control,HOPPER,S51-12,D-237-012-2,71,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0525.webp
+PGE-STK-0526,Stokes,540,Product Control,FEED FRAME LEVELING SCREW 3 POINT,S-10,A-237-010-1,71,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0526.webp
+PGE-STK-0527,Stokes,540,Product Control,NUT - FEED FRAME LEVELING SCREW,S-10/1,N/A,71,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0527.webp
+PGE-STK-0528,Stokes,540,Product Control,HOPPER ADJUSTING NUT,S51-456,085-5-456,71,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0528.webp
+PGE-STK-0529,Stokes,540,Product Control,TABLET TAKE-OFF - LEFT,S51-47,A-236-947-1,71,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0529.webp
+PGE-STK-0530,Stokes,540,Product Control,SCRAPER BLADE-BRASS,S51-48,A-236-948-1,71,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0530.webp
+PGE-STK-0531,Stokes,540,Product Control,TABLET TAKE-OFF - RIGHT,S51-49,A-236-949-1,71,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0531.webp
+PGE-STK-0532,Stokes,540,Product Control,FEED FRAME - LEFT- WITH NY- LON INSERT ASSEMBLY,S51-50/L-1/A,D-236-950-23,71,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0532.webp
+PGE-STK-0533,Stokes,540,Product Control,FEED FRAME-RIGHT ASSEMBLY,S51-50/R/A,D-236-950-23,71,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0533.webp
+PGE-STK-0534,Stokes,540,Product Control,FEED FRAME - LEFT ASSEMBLY,S51-50/L/A,D-236-950-22,71,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0534.webp
+PGE-STK-0535,Stokes,540,Product Control,HOPPER MOUNTING STUD,S51-751,085-12-75,71,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0535.webp
+PGE-STK-0536,Stokes,540,Product Control,SCRAPER SPRING,SP-8,"37077, 35018, 36062",71,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0536.webp
+PGE-STK-0537,Stokes,540,Product Control,FEED FRAME LEFT - NICKLE PLATE,S51-50/L/N,N/A,72,R1C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0538,Stokes,540,Turret Hardware,DIE LOCK SCREW - 45 STATION,DL-18,PD-13,72,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0538.webp
+PGE-STK-0539,Stokes,540,Turret Hardware,"SPRING, LOWER PUNCH SUPPORT",S-115,12AA115,72,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0539.webp
+PGE-STK-0540,Stokes,540,Turret Hardware,"SET SCREW, LOWER PUNCH SUPPORT",S-4,01BD002A,72,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0540.webp
+PGE-STK-0541,Stokes,540,Turret Hardware,"PLUNGER, LOWER PUNCH SUPPORT",S-54,N/A,72,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0541.webp
+PGE-STK-0542,Stokes,540,Turrets,STOCK PHOTO 41 STATION TURRET ASSEMBLY*,S51-41T,D-267-503-28,72,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0542.webp
+PGE-STK-0543,Stokes,540,Turrets,STOCK PHOTO 51 STATION TURRET ASSEMBLY*,S51-51T,D-267-503-29,72,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0543.webp
+PGE-STK-0544,Stokes,540,Upper Cam Tracks,UPPER LOWERING CAM,S51-118,D-236-118-1,72,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0544.webp
+PGE-STK-0545,Stokes,540,Upper Cam Tracks,UPPER LOWERING CAM - BRONZE,S51-118/B,D-236-118-1B,72,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0545.webp
+PGE-STK-0546,Stokes,540,Upper Cam Tracks,UPPER RAISING CAM,S51-119,D-236-119-1,72,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0546.webp
+PGE-STK-0547,Stokes,540,Upper Cam Tracks,UPPER RAISING CAM - BRONZE,S51-119/B,N/A,72,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0547.webp
+PGE-STK-0548,Stokes,540,Upper Cam Tracks,UPPER DWELL CAM,S51-130,C-236-130-1,72,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0548.webp
+PGE-STK-0549,Stokes,540,Upper Cam Tracks,UPPER DWELL CAM - BRONZE,S51-130/B,C-236-130-1,72,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0549.webp
+PGE-STK-0550,Stokes,541,Drive Components,ROTATING HANDWHEEL,S51-668,B-233-668-4,73,R1C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0551,Stokes,541,Drive Components,CLUTCH LEVERS,S51-110,110,73,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0551.webp
+PGE-STK-0552,Stokes,541,Drive Components,OUTER DISC (CLUTCH),S51-112,112,73,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0552.webp
+PGE-STK-0553,Stokes,541,Drive Components,INNER DISC (CLUTCH),S51-113,113,73,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0553.webp
+PGE-STK-0554,Stokes,541,Drive Components,CLUTCH SPRING (SEPARATOR),S51-114,N/A,73,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0554.webp
+PGE-STK-0555,Stokes,541,Drive Components,PILLOW BEARING - JACK SHAFT,S51-19,N/A,73,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0555.webp
+PGE-STK-0556,Stokes,541,Drive Components,JACKSHAFT,S51-19/1,N/A,73,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0556.webp
+PGE-STK-0557,Stokes,541,Drive Components,WORMSHAFT BEARING - TACH SIDE,S51-407,085-10-407,73,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0557.webp
+PGE-STK-0558,Stokes,541,Drive Components,BALL BEARING FOR CLUTCH,S51-485,085-8-485,73,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0558.webp
+PGE-STK-0559,Stokes,541,Drive Components,PULLEY ON JACKSHAFT,S51-526,085-10-526,73,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0559.webp
+PGE-STK-0560,Stokes,541,Drive Components,V/S BELT FOR PULLEY,S51-563,085-13-563,73,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0560.webp
+PGE-STK-0561,Stokes,541,Drive Components,CLUTCH SHIFTER SHOE,S51-722,085-8-722,73,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0561.webp
+PGE-STK-0562,Stokes,541,Drive Components,PIN FOR SHOE,S51-723,085-8-723,73,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0562.webp
+PGE-STK-0563,Stokes,541,Drive Components,OIL SEAL FOR WORMSHAFT CAP,S51-742,085-8-742,73,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0563.webp
+PGE-STK-0564,Stokes,541,Drive Components,WORMSHAFT BEARING - CLUTCH SIDE,S51-744,085-8-744,73,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0564.webp
+PGE-STK-0565,Stokes,541,Drive Components,BEARING FOR WORMSHAFT BRACKET,S51-745,085-8-745,74,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0565.webp
+PGE-STK-0566,Stokes,541,Drive Components,"TIMING BELT-30"" O.L.",S51-78,085-8-778,74,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0566.webp
+PGE-STK-0567,Stokes,541,Drive Components,BUSHING FOR SPRING ROD BRG.,S51-830,085-8-830,74,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0567.webp
+PGE-STK-0568,Stokes,541,Drive Components,CLUTCH ASSEMBLY,S51-945,N/A,74,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0568.webp
+PGE-STK-0569,Stokes,541,Hydraulic & Lubrication Components,SPINDLE PISTON,S51-972,B-239-972-4,74,R2C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0570,Stokes,541,Hydraulic & Lubrication Components,OIL PRESSURE GAUGE - 15 P.S.I,S-162,085-10-162,74,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0570.webp
+PGE-STK-0571,Stokes,541,Hydraulic & Lubrication Components,OIL LEVEL WINDOW,S-165,085-7-165,74,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0571.webp
+PGE-STK-0572,Stokes,541,Hydraulic & Lubrication Components,OIL FILTER ELEMENT,S-30,N/A,74,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0572.webp
+PGE-STK-0573,Stokes,541,Hydraulic & Lubrication Components,OIL FILTER ASSEMBLY HEAD & ELEMENT,S-30H,N/A,74,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0573.webp
+PGE-STK-0574,Stokes,541,Hydraulic & Lubrication Components,TONNAGE GAUGE (0-4 TONS),S-43,085-10-435,74,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0574.webp
+PGE-STK-0575,Stokes,541,Hydraulic & Lubrication Components,O RING FOR SPINDLE PISTON,S51-125,022-2-125,74,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0575.webp
+PGE-STK-0576,Stokes,541,Hydraulic & Lubrication Components,"V-BELT FOR PUMP - 24"" LONG",S51-329,085-11-329,74,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0576.webp
+PGE-STK-0577,Stokes,541,Hydraulic & Lubrication Components,RESERVOIR GASKET,S51-594,B-236-594-1,74,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0577.webp
+PGE-STK-0578,Stokes,541,Hydraulic & Lubrication Components,END PLATE GASKET,S51-672,A-278-672-2,74,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0578.webp
+PGE-STK-0579,Stokes,541,Hydraulic & Lubrication Components,CUP RING FOR SPINDLE PISTON,S51-788,085-11-788,74,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0579.webp
+PGE-STK-0580,Stokes,541,Hydraulic & Lubrication Components,PUMP MOUNTING BRACKET,SP-664,085-12-664,75,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0580.webp
+PGE-STK-0581,Stokes,541,Hydraulic & Lubrication Components,OIL PUMP SUPPORT,SP-778,A-241-778-001,75,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0581.webp
+PGE-STK-0582,Stokes,541,Hydraulic & Lubrication Components,OIL PUMP,SP-A2,085-10-525,75,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0582.webp
+PGE-STK-0583,Stokes,541,Hydraulic & Lubrication Components,STRAINER FOR OIL PUMP,SP-A3,N/A,75,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0583.webp
+PGE-STK-0584,Stokes,541,Hydraulic & Lubrication Components,OIL/HYDRAULIC VALVE ASSEMBLY,S-VA,N/A,75,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0584.webp
+PGE-STK-0585,Stokes,541,Lower Cam Tracks,ADJUSTABLE TAKE OUT CAM,S51-001,N/A,75,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0585.webp
+PGE-STK-0586,Stokes,541,Lower Cam Tracks,ADJUSTABLE TAKE OUT CAM HOUSING,S51-002,N/A,75,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0586.webp
+PGE-STK-0587,Stokes,541,Lower Cam Tracks,RETAINING CLIP - ADJUSTABLE TAKE OUT,S51-003,N/A,75,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0587.webp
+PGE-STK-0588,Stokes,541,Lower Cam Tracks,ADJUSTABLE TAKE OUT PIN,S51-004,N/A,75,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0588.webp
+PGE-STK-0589,Stokes,541,Lower Cam Tracks,THREADED STUD,S51-005,N/A,75,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0589.webp
+PGE-STK-0590,Stokes,541,Lower Cam Tracks,KNURLED KNOB,S51-006,N/A,75,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0590.webp
+PGE-STK-0591,Stokes,541,Lower Cam Tracks,LOWER PUNCH TAKE-OUT,S51-061,B-236-061-3,75,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0591.webp
+PGE-STK-0592,Stokes,541,Lower Cam Tracks,LOWER DWELL CAM,S51-210,C-236-210-5,75,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0592.webp
+PGE-STK-0593,Stokes,541,Lower Cam Tracks,EJECTION CAM,S51-211,C-236-211-2,75,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0593.webp
+PGE-STK-0594,Stokes,541,Lower Cam Tracks,PULL DOWN CAM,S51-212,D-236-212-3,75,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0594.webp
+PGE-STK-0595,Stokes,541,Lower Cam Tracks,LEVELING ECCENTRIC,S51-71,A-236-071-2,76,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0595.webp
+PGE-STK-0596,Stokes,541,Lower Cam Tracks,LOWER PUNCH TAKE-OUT STUD,S51-73,A-236-073-1,76,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0596.webp
+PGE-STK-0597,Stokes,541,Lower Cam Tracks,NEW STYLE EJECTION CAM,S51-754,A-236-754-1,76,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0597.webp
+PGE-STK-0598,Stokes,541,Pressure Rolls & Components,LOWER ROLL SHAFT,S51-3,C-263-003-2,76,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0598.webp
+PGE-STK-0599,Stokes,541,Pressure Rolls & Components,END CAP NEEDLE BEARING - UPPER ROLL PIN,S51-410,085-8-410,76,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0599.webp
+PGE-STK-0600,Stokes,541,Pressure Rolls & Components,INNER NEEDLE BEARING - UPPER ROLL PIN,S51-429,085-8-429,76,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0600.webp
+PGE-STK-0601,Stokes,541,Pressure Rolls & Components,"BEARING - UPPER ROLL PIN - 1 1/4""W",S51-430,085-8-430,76,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0601.webp
+PGE-STK-0602,Stokes,541,Pressure Rolls & Components,UPPER ROLL SHAFT,S51-45,C-236-145-1,76,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0602.webp
+PGE-STK-0603,Stokes,541,Pressure Rolls & Components,PRESSURE ROLL,S51-60,B-242-600-17,76,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0603.webp
+PGE-STK-0604,Stokes,541,Product Control,HOPPER,S51-12,D-237-012-2,76,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0604.webp
+PGE-STK-0605,Stokes,541,Product Control,FEED FRAME LEVELING SCREW 3 POINT,S-10,A-237-010-1,76,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0605.webp
+PGE-STK-0606,Stokes,541,Product Control,NUT - FEED FRAME LEVELING SCREW,S-10/1,N/A,76,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0606.webp
+PGE-STK-0607,Stokes,541,Product Control,HOPPER ADJUSTING NUT,S51-456,085-5-456,76,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0607.webp
+PGE-STK-0608,Stokes,541,Product Control,HOPPER MOUNTING STUD,S51-751,085-12-75,76,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0608.webp
+PGE-STK-0609,Stokes,541,Product Control,SCRAPER SPRING,SP-8,"37077, 35018, 36062",76,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0609.webp
+PGE-STK-0610,Stokes,541,Product Control,TABLET TAKE-OFF - LEFT,S51-47,A-236-947-1,77,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0610.webp
+PGE-STK-0611,Stokes,541,Product Control,SCRAPER BLADE-BRASS,S51-48,A-236-948-1,77,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0611.webp
+PGE-STK-0612,Stokes,541,Product Control,TABLET TAKE-OFF - RIGHT,S51-49,A-236-949-1,77,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0612.webp
+PGE-STK-0613,Stokes,541,Product Control,FEED FRAME - RIGHT- WITH NYLON INSERT ASSEMBLY,S51-50/R-1/A,N/A,77,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0613.webp
+PGE-STK-0614,Stokes,541,Product Control,FEED FRAME - LEFT- WITH NY- LON INSERT ASSEMBLY,S51-50/L-1/A,D-236-950-23,77,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0614.webp
+PGE-STK-0615,Stokes,541,Product Control,FEED FRAME-RIGHT ASSEMBLY,S51-50/R/A,D-236-950-23,77,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0615.webp
+PGE-STK-0616,Stokes,541,Product Control,FEED FRAME - LEFT ASSEMBLY,S51-50/L/A,D-236-950-22,77,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0616.webp
+PGE-STK-0617,Stokes,541,Product Control,FEED FRAME - LEFT - NICKLE,S51-50/L/N,N/A,77,R3C2,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0618,Stokes,541,Product Control,FEED FRAME - RIGHT - NICKLE,S51-50/R/N,N/A,77,R3C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0619,Stokes,541,Turret Hardware,SPINDLE,S51-971,C-239-971-1,77,R4C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0620,Stokes,541,Turret Hardware,"SPRING, LOWER PUNCH SUPPORT",S-115,12AA115,77,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0620.webp
+PGE-STK-0621,Stokes,541,Turret Hardware,DIE LOCK SCREW - 45 STATION,DL-18,PD-13,77,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0621.webp
+PGE-STK-0622,Stokes,541,Turret Hardware,"ROLLER BEARING 5"" I.D/SPINDLE",S51-377,085-8-377,77,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0622.webp
+PGE-STK-0623,Stokes,541,Turret Hardware,RACE FOR SPINDLE BEARING,S51-377/1,085-8-377-1,77,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0623.webp
+PGE-STK-0624,Stokes,541,Turret Hardware,"SET SCREW, LOWER PUNCH SUPPORT",S-4,01BD002A,77,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0624.webp
+PGE-STK-0625,Stokes,541,Turret Hardware,"PLUNGER, LOWER PUNCH SUPPORT",S-54,N/A,78,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0625.webp
+PGE-STK-0626,Stokes,541,Turrets,STOCK PHOTO 41 STATION TURRET ASSEMBLY*,S51-41T,D-267-503-28,78,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0626.webp
+PGE-STK-0627,Stokes,541,Turrets,STOCK PHOTO 51 STATION TURRET ASSEMBLY*,S51-51T,D-267-503-29,78,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0627.webp
+PGE-STK-0628,Stokes,541,Upper Cam Tracks,UPPER LOWERING CAM,S51-118,D-236-118-1,78,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0628.webp
+PGE-STK-0629,Stokes,541,Upper Cam Tracks,UPPER LOWERING CAM -BRONZE,S51-118/B,D-236-118-1B,78,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0629.webp
+PGE-STK-0630,Stokes,541,Upper Cam Tracks,UPPER RAISING CAM - BRONZE,S51-119/B,N/A,78,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0630.webp
+PGE-STK-0631,Stokes,541,Upper Cam Tracks,UPPER DWELL CAM,S51-130,C-236-130-1,78,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0631.webp
+PGE-STK-0632,Stokes,541,Upper Cam Tracks,UPPER DWELL CAM - BRONZE,S51-130/B,C-236-130-1,78,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0632.webp
+PGE-STK-0633,Stokes,551,Drive Components,ROTATING HANDWHEEL,S51-668,B-233-668-4,79,R1C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0634,Stokes,551,Drive Components,CLUTCH LEVERS,S51-110,110,79,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0634.webp
+PGE-STK-0635,Stokes,551,Drive Components,OUTER DISC (CLUTCH),S51-112,112,79,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0635.webp
+PGE-STK-0636,Stokes,551,Drive Components,INNER DISC (CLUTCH),S51-113,113,79,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0636.webp
+PGE-STK-0637,Stokes,551,Drive Components,CLUTCH SPRING (SEPARATOR),S51-114,N/A,79,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0637.webp
+PGE-STK-0638,Stokes,551,Drive Components,PILLOW BEARING - JACK SHAFT,S51-19,N/A,79,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0638.webp
+PGE-STK-0639,Stokes,551,Drive Components,JACKSHAFT,S51-19/1,N/A,79,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0639.webp
+PGE-STK-0640,Stokes,551,Drive Components,WORMSHAFT BEARING - TACH SIDE,S51-407,085-10-407,79,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0640.webp
+PGE-STK-0641,Stokes,551,Drive Components,BALL BEARING FOR CLUTCH,S51-485,085-8-485,79,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0641.webp
+PGE-STK-0642,Stokes,551,Drive Components,PULLEY ON JACKSHAFT,S51-526,085-10-526,79,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0642.webp
+PGE-STK-0643,Stokes,551,Drive Components,V/S BELT FOR PULLEY,S51-563,085-13-563,79,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0643.webp
+PGE-STK-0644,Stokes,551,Drive Components,CLUTCH SHIFTER SHOE,S51-722,085-8-722,79,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0644.webp
+PGE-STK-0645,Stokes,551,Drive Components,PIN FOR SHOE,S51-723,085-8-723,79,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0645.webp
+PGE-STK-0646,Stokes,551,Drive Components,OIL SEAL FOR WORMSHAFT CAP,S51-742,085-8-742,79,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0646.webp
+PGE-STK-0647,Stokes,551,Drive Components,WORMSHAFT BEARING - CLUTCH SIDE,S51-744,085-8-744,79,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0647.webp
+PGE-STK-0648,Stokes,551,Drive Components,BEARING FOR WORMSHAFT BRACKET,S51-745,085-8-745,80,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0648.webp
+PGE-STK-0649,Stokes,551,Drive Components,"TIMING BELT-30"" O.L.",S51-78,085-8-778,80,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0649.webp
+PGE-STK-0650,Stokes,551,Drive Components,BUSHING FOR SPRING ROD BRG.,S51-830,085-8-830,80,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0650.webp
+PGE-STK-0651,Stokes,551,Drive Components,CLUTCH ASSEMBLY,S51-945,N/A,80,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0651.webp
+PGE-STK-0652,Stokes,551,Drive Components,WORM SHAFT,S51-034,C-236-034-4,80,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0652.webp
+PGE-STK-0653,Stokes,551,Hydraulic & Lubrication Components,O-RING - SPINDLE IN SUMP,S51-103,085-10-103,80,R2C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0654,Stokes,551,Hydraulic & Lubrication Components,SPINDLE PISTON,S51-972,B-239-972-4,80,R3C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0655,Stokes,551,Hydraulic & Lubrication Components,OIL PRESSURE GAUGE - 15 P.S.I,S-162,085-10-162,80,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0655.webp
+PGE-STK-0656,Stokes,551,Hydraulic & Lubrication Components,OIL LEVEL WINDOW,S-165,085-7-165,80,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0656.webp
+PGE-STK-0657,Stokes,551,Hydraulic & Lubrication Components,OIL FILTER ELEMENT,S-30,N/A,80,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0657.webp
+PGE-STK-0658,Stokes,551,Hydraulic & Lubrication Components,OIL FILTER ASSEMBLY HEAD & ELEMENT,S-30H,N/A,80,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0658.webp
+PGE-STK-0659,Stokes,551,Hydraulic & Lubrication Components,TONNAGE GAUGE (0-4 TONS),S-43,085-10-435,80,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0659.webp
+PGE-STK-0660,Stokes,551,Hydraulic & Lubrication Components,O RING FOR SPINDLE PISTON,S51-125,022-2-125,80,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0660.webp
+PGE-STK-0661,Stokes,551,Hydraulic & Lubrication Components,O RING 232 BUNA - SEAL CARRIER,S51-163,N/A,80,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0661.webp
+PGE-STK-0662,Stokes,551,Hydraulic & Lubrication Components,"V-BELT FOR PUMP - 24"" LONG",S51-329,085-11-329,80,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0662.webp
+PGE-STK-0663,Stokes,551,Hydraulic & Lubrication Components,RESERVOIR GASKET,S51-594,B-236-594-1,81,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0663.webp
+PGE-STK-0664,Stokes,551,Hydraulic & Lubrication Components,END PLATE GASKET,S51-672,A-278-672-2,81,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0664.webp
+PGE-STK-0665,Stokes,551,Hydraulic & Lubrication Components,CUP RING FOR SPINDLE PISTON,S51-788,085-11-788,81,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0665.webp
+PGE-STK-0666,Stokes,551,Hydraulic & Lubrication Components,PUMP MOUNTING BRACKET,SP-664,085-12-664,81,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0666.webp
+PGE-STK-0667,Stokes,551,Hydraulic & Lubrication Components,OIL PUMP SUPPORT,SP-778,085-11-788,81,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0667.webp
+PGE-STK-0668,Stokes,551,Hydraulic & Lubrication Components,OIL PUMP,SP-A2,085-10-525,81,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0668.webp
+PGE-STK-0669,Stokes,551,Hydraulic & Lubrication Components,STRAINER FOR OIL PUMP,SP-A3,N/A,81,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0669.webp
+PGE-STK-0670,Stokes,551,Hydraulic & Lubrication Components,OIL/HYDRAULIC VALVE ASSEMBLY,S-VA,N/A,81,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0670.webp
+PGE-STK-0671,Stokes,551,Lower Cam Tracks,ADJUSTABLE TAKE OUT CAM,S51-001,N/A,81,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0671.webp
+PGE-STK-0672,Stokes,551,Lower Cam Tracks,ADJUSTABLE TAKE OUT CAM HOUSING,S51-002,N/A,81,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0672.webp
+PGE-STK-0673,Stokes,551,Lower Cam Tracks,RETAINING CLIP - ADJUSTABLE TAKE OUT,S51-003,N/A,81,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0673.webp
+PGE-STK-0674,Stokes,551,Lower Cam Tracks,ADJUSTABLE TAKE OUT PIN,S51-004,N/A,81,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0674.webp
+PGE-STK-0675,Stokes,551,Lower Cam Tracks,THREADED STUD,S51-005,N/A,81,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0675.webp
+PGE-STK-0676,Stokes,551,Lower Cam Tracks,KNURLED KNOB,S51-006,N/A,81,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0676.webp
+PGE-STK-0677,Stokes,551,Lower Cam Tracks,LOWER PUNCH TAKE-OUT,S51-061,B-236-061-3,81,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0677.webp
+PGE-STK-0678,Stokes,551,Lower Cam Tracks,LOWER DWELL CAM,S51-210,C-236-210-5,82,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0678.webp
+PGE-STK-0679,Stokes,551,Lower Cam Tracks,EJECTION CAM,S51-211,C-236-211-2,82,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0679.webp
+PGE-STK-0680,Stokes,551,Lower Cam Tracks,PULL DOWN CAM - OLD STYLE,S51-212,D-236-212-3,82,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0680.webp
+PGE-STK-0681,Stokes,551,Lower Cam Tracks,PULL DOWN CAM - NEW STYLE,S51-212/1,N/A,82,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0681.webp
+PGE-STK-0682,Stokes,551,Lower Cam Tracks,LEVELING ECCENTRIC,S51-71,A-236-071-2,82,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0682.webp
+PGE-STK-0683,Stokes,551,Lower Cam Tracks,LOWER PUNCH TAKE-OUT STUD,S51-73,A-236-073-1,82,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0683.webp
+PGE-STK-0684,Stokes,551,Lower Cam Tracks,NEW STYLE EJECTION CAM,S51-754,A-236-754-1,82,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0684.webp
+PGE-STK-0685,Stokes,551,Pressure Rolls & Components,LOWER ROLL SHAFT,S51-3,C-263-003-2,82,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0685.webp
+PGE-STK-0686,Stokes,551,Pressure Rolls & Components,END CAP NEEDLE BEARING - UPPER ROLL PIN,S51-410,085-8-410,82,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0686.webp
+PGE-STK-0687,Stokes,551,Pressure Rolls & Components,INNER NEEDLE BEARING - UPPER ROLL PIN,S51-429,085-8-429,82,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0687.webp
+PGE-STK-0688,Stokes,551,Pressure Rolls & Components,"BEARING - UPPER ROLL PIN - 1 1/4""W",S51-430,085-8-430,82,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0688.webp
+PGE-STK-0689,Stokes,551,Pressure Rolls & Components,UPPER ROLL SHAFT,S51-45,C-236-145-1,82,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0689.webp
+PGE-STK-0690,Stokes,551,Pressure Rolls & Components,PRESSURE ROLL,S51-60,B-242-600-17,82,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0690.webp
+PGE-STK-0691,Stokes,551,Product Control,HOPPER,S51-12,D-237-012-2,82,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0691.webp
+PGE-STK-0692,Stokes,551,Product Control,HOPPER MOUNTING STUD,S51-751,085-12-75,82,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0692.webp
+PGE-STK-0693,Stokes,551,Product Control,FEED FRAME LEVELING SCREW 3 POINT,S-10,A-237-010-1,83,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0693.webp
+PGE-STK-0694,Stokes,551,Product Control,NUT - FEED FRAME LEVELING SCREW,S-10/1,N/A,83,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0694.webp
+PGE-STK-0695,Stokes,551,Product Control,HOPPER ADJUSTING NUT,S51-456,085-5-456,83,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0695.webp
+PGE-STK-0696,Stokes,551,Product Control,TABLET TAKE-OFF - LEFT,S51-47,A-236-947-1,83,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0696.webp
+PGE-STK-0697,Stokes,551,Product Control,SCRAPER BLADE-BRASS,S51-48,A-236-948-1,83,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0697.webp
+PGE-STK-0698,Stokes,551,Product Control,FEED FRAME ANGLE PIECE,S51-48/1,N/A,83,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0698.webp
+PGE-STK-0699,Stokes,551,Product Control,TABLET TAKE-OFF - RIGHT,S51-49,A-236-949-1,83,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0699.webp
+PGE-STK-0700,Stokes,551,Product Control,FEED FRAME - RIGHT- WITH NYLON INSERT ASSEMBLY,S51-50/R-1/A,N/A,83,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0700.webp
+PGE-STK-0701,Stokes,551,Product Control,FEED FRAME - LEFT- WITH NYLON INSERT ASSEMBLY,S51-50/L-1/A,D-236-950-23,83,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0701.webp
+PGE-STK-0702,Stokes,551,Product Control,FEED FRAME-RIGHT ASSEMBLY,S51-50/R/A,D-236-950-23,83,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0702.webp
+PGE-STK-0703,Stokes,551,Product Control,FEED FRAME - LEFT ASSEMBLY,S51-50/L/A,D-236-950-22,83,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0703.webp
+PGE-STK-0704,Stokes,551,Product Control,FEED FRAME - LEFT - NICKLE,S51-50/L/N,N/A,83,R4C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0705,Stokes,551,Product Control,FEED FRAME - RIGHT - NICKLE,S51-50/R/N,N/A,83,R5C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0706,Stokes,551,Product Control,SCRAPER SPRING,SP-8,"37077, 35018, 36062",83,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0706.webp
+PGE-STK-0707,Stokes,551,Turret Hardware,SPINDLE,S51-971,C-239-971-1,83,R5C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0708,Stokes,551,Turret Hardware,DIE LOCK SCREW - 45 STATION,DL-18,PD-13,84,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0708.webp
+PGE-STK-0709,Stokes,551,Turret Hardware,"SPRING, LOWER PUNCH SUPPORT",S-115,12AA115,84,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0709.webp
+PGE-STK-0710,Stokes,551,Turret Hardware,"SET SCREW, LOWER PUNCH SUPPORT",S-4,01BD002A,84,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0710.webp
+PGE-STK-0711,Stokes,551,Turret Hardware,"ROLLER BEARING 5"" I.D/SPINDLE",S51-377,085-8-377,84,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0711.webp
+PGE-STK-0712,Stokes,551,Turret Hardware,RACE FOR SPINDLE BEARING,S51-377/1,N/A,84,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0712.webp
+PGE-STK-0713,Stokes,551,Turret Hardware,"PLUNGER, LOWER PUNCH SUPPORT",S-54,N/A,84,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0713.webp
+PGE-STK-0714,Stokes,551,Turrets,STOCK PHOTO 41 STATION TURRET ASSEMBLY*,S51-41T,D-267-503-28,84,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0714.webp
+PGE-STK-0715,Stokes,551,Turrets,STOCK PHOTO 51 STATION TURRET ASSEMBLY*,S51-51T,D-267-503-29,84,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0715.webp
+PGE-STK-0716,Stokes,551,Upper Cam Tracks,UPPER LOWERING CAM,S51-118,D-236-118-1,84,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0716.webp
+PGE-STK-0717,Stokes,551,Upper Cam Tracks,UPPER LOWERING CAM - BRONZE,S51-118/B,D-236-118-1B,84,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0717.webp
+PGE-STK-0718,Stokes,551,Upper Cam Tracks,UPPER RAISING CAM,S51-119,D-236-119-1,84,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0718.webp
+PGE-STK-0719,Stokes,551,Upper Cam Tracks,UPPER RAISING CAM - BRONZE,S51-119/B,N/A,84,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0719.webp
+PGE-STK-0720,Stokes,551,Upper Cam Tracks,UPPER DWELL CAM,S51-130,C-236-130-1,84,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0720.webp
+PGE-STK-0721,Stokes,551,Upper Cam Tracks,UPPER DWELL CAM - BRONZE,S51-130/B,C-236-130-1,84,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0721.webp
+PGE-STK-0722,Stokes,552,Drive Components,WORM SHAFT,S51-034,C-236-034-4,85,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0722.webp
+PGE-STK-0723,Stokes,552,Drive Components,CLUTCH LEVERS,S51-110,110,85,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0723.webp
+PGE-STK-0724,Stokes,552,Drive Components,OUTER DISC (CLUTCH),S51-112,112,85,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0724.webp
+PGE-STK-0725,Stokes,552,Drive Components,INNER DISC (CLUTCH),S51-113,113,85,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0725.webp
+PGE-STK-0726,Stokes,552,Drive Components,CLUTCH SPRING (SEPARATOR),S51-114,N/A,85,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0726.webp
+PGE-STK-0727,Stokes,552,Drive Components,PILLOW BEARING - JACK SHAFT,S51-19,N/A,85,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0727.webp
+PGE-STK-0728,Stokes,552,Drive Components,JACKSHAFT,S51-19/1,N/A,85,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0728.webp
+PGE-STK-0729,Stokes,552,Drive Components,WORMSHAFT BEARING - TACH SIDE,S51-407,085-10-407,85,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0729.webp
+PGE-STK-0730,Stokes,552,Drive Components,BALL BEARING FOR CLUTCH,S51-485,085-8-485,85,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0730.webp
+PGE-STK-0731,Stokes,552,Drive Components,PULLEY ON JACKSHAFT,S51-526,085-10-526,85,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0731.webp
+PGE-STK-0732,Stokes,552,Drive Components,CLUTCH SHIFTER SHOE,S51-722,085-8-722,85,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0732.webp
+PGE-STK-0733,Stokes,552,Drive Components,PIN FOR SHOE,S51-723,085-8-723,85,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0733.webp
+PGE-STK-0734,Stokes,552,Drive Components,OIL SEAL FOR WORMSHAFT CAP,S51-742,085-8-742,85,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0734.webp
+PGE-STK-0735,Stokes,552,Drive Components,WORMSHAFT BEARING - CLUTCH SIDE,S51-744,085-8-744,85,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0735.webp
+PGE-STK-0736,Stokes,552,Drive Components,BEARING FOR WORMSHAFT BRACKET,S51-745,085-8-745,85,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0736.webp
+PGE-STK-0737,Stokes,552,Drive Components,"TIMING BELT-30"" O.L.",S51-78,085-8-778,86,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0737.webp
+PGE-STK-0738,Stokes,552,Drive Components,BUSHING FOR SPRING ROD BRG.,S51-830,085-8-830,86,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0738.webp
+PGE-STK-0739,Stokes,552,Drive Components,CLUTCH ASSEMBLY,S51-945,N/A,86,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0739.webp
+PGE-STK-0740,Stokes,552,Hydraulic & Lubrication Components,OIL PRESSURE GAUGE - 15 P.S.I,S-162,085-10-162,86,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0740.webp
+PGE-STK-0741,Stokes,552,Hydraulic & Lubrication Components,OIL FILTER ELEMENT,S-30,085-10-162,86,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0741.webp
+PGE-STK-0742,Stokes,552,Hydraulic & Lubrication Components,OIL FILTER ASSEMBLY HEAD & ELEMENT,S-30H,085-10-162,86,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0742.webp
+PGE-STK-0743,Stokes,552,Hydraulic & Lubrication Components,TONNAGE GAUGE (0-4 TONS),S-43,085-10-435,86,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0743.webp
+PGE-STK-0744,Stokes,552,Hydraulic & Lubrication Components,O RING FOR SPINDLE PISTON,S51-125,022-2-125,86,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0744.webp
+PGE-STK-0745,Stokes,552,Hydraulic & Lubrication Components,"V-BELT FOR PUMP - 24"" LONG",S51-329,085-11-329,86,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0745.webp
+PGE-STK-0746,Stokes,552,Hydraulic & Lubrication Components,CUP RING FOR SPINDLE PISTON,S51-788,085-11-788,86,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0746.webp
+PGE-STK-0747,Stokes,552,Hydraulic & Lubrication Components,OIL PUMP,SP-A2,085-10-525,86,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0747.webp
+PGE-STK-0748,Stokes,552,Hydraulic & Lubrication Components,STRAINER FOR OIL PUMP,SP-A3,N/A,86,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0748.webp
+PGE-STK-0749,Stokes,552,Hydraulic & Lubrication Components,OIL/HYDRAULIC VALVE ASSEMBLY,S-VA,N/A,86,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0749.webp
+PGE-STK-0750,Stokes,552,Lower Cam Tracks,ADJUSTABLE TAKE OUT CAM,S51-001,N/A,86,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0750.webp
+PGE-STK-0751,Stokes,552,Lower Cam Tracks,ADJUSTABLE TAKE OUT CAM HOUSING,S51-002,N/A,86,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0751.webp
+PGE-STK-0752,Stokes,552,Lower Cam Tracks,RETAINING CLIP - ADJUSTABLE TAKE OUT,S51-003,N/A,87,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0752.webp
+PGE-STK-0753,Stokes,552,Lower Cam Tracks,ADJUSTABLE TAKE OUT PIN,S51-004,N/A,87,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0753.webp
+PGE-STK-0754,Stokes,552,Lower Cam Tracks,THREADED STUD,S51-005,N/A,87,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0754.webp
+PGE-STK-0755,Stokes,552,Lower Cam Tracks,KNURLED KNOB,S51-006,N/A,87,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0755.webp
+PGE-STK-0756,Stokes,552,Pressure Rolls & Components,"BEARING - UPPER ROLL PIN - 1 1/4""W",S51-430,085-8-430,87,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0756.webp
+PGE-STK-0757,Stokes,552,Pressure Rolls & Components,UPPER ROLL SHAFT,S51-45,C-236-145-1,87,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0757.webp
+PGE-STK-0758,Stokes,552,Pressure Rolls & Components,UPPER PRE-COMPRESSION ROLL PIN,S52-12,A-270-631-2,87,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0758.webp
+PGE-STK-0759,Stokes,552,Pressure Rolls & Components,LOWER PRE-COMPRESSION ROLL,S52-31,13-270-633-1,87,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0759.webp
+PGE-STK-0760,Stokes,552,Pressure Rolls & Components,UPPER PRE-COMPRESSION ROLL W/ BEARING,S52-32,B-270-633-1,87,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0760.webp
+PGE-STK-0761,Stokes,552,Pressure Rolls & Components,BEARING FOR UPPER PRE- COMPRESSION ROLL,S52-32/A,N/A,87,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0761.webp
+PGE-STK-0762,Stokes,552,Pressure Rolls & Components,LOWER PRE-COMPRESSION ROLL PIN,S52-41,N/A,87,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0762.webp
+PGE-STK-0763,Stokes,552,Product Control,HOPPER,S51-12,D-237-012-2,87,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0763.webp
+PGE-STK-0764,Stokes,552,Product Control,FEED FRAME LEVELING SCREW 3 POINT,S-10,A-237-010-1,87,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0764.webp
+PGE-STK-0765,Stokes,552,Product Control,NUT - FEED FRAME LEVELING SCREW,S-10/1,N/A,87,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0765.webp
+PGE-STK-0766,Stokes,552,Product Control,HOPPER ADJUSTING NUT,S51-456,085-5-456,87,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0766.webp
+PGE-STK-0767,Stokes,552,Product Control,TABLET TAKE-OFF - LEFT,S51-47,A-236-947-1,88,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0767.webp
+PGE-STK-0768,Stokes,552,Product Control,SCRAPER BLADE-BRASS,S51-48,A-236-948-1,88,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0768.webp
+PGE-STK-0769,Stokes,552,Product Control,TABLET TAKE-OFF - RIGHT,S51-49,A-236-949-1,88,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0769.webp
+PGE-STK-0770,Stokes,552,Product Control,FEED FRAME - RIGHT- WITH NYLON INSERT ASSEMBLY,S51-50/R-1/A,N/A,88,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0770.webp
+PGE-STK-0771,Stokes,552,Product Control,FEED FRAME - LEFT- WITH NYLON INSERT ASSEMBLY,S51-50/L-1/A,D-236-950-23,88,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0771.webp
+PGE-STK-0772,Stokes,552,Product Control,FEED FRAME-RIGHT ASSEMBLY,S51-50/R/A,D-236-950-23,88,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0772.webp
+PGE-STK-0773,Stokes,552,Product Control,FEED FRAME - LEFT ASSEMBLY,S51-50/L/A,D-236-950-22,88,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0773.webp
+PGE-STK-0774,Stokes,552,Product Control,HOPPER MOUNTING STUD,S51-751,085-12-75,88,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0774.webp
+PGE-STK-0775,Stokes,552,Product Control,SCRAPER SPRING,SP-8,"37077, 35018, 36062",88,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0775.webp
+PGE-STK-0776,Stokes,552,Turret Hardware,DIE LOCK SCREW - 45 STATION,DL-18,PD-13,88,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0776.webp
+PGE-STK-0777,Stokes,552,Turret Hardware,"SPRING, LOWER PUNCH SUPPORT",S-115,12AA115,88,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0777.webp
+PGE-STK-0778,Stokes,552,Turret Hardware,"SET SCREW, LOWER PUNCH SUPPORT",S-4,01BD002A,88,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0778.webp
+PGE-STK-0779,Stokes,552,Turret Hardware,"ROLLER BEARING 5"" I.D/SPINDLE",S51-377,085-8-377,88,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0779.webp
+PGE-STK-0780,Stokes,552,Turret Hardware,RACE FOR SPINDLE BEARING,S51-377/1,N/A,88,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0780.webp
+PGE-STK-0781,Stokes,552,Turret Hardware,"PLUNGER, LOWER PUNCH SUPPORT",S-54,N/A,88,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0781.webp
+PGE-STK-0782,Stokes,552,Turrets,STOCK PHOTO 41 STATION TURRET ASSEMBLY*,S51-41T,D-267-503-28,89,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0782.webp
+PGE-STK-0783,Stokes,552,Turrets,STOCK PHOTO 51 STATION TURRET ASSEMBLY*,S51-51T,D-267-503-29,89,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0783.webp
+PGE-STK-0784,Stokes,555,Drive Components,COMPLETE CLUTCH ASSEMBLY,SC-AB,N/A,90,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0784.webp
+PGE-STK-0785,Stokes,555,Drive Components,"HANDWHEEL -1 1/16"" BORE",SB2-043,C-220-043-1,90,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0785.webp
+PGE-STK-0786,Stokes,555,Drive Components,SPEED CONTROL ASSEMBLY,SB2-992/A,N/A,90,R1C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0787,Stokes,555,Drive Components,MOTOR MOUNT ASSEMBLY,SB2-MMA,N/A,90,R2C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0788,Stokes,555,Drive Components,"SWIVEL PIN FOR MOTOR ADJ TUBE - 3/8"" DIA. X 3 3/4""",S-019,1-019,90,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0788.webp
+PGE-STK-0789,Stokes,555,Drive Components,HINGE PIN FOR MOTOR BRACKET,S-29,1-029,90,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0789.webp
+PGE-STK-0790,Stokes,555,Drive Components,SHIFTER LEVER FORK PIN,S-49,A-213-849-1,90,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0790.webp
+PGE-STK-0791,Stokes,555,Drive Components,"COLLAR FOR SHIFTER FORK PIN - 1/2""",SB-004,08-HD-004,90,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0791.webp
+PGE-STK-0792,Stokes,555,Drive Components,CLUTCH SHIFTER FORK AND PIN,SB-091,A-220-091-1,90,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0792.webp
+PGE-STK-0793,Stokes,555,Drive Components,VARIABLE SPEED PULLEY,SB2-018,N/A,90,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0793.webp
+PGE-STK-0794,Stokes,555,Drive Components,BALL THRUST BEARING - REAR DRIVE,SB2-023,11-BB-023,90,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0794.webp
+PGE-STK-0795,Stokes,555,Drive Components,KNOB CLUTCH SHIFTER LOCK,SB-205,B-294-205-1,90,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0795.webp
+PGE-STK-0796,Stokes,555,Drive Components,PIN CLUTCH SHIFTER LOCK,SB-206,B-294-206-1,90,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0796.webp
+PGE-STK-0797,Stokes,555,Drive Components,SPRING FOR CLUTCH SHIFTER PIN,SB-206/1,N/A,90,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0797.webp
+PGE-STK-0798,Stokes,555,Drive Components,THRUST BEARING,SB-21,018-2-1,90,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0798.webp
+PGE-STK-0799,Stokes,555,Drive Components,CLUTCH SHIFTER LEVER,SB2-136,C-220-136-3,91,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0799.webp
+PGE-STK-0800,Stokes,555,Drive Components,WORM DRIP RECEIVER,SB2-161,B-220-161-3,91,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0800.webp
+PGE-STK-0801,Stokes,555,Drive Components,THRUST LOCK NUT,SB2-186,A-200-186-1,91,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0801.webp
+PGE-STK-0802,Stokes,555,Drive Components,SHAFT END WASHER,SB2-187,B-200-187-1,91,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0802.webp
+PGE-STK-0803,Stokes,555,Drive Components,OIL SEAL - PULLEY,SB-243,024-3-1,91,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0803.webp
+PGE-STK-0804,Stokes,555,Drive Components,"HANDWHEEL, SPEED CONTROL",SB2-82,B-233-822-7,91,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0804.webp
+PGE-STK-0805,Stokes,555,Drive Components,MOTOR ADJUSTING ROD PIVOT BLOCK,SB2-874,B-296-874-001,91,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0805.webp
+PGE-STK-0806,Stokes,555,Drive Components,"COLLAR - 1 3/16"" FOR PIVOT BLOCK",SB2-874/1,N/A,91,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0806.webp
+PGE-STK-0807,Stokes,555,Drive Components,"DRIVE BELT - VARIABLE SPEED (92"")",SB2-934,N/A,91,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0807.webp
+PGE-STK-0808,Stokes,555,Drive Components,"BRACKET, CLUTCH SHIFTER LOCK",SB-296,B-294-296-1,91,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0808.webp
+PGE-STK-0809,Stokes,555,Drive Components,MOTOR HINGE BRACKET,SB2-991,C-293-991-1,91,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0809.webp
+PGE-STK-0810,Stokes,555,Drive Components,MOTOR ADJUSTING TUBE,SB2-992/1,B-293-992-2,91,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0810.webp
+PGE-STK-0811,Stokes,555,Drive Components,"COLLAR 3/4"" FOR MOTOR ADJ. BAR",SB2-992/2,N/A,91,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0811.webp
+PGE-STK-0812,Stokes,555,Drive Components,DRIVING RING,SC-1,013-2-1,91,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0812.webp
+PGE-STK-0813,Stokes,555,Drive Components,FINGER LEVER,SC-10,013-2-10,91,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0813.webp
+PGE-STK-0814,Stokes,555,Drive Components,CONE KEY,SC-11,013-2-11,92,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0814.webp
+PGE-STK-0815,Stokes,555,Drive Components,RELEASE SPRING PIN,SC-12,013-2-12,92,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0815.webp
+PGE-STK-0816,Stokes,555,Drive Components,RELEASE SPRING,SC-13,013-2-13,92,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0816.webp
+PGE-STK-0817,Stokes,555,Drive Components,FINGER LEVER PIN,SC-14,013-2-14,92,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0817.webp
+PGE-STK-0818,Stokes,555,Drive Components,FINGER LEVER SPACER,SC-15,013-2-15,92,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0818.webp
+PGE-STK-0819,Stokes,555,Drive Components,BACK PLATE,SC-16,013-2-16,92,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0819.webp
+PGE-STK-0820,Stokes,555,Drive Components,ADJUSTING LOCK PIN SPRING,SC-17,013-2-17,92,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0820.webp
+PGE-STK-0821,Stokes,555,Drive Components,ADJUSTING LOCK PIN,SC-18,013-2-18,92,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0821.webp
+PGE-STK-0822,Stokes,555,Drive Components,ROLLER FOR FINGERS,SC-19,013-2-19,92,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0822.webp
+PGE-STK-0823,Stokes,555,Drive Components,ADJUSTING RING,SC-2,013-2-2,92,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0823.webp
+PGE-STK-0824,Stokes,555,Drive Components,SNAP RING,SC-20,013-2-20,92,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0824.webp
+PGE-STK-0825,Stokes,555,Drive Components,STEPPED DRIVE KEY,SC-22,013-2-22,92,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0825.webp
+PGE-STK-0826,Stokes,555,Drive Components,WOODRUFF KEY,SC-24,06-1-4,92,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0826.webp
+PGE-STK-0827,Stokes,555,Drive Components,"SCREW, STEPPED DRIVE KEY",SC-25,01-5-14,92,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0827.webp
+PGE-STK-0828,Stokes,555,Drive Components,CONE COLLAR WITH SCREWS,SC-3,013-2-3,92,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0828.webp
+PGE-STK-0829,Stokes,555,Drive Components,ENGAGING CONE,SC-4,013-2-4,93,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0829.webp
+PGE-STK-0830,Stokes,555,Drive Components,DRIVING PLATE - FIBER,SC-5,013-2-5,93,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0830.webp
+PGE-STK-0831,Stokes,555,Drive Components,DRIVEN PLATE - STEEL,SC-6,013-2-6,93,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0831.webp
+PGE-STK-0832,Stokes,555,Drive Components,ROLLER RING,SC-7,013-2-7,93,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0832.webp
+PGE-STK-0833,Stokes,555,Drive Components,LOCK PLATE,SC-8,013-2-8,93,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0833.webp
+PGE-STK-0834,Stokes,555,Drive Components,"HUB 1-1/2"" BORE 5/16"" K.W.",SC-9,013-2-9,93,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0834.webp
+PGE-STK-0835,Stokes,555,Drive Components,NEEDLE BEARING - RIGHT,SCE2020,SCE2020,93,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0835.webp
+PGE-STK-0836,Stokes,555,Drive Components,NEEDLE BEARINGS - LEFT,SCE2416,SCE2416,93,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0836.webp
+PGE-STK-0837,Stokes,555,Drive Components,"NEEDLE BEARING -BEARING, CLUTCH PULLEY",SCE2420,SCE2420,93,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0837.webp
+PGE-STK-0838,Stokes,555,Drive Components,"BRONZE WORM (1-1/4"" ID)",WG-48,B-213-848-003,93,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0838.webp
+PGE-STK-0839,Stokes,555,Drive Components,"STEEL WORM (1-1/4"" ID)",WG-48/S,B-213-848-003,93,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0839.webp
+PGE-STK-0840,Stokes,555,Drive Components,"COLLAR 1"" FOR HINGE PIN",S-13,020-1-13,93,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0840.webp
+PGE-STK-0841,Stokes,555,Drive Components,MOTOR ADJUSTING BAR,SB2-992,B-293-992-2,93,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0841.webp
+PGE-STK-0842,Stokes,555,Guarding,DIE TABLE GUARD,SB2-504,D-295-504-001,93,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0842.webp
+PGE-STK-0843,Stokes,555,Guarding,UPPER PUNCH GUARD-RIGHT SIDE (2 PIECE SET),SB2-700,N/A,93,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0843.webp
+PGE-STK-0844,Stokes,555,Guarding,UPPER PUNCH GUARD-LEFT SIDE (2 PIECE SET),SB2-701,N/A,94,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0844.webp
+PGE-STK-0845,Stokes,555,Hydraulic & Lubrication Components,HEAD BEARING OILER - 2 OZ,S-75,9BA21,94,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0845.webp
+PGE-STK-0846,Stokes,555,Hydraulic & Lubrication Components,OIL SEAL,SB2-320,07-BA-320,94,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0846.webp
+PGE-STK-0847,Stokes,555,Hydraulic & Lubrication Components,VARI-FEED OILER - 1 OZ,SB-68,059-004-001,94,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0847.webp
+PGE-STK-0848,Stokes,555,Lower Cam Tracks,EJECTION CAM,SB2-2,B-220-163-6,94,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0848.webp
+PGE-STK-0849,Stokes,555,Lower Cam Tracks,EJECTION CAM - DELRIN,SB2-2/1,N/A,94,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0849.webp
+PGE-STK-0850,Stokes,555,Lower Cam Tracks,MODIFIED BOLT - FOR EJECTION CAM,SB2-2/A,N/A,94,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0850.webp
+PGE-STK-0851,Stokes,555,Lower Cam Tracks,DROP OUT PLUG LOWER PUNCH,SB2-399,A-200-399-1,94,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0851.webp
+PGE-STK-0852,Stokes,555,Lower Cam Tracks,DROP OUT PLUG LOWER PUNCH SHALLOW FILL,SB2-399/1,N/A,94,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0852.webp
+PGE-STK-0853,Stokes,555,Lower Cam Tracks,LOWER PUNCH ADJUSTING SCREW,SB2-433,B-294-433-1,94,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0853.webp
+PGE-STK-0854,Stokes,555,Lower Cam Tracks,LOWER CAM TRACK PULLDOWN - NO ADJ. SCREW,SB2-46/0,C-220-146-30,94,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0854.webp
+PGE-STK-0855,Stokes,555,Lower Cam Tracks,LOWER PULLDOWN CAM- W/ ADJUSTING SCREW,SB2-46/1,C-220-146-031,94,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0855.webp
+PGE-STK-0856,Stokes,555,Lower Cam Tracks,LOWER PULLDOWN CAM - SHALLOW FILL,SB2-46/SF,C-220-146-1,94,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0856.webp
+PGE-STK-0857,Stokes,555,Lower Cam Tracks,SHALLOW FILL INSERT- FRONT,SB2-46/SF1,N/A,94,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0857.webp
+PGE-STK-0858,Stokes,555,Lower Cam Tracks,SHALLOW FILL INSERT - REAR,SB2-46/SF2,N/A,94,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0858.webp
+PGE-STK-0859,Stokes,555,Lower Cam Tracks,ADJUSTER GUIDE RING,SB2-83,B-200-383-001,95,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0859.webp
+PGE-STK-0860,Stokes,555,Miscellaneous,MACHINE PALLET VIBRATION LEVELING PAD SS,NP-LVPD,N/A,95,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0860.webp
+PGE-STK-0861,Stokes,555,Pressure Rolls & Components,ADJUSTING HANDLE,NP-AH1,48187,95,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0861.webp
+PGE-STK-0862,Stokes,555,Pressure Rolls & Components,UPPER OR LOWER PRESSURE ROLL,PR-3,A-223-603-4,95,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0862.webp
+PGE-STK-0863,Stokes,555,Pressure Rolls & Components,LOWER ROLL OIL RECEIVER,S-15,A-220-115-2,95,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0863.webp
+PGE-STK-0864,Stokes,555,Pressure Rolls & Components,PRESSURE SPRING CASING,S-211,A-200-211-1,95,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0864.webp
+PGE-STK-0865,Stokes,555,Pressure Rolls & Components,EYEBOLT FOR PRESSURE SPRING,S-230,A-224-230-1,95,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0865.webp
+PGE-STK-0866,Stokes,555,Pressure Rolls & Components,PRESSURE ROD TABLE NUT,S-547,A-200-547-1,95,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0866.webp
+PGE-STK-0867,Stokes,555,Pressure Rolls & Components,PRESSURE ADJUSTING WHEEL SPRING,S-554,A-200-554-1,95,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0867.webp
+PGE-STK-0868,Stokes,555,Pressure Rolls & Components,SPRING LOCK,S-62,A-220-062-1,95,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0868.webp
+PGE-STK-0869,Stokes,555,Pressure Rolls & Components,LOWER ROLL CARRIER,SB-023,C-220-023-1,95,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0869.webp
+PGE-STK-0870,Stokes,555,Pressure Rolls & Components,PRESSURE ADJUSTING WHEEL,SB-025,B-220-025-6,95,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0870.webp
+PGE-STK-0871,Stokes,555,Pressure Rolls & Components,PRESSURE LEVER,SB-058,C-220-058-1,95,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0871.webp
+PGE-STK-0872,Stokes,555,Pressure Rolls & Components,LOWER ROLL PIN,SB-1,A-200-201-1,95,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0872.webp
+PGE-STK-0873,Stokes,555,Pressure Rolls & Components,PRESSURE SPRING,SB-210,B-200-210-1,95,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0873.webp
+PGE-STK-0874,Stokes,555,Pressure Rolls & Components,PRESSURE SPRING LIGHT (0 - 1.5 TONS),SB-210/L,A-200-210-1L,96,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0874.webp
+PGE-STK-0875,Stokes,555,Pressure Rolls & Components,PRESSURE LEVER PIN - LEFT,SB2-209,A-200-209-2,96,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0875.webp
+PGE-STK-0876,Stokes,555,Pressure Rolls & Components,PRESSURE LEVER PIN - RIGHT,SB2-209/1,A-200-209-1,96,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0877,Stokes,555,Pressure Rolls & Components,PRESSURE SPRING PIN,SB2-413,A-200-413-003,96,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0878,Stokes,555,Pressure Rolls & Components,SAFETY ADJUSTING WHEEL,SB2-493,B-223-493-4,96,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0879,Stokes,555,Pressure Rolls & Components,RELEASE PRESSURE TONNAGE GAUGE (0 - 1.5 TONS),SB-257,N.P. 257,96,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0880,Stokes,555,Pressure Rolls & Components,RELEASE PRESSURE TONNAGE GAUGE (0 - 4.4 TONS),S-028,085-000-028,96,R3C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0881,Stokes,555,Pressure Rolls & Components,"EYEBOLT FOR FORK PIN - 3 1/4"" LONG",SB-262,1-262,96,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0882,Stokes,555,Pressure Rolls & Components,UPPER ROLL SHAFT,SB2-772,C-200-477-002,96,R3C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0883,Stokes,555,Pressure Rolls & Components,LOCK STUD,SB-478,A-200-478-1,96,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0884,Stokes,555,Pressure Rolls & Components,FULCRUM PIN,SB-665,"2-665, 2-665-B2",96,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0885,Stokes,555,Pressure Rolls & Components,FORK,SB-26,A-220-026-1,96,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0886,Stokes,555,Product Control,GRID SCREW,S-822,A-294-822-1,96,R5C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0887,Stokes,555,Product Control,HOPPER,SB-717,C-291-717-1,96,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0888,Stokes,555,Product Control,TABLET TAKE-OFF,SB2-015,B-217-015-015,96,R5C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0889,Stokes,555,Product Control,SCRAPER BLADE - REAR,SB2-16,A-217-016-1,97,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0890,Stokes,555,Product Control,SCRAPER BLADE - REAR - NYLON,SB2-16/1,A-217-016-1,97,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0890.webp
+PGE-STK-0891,Stokes,555,Product Control,SCRAPER BLADE - FRONT,SB2-17,A-227-517-1,97,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0891.webp
+PGE-STK-0892,Stokes,555,Product Control,SCRAPER BLADE - FRONT - NYLON,SB2-17/1,N/A,97,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0892.webp
+PGE-STK-0893,Stokes,555,Product Control,ADJUSTABLE GRID(FOR PIN GRID FEED FRAME),SB-23,B-294-823-1,97,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0893.webp
+PGE-STK-0894,Stokes,555,Product Control,FEED FRAME - 3 PT. - OPEN- FRONT ASSEMBLY,SB2-51/F/A,D-227-551-1,97,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0894.webp
+PGE-STK-0895,Stokes,555,Product Control,FEED FRAME - 3 PT. - OPEN - REAR ASSEMBLY,SB2-51/R/A,D-227-551-2,97,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0895.webp
+PGE-STK-0896,Stokes,555,Product Control,FEED FRAME-3 PT.-OPEN-REAR/ WEAR STRIP ASSEMBLY,SB2-51/RWS/A,N/A,97,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0896.webp
+PGE-STK-0897,Stokes,555,Product Control,FEED FRAME-3PT.-OPEN-FRONT/ WEAR STRIP ASSEMBLY,SB2-51/FWS/A,N/A,97,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0897.webp
+PGE-STK-0898,Stokes,555,Product Control,FEED FRAME-3 PT.-OPEN- REAR/WEAR STRIP,SB2-51/RWS,N/A,97,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0898.webp
+PGE-STK-0899,Stokes,555,Product Control,HOLD DOWN KNOB ASSEMBLY,SB-47,A-260-147-1,97,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0899.webp
+PGE-STK-0900,Stokes,555,Product Control,HOLD DOWN STUD,SB-47/1,N/A,97,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0901,Stokes,555,Product Control,KNOB - HOLD DOWN STUD,SB-47/2,N/A,97,R5C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0902,Stokes,555,Product Control,SCRAPER SPRING,SP-8,"37077, 35018, 36062",97,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0903,Stokes,555,Thickness/Hardness Components,ADJUSTING WHEEL EYE BOLT,SB-024,A-220-024-3,97,R5C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0904,Stokes,555,Turret Hardware,DIE LOCK SCREW - 45 STATION,DL-18,PD-13,98,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0905,Stokes,555,Turret Hardware,DIE LOCK SCREW - 27 & 35 STATION,DL-91,230-091-1,98,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0906,Stokes,555,Turret Hardware,PUNCH HOLDING PLUG,SB-5N,N/A,98,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0907,Stokes,555,Turrets,STOCK PHOTO 35 STATION TURRET ASSEMBLY*,SB-35T,D-220-120-138,98,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0908,Stokes,555,Turrets,STOCK PHOTO 45 STATION TURRET ASSEMBLY*,SB-45T,N/A,98,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0909,Stokes,555,Upper Cam Tracks,UPPER CAM BODY WITH TAKE-OUT PLATE,SB2-151,C-220-151-13,98,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0910,Stokes,555,Upper Cam Tracks,UPPER DWELL CAM - FRONT,SB2-1N,N/A,98,R3C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0911,Stokes,555,Upper Cam Tracks,UPPER DWELL CAM - REAR - NEW STYLE,SB2-2N,N/A,98,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0912,Stokes,555,Upper Cam Tracks,UPPER DWELL CAM - REAR - OLD STYLE,SB2-2N/S,N/A,98,R3C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0913,Stokes,555,Upper Cam Tracks,ANTI FLIGHT RAIL,SB2-3N,N/A,98,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0914,Stokes,555,Upper Cam Tracks,UPPER RAISING CAM,SB2-52,C-220-152-007,98,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0915,Stokes,555,Upper Cam Tracks,UPPER LOWERING CAM,SB2-53,C-220-153-005,98,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0916,Stokes,555,Upper Cam Tracks,UPPER CAM TAKE OUT PLATE,SB2-92,A-200-392-2,98,R5C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0917,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTER CAM,SB5-121/1,N/A,98,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0918,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTER WHEEL,S-035,A-220-035-3,98,R5C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0919,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTER WHEEL - FINE ADJUST,S-035/M,N/A,99,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0920,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTING SCREW - CUSTOM THREAD,S-184,N/A,99,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0921,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTING SCREW,S-184/1,B-200-184-1,99,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0922,Stokes,555,Weight Adjusting Components,WEIGHT/PRESSURE ADJ. WHEEL SPRING,S-204,A-200-204-1,99,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0922.webp
+PGE-STK-0923,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTER LEVER,S-258,A-220-258-1,99,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0923.webp
+PGE-STK-0924,Stokes,555,Weight Adjusting Components,INCREASE WEIGHT NAME PLATE,S-32,NP-0-32,99,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0924.webp
+PGE-STK-0925,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTER STOP,S-569,A-200-569-1,99,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0925.webp
+PGE-STK-0926,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTING CAM SEGMENT,SB2-609,C-295-609-003,99,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0926.webp
+PGE-STK-0927,Stokes,555,Weight Adjusting Components,WEIGHT ADJUSTER CAM - CUSTOM THREAD,SB5-121,N/A,99,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0927.webp
+PGE-STK-0928,Stokes,555,Weight Adjusting Components,WEIGHT ADJ BEARING,SB5-212,N/A,99,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0928.webp
+PGE-STK-0929,Stokes,555,Weight Adjusting Components,WEIGHT ADJ BEARING ASSEMBLY,SB5-212/A,N/A,99,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0929.webp
+PGE-STK-0930,Stokes,565,Drive Components,RADIAL BALL BEARING REAR- CLUTCH SIDE,S35-190,11-AB-090,100,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0930.webp
+PGE-STK-0931,Stokes,565,Drive Components,GENERATOR SPROCKET,S35-230,B-294-223-017,100,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0931.webp
+PGE-STK-0932,Stokes,565,Drive Components,COMPLETE CLUTCH ASSEMBLY,S35-565,N/A,100,R1C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0932.webp
+PGE-STK-0933,Stokes,565,Drive Components,BEARING SET OF 2 FOR CLUTCH PULLEY,S35-610,085-012-610,100,R2C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0933.webp
+PGE-STK-0934,Stokes,565,Drive Components,BEARING FOR WORM- SHAFT BEARING PLATE,S35-611,085-012-611,100,R2C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0934.webp
+PGE-STK-0935,Stokes,565,Drive Components,INNER BEARING FOR UPPER ROLL PIN,S35-911/1,N/A,100,R2C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0935.webp
+PGE-STK-0936,Stokes,565,Drive Components,ADJUSTING LOCK PIN,SC-061,013-2-061,100,R3C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0936.webp
+PGE-STK-0937,Stokes,565,Drive Components,ADJUSTING LOCK PIN SPRING,SC-146,013-2-146,100,R3C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0937.webp
+PGE-STK-0938,Stokes,565,Drive Components,CLUTCH DRIVING RING,SC-44,013-2-44,100,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0938.webp
+PGE-STK-0939,Stokes,565,Drive Components,ADJUSTING RING,SC-45,013-002-045,100,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0939.webp
+PGE-STK-0940,Stokes,565,Drive Components,CLUTCH HUB,SC-455,085-020-455,100,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0940.webp
+PGE-STK-0941,Stokes,565,Drive Components,ENGAGING CONE,SC-456,085-20-456,100,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0941.webp
+PGE-STK-0942,Stokes,565,Drive Components,DRIVING PLATE - FIBER,SC-48,013-002-048,100,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0942.webp
+PGE-STK-0943,Stokes,565,Drive Components,DRIVEN PLATE - STEEL,SC-49,013-002-049,100,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0943.webp
+PGE-STK-0944,Stokes,565,Drive Components,ROLLER RING,SC-50,013-2-50,100,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0944.webp
+PGE-STK-0945,Stokes,565,Drive Components,RELEASE SPRING,SC-56,013-2-56,101,R1C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0945.webp
+PGE-STK-0946,Stokes,565,Drive Components,STEPPED DRIVE KEY,SC-58,013-2-58,101,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0946.webp
+PGE-STK-0947,Stokes,565,Drive Components,CLUTCH SHIFTER SHOE - PAIR,SC-65,B-248-565-1,101,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0948,Stokes,565,Hydraulic & Lubrication Components,OIL PRESSURE GAUGE - 15 P.S.I,S-162,085-10-162,101,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0949,Stokes,565,Hydraulic & Lubrication Components,OIL FILTER ELEMENT,S-30,N/A,101,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0950,Stokes,565,Hydraulic & Lubrication Components,OIL FILTER ASSEMBLY HEAD & ELEMENT,S-30H,N/A,101,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0951,Stokes,565,Hydraulic & Lubrication Components,BELT FOR PUMP,S35-3,012-4-3,101,R3C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0952,Stokes,565,Hydraulic & Lubrication Components,WORM SPLASH GUARD,S35-4,B-247-644-1,101,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0953,Stokes,565,Hydraulic & Lubrication Components,TONNAGE GAUGE - 10 TON,S-575,085-10-575,101,R3C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0954,Stokes,565,Hydraulic & Lubrication Components,PULLEY ON JACKSHAFT,S-901,085-17-901,101,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0955,Stokes,565,Hydraulic & Lubrication Components,PUMP MOUNTING BRACKET,SP-664,085-12-664,101,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0956,Stokes,565,Hydraulic & Lubrication Components,OIL PUMP SUPPORT,SP-778,A-241-778-001,101,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0957,Stokes,565,Hydraulic & Lubrication Components,OIL PUMP,SP-A2,085-10-529,101,R5C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0958,Stokes,565,Hydraulic & Lubrication Components,STRAINER FOR OIL PUMP,SP-A3,N/A,101,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0959,Stokes,565,Lower Cam Tracks,"LOWER PULL DOWN CAM - SHALLOW 5/16"" FILL",S-759,C-292-759-1,101,R5C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0960,Stokes,565,Lower Cam Tracks,"LOWER PULL DOWN CAM - 5/16"" FILL - LUBRICATED",S-759/S,N/A,102,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0961,Stokes,565,Lower Cam Tracks,"LOWER PULL DOWN CAM - 5/8"" FILL",S-391,D-290-391-1,102,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0962,Stokes,565,Lower Cam Tracks,"FILLER PLATE - 5/8"" FILL",S-392-3,B-290-392-3,102,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0963,Stokes,565,Lower Cam Tracks,"FILLER PLATE - 5/16"" FILL",S-392-4,B-290-392-4,102,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0964,Stokes,565,Lower Cam Tracks,EJECTION ROLL,SE-408,B-290-408-1,102,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0965,Stokes,565,Pressure Rolls & Components,LOWER ROLL SHAFT,S-403,C-290-403-2,102,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0966,Stokes,565,Pressure Rolls & Components,"SEAL, PRESSURE ROLL",S-267,7BA267,102,R3C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0967,Stokes,565,Pressure Rolls & Components,UPPER FRAME OIL SEAL - UPPER ROLL PIN,S-277,085-026-277,102,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0968,Stokes,565,Pressure Rolls & Components,LOWER PRESSURE ROLL - W/SEALS,S-311,B-232-513-11,102,R3C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0968.webp
+PGE-STK-0969,Stokes,565,Pressure Rolls & Components,UPPER PRESSURE ROLL - W/SEALS,S-312,B-232-513-12,102,R4C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0969.webp
+PGE-STK-0970,Stokes,565,Pressure Rolls & Components,UPPER ROLL SHAFT-EARLY MODEL- LUBRICATED,S-348,C-291-348-2,102,R4C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0970.webp
+PGE-STK-0971,Stokes,565,Pressure Rolls & Components,PRESSURE SPRING,S35-493,"B-232-493-1, B-232-493-001",102,R4C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0971.webp
+PGE-STK-0972,Stokes,565,Pressure Rolls & Components,SLIDER BLOCK,S-405,B-290-405-1,102,R5C1,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0972.webp
+PGE-STK-0973,Stokes,565,Pressure Rolls & Components,"THRUST PLATE, LOWER ROLL - BRASS",S-486,A-294-486-1,102,R5C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0973.webp
+PGE-STK-0974,Stokes,565,Pressure Rolls & Components,"THRUST PLATE, LOWER ROLL - STEEL",S-486/A2,N/A,102,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0974.webp
+PGE-STK-0975,Stokes,565,Pressure Rolls & Components,LOWER PRESSURE ROLL - W/ SEALS ASSEMBLY,S-311/A,N/A,103,R1C1,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0976,Stokes,565,Product Control,FEED FRAME STUD,S-185,A-276-185-003,103,R1C2,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-0976.webp
+PGE-STK-0977,Stokes,565,Product Control,FEED FRAME LEVELING SCREW,S-479,"A-234-479-1, A-234-479-5",103,R1C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0978,Stokes,565,Turret Hardware,DIE LOCK SCREW - 45 STATION,DL-18,PD-13,103,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0979,Stokes,565,Turret Hardware,"SPRING, LOWER PUNCH SUPPORT",S-115,12AA115,103,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0980,Stokes,565,Turret Hardware,SPINDLE BEARING,S35-646-1,085-6-646/1,103,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0981,Stokes,565,Turret Hardware,RACE FOR SPINDLE BEARING,S35-646-2,085-6-646/2,103,R3C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0982,Stokes,565,Turret Hardware,"SET SCREW, LOWER PUNCH SUPPORT",S-4,01BD002A,103,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0983,Stokes,565,Turret Hardware,"PLUNGER, LOWER PUNCH SUPPORT",S-897,A-293-897-2,103,R3C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0984,Stokes,565,Turrets,STOCK PHOTO 53 STATION TURRET ASSEMBLY*,S-53T,D-290-434-7,103,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0985,Stokes,565,Turrets,STOCK PHOTO 65 STATION TURRET ASSEMBLY*,S-65T,D-290-434-4,103,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0986,Stokes,566,Drive Components,COMPLETE CLUTCH ASSEMBLY,SC-AB,N/A,104,R1C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0987,Stokes,566,Drive Components,"HANDWHEEL -1 1/16"" BORE",SB2-043,C-220-043-1,104,R1C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0988,Stokes,566,Drive Components,SPEED CONTROL ASSEMBLY,SB2-992/A,N/A,104,R1C3,No source photo available,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0989,Stokes,566,Drive Components,REAR DRIVE ASSEMBLY,SB2-40/A,N/A,104,R2C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0990,Stokes,566,Drive Components,HINGE PIN FOR MOTOR BRACKET,S-29,1-029,104,R2C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0991,Stokes,566,Drive Components,SHIFTER LEVER FORK PIN,S-49,A-213-849-1,104,R2C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0992,Stokes,566,Drive Components,"COLLAR FOR SHIFTER FORK PIN - 1/2""",SB-004,08-HD-004,104,R3C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0993,Stokes,566,Drive Components,CLUTCH SHIFTER FORK AND PIN,SB-091,A-220-091-1,104,R3C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0994,Stokes,566,Drive Components,"BUSHING FOR PULLEY 1 7/16"" I.D.",SB-137,076-1-137,104,R3C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0995,Stokes,566,Drive Components,VARIABLE SPEED PULLEY,SB2-018,N/A,104,R4C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0996,Stokes,566,Drive Components,KNOB CLUTCH SHIFTER LOCK,SB-205,B-294-205-1,104,R4C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0997,Stokes,566,Drive Components,PIN CLUTCH SHIFTER LOCK,SB-206,B-294-206-1,104,R4C3,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0998,Stokes,566,Drive Components,SPRING FOR CLUTCH SHIFTER PIN,SB-206/1,N/A,104,R5C1,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-0999,Stokes,566,Drive Components,THRUST BEARING,SB-21,018-2-1,104,R5C2,Visualization pending,/assets/images/parts/stokes-catalog/image-pending.svg
+PGE-STK-1000,Stokes,566,Drive Components,CLUTCH SHIFTER LEVER,SB2-136,C-220-136-3,104,R5C3,Generated visualization,/assets/images/parts/stokes-catalog/pge-stk-1000.webp
