@@ -42,6 +42,7 @@ class Part:
     image: str
     family: str
     confirmed_copy: str = ""
+    oem_number: str = ""
 
     @property
     def slug(self) -> str:
@@ -53,9 +54,15 @@ class Part:
 
     @property
     def catalog_url(self) -> str:
-        if self.brand_slug == "korsch-300":
-            return "/parts/korsch/korsch-300/"
+        if self.brand_slug == "korsch":
+            return "/parts/korsch/"
         return f"/parts/{self.brand_slug}/"
+
+
+def oem_reference(part: Part) -> dict[str, str]:
+    if part.oem_number and part.oem_number.upper() != "N/A":
+        return {"oem_part_number": part.oem_number}
+    return APPROVED_OEM_REFERENCES.get(part.sku, {})
 
 
 def label(value: str) -> str:
@@ -82,7 +89,7 @@ def aliases(part: Part) -> list[str]:
         part.sku.replace("-", " "),
         part.sku.replace("-", ""),
     ]
-    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    oem = oem_reference(part)
     if oem:
         number = oem["oem_part_number"].strip()
         values.extend((
@@ -163,28 +170,14 @@ def family_for(name: str) -> str:
 
 
 def parse_korsch() -> list[Part]:
-    page = (ROOT / "parts/korsch/korsch-300/index.html").read_text(encoding="utf-8")
-    cards = re.findall(r'<article class="product-card"[^>]*>.*?</article>', page, re.S)
     parts = []
-    for card in cards:
-        sku_match = re.search(r'data-sku="([^"]+)"', card)
-        name_match = re.search(r'data-name="([^"]+)"', card)
-        image_match = re.search(r'<img src="([^"]+)"', card)
-        family_match = re.search(r'<p class="product-family">(.*?)</p>', card, re.S)
-        copy_match = re.search(r'<p class="product-copy">(.*?)</p>', card, re.S)
-        if not all((sku_match, name_match, image_match)):
-            continue
-        name = text_only(name_match.group(1))
-        parts.append(Part(
-            sku=sku_match.group(1), name=name, brand="Korsch", brand_slug="korsch-300",
-            # The legacy Korsch images are synthetic visualizations without
-            # traceable source photographs, dimensions, markings, or a
-            # record-to-OEM mapping. Do not infer a machine model from the
-            # legacy k300 filename or catalog route.
-            model="Model unresolved", image=image_match.group(1),
-            family=text_only(family_match.group(1)) if family_match else family_for(name),
-            confirmed_copy=text_only(copy_match.group(1)) if copy_match else "",
-        ))
+    with (ROOT / "data/korsch-parts.csv").open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            parts.append(Part(
+                sku=row["sku"], name=row["part_name"], brand="Korsch", brand_slug="korsch",
+                model=row["model"], image=row["image_path"], family=row["category"],
+                confirmed_copy="", oem_number=row["oem_number"],
+            ))
     return parts
 
 
@@ -210,7 +203,7 @@ def description(part: Part) -> str:
         "Our engineering process establishes the correct "
         "dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing."
     )
-    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    oem = oem_reference(part)
     if oem:
         text += f" Replacement part for OEM #{oem['oem_part_number']}. The OEM number is used solely for identification and compatibility research."
     return text
@@ -283,7 +276,7 @@ def related_parts(part: Part, parts: list[Part], limit: int = 4) -> list[Part]:
 
 
 def json_ld(part: Part) -> str:
-    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    oem = oem_reference(part)
     properties = [
         {"@type": "PropertyValue", "name": "Compatibility reference", "value": equipment_reference(part).capitalize()},
         {"@type": "PropertyValue", "name": "Engineering verification", "value": "PharmaGlobalEng verifies dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing"},
@@ -323,13 +316,15 @@ def build_page(part: Part, parts: list[Part]) -> str:
     confirmed = ""
     if part.confirmed_copy:
         confirmed = f'<div class="detail-box"><h2>Catalog engineering note</h2><p>{escape(part.confirmed_copy)}</p></div>'
-    oem = APPROVED_OEM_REFERENCES.get(part.sku)
+    oem = oem_reference(part)
     oem_title = f" | Replacement for OEM #{oem['oem_part_number']}" if oem else ""
     oem_detail = ""
     if oem:
         oem_detail = (
             f'<div><dt>Replacement part for OEM number</dt><dd>#{escape(oem["oem_part_number"])}</dd></div>'
         )
+    elif part.brand == "Korsch" and part.oem_number.strip().upper() == "N/A":
+        oem_detail = '<div><dt>OEM number</dt><dd>Not listed in source catalog</dd></div>'
     title = f"PGE {part.name} for {title_reference(part)} compatibility{oem_title} | PharmaGlobalEng"
     meta = description(part)
     image_url = SITE + part.image
@@ -363,7 +358,7 @@ def build_page(part: Part, parts: list[Part]) -> str:
 <script type="application/ld+json">{json_ld(part)}</script></head>
 <body><header class="site-header"><div class="wrap nav"><a class="brand" href="/">PharmaGlobal<span>Eng</span></a><nav class="nav-links" aria-label="Primary navigation"><a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/parts/" aria-current="page">Parts Store</a><a class="nav-cta" href="/contact.html">Contact</a></nav></div></header>
 <main><div class="wrap"><div class="part-crumb"><a href="/parts/">Parts Store</a> / <a href="{part.catalog_url}">{escape(part.brand)} parts</a> / {escape(part.sku)}</div>
-<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="960" height="720" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(part.name)} for {escape(title_reference(part))} Tablet Press</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><div class="part-quote-actions"><button class="btn primary quote-cta" type="button" data-pge-cart-add data-part-sku="{escape(part.sku)}" data-part-name="{escape(part.name)}" data-part-brand="{escape(part.brand)}" data-part-model="{escape(part.model)}" data-part-url="/parts/{part.slug}/">Add to Quote Cart</button><a class="btn secondary email-part-inquiry" href="{escape(inquiry_url(part))}">Email this part</a></div></div></section></div>
+<section class="part-hero"><div class="part-image"><img src="{part.image}" alt="{escape(image_alt)}" width="760" height="760" loading="eager" fetchpriority="high" decoding="async"></div><div class="part-intro"><p class="eyebrow">Independent replacement component</p><h1>{escape(part.name)} for {escape(title_reference(part))} Tablet Press</h1><span class="sku-badge">PharmaGlobalEng SKU: {escape(part.sku)}</span><div class="store-links"><a href="{part.catalog_url}">View {escape(part.sku)} in the Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">{escape(meta)}</p><div class="compatibility"><strong>Engineered for the correct application</strong><br>Cataloged for <strong>{escape(equipment_reference(part))}</strong>. PharmaGlobalEng verifies the dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing.</div><div class="part-quote-actions"><button class="btn primary quote-cta" type="button" data-pge-cart-add data-part-sku="{escape(part.sku)}" data-part-name="{escape(part.name)}" data-part-brand="{escape(part.brand)}" data-part-model="{escape(part.model)}" data-part-url="/parts/{part.slug}/">Add to Quote Cart</button><a class="btn secondary email-part-inquiry" href="{escape(inquiry_url(part))}">Email this part</a></div></div></section></div>
 <section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>Component details</h2><dl><div><dt>PGE number</dt><dd>{escape(part.sku)}</dd></div>{oem_detail}<div><dt>Part family</dt><dd>{escape(part.family)}</dd></div><div><dt>Compatibility reference</dt><dd>{escape(equipment_reference(part).capitalize())}</dd></div><div><dt>Manufacturing</dt><dd>Made to confirmed sample, drawing, or dimensional specification</dd></div><div><dt>Availability</dt><dd>Quotation and engineering review</dd></div></dl></div><div class="detail-box"><h2>PharmaGlobalEng fit-verification process</h2><p>Our engineering team establishes the correct:</p><ul><li>Component dimensions and critical tolerances</li><li>Mounting points and installation configuration</li><li>Material specification and required finish</li><li>Operating geometry and interface requirements</li><li>Manufacturing and inspection requirements</li></ul><p>These details are verified through the quotation and engineering-review process.</p></div>{confirmed}</div></section>
 <section class="detail-section"><div class="wrap"><h2>Find this part using similar terms</h2><p class="section-copy">Parts Store search recognizes the PGE number, equipment model, punctuation and spacing variations, and small spelling differences.</p><div class="aliases">{alias_chips}</div></div></section>
 <section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>What does the {escape(part.name)} do?</h2><p>{escape(function_note)}</p><p>{escape(application_note)}</p></div><div class="detail-box"><h2>Part-specific verification checkpoints</h2><p>For {escape(part.sku)}, the engineering review focuses on:</p><ul>{check_items}</ul><p>The existing component, drawing, or dimensional record is used to resolve the final manufacturing configuration.</p></div></div></section>
@@ -374,7 +369,10 @@ def build_page(part: Part, parts: list[Part]) -> str:
 
 
 def add_detail_links_to_korsch(parts: list[Part]) -> None:
-    path = ROOT / "parts/korsch/korsch-300/index.html"
+    # The verified Korsch importer writes canonical detail links and search data.
+    # Keep this compatibility hook as a no-op so rebuilding cannot duplicate links.
+    return
+    path = ROOT / "parts/korsch/index.html"
     page = path.read_text(encoding="utf-8")
     for part in parts:
         marker = f'<p class="sku">{part.sku}</p>'
@@ -397,7 +395,7 @@ def add_detail_links_to_korsch(parts: list[Part]) -> None:
 
 def add_email_links_to_catalogs(parts: list[Part]) -> None:
     catalog_paths = {
-        "korsch-300": ROOT / "parts/korsch/korsch-300/index.html",
+        "korsch": ROOT / "parts/korsch/index.html",
         "manesty": ROOT / "parts/manesty/index.html",
         "kikusui": ROOT / "parts/kikusui/index.html",
         "stokes": ROOT / "parts/stokes/index.html",
@@ -424,7 +422,7 @@ def add_email_links_to_catalogs(parts: list[Part]) -> None:
                 f'data-part-url="/parts/{part.slug}/">Add to Quote Cart</button>'
             )
             additions = ""
-            if brand_slug != "korsch-300" and "data-pge-cart-add" not in article:
+            if brand_slug != "korsch" and "data-pge-cart-add" not in article:
                 additions += cart_button
             if "email-part-inquiry" not in article:
                 additions += email_link
@@ -438,7 +436,7 @@ def add_email_links_to_catalogs(parts: list[Part]) -> None:
                 flags=re.S,
             )
             page = page[:match.start()] + article + page[match.end():]
-        if brand_slug != "korsch-300":
+        if brand_slug != "korsch":
             quote_css = '<link rel="stylesheet" href="/assets/css/parts-quote-cart.css?v=1">'
             if quote_css not in page:
                 page = page.replace('</head>', quote_css + '</head>', 1)
@@ -480,10 +478,20 @@ def write_content_audit(parts: list[Part]) -> None:
             "identity_source", "technical_description_status", "search_alias_status", "landing_page",
         ))
         for part in parts:
+            identity_source = (
+                "Verified Korsch source-catalog row and matched generated image"
+                if part.brand == "Korsch"
+                else "Existing catalog card and image-path model folder"
+            )
+            technical_status = (
+                "Part name, model, and OEM value transcribed from source catalog; final dimensional fit requires confirmation"
+                if part.brand == "Korsch"
+                else ("Catalog-confirmed engineering note" if part.confirmed_copy else "Identity confirmed; detailed function pending technical review")
+            )
             writer.writerow((
                 part.sku, part.name, part.brand, part.model, part.image,
-                "Existing catalog card and image-path model folder",
-                "Catalog-confirmed engineering note" if part.confirmed_copy else "Identity confirmed; detailed function pending technical review",
+                identity_source,
+                technical_status,
                 "Format and terminology variants generated from confirmed part name",
                 f"/parts/{part.slug}/",
             ))
@@ -494,9 +502,9 @@ def main() -> None:
     parts += image_parts("manesty", "Manesty", "MAN")
     parts += image_parts("kikusui", "Kikusui", "KIK")
     parts += image_parts("stokes", "Stokes", "STK")
-    if len(parts) != 384:
-        raise SystemExit(f"Expected 384 parts, found {len(parts)}")
-    if len({part.sku for part in parts}) != 384:
+    if len(parts) != 619:
+        raise SystemExit(f"Expected 619 parts, found {len(parts)}")
+    if len({part.sku for part in parts}) != 619:
         raise SystemExit("Duplicate SKU detected")
     verified_only = "--verified-only" in sys.argv[1:]
     generated = 0

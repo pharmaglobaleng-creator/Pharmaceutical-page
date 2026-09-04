@@ -58,7 +58,7 @@ export default function SiteHeader() {
             <li className="nav-item"><Link className="nav-link" href="/">Home</Link></li>
             <Dropdown label="Services" allHref="/services/" items={services} />
             <Dropdown label="Solutions" allHref="/solutions/" items={solutions} />
-            <Dropdown label="Parts Store" allHref="/parts/" items={[["Korsch 300 Parts","/parts/korsch/korsch-300/"]]} />
+            <Dropdown label="Parts Store" allHref="/parts/" items={[["Korsch Parts","/parts/korsch/"]]} />
             <Dropdown label="Components" allHref="/components/" items={[["Tablet Punches","/components/tablet-punches.html"],["Tablet Dies","/components/tablet-dies.html"],["Feed Frames","/components/feed-frames.html"]]} />
             <Dropdown label="Coatings" allHref="/coatings/" items={[["Chromium Nitride (CrN)","/coatings/chromium-nitride-crn.html"],["Diamond-Like Carbon (DLC)","/coatings/diamond-like-carbon-dlc.html"],["Titanium Nitride (TiN)","/coatings/titanium-nitride-tin.html"]]} />
             <li className="nav-item"><Link className="nav-link" href="/knowledge-center/">Knowledge Center</Link></li>
