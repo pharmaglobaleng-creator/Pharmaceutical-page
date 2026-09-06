@@ -53,14 +53,19 @@ for part in parts:
     html = page_path.read_text(encoding="utf-8")
     expected_oem = part["oem_number"] if has_oem(part) else "Not listed in source catalog"
     required = [
-        part["sku"], part["part_name"], part["model"], part["catalog_part_number"], expected_oem,
-        "Kikusui", "Verified catalog mapping", "Independent supplier and trademark notice",
+        part["sku"], part["part_name"], part["model"], expected_oem,
+        "Kikusui", "Verified part mapping", "Independent supplier and trademark notice",
     ]
     for value in required:
         if value not in html:
             errors.append(f"{slug}: missing exact value {value!r}")
     if "natoli" in html.casefold():
         errors.append(f"{slug}: unrelated Natoli identifier found")
+    if (
+        (part["catalog_part_number"] != part["oem_number"] and part["catalog_part_number"] in html)
+        or "catalog part number" in html.casefold()
+    ):
+        errors.append(f"{slug}: source catalog-part number is publicly exposed")
     if f'data-part-sku="{part["sku"]}"' not in html or f'data-part-model="{part["model"]}"' not in html:
         errors.append(f"{slug}: quote-cart mapping is not exact")
     canonical = f"{SITE}/parts/{slug}/"
@@ -118,8 +123,13 @@ for part in parts:
     card_end = catalog.find("</article>", card_start)
     card = catalog[card_start:card_end]
     expected_oem = part["oem_number"] if has_oem(part) else "Not listed in source catalog"
-    if card_start < 0 or not all(value in card for value in (part["part_name"], part["model"], part["catalog_part_number"], expected_oem)):
+    if card_start < 0 or not all(value in card for value in (part["part_name"], part["model"], expected_oem)):
         errors.append(f"Catalog card mapping mismatch: {part['sku']}")
+    if (
+        (part["catalog_part_number"] != part["oem_number"] and part["catalog_part_number"] in card)
+        or "catalog part" in card.casefold()
+    ):
+        errors.append(f"Catalog card exposes source catalog-part number: {part['sku']}")
     if bool(part["image_path"]) != (part["image_path"] in card if part["image_path"] else False):
         errors.append(f"Catalog card image mismatch: {part['sku']}")
 
@@ -133,8 +143,8 @@ if f"{SITE}/parts/kikusui/" not in sitemap:
     errors.append("Kikusui collection URL is missing from the main sitemap")
 
 parts_index = (ROOT / "parts/index.html").read_text(encoding="utf-8")
-if "Browse 3211 independently produced replacement-part records." not in parts_index:
-    errors.append("Parts Store total is not 3211 after the Manesty catalog retirement")
+if "Browse 3471 independently produced replacement-part records." not in parts_index:
+    errors.append("Parts Store total is not 3471")
 if '<span class="status-pill">158 parts</span>' not in parts_index:
     errors.append("Kikusui Parts Store badge was not updated to 158 parts")
 
@@ -151,5 +161,5 @@ print(json.dumps({
     "with_catalog_oem": sum(has_oem(part) for part in parts),
     "without_catalog_oem": sum(not has_oem(part) for part in parts),
     "duplicate_images": 0,
-    "mapping": "make + model + part name + catalog part number + OEM preserved per record",
+    "mapping": "make + model + part name + OEM preserved publicly; source catalog-part number kept private",
 }, indent=2))
