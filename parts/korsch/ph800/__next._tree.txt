@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/1ywccti8eh6rv.css","style"]
+:HL["/_next/static/chunks/324ukabx7xh-y.css","style"]
+:HL["/assets/images/parts/korsch/pge-kor-030.webp","image",{"imageSrcSet":"/assets/images/catalog-thumbs/9b5f0f7354c1278c21290adf-320.webp 320w, /assets/images/catalog-thumbs/9b5f0f7354c1278c21290adf-640.webp 640w","imageSizes":"360px","fetchPriority":"high"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"parts","param":null,"prefetchHints":4192,"slots":{"children":{"name":"catalog","param":{"type":"oc","key":"korsch/ph800","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"tbtar0aa4oh1cRrnv35Mm"}

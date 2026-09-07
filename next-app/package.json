@@ -11,11 +11,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "cheerio": "^1.1.2",
-    "sharp": "^0.34.3"
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "cheerio": "1.2.0",
+    "sharp": "0.34.5"
   },
-  "devDependencies": { "@playwright/test": "^1.55.0" }
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
 }
