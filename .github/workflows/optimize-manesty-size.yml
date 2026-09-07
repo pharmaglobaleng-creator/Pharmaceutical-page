@@ -1,0 +1,69 @@
+name: Optimize and validate Manesty download sizes
+on:
+  push:
+    branches: [perf/manesty-smaller-downloads]
+    paths:
+      - 'next-app/scripts/*manesty*.mjs'
+      - '.github/workflows/optimize-manesty-size.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: manesty-size-optimization
+  cancel-in-progress: false
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      MANESTY_BASE_COMMIT: 38970bffc2edf5d6ca1ed9dd2d96539f9a5ce78b
+      NEXT_TELEMETRY_DISABLED: 1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: perf/manesty-smaller-downloads
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install locked build tools
+        working-directory: next-app
+        run: npm ci
+      - name: Configure persistent Manesty-only optimization
+        working-directory: next-app
+        run: |
+          node --check scripts/optimize-manesty.mjs
+          node --check scripts/test-manesty-size.mjs
+          node --check scripts/stage-manesty-export.mjs
+          node scripts/optimize-manesty.mjs configure
+          npm pkg set 'scripts.stage:catalog=node scripts/stage-manesty-export.mjs'
+      - name: Build smaller catalog and non-destructive responsive photos
+        working-directory: next-app
+        run: npm run build:safe
+      - name: Prepare browser checks
+        working-directory: next-app
+        run: npx playwright install --with-deps chromium
+      - name: Test sizes, pagination, original detail pages, search and quote cart
+        working-directory: next-app
+        run: node scripts/test-manesty-size.mjs
+      - name: Stage validated files on feature branch only
+        working-directory: next-app
+        run: npm run stage:catalog
+      - name: Upload test reports and visual evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: manesty-size-evidence
+          path: |
+            manesty-size-evidence/
+            docs/manesty-size-optimization-report.json
+            docs/manesty-size-browser-checks.json
+          retention-days: 7
+      - name: Commit only after all checks pass
+        run: |
+          git diff --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add next-app parts _next catalog-data assets/images/catalog-thumbs sitemap.xml docs
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish validated smaller Manesty catalog and responsive photo copies [skip ci]'
+          git push origin HEAD:perf/manesty-smaller-downloads
