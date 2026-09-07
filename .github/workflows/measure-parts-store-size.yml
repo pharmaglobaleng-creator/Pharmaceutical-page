@@ -1,0 +1,89 @@
+name: Measure published parts-store size
+on:
+  push:
+    branches: ['audit/parts-store-size-20260907']
+    paths: ['.github/workflows/measure-parts-store-size.yml']
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Sum file sizes from the published commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request
+          from collections import defaultdict
+          from pathlib import Path
+          repo = os.environ['REPO']
+          commit = 'ea78cc37fed181a8c6c0553045a912af70ae4e09'
+          url = f'https://api.github.com/repos/{repo}/git/trees/{commit}?recursive=1'
+          req = urllib.request.Request(url, headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'], 'Accept':'application/vnd.github+json', 'User-Agent':'PGE-read-only-size-audit'})
+          with urllib.request.urlopen(req, timeout=90) as r:
+              tree = json.load(r)
+          if tree.get('truncated'):
+              raise RuntimeError('Incomplete tree: refusing to publish incomplete totals')
+          files = [x for x in tree['tree'] if x['type'] == 'blob']
+          def stat(rows):
+              size = sum(x['size'] for x in rows)
+              return {'files':len(rows),'bytes':size,'MB':round(size/1000000,6),'MiB':round(size/1048576,6)}
+          def group(p):
+              if p.startswith('parts/'):
+                  return 'parts_HTML_pages' if p.endswith('.html') else 'parts_route_payloads_and_other_files'
+              if p.startswith('assets/images/parts/'):
+                  return 'original_part_images'
+              if p.startswith('assets/images/catalog-thumbs/'):
+                  return 'catalog_thumbnail_images'
+              if p.startswith('catalog-data/'):
+                  return 'browser_catalog_search_data'
+              if p.startswith('_next/'):
+                  return 'shared_Next_runtime'
+              if p.startswith(('assets/css/','assets/js/')):
+                  return 'shared_stylesheets_and_scripts'
+              if p in ('sitemap.xml','sitemap-parts-images.xml','robots.txt','site.webmanifest'):
+                  return 'shared_sitemaps_and_site_metadata'
+              return None
+          buckets = defaultdict(list)
+          top = defaultdict(list)
+          image_folders = defaultdict(list)
+          for x in files:
+              p=x['path']; top[p.split('/')[0]].append(x)
+              k=group(p)
+              if k: buckets[k].append(x)
+              if p.startswith('assets/images/'):
+                  bits=p.split('/')
+                  key='/'.join(bits[:4]) if len(bits)>4 else p
+                  image_folders[key].append(x)
+          included = [x for x in files if group(x['path'])]
+          report = {
+              'source_commit':commit,
+              'source_tree_url':url,
+              'complete_tree':not tree.get('truncated',False),
+              'units':'MB = 1,000,000 bytes; uncompressed per-file storage, not browser transfer or git history',
+              'parts_store_including_shared_support_files':stat(included),
+              'breakdown':{k:stat(v) for k,v in buckets.items()},
+              'whole_repository_current_files_excluding_git_history':stat(files),
+              'root_directory_breakdown':{k:stat(v) for k,v in top.items()},
+              'image_folder_breakdown':{k:stat(v) for k,v in image_folders.items()},
+              'catalog_first_pages':{brand:next((x['size'] for x in files if x['path']==f'parts/{brand}/index.html'),None) for brand in ['stokes','fette','korsch','manesty','kikusui']},
+              'scope_note':'Includes deployed parts routes, original images in assets/images/parts, generated thumbnails, browser search data, all shared root Next runtime, CSS/JS, sitemaps and metadata. Excludes next-app source/public duplicates, other root data/source/docs, unrelated pages and non-part images. Shared support files also serve other site sections; these are counted once by path.',
+              'production_modified':False
+          }
+          Path('parts-store-size-report.json').write_text(json.dumps(report,indent=2)+'\n')
+          Path('parts-store-file-inventory.json').write_text(json.dumps({'source_commit':commit,'files':files}))
+          print(json.dumps(report,indent=2))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'w') as f:
+              f.write('# Published parts-store file size\n\n'+json.dumps(report,indent=2))
+          PY
+      - name: Save measurement report and inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: parts-store-size-measurement
+          path: |
+            parts-store-size-report.json
+            parts-store-file-inventory.json
+          retention-days: 7
