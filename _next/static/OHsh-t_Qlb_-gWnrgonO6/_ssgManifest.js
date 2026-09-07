@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fparts\u002F[[...catalog]]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

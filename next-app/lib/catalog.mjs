@@ -3,6 +3,7 @@ import path from 'node:path';
 
 export const SITE = 'https://pharmaglobaleng.com';
 export const PAGE_SIZE = 50;
+export function pageSizeFor(brand) { return brand === 'manesty' ? 25 : PAGE_SIZE; }
 let cached;
 export function catalogData() {
   cached ??= JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/parts-catalog.json'), 'utf8'));
@@ -16,12 +17,13 @@ export function catalogRoutes() {
   const data = catalogData();
   const routes = [{ segments: [], kind: 'home', url: '/parts/' }, { segments: ['search'], kind: 'search', url: '/parts/search/' }];
   for (const manufacturer of data.manufacturers) {
+    const pageSize = pageSizeFor(manufacturer.slug);
     for (const model of [null, ...manufacturer.models]) {
       const rows = data.parts.filter(p => p.brand === manufacturer.slug && (!model || p.modelSlug === model.slug));
-      const pages = Math.ceil(rows.length / PAGE_SIZE);
+      const pages = Math.ceil(rows.length / pageSize);
       for (let page = 1; page <= pages; page++) {
         const url = catalogPath(manufacturer.slug, model?.slug, page);
-        routes.push({ segments: url.slice('/parts/'.length).split('/').filter(Boolean), kind: 'catalog', url, brand: manufacturer.slug, model: model?.slug || null, page, pages, total: rows.length, skus: rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE).map(p => p.sku) });
+        routes.push({ segments: url.slice('/parts/'.length).split('/').filter(Boolean), kind: 'catalog', url, brand: manufacturer.slug, model: model?.slug || null, page, pages, total: rows.length, skus: rows.slice((page - 1) * pageSize, page * pageSize).map(p => p.sku) });
       }
     }
   }
