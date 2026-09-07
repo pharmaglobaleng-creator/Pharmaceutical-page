@@ -1,0 +1,17 @@
+import { QuoteProvider, QuoteTrigger } from './QuoteCart';
+
+export function SearchForm({ brand = '', model = '' }) {
+  return <form action="/parts/search/" method="get" className="pc-search" role="search"><label className="pc-sr-only" htmlFor="pc-query">Search part name, model, OEM, or PGE number</label><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="10" cy="10" r="6.5" /><path d="m15 15 6 6" /></svg><input id="pc-query" name="q" type="search" placeholder="Search part name, model, OEM, or PGE number…" maxLength="160" required />{brand && <input type="hidden" name="brand" value={brand} />}{model && <input type="hidden" name="model" value={model} />}<button className="pc-button pc-button-primary" type="submit">Search <span aria-hidden="true">→</span></button></form>;
+}
+
+export default function CatalogShell({ manufacturers, children }) {
+  return <QuoteProvider><div className="pc-site" data-pge-catalog="v2"><a className="pc-skip" href="#pc-main">Skip to catalog</a>
+    <header className="pc-header"><div className="pc-container pc-header-inner"><a href="/" className="pc-brand" aria-label="PharmaGlobalEng home">Pharma<span>Global</span>Eng<small>PHARMACEUTICAL EQUIPMENT SOLUTIONS</small></a><nav className="pc-desktop-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/services/">Services</a><a href="/solutions/">Solutions</a><details className="pc-nav-menu"><summary>Parts Store <span aria-hidden="true">⌄</span></summary><div><a href="/parts/">All replacement parts</a>{manufacturers.map(b => <a key={b.slug} href={`/parts/${b.slug}/`}>{b.name} parts</a>)}<a href="/parts/identify/">Identify a part</a></div></details><a href="/knowledge-center/">Knowledge Center</a><a href="/about/">About Us</a><a href="/contact.html">Contact</a></nav><QuoteTrigger /><details className="pc-mobile-nav"><summary aria-label="Open navigation">☰</summary><nav aria-label="Mobile navigation"><a href="/">Home</a><a href="/parts/">Parts Store</a>{manufacturers.map(b => <a key={b.slug} href={`/parts/${b.slug}/`}>{b.name} parts</a>)}<a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/knowledge-center/">Knowledge Center</a><a href="/about/">About Us</a><a href="/contact.html">Contact</a></nav></details></div></header>
+    <main id="pc-main">{children}</main>
+    <footer className="pc-footer"><div className="pc-container pc-footer-inner"><a href="/" className="pc-brand">Pharma<span>Global</span>Eng<small>PHARMACEUTICAL EQUIPMENT SOLUTIONS</small></a><div className="pc-footer-links"><a href="/parts/identify/">Part identification</a><a href="/services/">Engineering services</a><a href="/contact.html">Contact our team</a></div><span className="pc-footer-motto">PARTS&nbsp; | &nbsp;SERVICE&nbsp; | &nbsp;A STRONGER TOMORROW</span></div></footer>
+  </div></QuoteProvider>;
+}
+
+export function SupplierNotice({ name }) {
+  return <aside className="pc-notice"><strong>Independent replacement parts.</strong> PharmaGlobalEng is not affiliated with or endorsed by {name || 'the referenced equipment manufacturers'}. Manufacturer names, models, and OEM references identify potential compatibility, not OEM origin. Confirm fit, materials, and configuration during quotation. Images are reference images of the listed records; unavailable images are not substituted.</aside>;
+}

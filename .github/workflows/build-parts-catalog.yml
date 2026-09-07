@@ -1,0 +1,86 @@
+name: Build and test Next.js parts catalog
+
+on:
+  push:
+    branches: [nextjs-parts-catalog]
+    paths:
+      - 'next-app/**'
+      - '.github/workflows/build-parts-catalog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nextjs-parts-catalog-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  NEXT_TELEMETRY_DISABLED: '1'
+  NODE_OPTIONS: '--max-old-space-size=6144'
+
+jobs:
+  build-test-stage:
+    if: github.ref == 'refs/heads/nextjs-parts-catalog'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: nextjs-parts-catalog
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install and lock resolved dependency versions
+        working-directory: next-app
+        run: |
+          if [ -f package-lock.json ]; then npm ci --no-audit; else npm install --no-audit; fi
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p = JSON.parse(fs.readFileSync('package.json','utf8'));
+          for (const group of ['dependencies','devDependencies']) {
+            for (const name of Object.keys(p[group] || {})) p[group][name] = JSON.parse(fs.readFileSync(`node_modules/${name}/package.json`,'utf8')).version;
+          }
+          fs.writeFileSync('package.json', JSON.stringify(p,null,2)+'\n');
+          console.log(JSON.stringify({dependencies:p.dependencies,devDependencies:p.devDependencies},null,2));
+          NODE
+          npm install --package-lock-only --ignore-scripts --no-audit
+      - name: Import real catalog data, build, and validate preservation
+        working-directory: next-app
+        run: npm run build:safe
+      - name: Install browser for actual UI checks
+        working-directory: next-app
+        run: npx playwright install --with-deps chromium
+      - name: Browser navigation, search, cart, and visual checks
+        working-directory: next-app
+        run: npm run test:catalog
+      - name: Upload build evidence and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parts-catalog-evidence
+          path: |
+            next-app/.catalog-build-report.json
+            next-app/test-results/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Stage validated output on feature branch only
+        working-directory: next-app
+        run: npm run stage:catalog
+      - name: Commit validated output without touching main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          const files = JSON.parse(fs.readFileSync('next-app/.catalog-publish-files.json','utf8'));
+          files.push('next-app/package.json','next-app/package-lock.json','next-app/data/parts-catalog.json','docs/parts-catalog-migration-report.json');
+          for (let i=0;i<files.length;i+=100) execFileSync('git',['add','--',...files.slice(i,i+100)]);
+          NODE
+          git diff --cached --check
+          if git diff --cached --quiet; then echo 'Already matches validated output.'; exit 0; fi
+          git commit -m 'Publish validated Next.js catalog output and preservation report [skip ci]'
+          git push origin HEAD:nextjs-parts-catalog

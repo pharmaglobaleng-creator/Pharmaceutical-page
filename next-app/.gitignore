@@ -1,0 +1,8 @@
+node_modules/
+.next/
+out/
+.catalog-*.json
+playwright-report/
+test-results/
+public/catalog-data/
+public/assets/images/catalog-thumbs/
