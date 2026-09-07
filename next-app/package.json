@@ -1,16 +1,23 @@
 {
   "name": "pharmaglobaleng-next",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:safe": "next build && node scripts/assemble-safe-export.mjs && node scripts/validate-safe-export.mjs",
+    "dev": "node scripts/prepare-catalogs.mjs && next dev",
+    "build": "node scripts/prepare-catalogs.mjs && next build",
+    "build:safe": "npm run build && node scripts/assemble-catalog-export.mjs && node scripts/validate-catalog-export.mjs",
+    "test:catalog": "playwright test",
+    "stage:catalog": "node scripts/stage-catalog-export.mjs",
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "cheerio": "1.2.0",
+    "sharp": "0.34.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
   }
 }

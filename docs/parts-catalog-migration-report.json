@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "sourceCommit": "833f9d6c8ee64dceb98ad5b6eacbd3daeb2594ca",
+  "totalCatalogRecords": 3471,
+  "manufacturerCatalogs": 5,
+  "modelLandingPages": 68,
+  "generatedHtmlPages": 187,
+  "originalProductLandingPagesPreserved": 3567,
+  "otherLegacyHtmlPreserved": 72,
+  "originalImageFilesPreserved": 3413,
+  "productsWithOriginalImages": 3312,
+  "productsWithoutImages": 159,
+  "placeholderImagesNotSubstituted": true,
+  "allProductUrlsPreserved": true,
+  "allOriginalImagesByteIdentical": true,
+  "initialHtmlProductLimit": 50,
+  "allProductsReachableThroughStaticLinks": true,
+  "maximumGeneratedHtmlBytes": 225194,
+  "maximumGeneratedHtmlUrl": "/parts/stokes/328/page/3/",
+  "manufacturerHtmlSizes": {
+    "stokes": {
+      "beforeBytes": 3567724,
+      "afterBytes": 218484,
+      "pages": 40,
+      "totalProducts": 2000
+    },
+    "fette": {
+      "beforeBytes": 1015112,
+      "afterBytes": 218850,
+      "pages": 16,
+      "totalProducts": 769
+    },
+    "korsch": {
+      "beforeBytes": 511780,
+      "afterBytes": 217605,
+      "pages": 6,
+      "totalProducts": 284
+    },
+    "manesty": {
+      "beforeBytes": 364677,
+      "afterBytes": 216819,
+      "pages": 6,
+      "totalProducts": 260
+    },
+    "kikusui": {
+      "beforeBytes": 225854,
+      "afterBytes": 215656,
+      "pages": 4,
+      "totalProducts": 158
+    }
+  },
+  "schemaCheck": "JSON parsing, catalog types, canonical and visible product correspondence; not a Google rich-result certification",
+  "sourceWarnings": []
+}
