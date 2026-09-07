@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "baseCommit": "38970bffc2edf5d6ca1ed9dd2d96539f9a5ce78b",
+  "manufacturer": "Manesty",
+  "productsRetained": 1000,
+  "productsPerPage": 25,
+  "primaryCatalogPages": 40,
+  "modelLandingPages": 13,
+  "generatedManestyPages": 85,
+  "beforeFirstPageHtmlBytes": 218600,
+  "afterFirstPageHtmlBytes": 131595,
+  "htmlReductionPercent": 39.8,
+  "maximumManestyHtmlBytes": 137488,
+  "uniqueOriginalImagesPreserved": 1000,
+  "originalImageBytes": 714173785,
+  "optimizedFullSizeImageBytes": 38139390,
+  "optimizedImageDimensionsUnchanged": true,
+  "productDetailPagesWithResponsiveImages": 1000,
+  "originalImageFilesUnchanged": true,
+  "partNamesOemReferencesAndUrlsUnchanged": true,
+  "allProductsReachableThroughStaticLinks": true,
+  "note": "Image totals count distinct original images once. Optimized full-size totals are alternative serving files, not total repository storage. Original files remain stored and accessible. This is not a ranking or indexing guarantee."
+}

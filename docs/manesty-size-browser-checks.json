@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "manestyProducts": 1000,
+  "primaryCatalogPages": 40,
+  "noJavaScriptNavigationPassed": true,
+  "lastProductSearchPassed": true,
+  "quoteCartPersistsToOriginalDetailPage": true,
+  "desktopAndMobileLayoutPassed": true,
+  "originalVsWebpComparison": [
+    {
+      "image": "/assets/images/parts/manesty/pge-man-0081-sealing-ring-oem-37114.png",
+      "originalBytes": 853679,
+      "webpBytes": 86810
+    },
+    {
+      "image": "/assets/images/parts/manesty/pge-man-1091-37-station-turret-assembly-oem-39367.png",
+      "originalBytes": 832731,
+      "webpBytes": 76176
+    },
+    {
+      "image": "/assets/images/parts/manesty/pge-man-1092-45-station-turret-assembly-oem-45203.png",
+      "originalBytes": 830905,
+      "webpBytes": 74886
+    }
+  ],
+  "measurements": {
+    "before": {
+      "cards": 50,
+      "htmlBytes": 218600,
+      "resourceDecodedBytes": 736968,
+      "imageRequests": 50,
+      "horizontalOverflow": false
+    },
+    "after": {
+      "cards": 25,
+      "htmlBytes": 131595,
+      "resourceDecodedBytes": 610566,
+      "imageRequests": 26,
+      "horizontalOverflow": false
+    }
+  },
+  "measurementNote": "Local Chromium cold-page test at 1440x1000, DPR 1, with all images on that catalog page explicitly loaded. Decoded resource bytes are not compressed live-network bytes, initial viewport bytes, or a speed score."
+}
