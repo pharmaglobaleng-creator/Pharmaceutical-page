@@ -6,6 +6,7 @@ import json
 import re
 import shutil
 from collections import Counter
+from datetime import date
 from html import escape
 from pathlib import Path
 from urllib.parse import urlencode
@@ -15,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
 DATA_PATH = ROOT / "data/manesty-parts.csv"
 IMAGE_DIR = ROOT / "assets/images/parts/manesty"
-TOTAL_SITE_PARTS = 3471
+TOTAL_SITE_PARTS = 4211
 
 
 def clean(value: object) -> str:
@@ -259,6 +260,7 @@ def build_catalog(parts: list[dict[str, str]]) -> None:
 
 
 def update_sitemaps(parts: list[dict[str, str]]) -> None:
+    lastmod = date.today().isoformat()
     sitemap_path = ROOT / "sitemap.xml"
     xml = sitemap_path.read_text(encoding="utf-8")
     xml = re.sub(
@@ -273,7 +275,7 @@ def update_sitemaps(parts: list[dict[str, str]]) -> None:
             f'  <url><loc>{SITE}/parts/manesty/</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>\n</urlset>',
         )
     entries = "\n".join(
-        f'  <url><loc>{SITE}/parts/{part["sku"].lower()}/</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>'
+        f'  <url><loc>{SITE}/parts/{part["sku"].lower()}/</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>'
         for part in parts
     )
     xml = xml.replace("</urlset>", entries + "\n</urlset>")
@@ -324,7 +326,7 @@ def write_content_audit(parts: list[dict[str, str]]) -> None:
 def main() -> None:
     with DATA_PATH.open(encoding='utf-8', newline='') as handle:
         parts = list(csv.DictReader(handle))
-    assert len(parts) == len({p['sku'] for p in parts}) == 260
+    assert len(parts) == len({p['sku'] for p in parts}) == 1000
     assert all(p['make'] == 'Manesty' and p['image_path'] for p in parts)
     for part in parts:
         destination = ROOT / 'parts' / part['sku'].lower() / 'index.html'
@@ -334,8 +336,8 @@ def main() -> None:
     index = ROOT / 'parts/index.html'
     page = index.read_text()
     page = re.sub(r'Browse \d+ independently produced replacement-part records\.', f'Browse {TOTAL_SITE_PARTS} independently produced replacement-part records.', page)
-    card = '''<a class="machine-card" href="/parts/manesty/">
-            <span class="status-pill">260 parts</span><div class="card-mark" aria-hidden="true">MN</div>
+    card = f'''<a class="machine-card" href="/parts/manesty/">
+            <span class="status-pill">{len(parts)} parts</span><div class="card-mark" aria-hidden="true">MN</div>
             <h3>Replacement Parts Compatible with Selected Manesty Equipment</h3><p>Browse components matched to Manesty model, part name, and OEM reference.</p><span class="card-link">Browse compatible parts →</span>
           </a>'''
     if 'href="/parts/manesty/"' in page:
