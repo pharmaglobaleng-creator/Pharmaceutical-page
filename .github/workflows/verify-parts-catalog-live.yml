@@ -1,0 +1,77 @@
+name: Verify published parts catalogs
+on:
+  push:
+    branches: [nextjs-parts-catalog]
+    paths: ['.github/workflows/verify-parts-catalog-live.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Verify live HTML, pagination, images and runtime files
+        run: |
+          python3 - <<'PY'
+          import json, time, urllib.request, urllib.parse
+          from html.parser import HTMLParser
+          SITE='https://pharmaglobaleng.com'
+          class Page(HTMLParser):
+            def __init__(self):
+              super().__init__(); self.cards=[]; self.canon=[]; self.assets=[]; self.marker=False
+            def handle_starttag(self,tag,attrs):
+              a=dict(attrs)
+              if a.get('data-pge-catalog')=='v2': self.marker=True
+              if tag=='article' and a.get('data-pc-sku'): self.cards.append(a['data-pc-sku'])
+              if tag=='link' and a.get('rel')=='canonical': self.canon.append(a.get('href'))
+              if tag=='link' and a.get('rel')=='stylesheet': self.assets.append(a.get('href'))
+              if tag=='script' and a.get('src'): self.assets.append(a['src'])
+              if tag=='img':
+                if a.get('src'): self.assets.append(a['src'])
+                if a.get('srcset'): self.assets.extend(v.strip().split(' ')[0] for v in a['srcset'].split(','))
+          def get(route):
+            url=urllib.parse.urljoin(SITE,route)
+            assert urllib.parse.urlparse(url).netloc=='pharmaglobaleng.com'
+            req=urllib.request.Request(url,headers={'User-Agent':'PharmaGlobalEng-deployment-check/1.0','Cache-Control':'no-cache'})
+            with urllib.request.urlopen(req,timeout=30) as r:
+              assert r.status==200
+              return r.read(),r.headers.get('Content-Type','')
+          for attempt in range(18):
+            try:
+              content,_=get('/parts/stokes/')
+              p=Page();p.feed(content.decode('utf8'))
+              if p.marker: break
+            except Exception as e: print('Waiting for deployment:',str(e),flush=True)
+            time.sleep(10)
+          else: raise RuntimeError('New live catalog did not become available in the verification window')
+          routes={'/parts/':0,'/parts/stokes/':50,'/parts/fette/':50,'/parts/korsch/':50,'/parts/manesty/':50,'/parts/kikusui/':50,'/parts/stokes/page/2/':50,'/parts/stokes/page/40/':50,'/parts/kikusui/libra/':24}
+          report={'status':'passed','pages':[],'assets':[]}; assets=set()
+          for route,count in routes.items():
+            content,ctype=get(route);p=Page();p.feed(content.decode('utf8'))
+            assert p.marker,(route,'old layout')
+            assert len(p.cards)==count,(route,len(p.cards),count)
+            assert p.canon==[SITE+route],(route,p.canon)
+            report['pages'].append({'url':SITE+route,'status':200,'htmlBytes':len(content),'productCards':len(p.cards)})
+            for a in p.assets:
+              if a and (a.startswith('/_next/') or len(assets)<32):assets.add(a)
+          for asset in sorted(assets):
+            content,ctype=get(asset)
+            assert content,(asset,'empty response')
+            if asset.endswith('.css'):assert 'text/css' in ctype,(asset,ctype)
+            if asset.endswith('.js'):assert 'javascript' in ctype,(asset,ctype)
+            report['assets'].append({'url':SITE+asset,'status':200,'contentType':ctype})
+          content,_=get('/parts/pge-kik-124/')
+          assert b'LOWER PRE-COMPRESSION SHAFT' in content and b'PGE-KIK-124' in content
+          report['existingProductPage']={'url':SITE+'/parts/pge-kik-124/','status':200}
+          content,_=get('/catalog-data/stokes.json');records=json.loads(content)
+          assert len(records)==2000
+          report['fullStokesSearchRecords']=len(records)
+          with open('live-catalog-verification.json','w') as f:json.dump(report,f,indent=2)
+          print(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-catalog-verification
+          path: live-catalog-verification.json
+          retention-days: 7
