@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   apply-phone:
-    if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, 'Apply sitewide phone CTA') }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out main
@@ -50,5 +50,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html'
-          git commit -m "Apply sitewide phone CTA [skip ci]"
+          git commit -m "Apply sitewide phone CTA"
           git push origin HEAD:main
