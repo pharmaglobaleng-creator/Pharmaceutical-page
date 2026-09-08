@@ -1,0 +1,54 @@
+name: Apply sitewide phone CTA
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.html'
+      - 'scripts/apply_sitewide_phone.py'
+      - '.github/workflows/apply-sitewide-phone.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pharmaglobaleng-sitewide-phone
+  cancel-in-progress: false
+
+jobs:
+  apply-phone:
+    if: ${{ !contains(github.event.head_commit.message || '', '[skip ci]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply phone CTA to public HTML
+        run: python scripts/apply_sitewide_phone.py
+
+      - name: Verify patch formatting
+        run: git diff --check
+
+      - name: Commit generated HTML updates
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "All public HTML pages already contain the current phone CTA."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          git commit -m "Apply sitewide phone CTA [skip ci]"
+          git push origin HEAD:main
