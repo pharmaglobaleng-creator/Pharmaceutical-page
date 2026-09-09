@@ -1,0 +1,171 @@
+name: Requested Yandex IndexNow submission
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/submit-yandex-indexnow.yml']
+  workflow_dispatch:
+
+# No recurring schedule. Only this explicitly tagged setup commit or a manual run
+# submits URLs. Does not modify site content or merge outstanding corrections.
+permissions:
+  contents: read
+concurrency:
+  group: pge-yandex-indexnow-submission
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[submit-yandex]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify existing live key and submit public sitemap URLs once
+        env:
+          INDEXNOW_KEY: 529d25100023d222289e11561b2213e1
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures
+          import datetime
+          import hashlib
+          from html.parser import HTMLParser
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+          import urllib.robotparser
+          import xml.etree.ElementTree as ET
+
+          SITE = 'https://pharmaglobaleng.com'
+          HOST = 'pharmaglobaleng.com'
+          ENDPOINT = 'https://yandex.com/indexnow'
+          KEY = os.environ['INDEXNOW_KEY']
+          assert re.fullmatch(r'[a-f0-9]{32}', KEY)
+          print('::add-mask::' + KEY)
+          KEY_URL = SITE + '/' + KEY + '.txt'
+          OUT = Path('yandex-submission-evidence')
+          OUT.mkdir(exist_ok=True)
+          def now():
+              return datetime.datetime.now(datetime.timezone.utc).isoformat()
+          receipt = {'site': SITE, 'endpoint': ENDPOINT, 'requested_at_utc': now(),
+                     'source_commit': os.environ.get('GITHUB_SHA'),
+                     'workflow_run_id': os.environ.get('GITHUB_RUN_ID'),
+                     'status': 'not_submitted',
+                     'limits': 'An IndexNow receipt does not prove crawling, indexing or ranking and does not register a Yandex Webmaster dashboard account.'}
+          def canonical(url):
+              p = urllib.parse.urlsplit(url)
+              if p.scheme != 'https' or p.netloc != HOST or p.fragment or p.query:
+                  raise ValueError('Off-site or noncanonical input URL: ' + url)
+              return url
+          def get(url):
+              canonical(url)
+              req = urllib.request.Request(url, headers={'User-Agent': 'PharmaGlobalEng-IndexNow-Submission/1.0'})
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  if r.status != 200 or r.geturl() != url:
+                      raise ValueError('Live URL did not return an unredirected HTTP 200: ' + url)
+                  body = r.read(10_000_001)
+                  if len(body) > 10_000_000:
+                      raise ValueError('Live input exceeds safety size limit')
+                  return body, {k.lower(): v for k, v in r.headers.items()}
+          class Head(HTMLParser):
+              def __init__(self, text):
+                  super().__init__()
+                  self.robots = []
+                  self.canonicals = []
+                  self.feed(text)
+              def handle_starttag(self, tag, attrs):
+                  a = dict(attrs)
+                  if tag == 'meta' and a.get('name', '').lower() in ('robots', 'yandex', 'yandexbot'):
+                      self.robots.append(a.get('content', ''))
+                  if tag == 'link' and 'canonical' in a.get('rel', '').lower().split():
+                      self.canonicals.append(a.get('href', ''))
+          try:
+              key_body, _ = get(KEY_URL)
+              if key_body.decode('utf-8-sig').strip() != KEY:
+                  raise ValueError('Existing live ownership file does not match; no submission attempted')
+              receipt['ownership_file_live_verified'] = True
+              sitemap_bytes, _ = get(SITE + '/sitemap.xml')
+              xml = ET.fromstring(sitemap_bytes)
+              if xml.tag.split('}')[-1] != 'urlset':
+                  raise ValueError('Expected the existing primary URL sitemap')
+              entries = [e.text.strip() for e in xml.findall('{*}url/{*}loc') if e.text]
+              urls = list(dict.fromkeys(canonical(u) for u in entries))
+              if not urls or len(urls) > 10000:
+                  raise ValueError('Empty or oversized sitemap batch')
+              robot_bytes, _ = get(SITE + '/robots.txt')
+              robot_text = robot_bytes.decode('utf-8-sig')
+              robots = urllib.robotparser.RobotFileParser()
+              robots.parse(robot_text.splitlines())
+              if any(not robots.can_fetch(agent, u) for agent in ('Yandex', 'YandexBot') for u in urls):
+                  raise ValueError('A submitted URL is blocked for Yandex by robots.txt')
+              receipt.update({'sitemap': SITE + '/sitemap.xml', 'sitemap_http_status': 200,
+                              'sitemap_sha256': hashlib.sha256(sitemap_bytes).hexdigest(),
+                              'sitemap_url_entries': len(entries), 'unique_urls': len(urls),
+                              'individual_parts_urls': sum(bool(re.fullmatch(re.escape(SITE) + r'/parts/pge-[^/]+/', u)) for u in urls),
+                              'robots_allows_submitted_urls': True,
+                              'sitemap_declared_in_robots': SITE + '/sitemap.xml' in robot_text})
+              samples = [SITE + '/', SITE + '/parts/', SITE + '/parts/kikusui/',
+                         SITE + '/parts/pge-stk-017/', SITE + '/parts/pge-fet-001/']
+              def check_page(url):
+                  if url not in urls:
+                      raise ValueError('Expected sample is missing from sitemap: ' + url)
+                  body, headers = get(url)
+                  head = Head(body.decode('utf-8'))
+                  directives = ','.join(head.robots + [headers.get('x-robots-tag', '')]).lower()
+                  if re.search(r'\b(?:noindex|none)\b', directives) or head.canonicals != [url]:
+                      raise ValueError('Sample indexing or canonical check failed: ' + url)
+                  return {'url': url, 'http_status': 200, 'canonical_matches': True, 'noindex': False}
+              with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+                  receipt['production_sample_checks'] = list(pool.map(check_page, samples))
+              (OUT / 'requested-urls.txt').write_text('\n'.join(urls) + '\n', encoding='utf-8')
+              payload = json.dumps({'host': HOST, 'key': KEY, 'keyLocation': KEY_URL, 'urlList': urls}).encode('utf-8')
+              req = urllib.request.Request(ENDPOINT, data=payload, method='POST',
+                        headers={'Content-Type': 'application/json; charset=utf-8',
+                                 'User-Agent': 'PharmaGlobalEng-IndexNow-Submission/1.0'})
+              receipt['post_attempted'] = True
+              # Exactly one POST; do not retry a response with unknown outcome.
+              try:
+                  with urllib.request.urlopen(req, timeout=90) as response:
+                      status = response.status
+                      final = response.geturl()
+                      content_type = response.headers.get('Content-Type', '')
+                      body = response.read(8192).decode('utf-8', errors='replace')
+              except urllib.error.HTTPError as error:
+                  status = error.code
+                  final = error.geturl()
+                  content_type = error.headers.get('Content-Type', '')
+                  body = error.read(8192).decode('utf-8', errors='replace')
+              receipt.update({'http_status': status, 'response_content_type': content_type,
+                              'response_body': body.replace(KEY, '[redacted]'), 'completed_at_utc': now()})
+              if status not in (200, 202):
+                  receipt['status'] = 'rejected'
+                  raise RuntimeError('Yandex did not accept this request: HTTP ' + str(status))
+              if final != ENDPOINT or 'text/html' in content_type.lower() or body.lstrip().startswith('<'):
+                  receipt['status'] = 'unrecognized_response'
+                  raise RuntimeError('Unexpected redirect or HTML response; acceptance is not confirmed')
+              receipt['status'] = 'received' if status == 200 else 'received_key_validation_pending'
+              receipt['urls_received'] = len(urls)
+              receipt['meaning'] = ('Yandex received the URLs; indexing is not confirmed.' if status == 200 else
+                                    'Yandex accepted the request; key validation remains pending. Indexing is not confirmed.')
+              print(json.dumps(receipt, indent=2), flush=True)
+          except Exception as error:
+              receipt['error'] = str(error).replace(KEY, '[redacted]')
+              if receipt.get('post_attempted') and 'http_status' not in receipt:
+                  receipt['status'] = 'submission_response_unknown'
+              print(json.dumps(receipt, indent=2), flush=True)
+              raise
+          finally:
+              (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+                  summary.write('# Yandex / IndexNow submission\n\n```json\n' + json.dumps(receipt, indent=2) + '\n```\n')
+          PY
+      - name: Preserve submission response and URL list
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: yandex-indexnow-submission-evidence
+          path: yandex-submission-evidence/
+          retention-days: 30
