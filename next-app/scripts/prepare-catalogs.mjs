@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -73,6 +74,11 @@ if (fs.existsSync(dataFile)) {
     data.manufacturers.push({ slug: brand, name: brandName, count: cards.length, sourceHash: hash(html), originalHtmlBytes: Buffer.byteLength(html) });
   }
 }
+
+// PGE: enforce source-reviewed OEM restrictions before export.
+write(dataFile, JSON.stringify(data, null, 2) + '\n');
+execFileSync('python3', [path.join(root, 'scripts/sync_parts_reference_status.py')], { cwd: root, stdio: 'inherit' });
+data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
 
 const imageCache = new Map();
 for (const part of data.parts) {
