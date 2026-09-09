@@ -1,18 +1,26 @@
 # PharmaGlobalEng
 
-## Batch 6 flagship resources
+PharmaGlobalEng is an independent manufacturer and supplier of replacement components, tablet tooling services, surface engineering, and technical support for pharmaceutical tablet-compression equipment. Manufacturer and model names are used only to identify potential equipment compatibility; compatibility is confirmed before manufacture or quotation.
+
+## Replacement parts catalog
+- Parts Store: https://pharmaglobaleng.com/parts/
+- Korsch replacement parts: https://pharmaglobaleng.com/parts/korsch/
+- Kikusui replacement parts: https://pharmaglobaleng.com/parts/kikusui/
+- Manesty replacement parts: https://pharmaglobaleng.com/parts/manesty/
+- Stokes replacement parts: https://pharmaglobaleng.com/parts/stokes/
+- Fette replacement parts: https://pharmaglobaleng.com/parts/fette/
+
+Individual part records use PharmaGlobalEng SKU identifiers and, only when supported by the publication source, equipment make/model and OEM cross-reference information. Exact dimensions, material, finish, configuration, and fit are confirmed during engineering review. PharmaGlobalEng is not affiliated with or endorsed by the referenced equipment manufacturers.
+
+## Engineering resources
 - Compression Force Optimization: https://pharmaglobaleng.com/solutions/compression-force-optimization.html
 - Dwell Time Optimization: https://pharmaglobaleng.com/solutions/dwell-time-optimization.html
 - Pharmaceutical Tablet Die Maintenance: https://pharmaglobaleng.com/services/die-maintenance.html
 - Tablet Press Troubleshooting: https://pharmaglobaleng.com/services/tablet-press-troubleshooting.html
 - Punch and Die Maintenance: https://pharmaglobaleng.com/services/punch-die-maintenance.html
-
-Each page contains 45 engineering facts, direct answers, practical actions, FAQs, decision workflows, internal links, and structured data.
-
-## Batch 7 flagship resources
 - Tablet Hardness Optimization: https://pharmaglobaleng.com/solutions/tablet-hardness-optimization.html
 - Tablet Tooling Failure Analysis: https://pharmaglobaleng.com/services/tablet-tooling-failure-analysis.html
 - Tablet Tooling Lifecycle Management: https://pharmaglobaleng.com/services/tablet-tooling-lifecycle-management.html
 - Pharmaceutical Tooling Documentation: https://pharmaglobaleng.com/services/pharmaceutical-tooling-documentation.html
 
-Each page contains comprehensive engineering guidance, executive summaries, key takeaways, engineering workflows, inspection procedures, decision matrices, FAQs, internal links, structured data (JSON-LD), and practical recommendations supporting pharmaceutical tablet tooling, manufacturing quality, and process optimization.
+These resources provide engineering guidance, direct answers, inspection and decision workflows, internal links, and structured data. The site is designed to publish source-supported information rather than unsupported specifications or search-engine-targeted filler.
