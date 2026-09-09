@@ -87,6 +87,8 @@ def local_target(value, base, inventory):
     if p.scheme not in ('http','https') or p.netloc not in ('pharmaglobaleng.com','www.pharmaglobaleng.com'):
         return None
     name = unquote(p.path).lstrip('/')
+    if not name:
+        return 'index.html' if 'index.html' in inventory else '!missing:index.html'
     candidates = [name, name+'index.html' if name.endswith('/') else name+'/index.html', name+'.html']
     for candidate in candidates:
         if candidate in inventory: return candidate
