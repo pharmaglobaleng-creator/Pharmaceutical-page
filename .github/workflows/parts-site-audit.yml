@@ -1,0 +1,53 @@
+name: Expanded parts-site audit
+on:
+  push:
+    branches: ['audit/parts-search-quality-20260909']
+    paths:
+      - 'scripts/audit_parts_site.py'
+      - 'scripts/fix_parts_audit_findings.py'
+      - '.github/workflows/parts-site-audit.yml'
+      - 'parts/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: expanded-parts-audit-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /parts/
+            /scripts/
+            /catalog-data/
+            /data/
+            /docs/
+            /robots.txt
+            /sitemap.xml
+            /sitemap-parts-images.xml
+            /next-app/package.json
+            /next-app/scripts/
+            /assets/js/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check audit syntax
+        run: python -m py_compile scripts/audit_parts_site.py
+      - name: Audit all parts HTML, links, assets and sitemaps
+        run: python scripts/audit_parts_site.py --live
+      - name: Preserve complete audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: expanded-parts-audit
+          path: audit-output/
+          retention-days: 14
+      - name: Display summary
+        if: always()
+        run: cat audit-output/parts-audit.md >> "$GITHUB_STEP_SUMMARY"
