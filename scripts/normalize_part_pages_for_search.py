@@ -46,21 +46,24 @@ class Truth:
     verification: str | None = None
     source: str | None = None
 
+
 def clean(value: object) -> str:
     return re.sub(r"\s+", " ", "" if value is None else str(value)).strip()
+
 
 def usable_model(value: object) -> str | None:
     value = clean(value)
     return None if value.casefold() in GENERIC_MODEL_VALUES else value
 
+
 def usable_oem(value: object) -> str | None:
     value = clean(value)
     return None if value.casefold() in OEM_EMPTY_VALUES else value
 
+
 def load_truth() -> dict[str, Truth]:
     result: dict[str, Truth] = {}
 
-    # Current manufacturer catalog publication records.
     catalog_dir = ROOT / "catalog-data"
     if catalog_dir.exists():
         for path in sorted(catalog_dir.glob("*.json")):
@@ -92,8 +95,8 @@ def load_truth() -> dict[str, Truth]:
                     source=path.relative_to(ROOT).as_posix(),
                 )
 
-    # Kikusui has row-level verification. Reviewed-only values are not published
-    # as verified OEM cross-references.
+    # Kikusui rows carry row-level source-review status. Only rows explicitly
+    # marked Verified may publish the OEM value as a verified cross-reference.
     kik = ROOT / "data/kikusui-parts.csv"
     if kik.exists():
         with kik.open(encoding="utf-8", newline="") as handle:
@@ -117,8 +120,8 @@ def load_truth() -> dict[str, Truth]:
                     source="data/kikusui-parts.csv",
                 )
 
-    # Only cross-reference audit rows explicitly marked verified + approved may
-    # add an OEM number to public pages.
+    # The cross-reference audit may add an OEM number only when it is explicitly
+    # verified, approved for publication, and supported by a source URL.
     audit = ROOT / "data/oem-cross-reference-audit.csv"
     if audit.exists():
         with audit.open(encoding="utf-8", newline="") as handle:
@@ -148,20 +151,26 @@ def load_truth() -> dict[str, Truth]:
                 )
     return result
 
+
 TRUTH = load_truth()
+
 
 def sku_from_path(path: Path) -> str:
     return path.parent.name.upper()
 
+
 def detail_paths() -> list[Path]:
     return sorted(p for p in PARTS_ROOT.glob("pge-*/index.html") if p.is_file())
+
 
 def strip_tags(value: str) -> str:
     return clean(html.unescape(re.sub(r"<[^>]+>", " ", value)))
 
+
 def extract(pattern: str, text: str) -> str | None:
     m = re.search(pattern, text, re.I | re.S)
     return m.group(1) if m else None
+
 
 def fallback_truth(path: Path, text: str) -> Truth:
     sku = sku_from_path(path)
@@ -174,10 +183,12 @@ def fallback_truth(path: Path, text: str) -> Truth:
     name = re.split(r"\s+(?:for|—|\|)\s+", h1, maxsplit=1, flags=re.I)[0].strip()
     return Truth(sku=sku, name=name or sku, brand=brand, source="HTML fallback")
 
+
 def set_title(text: str, value: str) -> str:
     if re.search(r"<title[^>]*>.*?</title>", text, re.I | re.S):
         return re.sub(r"<title[^>]*>.*?</title>", f"<title>{html.escape(value)}</title>", text, count=1, flags=re.I | re.S)
     return re.sub(r"</head>", f"<title>{html.escape(value)}</title>\n</head>", text, count=1, flags=re.I)
+
 
 def set_meta(text: str, name_or_property: str, value: str, *, prop: bool = False) -> str:
     attr = "property" if prop else "name"
@@ -187,12 +198,14 @@ def set_meta(text: str, name_or_property: str, value: str, *, prop: bool = False
         return re.sub(pattern, tag, text, count=1, flags=re.I)
     return re.sub(r"</head>", tag + "\n</head>", text, count=1, flags=re.I)
 
+
 def wordsafe_truncate(value: str, limit: int) -> str:
     value = clean(value)
     if len(value) <= limit:
         return value
     cut = value[: limit + 1].rsplit(" ", 1)[0].rstrip(" |–—-:,;")
     return cut or value[:limit].rstrip()
+
 
 def page_title(t: Truth) -> str:
     if t.model:
@@ -203,10 +216,12 @@ def page_title(t: Truth) -> str:
         return candidate
     return wordsafe_truncate(f"{t.name} | {t.sku} | {t.brand}", 72)
 
+
 def page_h1(t: Truth) -> str:
     if t.model:
         return f"{t.name} for {t.brand} {t.model}"
     return f"{t.name} — {t.brand} Replacement Component"
+
 
 def page_meta(t: Truth) -> str:
     equip = f"{t.brand} {t.model}" if t.model else t.brand
@@ -215,6 +230,7 @@ def page_meta(t: Truth) -> str:
         base += f" OEM cross-reference {t.oem}."
     base += " Compatibility and specifications are confirmed before quotation."
     return wordsafe_truncate(base, 175)
+
 
 def factual_aliases(t: Truth) -> list[str]:
     values = [t.name]
@@ -232,6 +248,7 @@ def factual_aliases(t: Truth) -> list[str]:
             seen.add(key)
     return out[:5]
 
+
 def sanitize_placeholders(text: str) -> str:
     text = re.sub(r"\b([A-Za-z][A-Za-z0-9& .'-]*)\s+Model unresolved tablet press\b", r"\1 tablet press", text, flags=re.I)
     text = re.sub(r"\bselected\s+([A-Za-z][A-Za-z0-9& .'-]*)\s+Model unresolved tablet press configurations\b", r"selected \1 tablet press configurations", text, flags=re.I)
@@ -240,13 +257,18 @@ def sanitize_placeholders(text: str) -> str:
     text = re.sub(r"\bmodel unspecified\b", "model to be confirmed", text, flags=re.I)
     return text
 
+
 def rewrite_h1(text: str, t: Truth) -> str:
     value = html.escape(page_h1(t))
-    return re.sub(r"<h1([^>]*)>.*?</h1>", rf"<h1\1>{value}</h1>", text, count=1, flags=re.I | re.S)
+    pattern = re.compile(r"<h1([^>]*)>.*?</h1>", re.I | re.S)
+    return pattern.sub(lambda m: f"<h1{m.group(1)}>{value}</h1>", text, count=1)
+
 
 def rewrite_lead(text: str, t: Truth) -> str:
     value = html.escape(page_meta(t))
-    return re.sub(r'(<div class="part-intro">.*?<p class="lead">).*?(</p>)', rf"\1{value}\2", text, count=1, flags=re.I | re.S)
+    pattern = re.compile(r'(<div class="part-intro">.*?<p class="lead">).*?(</p>)', re.I | re.S)
+    return pattern.sub(lambda m: m.group(1) + value + m.group(2), text, count=1)
+
 
 def rewrite_compatibility(text: str, t: Truth) -> str:
     if t.model:
@@ -258,6 +280,7 @@ def rewrite_compatibility(text: str, t: Truth) -> str:
     else:
         content = f"<strong>Compatibility confirmation required</strong><br>{ref}"
     return re.sub(r'<div class="compatibility">.*?</div>', f'<div class="compatibility">{content}</div>', text, count=1, flags=re.I | re.S)
+
 
 def rewrite_alias_section(text: str, t: Truth) -> str:
     chips = "".join(f'<span class="alias">{html.escape(v)}</span>' for v in factual_aliases(t))
@@ -271,6 +294,7 @@ def rewrite_alias_section(text: str, t: Truth) -> str:
     )
     return re.sub(r'<div class="aliases">.*?</div>', f'<div class="aliases">{chips}</div>', text, count=1, flags=re.I | re.S)
 
+
 def remove_unverified_oem_visible(text: str, t: Truth) -> str:
     if t.oem_verified:
         return text
@@ -282,15 +306,19 @@ def remove_unverified_oem_visible(text: str, t: Truth) -> str:
     )
     return re.sub(r"OEM\+number%3A\+.*?%0A", "", text, flags=re.I)
 
+
 def rewrite_model_attributes(text: str, t: Truth) -> str:
     model = t.model or "Confirm during quotation"
-    text = re.sub(r'(data-part-model=")[^"]*(")', rf'\1{html.escape(model, quote=True)}\2', text, count=1, flags=re.I)
+    escaped_model = html.escape(model, quote=True)
+    pattern = re.compile(r'(data-part-model=")[^"]*(")', re.I)
+    text = pattern.sub(lambda m: m.group(1) + escaped_model + m.group(2), text, count=1)
     return re.sub(
         r"Model\+reference%3A\+(?:Model\+unresolved|model\+to\+be\+confirmed)",
         "Model+reference%3A+Confirm+during+quotation",
         text,
         flags=re.I,
     )
+
 
 def organization_entity() -> dict:
     return {
@@ -300,6 +328,7 @@ def organization_entity() -> dict:
         "url": SITE + "/",
         "logo": {"@type": "ImageObject", "url": SITE + "/assets/images/about-pge-logo.svg"},
     }
+
 
 def normalize_product(product: dict, t: Truth, meta: str) -> dict:
     product["name"] = page_h1(t)
@@ -328,6 +357,8 @@ def normalize_product(product: dict, t: Truth, meta: str) -> dict:
         product.pop("identifier", None)
     product["additionalProperty"] = props
 
+    # Do not fabricate prices for quotation-only parts. Keep offers only when the
+    # page already has a complete price + currency pair.
     offers = product.get("offers")
     if offers:
         offer_list = offers if isinstance(offers, list) else [offers]
@@ -340,6 +371,7 @@ def normalize_product(product: dict, t: Truth, meta: str) -> dict:
         else:
             product.pop("offers", None)
     return product
+
 
 def rewrite_jsonld(text: str, t: Truth) -> tuple[str, bool]:
     touched = False
@@ -383,6 +415,7 @@ def rewrite_jsonld(text: str, t: Truth) -> tuple[str, bool]:
 
     return JSONLD_RE.sub(repl, text), touched
 
+
 def normalize_page(path: Path, text: str) -> str:
     t = TRUTH.get(sku_from_path(path)) or fallback_truth(path, text)
     new = sanitize_placeholders(text)
@@ -407,6 +440,20 @@ def normalize_page(path: Path, text: str) -> str:
         new = new.replace("<strong>Source verification:</strong>", "<strong>Source review:</strong>")
     return new
 
+
+def has_unverified_oem_exposure(text: str, t: Truth) -> bool:
+    if not t.raw_oem or t.oem_verified:
+        return False
+    raw = re.escape(t.raw_oem)
+    patterns = [
+        rf'<span class="alias">\s*{raw}\s*</span>',
+        rf'\bOEM(?:\s+(?:number|cross-reference))?\b[^<\n]{{0,80}}{raw}',
+        rf'"propertyID":"OEM cross-reference","value":"{raw}"',
+        rf'"name":"OEM cross-reference","value":"{raw}"',
+    ]
+    return any(re.search(pattern, text, re.I) for pattern in patterns)
+
+
 def audit_page(path: Path, text: str) -> dict[str, bool | int | str]:
     sku = sku_from_path(path)
     t = TRUTH.get(sku) or fallback_truth(path, text)
@@ -427,7 +474,6 @@ def audit_page(path: Path, text: str) -> dict[str, bool | int | str]:
         if '"Product"' in json.dumps(data, ensure_ascii=False):
             product_schema = True
     expected = f"{SITE}/parts/{sku.lower()}/"
-    unverified_oem_exposed = bool(t.raw_oem and not t.oem_verified and re.search(re.escape(t.raw_oem), text, re.I))
     return {
         "placeholder": bool(PLACEHOLDER_RE.search(text)),
         "title_long": len(title) > 72,
@@ -439,10 +485,11 @@ def audit_page(path: Path, text: str) -> dict[str, bool | int | str]:
         "invalid_jsonld": not json_valid,
         "alias_excess": len(aliases) > 5,
         "search_directed_copy": bool(re.search(r"Search recognizes|search recognizes|Find this part using similar terms", text)),
-        "unverified_oem_exposed": unverified_oem_exposed,
+        "unverified_oem_exposed": has_unverified_oem_exposure(text, t),
         "title": title,
         "meta": meta,
     }
+
 
 def totals(rows: list[dict]) -> Counter:
     keys = [
@@ -452,9 +499,11 @@ def totals(rows: list[dict]) -> Counter:
     ]
     return Counter({key: sum(bool(row.get(key)) for row in rows) for key in keys})
 
+
 def duplicate_count(rows: list[dict], key: str) -> int:
     counts = Counter(clean(row.get(key)) for row in rows if clean(row.get(key)))
     return sum(count - 1 for count in counts.values() if count > 1)
+
 
 def render_report(before_rows: list[dict], after_rows: list[dict], changed: int, source_coverage: int) -> str:
     b = totals(before_rows)
@@ -500,6 +549,7 @@ def render_report(before_rows: list[dict], after_rows: list[dict], changed: int,
     ]
     return "\n".join(lines)
 
+
 def run(fix: bool, check: bool) -> int:
     paths = detail_paths()
     before_rows = []
@@ -539,12 +589,14 @@ def run(fix: bool, check: bool) -> int:
         return 1
     return 0
 
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--fix", action="store_true", help="Normalize part pages in place.")
     parser.add_argument("--check", action="store_true", help="Exit non-zero when critical issues remain.")
     args = parser.parse_args()
     return run(args.fix, args.check)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
