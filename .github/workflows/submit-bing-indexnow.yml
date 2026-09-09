@@ -1,0 +1,186 @@
+name: Submit published site to Bing via IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/submit-bing-indexnow.yml']
+  workflow_dispatch:
+
+# This runs only when this submission workflow is changed or manually requested.
+# It does not rebuild the site, merge pending PRs, or repeatedly ping every edit.
+permissions:
+  contents: read
+concurrency:
+  group: pge-bing-indexnow-submission
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify published ownership and submit the live sitemap URLs once
+        env:
+          INDEXNOW_KEY: 529d25100023d222289e11561b2213e1
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures
+          import datetime
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+          import urllib.robotparser
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+
+          SITE = 'https://pharmaglobaleng.com'
+          HOST = 'pharmaglobaleng.com'
+          ENDPOINT = 'https://www.bing.com/indexnow'
+          KEY = os.environ['INDEXNOW_KEY']
+          assert re.fullmatch(r'[a-f0-9]{32}', KEY)
+          print('::add-mask::' + KEY)
+          KEY_URL = SITE + '/' + KEY + '.txt'
+          OUT = Path('bing-submission-evidence')
+          OUT.mkdir(exist_ok=True)
+          receipt = {'site': SITE, 'endpoint': ENDPOINT,
+                     'requested_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                     'source_commit': os.environ.get('GITHUB_SHA'),
+                     'workflow_run_id': os.environ.get('GITHUB_RUN_ID'),
+                     'status': 'not_submitted',
+                     'limits': 'URL receipt is not proof of crawling, indexing or ranking. This does not register a Bing Webmaster Tools account.'}
+
+          def site_url(url):
+              p = urllib.parse.urlsplit(url)
+              if p.scheme != 'https' or p.netloc != HOST or p.fragment or p.query:
+                  raise ValueError('Noncanonical or off-site URL in submission input: ' + url)
+              return url
+
+          def get(url):
+              site_url(url)
+              req = urllib.request.Request(url, headers={'User-Agent': 'PharmaGlobalEng-IndexNow-Submission/1.0'})
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  site_url(r.geturl())
+                  data = r.read(10_000_001)
+                  if len(data) > 10_000_000:
+                      raise ValueError('Response exceeds safety size limit')
+                  if r.status != 200:
+                      raise ValueError('Unexpected website HTTP status: ' + str(r.status))
+                  return data, dict(r.headers), r.geturl()
+
+          class Head(HTMLParser):
+              def __init__(self, text):
+                  super().__init__()
+                  self.robots = []
+                  self.canonicals = []
+                  self.feed(text)
+              def handle_starttag(self, tag, attrs):
+                  a = dict(attrs)
+                  if tag == 'meta' and a.get('name', '').lower() in ('robots', 'bingbot'):
+                      self.robots.append(a.get('content', ''))
+                  if tag == 'link' and 'canonical' in a.get('rel', '').lower().split():
+                      self.canonicals.append(a.get('href', ''))
+
+          try:
+              # Do not send the batch until the exact ownership file is public.
+              verified = False
+              for attempt in range(24):
+                  try:
+                      body, headers, final_url = get(KEY_URL)
+                      if body.decode('utf-8-sig').strip() == KEY and final_url == KEY_URL:
+                          verified = True
+                          break
+                  except (OSError, ValueError, UnicodeError):
+                      pass
+                  print('Ownership file not live yet; deployment check', attempt + 1, flush=True)
+                  time.sleep(15)
+              if not verified:
+                  raise RuntimeError('Ownership file could not be verified on the live domain; no URLs submitted')
+              receipt['ownership_file_live_verified'] = True
+
+              robot_bytes, _, _ = get(SITE + '/robots.txt')
+              robot_text = robot_bytes.decode('utf-8-sig')
+              robots = urllib.robotparser.RobotFileParser()
+              robots.parse(robot_text.splitlines())
+              sitemap_url = SITE + '/sitemap.xml'
+              sitemap_bytes, _, sitemap_final = get(sitemap_url)
+              xml = ET.fromstring(sitemap_bytes)
+              if xml.tag.split('}')[-1] != 'urlset':
+                  raise ValueError('Expected the existing primary URL sitemap, not a sitemap index')
+              original_urls = [e.text.strip() for e in xml.findall('{*}url/{*}loc') if e.text]
+              urls = list(dict.fromkeys(site_url(u) for u in original_urls))
+              if not urls or len(urls) > 10000:
+                  raise ValueError('Unexpected URL count; refusing an empty or oversized submission')
+              blocked = [u for u in urls if not robots.can_fetch('bingbot', u)]
+              if blocked:
+                  raise ValueError('Sitemap contains Bingbot-blocked URLs; review before submission')
+              receipt.update({'sitemap': sitemap_url, 'sitemap_http_status': 200,
+                              'sitemap_sha256': hashlib.sha256(sitemap_bytes).hexdigest(),
+                              'sitemap_url_entries': len(original_urls), 'unique_urls': len(urls),
+                              'robots_allows_submitted_urls': True,
+                              'sitemap_declared_in_robots': sitemap_url in robot_text})
+
+              samples = [SITE + '/', SITE + '/parts/', SITE + '/parts/kikusui/',
+                         SITE + '/parts/pge-stk-017/', SITE + '/parts/pge-fet-001/']
+              def check_page(url):
+                  if url not in urls:
+                      raise ValueError('Expected sample is missing from live sitemap: ' + url)
+                  data, headers, final = get(url)
+                  head = Head(data.decode('utf-8'))
+                  directives = ','.join(head.robots + [headers.get('X-Robots-Tag', ''), headers.get('x-robots-tag', '')]).lower()
+                  if re.search(r'\b(?:noindex|none)\b', directives):
+                      raise ValueError('Sample explicitly blocks indexing: ' + url)
+                  if final != url or head.canonicals != [url]:
+                      raise ValueError('Sample canonical or redirect mismatch: ' + url)
+                  return {'url': url, 'http_status': 200, 'canonical_matches': True, 'noindex': False}
+              with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+                  receipt['production_sample_checks'] = list(pool.map(check_page, samples))
+
+              (OUT / 'submitted-urls.txt').write_text('\n'.join(urls) + '\n', encoding='utf-8')
+              payload = json.dumps({'host': HOST, 'key': KEY, 'keyLocation': KEY_URL, 'urlList': urls}).encode('utf-8')
+              request = urllib.request.Request(ENDPOINT, data=payload, method='POST',
+                        headers={'Content-Type': 'application/json; charset=utf-8',
+                                 'User-Agent': 'PharmaGlobalEng-IndexNow-Submission/1.0'})
+              # One POST only. Never retry an ambiguous response automatically.
+              receipt['post_attempted'] = True
+              try:
+                  with urllib.request.urlopen(request, timeout=90) as response:
+                      status = response.status
+                      response_body = response.read(8192).decode('utf-8', errors='replace')
+              except urllib.error.HTTPError as error:
+                  status = error.code
+                  response_body = error.read(8192).decode('utf-8', errors='replace')
+              receipt['http_status'] = status
+              receipt['response_body'] = response_body.replace(KEY, '[redacted]')
+              receipt['completed_at_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+              if status not in (200, 202):
+                  receipt['status'] = 'rejected'
+                  raise RuntimeError('Bing IndexNow did not accept the submission: HTTP ' + str(status))
+              receipt['status'] = 'received' if status == 200 else 'received_key_validation_pending'
+              receipt['urls_received'] = len(urls)
+              receipt['meaning'] = ('Bing received the URLs; indexing is not confirmed.' if status == 200 else
+                                    'Bing received the URLs; its IndexNow key validation remains pending. Indexing is not confirmed.')
+              print(json.dumps(receipt, indent=2), flush=True)
+          except Exception as error:
+              receipt['error'] = str(error).replace(KEY, '[redacted]')
+              if receipt.get('post_attempted') and 'http_status' not in receipt:
+                  receipt['status'] = 'submission_response_unknown'
+              print(json.dumps(receipt, indent=2), flush=True)
+              raise
+          finally:
+              (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+                  summary.write('# Bing / IndexNow submission\n\n```json\n' + json.dumps(receipt, indent=2) + '\n```\n')
+          PY
+      - name: Preserve submission receipt and URL list
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bing-indexnow-submission-evidence
+          path: bing-submission-evidence/
+          retention-days: 30
