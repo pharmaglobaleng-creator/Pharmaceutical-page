@@ -6,7 +6,7 @@ The cleanup is intentionally conservative: it removes placeholder entity data an
 - Detail pages audited: **4,307**
 - Pages matched to structured source records: **4,307**
 - Pages changed by normalization: **0**
-- Duplicate titles after normalization: **1**
+- Duplicate titles after normalization: **0**
 - Duplicate meta descriptions after normalization: **0**
 
 ## Before / after
