@@ -1,0 +1,42 @@
+name: Parts browser smoke tests
+on:
+  push:
+    branches: ['audit/parts-search-quality-20260909']
+    paths: ['parts/**', 'scripts/smoke_test_parts_browser.py', '.github/workflows/parts-browser-smoke.yml']
+  pull_request:
+    paths: ['parts/**', 'assets/js/**', 'next-app/**', 'scripts/smoke_test_parts_browser.py', '.github/workflows/parts-browser-smoke.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /parts/
+            /scripts/
+            /assets/css/
+            /assets/js/
+            /_next/
+            /catalog-data/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Chromium test runner
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Test hydrated catalog, search, quotation and mobile navigation
+        run: python scripts/smoke_test_parts_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: parts-browser-evidence
+          path: audit-output/browser-validation.json
+          retention-days: 14
