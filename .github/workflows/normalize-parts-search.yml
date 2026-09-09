@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/normalize_part_pages_for_search.py'
+      - 'scripts/polish_part_page_copy.py'
       - 'scripts/enforce_unique_part_titles.py'
       - 'catalog-data/**'
       - 'data/kikusui-parts.csv'
@@ -39,11 +40,17 @@ jobs:
       - name: Normalize part detail pages
         run: python scripts/normalize_part_pages_for_search.py --fix
 
+      - name: Polish user-facing copy and metadata
+        run: python scripts/polish_part_page_copy.py
+
       - name: Enforce unique concise titles
         run: python scripts/enforce_unique_part_titles.py
 
       - name: Run critical quality gate
         run: python scripts/normalize_part_pages_for_search.py --check
+
+      - name: Verify polished copy after audit
+        run: python scripts/polish_part_page_copy.py
 
       - name: Verify unique concise titles after audit
         run: python scripts/enforce_unique_part_titles.py
