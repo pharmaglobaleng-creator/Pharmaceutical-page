@@ -7,6 +7,7 @@ import csv
 import html
 import json
 import re
+from urllib.parse import quote_plus
 from sync_parts_reference_status import apply as sync_references, restricted_records, STATUS
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -59,10 +60,22 @@ def legacy_pages(rows,changes):
             text=n.normalize_page(path,text)
             # Keep supported models, but do not infer a model from an image folder.
             equipment='Stokes'+(' '+n.TRUTH[sku].model if n.TRUTH[sku].model else '')
-            text=re.sub(r'\bStokes\s+(?:328|747|757|BB2)\b',lambda m:equipment,text,flags=re.I)
-            text=re.sub(r'Model\+reference%3A\+(?:328|747|757|BB2)%0A',lambda m:'Model+reference%3A+'+(n.TRUTH[sku].model or 'Confirm+during+quotation')+'%0A',text,flags=re.I)
+            # Match whole reference fields, not a partial list of model tokens:
+            # e.g. stripping only '757' used to leave an unsupported 'Genesis'.
+            image_alt=html.escape('Representative visualization of '+n.TRUTH[sku].name+' for '+equipment+' tablet press compatibility',quote=True)
+            text=re.sub(r'((?:alt|content)=")Representative visualization of [^"]*? for Stokes [^"]*(")',lambda m:m[1]+image_alt+m[2],text,flags=re.I)
+            model_value=quote_plus(n.TRUTH[sku].model or 'Confirm during quotation')
+            text,email_fields=re.subn(r'Model\+reference%3A\+.*?(?=%0A)',lambda m:'Model+reference%3A+'+model_value,text,count=1,flags=re.I)
+            assert email_fields==1, (sku,'Expected one model field in the email inquiry')
             text=re.sub(r'(<dt>Compatibility reference</dt><dd>).*?(</dd>)',lambda m:m[1]+html.escape(equipment+' reference; confirm final dimensional fit')+m[2],text,count=1,flags=re.S)
-            text=re.sub(r'<h2>Will this .*? fit a Stokes tablet press\?</h2>\s*<p>.*?</p>',lambda m:'<h2>How is compatibility confirmed?</h2><p>The exact machine model and OEM mapping for this record have not been verified. Supply the machine serial number, existing component or drawing, and critical dimensions before requesting a confirmed replacement.</p>',text,count=1,flags=re.S)
+            if not n.TRUTH[sku].model:
+                text=re.sub(r'<h2>Will this [^<]* fit a Stokes[^<]* tablet press\?</h2>\s*<p>.*?</p>',lambda m:'<h2>How is compatibility confirmed?</h2><p>The exact machine model and OEM mapping for this record have not been verified. Supply the machine serial number, existing component or drawing, and critical dimensions before requesting a confirmed replacement.</p>',text,count=1,flags=re.S)
+                assert '<h2>How is compatibility confirmed?</h2>' in text, (sku,'Missing unresolved-model explanation')
+            # The linked records have their own review status; the current
+            # product's model must not imply compatibility for the entire list.
+            text,related_headings=re.subn(r'<h2>Related Stokes[^<]* components</h2>','<h2>Related Stokes components</h2>',text,count=1)
+            assert related_headings==1, (sku,'Expected one legacy related-records heading')
+            text=text.replace('Compare other cataloged components in the same machine or component family:','Review each linked record for its model and OEM reference status before assuming compatibility:',1)
             text=polish(text,sku)
         notice='<section class="detail-section" data-pge-reference-review="true"><div class="wrap"><div class="notice"><strong>Identification review required.</strong> This legacy record does not have an approved OEM cross-reference. Confirm the exact machine model and component identity during review. The image is illustrative and is not evidence of dimensional fit. Use the PGE reference when <a href="/parts/identify/">requesting identification</a>; supply a photograph, drawing or sample before compatibility is confirmed.</div></div></section>\n'
         if r['approved_for_publication']!='yes' and 'data-pge-reference-review="true"' not in text:
