@@ -13,7 +13,7 @@
 <meta property="og:description" content="A three-generation family engineering legacy beginning in 1974 in South Plainfield, New Jersey, focused on pharmaceutical tablet tooling, sticking and picking solutions, coatings, surface engineering, restoration, and replacement parts.">
 <meta property="og:url" content="https://pharmaglobaleng.com/about/">
 <meta property="og:site_name" content="PharmaGlobalEng">
-<meta property="og:image" content="https://pharmaglobaleng.com/assets/images/about-pge-logo.svg">
+<meta property="og:image" content="https://pharmaglobaleng.com/assets/images/about-pge-logo-restored-1254.webp">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -83,10 +83,15 @@
 .legacy-strip{padding:30px;border-radius:24px;border:1px solid rgba(34,211,238,.25);background:linear-gradient(90deg,rgba(157,53,255,.12),rgba(22,141,255,.12));display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.legacy-stat strong{display:block;font-size:clamp(32px,4vw,54px);line-height:1;color:#fff}.legacy-stat span{display:block;margin-top:8px;color:var(--muted)}
 @media(max-width:980px){.heritage-grid,.facility-layout{grid-template-columns:1fr}.hero-logo-panel{min-height:0}.hero-logo{max-width:520px}.facility-stats{grid-template-columns:1fr}.values-grid{grid-template-columns:repeat(2,1fr)}.legacy-strip{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.values-grid,.legacy-strip{grid-template-columns:1fr}.about-hero{padding:68px 0}.timeline-item{padding-left:66px}.timeline:before{left:21px}.timeline-dot{left:6px}.hero-logo-panel{padding:10px 0}.facility-address-panel{padding:18px}}
+
+/* About-only restoration: render real responsive images, not the old SVG fallback. */
+.about-restored-images .hero-logo-panel .hero-logo{display:block!important;width:min(500px,100%);height:auto;max-width:100%;object-fit:contain}
+.about-restored-images .hero-logo-panel::after{content:none!important;display:none!important;background:none!important}
+@media(max-width:980px){.about-restored-images .hero-logo-panel .hero-logo{width:min(460px,100%)}}
 </style>
 <link rel="stylesheet" href="/assets/css/pge-phone.css" data-pge-sitewide-phone-css="true">
 </head>
-<body>
+<body class="about-restored-images">
 <header class="site-header"><div class="wrap nav">
 <a class="brand" href="/">PharmaGlobal<span>Eng</span></a>
 <nav class="nav-links" aria-label="Primary navigation">
@@ -109,7 +114,7 @@
 <div class="actions"><a class="btn primary" href="#story">Our Story</a><a class="btn secondary" href="/solutions/">Explore Our Solutions</a></div>
 </div>
 <div class="hero-logo-panel">
-<img class="hero-logo" src="/assets/images/about-pge-logo.svg" width="620" height="620" alt="Pharma Global Eng PGE pharmaceutical parts logo">
+<img class="hero-logo" src="/assets/images/about-pge-logo-restored-1254.webp" srcset="/assets/images/about-pge-logo-restored-640.webp 640w, /assets/images/about-pge-logo-restored-1254.webp 1254w" sizes="(max-width: 600px) calc(100vw - 34px), (max-width: 980px) 460px, (max-width: 1254px) calc(50vw - 89px), 500px" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async" alt="Pharma Global Eng PGE pharmaceutical parts logo">
 </div>
 </div>
 </div></section>
@@ -141,7 +146,7 @@
 <div class="generation-mark">Built from the ground up by our family and carried forward across three generations.</div>
 </div>
 <div class="facility-visual">
-<img class="facility-photo" src="/assets/images/about-facility-2300.svg" width="820" height="518" loading="lazy" alt="Aerial view of the PharmaGlobalEng facility at 2300 South Clinton Ave in South Plainfield, New Jersey">
+<img class="facility-photo" src="/assets/images/about-facility-2300-restored-1578.webp" srcset="/assets/images/about-facility-2300-restored-800.webp 800w, /assets/images/about-facility-2300-restored-1578.webp 1578w" sizes="(max-width: 980px) calc(100vw - 34px), (max-width: 1254px) calc(64vw - 44px), 760px" width="1578" height="997" loading="lazy" decoding="async" alt="Aerial view of the PharmaGlobalEng facility at 2300 South Clinton Ave in South Plainfield, New Jersey">
 <div class="facility-stats">
 <div class="facility-stat"><em>Founded</em><strong>1974</strong><span>More than five decades of engineering experience.</span></div>
 <div class="facility-stat"><em>Family</em><strong>Three Generations</strong><span>A company built from the ground up and carried forward.</span></div>
@@ -248,11 +253,11 @@
 <footer><div class="wrap footer"><span>© PharmaGlobalEng · Three generations of family-founded pharmaceutical tooling and engineering since 1974</span><a href="/services/">Services</a><a href="/parts/">Parts Store</a><a href="/editorial-standards.html">Editorial Standards</a><a href="/contact.html">Contact</a></div></footer>
 
 <!-- PGE-SITEWIDE-PHONE:START -->
-<a class="pge-sitewide-phone" href="tel:+17324397849" aria-label="Call PharmaGlobalEng at (732) 439-7849">
+<a class="pge-sitewide-phone" href="tel:+17324397849" aria-label="Call PharmaGlobalEng at +1 (732) 439-7849">
   <span class="pge-sitewide-phone__icon" aria-hidden="true">☎</span>
   <span class="pge-sitewide-phone__text">
     <span class="pge-sitewide-phone__label">Call PharmaGlobalEng</span>
-    <span class="pge-sitewide-phone__number">(732) 439-7849</span>
+    <span class="pge-sitewide-phone__number">+1 (732) 439-7849</span>
   </span>
 </a>
 <!-- PGE-SITEWIDE-PHONE:END -->

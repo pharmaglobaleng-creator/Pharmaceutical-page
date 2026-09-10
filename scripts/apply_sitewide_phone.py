@@ -12,8 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PHONE_DISPLAY = "(732) 439-7849"
-# Keep the contact page international without reformatting other pages.
-PHONE_DISPLAY_OVERRIDES = {"contact.html": "+1 (732) 439-7849"}
+# Keep the Contact and About pages international without reformatting other pages.
+PHONE_DISPLAY_OVERRIDES = {"contact.html": "+1 (732) 439-7849", "about/index.html": "+1 (732) 439-7849"}
 PHONE_TEL = "+17324397849"
 PHONE_CSS_HREF = "/assets/css/pge-phone.css"
 
