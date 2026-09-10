@@ -381,11 +381,11 @@ f:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
 10:"$Sreact.suspense"
 12:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
 14:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
-c:Ta92d,
+c:Taa93,
 
-<header class="site-header">
+<header data-pge-header="v1" class="site-header">
   <div class="nav-shell">
-    <a class="brand" href="/" aria-label="PharmaGlobalEng home">PharmaGlobal<span>Eng</span></a>
+    <div class="pge-header-identity"><a class="pge-header-brand" href="/" aria-label="PharmaGlobalEng home"><img class="pge-header-logo" src="/assets/images/pge-header-logo.webp" width="34" height="30" alt="" decoding="async"><span class="pge-header-wordmark">PharmaGlobal<span>Eng</span></span></a><a class="pge-header-phone" href="tel:+17324397849" aria-label="Call PharmaGlobalEng at +1 (732) 439-7849">+1 (732) 439-7849</a></div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
     <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
       <ul class="nav-list">

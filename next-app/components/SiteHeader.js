@@ -49,9 +49,9 @@ function Dropdown({ label, allHref, items }) {
 export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   return (
-    <header className="site-header">
+    <header className="site-header" data-pge-header="v1">
       <div className="nav-shell">
-        <Link className="brand" href="/" aria-label="PharmaGlobalEng home">PharmaGlobal<span>Eng</span></Link>
+        <div className="pge-header-identity"><a className="pge-header-brand" href="/" aria-label="PharmaGlobalEng home"><img className="pge-header-logo" src="/assets/images/pge-header-logo.webp" width="34" height="30" alt="" decoding="async" /><span className="pge-header-wordmark">PharmaGlobal<span>Eng</span></span></a><a className="pge-header-phone" href="tel:+17324397849" aria-label="Call PharmaGlobalEng at +1 (732) 439-7849">+1 (732) 439-7849</a></div>
         <button className="menu-toggle" type="button" aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}>Menu</button>
         <nav className={`primary-nav ${mobileOpen ? 'mobile-open' : ''}`} aria-label="Primary navigation">
           <ul className="nav-list">
