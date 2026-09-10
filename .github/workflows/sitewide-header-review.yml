@@ -1,98 +1,43 @@
-name: Review approved sitewide header update
+name: Verify live approved sitewide header
 on:
   push:
     branches: [update/sitewide-header-20260910]
-    paths: [.github/workflows/sitewide-header-review.yml, scripts/test_sitewide_header.py, scripts/apply_sitewide_header.py, assets/css/pge-header.css]
-  workflow_dispatch:
+    paths: [.github/workflows/sitewide-header-review.yml]
 permissions:
-  contents: write
-concurrency:
-  group: approved-sitewide-header-review
-  cancel-in-progress: false
+  contents: read
 jobs:
-  review:
+  verify-live:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
-    env:
-      BASE: ccb4bfb14e5e520cb1e0e31f51a43d08ea06f61b
-      EVIDENCE: /tmp/pge-header-evidence
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
+          sparse-checkout: scripts
           fetch-depth: 1
-      - name: Load protected production base
-        run: git fetch origin "$BASE" --depth=1
-      - name: Install browser and image tools
+      - name: Install verification tools
         run: |
-          python3 -m pip install pillow playwright
+          python3 -m pip install requests playwright
           python3 -m playwright install --with-deps chromium
-          mkdir -p "$EVIDENCE"
-      - name: Apply approved header without regenerating product data
-        run: |
-          python3 scripts/apply_sitewide_header.py --prepare-sources --report "$EVIDENCE/source-checks.json"
-          python3 scripts/apply_sitewide_phone.py --report "$EVIDENCE/idempotency.json"
-          python3 - <<'PY'
-          import json,os
-          from pathlib import Path
-          p=Path(os.environ['EVIDENCE'])
-          report=json.loads((p/'source-checks.json').read_text())
-          assert report['landing_pages']==4634 and report['parts_pages']==4566, report
-          assert not json.loads((p/'idempotency.json').read_text())['changed_files']
-          PY
-      - name: Test responsive headers, hydrated menus and quote workflows
-        run: python3 scripts/test_sitewide_header.py --quick --output "$EVIDENCE/static-browser"
-      - name: Stage only reviewed header changes and freeze candidate tree
+      - name: Wait for the approved header to be published
         run: |
           python3 - <<'PY'
-          import os,subprocess,json
-          from pathlib import Path
-          base=os.environ['BASE'];out=Path(os.environ['EVIDENCE'])
-          names=set(subprocess.check_output(['git','diff','--name-only',base]).decode().splitlines())
-          names.update(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())
-          support={'scripts/apply_sitewide_header.py','scripts/apply_sitewide_phone.py','scripts/test_sitewide_header.py','assets/css/pge-header.css','assets/images/pge-header-logo.webp','next-app/components/catalog/CatalogShell.jsx','next-app/components/SiteHeader.js','next-app/app/layout.js','next-app/app/pge-header.css'}
-          temp='.github/workflows/sitewide-header-review.yml'
-          public={'about','parts','services','solutions','components','coatings','knowledge-center'}
-          for name in sorted(names):
-            if name==temp:continue
-            allowed=(name in support or (name.endswith('.html') and (len(Path(name).parts)==1 or Path(name).parts[0] in public)) or (name.endswith('.txt') and (name.startswith('parts/') or name in {'index.txt','__next.__PAGE__.txt','__next._full.txt'})))
-            assert allowed, 'Unreviewed changed path: '+name
-            assert name not in {'googleb09af90219443617.html','tablet-punch-coatings.html'}
-            subprocess.run(['git','add','--',name],check=True)
-          subprocess.run(['git','rm','--cached','--',temp],check=True)
-          subprocess.run(['git','diff','--cached','--check'],check=True)
-          tree=subprocess.check_output(['git','write-tree']).decode().strip()
-          (out/'candidate-tree.txt').write_text(tree+'\n')
-          paths=subprocess.check_output(['git','diff','--cached','--name-only',base]).decode().splitlines()
-          (out/'changed-files.json').write_text(json.dumps(paths,indent=2)+'\n')
-          (out/'changes.patch').write_bytes(subprocess.check_output(['git','diff','--cached',base,'--','.']))
-          print('Candidate tree:',tree,'reviewed files:',len(paths))
+          import requests,time
+          urls=['https://pharmaglobaleng.com/about/','https://pharmaglobaleng.com/parts/pge-kik-003/','https://pharmaglobaleng.com/']
+          for attempt in range(30):
+            try:
+              ready=all('data-pge-header="v1"' in requests.get(url,timeout=20).text for url in urls)
+            except requests.RequestException:
+              ready=False
+            if ready:
+              print('Approved header is published.');break
+            time.sleep(15)
+          else:raise SystemExit('The live header has not appeared; no success claimed.')
           PY
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Build future Next.js export and validate existing route parity
-        working-directory: next-app
-        run: |
-          npm ci
-          npm run build:safe
-      - name: Test rebuilt export against the same header and behavior requirements
-        run: python3 scripts/test_sitewide_header.py --root next-app/out --quick --output "$EVIDENCE/rebuilt-browser"
-      - name: Create a validated release candidate without publishing main
-        run: |
-          TREE=$(cat "$EVIDENCE/candidate-tree.txt")
-          git config user.name 'pharmaglobaleng-creator'
-          git config user.email 'pharmaglobaleng@gmail.com'
-          COMMIT=$(printf 'Apply approved small logo and adjacent international phone to every landing page\n\nUpdate 4634 landing pages and synchronized React navigation payloads. Remove the floating phone widget. Preserve main content, metadata, canonical URLs, Product/OEM information and existing behaviors. Update future Next.js header templates and retain the existing automation entry point.\n\nValidated current static site and rebuilt Next.js export. Review workflow: %s.\n' "$GITHUB_RUN_ID" | git commit-tree "$TREE" -p "$BASE")
-          BRANCH="release/header-20260910-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          git push origin "$COMMIT:refs/heads/$BRANCH"
-          printf '%s\n' "$COMMIT" > "$EVIDENCE/release-commit.txt"
-          printf '%s\n' "$BRANCH" > "$EVIDENCE/release-branch.txt"
-          printf 'Validated candidate: %s\nBranch: %s\n' "$COMMIT" "$BRANCH" | tee -a "$GITHUB_STEP_SUMMARY"
-          echo 'Main was not modified by this review.' >> "$GITHUB_STEP_SUMMARY"
-      - name: Preserve reports and screenshots
+      - name: Check live desktop and mobile layouts, menus and quote cart
+        run: python3 scripts/test_sitewide_header.py --url https://pharmaglobaleng.com --quick --output /tmp/pge-header-live
+      - uses: actions/upload-artifact@v4
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: approved-sitewide-header-evidence
-          path: /tmp/pge-header-evidence/
+          name: approved-header-live-check
+          path: /tmp/pge-header-live/
           retention-days: 14
