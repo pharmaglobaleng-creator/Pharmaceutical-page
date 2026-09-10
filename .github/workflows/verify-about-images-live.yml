@@ -1,0 +1,108 @@
+name: Verify published About image restoration
+on:
+  push:
+    branches: [repair/about-original-images-20260910]
+    paths: [.github/workflows/verify-about-images-live.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install rendering validators
+        run: |
+          python -m pip install Pillow==11.3.0 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Verify public HTML, image bytes and desktop/mobile rendering
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          from playwright.sync_api import sync_playwright
+          import io,json,hashlib,time,urllib.request,datetime
+          root=Path('about-live-evidence');root.mkdir()
+          site='https://pharmaglobaleng.com'
+          page_url=site+'/about/'
+          commit='ccb4bfb14e5e520cb1e0e31f51a43d08ea06f61b'
+          result={'site':page_url,'restoration_commit':commit,'status':'not_verified'}
+          files={
+              'about-pge-logo-restored-640.webp':('a3af782f963990b7c885344b8d4e8f9d235353455c8aa7c7f75c612c15bf6cb6',(640,640)),
+              'about-pge-logo-restored-1254.webp':('e1e3beb3840c8585d43b6a132e49068168e2f64a682a86f495997babee1b32a8',(1254,1254)),
+              'about-facility-2300-restored-800.webp':('c756b10b4f4e71119c504ad73b6d9fee1c4927b58e7464f93da27481f0825',(800,505)),
+              'about-facility-2300-restored-1578.webp':('46e04b50b904086f54eb4466f6cd72a834447a0e3ca8159c03eaa990e8a4f7bd',(1578,997))}
+          def get(url):
+              request=urllib.request.Request(url,headers={'User-Agent':'PharmaGlobalEng-Image-Validation/1.0','Cache-Control':'no-cache'})
+              with urllib.request.urlopen(request,timeout=30) as r:
+                  assert r.status==200
+                  data=r.read(8_000_001)
+                  assert len(data)<=8_000_000
+                  return data,r.geturl(),dict(r.headers)
+          try:
+              ready=False
+              for attempt in range(30):
+                  try:
+                      data,final,headers=get(page_url)
+                      text=data.decode('utf-8')
+                      if 'class="about-restored-images"' in text and all(f in text for f in files):
+                          ready=True;break
+                  except Exception:pass
+                  print('Waiting for public deployment',attempt+1,flush=True);time.sleep(15)
+              assert ready,'Restored HTML is not yet served publicly'
+              assert final==page_url
+              assert 'href="tel:+17324397849"' in text and '+1 (732) 439-7849' in text
+              (root/'live-about.html').write_text(text,encoding='utf-8')
+              result['page_http_status']=200
+              result['images']=[]
+              (root/'assets/images').mkdir(parents=True)
+              for filename,(expected,size) in files.items():
+                  data,final,headers=get(site+'/assets/images/'+filename)
+                  actual=hashlib.sha256(data).hexdigest()
+                  assert actual==expected,('Live image differs from validated repository file',filename)
+                  with Image.open(io.BytesIO(data)) as image:
+                      image.load();assert image.size==size
+                  (root/'assets/images'/filename).write_bytes(data)
+                  result['images'].append({'file':filename,'http_status':200,'bytes':len(data),'width':size[0],'height':size[1],'sha256':actual,'matches_prepared_asset':True})
+              result['browsers']=[]
+              with sync_playwright() as p:
+                  browser=p.chromium.launch()
+                  for width,height,name in [(1440,1000,'desktop'),(768,1024,'tablet'),(390,844,'mobile')]:
+                      page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=2)
+                      errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+                      response=page.goto(page_url,wait_until='networkidle',timeout=60000)
+                      assert response.status==200
+                      page.add_style_tag(content='html{scroll-behavior:auto!important}')
+                      for selector in ('.hero-logo','.facility-photo'):
+                          page.locator(selector).scroll_into_view_if_needed()
+                          page.locator(selector).evaluate('(i)=>i.decode()')
+                      images=page.locator('img').evaluate_all('(xs)=>xs.map(i=>({src:i.currentSrc,loaded:i.complete&&i.naturalWidth>0,display:getComputedStyle(i).display,renderedWidth:i.getBoundingClientRect().width,renderedHeight:i.getBoundingClientRect().height}))')
+                      assert len(images)==2 and all(i['loaded'] and i['display']!='none' and 'restored-' in i['src'] for i in images),images
+                      assert page.locator('.hero-logo-panel').evaluate('(e)=>getComputedStyle(e,"::after").display')=='none'
+                      overflow=page.evaluate('document.documentElement.scrollWidth>window.innerWidth')
+                      assert not overflow,('Horizontal overflow',width)
+                      assert page.locator('.pge-sitewide-phone__number').inner_text()=='+1 (732) 439-7849'
+                      assert not errors,errors
+                      page.locator('.about-hero').screenshot(path=str(root/('about-'+name+'-hero.png')),animations='disabled')
+                      page.locator('.hero-logo').screenshot(path=str(root/('about-'+name+'-logo.png')),animations='disabled')
+                      page.locator('.facility-visual').screenshot(path=str(root/('about-'+name+'-facility.png')),animations='disabled')
+                      result['browsers'].append({'viewport':width,'device_scale_factor':2,'images':images,'horizontal_overflow':overflow,'page_errors':errors})
+                      page.close()
+                  browser.close()
+              result['status']='passed'
+          except Exception as e:
+              result['status']='failed';result['error']=str(e);raise
+          finally:
+              result['checked_at_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+              (root/'live-verification.json').write_text(json.dumps(result,indent=2))
+              print(json.dumps(result,indent=2),flush=True)
+          PY
+      - name: Save live verification and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: about-live-image-verification
+          path: about-live-evidence/
+          retention-days: 14
