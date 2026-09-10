@@ -1,0 +1,61 @@
+name: Prepare approved solution lines
+on:
+  push:
+    branches: [agent/approved-solution-lines-20260910]
+    paths: [.github/workflows/prepare-approved-solution-lines.yml]
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/approved-solution-lines-20260910
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            solutions/tablet-sticking.html
+            solutions/tablet-picking.html
+          sparse-checkout-cone-mode: false
+      - name: Apply only the two approved hero lines
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, re
+          changes = {
+            'solutions/tablet-sticking.html': ('ab6faabe08e621ead76688e00f91264c7e604e5c', '3f42a20fcbc56aa0096a228a7a8971db44c1324d', 'We solve sticking and picking.'),
+            'solutions/tablet-picking.html': ('666b9adaa37477577d2e8887538571034e904b6e', '16ebf29224273f72b91ca87c15e5b5a1614d68ec', 'We solve tablet picking.')
+          }
+          style = '''<style id="pge-solution-statement">
+          #main .pge-solution-statement,.pge-guide .hero .pge-solution-statement{margin:1rem 0 1rem;font-size:clamp(1.4rem,3vw,2.25rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;color:var(--text,#f8fbff)}
+          #main .pge-solution-statement+.lead,.pge-guide .hero .pge-solution-statement+.lead{margin-top:0}
+          </style>'''
+          def blob_sha(data):
+              return hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+          for path, (old_sha, new_sha, statement) in changes.items():
+              p = Path(path)
+              original = p.read_bytes()
+              assert blob_sha(original) == old_sha, 'Unexpected source version: ' + path
+              before = original.decode('utf-8')
+              assert before.count('</h1>') == 1 and before.count('</head>') == 1
+              assert 'pge-solution-statement' not in before
+              line = '<p class="pge-solution-statement"><strong>' + statement + '</strong></p>'
+              after = before.replace('</h1>', '</h1>\n' + line, 1).replace('</head>', style + '</head>', 1)
+              assert after.replace('\n' + line, '', 1).replace(style, '', 1) == before
+              data = after.encode('utf-8')
+              assert blob_sha(data) == new_sha, 'Unexpected output: ' + path
+              p.write_bytes(data)
+              print(json.dumps({'path': path, 'blob': new_sha, 'statement': statement, 'existing_content_preserved': True}))
+          PY
+      - name: Store the two checked HTML blobs on this review branch only
+        run: |
+          test "$(git branch --show-current)" = "agent/approved-solution-lines-20260910"
+          git diff --check
+          git diff --stat
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add solutions/tablet-sticking.html solutions/tablet-picking.html
+          git commit -m "Add approved sticking and picking solution statements beneath hero headings"
+          git push origin HEAD:agent/approved-solution-lines-20260910
