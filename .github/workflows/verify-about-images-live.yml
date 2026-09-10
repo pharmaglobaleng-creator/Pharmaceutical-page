@@ -1,0 +1,145 @@
+name: Verify published About image restoration
+
+on:
+  push:
+    branches: ['verify/about-images-live-20260910']
+    paths: ['.github/workflows/verify-about-images-live.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Install image and browser verification tools
+        run: |
+          python3 -m pip install --quiet pillow playwright
+          if ! command -v google-chrome >/dev/null && ! command -v chromium >/dev/null; then
+            python3 -m playwright install --with-deps chromium
+          fi
+      - name: Read and verify the published page and original image pixels
+        run: |
+          python3 - <<'PY'
+          import asyncio
+          import datetime
+          import hashlib
+          import io
+          import json
+          from pathlib import Path
+          import shutil
+          import urllib.request
+          from PIL import Image
+          from playwright.async_api import async_playwright
+
+          SITE = 'https://pharmaglobaleng.com'
+          OUT = Path('about-live-verification')
+          OUT.mkdir(exist_ok=True)
+          report = {
+              'page': SITE + '/about/',
+              'repair_commit': 'ccb4bfb14e5e520cb1e0e31f51a43d08ea06f61b',
+              'checked_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'status': 'in_progress',
+              'assets': [],
+              'browser_checks': [],
+              'scope': 'Read-only production verification; no DNS, website, email or account settings changed.'
+          }
+          assets = {
+              'about-pge-logo-restored-640.webp': (640, 640, 'a3af782f963990b7c885344b8d4e8f9d235353455c8aa7c7f75c612c15bf6cb6', None),
+              'about-pge-logo-restored-1254.webp': (1254, 1254, 'e1e3beb3840c8585d43b6a132e49068168e2f64a682a86f495997babee1b32a8', 'e7c944b6be150cb8edb8c19293620cd484d1afd9ed547816e2a5fb8a6c0791cb'),
+              'about-facility-2300-restored-800.webp': (800, 505, 'c756b10b4f4e71119c504ad73b6d9fee1c4927b58b78e7464f93da27481f0825', None),
+              'about-facility-2300-restored-1578.webp': (1578, 997, '46e04b50b904086f54eb4466f6cd72a834447a0e3ca8159c03eaa990e8a4f7bd', '3fa06975590a038ed2273d7ca66b57748025458f73cd9cb55bce49633b1890e0')
+          }
+
+          def get(url):
+              req = urllib.request.Request(url, headers={'User-Agent': 'PharmaGlobalEng-About-Verification/1.0'})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  if r.status != 200 or r.geturl() != url:
+                      raise RuntimeError('Unexpected HTTP status or redirect: ' + url)
+                  data = r.read(6_000_001)
+                  if len(data) > 6_000_000:
+                      raise RuntimeError('Response exceeds verification size limit')
+                  return data, dict(r.headers)
+
+          async def browser_checks():
+              async with async_playwright() as p:
+                  executable = shutil.which('google-chrome') or shutil.which('chromium')
+                  options = {'headless': True, 'args': ['--no-sandbox']}
+                  if executable:
+                      options['executable_path'] = executable
+                  browser = await p.chromium.launch(**options)
+                  try:
+                      for width, label in [(1440, 'desktop'), (390, 'mobile')]:
+                          context = await browser.new_context(viewport={'width': width, 'height': 1000}, device_scale_factor=2)
+                          page = await context.new_page()
+                          errors = []
+                          page.on('pageerror', lambda error: errors.append(str(error)))
+                          response = await page.goto(SITE + '/about/', wait_until='domcontentloaded', timeout=45000)
+                          assert response.status == 200, response.status
+                          await page.locator('body.about-restored-images').wait_for()
+                          await page.evaluate('document.fonts.ready')
+                          checks = []
+                          for selector in ['.hero-logo', '.facility-photo']:
+                              image = page.locator(selector)
+                              await image.scroll_into_view_if_needed()
+                              await image.evaluate('(im) => im.decode()')
+                              state = await image.evaluate('(im) => ({src: im.currentSrc, complete: im.complete, naturalWidth: im.naturalWidth, display: getComputedStyle(im).display, width: im.getBoundingClientRect().width, height: im.getBoundingClientRect().height})')
+                              assert state['complete'] and state['naturalWidth'] > 0 and state['display'] != 'none', state
+                              assert '-restored-' in state['src'], state
+                              checks.append(state)
+                          assert await page.locator('h1').count() == 1
+                          assert await page.locator('link[rel="canonical"]').get_attribute('href') == SITE + '/about/'
+                          assert '+1 (732) 439-7849' in await page.locator('.pge-sitewide-phone').inner_text()
+                          fallback = await page.locator('.hero-logo-panel').evaluate('(el) => getComputedStyle(el, "::after").display')
+                          assert fallback == 'none', fallback
+                          overflow = await page.evaluate('document.documentElement.scrollWidth > window.innerWidth')
+                          assert not overflow, (width, 'Horizontal overflow')
+                          await page.locator('.about-hero').screenshot(path=str(OUT / ('about-' + label + '-live-hero.png')))
+                          await page.locator('#facility').screenshot(path=str(OUT / ('about-' + label + '-live-facility.png')))
+                          report['browser_checks'].append({'viewport_width': width, 'device_scale_factor': 2, 'http_status': response.status, 'images': checks, 'fallback_disabled': True, 'horizontal_overflow': overflow, 'page_errors': errors})
+                          assert not errors, errors
+                          await context.close()
+                  finally:
+                      await browser.close()
+
+          try:
+              page, headers = get(SITE + '/about/')
+              text = page.decode('utf-8')
+              assert 'class="about-restored-images"' in text
+              assert 'about-pge-logo-restored-1254.webp' in text
+              assert 'about-facility-2300-restored-1578.webp' in text
+              (OUT / 'live-about.html').write_bytes(page)
+              report['page_http_status'] = 200
+              report['page_bytes'] = len(page)
+              for name, (width, height, expected_hash, source_hash) in assets.items():
+                  url = SITE + '/assets/images/' + name
+                  data, headers = get(url)
+                  digest = hashlib.sha256(data).hexdigest()
+                  assert digest == expected_hash, (name, 'Published bytes do not match tested asset', digest)
+                  image = Image.open(io.BytesIO(data))
+                  image.load()
+                  assert image.size == (width, height), (name, image.size)
+                  pixels_match = None
+                  if source_hash:
+                      pixels_match = hashlib.sha256(image.convert('RGB').tobytes()).hexdigest() == source_hash
+                      assert pixels_match, (name, 'Original-pixel mismatch')
+                  report['assets'].append({'url': url, 'http_status': 200, 'width': width, 'height': height, 'bytes': len(data), 'sha256': digest, 'original_pixels_match': pixels_match})
+              asyncio.run(browser_checks())
+              report['status'] = 'passed'
+          except Exception as error:
+              report['status'] = 'failed'
+              report['error'] = str(error)
+              raise
+          finally:
+              report['finished_at_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+              (OUT / 'verification.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+              print(json.dumps(report, indent=2))
+          PY
+      - name: Save production checks and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: about-live-image-verification
+          path: about-live-verification/
+          retention-days: 14
