@@ -1,0 +1,56 @@
+name: Verify live approved solution lines
+on:
+  push:
+    branches: [agent/approved-solution-lines-20260910]
+    paths: [.github/workflows/verify-approved-solution-lines.yml]
+permissions:
+  contents: read
+jobs:
+  verify-public:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Verify the two production pages and hero statement positions
+        run: |
+          python3 - <<'PY'
+          from concurrent.futures import ThreadPoolExecutor
+          from html.parser import HTMLParser
+          from urllib.request import Request, urlopen
+          import hashlib, json, re, time
+          site = 'https://pharmaglobaleng.com/'
+          targets = {
+            'solutions/tablet-sticking.html': ('We solve sticking and picking.', '3f42a20fcbc56aa0096a228a7a8971db44c1324d'),
+            'solutions/tablet-picking.html': ('We solve tablet picking.', '16ebf29224273f72b91ca87c15e5b5a1614d68ec')
+          }
+          class Page(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.h1_count = 0; self.canonical = ''; self.robots = ''
+              def handle_starttag(self, tag, attrs):
+                  a = dict(attrs)
+                  if tag == 'h1': self.h1_count += 1
+                  if tag == 'link' and a.get('rel') == 'canonical': self.canonical = a.get('href', '')
+                  if tag == 'meta' and a.get('name') == 'robots': self.robots = a.get('content', '')
+          def check(target):
+              path, suffix = target
+              statement, expected_sha = targets[path]
+              url = site + path + suffix
+              try:
+                  req = Request(url, headers={'User-Agent': 'PGE-Deployment-Verification/1.0', 'Cache-Control': 'no-cache'})
+                  with urlopen(req, timeout=15) as response:
+                      status = response.status; raw = response.read()
+                  body = raw.decode('utf-8'); parsed = Page(); parsed.feed(body)
+                  pattern = r'</h1>\s*<p class="pge-solution-statement"><strong>' + re.escape(statement) + r'</strong></p>'
+                  sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+                  verified = (status == 200 and bool(re.search(pattern, body)) and body.count('class="pge-solution-statement"') == 1 and parsed.h1_count == 1 and parsed.canonical == site + path and 'noindex' not in parsed.robots.lower() and 'id="pge-solution-statement"' in body)
+                  return {'url': url, 'http_status': status, 'statement': statement, 'directly_below_h1': bool(re.search(pattern, body)), 'canonical': parsed.canonical, 'exact_published_file': sha == expected_sha, 'verified': verified}
+              except Exception as exc:
+                  return {'url': url, 'verified': False, 'error': str(exc)}
+          for attempt in range(20):
+              tasks = [(path, suffix) for path in targets for suffix in ('', '?verify=928e2949-' + str(int(time.time())))]
+              with ThreadPoolExecutor(max_workers=4) as pool: results = list(pool.map(check, tasks))
+              print(json.dumps({'attempt': attempt + 1, 'results': results}, indent=2), flush=True)
+              if all(result['verified'] for result in results):
+                  print('VERIFIED: both approved statements are live, once each, directly below their main headings. Both clean URLs and cache-busted URLs returned HTTP 200.'); break
+              if attempt == 19: raise SystemExit('Live verification incomplete. See individual results.')
+              time.sleep(12)
+          PY
