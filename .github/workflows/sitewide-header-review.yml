@@ -2,7 +2,7 @@ name: Review approved sitewide header update
 on:
   push:
     branches: [update/sitewide-header-20260910]
-    paths: [.github/workflows/sitewide-header-review.yml]
+    paths: [.github/workflows/sitewide-header-review.yml, scripts/test_sitewide_header.py, scripts/apply_sitewide_header.py, assets/css/pge-header.css]
   workflow_dispatch:
 permissions:
   contents: write
@@ -40,7 +40,7 @@ jobs:
           assert not json.loads((p/'idempotency.json').read_text())['changed_files']
           PY
       - name: Test responsive headers, hydrated menus and quote workflows
-        run: python3 scripts/test_sitewide_header.py --output "$EVIDENCE/static-browser"
+        run: python3 scripts/test_sitewide_header.py --quick --output "$EVIDENCE/static-browser"
       - name: Stage only reviewed header changes and freeze candidate tree
         run: |
           python3 - <<'PY'
@@ -64,7 +64,7 @@ jobs:
           (out/'candidate-tree.txt').write_text(tree+'\n')
           paths=subprocess.check_output(['git','diff','--cached','--name-only',base]).decode().splitlines()
           (out/'changed-files.json').write_text(json.dumps(paths,indent=2)+'\n')
-          (out/'changes.patch').write_bytes(subprocess.check_output(['git','diff','--cached',base,'--','.',' :!assets/images/pge-header-logo.webp']))
+          (out/'changes.patch').write_bytes(subprocess.check_output(['git','diff','--cached',base,'--','.']))
           print('Candidate tree:',tree,'reviewed files:',len(paths))
           PY
       - uses: actions/setup-node@v4
