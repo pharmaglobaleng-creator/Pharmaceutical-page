@@ -1,0 +1,50 @@
+name: Review expanded tooling guides
+on:
+  push:
+    branches: [agent/content-depth-20260910]
+    paths: ['.content-depth/**', '.github/workflows/content-depth-review.yml']
+permissions:
+  contents: write
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /solutions/
+            /services/
+            /coatings/
+            /knowledge-center/
+            /assets/css/
+            /assets/images/pge-header-logo.webp
+            /index.html
+            /contact.html
+            /.content-depth/
+            /.github/workflows/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install inspection dependencies
+        run: |
+          python -m pip install beautifulsoup4==4.13.4 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Assemble and validate eight existing pages
+        run: python .content-depth/build.py
+      - name: Save checked pages on review branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- solutions/tablet-sticking.html solutions/tablet-picking.html solutions/tablet-binding.html solutions/tablet-capping.html solutions/tablet-lamination.html solutions/tablet-compression-defects.html services/tablet-punch-coatings.html services/tablet-punch-polishing.html .content-depth/manifest.json
+          git commit -m 'Build and validate expanded tooling guides [skip ci]'
+          git push origin HEAD:agent/content-depth-20260910
+          cat .content-depth/manifest.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: expanded-tooling-guides-review
+          path: work-artifacts/
+          retention-days: 7
