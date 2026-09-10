@@ -1,0 +1,62 @@
+name: Verify public expanded guides
+on:
+  push:
+    branches: [agent/content-depth-20260910]
+    paths: ['.github/workflows/live-content-verification.yml']
+permissions:
+  contents: read
+jobs:
+  verify-public:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read and verify eight public production pages
+        run: |
+          python3 - <<'PY'
+          from concurrent.futures import ThreadPoolExecutor
+          from html.parser import HTMLParser
+          from urllib.request import Request, urlopen
+          import json, time
+          site = 'https://pharmaglobaleng.com/'
+          pages = {
+            'solutions/tablet-sticking.html': 'Tablet Sticking and Picking: What to Check Before Changing the Tooling',
+            'solutions/tablet-picking.html': 'Tablet Picking: Find What Is Pulling Material From the Face',
+            'solutions/tablet-binding.html': 'Tablet Binding: Check the Die Wall and the Ejection Evidence',
+            'solutions/tablet-capping.html': 'Tablet Capping: Find Where the Crown Starts to Separate',
+            'solutions/tablet-lamination.html': 'Tablet Lamination: Investigate the Separation Before Changing the Tooling',
+            'solutions/tablet-compression-defects.html': 'Tablet Compression Defects: Identify the Pattern, Then Investigate',
+            'services/tablet-punch-coatings.html': 'Tablet Punch Coatings: Match the Treatment to the Release Problem',
+            'services/tablet-punch-polishing.html': 'Precision Tablet Punch Polishing: Restore the Surface, Protect the Tool'
+          }
+          class Page(HTMLParser):
+            def __init__(self):
+              super().__init__(); self.in_h1=False; self.h1=''; self.canonical=None; self.robots=''
+            def handle_starttag(self,tag,attrs):
+              a=dict(attrs)
+              if tag=='h1': self.in_h1=True
+              if tag=='link' and a.get('rel')=='canonical': self.canonical=a.get('href')
+              if tag=='meta' and a.get('name')=='robots': self.robots=a.get('content','')
+            def handle_endtag(self,tag):
+              if tag=='h1': self.in_h1=False
+            def handle_data(self,data):
+              if self.in_h1: self.h1+=data
+          def check(item):
+            path,expected=item
+            try:
+              req=Request(site+path+'?content-check=2007739a-'+str(int(time.time())),headers={'User-Agent':'PGE-Deployment-Verification/1.0','Cache-Control':'no-cache'})
+              with urlopen(req,timeout=20) as response:
+                status=response.status; body=response.read().decode('utf-8')
+              doc=Page(); doc.feed(body)
+              okay=status==200 and doc.h1.strip()==expected and doc.canonical==site+path and 'noindex' not in doc.robots.lower()
+              if path.endswith('/tablet-sticking.html'): okay=okay and 'filming-heading' in body and 'magnesium-review-heading' in body
+              return {'path':path,'status':status,'h1':doc.h1.strip(),'canonical':doc.canonical,'new_content_verified':okay}
+            except Exception as exc:
+              return {'path':path,'new_content_verified':False,'error':str(exc)}
+          for attempt in range(7):
+            with ThreadPoolExecutor(max_workers=8) as pool: results=list(pool.map(check,pages.items()))
+            print(json.dumps({'attempt':attempt+1,'results':results},indent=2),flush=True)
+            if all(r['new_content_verified'] for r in results):
+              print('VERIFIED: all eight expanded pages served successfully from pharmaglobaleng.com'); break
+            if attempt==6: raise SystemExit('Public content verification incomplete; see per-page results.')
+            time.sleep(15)
+          PY
