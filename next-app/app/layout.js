@@ -1,4 +1,5 @@
 import './globals.css';
+import './pge-header.css';
 
 export const metadata = {
   metadataBase: new URL('https://pharmaglobaleng.com'),
