@@ -1,0 +1,170 @@
+name: Restore original About images - isolated preparation
+on:
+  push:
+    branches: [repair/about-original-images-20260910]
+    paths: [.github/workflows/restore-about-images-once.yml]
+permissions:
+  contents: write
+concurrency:
+  group: pge-about-original-images
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: repair/about-original-images-20260910
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /about/
+            /assets/css/
+            /scripts/apply_sitewide_phone.py
+            /.github/workflows/restore-about-images-once.yml
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image and browser validators
+        run: |
+          python -m pip install Pillow==11.3.0 playwright==1.55.0 beautifulsoup4==4.13.5
+          python -m playwright install --with-deps chromium
+      - name: Recover approved source pixels and make scoped repairs
+        env:
+          LOGO_URL: 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXd0pbzQ-NlGoD3c0XE8Zd0ozL8xhLtgTWmesVuhb8mUfxM_RasjkqNWE5tfmMyN90sJ625nJD4JvRAEgwNxOEFQmptK729H9KAVeNwVGoHmvcZmaYzkzzfCP7Qgprxm1EsyGSrJXm1gehSqTvQcVUmN1P0WgMLo_C2t3tG7dF0iOBybeUY=s2048?key=veKp_6GM14-0Saqa6McOrw'
+          FACILITY_URL: 'https://lh7-rt.googleusercontent.com/docsz/AD_4nXcAhqVhjpddbY8FABgClAQ7YPXY1ql_GEUtiZv79W41p2cvCilVm5iG6SPNIFlm1i3f1roIqxFmBde8dIu8Rmr3cQTF5-66aK2agG3Fc9WdvJH0ANA0-0oWBN4-27UrmpOuOfs9QDcS_h3qR3mtkdPl29JQu3TSDd1g8be3h2bhw17oEl8=s2048?key=veKp_6GM14-0Saqa6McOrw'
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          from bs4 import BeautifulSoup
+          import hashlib, io, json, os, re, urllib.request
+          out=Path('about-restoration-evidence');out.mkdir()
+          about=Path('about/index.html');phone=Path('scripts/apply_sitewide_phone.py')
+          def blob(data):
+              return hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+          assert blob(about.read_bytes())=='1e8b91916ed6550544a643d361de285b7dd418f5', 'About source changed; review required'
+          assert blob(phone.read_bytes())=='5ca33004bd30db86f1a2fb54cc93f65c710988f0', 'Phone source changed; review required'
+          original=about.read_text(encoding='utf-8')
+          original_phone=phone.read_text(encoding='utf-8')
+          (out/'about-before.html').write_text(original,encoding='utf-8')
+          sources=[('LOGO_URL','about-pge-logo-restored',(1254,1254),640,'e7c944b6be150cb8edb8c19293620cd484d1afd9ed547816e2a5fb8a6c0791cb'),('FACILITY_URL','about-facility-2300-restored',(1578,997),800,'3fa06975590a038ed2273d7ca66b57748025458f73cd9cb55bce49633b1890e0')]
+          manifest={}
+          for key,stem,size,small,pixels in sources:
+              url=os.environ[key]; print('::add-mask::'+url)
+              try:
+                  with urllib.request.urlopen(url,timeout=45) as r:
+                      data=r.read(12_000_001)
+              except Exception as e:
+                  raise RuntimeError('Source-image transfer failed for '+stem+' ('+type(e).__name__+')') from None
+              assert len(data)<=12_000_000
+              with Image.open(io.BytesIO(data)) as source:
+                  source.load();source=source.convert('RGB')
+                  assert source.size==size, (stem,'Source dimensions do not match recovered original',source.size)
+                  assert hashlib.sha256(source.tobytes()).hexdigest()==pixels, (stem,'Source pixels do not match original')
+                  for width in (small,size[0]):
+                      image=source.copy() if width==size[0] else source.resize((width,round(size[1]*width/size[0])),Image.Resampling.LANCZOS)
+                      path=Path('assets/images')/(stem+'-'+str(width)+'.webp');path.parent.mkdir(parents=True,exist_ok=True)
+                      if width==size[0]:image.save(path,'WEBP',lossless=True,quality=100,method=6)
+                      else:image.save(path,'WEBP',quality=94,method=6)
+                      with Image.open(path) as check:
+                          check.load();assert check.size==image.size
+                          if width==size[0]:assert hashlib.sha256(check.convert('RGB').tobytes()).hexdigest()==pixels
+                      manifest[str(path)]={'width':image.width,'height':image.height,'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'git_blob':blob(path.read_bytes()),'lossless':width==size[0],'source_pixels_sha256':pixels}
+          def once(text,old,new):
+              assert text.count(old)==1, ('Expected exactly one replacement',old[:100],text.count(old))
+              return text.replace(old,new,1)
+          updated=once(original,'<body>','<body class="about-restored-images">')
+          overrides='''\n/* About-only restoration: render real responsive images, not the old SVG fallback. */
+          .about-restored-images .hero-logo-panel .hero-logo{display:block!important;width:min(500px,100%);height:auto;max-width:100%;object-fit:contain}
+          .about-restored-images .hero-logo-panel::after{content:none!important;display:none!important;background:none!important}
+          @media(max-width:980px){.about-restored-images .hero-logo-panel .hero-logo{width:min(460px,100%)}}
+          '''
+          updated=once(updated,'</style>',overrides+'</style>')
+          updated=once(updated,'<img class="hero-logo" src="/assets/images/about-pge-logo.svg" width="620" height="620" alt="Pharma Global Eng PGE pharmaceutical parts logo">','<img class="hero-logo" src="/assets/images/about-pge-logo-restored-1254.webp" srcset="/assets/images/about-pge-logo-restored-640.webp 640w, /assets/images/about-pge-logo-restored-1254.webp 1254w" sizes="(max-width: 600px) calc(100vw - 34px), (max-width: 980px) 460px, (max-width: 1254px) calc(50vw - 89px), 500px" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async" alt="Pharma Global Eng PGE pharmaceutical parts logo">')
+          updated=once(updated,'<img class="facility-photo" src="/assets/images/about-facility-2300.svg" width="820" height="518" loading="lazy" alt="Aerial view of the PharmaGlobalEng facility at 2300 South Clinton Ave in South Plainfield, New Jersey">','<img class="facility-photo" src="/assets/images/about-facility-2300-restored-1578.webp" srcset="/assets/images/about-facility-2300-restored-800.webp 800w, /assets/images/about-facility-2300-restored-1578.webp 1578w" sizes="(max-width: 980px) calc(100vw - 34px), (max-width: 1254px) calc(64vw - 44px), 760px" width="1578" height="997" loading="lazy" decoding="async" alt="Aerial view of the PharmaGlobalEng facility at 2300 South Clinton Ave in South Plainfield, New Jersey">')
+          updated=once(updated,'<meta property="og:image" content="https://pharmaglobaleng.com/assets/images/about-pge-logo.svg">','<meta property="og:image" content="https://pharmaglobaleng.com/assets/images/about-pge-logo-restored-1254.webp">')
+          assert updated.count('(732) 439-7849')==2
+          updated=updated.replace('(732) 439-7849','+1 (732) 439-7849')
+          phone_updated=once(original_phone,'# Keep the contact page international without reformatting other pages.','# Keep the Contact and About pages international without reformatting other pages.')
+          phone_updated=once(phone_updated,'PHONE_DISPLAY_OVERRIDES = {"contact.html": "+1 (732) 439-7849"}','PHONE_DISPLAY_OVERRIDES = {"contact.html": "+1 (732) 439-7849", "about/index.html": "+1 (732) 439-7849"}')
+          before=BeautifulSoup(original,'html.parser');after=BeautifulSoup(updated,'html.parser')
+          assert before.get_text(' ',strip=True).replace('(732) 439-7849','+1 (732) 439-7849')==after.get_text(' ',strip=True),'Visible wording changed'
+          assert [a.get('href') for a in before.find_all('a')]==[a.get('href') for a in after.find_all('a')],'Navigation or contact link changed'
+          for tag in ('title','h1'):
+              assert [x.get_text() for x in before.find_all(tag)]==[x.get_text() for x in after.find_all(tag)]
+          assert before.find('link',rel='canonical')==after.find('link',rel='canonical')
+          assert before.find('meta',attrs={'name':'robots'})==after.find('meta',attrs={'name':'robots'})
+          assert [x.string for x in before.find_all('script',type='application/ld+json')]==[x.string for x in after.find_all('script',type='application/ld+json')]
+          assert [x.get('alt') for x in before.find_all('img')]==[x.get('alt') for x in after.find_all('img')]
+          about.write_text(updated,encoding='utf-8');phone.write_text(phone_updated,encoding='utf-8')
+          import importlib.util
+          spec=importlib.util.spec_from_file_location('phone',phone);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+          assert module.inject_phone(updated,module.PHONE_DISPLAY_OVERRIDES['about/index.html'])==updated,'Automatic phone update would revert About'
+          assert module.PHONE_DISPLAY_OVERRIDES['contact.html']=='+1 (732) 439-7849'
+          assert module.PHONE_DISPLAY=='(732) 439-7849'
+          (out/'asset-manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+          (out/'source-checks.json').write_text(json.dumps({'original_pixels_match':True,'full_size_outputs_lossless':True,'wording_preserved_except_about_phone_prefix':True,'navigation_and_contact_links_preserved':True,'title_h1_canonical_robots_jsonld_preserved':True,'phone_update_idempotent':True},indent=2))
+          print(json.dumps(manifest,indent=2))
+          PY
+      - name: Check rendered images on desktop tablet and mobile
+        run: |
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          from pathlib import Path
+          import http.server,threading,json,functools
+          out=Path('about-restoration-evidence')
+          class QuietHandler(http.server.SimpleHTTPRequestHandler):
+              def log_message(self,*args):pass
+          server=http.server.ThreadingHTTPServer(('127.0.0.1',8765),QuietHandler)
+          threading.Thread(target=server.serve_forever,daemon=True).start()
+          results=[]
+          with sync_playwright() as p:
+              browser=p.chromium.launch()
+              for width,height,name in [(1440,1000,'desktop'),(768,1024,'tablet'),(390,844,'mobile')]:
+                  page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=2)
+                  errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+                  page.goto('http://127.0.0.1:8765/about/',wait_until='networkidle')
+                  for selector in ('.hero-logo','.facility-photo'):
+                      page.locator(selector).scroll_into_view_if_needed()
+                      page.locator(selector).evaluate('(img)=>img.decode()')
+                  images=page.locator('img').evaluate_all('(items)=>items.map(i=>({src:i.currentSrc,complete:i.complete,naturalWidth:i.naturalWidth,naturalHeight:i.naturalHeight,display:getComputedStyle(i).display,width:i.getBoundingClientRect().width,height:i.getBoundingClientRect().height}))')
+                  assert len(images)==2
+                  assert all(i['complete'] and i['naturalWidth']>0 and i['display']!='none' for i in images),images
+                  assert all('restored-' in i['src'] and i['src'].endswith('.webp') for i in images)
+                  assert page.locator('.hero-logo-panel').evaluate('(e)=>getComputedStyle(e,"::after").display')=='none'
+                  assert page.locator('.pge-sitewide-phone__number').inner_text()=='+1 (732) 439-7849'
+                  overflow=page.evaluate('document.documentElement.scrollWidth > window.innerWidth')
+                  assert not overflow,('Horizontal overflow',width)
+                  assert not errors,errors
+                  page.evaluate('window.scrollTo(0,0)');page.wait_for_timeout(100)
+                  page.screenshot(path=str(out/('about-'+name+'-hero.png')))
+                  page.locator('.facility-visual').screenshot(path=str(out/('about-'+name+'-facility.png')))
+                  results.append({'viewport':width,'device_scale_factor':2,'images':images,'horizontal_overflow':overflow,'page_errors':errors})
+                  page.close()
+              browser.close()
+          server.shutdown()
+          (out/'browser-checks.json').write_text(json.dumps(results,indent=2))
+          print(json.dumps(results,indent=2))
+          PY
+      - name: Commit only prepared repair files to isolated branch
+        run: |
+          git diff --check
+          git diff -- about/index.html scripts/apply_sitewide_phone.py > about-restoration-evidence/changes.patch
+          git add about/index.html scripts/apply_sitewide_phone.py
+          git add --sparse assets/images/about-pge-logo-restored-640.webp assets/images/about-pge-logo-restored-1254.webp assets/images/about-facility-2300-restored-800.webp assets/images/about-facility-2300-restored-1578.webp
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Restore original About page images and international phone badge'
+          git push origin HEAD:repair/about-original-images-20260910
+          git rev-parse HEAD > about-restoration-evidence/prepared-commit.txt
+          git ls-tree -r HEAD -- about/index.html scripts/apply_sitewide_phone.py assets/images/about-pge-logo-restored-640.webp assets/images/about-pge-logo-restored-1254.webp assets/images/about-facility-2300-restored-800.webp assets/images/about-facility-2300-restored-1578.webp > about-restoration-evidence/prepared-blobs.txt
+          cp about/index.html about-restoration-evidence/about-after.html
+          cat about-restoration-evidence/prepared-commit.txt about-restoration-evidence/prepared-blobs.txt
+      - name: Save validation evidence and previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: about-original-images-restoration
+          path: about-restoration-evidence/
+          retention-days: 14
