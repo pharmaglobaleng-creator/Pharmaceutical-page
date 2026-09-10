@@ -12,6 +12,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PHONE_DISPLAY = "(732) 439-7849"
+# Keep the contact page international without reformatting other pages.
+PHONE_DISPLAY_OVERRIDES = {"contact.html": "+1 (732) 439-7849"}
 PHONE_TEL = "+17324397849"
 PHONE_CSS_HREF = "/assets/css/pge-phone.css"
 
@@ -66,20 +68,21 @@ def ensure_stylesheet(text: str) -> str:
     )
 
 
-def inject_phone(text: str) -> str:
+def inject_phone(text: str, phone_display: str = PHONE_DISPLAY) -> str:
     text = ensure_stylesheet(text)
+    phone_block = PHONE_BLOCK.replace(PHONE_DISPLAY, phone_display)
 
     marker_pattern = re.compile(
         re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER),
         flags=re.S,
     )
     if marker_pattern.search(text):
-        return marker_pattern.sub(PHONE_BLOCK, text, count=1)
+        return marker_pattern.sub(phone_block, text, count=1)
 
     if re.search(r"</body\s*>", text, flags=re.I):
         return re.sub(
             r"</body\s*>",
-            "\n" + PHONE_BLOCK + "\n</body>",
+            "\n" + phone_block + "\n</body>",
             text,
             count=1,
             flags=re.I,
@@ -88,13 +91,13 @@ def inject_phone(text: str) -> str:
     if re.search(r"</html\s*>", text, flags=re.I):
         return re.sub(
             r"</html\s*>",
-            "\n" + PHONE_BLOCK + "\n</html>",
+            "\n" + phone_block + "\n</html>",
             text,
             count=1,
             flags=re.I,
         )
 
-    return text.rstrip() + "\n" + PHONE_BLOCK + "\n"
+    return text.rstrip() + "\n" + phone_block + "\n"
 
 
 def main() -> None:
@@ -103,7 +106,8 @@ def main() -> None:
 
     for path in pages:
         original = path.read_text(encoding="utf-8", errors="strict")
-        updated = inject_phone(original)
+        display = PHONE_DISPLAY_OVERRIDES.get(path.relative_to(ROOT).as_posix(), PHONE_DISPLAY)
+        updated = inject_phone(original, display)
         if updated != original:
             path.write_text(updated, encoding="utf-8")
             changed += 1
@@ -113,7 +117,9 @@ def main() -> None:
         text = path.read_text(encoding="utf-8", errors="strict")
         if text.count(START_MARKER) != 1 or text.count(END_MARKER) != 1:
             raise ValueError(f"Phone CTA marker coverage failed: {path}")
-        if f'href="tel:{PHONE_TEL}"' not in text or PHONE_DISPLAY not in text:
+        display = PHONE_DISPLAY_OVERRIDES.get(path.relative_to(ROOT).as_posix(), PHONE_DISPLAY)
+        expected_block = PHONE_BLOCK.replace(PHONE_DISPLAY, display)
+        if expected_block not in text:
             raise ValueError(f"Phone CTA content failed: {path}")
         if PHONE_CSS_HREF not in text:
             raise ValueError(f"Phone CTA stylesheet coverage failed: {path}")
