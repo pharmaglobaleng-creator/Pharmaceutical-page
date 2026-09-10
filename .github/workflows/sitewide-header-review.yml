@@ -1,0 +1,39 @@
+name: Review approved sitewide header update
+on:
+  push:
+    branches: [update/sitewide-header-20260910]
+    paths: [.github/workflows/sitewide-header-review.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ccb4bfb14e5e520cb1e0e31f51a43d08ea06f61b
+          fetch-depth: 1
+      - name: Snapshot current source without changing the website
+        run: |
+          python3 - <<'PY'
+          import json,subprocess,zipfile
+          from pathlib import Path
+          files=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          inventory=[]
+          with zipfile.ZipFile('/tmp/header-source.zip','w',zipfile.ZIP_DEFLATED) as z:
+            for name in files:
+              p=Path(name)
+              if not name or not p.is_file():continue
+              inventory.append({'path':name,'size':p.stat().st_size})
+              if p.suffix.lower() in {'.html','.txt','.css','.js','.mjs','.json','.py','.yml','.yaml','.xml','.md','.woff','.woff2'} or name in {'assets/images/about-pge-logo-restored-640.webp'}:
+                z.write(p,name)
+            z.writestr('header-source-inventory.json',json.dumps(inventory))
+          print('Source files:',len(inventory))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: approved-header-source
+          path: /tmp/header-source.zip
+          retention-days: 7
