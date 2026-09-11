@@ -58,7 +58,7 @@ def build_catalog(slug: str, brand: str, prefix: str) -> None:
     }, separators=(",", ":"))
 
     page = f'''<!doctype html>
-<html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en-US"><head><script id="pge-analytics" src="/assets/js/pge-analytics.js" defer></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{brand} Tablet Press Replacement Parts | PharmaGlobalEng</title>
 <meta name="description" content="Browse {len(images)} representative {brand} tablet press replacement-part images and request compatibility and pricing review.">
 <meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://pharmaglobaleng.com/parts/{slug}/">

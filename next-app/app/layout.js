@@ -1,5 +1,6 @@
 import './globals.css';
 import './pge-header.css';
+import Script from 'next/script';
 
 export const metadata = {
   metadataBase: new URL('https://pharmaglobaleng.com'),
@@ -28,5 +29,5 @@ const siteSchema = {
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en-US"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema).replace(/</g, '\\u003c') }} />{children}</body></html>;
+  return <html lang="en-US"><body><Script id="pge-analytics" src="/assets/js/pge-analytics.js" strategy="afterInteractive" /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema).replace(/</g, '\\u003c') }} />{children}</body></html>;
 }

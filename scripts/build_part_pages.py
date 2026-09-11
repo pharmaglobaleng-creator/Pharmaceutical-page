@@ -346,7 +346,7 @@ def build_page(part: Part, parts: list[Part]) -> str:
     if related_items:
         related_section = f'''<section class="detail-section"><div class="wrap"><div class="detail-box"><h2>Related {escape(part.brand)} {escape(part.model)} components</h2><p>Compare other cataloged components in the same machine or component family:</p><ul class="related-parts">{related_items}</ul></div></div></section>'''
     return f'''<!doctype html>
-<html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en-US"><head><script id="pge-analytics" src="/assets/js/pge-analytics.js" defer></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title><meta name="description" content="{escape(meta)}"><meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="{part.url}">
 <meta property="og:type" content="product"><meta property="og:site_name" content="PharmaGlobalEng"><meta property="og:locale" content="en_US">
