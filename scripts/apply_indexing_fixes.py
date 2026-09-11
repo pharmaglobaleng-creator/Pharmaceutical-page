@@ -44,7 +44,7 @@ def add_breadcrumb(path: Path, items: list[tuple[str, str]]) -> bool:
 def write_legacy_redirect() -> None:
     target = f"{SITE}/services/tablet-punch-coatings.html"
     content = f'''<!doctype html>
-<html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en-US"><head><script id="pge-analytics" src="/assets/js/pge-analytics.js" defer></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tablet Punch Coatings | PharmaGlobalEng</title>
 <meta name="description" content="Tablet punch coating services from PharmaGlobalEng.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="{target}">
