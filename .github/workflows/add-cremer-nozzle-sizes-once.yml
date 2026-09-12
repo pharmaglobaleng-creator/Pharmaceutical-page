@@ -1,0 +1,48 @@
+name: Add Cremer nozzle sizes once
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/add-cremer-nozzle-sizes-once.yml']
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: contains(github.event.head_commit.message, '[add-cremer-nozzle-sizes]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add available dipping nozzle sizes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('parts/cremer-cf1220-dipping-nozzle-funnel-cone/index.html')
+          s = p.read_text(encoding='utf-8')
+
+          pill = '<span class="ref-pill">Available sizes: 38 mm · 40 mm · 42 mm · 52 mm</span><span class="ref-pill">Custom sizes: please consult your representative</span>'
+          marker = '<span class="ref-pill">Machine: Cremer CF1220</span>'
+          if 'Available sizes: 38 mm' not in s:
+              s = s.replace(marker, marker + pill)
+
+          detail = '<div><dt>Available sizes</dt><dd>38 mm · 40 mm · 42 mm · 52 mm</dd></div><div><dt>Custom sizes</dt><dd>Please consult your representative</dd></div>'
+          marker2 = '<div><dt>OEM model / drawing reference</dt><dd>6250.185.019</dd></div>'
+          if '<dt>Available sizes</dt>' not in s:
+              s = s.replace(marker2, marker2 + detail)
+
+          paragraph = '<p><strong>Available sizes:</strong> 38 mm, 40 mm, 42 mm and 52 mm. <strong>Custom sizes are also available; please consult your PharmaGlobalEng representative</strong> to confirm the required opening size, fit and machine configuration before quotation.</p>'
+          marker3 = '<section><h2>Why the condition of this part matters</h2>'
+          if 'Custom sizes are also available' not in s:
+              s = s.replace(marker3, '<section><h2>Available sizes and custom configurations</h2>' + paragraph + '</section>\n' + marker3)
+
+          # Add size information to product structured data without changing existing identifiers.
+          prop_marker = '{"@type":"PropertyValue","name":"OEM model / drawing reference","value":"6250.185.019"}'
+          size_props = ',{"@type":"PropertyValue","name":"Available sizes","value":"38 mm, 40 mm, 42 mm, 52 mm"},{"@type":"PropertyValue","name":"Custom sizes","value":"Available; consult your representative"}'
+          if '"name":"Available sizes"' not in s:
+              s = s.replace(prop_marker, prop_marker + size_props)
+
+          p.write_text(s, encoding='utf-8')
+          PY
+          git config user.name 'pharmaglobaleng-creator'
+          git config user.email 'pharmaglobaleng@gmail.com'
+          git add parts/cremer-cf1220-dipping-nozzle-funnel-cone/index.html
+          git commit -m 'Add 38mm 40mm 42mm 52mm and custom sizes to Cremer dipping nozzle page' || exit 0
+          git push
