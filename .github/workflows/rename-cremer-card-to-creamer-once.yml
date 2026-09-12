@@ -11,33 +11,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Rename visible catalog label only
+      - name: Fix Creamer card in static HTML and Next hydration data
         run: |
           python3 - <<'PY'
           from pathlib import Path
 
+          nav_k = '["$","a","kikusui",{"href":"/parts/kikusui/","children":["Kikusui"," parts"]}]'
+          nav_c = '["$","a","creamer",{"href":"/parts/cremer/","children":["Creamer"," parts"]}]'
+          identify = '["$","a",null,{"className":"pc-manufacturer-card pc-identify-card"'
+          card = '["$","a","creamer",{"className":"pc-manufacturer-card","href":"/parts/cremer/","children":[["$","span",null,{"className":"pc-manufacturer-count","children":["1"," part"]}],["$","span",null,{"className":"pc-manufacturer-mark","aria-hidden":"true","children":"CR"}],["$","h2",null,{"children":"Creamer"}],["$","p",null,{"children":"Browse Creamer replacement components by machine model, part name, and reference."}],["$","strong",null,{"children":["Browse replacement parts ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]'
+
+          for name in ['parts/index.txt','parts/__next._full.txt','parts/__next.parts.$oc$catalog.__PAGE__.txt']:
+              p = Path(name)
+              s = p.read_text()
+              s = s.replace('"children":["3,471"," part records"]','"children":["4,212"," part records"]')
+              s = s.replace('"children":["4,211"," part records"]','"children":["4,212"," part records"]')
+              s = s.replace(nav_k, nav_k + ',' + nav_c) if nav_c not in s else s
+              if '"className":"pc-manufacturer-card","href":"/parts/cremer/"' not in s:
+                  g = s.find('"className":"pc-manufacturer-grid"')
+                  i = s.find(identify, g)
+                  if i >= 0:
+                      s = s[:i] + card + ',' + s[i:]
+              p.write_text(s)
+
           p = Path('parts/index.html')
           s = p.read_text()
-          s = s.replace('<h2>Cremer</h2><p>Browse Cremer replacement components by machine model, part name, and reference.</p>', '<h2>Creamer</h2><p>Browse Creamer replacement components by machine model, part name, and reference.</p>')
-          s = s.replace('>Cremer<!-- --> parts<', '>Creamer<!-- --> parts<')
-          s = s.replace('>Cremer parts<', '>Creamer parts<')
-          p.write_text(s)
-
-          p = Path('assets/js/pge-analytics.js')
-          s = p.read_text()
-          s = s.replace("'<h2>Cremer</h2>'", "'<h2>Creamer</h2>'")
-          s = s.replace('Browse Cremer replacement components by machine model, part name, and reference.', 'Browse Creamer replacement components by machine model, part name, and reference.')
-          s = s.replace("link.textContent = 'Cremer parts';", "link.textContent = 'Creamer parts';")
-          p.write_text(s)
-
-          p = Path('parts/cremer/index.html')
-          s = p.read_text()
-          s = s.replace('<h1>Cremer Replacement Parts</h1>', '<h1>Creamer Replacement Parts</h1>')
-          s = s.replace('<title>Cremer Replacement Parts Catalog | PharmaGlobalEng</title>', '<title>Creamer Replacement Parts Catalog | PharmaGlobalEng</title>')
+          if 'id="pge-creamer-selection-fix"' not in s:
+              fix = '''<script id="pge-creamer-selection-fix">(function(){function f(){var g=document.querySelector('.pc-manufacturer-grid');if(!g)return;var c=g.querySelector('a[href="/parts/cremer/"]'),i=g.querySelector('.pc-identify-card');if(!c){c=document.createElement('a');c.className='pc-manufacturer-card';c.href='/parts/cremer/';c.innerHTML='<span class="pc-manufacturer-count">1 part</span><span class="pc-manufacturer-mark" aria-hidden="true">CR</span><h2>Creamer</h2><p>Browse Creamer replacement components by machine model, part name, and reference.</p><strong>Browse replacement parts <span aria-hidden="true">→</span></strong>';if(i)g.insertBefore(c,i);else g.appendChild(c)}else{var h=c.querySelector('h2');if(h)h.textContent='Creamer'}var t=document.querySelector('.pc-section-heading > span');if(t)t.textContent='4,212 part records'}[0,100,400,1000,2200].forEach(function(x){setTimeout(f,x)});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f,{once:true});else f()})();</script>'''
+              s = s.replace('</body>', fix + '</body>')
           p.write_text(s)
           PY
           git config user.name 'pharmaglobaleng-creator'
           git config user.email 'pharmaglobaleng@gmail.com'
-          git add parts/index.html assets/js/pge-analytics.js parts/cremer/index.html
-          git commit -m 'Rename visible manufacturer selection card to Creamer and keep CF1220 part linked' || exit 0
+          git add parts/index.html parts/index.txt 'parts/__next._full.txt' 'parts/__next.parts.$oc$catalog.__PAGE__.txt'
+          git commit -m 'Fix Creamer card in hydrated parts manufacturer selection' || exit 0
           git push
