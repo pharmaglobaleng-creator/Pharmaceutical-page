@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate verified Cremer part pages
+      - name: Generate compact Cremer part pages
         run: python3 .github/scripts/add_cremer_no_photo_batch.py
       - name: Commit generated catalog pages
         run: |
           git config user.name 'pharmaglobaleng-creator'
           git config user.email 'pharmaglobaleng@gmail.com'
           git add parts/cremer/index.html assets/js/pge-analytics.js sitemap-cremer.xml parts/pge-cre-0*/index.html
-          git commit -m 'Add 20 verified Cremer no-photo replacement-part records'
+          git commit -m 'Build compact 60-part Cremer catalog'
           git push
