@@ -31,7 +31,7 @@
         card = document.createElement('a');
         card.className = 'pc-manufacturer-card';
         card.href = '/parts/cremer/';
-        card.innerHTML = '<span class="pc-manufacturer-count">1 part</span>' +
+        card.innerHTML = '<span class="pc-manufacturer-count">2 parts</span>' +
           '<span class="pc-manufacturer-mark" aria-hidden="true">CR</span>' +
           '<h2>Creamer</h2>' +
           '<p>Browse Creamer replacement components by machine model, part name, and reference.</p>' +
@@ -41,6 +41,8 @@
         if (title) title.textContent = 'Creamer';
         var copy = card.querySelector('p');
         if (copy) copy.textContent = 'Browse Creamer replacement components by machine model, part name, and reference.';
+        var partCount = card.querySelector('.pc-manufacturer-count');
+        if (partCount) partCount.textContent = '2 parts';
       }
 
       if (identify) {
@@ -52,7 +54,7 @@
       }
 
       var count = document.querySelector('.pc-section-heading > span');
-      if (count) count.textContent = '4,212 part records';
+      if (count) count.textContent = '4,213 part records';
 
       document.querySelectorAll('.pc-nav-menu div, .pc-mobile-nav nav').forEach(function (nav) {
         var link = nav.querySelector('a[href="/parts/cremer/"]');
