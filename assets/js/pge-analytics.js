@@ -31,7 +31,7 @@
         card = document.createElement('a');
         card.className = 'pc-manufacturer-card';
         card.href = '/parts/cremer/';
-        card.innerHTML = '<span class="pc-manufacturer-count">24 parts</span>' +
+        card.innerHTML = '<span class="pc-manufacturer-count">60 parts</span>' +
           '<span class="pc-manufacturer-mark" aria-hidden="true">CR</span>' +
           '<h2>Creamer</h2>' +
           '<p>Browse Creamer replacement components by machine model, part name, and reference.</p>' +
