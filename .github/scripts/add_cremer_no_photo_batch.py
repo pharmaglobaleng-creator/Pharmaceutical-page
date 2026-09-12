@@ -1,94 +1,205 @@
 from pathlib import Path
 from html import escape
-from urllib.parse import quote_plus
 import json, re
 
-parts = [
-    {'sku':'PGE-CRE-004','name':'Rack Module (by set only)','ref':'00100242','article':'17172.0143.19','model':'CVC1220','category':'Mechanical module','role':'The public record identifies this item as a rack module supplied by set only. It does not publish the module’s detailed geometry, mounting position, material, or dimensional specification, so those details must come from the installed assembly or machine documentation.','checks':'Confirm the machine serial number, the complete rack-module set, mounting points, overall dimensions, mating components, and any revision markings before manufacture or installation.'},
-    {'sku':'PGE-CRE-005','name':'Gate Assembly Guider','ref':'00100243','article':'5994.267.019','model':'CVC1220','category':'Gate assembly component','role':'The spare record names this component as a gate assembly guider and explicitly ties it to the CVC1220 tablet counter. The public record does not define its profile, material, exact gate position, or dimensional tolerances.','checks':'Compare the installed guide, its mounting pattern, contact surfaces, gate location, dimensions, and any stamped or engraved references before replacement.'},
-    {'sku':'PGE-CRE-006','name':'Silicone Gasket','ref':'00100255','article':'6200.233.019','model':'CVC1220','category':'Seal / gasket','role':'Historical spare records identify this as a silicone gasket for the CVC1220. The records establish the material family and reference numbers, but they do not establish the gasket’s exact sealing interface, section profile, hardness for every revision, or installed dimensions.','checks':'Confirm the gasket shape, cross-section, overall dimensions, sealing location, material requirement, and machine revision against the removed part or drawing.'},
-    {'sku':'PGE-CRE-007','name':'Pneumatic Service Unit','ref':'00100083','article':'1339.100.039','model':'CVC1220','category':'Pneumatic component','role':'The source record identifies a Festo service unit as a CVC1220 tablet-counter spare. Public data does not provide the complete service-unit configuration, port arrangement, pressure range, accessory set, or mounting details, so those specifications are not inferred here.','checks':'Verify the installed Festo assembly, port sizes, orientation, mounting, pneumatic connections, labels, and machine serial information before sourcing a replacement.'},
-    {'sku':'PGE-CRE-008','name':'Quick Coupling KD-1/4','ref':'00600050','article':'1321.800.003','model':'CVC1220','category':'Pneumatic coupling','role':'This record identifies a KD-1/4 quick coupling, listed as a Festo spare for the CVC1220 tablet counter. A quick coupling is used in a detachable pneumatic connection, but the public record does not define the exact circuit position or mating component on every machine.','checks':'Confirm the installed coupling designation, thread or port interface, mating plug, pressure-service requirements, orientation, and machine configuration before replacement.'},
-    {'sku':'PGE-CRE-009','name':'Quick Coupling Plug KS3-CK-4','ref':'00100917','article':'1321.800.004','model':'CVC1220','category':'Pneumatic coupling','role':'Historical spare records explicitly list the KS3-CK-4 quick-coupling plug with article reference 1321.800.004 for the CVC1220 tablet counter. The record confirms identification but does not document the complete pneumatic circuit or all mating-coupling revisions.','checks':'Confirm the plug marking, mating coupling, tube or thread interface, installed orientation, machine serial number, and pneumatic-service requirements before ordering.'},
-    {'sku':'PGE-CRE-010','name':'Push-In Fitting QSF-1/4-8B','ref':'00600179','article':'1321.202.005','model':'CVC1220','category':'Pneumatic fitting','role':'The CVC1220 spare record identifies a Festo QSF-1/4-8B push-in fitting with article reference 1321.202.005. The record supports the fitting designation and machine association, but it does not identify the exact pneumatic circuit position on every configuration.','checks':'Check the installed fitting code, port thread, tube size, orientation, available clearance, pneumatic line location, and machine serial information before replacement.'},
-    {'sku':'PGE-CRE-011','name':'HHT-to-Counter Communication Cable, 9-Pin','ref':'W1230528','article':'9-pin connector cable set','model':'CVC1220','category':'Control / communication cable','role':'The historical spare record describes W1230528 as a communication cable from the HHT to the counter with a 9-pin connector cable set for CVC1220. The public record does not publish pinout, cable length, connector gender, shielding, or wiring revision.','checks':'Confirm both connector ends, pin count, cable length, pinout or wiring drawing, HHT revision, counter-control revision, and machine serial number before replacement.'},
-    {'sku':'PGE-CRE-012','name':'Fixed HHT Mounting Bracket','ref':'CAE10000','article':'HHT fixed bracket','model':'CVC1220','category':'HHT mounting hardware','role':'The spare record identifies CAE10000 as a fixed bracket for the HHT on a CVC1220 tablet counter. Although the record includes dimensional notation, this page does not reinterpret or publish those dimensions without an engineering drawing because formatting in historical trade data can be ambiguous.','checks':'Compare the existing bracket’s overall envelope, mounting-hole pattern, HHT attachment points, orientation, material, and machine serial information before manufacture.'},
-    {'sku':'PGE-CRE-013','name':'Safety Module PNOZ-X7 24V DC/AC','ref':'S1000926','article':'APZ774059 / PNOZ-X7-24V-DC/AC','model':'CVC1220','category':'Electrical safety control','role':'A historical CVC1220 spare record lists safety module S1000926 with associated reference APZ774059 and model PNOZ-X7-24V-DC/AC. It is an electrical safety-control component; the public record does not specify the exact safety circuit assignment, wiring, or machine logic revision.','checks':'Electrical replacement should be matched to the installed module label, supply voltage, terminal arrangement, safety-circuit drawing, machine controls revision, and serial number.'},
-    {'sku':'PGE-CRE-014','name':'HHT Handheld Terminal','ref':'W0010017','article':'HHT','model':'CVC1220','category':'Operator interface','role':'Historical records list W0010017 as an HHT spare for CVC1220 machines and specifically reference serial numbers 6200.417 and 6200.418. That evidence supports those recorded machines; this page does not assume the same terminal is interchangeable with every CVC1220 or CF1220 control revision.','checks':'Confirm the machine serial number, existing HHT label, hardware revision, connector arrangement, software or firmware requirements, and communication interface before replacement.'},
-    {'sku':'PGE-CRE-015','name':'AC Motor 6D22, 50 Hz, 50 rpm','ref':'S1001308','article':'6D22 · 50 Hz · 50 rpm','model':'CVC1220','category':'Drive motor','role':'The historical spare record lists S1001308 as an AC motor, model 6D22, rated in the record at 50 Hz and 50 rpm for CVC1220. The record does not identify the exact driven subassembly, power rating, shaft dimensions, mounting face, or wiring details.','checks':'Confirm the complete motor nameplate, frequency, speed, voltage, power, shaft geometry, mounting dimensions, rotation requirement, wiring, and machine serial number before replacement.'},
-    {'sku':'PGE-CRE-016','name':'Red LED Indicator, 24 V','ref':'S1001403','article':'1E005-001-2','model':'CVC1220','category':'Electrical indicator','role':'The spare record identifies S1001403 as a red 24-volt LED indicator for CVC1220 and gives part reference 1E005-001-2. The public record does not define its exact panel position, message meaning, lens style, mounting diameter, or electrical connector arrangement.','checks':'Match the installed indicator color, 24 V rating, part marking, body and mounting dimensions, terminal style, panel location, and machine electrical drawing before replacement.'},
-    {'sku':'PGE-CRE-017','name':'Yellow LED Indicator, 24 V','ref':'S1001404','article':'IE005-002-1','model':'CVC1220','category':'Electrical indicator','role':'The spare record identifies S1001404 as a yellow 24-volt LED indicator for CVC1220 and records the reference as IE005-002-1. The public data does not establish the exact status function, panel location, mounting geometry, or terminal configuration.','checks':'Match the installed yellow indicator, 24 V rating, reference marking, mounting dimensions, terminal style, lens or body design, and machine electrical documentation before replacement.'},
-    {'sku':'PGE-CRE-018','name':'Main Control PCB','ref':'00100265','article':'7229.804.051 / 980405','model':'CVC1220','category':'Machine control electronics','role':'Historical spare records explicitly identify 00100265, reference 7229.804.051 and board number 980405, as a main control PCB “for CVC1220 only.” The record strongly supports machine association but does not establish firmware, software, EPROM, connector population, or board-revision interchangeability.','checks':'Confirm the installed PCB numbers, revision labels, firmware or EPROM requirements, connector layout, machine serial number, and electrical-control documentation before any board replacement.'},
-    {'sku':'PGE-CRE-019','name':'Memory Flap Cylinder PTM 100-10-85P','ref':'00100215','article':'1300.100.016','model':'CVC1220','category':'Memory-flap pneumatic component','role':'Multiple historical records identify 00100215 / 1300.100.016 as the PTM 100-10-85P memory flap cylinder for CVC1220. The component is associated with actuation of the memory-flap system, but public records do not provide complete mounting dimensions, port details, stroke verification, or revision history.','checks':'Confirm the cylinder marking, stroke and bore information, mounting interfaces, rod-end connection, pneumatic ports, installed orientation, and machine serial number before replacement.'},
-    {'sku':'PGE-CRE-020','name':'Silicone Buffer Ring','ref':'00100223','article':'17350.0027.19','model':'CVC1220','category':'Memory-flap buffer component','role':'Historical records explicitly list 00100223, part reference 17350.0027.19, as a silicon or silicone buffer ring for CVC1220. The data confirms the identification and machine association but does not provide a complete material specification, hardness, section geometry, or dimensional tolerance.','checks':'Compare the removed ring’s diameter, cross-section, material, hardness if known, mating surfaces, installed compression, and machine serial information before replacement.'},
-    {'sku':'PGE-CRE-021','name':'Buffer Ring Nut (2005)','ref':'00100041','article':'17350.0026.19','model':'CVC1220','category':'Memory-flap mounting hardware','role':'The CVC1220 spare record identifies 00100041 as a buffer ring nut, noted as “2005,” with part reference 17350.0026.19. The record supports the item name and reference but does not publish thread specification, dimensions, material, finish, or the exact revision range.','checks':'Confirm thread form and size, overall dimensions, wrench or drive features, mating buffer-ring assembly, material or finish requirements, and machine serial number before manufacture.'},
-    {'sku':'PGE-CRE-022','name':'Memory Flap Buffer Strip / Silicone Foam','ref':'00100252','article':'6200.107.019','model':'CVC1220','category':'Memory-flap buffer material','role':'Historical CVC1220 records identify 00100252 with reference 6200.107.019 as silicone foam used as a memory-flap buffer strip. One record describes a 30 × 20 × 275 mm format and HS10 notation, but those dimensions should still be checked against the installed machine before production.','checks':'Verify strip length, width, thickness, foam grade or hardness, adhesive or attachment method if present, installed location, and machine revision before replacement.'},
-    {'sku':'PGE-CRE-023','name':'Hopper Buffer Strip / Silicone Strip Hopper Plate','ref':'00100240','article':'5994.221.019','model':'CVC1220','category':'Hopper buffer material','role':'Historical records identify 00100240 / 5994.221.019 as a hopper buffer strip or silicone strip for the hopper plate, and separate CVC1220 change-part records describe the same component family. One record shows 15 × 15 × 830 mm HS10 notation; installed dimensions should be verified before use.','checks':'Confirm the installed strip’s length, section size, silicone grade or hardness, attachment method, hopper-plate location, machine revision, and any drawing information before replacement.'},
-]
+parts = [{'sku': 'PGE-CRE-004', 'name': 'Rack Module (by set only)', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-005', 'name': 'Gate Assembly Guider', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-006', 'name': 'Silicone Gasket', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-007', 'name': 'Pneumatic Service Unit', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-008', 'name': 'Quick Coupling KD-1/4', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-009', 'name': 'Quick Coupling Plug KS3-CK-4', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-010', 'name': 'Push-In Fitting QSF-1/4-8B', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-011', 'name': 'HHT-to-Counter Communication Cable, 9-Pin', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-012', 'name': 'Fixed HHT Mounting Bracket', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-013', 'name': 'Safety Module PNOZ-X7 24V DC/AC', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-014', 'name': 'HHT Handheld Terminal', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-015', 'name': 'AC Motor 6D22, 50 Hz, 50 rpm', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-016', 'name': 'Red LED Indicator, 24 V', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-017', 'name': 'Yellow LED Indicator, 24 V', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-018', 'name': 'Main Control PCB', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-019', 'name': 'Memory Flap Cylinder PTM 100-10-85P', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-020', 'name': 'Silicone Buffer Ring', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-021', 'name': 'Buffer Ring Nut (2005)', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-022', 'name': 'Memory Flap Buffer Strip / Silicone Foam', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-023', 'name': 'Hopper Buffer Strip / Silicone Strip Hopper Plate', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-024', 'name': 'Memory Flap Fork with Locking Ring', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-025', 'name': 'Detection Unit Assembly', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-026', 'name': 'Detection Unit Glass', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-027', 'name': 'Detection Unit Processor Board', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-028', 'name': 'Detection Unit Emitter Board', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-029', 'name': 'Detection Unit Receiver Board', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-030', 'name': 'Detection Unit Connector Board', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-031', 'name': 'HHT PC Board + Keyboard Full Set', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-032', 'name': 'Touch Screen Full Set', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-033', 'name': 'Infrared Emitter', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-034', 'name': 'Infrared Receiver', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-035', 'name': 'Processor PCB', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-036', 'name': 'PWM PCB', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-037', 'name': 'Keyboard PCB', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-038', 'name': 'Frequency Inverter', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-039', 'name': 'M-Type Outfeed Timing Belt 1025-5M-12', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-040', 'name': 'Dosage Flap / Hopper Gate', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-041', 'name': '16 mm Channel Inserter', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-042', 'name': '19 mm Channel Divider Insert', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-043', 'name': 'Tilt Nozzle for 750 cc / 950 cc Bottles', 'model': 'CVC1220'},
+ {'sku': 'PGE-CRE-044', 'name': 'Easy-Clean Cylinder Head Nut', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-045', 'name': 'Precision-Fit Nut Buffer', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-046', 'name': 'Clevis / Rod End', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-047', 'name': '13-Station Valve Manifold Block', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-048', 'name': 'Valve Manifold PCB', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-049', 'name': 'Internal Cable Harness', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-050', 'name': 'Internal Pneumatic Push-In Connector Set', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-051', 'name': 'External Pneumatic Connector Set', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-052', 'name': '4 mm Pneumatic Tube – 15 cm', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-053', 'name': '4 mm Pneumatic Tube – 20 cm with Insert', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-054', 'name': '8 mm Pneumatic Tube', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-055', 'name': '4 mm Pneumatic Tube', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-056', 'name': 'Memory Flap Guide Block Buffer', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-057', 'name': 'CF1220-LTE Interface Control Board', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-058', 'name': 'Piggy-Back PLC', 'model': 'CF1220 / CVC1220'},
+ {'sku': 'PGE-CRE-059', 'name': 'Compact HHT-Style Touchscreen', 'model': 'CF1220 / CVC1220'}]
 
-def about(p):
-    article_phrase = 'the associated article or drawing reference ' + p['article'] if p.get('article') else 'the stated spare-part reference'
-    return f"""This listing covers the {p['name']} recorded as a spare for the Cremer {p['model']} tablet counter machine. Historical spare-parts records explicitly associate reference {p['ref']} with the {p['model']} and list {article_phrase}. That record is the basis for including this item in the PharmaGlobalEng Creamer catalog.
-
-{p['role']} The available public record is an identification record, not a complete engineering drawing, so PharmaGlobalEng does not publish unsupported dimensions, materials, tolerances, finishes, or installation claims for this item.
-
-For replacement work, compare the existing component with the machine serial information and available Cremer documentation. {p['checks']} A matching reference number is useful, but it should not replace physical and documentary fit confirmation when machine revisions may exist. If a removed sample is available, photos and measured dimensions can be reviewed during quotation.
-
-No exact product photograph has been independently verified for this listing. The page therefore uses a “photo not yet verified” placeholder rather than borrowing an image from another part. This prevents a visually similar component from being represented as the exact {p['model']} spare. PharmaGlobalEng supplies independent replacement components and is not affiliated with or endorsed by Cremer. Final compatibility, material, dimensions, and configuration are confirmed before manufacture or supply."""
+repo = Path('.')
+today = '2026-09-12'
 
 def page_html(p):
-    text = about(p)
-    url = f"https://pharmaglobaleng.com/parts/{p['sku'].lower()}/"
-    title = f"{p['name']} | Cremer {p['model']} | {p['sku']}"
-    desc = f"{p['name']} recorded for Cremer {p['model']}. PGE replacement record {p['sku']}; source reference {p['ref']} and {p['article']}. Fit confirmed before quotation."
-    schema = {'@context':'https://schema.org','@graph':[{'@type':'Product','@id':url+'#product','name':f"{p['name']} for Cremer {p['model']}",'alternateName':[p['name'],p['sku'],p['ref'],p['article']],'sku':p['sku'],'url':url,'description':desc,'category':p['category'],'brand':{'@type':'Brand','name':'PharmaGlobalEng'},'manufacturer':{'@id':'https://pharmaglobaleng.com/#organization'},'isAccessoryOrSparePartFor':{'@type':'ProductModel','name':f"Cremer {p['model']}"},'additionalProperty':[{'@type':'PropertyValue','name':'Make','value':'Cremer'},{'@type':'PropertyValue','name':'Model evidence','value':p['model']+' historical spare-parts record'},{'@type':'PropertyValue','name':'Historical spare reference','value':p['ref']},{'@type':'PropertyValue','name':'Article / drawing reference','value':p['article']},{'@type':'PropertyValue','name':'Photo status','value':'No exact product photo independently verified; no substitute image used'},{'@type':'PropertyValue','name':'Supplier relationship','value':'Independent replacement-part supplier; not OEM affiliated or endorsed'}]},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Parts Store','item':'https://pharmaglobaleng.com/parts/'},{'@type':'ListItem','position':2,'name':'Creamer parts','item':'https://pharmaglobaleng.com/parts/cremer/'},{'@type':'ListItem','position':3,'name':p['sku'],'item':url}]},{'@type':'Organization','@id':'https://pharmaglobaleng.com/#organization','name':'PharmaGlobalEng','url':'https://pharmaglobaleng.com/'}]}
-    subject = quote_plus(f"Cremer {p['model']} part inquiry | {p['sku']} | {p['name']}")
-    body = quote_plus(f"Hello PharmaGlobalEng,\n\nI would like compatibility and quotation information for this independent replacement part:\n\nPart: {p['name']}\nPGE SKU: {p['sku']}\nMachine: Cremer {p['model']}\nHistorical spare reference: {p['ref']}\nArticle/drawing reference: {p['article']}\n\nMachine serial number/configuration:\nExisting part or drawing reference:\nQuantity required:\n")
-    paragraphs = ''.join(f'<p>{escape(x)}</p>' for x in text.split('\n\n'))
-    return f'''<!doctype html><html lang="en-US"><head><script id="pge-analytics" src="/assets/js/pge-analytics.js" defer></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title><meta name="description" content="{escape(desc, quote=True)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{url}"><meta property="og:type" content="product"><meta property="og:site_name" content="PharmaGlobalEng"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(desc, quote=True)}"><meta property="og:url" content="{url}"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/assets/css/pharmaglobaleng.css"><link rel="stylesheet" href="/assets/css/part-detail.css"><link rel="stylesheet" href="/assets/css/parts-quote-cart.css?v=1"><link rel="stylesheet" href="/assets/css/pge-header.css" data-pge-header-css="true"><script type="application/ld+json">{json.dumps(schema,separators=(',',':'))}</script></head><body><header data-pge-header="v1" class="site-header"><div class="wrap nav"><div class="pge-header-identity"><a class="pge-header-brand" href="/" aria-label="PharmaGlobalEng home"><img class="pge-header-logo" src="/assets/images/pge-header-logo.webp" width="34" height="30" alt="" decoding="async"><span class="pge-header-wordmark">PharmaGlobal<span>Eng</span></span></a><a class="pge-header-phone" href="tel:+17324397849">+1 (732) 439-7849</a></div><nav class="nav-links" aria-label="Primary navigation"><a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/parts/" aria-current="page">Parts Store</a><a class="nav-cta" href="/contact.html">Contact</a></nav></div></header><main><div class="wrap"><div class="part-crumb"><a href="/parts/">Parts Store</a> / <a href="/parts/cremer/">Creamer parts</a> / {p['sku']}</div><section class="part-hero"><div class="part-image" style="min-height:420px;display:flex;align-items:center;justify-content:center;padding:34px;text-align:center;background:#070a12"><div><div style="font-size:54px;line-height:1;margin-bottom:18px" aria-hidden="true">◇</div><strong style="display:block;font-size:22px">Photo not yet verified</strong><p style="max-width:340px;margin:10px auto 0">No substitute or similar-part image is being used for this record.</p></div></div><div class="part-intro"><p class="eyebrow">Independent replacement component · Cremer {p['model']}</p><h1>{escape(p['name'])} for Cremer {p['model']}</h1><span class="sku-badge">PharmaGlobalEng SKU: {p['sku']}</span><div class="store-links"><a href="/parts/cremer/">View in the Creamer Parts Store →</a><a href="/parts/">Browse all parts →</a></div><p class="lead">Historical spare-parts records identify <strong>{escape(p['ref'])}</strong> / <strong>{escape(p['article'])}</strong> for the Cremer {p['model']}. Exact fit is confirmed against the installed component and machine configuration before quotation.</p><div class="compatibility"><strong>Historical spare reference: {escape(p['ref'])}</strong><br>Article / drawing reference: <strong>{escape(p['article'])}</strong><br>Make: <strong>Cremer</strong> · Model evidence: <strong>{p['model']}</strong></div><div class="part-quote-actions"><button class="btn primary quote-cta" type="button" data-pge-cart-add data-part-sku="{p['sku']}" data-part-name="{escape(p['name'], quote=True)}" data-part-brand="Cremer" data-part-model="{p['model']}" data-part-url="/parts/{p['sku'].lower()}/">Add to Quote Cart</button><a class="btn secondary email-part-inquiry" href="mailto:info@pharmaglobaleng.com?subject={subject}&body={body}">Email this part</a></div></div></section></div><section class="detail-section"><div class="wrap detail-grid"><div class="detail-box"><h2>Verified record mapping</h2><dl><div><dt>Make</dt><dd>Cremer</dd></div><div><dt>Model evidence</dt><dd>{p['model']} spare-parts record</dd></div><div><dt>Part name</dt><dd>{escape(p['name'])}</dd></div><div><dt>Historical spare reference</dt><dd>{escape(p['ref'])}</dd></div><div><dt>Article / drawing reference</dt><dd>{escape(p['article'])}</dd></div><div><dt>Category</dt><dd>{escape(p['category'])}</dd></div></dl></div><div class="detail-box"><h2>Photo and evidence status</h2><p><strong>No exact photo is published for this item.</strong> We have not independently verified an exact matching product photograph, so no substitute image is used.</p><p><strong>Evidence basis:</strong> historical spare-parts records explicitly identify the reference and the {p['model']} machine association shown on this page.</p><p>CF1220 interchangeability is not assumed where the historical source states CVC1220 only. Confirm the serial number and installed component before ordering.</p></div></div></section><section class="detail-section"><div class="wrap"><h2>About this {escape(p['name'])}</h2>{paragraphs}</div></section><section class="detail-section"><div class="wrap"><h2>Reference identifiers</h2><div class="aliases"><span class="alias">{escape(p['name'])}</span><span class="alias">{p['sku']}</span><span class="alias">{escape(p['ref'])}</span><span class="alias">{escape(p['article'])}</span><span class="alias">Cremer {p['model']}</span></div></div></section><section class="detail-section"><div class="wrap"><div class="notice"><strong>Fit confirmation:</strong> This page publishes only the identification information supported by the available spare-parts record. CF1220/CVC1220 machines may differ by serial number, controls revision, or installed configuration. Confirm the existing part, machine serial number, dimensions, material where applicable, and drawing information before manufacture or installation.</div></div></section><section class="detail-section"><div class="wrap"><div class="notice"><strong>Independent supplier and trademark notice:</strong> PharmaGlobalEng is not affiliated with, authorized by, sponsored by, or endorsed by Cremer. Cremer names, model references, and historical part references are used solely to identify potential equipment compatibility.</div></div></section></main><footer><div class="wrap footer"><span>© PharmaGlobalEng</span><a href="/parts/">All parts</a><a href="/contact.html">Parts inquiry</a></div></footer><script src="/assets/js/parts-quote-cart.js?v=1"></script></body></html>'''
+    sku = p['sku']
+    name = p['name']
+    model = p['model']
+    url = f"https://pharmaglobaleng.com/parts/{sku.lower()}/"
+    title = f"{name} | Cremer {model}"
+    desc = f"Cremer {model} replacement part: {name}. Contact PharmaGlobalEng for fit and availability."
+    schema = {
+        "@context":"https://schema.org",
+        "@graph":[
+            {
+                "@type":"Product",
+                "@id":url+"#product",
+                "name":f"{name} for Cremer {model}",
+                "sku":sku,
+                "url":url,
+                "description":desc,
+                "brand":{"@type":"Brand","name":"PharmaGlobalEng"},
+                "manufacturer":{"@id":"https://pharmaglobaleng.com/#organization"},
+                "isAccessoryOrSparePartFor":{"@type":"ProductModel","name":f"Cremer {model}"}
+            },
+            {
+                "@type":"BreadcrumbList",
+                "itemListElement":[
+                    {"@type":"ListItem","position":1,"name":"Parts Store","item":"https://pharmaglobaleng.com/parts/"},
+                    {"@type":"ListItem","position":2,"name":"Creamer parts","item":"https://pharmaglobaleng.com/parts/cremer/"},
+                    {"@type":"ListItem","position":3,"name":name,"item":url}
+                ]
+            },
+            {"@type":"Organization","@id":"https://pharmaglobaleng.com/#organization","name":"PharmaGlobalEng","url":"https://pharmaglobaleng.com/"}
+        ]
+    }
+    return f'''<!doctype html>
+<html lang="en-US">
+<head>
+<script id="pge-analytics" src="/assets/js/pge-analytics.js" defer></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{escape(title)}</title>
+<meta name="description" content="{escape(desc, quote=True)}">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="{url}">
+<link rel="stylesheet" href="/assets/css/pharmaglobaleng.css">
+<link rel="stylesheet" href="/assets/css/pge-header.css" data-pge-header-css="true">
+<style>
+.minimal-part{{padding:38px 0 70px}}.minimal-part .wrap{{max-width:920px}}
+.part-crumb{{font-size:14px;color:var(--muted);margin-bottom:28px}}.part-crumb a{{color:inherit;text-decoration:none}}
+.minimal-part h1{{font-size:clamp(34px,5vw,58px);line-height:1.06;margin:0 0 28px;letter-spacing:-.035em}}
+.part-facts{{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg-alt);max-width:760px}}
+.part-fact{{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line)}}.part-fact:last-child{{border-bottom:0}}
+.part-fact strong{{color:var(--muted)}}.part-fact span{{font-weight:800}}
+.call-part{{display:inline-flex;margin-top:24px;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800;background:linear-gradient(90deg,#6b4cff,#1aa7ff);color:#fff}}
+@media(max-width:560px){{.part-fact{{grid-template-columns:1fr;gap:4px}}}}
+</style>
+<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False, separators=(',',':'))}</script>
+</head>
+<body>
+<header data-pge-header="v1" class="site-header"><div class="wrap nav"><div class="pge-header-identity"><a class="pge-header-brand" href="/" aria-label="PharmaGlobalEng home"><img class="pge-header-logo" src="/assets/images/pge-header-logo.webp" width="34" height="30" alt="" decoding="async"><span class="pge-header-wordmark">PharmaGlobal<span>Eng</span></span></a><a class="pge-header-phone" href="tel:+17324397849">+1 (732) 439-7849</a></div><nav class="nav-links" aria-label="Primary navigation"><a href="/services/">Services</a><a href="/solutions/">Solutions</a><a href="/parts/" aria-current="page">Parts Store</a><a class="nav-cta" href="/contact.html">Contact</a></nav></div></header>
+<main class="minimal-part"><div class="wrap">
+<div class="part-crumb"><a href="/parts/">Parts Store</a> / <a href="/parts/cremer/">Creamer parts</a></div>
+<h1>{escape(name)}</h1>
+<div class="part-facts" aria-label="Part information">
+<div class="part-fact"><strong>Make</strong><span>Cremer</span></div>
+<div class="part-fact"><strong>Model</strong><span>{escape(model)}</span></div>
+<div class="part-fact"><strong>Part</strong><span>{escape(name)}</span></div>
+</div>
+<a class="call-part" href="tel:+17324397849">Call about this part: +1 (732) 439-7849</a>
+</div></main>
+<footer><div class="wrap footer"><span>© PharmaGlobalEng</span><a href="/parts/">All parts</a><a href="/contact.html">Parts inquiry</a></div></footer>
+</body></html>'''
 
+# Rewrite the 56 no-photo pages only. The existing four photographed pages are not modified.
 for p in parts:
-    path = Path('parts') / p['sku'].lower() / 'index.html'
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(page_html(p), encoding='utf-8')
-    print('wrote', path, len(about(p).split()), 'about words')
+    out = repo / 'parts' / p['sku'].lower() / 'index.html'
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(page_html(p), encoding='utf-8')
 
-catalog_path = Path('parts/cremer/index.html')
+# Preserve the exact first four catalog cards and rebuild only the no-photo portion.
+catalog_path = repo / 'parts' / 'cremer' / 'index.html'
 catalog = catalog_path.read_text(encoding='utf-8')
-catalog = re.sub(r'<div class="catalog-count">\d+ parts?</div>', '<div class="catalog-count">24 parts</div>', catalog, count=1)
-catalog = catalog.replace('"numberOfItems":4', '"numberOfItems":24')
-cards = []
-for p in parts:
-    cards.append(f'''<article class="part-card pge-no-photo-card" data-pge-no-photo-batch="true"><a class="part-card-image" href="/parts/{p['sku'].lower()}/" aria-label="View {escape(p['name'], quote=True)} part details" style="text-decoration:none"><div style="text-align:center;color:var(--muted);padding:24px"><span style="display:block;font-size:38px;line-height:1;margin-bottom:12px;color:var(--cyan)" aria-hidden="true">◇</span><strong style="display:block;color:var(--text)">Photo not yet verified</strong><small>No substitute image used</small></div></a><div class="part-card-body"><p class="part-machine">Cremer {p['model']} · CF1220 fit review</p><h2>{escape(p['name'])}</h2><p class="part-ref"><strong>PGE SKU:</strong> {p['sku']}</p><p class="part-ref"><strong>Historical reference:</strong> {escape(p['ref'])}</p><p class="part-ref"><strong>Article / drawing:</strong> {escape(p['article'])}</p><div class="part-card-actions"><a class="view-btn" href="/parts/{p['sku'].lower()}/">View part details <span aria-hidden="true">→</span></a></div></div></article>''')
-block = '\n' + '\n'.join(cards) + '\n'
-catalog = re.sub(r'\n<article class="part-card pge-no-photo-card" data-pge-no-photo-batch="true">.*?(?=\n</section>)', '', catalog, flags=re.S)
-grid_start = catalog.find('<section class="parts-grid"')
-grid_end = catalog.find('</section>', grid_start)
-if grid_start < 0 or grid_end < 0:
-    raise SystemExit('Could not locate Creamer catalog grid')
-catalog = catalog[:grid_end] + block + catalog[grid_end:]
-schema_items = ''.join(',' + json.dumps({'@type':'ListItem','position':i+5,'name':f"{p['name']} for Cremer {p['model']}",'url':f"https://pharmaglobaleng.com/parts/{p['sku'].lower()}/"},separators=(',',':')) for i,p in enumerate(parts))
-marker = '"url":"https://pharmaglobaleng.com/parts/pge-cre-003/"}'
-script_start = catalog.find('<script type="application/ld+json">')
-script_end = catalog.find('</script>', script_start)
-if marker in catalog and 'pge-cre-004' not in catalog[script_start:script_end]:
-    catalog = catalog.replace(marker, marker + schema_items, 1)
+existing_cards = re.findall(r'<article class="part-card">.*?</article>', catalog, flags=re.S)
+if len(existing_cards) < 4:
+    raise SystemExit('Expected at least four existing Creamer catalog cards')
+first_four = existing_cards[:4]
+
+def card(p):
+    return f'''<article class="part-card">
+<div class="part-card-body"><p class="part-machine">Cremer {escape(p['model'])}</p><h2>{escape(p['name'])}</h2><div class="part-card-actions"><a class="view-btn" href="/parts/{p['sku'].lower()}/">View part details <span aria-hidden="true">→</span></a></div></div>
+</article>'''
+
+new_grid = '<section class="parts-grid" aria-label="Creamer replacement parts">\n' + '\n'.join(first_four + [card(p) for p in parts]) + '\n</section>'
+catalog = re.sub(r'<section class="parts-grid" aria-label="Creamer replacement parts">.*?</section>', new_grid, catalog, flags=re.S)
+catalog = re.sub(r'<div class="catalog-count">\d+ parts</div>', '<div class="catalog-count">60 parts</div>', catalog)
+catalog = re.sub(
+    r'<meta name="description" content="[^"]*">',
+    '<meta name="description" content="Browse 60 Creamer replacement-part records for Cremer CF1220 and CVC1220 equipment, including photographed components and additional part lookup pages.">',
+    catalog,
+    count=1
+)
+
+item_list = [
+    {"name":"Dipping Nozzle Funnel Cone for Cremer CF1220","url":"https://pharmaglobaleng.com/parts/cremer-cf1220-dipping-nozzle-funnel-cone/"},
+    {"name":"Channel Restrictor Plate for Cremer CF-1220","url":"https://pharmaglobaleng.com/parts/pge-cre-001/"},
+    {"name":"Linear Guide Plate for Cremer CF-1220","url":"https://pharmaglobaleng.com/parts/pge-cre-002/"},
+    {"name":"Set of 12 Memory Flaps for Cremer CF1220 / CVC1220","url":"https://pharmaglobaleng.com/parts/pge-cre-003/"},
+] + [{"name":f"{p['name']} for Cremer {p['model']}","url":f"https://pharmaglobaleng.com/parts/{p['sku'].lower()}/"} for p in parts]
+
+schema = {
+    "@context":"https://schema.org",
+    "@graph":[
+        {"@type":"CollectionPage","@id":"https://pharmaglobaleng.com/parts/cremer/#webpage","url":"https://pharmaglobaleng.com/parts/cremer/","name":"Creamer Replacement Parts | PharmaGlobalEng","description":"Browse Creamer replacement-part records for Cremer CF1220 and CVC1220 equipment.","mainEntity":{"@id":"https://pharmaglobaleng.com/parts/cremer/#items"}},
+        {"@type":"ItemList","@id":"https://pharmaglobaleng.com/parts/cremer/#items","name":"Creamer Replacement Parts","numberOfItems":60,"itemListElement":[{"@type":"ListItem","position":i+1,"name":x["name"],"url":x["url"]} for i,x in enumerate(item_list)]},
+        {"@type":"BreadcrumbList","itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://pharmaglobaleng.com/"},
+            {"@type":"ListItem","position":2,"name":"Parts Store","item":"https://pharmaglobaleng.com/parts/"},
+            {"@type":"ListItem","position":3,"name":"Creamer","item":"https://pharmaglobaleng.com/parts/cremer/"}
+        ]},
+        {"@type":"Organization","@id":"https://pharmaglobaleng.com/#organization","name":"PharmaGlobalEng","url":"https://pharmaglobaleng.com/"}
+    ]
+}
+catalog = re.sub(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps(schema, ensure_ascii=False, separators=(',',':'))+'</script>', catalog, count=1, flags=re.S)
 catalog_path.write_text(catalog, encoding='utf-8')
 
-js_path = Path('assets/js/pge-analytics.js')
-js = js_path.read_text(encoding='utf-8')
-js = js.replace("'<span class=\"pc-manufacturer-count\">2 parts</span>'", "'<span class=\"pc-manufacturer-count\">24 parts</span>'")
-js = js.replace("partCount.textContent = '2 parts';", "partCount.textContent = '24 parts';")
-js = re.sub(r"count\.textContent = '4,\d{3} part records';", "count.textContent = '4,235 part records';", js)
-js_path.write_text(js, encoding='utf-8')
+# Rebuild the Creamer sitemap.
+urls = [
+    'https://pharmaglobaleng.com/parts/cremer/',
+    'https://pharmaglobaleng.com/parts/cremer-cf1220-dipping-nozzle-funnel-cone/',
+    'https://pharmaglobaleng.com/parts/pge-cre-001/',
+    'https://pharmaglobaleng.com/parts/pge-cre-002/',
+    'https://pharmaglobaleng.com/parts/pge-cre-003/',
+] + [f"https://pharmaglobaleng.com/parts/{p['sku'].lower()}/" for p in parts]
+sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
+    f'  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls
+) + '</urlset>\n'
+(repo / 'sitemap-cremer.xml').write_text(sitemap, encoding='utf-8')
 
-sm_path = Path('sitemap-cremer.xml')
-sm = sm_path.read_text(encoding='utf-8')
-additions = []
-for p in parts:
-    loc = f"https://pharmaglobaleng.com/parts/{p['sku'].lower()}/"
-    if loc not in sm:
-        additions.append(f'  <url><loc>{loc}</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>')
-if additions:
-    sm = sm.replace('</urlset>', '\n'.join(additions) + '\n</urlset>')
-sm_path.write_text(sm, encoding='utf-8')
+# Update the root Parts Store hydration repair count/card count without touching the four photographed part pages.
+analytics_path = repo / 'assets' / 'js' / 'pge-analytics.js'
+analytics = analytics_path.read_text(encoding='utf-8')
+analytics = re.sub(r"'\d+ parts'", "'60 parts'", analytics)
+analytics = re.sub(r"'[\d,]+ part records'", "'4,271 part records'", analytics)
+analytics_path.write_text(analytics, encoding='utf-8')
