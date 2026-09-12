@@ -11,8 +11,10 @@ import polish_part_page_copy as polish
 
 
 class EditorialProductTests(unittest.TestCase):
+    product = 'pge-cre-001'
+
     def setUp(self):
-        self.path = normalize.ROOT / 'parts/pge-cre-001/index.html'
+        self.path = normalize.ROOT / 'parts' / self.product / 'index.html'
         self.text = self.path.read_text()
 
     def test_reviewed_content_survives_normalization(self):
@@ -39,6 +41,10 @@ class EditorialProductTests(unittest.TestCase):
     def test_ordinary_catalog_pages_still_normalize(self):
         ordinary = self.text.replace(' data-pge-content="editorial"', '')
         self.assertNotEqual(normalize.normalize_page(self.path, ordinary), ordinary)
+
+
+class LinearGuideEditorialTests(EditorialProductTests):
+    product = 'pge-cre-002'
 
 
 if __name__ == '__main__':
