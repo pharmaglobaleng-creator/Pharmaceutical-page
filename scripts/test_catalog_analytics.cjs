@@ -24,6 +24,8 @@ async function run({ missingCard = false, delayedGrid = false, pathname = '/part
     }
   };
   const grid = window.document.querySelector('.pc-manufacturer-grid');
+  // Older exported pages still use the bounded compatibility fallback.
+  if (missingCard || delayedGrid) window.document.querySelector('[data-pge-catalog]').removeAttribute('data-pge-catalog-entry');
   if (missingCard) grid.querySelector('a[href="/parts/cremer/"]').remove();
   if (delayedGrid) grid.remove();
   window.eval(source);

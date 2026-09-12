@@ -19,7 +19,7 @@
   tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ES31F0R1F';
   document.head.appendChild(tag);
 
-  if (window.location.pathname === '/parts/' || window.location.pathname === '/parts') {
+  if ((window.location.pathname === '/parts/' || window.location.pathname === '/parts') && !document.querySelector('[data-pge-catalog-entry="static"]')) {
     function setText(element, value) {
       if (element && element.textContent !== value) element.textContent = value;
     }

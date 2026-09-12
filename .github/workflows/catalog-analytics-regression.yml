@@ -2,28 +2,43 @@ name: Catalog responsiveness regression
 on:
   push:
     branches: [main]
-    paths: ['assets/js/pge-analytics.js', 'parts/index.html', 'scripts/test_catalog_analytics.cjs', '.github/workflows/catalog-analytics-regression.yml']
+    paths: ['assets/js/pge-analytics.js', 'assets/js/catalog-entry.js', 'parts/index.html', 'parts/cremer/index.html', 'scripts/test_catalog*.cjs', 'scripts/optimize_catalog_entry.py', '.github/workflows/catalog-analytics-regression.yml']
   pull_request:
-    paths: ['assets/js/pge-analytics.js', 'parts/index.html', 'scripts/test_catalog_analytics.cjs', '.github/workflows/catalog-analytics-regression.yml']
+    paths: ['assets/js/pge-analytics.js', 'assets/js/catalog-entry.js', 'parts/index.html', 'parts/cremer/index.html', 'scripts/test_catalog*.cjs', 'scripts/optimize_catalog_entry.py', '.github/workflows/catalog-analytics-regression.yml']
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   catalog-responsiveness:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            /assets/js/pge-analytics.js
+            /assets/js/
+            /assets/css/
+            /_next/
             /parts/index.html
+            /parts/cremer/index.html
+            /parts/pge-cre-003/index.html
+            /parts/search/index.html
             /scripts/test_catalog_analytics.cjs
+            /scripts/test_catalog_entry_browser.cjs
+            /scripts/optimize_catalog_entry.py
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Install isolated DOM test dependency
-        run: npm install --prefix "$RUNNER_TEMP/catalog-dom" --no-save --package-lock=false jsdom@26.1.0
+        run: npm install --prefix "$RUNNER_TEMP/catalog-dom" --no-save --package-lock=false jsdom@26.1.0 playwright@1.63.0
       - name: Verify bounded catalog updates, hydration recovery, and analytics
         run: NODE_PATH="$RUNNER_TEMP/catalog-dom/node_modules" node --test scripts/test_catalog_analytics.cjs
+      - name: Confirm the lightweight entry survives export
+        run: |
+          python3 scripts/optimize_catalog_entry.py
+          git diff --exit-code -- parts/index.html
+      - name: Install browser
+        run: node "$RUNNER_TEMP/catalog-dom/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Test native card links, search, cart and mobile navigation
+        run: NODE_PATH="$RUNNER_TEMP/catalog-dom/node_modules" node scripts/test_catalog_entry_browser.cjs
