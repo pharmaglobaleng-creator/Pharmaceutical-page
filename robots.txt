@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://pharmaglobaleng.com/sitemap.xml
 Sitemap: https://pharmaglobaleng.com/sitemap-parts-images.xml
+Sitemap: https://pharmaglobaleng.com/sitemap-cremer.xml
