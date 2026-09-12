@@ -147,6 +147,10 @@ def main() -> int:
     paths = pages()
     for path in paths:
         original = path.read_text(encoding="utf-8")
+        # Keep reviewed landing-page copy; the validation loop below still
+        # checks its metadata and placeholder language.
+        if re.search(r'<html\b[^>]*\bdata-pge-content=["\']editorial["\']', original, re.I):
+            continue
         sku = path.parent.name.upper()
         description = complete_description(original, sku)
         updated = clean_residual_placeholders(original)

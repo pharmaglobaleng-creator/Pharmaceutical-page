@@ -417,6 +417,10 @@ def rewrite_jsonld(text: str, t: Truth) -> tuple[str, bool]:
 
 
 def normalize_page(path: Path, text: str) -> str:
+    # Reviewed editorial landing pages maintain their own visible copy and
+    # matching schema. They still pass through audit_page in the quality gate.
+    if re.search(r'<html\b[^>]*\bdata-pge-content=["\']editorial["\']', text, re.I):
+        return text
     t = TRUTH.get(sku_from_path(path)) or fallback_truth(path, text)
     new = sanitize_placeholders(text)
     title = page_title(t)
