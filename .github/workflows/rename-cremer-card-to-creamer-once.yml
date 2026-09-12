@@ -1,0 +1,43 @@
+name: Rename Cremer manufacturer card to Creamer once
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rename-cremer-card-to-creamer-once.yml']
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: contains(github.event.head_commit.message, '[rename-creamer-card]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename visible catalog label only
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p = Path('parts/index.html')
+          s = p.read_text()
+          s = s.replace('<h2>Cremer</h2><p>Browse Cremer replacement components by machine model, part name, and reference.</p>', '<h2>Creamer</h2><p>Browse Creamer replacement components by machine model, part name, and reference.</p>')
+          s = s.replace('>Cremer<!-- --> parts<', '>Creamer<!-- --> parts<')
+          s = s.replace('>Cremer parts<', '>Creamer parts<')
+          p.write_text(s)
+
+          p = Path('assets/js/pge-analytics.js')
+          s = p.read_text()
+          s = s.replace("'<h2>Cremer</h2>'", "'<h2>Creamer</h2>'")
+          s = s.replace('Browse Cremer replacement components by machine model, part name, and reference.', 'Browse Creamer replacement components by machine model, part name, and reference.')
+          s = s.replace("link.textContent = 'Cremer parts';", "link.textContent = 'Creamer parts';")
+          p.write_text(s)
+
+          p = Path('parts/cremer/index.html')
+          s = p.read_text()
+          s = s.replace('<h1>Cremer Replacement Parts</h1>', '<h1>Creamer Replacement Parts</h1>')
+          s = s.replace('<title>Cremer Replacement Parts Catalog | PharmaGlobalEng</title>', '<title>Creamer Replacement Parts Catalog | PharmaGlobalEng</title>')
+          p.write_text(s)
+          PY
+          git config user.name 'pharmaglobaleng-creator'
+          git config user.email 'pharmaglobaleng@gmail.com'
+          git add parts/index.html assets/js/pge-analytics.js parts/cremer/index.html
+          git commit -m 'Rename visible manufacturer selection card to Creamer and keep CF1220 part linked' || exit 0
+          git push
