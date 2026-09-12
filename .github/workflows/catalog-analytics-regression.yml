@@ -1,0 +1,29 @@
+name: Catalog responsiveness regression
+on:
+  push:
+    branches: [main]
+    paths: ['assets/js/pge-analytics.js', 'parts/index.html', 'scripts/test_catalog_analytics.cjs', '.github/workflows/catalog-analytics-regression.yml']
+  pull_request:
+    paths: ['assets/js/pge-analytics.js', 'parts/index.html', 'scripts/test_catalog_analytics.cjs', '.github/workflows/catalog-analytics-regression.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  catalog-responsiveness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /assets/js/pge-analytics.js
+            /parts/index.html
+            /scripts/test_catalog_analytics.cjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated DOM test dependency
+        run: npm install --prefix "$RUNNER_TEMP/catalog-dom" --no-save --package-lock=false jsdom@26.1.0
+      - name: Verify bounded catalog updates, hydration recovery, and analytics
+        run: NODE_PATH="$RUNNER_TEMP/catalog-dom/node_modules" node --test scripts/test_catalog_analytics.cjs

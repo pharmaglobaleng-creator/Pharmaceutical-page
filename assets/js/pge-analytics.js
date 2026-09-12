@@ -20,6 +20,10 @@
   document.head.appendChild(tag);
 
   if (window.location.pathname === '/parts/' || window.location.pathname === '/parts') {
+    function setText(element, value) {
+      if (element && element.textContent !== value) element.textContent = value;
+    }
+
     function ensureCreamerCatalogCard() {
       var grid = document.querySelector('.pc-manufacturer-grid');
       if (!grid) return false;
@@ -38,11 +42,11 @@
           '<strong>Browse replacement parts <span aria-hidden="true">→</span></strong>';
       } else {
         var title = card.querySelector('h2');
-        if (title) title.textContent = 'Creamer';
+        setText(title, 'Creamer');
         var copy = card.querySelector('p');
-        if (copy) copy.textContent = 'Browse Creamer replacement components by machine model, part name, and reference.';
+        setText(copy, 'Browse Creamer replacement components by machine model, part name, and reference.');
         var partCount = card.querySelector('.pc-manufacturer-count');
-        if (partCount) partCount.textContent = '60 parts';
+        setText(partCount, '60 parts');
       }
 
       if (identify) {
@@ -54,7 +58,7 @@
       }
 
       var count = document.querySelector('.pc-section-heading > span');
-      if (count) count.textContent = '4,271 part records';
+      setText(count, '4,271 part records');
 
       document.querySelectorAll('.pc-nav-menu div, .pc-mobile-nav nav').forEach(function (nav) {
         var link = nav.querySelector('a[href="/parts/cremer/"]');
@@ -65,7 +69,7 @@
           if (identifyLink) nav.insertBefore(link, identifyLink);
           else nav.appendChild(link);
         }
-        link.textContent = 'Creamer parts';
+        setText(link, 'Creamer parts');
       });
 
       return true;
@@ -73,6 +77,7 @@
 
     function runCreamerFixes() {
       ensureCreamerCatalogCard();
+      // Bounded retries cover hydration without observing our own DOM writes.
       [100, 300, 700, 1200, 2200, 4000].forEach(function (delay) {
         setTimeout(ensureCreamerCatalogCard, delay);
       });
@@ -84,17 +89,5 @@
       runCreamerFixes();
     }
 
-    var observer = new MutationObserver(function () {
-      ensureCreamerCatalogCard();
-    });
-
-    function startObserver() {
-      if (!document.body) return;
-      observer.observe(document.body, { childList: true, subtree: true });
-      setTimeout(function () { observer.disconnect(); }, 10000);
-    }
-
-    if (document.body) startObserver();
-    else document.addEventListener('DOMContentLoaded', startObserver, { once: true });
   }
 }());
