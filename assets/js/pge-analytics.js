@@ -42,7 +42,7 @@
         var copy = card.querySelector('p');
         if (copy) copy.textContent = 'Browse Creamer replacement components by machine model, part name, and reference.';
         var partCount = card.querySelector('.pc-manufacturer-count');
-        if (partCount) partCount.textContent = '24 parts';
+        if (partCount) partCount.textContent = '60 parts';
       }
 
       if (identify) {
@@ -54,7 +54,7 @@
       }
 
       var count = document.querySelector('.pc-section-heading > span');
-      if (count) count.textContent = '4,235 part records';
+      if (count) count.textContent = '4,271 part records';
 
       document.querySelectorAll('.pc-nav-menu div, .pc-mobile-nav nav').forEach(function (nav) {
         var link = nav.querySelector('a[href="/parts/cremer/"]');
