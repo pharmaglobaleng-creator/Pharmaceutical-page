@@ -37,8 +37,8 @@
         card.href = '/parts/cremer/';
         card.innerHTML = '<span class="pc-manufacturer-count">1 part</span>' +
           '<span class="pc-manufacturer-mark" aria-hidden="true">CR</span>' +
-          '<h2>Cremer</h2>' +
-          '<p>Browse Cremer replacement components by machine model, part name, and reference.</p>' +
+          '<h2>Creamer</h2>' +
+          '<p>Browse Creamer replacement components by machine model, part name, and reference.</p>' +
           '<strong>Browse replacement parts <span aria-hidden="true">→</span></strong>';
       }
 
@@ -58,7 +58,7 @@
           var identifyLink = nav.querySelector('a[href="/parts/identify/"]');
           var link = document.createElement('a');
           link.href = '/parts/cremer/';
-          link.textContent = 'Cremer parts';
+          link.textContent = 'Creamer parts';
           if (identifyLink) nav.insertBefore(link, identifyLink);
           else nav.appendChild(link);
         }
