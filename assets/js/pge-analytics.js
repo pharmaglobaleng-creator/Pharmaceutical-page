@@ -2,7 +2,6 @@
 (function () {
   'use strict';
 
-  // Keep previews and repeated initialization out of production reporting.
   if (!['pharmaglobaleng.com', 'www.pharmaglobaleng.com'].includes(window.location.hostname)) return;
   if (window.pgeAnalyticsInitialized) return;
   window.pgeAnalyticsInitialized = true;
@@ -20,17 +19,14 @@
   tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-1ES31F0R1F';
   document.head.appendChild(tag);
 
-  // Keep Cremer in the visible six-card manufacturer selection. If an old
-  // cached 4,211-part page is served, create the card; if a copy already
-  // exists elsewhere in the grid, move it directly before the identification
-  // card so row two reads Manesty, Kikusui, Cremer.
   if (window.location.pathname === '/parts/' || window.location.pathname === '/parts') {
-    function ensureCremerCatalogCard() {
+    function ensureCreamerCatalogCard() {
       var grid = document.querySelector('.pc-manufacturer-grid');
-      if (!grid) return;
+      if (!grid) return false;
 
       var identify = grid.querySelector('.pc-identify-card');
       var card = grid.querySelector('a[href="/parts/cremer/"]');
+
       if (!card) {
         card = document.createElement('a');
         card.className = 'pc-manufacturer-card';
@@ -40,35 +36,63 @@
           '<h2>Creamer</h2>' +
           '<p>Browse Creamer replacement components by machine model, part name, and reference.</p>' +
           '<strong>Browse replacement parts <span aria-hidden="true">→</span></strong>';
+      } else {
+        var title = card.querySelector('h2');
+        if (title) title.textContent = 'Creamer';
+        var copy = card.querySelector('p');
+        if (copy) copy.textContent = 'Browse Creamer replacement components by machine model, part name, and reference.';
       }
 
       if (identify) {
-        if (card.nextElementSibling !== identify) grid.insertBefore(card, identify);
-      } else if (!card.parentNode) {
+        if (card.parentNode !== grid || card.nextElementSibling !== identify) {
+          grid.insertBefore(card, identify);
+        }
+      } else if (card.parentNode !== grid) {
         grid.appendChild(card);
       }
 
       var count = document.querySelector('.pc-section-heading > span');
-      if (count && /4,211\s*part records/i.test(count.textContent || '')) {
-        count.textContent = '4,212 part records';
-      }
+      if (count) count.textContent = '4,212 part records';
 
       document.querySelectorAll('.pc-nav-menu div, .pc-mobile-nav nav').forEach(function (nav) {
-        if (!nav.querySelector('a[href="/parts/cremer/"]')) {
-          var identifyLink = nav.querySelector('a[href="/parts/identify/"]');
-          var link = document.createElement('a');
+        var link = nav.querySelector('a[href="/parts/cremer/"]');
+        if (!link) {
+          link = document.createElement('a');
           link.href = '/parts/cremer/';
-          link.textContent = 'Creamer parts';
+          var identifyLink = nav.querySelector('a[href="/parts/identify/"]');
           if (identifyLink) nav.insertBefore(link, identifyLink);
           else nav.appendChild(link);
         }
+        link.textContent = 'Creamer parts';
+      });
+
+      return true;
+    }
+
+    function runCreamerFixes() {
+      ensureCreamerCatalogCard();
+      [100, 300, 700, 1200, 2200, 4000].forEach(function (delay) {
+        setTimeout(ensureCreamerCatalogCard, delay);
       });
     }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', ensureCremerCatalogCard, { once: true });
+      document.addEventListener('DOMContentLoaded', runCreamerFixes, { once: true });
     } else {
-      ensureCremerCatalogCard();
+      runCreamerFixes();
     }
+
+    var observer = new MutationObserver(function () {
+      ensureCreamerCatalogCard();
+    });
+
+    function startObserver() {
+      if (!document.body) return;
+      observer.observe(document.body, { childList: true, subtree: true });
+      setTimeout(function () { observer.disconnect(); }, 10000);
+    }
+
+    if (document.body) startObserver();
+    else document.addEventListener('DOMContentLoaded', startObserver, { once: true });
   }
 }());
