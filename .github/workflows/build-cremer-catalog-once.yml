@@ -1,0 +1,54 @@
+name: Build Cremer catalog once
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/build-cremer-catalog-once.yml]
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: contains(github.event.head_commit.message, '[build-cremer-catalog]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add Cremer to catalog selection and product page
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          # Parts-store manufacturer selection
+          p=Path('parts/index.html')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('<a href="/parts/kikusui/">Kikusui<!-- --> parts</a><a href="/parts/identify/">Identify a part</a>', '<a href="/parts/kikusui/">Kikusui<!-- --> parts</a><a href="/parts/cremer/">Cremer parts</a><a href="/parts/identify/">Identify a part</a>')
+          s=s.replace('<a href="/parts/kikusui/">Kikusui<!-- --> parts</a><a href="/services/">Services</a>', '<a href="/parts/kikusui/">Kikusui<!-- --> parts</a><a href="/parts/cremer/">Cremer parts</a><a href="/services/">Services</a>')
+          s=s.replace('4,211<!-- --> part records','4,212<!-- --> part records')
+          marker='<a class="pc-manufacturer-card pc-identify-card" href="/parts/identify/">'
+          card='<a class="pc-manufacturer-card" href="/parts/cremer/"><span class="pc-manufacturer-count">1<!-- --> part</span><span class="pc-manufacturer-mark" aria-hidden="true">CR</span><h2>Cremer</h2><p>Browse Cremer replacement components by machine model, part name, and reference.</p><strong>Browse replacement parts <span aria-hidden="true">→</span></strong></a>'
+          if '/parts/cremer/\"><span class="pc-manufacturer-count">1' not in s:
+              if marker not in s: raise SystemExit('Manufacturer-card insertion marker not found')
+              s=s.replace(marker,card+marker,1)
+          p.write_text(s,encoding='utf-8')
+
+          # Product page photos + catalog link
+          p=Path('parts/cremer-cf1220-dipping-nozzle-funnel-cone/index.html')
+          s=p.read_text(encoding='utf-8')
+          if 'cremer-cf1220-dipping-nozzle-funnel-cone-1.webp' not in s:
+              s=s.replace('<meta property="og:url" content="https://pharmaglobaleng.com/parts/cremer-cf1220-dipping-nozzle-funnel-cone/">', '<meta property="og:url" content="https://pharmaglobaleng.com/parts/cremer-cf1220-dipping-nozzle-funnel-cone/">\n<meta property="og:image" content="https://pharmaglobaleng.com/assets/images/parts/cremer/cremer-cf1220-dipping-nozzle-funnel-cone-1.webp"><meta property="og:image:alt" content="Dipping nozzle funnel cone replacement component for Cremer CF1220">')
+              s=s.replace('<meta name="twitter:card" content="summary">','<meta name="twitter:card" content="summary_large_image">')
+              s=s.replace('<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title"', '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://pharmaglobaleng.com/assets/images/parts/cremer/cremer-cf1220-dipping-nozzle-funnel-cone-1.webp"><meta name="twitter:title"')
+              s=s.replace('.pge-part-page .content-wrap{margin:auto;padding:0 22px 64px}', '.pge-part-page .content-wrap{margin:auto;padding:0 22px 64px}.pge-part-page .product-gallery{max-width:980px;margin:0 auto;padding:0 22px 8px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.pge-part-page .product-gallery figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#050810}.pge-part-page .product-gallery img{display:block;width:100%;height:520px;object-fit:contain}.pge-part-page .product-gallery figcaption{padding:12px 14px;background:var(--bg-alt);color:var(--muted);font-size:14px}.pge-part-page .catalog-link{max-width:980px;margin:0 auto;padding:0 22px 18px}.pge-part-page .catalog-link a{color:var(--cyan);font-weight:800}')
+              s=s.replace('@media(max-width:720px){.pge-part-page .grid{grid-template-columns:1fr}', '@media(max-width:720px){.pge-part-page .grid,.pge-part-page .product-gallery{grid-template-columns:1fr}.pge-part-page .product-gallery img{height:auto}')
+              gallery='''<div class="product-gallery" aria-label="Cremer CF1220 dipping nozzle funnel cone photos"><figure><img src="/assets/images/parts/cremer/cremer-cf1220-dipping-nozzle-funnel-cone-1.webp" width="640" height="934" loading="eager" fetchpriority="high" alt="Side view of dipping nozzle funnel cone replacement component for Cremer CF1220"><figcaption>Side view of the Cremer CF1220 dipping nozzle funnel cone replacement component.</figcaption></figure><figure><img src="/assets/images/parts/cremer/cremer-cf1220-dipping-nozzle-funnel-cone-2.webp" width="640" height="735" loading="lazy" alt="Top and inlet view of dipping nozzle funnel cone replacement component for Cremer CF1220"><figcaption>Top and inlet view showing the funnel opening and mounting profile.</figcaption></figure></div><div class="catalog-link"><a href="/parts/cremer/">← View the Cremer replacement parts catalog</a></div>'''
+              if '<div class="content-wrap">' not in s: raise SystemExit('Product gallery insertion marker not found')
+              s=s.replace('<div class="content-wrap">',gallery+'<div class="content-wrap">',1)
+          p.write_text(s,encoding='utf-8')
+
+          # Cremer sitemap: include the catalog page and the product page
+          Path('sitemap-cremer.xml').write_text('''<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://pharmaglobaleng.com/parts/cremer/</loc>\n    <lastmod>2026-09-11</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.85</priority>\n  </url>\n  <url>\n    <loc>https://pharmaglobaleng.com/parts/cremer-cf1220-dipping-nozzle-funnel-cone/</loc>\n    <lastmod>2026-09-11</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.80</priority>\n  </url>\n</urlset>\n''',encoding='utf-8')
+          PY
+          git config user.name "pharmaglobaleng-creator"
+          git config user.email "pharmaglobaleng@gmail.com"
+          git add parts/index.html parts/cremer-cf1220-dipping-nozzle-funnel-cone/index.html sitemap-cremer.xml
+          git diff --cached --check
+          git commit -m "Add Cremer catalog to parts selection and connect CF1220 product photos"
+          git push
