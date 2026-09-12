@@ -65,7 +65,8 @@ jobs:
           from pathlib import Path
           j=json.loads(Path('audit-output/parts-audit-summary.json').read_text())
           assert not j['checks'], j['checks']
-          assert j['detail_pages']==4307, 'Review any intentional route-count change explicitly'
+          # Includes the reviewed PGE-CRE-001 product route.
+          assert j['detail_pages']==4308, 'Review any intentional route-count change explicitly'
           print('All implemented structural, reference and navigation checks passed.')
           PY
           git diff --check

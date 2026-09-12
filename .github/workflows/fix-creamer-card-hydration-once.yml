@@ -29,7 +29,7 @@ jobs:
           nav_kikusui = '["$","a","kikusui",{"href":"/parts/kikusui/","children":["Kikusui"," parts"]}]'
           nav_creamer = '["$","a","creamer",{"href":"/parts/cremer/","children":["Creamer"," parts"]}]'
           identify_marker = '["$","a",null,{"className":"pc-manufacturer-card pc-identify-card"'
-          creamer_card = '["$","a","creamer",{"className":"pc-manufacturer-card","href":"/parts/cremer/","children":[["$","span",null,{"className":"pc-manufacturer-count","children":["1"," part"]}],["$","span",null,{"className":"pc-manufacturer-mark","aria-hidden":"true","children":"CR"}],["$","h2",null,{"children":"Creamer"}],["$","p",null,{"children":"Browse Creamer replacement components by machine model, part name, and reference."}],["$","strong",null,{"children":["Browse replacement parts ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]'
+          creamer_card = '["$","a","creamer",{"className":"pc-manufacturer-card","href":"/parts/cremer/","children":[["$","span",null,{"className":"pc-manufacturer-count","children":["2"," parts"]}],["$","span",null,{"className":"pc-manufacturer-mark","aria-hidden":"true","children":"CR"}],["$","h2",null,{"children":"Creamer"}],["$","p",null,{"children":"Browse Creamer replacement components by machine model, part name, and reference."}],["$","strong",null,{"children":["Browse replacement parts ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]'
 
           for path in rsc_files:
               if not path.exists():
@@ -37,8 +37,8 @@ jobs:
               text = path.read_text(encoding='utf-8')
               original = text
 
-              text = text.replace('"children":["3,471"," part records"]', '"children":["4,212"," part records"]')
-              text = text.replace('"children":["4,211"," part records"]', '"children":["4,212"," part records"]')
+              text = text.replace('"children":["3,471"," part records"]', '"children":["4,213"," part records"]')
+              text = text.replace('"children":["4,211"," part records"]', '"children":["4,213"," part records"]')
 
               # Keep the existing published Manesty count aligned with the static catalog HTML.
               manesty_start = 0
@@ -77,36 +77,36 @@ jobs:
           html = html_path.read_text(encoding='utf-8')
           if 'id="pge-creamer-selection-fix"' not in html:
               script = r'''<script id="pge-creamer-selection-fix">
-(function(){
-  function syncCreamer(){
-    var grid=document.querySelector('.pc-manufacturer-grid');
-    if(!grid)return;
-    var card=grid.querySelector('a[href="/parts/cremer/"]');
-    var identify=grid.querySelector('.pc-identify-card');
-    if(!card){
-      card=document.createElement('a');
-      card.className='pc-manufacturer-card';
-      card.href='/parts/cremer/';
-      card.innerHTML='<span class="pc-manufacturer-count">1 part</span><span class="pc-manufacturer-mark" aria-hidden="true">CR</span><h2>Creamer</h2><p>Browse Creamer replacement components by machine model, part name, and reference.</p><strong>Browse replacement parts <span aria-hidden="true">→</span></strong>';
-      if(identify)grid.insertBefore(card,identify);else grid.appendChild(card);
-    }else{
-      var h=card.querySelector('h2'); if(h)h.textContent='Creamer';
-    }
-    var total=document.querySelector('.pc-section-heading > span');
-    if(total)total.textContent='4,212 part records';
-    document.querySelectorAll('.pc-nav-menu div,.pc-mobile-nav nav').forEach(function(nav){
-      var a=nav.querySelector('a[href="/parts/cremer/"]');
-      if(!a){
-        a=document.createElement('a');a.href='/parts/cremer/';a.textContent='Creamer parts';
-        var id=nav.querySelector('a[href="/parts/identify/"]');
-        if(id)nav.insertBefore(a,id);else nav.appendChild(a);
-      }else a.textContent='Creamer parts';
-    });
-  }
-  [0,100,400,1000,2200].forEach(function(ms){setTimeout(syncCreamer,ms)});
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',syncCreamer,{once:true});else syncCreamer();
-})();
-</script>'''
+          (function(){
+            function syncCreamer(){
+              var grid=document.querySelector('.pc-manufacturer-grid');
+              if(!grid)return;
+              var card=grid.querySelector('a[href="/parts/cremer/"]');
+              var identify=grid.querySelector('.pc-identify-card');
+              if(!card){
+                card=document.createElement('a');
+                card.className='pc-manufacturer-card';
+                card.href='/parts/cremer/';
+                card.innerHTML='<span class="pc-manufacturer-count">2 parts</span><span class="pc-manufacturer-mark" aria-hidden="true">CR</span><h2>Creamer</h2><p>Browse Creamer replacement components by machine model, part name, and reference.</p><strong>Browse replacement parts <span aria-hidden="true">→</span></strong>';
+                if(identify)grid.insertBefore(card,identify);else grid.appendChild(card);
+              }else{
+                var h=card.querySelector('h2'); if(h)h.textContent='Creamer';
+              }
+              var total=document.querySelector('.pc-section-heading > span');
+              if(total)total.textContent='4,213 part records';
+              document.querySelectorAll('.pc-nav-menu div,.pc-mobile-nav nav').forEach(function(nav){
+                var a=nav.querySelector('a[href="/parts/cremer/"]');
+                if(!a){
+                  a=document.createElement('a');a.href='/parts/cremer/';a.textContent='Creamer parts';
+                  var id=nav.querySelector('a[href="/parts/identify/"]');
+                  if(id)nav.insertBefore(a,id);else nav.appendChild(a);
+                }else a.textContent='Creamer parts';
+              });
+            }
+            [0,100,400,1000,2200].forEach(function(ms){setTimeout(syncCreamer,ms)});
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',syncCreamer,{once:true});else syncCreamer();
+          })();
+          </script>'''
               html = html.replace('</body>', script + '</body>')
               html_path.write_text(html, encoding='utf-8')
               print('added post-hydration safeguard')
