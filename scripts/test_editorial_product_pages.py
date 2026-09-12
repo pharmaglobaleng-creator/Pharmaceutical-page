@@ -47,5 +47,9 @@ class LinearGuideEditorialTests(EditorialProductTests):
     product = 'pge-cre-002'
 
 
+class MemoryFlapEditorialTests(EditorialProductTests):
+    product = 'pge-cre-003'
+
+
 if __name__ == '__main__':
     unittest.main()
