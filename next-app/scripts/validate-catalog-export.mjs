@@ -3,7 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import { load } from 'cheerio';
-import { catalogData, catalogRoutes, SITE, PAGE_SIZE } from '../lib/catalog.mjs';
+import { catalogData, catalogRoutes, SITE, PAGE_SIZE, pageSizeFor } from '../lib/catalog.mjs';
 const app = process.cwd(), out = path.join(app, 'out');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const data = catalogData(), routes = catalogRoutes();
@@ -46,7 +46,7 @@ for (const route of routes) {
   const cards = $('.pc-card');
   if (route.kind === 'catalog') {
     assert.equal(cards.length, route.skus.length, `Wrong SSR card count: ${rel}`);
-    assert.ok(cards.length <= PAGE_SIZE, `Too many cards: ${rel}`);
+    assert.ok(cards.length <= pageSizeFor(route.brand), `Too many cards: ${rel}`);
     const actual = [];
     for (const element of cards.toArray()) {
       const card = $(element), sku = card.attr('data-pc-sku'), p = bySku.get(sku);

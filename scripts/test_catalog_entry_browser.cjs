@@ -29,7 +29,7 @@ async function context(browser, options = {}) {
     const page = await ctx.newPage();
     await page.goto(site + '/parts/', { waitUntil: 'domcontentloaded' });
     const cards = page.locator('.pc-manufacturer-grid > a');
-    assert.equal(await cards.count(), 7);
+    assert.equal(await cards.count(), 8);
     assert.equal(await page.locator('.pc-manufacturer-grid > a[href="/parts/cremer/"]').count(), 1);
     await page.locator('.pc-manufacturer-grid > a[href="/parts/cremer/"]').click();
     assert.equal(page.url(), site + '/parts/cremer/');

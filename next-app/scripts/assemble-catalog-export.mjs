@@ -8,7 +8,7 @@ const rel = (base, file) => path.relative(base, file).split(path.sep).join('/');
 if (!fs.existsSync(out)) throw new Error('Run next build before assembling the export.');
 const routes = catalogRoutes();
 const owned = new Set(routes.map(r => r.url.slice(1) + 'index.html'));
-const replaceable = new Set(['parts/index.html', 'parts/stokes/index.html', 'parts/fette/index.html', 'parts/korsch/index.html', 'parts/manesty/index.html', 'parts/kikusui/index.html']);
+const replaceable = new Set(['parts/index.html', 'parts/stokes/index.html', 'parts/fette/index.html', 'parts/korsch/index.html', 'parts/manesty/index.html', 'parts/kikusui/index.html', 'parts/quadro/index.html']);
 const generated = walk(out).map(f => rel(out, f));
 const publish = generated.filter(f => f.startsWith('parts/') || f.startsWith('_next/') || f.startsWith('catalog-data/') || f.startsWith('assets/images/catalog-thumbs/'));
 const publicDirs = new Set(['assets','parts','about','coatings','components','services','solutions','knowledge-center','_next']);

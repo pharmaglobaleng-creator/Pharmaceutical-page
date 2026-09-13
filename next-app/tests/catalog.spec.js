@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
-import { catalogData } from '../lib/catalog.mjs';
+import { catalogData, pageSizeFor } from '../lib/catalog.mjs';
 const data = catalogData();
 
 test('manufacturer catalogs and pagination are readable without JavaScript', async ({ browser }) => {
@@ -8,9 +8,9 @@ test('manufacturer catalogs and pagination are readable without JavaScript', asy
   const page = await context.newPage();
   for (const brand of data.manufacturers) {
     await page.goto(`http://127.0.0.1:4173/parts/${brand.slug}/`);
-    await expect(page.locator('.pc-card')).toHaveCount(Math.min(50,brand.count));
+    await expect(page.locator('.pc-card')).toHaveCount(Math.min(pageSizeFor(brand.slug),brand.count));
     await expect(page.locator('h1')).toContainText(brand.name);
-    if (brand.count > 50) {
+    if (brand.count > pageSizeFor(brand.slug)) {
       await page.getByRole('link',{name:'Next →',exact:true}).click();
       await expect(page).toHaveURL(new RegExp(`/parts/${brand.slug}/page/2/`));
       await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href',`https://pharmaglobaleng.com/parts/${brand.slug}/page/2/`);
@@ -19,12 +19,31 @@ test('manufacturer catalogs and pagination are readable without JavaScript', asy
   await context.close();
 });
 
+test('Quadro records stay in five-page order with the matched name, model, OEM and image', async ({ page }) => {
+  const rows = data.parts.filter(part => part.brand === 'quadro');
+  expect(rows).toHaveLength(113);
+  for (let number = 1; number <= 5; number++) {
+    await page.goto(number === 1 ? '/parts/quadro/' : `/parts/quadro/page/${number}/`);
+    const expected = rows.slice((number - 1) * 24, number * 24);
+    await expect(page.locator('.pc-card')).toHaveCount(expected.length);
+    expect(await page.locator('.pc-card').evaluateAll(cards => cards.map(card => card.dataset.pcSku))).toEqual(expected.map(part => part.sku));
+    await expect(page.locator('.pc-identifiers dt', { hasText: 'Replacement OEM Number' })).toHaveCount(expected.length);
+  }
+  const target = rows[0];
+  await page.goto(target.url);
+  await expect(page.locator('h1')).toContainText(target.name);
+  await expect(page.locator('.compatibility')).toContainText(`Replacement OEM Number: ${target.oem}`);
+  await expect(page.locator('.compatibility')).toContainText(`Model: ${target.model}`);
+  await expect(page.locator('.part-image img')).toHaveAttribute('src', target.image);
+  await expect(page.locator('body')).not.toContainText(/PharmParts/i);
+});
+
 test('machine model links open their own landing pages', async ({ page }) => {
   const brand = data.manufacturers.find(b => b.slug === 'kikusui');
   const model = brand.models.find(m => m.name === 'LIBRA') || brand.models[0];
   await page.goto(`/parts/kikusui/${model.slug}/`);
   await expect(page.locator('h1')).toContainText(model.name);
-  await expect(page.locator('.pc-card')).toHaveCount(Math.min(50,model.count));
+  await expect(page.locator('.pc-card')).toHaveCount(Math.min(pageSizeFor(brand.slug),model.count));
 });
 
 test('search finds a product beyond the first catalog page', async ({ page }) => {

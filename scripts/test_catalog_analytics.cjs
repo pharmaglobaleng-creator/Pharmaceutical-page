@@ -44,7 +44,7 @@ test('catalog startup settles and leaves the event loop responsive', async () =>
     const { document } = result.window;
     assert.equal(document.querySelectorAll('.pc-manufacturer-grid > a[href="/parts/cremer/"]').length, 1);
     assert.equal(document.querySelector('a[href="/parts/cremer/"] .pc-manufacturer-count').textContent, '60 parts');
-    assert.equal(document.querySelector('.pc-section-heading > span').textContent, '4,271 part records');
+    assert.equal(document.querySelector('.pc-section-heading > span').textContent, '4,384 part records');
     assert.equal(result.window.dataLayer.filter(args => args[0] === 'config').length, 1);
   } finally { result.dom.window.close(); }
 });

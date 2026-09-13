@@ -8,7 +8,7 @@ import sharp from 'sharp';
 const app = process.cwd();
 const root = path.resolve(app, '..');
 const dataFile = path.join(app, 'data/parts-catalog.json');
-const names = { stokes: 'Stokes', fette: 'Fette', korsch: 'Korsch', manesty: 'Manesty', kikusui: 'Kikusui' };
+const names = { stokes: 'Stokes', fette: 'Fette', korsch: 'Korsch', manesty: 'Manesty', kikusui: 'Kikusui', quadro: 'Quadro' };
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const clean = value => String(value || '').replace(/\s+/g, ' ').trim();
 const slug = value => clean(value).toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -83,7 +83,7 @@ data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
 const imageCache = new Map();
 for (const part of data.parts) {
   if (!fs.existsSync(path.join(localFile(part.url), 'index.html'))) throw new Error(`Product URL disappeared: ${part.url}`);
-  part.modelSlug = /unresolved|unconfirmed|unspecified|^general$|^multi[ -]?model$/i.test(part.model) ? null : slug(part.model);
+  part.modelSlug = /unresolved|unconfirmed|unspecified|not listed|^general$|^multi[ -]?model$/i.test(part.model) ? null : slug(part.model);
   part.srcSet = '';
   if (!part.image) continue;
   const file = localFile(part.image);

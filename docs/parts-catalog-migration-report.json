@@ -1,57 +1,76 @@
 {
   "status": "passed",
   "sourceCommit": "833f9d6c8ee64dceb98ad5b6eacbd3daeb2594ca",
-  "totalCatalogRecords": 4211,
-  "manufacturerCatalogs": 5,
-  "modelLandingPages": 74,
-  "generatedHtmlPages": 257,
-  "originalProductLandingPagesPreserved": 3307,
-  "otherLegacyHtmlPreserved": 72,
-  "originalImageFilesPreserved": 4153,
-  "productsWithOriginalImages": 4052,
+  "totalCatalogRecords": 4324,
+  "manufacturerCatalogs": 6,
+  "modelLandingPages": 83,
+  "generatedHtmlPages": 272,
+  "originalProductLandingPagesPreserved": 4479,
+  "otherLegacyHtmlPreserved": 74,
+  "originalImageFilesPreserved": 4273,
+  "productsWithOriginalImages": 4165,
   "productsWithoutImages": 159,
   "placeholderImagesNotSubstituted": true,
   "allProductUrlsPreserved": true,
   "allOriginalImagesByteIdentical": true,
   "initialHtmlProductLimit": 50,
   "allProductsReachableThroughStaticLinks": true,
-  "maximumGeneratedHtmlBytes": 225198,
+  "maximumGeneratedHtmlBytes": 227712,
   "maximumGeneratedHtmlUrl": "/parts/stokes/328/page/3/",
   "manufacturerHtmlSizes": {
     "stokes": {
       "beforeBytes": 3567724,
-      "afterBytes": 218488,
+      "afterBytes": 221015,
       "pages": 40,
       "totalProducts": 2000
     },
     "fette": {
       "beforeBytes": 1015112,
-      "afterBytes": 218854,
+      "afterBytes": 221368,
       "pages": 16,
       "totalProducts": 769
     },
     "korsch": {
       "beforeBytes": 511780,
-      "afterBytes": 217609,
+      "afterBytes": 220136,
       "pages": 6,
       "totalProducts": 284
     },
     "manesty": {
       "beforeBytes": 364677,
-      "afterBytes": 131595,
+      "afterBytes": 133672,
       "pages": 40,
       "totalProducts": 1000
     },
     "kikusui": {
       "beforeBytes": 225854,
-      "afterBytes": 215660,
+      "afterBytes": 218473,
       "pages": 4,
       "totalProducts": 158
+    },
+    "quadro": {
+      "beforeBytes": 0,
+      "afterBytes": 126555,
+      "pages": 5,
+      "totalProducts": 113
     }
   },
   "schemaCheck": "JSON parsing, catalog types, canonical and visible product correspondence; not a Google rich-result certification",
-  "sourceWarnings": [],
-  "productLandingPagesChangedImageDeliveryOnly": 1000,
+  "sourceWarnings": [
+    "PGE-QUA-001: The alphanumeric marking visible in the original photo does not clearly match the listing OEM reference. Filename uses the listing reference, not an authenticated manufacturer identification.",
+    "PGE-QUA-004: Source conflict: title says 35-Mesh; description and photo alt say 40-mesh. Do not treat mesh as verified.",
+    "PGE-QUA-063: Source conflict: title says 0.039-inch aperture; description says 0.024-inch. Confirm before publishing specifications.",
+    "PGE-QUA-067: Source conflict: title pairs 0.375 inch with 7/16 inch, which are not equal. Keep listed values flagged for verification.",
+    "PGE-QUA-089: No Quadro OEM number is stated in this listing.",
+    "PGE-QUA-090: No Quadro OEM number is stated in this listing.",
+    "PGE-QUA-091: No Quadro OEM number is stated in this listing.",
+    "PGE-QUA-092: No Quadro OEM number is stated in this listing.",
+    "PGE-QUA-093: No Quadro OEM number is stated in this listing.",
+    "PGE-QUA-094: No Quadro OEM number is stated in this listing.",
+    "PGE-QUA-111: Source explicitly describes a modified screen with the retaining tab removed. Preserve that modified geometry.",
+    "PGE-QUA-113: No Quadro OEM number is stated in this listing."
+  ],
+  "productLandingPagesChangedImageDeliveryOnly": 0,
   "manestyProductsPerPage": 25,
   "manestyProductContentPreserved": true
 }
