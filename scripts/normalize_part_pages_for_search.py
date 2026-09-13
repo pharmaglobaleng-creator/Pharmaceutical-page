@@ -89,7 +89,9 @@ def load_truth() -> dict[str, Truth]:
                     model=usable_model(row.get("model")),
                     family=clean(row.get("family")) or None,
                     oem=oem,
-                    raw_oem=clean(row.get("oem")) or None,
+                    # Placeholder values such as "Not listed in source catalog"
+                    # are absence markers, not unverified OEM identifiers.
+                    raw_oem=oem,
                     oem_verified=bool(oem),
                     verification="Catalog publication record",
                     source=path.relative_to(ROOT).as_posix(),

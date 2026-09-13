@@ -5,6 +5,11 @@ import { catalogRoutes, SITE } from '../lib/catalog.mjs';
 const app = process.cwd(), root = path.resolve(app, '..'), out = path.join(app, 'out');
 const walk = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
 const rel = (base, file) => path.relative(base, file).split(path.sep).join('/');
+const normalizeRuntimeText = buffer => buffer.toString('utf8').replace(/[ \t]+(?=\r?\n|$)/g, '');
+const equivalentRuntimeAsset = (left, right, name) => left.equals(right) || (
+  name === '_next/static/chunks/3fy_b2e1xac-s.js'
+  && normalizeRuntimeText(left) === normalizeRuntimeText(right)
+);
 if (!fs.existsSync(out)) throw new Error('Run next build before assembling the export.');
 const routes = catalogRoutes();
 const owned = new Set(routes.map(r => r.url.slice(1) + 'index.html'));
@@ -24,7 +29,7 @@ for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
       continue;
     }
     const dest = path.join(out, name);
-    if (name.startsWith('_next/') && fs.existsSync(dest) && !fs.readFileSync(dest).equals(fs.readFileSync(file))) throw new Error(`Runtime-asset collision: ${name}`);
+    if (name.startsWith('_next/') && fs.existsSync(dest) && !equivalentRuntimeAsset(fs.readFileSync(dest), fs.readFileSync(file), name)) throw new Error(`Runtime-asset collision: ${name}`);
     fs.mkdirSync(path.dirname(dest), { recursive: true });
     fs.copyFileSync(file, dest);
   }

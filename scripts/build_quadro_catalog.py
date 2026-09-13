@@ -179,16 +179,16 @@ def load_parts() -> list[dict]:
 
 
 def description(part: dict) -> str:
-    base = f"Independent replacement part: {page_name(part)}. PGE {part['sku']}."
+    base = f"{page_name(part)}. PGE {part['sku']}."
     if part["replacement_oem_number"] == MISSING_OEM:
         return base + " Replacement OEM number not listed in the source catalog. Confirm compatibility during quotation."
     return base + f" Replacement OEM number {part['replacement_oem_number']}. Confirm compatibility during quotation."
 
 
 def seo_title(part: dict) -> str:
-    suffix = f" | {part['sku']} | PharmaGlobalEng"
+    suffix = f" | {part['sku']} | PGE"
     subject = f"{part['part_name']} | Quadro {part['model']}"
-    maximum = 88 - len(suffix)
+    maximum = 72 - len(suffix)
     if len(subject) > maximum:
         subject = subject[: max(12, maximum - 1)].rstrip(" ,;:-") + "…"
     return subject + suffix
@@ -286,7 +286,7 @@ def build_page(part: dict, parts: list[dict]) -> str:
     ) or "<li>No additional matched records in this group.</li>"
     notes = "".join(f'<p><strong>Review note:</strong> {escape(note)}</p>' for note in part["review_notes"])
     return f'''<!doctype html>
-<html lang="en-US"><head><script id="pge-analytics" src="/assets/js/pge-analytics.js" defer></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en-US" data-pge-content="editorial"><head><script id="pge-analytics" src="/assets/js/pge-analytics.js" defer></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title><meta name="description" content="{escape(meta)}"><meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="{url}"><meta property="og:type" content="product"><meta property="og:site_name" content="PharmaGlobalEng"><meta property="og:locale" content="en_US">
 <meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(meta)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE + part['image_path']}"><meta property="og:image:alt" content="{escape(alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{SITE + part['image_path']}"><meta name="twitter:image:alt" content="{escape(alt)}">
