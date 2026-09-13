@@ -18,6 +18,8 @@ from urllib.parse import urlencode
 
 from PIL import Image, ImageOps
 
+from catalog_page_schema import catalog_page_entity
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
@@ -239,36 +241,24 @@ def inquiry_url(part: dict) -> str:
     return "mailto:info@pharmaglobaleng.com?" + query
 
 
-def product_schema(part: dict) -> dict:
-    product = {
-        "@type": "Product",
-        "@id": SITE + part["landing_page"] + "#product",
-        "name": page_name(part),
-        "alternateName": aliases(part),
-        "sku": part["sku"],
-        "url": SITE + part["landing_page"],
-        "description": description(part),
-        "category": part["category"],
-        "image": SITE + part["image_path"],
-        "brand": {"@type": "Brand", "name": "PharmaGlobalEng"},
-        "manufacturer": {"@id": SITE + "/#organization"},
-        "isAccessoryOrSparePartFor": {"@type": "ProductModel", "name": equipment_name(part)},
-        "additionalProperty": [
-            {"@type": "PropertyValue", "name": "Make", "value": "Sweco"},
-            {"@type": "PropertyValue", "name": "Model", "value": part["model"]},
-            {"@type": "PropertyValue", "name": "Equipment type", "value": part["equipment_descriptor"]},
-            {"@type": "PropertyValue", "name": "Replacement OEM Number", "value": part["replacement_oem_number"]},
-            {"@type": "PropertyValue", "name": "Supplier relationship", "value": "Independent replacement-part supplier; not OEM affiliated or endorsed"},
-        ],
-    }
+def catalog_page_schema(part: dict) -> dict:
+    identifier = None
     if part["replacement_oem_number"] != NOT_LISTED:
-        product["identifier"] = {"@type": "PropertyValue", "propertyID": "Replacement OEM Number", "value": part["replacement_oem_number"]}
-    return product
+        identifier = {"@type": "PropertyValue", "propertyID": "Replacement OEM Number", "value": part["replacement_oem_number"]}
+    return catalog_page_entity(
+        url=SITE + part["landing_page"],
+        name=page_name(part),
+        description=description(part),
+        sku=part["sku"],
+        image=SITE + part["image_path"],
+        aliases=aliases(part),
+        identifiers=identifier,
+    )
 
 
 def json_ld(part: dict) -> str:
     graph = [
-        product_schema(part),
+        catalog_page_schema(part),
         {
             "@type": "BreadcrumbList",
             "itemListElement": [

@@ -83,13 +83,16 @@ for part in parts:
             schema = json.loads(schema_match.group(1))
             graph = schema.get("@graph", [])
             types = {node.get("@type") for node in graph}
-            if not {"Product", "BreadcrumbList"}.issubset(types):
+            if not {"WebPage", "BreadcrumbList"}.issubset(types):
                 errors.append(f"{slug}: incomplete JSON-LD graph {types}")
-            product = next((node for node in graph if node.get("@type") == "Product"), {})
-            if product.get("sku") != part["sku"]:
-                errors.append(f"{slug}: Product schema SKU mismatch")
-            if bool(product.get("image")) != bool(part["image_path"]):
-                errors.append(f"{slug}: Product schema image status mismatch")
+            page = next((node for node in graph if node.get("@type") == "WebPage"), {})
+            subject = page.get("mainEntity", {}) if isinstance(page, dict) else {}
+            identifiers = subject.get("identifier", []) if isinstance(subject, dict) else []
+            identifiers = identifiers if isinstance(identifiers, list) else [identifiers]
+            if part["sku"] not in {str(item.get("value", "")) for item in identifiers if isinstance(item, dict)}:
+                errors.append(f"{slug}: catalog schema SKU mismatch")
+            if bool(subject.get("image")) != bool(part["image_path"]):
+                errors.append(f"{slug}: catalog schema image status mismatch")
         except json.JSONDecodeError as exc:
             errors.append(f"{slug}: invalid JSON-LD: {exc}")
 

@@ -125,6 +125,13 @@ def audit(out, live):
             try: nodes.extend(graph_nodes(json.loads(raw)))
             except json.JSONDecodeError as e: issue('invalid_jsonld', rel, str(e))
         types = Counter(str(n.get('@type')) for n in nodes)
+        catalog_pages = [
+            n for n in nodes
+            if n.get('@type') == 'WebPage'
+            and n.get('url') == url
+            and isinstance(n.get('mainEntity'), dict)
+            and n['mainEntity'].get('@type') == 'Thing'
+        ]
         if not redirect:
             if not title: issue('missing_title', rel)
             if not desc: issue('missing_description',rel)
@@ -133,19 +140,28 @@ def audit(out, live):
             if p.canonicals != [url]: issue('canonical_mismatch',rel,str(p.canonicals))
             if not p.lang: issue('missing_language',rel)
             if not p.meta.get('viewport'): issue('missing_viewport',rel)
-            if detail and not types['Product']: issue('missing_product_schema',rel)
+            if detail and len(catalog_pages) != 1: issue('catalog_page_schema_count',rel,str(len(catalog_pages)))
+            if detail and types['Product']: issue('legacy_product_rich_result_schema',rel,str(types['Product']))
             if detail and noindex: issue('detail_noindex_review',rel)
             if 'nosnippet' in robots or re.search(r'max-snippet\s*:\s*0\b',robots): issue('snippet_disabled_review',rel)
             if p.meta.get('keywords'): issue('meta_keywords_review',rel,p.meta['keywords'][0][:180])
             if PLACEHOLDER.search(title+' '+' '.join(p.headings)): issue('placeholder_entity_name',rel,title)
             if len(title)>90: issue('long_title_review',rel,str(len(title)))
             if len(desc)>220: issue('long_description_review',rel,str(len(desc)))
+        if detail and catalog_pages:
+            subject = catalog_pages[0]['mainEntity']
+            identifiers = subject.get('identifier', [])
+            if not isinstance(identifiers, list): identifiers = [identifiers]
+            sku_values = {
+                str(item.get('value', '')).upper()
+                for item in identifiers
+                if isinstance(item, dict) and item.get('propertyID') == 'PharmaGlobalEng SKU'
+            }
+            if f.parent.name.upper() not in sku_values: issue('schema_sku_mismatch',rel,str(sorted(sku_values)))
+            if subject.get('url') != url: issue('schema_catalog_url_mismatch',rel,str(subject.get('url')))
+            if p.headings and catalog_pages[0].get('name') != p.headings[0]: issue('schema_h1_name_mismatch',rel,str(catalog_pages[0].get('name')))
         for n in nodes:
-            if n.get('@type') == 'Product' and detail:
-                if str(n.get('sku','')).upper() != f.parent.name.upper(): issue('schema_sku_mismatch',rel,str(n.get('sku')))
-                if n.get('url') != url: issue('schema_product_url_mismatch',rel,str(n.get('url')))
-                if p.headings and n.get('name') != p.headings[0]: issue('schema_h1_name_mismatch',rel,str(n.get('name')))
-            if n.get('@type') in ('Product','ProductModel','CollectionPage') and PLACEHOLDER.search(str(n.get('name',''))):
+            if n.get('@type') in ('Product','ProductModel','Thing','CollectionPage') and PLACEHOLDER.search(str(n.get('name',''))):
                 issue('schema_placeholder_entity',rel,str(n.get('name')))
             if n.get('@type') in ('Offer','AggregateOffer') and str(n.get('price',n.get('lowPrice',''))) in ('0','0.0','0.00'):
                 issue('zero_price_review',rel,str(n)[:160])

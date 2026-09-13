@@ -8,6 +8,8 @@ from html import escape
 from pathlib import Path
 from urllib.parse import urlencode
 
+from catalog_page_schema import catalog_page_entity
+
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
 DATA_PATH = ROOT / "data/fette-first-200.json"
@@ -143,33 +145,22 @@ def json_ld(part: dict) -> str:
         "No. It is an independently manufactured replacement component supplied by PharmaGlobalEng. "
         "Fette names, models, and OEM cross-references are used only to identify potential compatibility."
     )
-    properties = [
-        {"@type": "PropertyValue", "name": "Machine compatibility reference", "value": equipment(part)},
-        {"@type": "PropertyValue", "name": "OEM cross-reference", "value": oem_label(part)},
-        {"@type": "PropertyValue", "name": "OEM number status", "value": "Catalog supplied" if part["oem_number"] else "Needed"},
-        {"@type": "PropertyValue", "name": "Supplier relationship", "value": "Independent replacement-part manufacturer; not OEM affiliated or endorsed"},
-    ]
-    product = {
-        "@type": "Product",
-        "@id": f"{SITE}/parts/{part['sku'].lower()}/#product",
-        "name": f"{part['part_name']} — {replacement_label(part)} for {equipment(part)}",
-        "alternateName": aliases(part),
-        "sku": part["sku"],
-        "url": f"{SITE}/parts/{part['sku'].lower()}/",
-        "description": description(part),
-        "image": SITE + part["image"],
-        "category": part["category"],
-        "brand": {"@type": "Brand", "name": "PharmaGlobalEng"},
-        "manufacturer": {"@type": "Organization", "name": "PharmaGlobalEng", "url": SITE + "/"},
-        "isAccessoryOrSparePartFor": {"@type": "ProductModel", "name": equipment(part)},
-        "additionalProperty": properties,
-    }
+    identifier = None
     if part["oem_number"]:
-        product["identifier"] = {"@type": "PropertyValue", "propertyID": "OEM cross-reference", "value": part["oem_number"]}
+        identifier = {"@type": "PropertyValue", "propertyID": "OEM cross-reference", "value": part["oem_number"]}
+    catalog_page = catalog_page_entity(
+        url=f"{SITE}/parts/{part['sku'].lower()}/",
+        name=f"{part['part_name']} — {replacement_label(part)} for {equipment(part)}",
+        description=description(part),
+        sku=part["sku"],
+        image=SITE + part["image"],
+        aliases=aliases(part),
+        identifiers=identifier,
+    )
     data = {
         "@context": "https://schema.org",
         "@graph": [
-            product,
+            catalog_page,
             {"@type": "FAQPage", "mainEntity": [
                 {"@type": "Question", "name": fit_q, "acceptedAnswer": {"@type": "Answer", "text": fit_a}},
                 {"@type": "Question", "name": genuine_q, "acceptedAnswer": {"@type": "Answer", "text": genuine_a}},

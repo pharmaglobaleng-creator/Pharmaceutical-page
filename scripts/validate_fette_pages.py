@@ -22,7 +22,7 @@ for part in parts:
     if not image_path.exists():
         errors.append(f"Missing image: {part['image']}")
     html = page_path.read_text(encoding="utf-8")
-    required = [part["part_name"], part["model"], part["image"], "Independent supplier and trademark notice", "FAQPage", "Product"]
+    required = [part["part_name"], part["model"], part["image"], "Independent supplier and trademark notice", "FAQPage", "WebPage", "Thing"]
     required.append(f"OEM Number: {part['oem_number'] or 'Needed'}")
     if part["oem_number"]:
         required.extend([f"Replacement Part for OEM {part['oem_number']}", f"OEM {part['oem_number']}"])
@@ -45,8 +45,14 @@ for part in parts:
         try:
             schema = json.loads(schema_match.group(1))
             types = {node.get("@type") for node in schema.get("@graph", [])}
-            if not {"Product", "FAQPage", "BreadcrumbList"}.issubset(types):
+            if not {"WebPage", "FAQPage", "BreadcrumbList"}.issubset(types):
                 errors.append(f"{slug}: incomplete JSON-LD graph {types}")
+            page = next((node for node in schema.get("@graph", []) if node.get("@type") == "WebPage"), {})
+            subject = page.get("mainEntity", {})
+            identifiers = subject.get("identifier", []) if isinstance(subject, dict) else []
+            identifiers = identifiers if isinstance(identifiers, list) else [identifiers]
+            if part["sku"] not in {str(item.get("value", "")) for item in identifiers if isinstance(item, dict)}:
+                errors.append(f"{slug}: catalog schema SKU mismatch")
         except json.JSONDecodeError as exc:
             errors.append(f"{slug}: invalid JSON-LD: {exc}")
 
@@ -69,6 +75,6 @@ print(json.dumps({
     "catalog_cards": 200,
     "with_oem": sum(bool(part["oem_number"]) for part in parts),
     "oem_needed": sum(not part["oem_number"] for part in parts),
-    "json_ld": "Product + FAQPage + BreadcrumbList valid on every page",
+    "json_ld": "WebPage + Thing + FAQPage + BreadcrumbList valid on every page",
     "natoli_identifiers": 0,
 }, indent=2))

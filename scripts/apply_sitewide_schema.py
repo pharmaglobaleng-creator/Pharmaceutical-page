@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Add safe JSON-LD structured data to public HTML pages that do not already have it.
 
-This script preserves existing JSON-LD (especially Product schema on parts pages) and
-only injects schema where it is missing. It also validates that every public HTML page
-has parseable JSON-LD after the pass.
+The script only injects schema where it is missing and validates that every public
+HTML page has parseable JSON-LD after the pass. Quote-only replacement-part pages
+use WebPage markup because they do not publish the commerce data Google requires
+for Product snippets.
 """
 
 from __future__ import annotations
@@ -13,6 +14,8 @@ import json
 import re
 from pathlib import Path
 from urllib.parse import urlparse
+
+from catalog_page_schema import catalog_page_entity
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
@@ -175,19 +178,13 @@ def schema_for(path: Path, text: str) -> dict:
         }
     elif rel.startswith("parts/") and "/pge-" in ("/" + rel.lower()):
         sku_match = re.search(r"pge-[a-z]+-\d+", rel, flags=re.I)
-        entity = {
-            "@type": "Product",
-            "@id": url + "#product",
-            "name": name,
-            "description": desc,
-            "url": url,
-            "brand": {"@type": "Brand", "name": "PharmaGlobalEng"},
-            "manufacturer": {"@id": ORG_ID},
-        }
-        if sku_match:
-            entity["sku"] = sku_match.group(0).upper()
-        if image:
-            entity["image"] = image
+        entity = catalog_page_entity(
+            url=url,
+            name=name,
+            description=desc,
+            sku=sku_match.group(0).upper() if sku_match else None,
+            image=image,
+        )
     elif rel.startswith("parts/"):
         page_type = "CollectionPage"
     elif rel.startswith("solutions/"):
@@ -205,6 +202,10 @@ def schema_for(path: Path, text: str) -> dict:
     }
     if image:
         page["primaryImageOfPage"] = {"@type": "ImageObject", "url": image}
+
+    if entity and entity.get("@type") == "WebPage":
+        page = entity
+        entity = None
 
     graph = [page]
     if page_type == "TechArticle":

@@ -28,9 +28,18 @@ jobs:
             /catalog-data/
             /data/
             /docs/
+            /*.html
+            /about/
+            /coatings/
+            /components/
+            /contact.html
+            /knowledge-center/
+            /services/
+            /solutions/
             /robots.txt
             /sitemap.xml
             /sitemap-parts-images.xml
+            /sitemap-cremer.xml
             /next-app/
             !/next-app/public/
             !/next-app/node_modules/
@@ -58,6 +67,8 @@ jobs:
           node --check next-app/scripts/prepare-catalogs.mjs
       - name: Audit all parts HTML, links, assets and sitemaps
         run: python scripts/audit_parts_site.py --live
+      - name: Validate sitewide indexability, metadata and structured data
+        run: python scripts/validate_sitewide_seo.py
       - name: Validate structural safeguards
         run: |
           python - <<'PY'
@@ -65,7 +76,7 @@ jobs:
           from pathlib import Path
           j=json.loads(Path('audit-output/parts-audit-summary.json').read_text())
           assert not j['checks'], j['checks']
-          # Includes the reviewed PGE-CRE-001, PGE-CRE-002, and PGE-CRE-003 product routes.
+          # Includes the reviewed PGE-CRE-001, PGE-CRE-002, and PGE-CRE-003 catalog routes.
           assert j['detail_pages']==4512, 'Review any intentional route-count change explicitly'
           print('All implemented structural, reference and navigation checks passed.')
           PY

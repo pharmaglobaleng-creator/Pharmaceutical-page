@@ -42,7 +42,7 @@ def polish(text,sku):
     text=p.set_description_meta(text,'description',description)
     text=p.set_description_meta(text,'og:description',description,prop=True)
     text=p.set_description_meta(text,'twitter:description',description)
-    return p.set_product_description(p.set_lead(text,description),description)
+    return p.set_catalog_description(p.set_lead(text,description),description)
 
 def legacy_pages(rows,changes):
     import normalize_part_pages_for_search as n

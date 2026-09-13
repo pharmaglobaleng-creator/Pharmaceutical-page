@@ -1,6 +1,10 @@
 from pathlib import Path
 from html import escape
-import json, re
+import json, re, sys
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+from catalog_page_schema import catalog_page_entity
 
 parts = [{'sku': 'PGE-CRE-004', 'name': 'Rack Module (by set only)', 'model': 'CVC1220'},
  {'sku': 'PGE-CRE-005', 'name': 'Gate Assembly Guider', 'model': 'CVC1220'},
@@ -72,17 +76,13 @@ def page_html(p):
     schema = {
         "@context":"https://schema.org",
         "@graph":[
-            {
-                "@type":"Product",
-                "@id":url+"#product",
-                "name":f"{name} for Cremer {model}",
-                "sku":sku,
-                "url":url,
-                "description":desc,
-                "brand":{"@type":"Brand","name":"PharmaGlobalEng"},
-                "manufacturer":{"@id":"https://pharmaglobaleng.com/#organization"},
-                "isAccessoryOrSparePartFor":{"@type":"ProductModel","name":f"Cremer {model}"}
-            },
+            catalog_page_entity(
+                url=url,
+                name=f"{name} for Cremer {model}",
+                description=desc,
+                sku=sku,
+                aliases=[name, f"Cremer {model} {name}", sku],
+            ),
             {
                 "@type":"BreadcrumbList",
                 "itemListElement":[

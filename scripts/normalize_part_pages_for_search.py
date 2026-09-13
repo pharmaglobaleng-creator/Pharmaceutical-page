@@ -10,6 +10,8 @@ from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 
+from catalog_page_schema import catalog_page_entity
+
 ROOT = Path(__file__).resolve().parents[1]
 PARTS_ROOT = ROOT / "parts"
 SITE = "https://pharmaglobaleng.com"
@@ -332,47 +334,28 @@ def organization_entity() -> dict:
     }
 
 
-def normalize_product(product: dict, t: Truth, meta: str) -> dict:
-    product["name"] = page_h1(t)
-    product["sku"] = t.sku
-    product["description"] = meta
-    product["alternateName"] = factual_aliases(t)
-    product["brand"] = {"@type": "Brand", "name": "PharmaGlobalEng"}
-    product["manufacturer"] = {"@id": ORG_ID}
-    if t.family:
-        product["category"] = t.family
-    if t.model:
-        product["isAccessoryOrSparePartFor"] = {"@type": "ProductModel", "name": f"{t.brand} {t.model}"}
-    else:
-        product.pop("isAccessoryOrSparePartFor", None)
-
-    props = [
-        {"@type": "PropertyValue", "name": "Make", "value": t.brand},
-        {"@type": "PropertyValue", "name": "Supplier relationship", "value": "Independent replacement-part manufacturer; not OEM affiliated or endorsed"},
-    ]
-    if t.model:
-        props.insert(1, {"@type": "PropertyValue", "name": "Model", "value": t.model})
+def normalize_catalog_page(source: dict, t: Truth, meta: str) -> dict:
+    identifier = None
     if t.oem_verified and t.oem:
-        props.append({"@type": "PropertyValue", "name": "OEM cross-reference", "value": t.oem})
-        product["identifier"] = {"@type": "PropertyValue", "propertyID": "OEM cross-reference", "value": t.oem}
-    else:
-        product.pop("identifier", None)
-    product["additionalProperty"] = props
-
-    # Do not fabricate prices for quotation-only parts. Keep offers only when the
-    # page already has a complete price + currency pair.
-    offers = product.get("offers")
-    if offers:
-        offer_list = offers if isinstance(offers, list) else [offers]
-        complete = [
-            offer for offer in offer_list
-            if isinstance(offer, dict) and clean(offer.get("price")) and clean(offer.get("priceCurrency"))
-        ]
-        if complete:
-            product["offers"] = complete if isinstance(offers, list) else complete[0]
-        else:
-            product.pop("offers", None)
-    return product
+        identifier = {"@type": "PropertyValue", "propertyID": "OEM cross-reference", "value": t.oem}
+    main_entity = source.get("mainEntity") if source.get("@type") == "WebPage" else None
+    image = source.get("image")
+    if not image and isinstance(main_entity, dict):
+        image = main_entity.get("image")
+    generated = catalog_page_entity(
+        url=f"{SITE}/parts/{t.sku.lower()}/",
+        name=page_h1(t),
+        description=meta,
+        sku=t.sku,
+        image=image,
+        aliases=factual_aliases(t),
+        identifiers=identifier,
+    )
+    if source.get("@type") == "WebPage":
+        preserved = dict(source)
+        preserved.update(generated)
+        return preserved
+    return generated
 
 
 def rewrite_jsonld(text: str, t: Truth) -> tuple[str, bool]:
@@ -386,7 +369,7 @@ def rewrite_jsonld(text: str, t: Truth) -> tuple[str, bool]:
         except json.JSONDecodeError:
             return match.group(0)
         graph = data.get("@graph") if isinstance(data, dict) else None
-        product_found = False
+        catalog_found = False
         if isinstance(graph, list):
             new_graph = []
             org_found = False
@@ -397,19 +380,27 @@ def rewrite_jsonld(text: str, t: Truth) -> tuple[str, bool]:
                 types = item.get("@type")
                 is_product = types == "Product" or (isinstance(types, list) and "Product" in types)
                 if is_product:
-                    item = normalize_product(item, t, meta)
-                    product_found = True
+                    item = normalize_catalog_page(item, t, meta)
+                    catalog_found = True
+                elif (
+                    types == "WebPage"
+                    and item.get("url") == f"{SITE}/parts/{t.sku.lower()}/"
+                    and isinstance(item.get("mainEntity"), dict)
+                    and item["mainEntity"].get("@type") == "Thing"
+                ):
+                    item = normalize_catalog_page(item, t, meta)
+                    catalog_found = True
                 if item.get("@id") == ORG_ID:
                     item = organization_entity()
                     org_found = True
                 new_graph.append(item)
-            if product_found and not org_found:
+            if catalog_found and not org_found:
                 new_graph.append(organization_entity())
             data["@graph"] = new_graph
         elif isinstance(data, dict) and data.get("@type") == "Product":
-            data = {"@context": "https://schema.org", "@graph": [normalize_product(data, t, meta), organization_entity()]}
-            product_found = True
-        if not product_found:
+            data = {"@context": "https://schema.org", "@graph": [normalize_catalog_page(data, t, meta), organization_entity()]}
+            catalog_found = True
+        if not catalog_found:
             return match.group(0)
         touched = True
         payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
@@ -469,7 +460,9 @@ def audit_page(path: Path, text: str) -> dict[str, bool | int | str]:
     h1s = re.findall(r"<h1[^>]*>(.*?)</h1>", text, re.I | re.S)
     aliases = re.findall(r'<span class="alias">.*?</span>', text, re.I | re.S)
     json_blocks = re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', text, re.I | re.S)
-    product_schema = False
+    expected = f"{SITE}/parts/{sku.lower()}/"
+    catalog_schema = False
+    legacy_product_schema = False
     json_valid = True
     for block in json_blocks:
         try:
@@ -477,9 +470,16 @@ def audit_page(path: Path, text: str) -> dict[str, bool | int | str]:
         except json.JSONDecodeError:
             json_valid = False
             continue
-        if '"Product"' in json.dumps(data, ensure_ascii=False):
-            product_schema = True
-    expected = f"{SITE}/parts/{sku.lower()}/"
+        encoded = json.dumps(data, ensure_ascii=False)
+        if '"Product"' in encoded:
+            legacy_product_schema = True
+        graph = data.get("@graph", []) if isinstance(data, dict) else []
+        for node in graph if isinstance(graph, list) else []:
+            if not isinstance(node, dict) or node.get("@type") != "WebPage":
+                continue
+            subject = node.get("mainEntity")
+            if node.get("url") == expected and isinstance(subject, dict) and subject.get("@type") == "Thing":
+                catalog_schema = True
     return {
         "placeholder": bool(PLACEHOLDER_RE.search(text)),
         "title_long": len(title) > 72,
@@ -487,7 +487,8 @@ def audit_page(path: Path, text: str) -> dict[str, bool | int | str]:
         "missing_h1": len(h1s) != 1,
         "missing_canonical": canonical != expected,
         "noindex": bool(re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.I)),
-        "missing_product_schema": not product_schema,
+        "missing_catalog_page_schema": not catalog_schema,
+        "legacy_product_schema": legacy_product_schema,
         "invalid_jsonld": not json_valid,
         "alias_excess": len(aliases) > 5,
         "search_directed_copy": bool(re.search(r"Search recognizes|search recognizes|Find this part using similar terms", text)),
@@ -500,7 +501,7 @@ def audit_page(path: Path, text: str) -> dict[str, bool | int | str]:
 def totals(rows: list[dict]) -> Counter:
     keys = [
         "placeholder", "title_long", "meta_long", "missing_h1", "missing_canonical",
-        "noindex", "missing_product_schema", "invalid_jsonld", "alias_excess",
+        "noindex", "missing_catalog_page_schema", "legacy_product_schema", "invalid_jsonld", "alias_excess",
         "search_directed_copy", "unverified_oem_exposed",
     ]
     return Counter({key: sum(bool(row.get(key)) for row in rows) for key in keys})
@@ -532,7 +533,8 @@ def render_report(before_rows: list[dict], after_rows: list[dict], changed: int,
         "missing_h1": "Missing or multiple H1",
         "missing_canonical": "Missing/wrong self-canonical",
         "noindex": "Detail pages marked noindex",
-        "missing_product_schema": "Missing Product JSON-LD",
+        "missing_catalog_page_schema": "Missing quote-only catalog WebPage JSON-LD",
+        "legacy_product_schema": "Legacy Product rich-result markup without commerce data",
         "invalid_jsonld": "Invalid JSON-LD",
         "alias_excess": "More than 5 visible alias chips",
         "search_directed_copy": "Search-engine-directed alias copy",
@@ -547,11 +549,12 @@ def render_report(before_rows: list[dict], after_rows: list[dict], changed: int,
         "- Reviewed-only Kikusui cross-references are not labeled as verified OEM numbers.",
         "- Keep visible/schema aliases concise; punctuation-only SKU variants and repeated OEM permutations are removed.",
         "- Product titles and descriptions are concise and user-facing rather than stuffed with repeated compatibility phrases.",
-        "- Product JSON-LD is aligned to visible facts and points to one PharmaGlobalEng Organization entity with a logo.",
-        "- Incomplete/fabricated Offer data is never added; quotation-only parts do not receive invented prices.",
+        "- Quote-only pages use WebPage + Thing JSON-LD aligned to visible facts and one PharmaGlobalEng Organization entity.",
+        "- Product rich-result markup is omitted because quotation-only parts have no published price, purchasable offer, or visible review.",
+        "- Incomplete or fabricated Offer data is never added.",
         "- Exact fit, dimensions, materials, finishes, and machine configuration remain subject to engineering confirmation unless a source explicitly supports them.",
         "", "## AI/GEO principle", "",
-        "The catalog is optimized as a set of clear product entities, not as a keyword-volume system. Each page should make the relationship between part, make, model, SKU, verified cross-reference, and compatibility basis easy to extract while avoiding unsupported claims and repetitive search phrases.", "",
+        "The catalog is optimized as a set of clear, factual catalog records, not as a keyword-volume system. Each page should make the relationship between part, make, model, SKU, verified cross-reference, and compatibility basis easy to extract while avoiding unsupported claims and repetitive search phrases.", "",
     ]
     return "\n".join(lines)
 
@@ -587,7 +590,8 @@ def run(fix: bool, check: bool) -> int:
 
     critical_keys = [
         "placeholder", "missing_h1", "missing_canonical", "noindex",
-        "missing_product_schema", "invalid_jsonld", "unverified_oem_exposed",
+        "missing_catalog_page_schema", "legacy_product_schema", "invalid_jsonld",
+        "unverified_oem_exposed",
     ]
     remaining = {key: a[key] for key in critical_keys if a[key]}
     if check and remaining:
