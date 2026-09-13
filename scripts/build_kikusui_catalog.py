@@ -10,6 +10,8 @@ from html import escape
 from pathlib import Path
 from urllib.parse import urlencode
 
+from catalog_page_schema import catalog_page_entity
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
@@ -102,38 +104,24 @@ def related_parts(part: dict[str, str], parts: list[dict[str, str]]) -> list[dic
     return (same_category + same_model)[:4]
 
 
-def product_schema(part: dict[str, str]) -> dict:
+def catalog_page_schema(part: dict[str, str]) -> dict:
     slug = part["sku"].lower()
-    product: dict = {
-        "@type": "Product",
-        "@id": f"{SITE}/parts/{slug}/#product",
-        "name": f"{part['part_name']} for Kikusui {part['model']}",
-        "alternateName": aliases(part),
-        "sku": part["sku"],
-        "url": f"{SITE}/parts/{slug}/",
-        "description": description(part),
-        "category": part["category"],
-        "brand": {"@type": "Brand", "name": "PharmaGlobalEng"},
-        "manufacturer": {"@type": "Organization", "name": "PharmaGlobalEng", "url": SITE + "/"},
-        "isAccessoryOrSparePartFor": {"@type": "ProductModel", "name": f"Kikusui {part['model']}"},
-        "additionalProperty": [
-            {"@type": "PropertyValue", "name": "Make", "value": "Kikusui"},
-            {"@type": "PropertyValue", "name": "Model", "value": part["model"]},
-            {"@type": "PropertyValue", "name": "OEM cross-reference", "value": oem_display(part)},
-            {"@type": "PropertyValue", "name": "Catalog page", "value": part["catalog_page"]},
-            {"@type": "PropertyValue", "name": "Photo status", "value": part["photo_status"]},
-            {"@type": "PropertyValue", "name": "Supplier relationship", "value": "Independent replacement-part manufacturer; not OEM affiliated or endorsed"},
-        ],
-    }
-    if has_image(part):
-        product["image"] = SITE + part["image_path"]
+    identifier = None
     if has_oem(part):
-        product["identifier"] = {
+        identifier = {
             "@type": "PropertyValue",
             "propertyID": "OEM cross-reference",
             "value": part["oem_number"],
         }
-    return product
+    return catalog_page_entity(
+        url=f"{SITE}/parts/{slug}/",
+        name=f"{part['part_name']} for Kikusui {part['model']}",
+        description=description(part),
+        sku=part["sku"],
+        image=SITE + part["image_path"] if has_image(part) else None,
+        aliases=aliases(part),
+        identifiers=identifier,
+    )
 
 
 def json_ld(part: dict[str, str]) -> str:
@@ -141,7 +129,7 @@ def json_ld(part: dict[str, str]) -> str:
     data = {
         "@context": "https://schema.org",
         "@graph": [
-            product_schema(part),
+            catalog_page_schema(part),
             {
                 "@type": "BreadcrumbList",
                 "itemListElement": [

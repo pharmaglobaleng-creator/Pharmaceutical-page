@@ -41,15 +41,15 @@ def verified_oem(text: str) -> str | None:
         for item in graph:
             if not isinstance(item, dict):
                 continue
-            types = item.get("@type")
-            is_product = types == "Product" or (isinstance(types, list) and "Product" in types)
-            if not is_product:
+            if item.get("@type") != "WebPage" or not isinstance(item.get("mainEntity"), dict):
                 continue
-            identifier = item.get("identifier")
-            if isinstance(identifier, dict) and identifier.get("propertyID") == "OEM cross-reference":
-                value = str(identifier.get("value") or "").strip()
-                if value:
-                    return value
+            identifier = item["mainEntity"].get("identifier", [])
+            identifiers = identifier if isinstance(identifier, list) else [identifier]
+            for entry in identifiers:
+                if isinstance(entry, dict) and entry.get("propertyID") == "OEM cross-reference":
+                    value = str(entry.get("value") or "").strip()
+                    if value:
+                        return value
     return None
 
 
@@ -98,7 +98,7 @@ def set_lead(text: str, value: str) -> str:
     return pattern.sub(lambda m: m.group(1) + escaped + m.group(2), text, count=1)
 
 
-def set_product_description(text: str, value: str) -> str:
+def set_catalog_description(text: str, value: str) -> str:
     def repl(match: re.Match) -> str:
         try:
             data = json.loads(html.unescape(match.group(2).strip()))
@@ -111,10 +111,9 @@ def set_product_description(text: str, value: str) -> str:
             for item in items:
                 if not isinstance(item, dict):
                     continue
-                types = item.get("@type")
-                is_product = types == "Product" or (isinstance(types, list) and "Product" in types)
-                if is_product:
+                if item.get("@type") == "WebPage" and isinstance(item.get("mainEntity"), dict):
                     item["description"] = value
+                    item["mainEntity"]["description"] = value
                     changed = True
         if not changed:
             return match.group(0)
@@ -158,7 +157,7 @@ def main() -> int:
         updated = set_description_meta(updated, "og:description", description, prop=True)
         updated = set_description_meta(updated, "twitter:description", description)
         updated = set_lead(updated, description)
-        updated = set_product_description(updated, description)
+        updated = set_catalog_description(updated, description)
         if updated != original:
             path.write_text(updated, encoding="utf-8")
             changed += 1

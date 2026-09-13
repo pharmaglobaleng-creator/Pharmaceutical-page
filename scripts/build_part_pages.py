@@ -8,6 +8,8 @@ from html import escape, unescape
 from pathlib import Path
 from urllib.parse import urlencode
 
+from catalog_page_schema import catalog_page_entity
+
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://pharmaglobaleng.com"
 GENERIC_MODELS = {"general", "model unconfirmed", "model unspecified", "model unresolved", "multi model"}
@@ -273,28 +275,26 @@ def related_parts(part: Part, parts: list[Part], limit: int = 4) -> list[Part]:
 
 def json_ld(part: Part) -> str:
     oem = APPROVED_OEM_REFERENCES.get(part.sku)
-    properties = [
-        {"@type": "PropertyValue", "name": "Compatibility reference", "value": equipment_reference(part).capitalize()},
-        {"@type": "PropertyValue", "name": "Engineering verification", "value": "PharmaGlobalEng verifies dimensions, mounting configuration, material specification, finish, and application requirements before manufacturing"},
-        {"@type": "PropertyValue", "name": "Supplier relationship", "value": "Independent replacement-part manufacturer; not OEM affiliated or endorsed"},
-    ]
+    identifier = None
     if oem:
-        properties.append({
+        identifier = {
             "@type": "PropertyValue",
-            "name": "Verified OEM cross-reference",
+            "propertyID": "Verified OEM cross-reference",
             "value": oem["oem_part_number"],
-        })
+        }
+    catalog_page = catalog_page_entity(
+        url=part.url,
+        name=f"{part.name} for {title_reference(part)} compatibility",
+        description=description(part),
+        sku=part.sku,
+        image=SITE + part.image,
+        aliases=aliases(part),
+        identifiers=identifier,
+    )
     data = {
         "@context": "https://schema.org",
         "@graph": [
-            {
-                "@type": "Product", "@id": part.url + "#product", "name": f"{part.name} for {title_reference(part)} compatibility",
-                "alternateName": aliases(part), "sku": part.sku, "url": part.url,
-                "description": description(part), "image": SITE + part.image,
-                "category": part.family, "brand": {"@type": "Brand", "name": "PharmaGlobalEng"},
-                "manufacturer": {"@type": "Organization", "name": "PharmaGlobalEng", "url": SITE + "/"},
-                "additionalProperty": properties,
-            },
+            catalog_page,
             {
                 "@type": "BreadcrumbList", "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Parts Store", "item": SITE + "/parts/"},
