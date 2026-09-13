@@ -3,8 +3,8 @@
 This report is generated from the public `parts/pge-*/index.html` detail pages.
 The cleanup is intentionally conservative: it removes placeholder entity data and search-engine-directed repetition without inventing specifications, prices, OEM numbers, or compatibility claims.
 
-- Detail pages audited: **4,479**
-- Pages matched to structured source records: **4,420**
+- Detail pages audited: **4,512**
+- Pages matched to structured source records: **4,453**
 - Pages changed by normalization: **0**
 - Duplicate titles after normalization: **0**
 - Duplicate meta descriptions after normalization: **0**

@@ -1,58 +1,64 @@
 {
   "status": "passed",
   "sourceCommit": "833f9d6c8ee64dceb98ad5b6eacbd3daeb2594ca",
-  "totalCatalogRecords": 4324,
-  "manufacturerCatalogs": 6,
+  "totalCatalogRecords": 4357,
+  "manufacturerCatalogs": 7,
   "modelLandingPages": 83,
-  "generatedHtmlPages": 272,
-  "originalProductLandingPagesPreserved": 4479,
+  "generatedHtmlPages": 273,
+  "originalProductLandingPagesPreserved": 4512,
   "otherLegacyHtmlPreserved": 74,
-  "originalImageFilesPreserved": 4273,
-  "productsWithOriginalImages": 4165,
+  "originalImageFilesPreserved": 4306,
+  "productsWithOriginalImages": 4198,
   "productsWithoutImages": 159,
   "placeholderImagesNotSubstituted": true,
   "allProductUrlsPreserved": true,
   "allOriginalImagesByteIdentical": true,
   "initialHtmlProductLimit": 50,
   "allProductsReachableThroughStaticLinks": true,
-  "maximumGeneratedHtmlBytes": 227712,
+  "maximumGeneratedHtmlBytes": 228154,
   "maximumGeneratedHtmlUrl": "/parts/stokes/328/page/3/",
   "manufacturerHtmlSizes": {
     "stokes": {
       "beforeBytes": 3567724,
-      "afterBytes": 221015,
+      "afterBytes": 221457,
       "pages": 40,
       "totalProducts": 2000
     },
     "fette": {
       "beforeBytes": 1015112,
-      "afterBytes": 221368,
+      "afterBytes": 221810,
       "pages": 16,
       "totalProducts": 769
     },
     "korsch": {
       "beforeBytes": 511780,
-      "afterBytes": 220136,
+      "afterBytes": 220591,
       "pages": 6,
       "totalProducts": 284
     },
     "manesty": {
       "beforeBytes": 364677,
-      "afterBytes": 133672,
+      "afterBytes": 134127,
       "pages": 40,
       "totalProducts": 1000
     },
     "kikusui": {
       "beforeBytes": 225854,
-      "afterBytes": 218473,
+      "afterBytes": 218928,
       "pages": 4,
       "totalProducts": 158
     },
     "quadro": {
       "beforeBytes": 0,
-      "afterBytes": 126555,
+      "afterBytes": 126984,
       "pages": 5,
       "totalProducts": 113
+    },
+    "sweco": {
+      "beforeBytes": 0,
+      "afterBytes": 159743,
+      "pages": 1,
+      "totalProducts": 33
     }
   },
   "schemaCheck": "JSON parsing, catalog types, canonical and visible product correspondence; not a Google rich-result certification",
@@ -68,7 +74,16 @@
     "PGE-QUA-093: No Quadro OEM number is stated in this listing.",
     "PGE-QUA-094: No Quadro OEM number is stated in this listing.",
     "PGE-QUA-111: Source explicitly describes a modified screen with the retaining tab removed. Preserve that modified geometry.",
-    "PGE-QUA-113: No Quadro OEM number is stated in this listing."
+    "PGE-QUA-113: No Quadro OEM number is stated in this listing.",
+    "PGE-SWE-007: The source title includes x4M while its description omits that designation; confirm configuration during quotation.",
+    "PGE-SWE-009: The source title identifies the screen as self-cleaning while another source field omits that wording; confirm configuration during quotation.",
+    "PGE-SWE-011: The source title and description state approximately 711 μm while another source field states 720 μm; confirm aperture during quotation.",
+    "PGE-SWE-012: This is one of two distinct source records sharing replacement OEM number 40020M013; keep the records separate pending physical verification.",
+    "PGE-SWE-013: The source title and description state that a center hole is present while another source field omits that detail; confirm configuration during quotation.",
+    "PGE-SWE-014: Source fields conflict between 600 μm and 1,180 μm; confirm aperture during quotation.",
+    "PGE-SWE-014: The source title and description state that a center hole is present while another source field omits that detail; confirm configuration during quotation.",
+    "PGE-SWE-017: This is one of two distinct source records sharing replacement OEM number 40020M013; keep the records separate pending physical verification.",
+    "PGE-SWE-017: Source fields differ about center-hole wording; confirm configuration during quotation."
   ],
   "productLandingPagesChangedImageDeliveryOnly": 0,
   "manestyProductsPerPage": 25,

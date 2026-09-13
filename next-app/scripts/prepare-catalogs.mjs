@@ -8,7 +8,7 @@ import sharp from 'sharp';
 const app = process.cwd();
 const root = path.resolve(app, '..');
 const dataFile = path.join(app, 'data/parts-catalog.json');
-const names = { stokes: 'Stokes', fette: 'Fette', korsch: 'Korsch', manesty: 'Manesty', kikusui: 'Kikusui', quadro: 'Quadro' };
+const names = { stokes: 'Stokes', fette: 'Fette', korsch: 'Korsch', manesty: 'Manesty', kikusui: 'Kikusui', quadro: 'Quadro', sweco: 'Sweco' };
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const clean = value => String(value || '').replace(/\s+/g, ' ').trim();
 const slug = value => clean(value).toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');

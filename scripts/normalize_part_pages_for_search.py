@@ -178,7 +178,7 @@ def fallback_truth(path: Path, text: str) -> Truth:
     sku = sku_from_path(path)
     h1 = strip_tags(extract(r"<h1[^>]*>(.*?)</h1>", text) or sku)
     brand = "PharmaGlobalEng"
-    for candidate in ("Korsch", "Kikusui", "Manesty", "Stokes", "Fette", "Kilian", "PTK"):
+    for candidate in ("Korsch", "Kikusui", "Manesty", "Stokes", "Fette", "Quadro", "Sweco", "Kilian", "PTK"):
         if re.search(rf"\b{re.escape(candidate)}\b", text, re.I):
             brand = candidate
             break

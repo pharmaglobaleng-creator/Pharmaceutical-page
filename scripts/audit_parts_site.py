@@ -212,8 +212,8 @@ def audit(out, live):
     robots_checks={agent:rp.can_fetch(agent,SITE+'/parts/pge-kik-003/') for agent in ('Googlebot','Bingbot','OAI-SearchBot')}
     live_results=[]
     if live:
-        samples=['parts/index.html','parts/kikusui/index.html','parts/quadro/index.html','parts/korsch/korsch-300/index.html']
-        for prefix in ('pge-fet-','pge-kik-','pge-kor-','pge-k300-','pge-man-','pge-qua-','pge-stk-'):
+        samples=['parts/index.html','parts/kikusui/index.html','parts/quadro/index.html','parts/sweco/index.html','parts/korsch/korsch-300/index.html']
+        for prefix in ('pge-fet-','pge-kik-','pge-kor-','pge-k300-','pge-man-','pge-qua-','pge-stk-','pge-swe-'):
             sample=next((r['file'] for r in records if r['kind']=='detail' and Path(r['file']).parent.name.startswith(prefix)),None)
             if sample: samples.append(sample)
         for rel in dict.fromkeys(samples):

@@ -38,6 +38,31 @@ test('Quadro records stay in five-page order with the matched name, model, OEM a
   await expect(page.locator('body')).not.toContainText(/PharmParts/i);
 });
 
+test('Sweco records retain exact order, public mapping labels and unique landing pages', async ({ page }) => {
+  const rows = data.parts.filter(part => part.brand === 'sweco');
+  expect(rows).toHaveLength(33);
+  expect(rows.map(part => part.sku)).toEqual(Array.from({ length: 33 }, (_, index) => `PGE-SWE-${String(index + 1).padStart(3, '0')}`));
+  await page.goto('/parts/sweco/');
+  await expect(page.locator('.pc-card')).toHaveCount(33);
+  expect(await page.locator('.pc-card').evaluateAll(cards => cards.map(card => card.dataset.pcSku))).toEqual(rows.map(part => part.sku));
+  await expect(page.locator('.pc-identifiers dt', { hasText: 'Replacement OEM Number' })).toHaveCount(33);
+  fs.mkdirSync('test-results/screenshots',{recursive:true});
+  await page.screenshot({path:'test-results/screenshots/sweco-catalog.png'});
+  for (const target of [rows[0], rows[11], rows[16], rows[30], rows[32]]) {
+    await page.goto(target.url);
+    await expect(page.locator('h1')).toContainText(target.name);
+    await expect(page.locator('.compatibility')).toContainText(`Replacement OEM Number: ${target.oem}`);
+    await expect(page.locator('.compatibility')).toContainText(`Model: ${target.model}`);
+    await expect(page.locator('.part-image img')).toHaveAttribute('src', target.image);
+    expect(await page.locator('.part-image img').evaluate(image => image.complete && image.naturalWidth === 760 && image.naturalHeight === 760)).toBeTruthy();
+    await expect(page.locator('body')).not.toContainText(/PharmParts/i);
+    if (target.sku === 'PGE-SWE-031') await page.screenshot({path:'test-results/screenshots/sweco-deck-detail.png'});
+  }
+  expect(rows.filter(part => part.oem === '40020M013')).toHaveLength(2);
+  expect(new Set(rows.map(part => part.url)).size).toBe(33);
+  expect(new Set(rows.map(part => part.image)).size).toBe(33);
+});
+
 test('machine model links open their own landing pages', async ({ page }) => {
   const brand = data.manufacturers.find(b => b.slug === 'kikusui');
   const model = brand.models.find(m => m.name === 'LIBRA') || brand.models[0];
