@@ -78,6 +78,9 @@ if (fs.existsSync(dataFile)) {
 // PGE: enforce source-reviewed OEM restrictions before export.
 write(dataFile, JSON.stringify(data, null, 2) + '\n');
 execFileSync('python3', [path.join(root, 'scripts/sync_parts_reference_status.py')], { cwd: root, stdio: 'inherit' });
+// The legacy Fette cards did not use .oem-reference. Restore only references
+// supported by preserved source records and agreeing product identities.
+execFileSync('python3', [path.join(root, 'scripts/sync_fette_catalog_references.py')], { cwd: root, stdio: 'inherit' });
 data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
 
 const imageCache = new Map();

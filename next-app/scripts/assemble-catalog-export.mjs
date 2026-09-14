@@ -26,6 +26,17 @@ for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
     if (owned.has(name)) {
       const previous = fs.readFileSync(file, 'utf8');
       if (!replaceable.has(name) && !previous.includes('data-pge-catalog="v2"')) throw new Error(`Refusing to overwrite an unrelated existing route: ${name}`);
+      // Keep the approved stylesheet added by the sitewide header workflow.
+      // A catalog rebuild must not silently remove it from an existing page.
+      const headerStylesheet = previous.match(/<link\b[^>]*\bdata-pge-header-css=["']true["'][^>]*>/i)?.[0];
+      if (headerStylesheet) {
+        const exported = path.join(out, name);
+        const html = fs.readFileSync(exported, 'utf8');
+        if (!/\bdata-pge-header-css=/.test(html)) {
+          if (!/<\/head\s*>/i.test(html)) throw new Error(`Missing head while preserving header CSS: ${name}`);
+          fs.writeFileSync(exported, html.replace(/<\/head\s*>/i, `${headerStylesheet}\n</head>`));
+        }
+      }
       continue;
     }
     const dest = path.join(out, name);

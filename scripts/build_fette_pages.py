@@ -46,9 +46,11 @@ def description(part: dict) -> str:
 
 
 def application_guidance(part: dict) -> tuple[str, str, tuple[str, ...]]:
+    # A catalog family describes the assembly, not necessarily this component.
+    # Ignore references after "for" / "with" (including w/ and w/o) so that a
+    # bearing for a pressure roll is not confused with a roll supplied with one.
     name = part["part_name"].lower()
-    category = part["category"].lower()
-    text = f"{name} {category}"
+    identity = re.split(r"\b(?:for|with|without)\b|\bw\s*/\s*o?\s*|[()]", name, maxsplit=1)[0]
     rules = [
         (("cam", "track"),
          "This cam or track component establishes a guided motion profile for the mechanism that follows its working surface.",
@@ -56,9 +58,12 @@ def application_guidance(part: dict) -> tuple[str, str, tuple[str, ...]]:
         (("turret",),
          "This turret-related component supports the indexed tooling arrangement used during the tablet-compression cycle.",
          ("Station count and tooling configuration", "Mounting and drive interfaces", "Critical runout, alignment, and clearances")),
-        (("seal", "felt", "o-ring", "gasket"),
+        (("seal", "o-ring", "gasket"),
          "This sealing component helps control lubricant, product, air, or contaminant movement at its installed interface.",
          ("Cross-section and installed diameter", "Groove or mating-surface geometry", "Material compatibility with product, lubricant, and cleaning exposure")),
+        (("felt",),
+         "The catalog name identifies a felt component; its installed purpose must be confirmed from the machine documentation or existing part.",
+         ("Shape, dimensions, and thickness", "Installed location and mating surfaces", "Material requirements for the installed application")),
         (("bearing", "bush", "bushing"),
          "This bearing or bushing component supports a rotating or sliding interface while helping maintain alignment.",
          ("Bore, outside diameter, and length", "Shaft and housing fit", "Lubrication and operating environment")),
@@ -75,12 +80,23 @@ def application_guidance(part: dict) -> tuple[str, str, tuple[str, ...]]:
          "This mounting or motion-transfer component locates, supports, fastens, or transmits movement between connected mechanisms.",
          ("Critical diameters, shoulders, and lengths", "Threads, keyways, or retaining features", "Mating housings and operating clearance")),
     ]
-    for needles, function, checks in rules:
-        if any(needle in text for needle in needles):
-            return function, (
-                "Visual similarity alone does not establish compatibility. Confirm the exact machine configuration, "
-                "installed orientation, mating components, material, finish, and critical dimensions."
-            ), checks
+    # A cover, holder, or bracket belongs to another component but does not
+    # inherit that component's function (for example, a felt holder is not felt).
+    accessory = re.search(r"\b(?:holder|cover|bracket)s?\b", identity)
+    matches = [
+        (function, checks)
+        for needles, function, checks in rules
+        if any(re.search(r"(?<!\w)" + re.escape(needle) + r"(?:s|es)?(?!\w)", identity)
+               for needle in needles)
+    ]
+    # Composite or unrecognized names do not establish a component's function.
+    # A neutral description is safer than choosing the first category keyword.
+    if not accessory and len(matches) == 1:
+        function, checks = matches[0]
+        return function, (
+            "Visual similarity alone does not establish compatibility. Confirm the exact machine configuration, "
+            "installed orientation, mating components, material, finish, and critical dimensions."
+        ), checks
     return (
         f"The {part['part_name']} is cataloged in the {part['category']} group for the referenced Fette tablet-press application.",
         "Its exact function and configuration depend on its installed location and mating components; visual similarity alone is not sufficient to establish fit.",
