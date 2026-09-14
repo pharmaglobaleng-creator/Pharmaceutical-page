@@ -68,6 +68,22 @@ class ComponentIdentityTests(unittest.TestCase):
         self.assertIn('bearing or bushing component', function)
         self.assertIn('Shaft and housing fit', checks)
 
+    def test_product_control_wheels_do_not_inherit_drive_geometry(self):
+        for name in ('FILLING WHEEL - PLOW', 'REVERSE DOSING WHEEL W/ FLAT RODS',
+                     'METERING WHEEL W/FLAT RODS', 'STAINLESS STEEL DISTRIBUTING WHEEL'):
+            with self.subTest(name=name):
+                function, _, checks = self.guidance(name, 'Product Control')
+                self.assertIn(f'The {name} is cataloged in', function)
+                self.assertNotIn('drive component', function)
+                self.assertNotIn('Tooth, groove, or pitch geometry', checks)
+
+    def test_known_drive_components_keep_drive_guidance(self):
+        for name in ('TOOTHED BELT', 'DRIVE GEAR', 'DRIVE WHEEL'):
+            with self.subTest(name=name):
+                function, _, checks = self.guidance(name, 'Drive Components')
+                self.assertIn('drive component', function)
+                self.assertIn('Tooth, groove, or pitch geometry', checks)
+
 
 class ExistingPageRepairTests(unittest.TestCase):
     def test_real_pages_preserve_every_byte_outside_authorized_blocks(self):

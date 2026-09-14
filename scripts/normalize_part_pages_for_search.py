@@ -177,13 +177,39 @@ def extract(pattern: str, text: str) -> str | None:
 def fallback_truth(path: Path, text: str) -> Truth:
     sku = sku_from_path(path)
     h1 = strip_tags(extract(r"<h1[^>]*>(.*?)</h1>", text) or sku)
-    brand = "PharmaGlobalEng"
-    for candidate in ("Korsch", "Kikusui", "Manesty", "Stokes", "Fette", "Quadro", "Sweco", "Kilian", "PTK"):
-        if re.search(rf"\b{re.escape(candidate)}\b", text, re.I):
-            brand = candidate
-            break
-    name = re.split(r"\s+(?:for|—|\|)\s+", h1, maxsplit=1, flags=re.I)[0].strip()
-    return Truth(sku=sku, name=name or sku, brand=brand, source="HTML fallback")
+
+    def fact(*labels: str) -> str | None:
+        for label in labels:
+            # Read existing component facts before a previously generated H1.
+            # The minimal Cremer pages use strong/span; other detail pages use dt/dd.
+            for pattern in (
+                rf"<dt>\s*{re.escape(label)}\s*</dt>\s*<dd>(.*?)</dd>",
+                rf'<div class="part-fact">\s*<strong>\s*{re.escape(label)}\s*</strong>\s*<span>(.*?)</span>',
+            ):
+                value = strip_tags(extract(pattern, text) or "")
+                if value:
+                    return value
+        return None
+
+    brand = fact("Make", "Manufacturer reference")
+    if not brand:
+        brand = "PharmaGlobalEng"
+        for candidate in ("Korsch", "Kikusui", "Manesty", "Stokes", "Fette", "Quadro", "Sweco", "Kilian", "PTK", "Cremer"):
+            if re.search(rf"\b{re.escape(candidate)}\b", text, re.I):
+                brand = candidate
+                break
+    model = usable_model(fact("Model"))
+    name = fact("Part name", "Part")
+    if not name:
+        # "for" can be part of the component identity (e.g. bottle sizes).
+        # Strip only an equipment suffix identified by the known make.
+        equipment = re.fullmatch(rf"(.+?)\s+for\s+{re.escape(brand)}(?:\s+(.+))?", h1, re.I)
+        if equipment:
+            name = equipment.group(1)
+            model = model or usable_model(equipment.group(2))
+        else:
+            name = re.sub(rf"\s+—\s+{re.escape(brand)} Replacement Component$", "", h1, flags=re.I)
+    return Truth(sku=sku, name=name or sku, brand=brand, model=model, source="HTML fallback")
 
 
 def set_title(text: str, value: str) -> str:
@@ -226,12 +252,9 @@ def page_h1(t: Truth) -> str:
 
 
 def page_meta(t: Truth) -> str:
-    equip = f"{t.brand} {t.model}" if t.model else t.brand
-    base = f"{t.name} for {equip}. Independent PharmaGlobalEng replacement component {t.sku}."
-    if t.oem_verified and t.oem:
-        base += f" OEM cross-reference {t.oem}."
-    base += " Compatibility and specifications are confirmed before quotation."
-    return wordsafe_truncate(base, 175)
+    from polish_part_page_copy import identity_description
+
+    return identity_description(page_h1(t), t.sku, t.oem if t.oem_verified else None)
 
 
 def factual_aliases(t: Truth) -> list[str]:

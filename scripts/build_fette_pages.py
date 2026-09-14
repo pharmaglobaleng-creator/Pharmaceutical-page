@@ -83,6 +83,14 @@ def application_guidance(part: dict) -> tuple[str, str, tuple[str, ...]]:
     # A cover, holder, or bracket belongs to another component but does not
     # inherit that component's function (for example, a felt holder is not felt).
     accessory = re.search(r"\b(?:holder|cover|bracket)s?\b", identity)
+    # Product-control wheels are not identified as toothed drive components by
+    # their catalog names. Keep their guidance neutral until the mechanism is
+    # established, rather than deriving pitch/keyway checks from "wheel" alone.
+    product_control_wheel = (
+        part.get("category", "").casefold() == "product control"
+        and re.search(r"\bwheel(?:s)?\b", identity)
+        and re.search(r"\b(?:filling|metering|dosing|distributing)\b", identity)
+    )
     matches = [
         (function, checks)
         for needles, function, checks in rules
@@ -91,7 +99,7 @@ def application_guidance(part: dict) -> tuple[str, str, tuple[str, ...]]:
     ]
     # Composite or unrecognized names do not establish a component's function.
     # A neutral description is safer than choosing the first category keyword.
-    if not accessory and len(matches) == 1:
+    if not accessory and not product_control_wheel and len(matches) == 1:
         function, checks = matches[0]
         return function, (
             "Visual similarity alone does not establish compatibility. Confirm the exact machine configuration, "
