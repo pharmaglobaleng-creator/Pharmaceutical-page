@@ -3,6 +3,26 @@ import fs from 'node:fs';
 import { catalogData, pageSizeFor } from '../lib/catalog.mjs';
 const data = catalogData();
 
+test('Fette references and quotation guidance survive static rendering and client search', async ({ browser }) => {
+  for (const javaScriptEnabled of [false, true]) {
+    const context = await browser.newContext({ javaScriptEnabled });
+    const page = await context.newPage();
+    await page.goto('http://127.0.0.1:4173/parts/fette/');
+    const known = page.locator('[data-pc-sku="PGE-FET-005"]');
+    const unknown = page.locator('[data-pc-sku="PGE-FET-003"]');
+    await expect(known.locator('.pc-identifiers')).toContainText('3115546');
+    await expect(unknown.locator('.pc-identifiers')).toContainText('Confirm reference during quotation');
+    await expect(unknown.locator('.pc-identifiers')).not.toContainText('Not listed in source catalog');
+    if (javaScriptEnabled) {
+      await page.getByLabel('Search part name, model, OEM, or PGE number').fill('3115546');
+      await page.getByRole('button', { name: /^Search/ }).click();
+      await expect(known).toBeVisible();
+      await expect(known.locator('.pc-identifiers')).toContainText('3115546');
+    }
+    await context.close();
+  }
+});
+
 test('manufacturer catalogs and pagination are readable without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();

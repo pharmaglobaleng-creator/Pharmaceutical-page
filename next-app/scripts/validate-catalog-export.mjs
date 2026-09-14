@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import { load } from 'cheerio';
 import { catalogData, catalogRoutes, SITE, PAGE_SIZE, pageSizeFor } from '../lib/catalog.mjs';
+import { catalogReferenceText } from '../lib/catalog-reference.mjs';
 const app = process.cwd(), out = path.join(app, 'out');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const data = catalogData(), routes = catalogRoutes();
@@ -53,7 +54,9 @@ for (const route of routes) {
       assert.ok(p, `Unknown product: ${sku}`); actual.push(sku);
       assert.equal(card.find('h2').text(), p.name, `Changed name: ${sku}`);
       assert.equal(card.find('h2 a').attr('href'), p.url, `Changed landing URL: ${sku}`);
-      assert.ok(card.find('.pc-identifiers').text().includes(p.oem), `OEM reference missing: ${sku}`);
+      const reference = card.find('.pc-identifiers > div').filter((_, node) => $(node).find('dt').text() === 'Replacement OEM Number').find('dd');
+      assert.equal(reference.length, 1, `Expected one OEM reference field: ${sku}`);
+      assert.equal(reference.text(), catalogReferenceText(p), `Changed OEM reference or confirmation guidance: ${sku}`);
       if (p.image) {
         assert.equal(card.find('img').attr('src'), p.image, `Replaced photo: ${sku}`);
         assert.equal(card.find('img').attr('alt'), p.alt, `Changed image identity: ${sku}`);

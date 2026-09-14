@@ -26,7 +26,7 @@
     },
     "fette": {
       "beforeBytes": 1015112,
-      "afterBytes": 221810,
+      "afterBytes": 220628,
       "pages": 16,
       "totalProducts": 769
     },
@@ -84,8 +84,5 @@
     "PGE-SWE-014: The source title and description state that a center hole is present while another source field omits that detail; confirm configuration during quotation.",
     "PGE-SWE-017: This is one of two distinct source records sharing replacement OEM number 40020M013; keep the records separate pending physical verification.",
     "PGE-SWE-017: Source fields differ about center-hole wording; confirm configuration during quotation."
-  ],
-  "productLandingPagesChangedImageDeliveryOnly": 0,
-  "manestyProductsPerPage": 25,
-  "manestyProductContentPreserved": true
+  ]
 }
