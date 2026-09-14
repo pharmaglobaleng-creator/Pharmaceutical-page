@@ -205,57 +205,94 @@ def description(part: Part) -> str:
     return text
 
 
+def guidance_component(name: str) -> str | None:
+    """Identify the component itself, without borrowing its assembly's function."""
+    identity = re.split(
+        r"\b(?:for|with|without)\b|\bw\s*/\s*o?\s*|[()]|\s[-–—]\s",
+        name.casefold(), maxsplit=1,
+    )[0]
+
+    def has(*terms: str) -> bool:
+        return any(re.search(r"(?<!\w)" + re.escape(term) + r"(?:s|es)?(?!\w)", identity)
+                   for term in terms)
+
+    # A cover or holder is not the mechanism it encloses or supports. The name
+    # alone also does not establish how a plate, receiver or fastener operates.
+    if has("holder", "cover", "guard", "window", "bracket", "receiver", "hardware",
+           "flange", "plate", "pan", "block", "retainer", "support", "bolt", "screw",
+           "nut", "washer", "door", "panel"):
+        return None
+    # These component nouns take precedence over assembly/context words:
+    # roller bearing, scraper spring, feeder paddle gear, and fill cam rail pin.
+    for component, terms in (
+        ("bearing", ("bearing", "bush", "bushing")),
+        ("seal", ("seal", "o-ring", "gasket")),
+        ("spring", ("spring",)),
+        ("drive", ("gear", "sprocket", "pulley", "belt")),
+        ("shaft", ("shaft", "spindle", "pin", "stud")),
+        ("cam", ("cam", "track")),
+    ):
+        if has(*terms):
+            return component
+    # An unspecified roller is not necessarily a tablet-compression roller.
+    if has("compression") or re.search(r"\b(?:main|pressure)\s+rollers?\b", identity):
+        return "compression"
+    if has("feeder", "feed frame", "paddle", "hopper", "chute"):
+        return "feed"
+    if has("take off", "take-off", "scraper", "eject", "discharge"):
+        return "discharge"
+    if has("handwheel", "hand wheel", "adjust", "knob"):
+        return "adjustment"
+    return None
+
+
 def application_guidance(part: Part) -> tuple[str, str, tuple[str, ...]]:
     """Return cautious, useful guidance supported by the cataloged component name."""
-    lower = part.name.lower()
+    component = guidance_component(part.name)
     rules = [
-        (("cam", "track"),
+        ("cam",
          "Cam and track components establish a guided motion path for the mechanisms that follow their working profile.",
          "Wear, profile geometry, mounting position, and the relationship to the mating follower can affect movement through the operating cycle.",
          ("Working profile and follower contact area", "Mounting-hole pattern and installed orientation", "Clearance through the complete operating path")),
-        (("roller", "compression"),
+        ("compression",
          "Compression-component geometry supports the controlled loading stage used during tablet formation.",
          "The roller diameter, bearing or journal interface, installed position, and alignment with the compression mechanism must agree with the machine configuration.",
          ("Roller diameter and working-face geometry", "Bearing, journal, or shaft interface", "Installed alignment and running clearance")),
-        (("bearing", "bush", "bushing"),
+        ("bearing",
          "Bearing and bushing components support a rotating or sliding interface while helping maintain alignment between mating parts.",
          "Bore, outside diameter, length, fit, lubrication conditions, and the supported shaft or housing are important identification points.",
          ("Bore, outside diameter, and overall length", "Shaft and housing fit", "Lubrication and operating environment")),
-        (("seal", "o-ring", "gasket"),
+        ("seal",
          "Sealing components help control material, lubricant, air, or contaminant movement at a defined equipment interface.",
          "Cross-section, sealing diameter, groove geometry, material compatibility, and the operating environment must be established before manufacture.",
          ("Seal cross-section and installed diameter", "Groove or mating-surface geometry", "Product, lubricant, and cleaning exposure")),
-        (("feeder", "feed frame", "paddle", "hopper", "chute"),
+        ("feed",
          "Feed-system components participate in presenting or directing material through the tablet press product path.",
          "Installed height, product-contact geometry, rotation or travel direction, clearances, and adjacent feed-system components determine the required configuration.",
          ("Product-contact geometry and clearances", "Rotation, travel direction, and installed height", "Interfaces with the hopper, feed frame, or discharge path")),
-        (("take off", "take-off", "scraper", "eject", "discharge"),
+        ("discharge",
          "Take-off and discharge components help guide formed tablets away from the compression area and into the discharge path.",
          "The working edge, installed angle, height, clearance, and relationship to the turret or discharge chute must match the application.",
          ("Working-edge profile and installed angle", "Height and clearance at the tablet path", "Mounting and discharge-chute interface")),
-        (("gear", "sprocket", "pulley", "belt"),
+        ("drive",
          "Drive components transfer or coordinate motion between connected tablet press mechanisms.",
          "Tooth or groove form, pitch, bore, keying, alignment, and the mating drive component are essential compatibility details.",
          ("Tooth, groove, or pitch geometry", "Bore, keyway, and shaft connection", "Alignment with the mating drive component")),
-        (("shaft", "spindle", "pin", "stud"),
+        ("shaft",
          "Shaft, spindle, and pin components locate, support, or transmit movement between connected mechanisms.",
          "Diameters, shoulders, lengths, threads, keyways, surface condition, and mating interfaces distinguish similar-looking configurations.",
          ("Critical diameters, shoulders, and lengths", "Threads, keyways, or retaining features", "Mating bearings, housings, and driven components")),
-        (("guard", "cover", "door", "panel"),
-         "Guard and cover components provide separation or controlled access around a defined machine area.",
-         "Envelope dimensions, hinge or fastener locations, interlock provisions, openings, and adjacent assemblies must match the installed equipment.",
-         ("Overall envelope and required openings", "Hinge, latch, and fastener locations", "Interlock and adjacent-assembly interfaces")),
-        (("spring",),
+        ("spring",
          "Spring components apply or return force within a defined mechanism and operating range.",
-         "Free length, coil geometry, end form, installed length, travel, and required force characteristics distinguish applications.",
-         ("Free and installed length", "Coil, wire, and end-form geometry", "Working travel and force requirement")),
-        (("handwheel", "hand wheel", "adjust", "knob"),
+         "Confirm the spring form, installed dimensions, attachment and orientation, and the specified load and travel requirements against the existing component or equipment documentation.",
+         ("Spring form and installed dimensions", "Attachment arrangement and installed orientation", "Specified load and working travel requirements")),
+        ("adjustment",
          "Adjustment components provide a manual interface for positioning or setting a tablet press mechanism.",
          "Connection geometry, direction of adjustment, available travel, scale or indicator relationship, and surrounding clearance must be confirmed.",
          ("Shaft, thread, or key connection", "Adjustment direction and usable travel", "Indicator relationship and surrounding clearance")),
     ]
-    for needles, function, context, checks in rules:
-        if any(needle in lower for needle in needles):
+    for kind, function, context, checks in rules:
+        if component == kind:
             return function, context, checks
     return (
         f"The {part.name} is a cataloged component within the {part.family.lower()} group for the referenced tablet press application.",

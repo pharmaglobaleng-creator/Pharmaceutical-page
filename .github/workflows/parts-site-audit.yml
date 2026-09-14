@@ -37,6 +37,7 @@ jobs:
             /assets/js/
             /assets/css/
             /_next/
+            /.github/scripts/add_cremer_no_photo_batch.py
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -70,6 +71,11 @@ jobs:
           print('All implemented structural, reference and navigation checks passed.')
           PY
           git diff --check
+      - name: Verify component identity and publishing regressions
+        run: |
+          python -m unittest discover -s scripts -p 'test_*guidance.py'
+          python -m unittest discover -s scripts -p 'test_part_identity_normalization.py'
+          python -m unittest discover -s scripts -p 'test_editorial_product_pages.py'
       - name: Preserve source snapshot and patch for independent review
         run: |
           python - <<'PY'

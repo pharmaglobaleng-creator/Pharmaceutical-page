@@ -547,9 +547,9 @@ c:Taa93,
 
 <p class="kicker">About PharmaGlobalEng</p>
 
-<h2 class="authority-title">
+<h1 class="authority-title">
 Worldwide Pharmaceutical Tablet Tooling Engineering Support
-</h2>
+</h1>
 
 <p class="authority-lead">
 PharmaGlobalEng provides pharmaceutical tablet tooling restoration,

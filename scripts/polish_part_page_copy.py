@@ -53,34 +53,27 @@ def verified_oem(text: str) -> str | None:
     return None
 
 
+def identity_description(heading: str, sku: str, oem: str | None = None) -> str:
+    """Shorten boilerplate before source identity, dimensions or equipment context."""
+    heading = heading or sku
+    label = "SKU" if " — " in heading and " for " not in heading else "replacement part"
+    reference = f" OEM cross-reference {oem}." if oem else ""
+    tails = [
+        f". PharmaGlobalEng {label} {sku}.{reference} Fit confirmed before quotation.",
+        f". PharmaGlobalEng {label} {sku}.{reference}",
+        f". Independent replacement part {sku}.{reference}",
+        f". {sku}.{reference}",
+    ]
+    for tail in tails:
+        if len(heading + tail) <= META_LIMIT:
+            return heading + tail
+    # Keep facts intact and let the metadata length check request editorial review.
+    # A character budget must not silently remove a dimension or part of a name.
+    return heading + tails[-1]
+
+
 def complete_description(text: str, sku: str) -> str:
-    heading = h1(text)
-    if " for " in heading:
-        part, equipment = heading.split(" for ", 1)
-        tail = f" for {equipment}. PharmaGlobalEng replacement part {sku}."
-    elif " — " in heading:
-        part, context = heading.split(" — ", 1)
-        tail = f" — {context}. PharmaGlobalEng SKU {sku}."
-    else:
-        part = heading or sku
-        tail = f". PharmaGlobalEng replacement part {sku}."
-
-    oem = verified_oem(text)
-    if oem:
-        tail += f" OEM cross-reference {oem}."
-    tail += " Fit confirmed before quotation."
-
-    budget = max(24, META_LIMIT - len(tail))
-    description = trim_words(part, budget) + tail
-    if len(description) > META_LIMIT:
-        # Keep identifiers and a complete sentence even for exceptionally long names.
-        short_tail = f". PharmaGlobalEng part {sku}."
-        if oem:
-            short_tail += f" OEM cross-reference {oem}."
-        short_tail += " Fit confirmed before quotation."
-        budget = max(18, META_LIMIT - len(short_tail))
-        description = trim_words(part, budget) + short_tail
-    return description
+    return identity_description(h1(text), sku, verified_oem(text))
 
 
 def set_description_meta(text: str, key: str, value: str, *, prop: bool = False) -> str:
@@ -142,23 +135,25 @@ def pages() -> list[Path]:
     return sorted(p for p in PARTS.glob("pge-*/index.html") if p.is_file())
 
 
+def polish_page(original: str, sku: str) -> str:
+    if re.search(r'<html\b[^>]*\bdata-pge-content=["\']editorial["\']', original, re.I):
+        return original
+    description = complete_description(original, sku)
+    updated = clean_residual_placeholders(original)
+    updated = set_description_meta(updated, "description", description)
+    updated = set_description_meta(updated, "og:description", description, prop=True)
+    updated = set_description_meta(updated, "twitter:description", description)
+    updated = set_lead(updated, description)
+    return set_product_description(updated, description)
+
+
 def main() -> int:
     changed = 0
     paths = pages()
     for path in paths:
         original = path.read_text(encoding="utf-8")
-        # Keep reviewed landing-page copy; the validation loop below still
-        # checks its metadata and placeholder language.
-        if re.search(r'<html\b[^>]*\bdata-pge-content=["\']editorial["\']', original, re.I):
-            continue
         sku = path.parent.name.upper()
-        description = complete_description(original, sku)
-        updated = clean_residual_placeholders(original)
-        updated = set_description_meta(updated, "description", description)
-        updated = set_description_meta(updated, "og:description", description, prop=True)
-        updated = set_description_meta(updated, "twitter:description", description)
-        updated = set_lead(updated, description)
-        updated = set_product_description(updated, description)
+        updated = polish_page(original, sku)
         if updated != original:
             path.write_text(updated, encoding="utf-8")
             changed += 1
