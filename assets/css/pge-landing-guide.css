@@ -1,0 +1,36 @@
+
+.pge-guide{font-size:18px;line-height:1.75;overflow-wrap:break-word}
+.pge-guide .hero{padding:64px 0 50px}.pge-guide .hero .wrap{max-width:1060px}
+.pge-guide h1{font-size:clamp(34px,5.2vw,62px);line-height:1.12;letter-spacing:-.035em}
+.pge-guide h2{font-size:clamp(25px,3.3vw,36px);line-height:1.25;letter-spacing:-.02em;margin:0 0 18px}
+.pge-guide h3{font-size:22px;line-height:1.35;margin:26px 0 10px}
+.pge-guide .guide-shell{max-width:980px;margin:auto;padding:0 22px 64px}
+.pge-guide article>section,.pge-guide .guide-related,.pge-guide .guide-references{margin:46px 0 0;padding-top:32px;border-top:1px solid var(--line)}
+.pge-guide p,.pge-guide li{color:var(--muted)}.pge-guide strong{color:var(--text)}
+.pge-guide p{margin:0 0 18px}.pge-guide li+li{margin-top:10px}
+.pge-guide .lead{margin:24px 0 0}.pge-guide .guide-meta{font-size:14px;margin:22px 0 0}
+.pge-guide .guide-shell a{color:var(--cyan);text-underline-offset:3px}
+.pge-guide .guide-toc{display:flex;flex-wrap:wrap;gap:10px 22px;margin:28px 0 0;font-size:15px}
+.pge-guide .guide-toc a{color:var(--cyan)}
+.pge-guide .guide-callout{padding:24px;border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:0 12px 12px 0;background:var(--bg-alt)}
+.pge-guide .guide-callout p:last-child{margin-bottom:0}
+.pge-guide .table-wrap{margin:25px 0;overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.pge-guide table{min-width:580px;font-size:16px;line-height:1.6}.pge-guide th{font-size:15px;text-transform:none;letter-spacing:normal}
+.pge-guide caption{padding:14px;text-align:left;color:var(--muted);font-size:15px}
+.pge-guide .guide-related a{display:inline-block;margin:0 18px 12px 0}
+.pge-guide .guide-references{font-size:14px}.pge-guide .guide-references h2{font-size:22px}
+.pge-guide .guide-references li{overflow-wrap:anywhere}.pge-guide .ref{font-size:12px;vertical-align:super;white-space:nowrap}
+.pge-guide .guide-faq details{margin:14px 0}.pge-guide .guide-faq details p{margin:14px 0 0}
+.pge-guide section[id],.pge-guide h2[id],.pge-guide .legacy-anchor{scroll-margin-top:130px}
+.pge-guide .guide-cta{padding:28px;background:var(--bg-alt);border:1px solid var(--line);border-radius:14px}
+.pge-guide .guide-cta .actions a{color:white}.pge-guide .guide-cta h2{margin-top:0}
+.pge-guide .microfinish-photo,.pge-guide .polishing-photo{margin:30px 0}.pge-guide figure img{max-width:100%;height:auto}
+.pge-guide figure figcaption{font-size:14px;line-height:1.6}
+.pge-skip{position:fixed;top:-100px;left:16px;background:white;color:#172437;padding:12px;z-index:100}.pge-skip:focus{top:10px}
+.pge-guide a:focus-visible,.pge-guide summary:focus-visible,.pge-guide [tabindex]:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+@media(max-width:650px){.pge-guide{font-size:17px}.pge-guide .hero{padding:38px 0}.pge-guide .guide-shell{padding:0 18px 40px}.pge-guide article>section{margin-top:32px;padding-top:26px}.pge-guide .guide-callout,.pge-guide .guide-cta{padding:20px}.pge-guide .guide-toc{gap:12px 18px}.pge-guide .actions .btn{max-width:100%;white-space:normal;text-align:center}.pge-guide .guide-meta{font-size:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.pge-landing-page .guide-service-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}.pge-landing-page .guide-service-options .card{padding:20px}.pge-landing-page .guide-service-options h3{margin:0 0 10px;font-size:20px}.pge-landing-page .guide-service-options p{font-size:16px;line-height:1.65;margin:0}.pge-landing-page .guide-toc{padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--bg-alt)}.pge-landing-page .guide-related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.pge-landing-page .guide-related h2{grid-column:1/-1}.pge-landing-page .guide-related a{margin:0;padding:16px;border:1px solid var(--line);border-radius:12px}.pge-landing-page .guide-shell article>section:nth-child(even){padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--bg-alt)}.pge-landing-page .guide-shell article>section p:last-child{margin-bottom:0}@media(max-width:720px){.pge-landing-page .guide-service-options,.pge-landing-page .guide-related{grid-template-columns:1fr}.pge-landing-page .guide-shell article>section:nth-child(even){padding:20px}}
+
+.pge-landing-page .guide-faq,.pge-landing-page .guide-cta{margin-top:46px}
