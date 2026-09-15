@@ -1,0 +1,16 @@
+/* Shared answer cards use the existing site palette and remain readable without JavaScript. */
+.pge-answers{padding:72px 0;background:var(--bg-alt,#080d1d);scroll-margin-top:100px}
+.pge-answers>.wrap{width:min(1120px,calc(100% - 34px));margin-inline:auto}
+.pge-answers h2{max-width:900px;font-size:clamp(28px,4vw,44px);line-height:1.15;letter-spacing:-.025em}
+.pge-answers-intro{max-width:780px;color:var(--muted,#c4c8d8);font-size:17px;line-height:1.7}
+.pge-answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px;align-items:start}
+.pge-answer-card{min-width:0;padding:24px;border:1px solid var(--line,rgba(255,255,255,.13));border-radius:16px;background:var(--bg,#030611);scroll-margin-top:110px}
+.pge-answer-number{display:block;margin-bottom:12px;color:var(--cyan,#22d3ee);font-size:12px;font-weight:800;letter-spacing:.08em}
+.pge-answer-card h3{margin:0 0 12px;font-size:20px;line-height:1.35;letter-spacing:0;overflow-wrap:anywhere;color:var(--text,#f7fbff)}
+.pge-answer-card p{margin:0;color:var(--muted,#c4c8d8);font-size:16px;line-height:1.75;overflow-wrap:anywhere}
+.pge-answer-jump{display:inline-block;margin-top:14px;color:var(--cyan,#22d3ee);font-weight:700;text-underline-offset:4px}
+.pge-answer-jump:focus-visible{outline:2px solid currentColor;outline-offset:5px;border-radius:3px}
+.hub-navigation{display:flex;flex-wrap:wrap;gap:12px 20px;margin-block:24px}
+.hub-navigation a{text-underline-offset:4px}
+@media(max-width:680px){.pge-answer-grid{grid-template-columns:1fr}.pge-answer-card{padding:20px;scroll-margin-top:185px}.pge-answers{padding:52px 0;scroll-margin-top:185px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
