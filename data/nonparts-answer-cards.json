@@ -1,0 +1,2756 @@
+{
+  "about/index.html": [
+    {
+      "question": "When do PharmaGlobalEng’s roots begin?",
+      "answer": "The company’s published history traces its roots to a family business founded in 1974."
+    },
+    {
+      "question": "Where is the company’s stated facility?",
+      "answer": "The About page identifies 2300 South Clinton Ave., South Plainfield, New Jersey 07080 as the company’s facility."
+    },
+    {
+      "question": "How many generations are described in the company history?",
+      "answer": "The published company story describes three generations of family involvement."
+    },
+    {
+      "question": "What manufacturing problem shaped the company’s early work?",
+      "answer": "The company history centers on tablets sticking to and picking from compression tooling."
+    },
+    {
+      "question": "What is the company’s stated engineering approach?",
+      "answer": "Identify the observed mechanism and relevant tooling condition before selecting a surface treatment, restoration, replacement, or further investigation."
+    },
+    {
+      "question": "What kinds of information are available on this website?",
+      "answer": "The site brings together service descriptions, tablet-manufacturing problem guides, and a replacement-component catalog."
+    },
+    {
+      "question": "How does a service page differ from a solution page?",
+      "answer": "A service page explains a type of review or work. A solution page helps classify a manufacturing symptom and organize evidence."
+    },
+    {
+      "question": "What is the purpose of a catalog page?",
+      "answer": "A catalog page presents available identity and reference information for a listed component and supports a focused quotation enquiry."
+    },
+    {
+      "question": "Are catalog identifiers automatically OEM numbers?",
+      "answer": "No. A PharmaGlobalEng catalog identifier and an OEM reference are different fields and should remain distinguishable."
+    },
+    {
+      "question": "What does a representative product image establish?",
+      "answer": "It illustrates the listed item’s appearance or role. It does not replace confirmed dimensions, compatibility information, or the agreed specification."
+    },
+    {
+      "question": "What should accompany a replacement-part enquiry?",
+      "answer": "Provide the machine model, component reference, assembly location, quantity, and available photographs or drawings."
+    },
+    {
+      "question": "What should accompany a tooling-service enquiry?",
+      "answer": "Identify the tool or set, describe the concern and decision needed, and include relevant photographs, specifications, and service history."
+    },
+    {
+      "question": "Does an enquiry need to specify a treatment first?",
+      "answer": "No. It can begin with the observed problem and the decision needed, leaving the appropriate service route open for assessment."
+    },
+    {
+      "question": "Why does the company discuss both surfaces and geometry?",
+      "answer": "Tooling decisions involve function and condition as well as finish. Improving appearance alone does not establish dimensional suitability."
+    },
+    {
+      "question": "Is every sticking problem addressed with the same coating?",
+      "answer": "No. The company’s stated approach considers the application and evidence before selecting a treatment."
+    },
+    {
+      "question": "Does every worn tool automatically need replacement?",
+      "answer": "Not necessarily. The appropriate route depends on the damage, applicable requirements, remaining geometry, and evidence supporting suitability."
+    },
+    {
+      "question": "What does restoration assessment need to establish?",
+      "answer": "It needs to determine whether the observed condition is recoverable while preserving the tool’s required integrity and functional features."
+    },
+    {
+      "question": "Which page helps organize component identification?",
+      "answer": "The Components reference explains how to prepare machine, assembly, marking, drawing, and condition information."
+    },
+    {
+      "question": "Which page helps choose between inspection and failure analysis?",
+      "answer": "The Services guide distinguishes inspection of condition from investigation of why a failure occurred."
+    },
+    {
+      "question": "Where are the site’s editorial principles explained?",
+      "answer": "The Editorial Standards page describes how technical information and catalog references are presented."
+    },
+    {
+      "question": "What should happen when a coating identity or drawing is missing?",
+      "answer": "Record the gap as unknown and identify what needs confirmation instead of assigning an assumed specification."
+    },
+    {
+      "question": "Why involve production in a tooling enquiry?",
+      "answer": "Production observations can supply the timing, sequence, and operating context that component photographs alone do not show."
+    },
+    {
+      "question": "Why involve purchasing and quality in the same discussion?",
+      "answer": "Purchasing needs a defined supply scope; quality needs the applicable acceptance basis and records. Both should remain connected to the technical question."
+    },
+    {
+      "question": "Should tools be shipped before arrangements are confirmed?",
+      "answer": "Confirm the scope, identification, packaging, and shipping arrangements before sending components."
+    },
+    {
+      "question": "Does a technical guide replace the manufacturer’s approval procedures?",
+      "answer": "No. The actual specifications, equipment configuration, product requirements, and responsible manufacturer’s procedures govern the final decision."
+    }
+  ],
+  "services/index.html": [
+    {
+      "question": "How should a tooling-service request begin?",
+      "answer": "State the decision needed: establishing condition, investigating failure, assessing restoration, evaluating a surface, or planning future maintenance."
+    },
+    {
+      "question": "What does tooling inspection establish?",
+      "answer": "Inspection records observable condition and relevant measurements against a defined specification or acceptance basis."
+    },
+    {
+      "question": "How is evaluation different from inspection?",
+      "answer": "Evaluation connects condition and application evidence to possible next steps, including further inspection, maintenance, restoration, or replacement."
+    },
+    {
+      "question": "What question does failure analysis address?",
+      "answer": "It investigates why a failure occurred and which evidence distinguishes plausible causes."
+    },
+    {
+      "question": "When is restoration the relevant service route?",
+      "answer": "When the question is whether a defined condition can be recovered while preserving required geometry and integrity."
+    },
+    {
+      "question": "Can polishing repair a structural crack?",
+      "answer": "No. A suspected structural defect requires an integrity decision and appropriate investigation, not cosmetic polishing."
+    },
+    {
+      "question": "Why are before-and-after measurements useful for restoration?",
+      "answer": "They help establish whether the relevant dimensions and features remain acceptable after the specified work."
+    },
+    {
+      "question": "What does punch-and-die maintenance cover?",
+      "answer": "It addresses care of an identified set through cleaning, assessment, handling, protection, storage, and the next service decision."
+    },
+    {
+      "question": "What makes die maintenance a distinct topic?",
+      "answer": "The die bore, entry, seating, and interaction during tablet release require their own observations and assessment."
+    },
+    {
+      "question": "When should a coating review begin?",
+      "answer": "Begin when application evidence supports investigating a surface treatment, with the substrate, existing surface, formulation contact, and cleaning history identified."
+    },
+    {
+      "question": "Can coating identity be determined reliably from color?",
+      "answer": "Color alone does not establish the coating specification. Unknown coating identity should remain an explicit information gap."
+    },
+    {
+      "question": "When is press troubleshooting appropriate?",
+      "answer": "When the symptom may involve feeding, compression, ejection, equipment condition, or interaction between press and tooling."
+    },
+    {
+      "question": "What is preventive maintenance intended to do?",
+      "answer": "Use condition and service history to plan relevant checks before a known issue recurs."
+    },
+    {
+      "question": "How does lifecycle management use maintenance records?",
+      "answer": "It connects component identity, condition, work performed, and performance observations across successive campaigns."
+    },
+    {
+      "question": "Why preserve station identity?",
+      "answer": "It allows a recurring local problem to be compared with the corresponding tools, mating components, and operating history."
+    },
+    {
+      "question": "What belongs in an initial service evidence package?",
+      "answer": "Include identifiers, the applicable specification, overview and detail photographs, service history, and a clear description of the concern."
+    },
+    {
+      "question": "Why distinguish setpoints from measured values?",
+      "answer": "A commanded setting and an observed machine response are different evidence and should not be treated as interchangeable."
+    },
+    {
+      "question": "Does examining a sample establish the condition of an entire set?",
+      "answer": "Not automatically. The report should state what was examined and any limits on applying its findings to unexamined tools."
+    },
+    {
+      "question": "What should a service quotation define?",
+      "answer": "The items involved, technical question, requested operations, required deliverables, exclusions, and practical constraints."
+    },
+    {
+      "question": "How is an operation different from a deliverable?",
+      "answer": "Polishing is an operation; a dimensional record or investigation report is a deliverable. The request should specify both when needed."
+    },
+    {
+      "question": "What should remain undisturbed before failure analysis?",
+      "answer": "Preserve relevant damage and fracture evidence, along with component identity and associated records, until the investigation scope is agreed."
+    },
+    {
+      "question": "What makes a completed work record useful?",
+      "answer": "It connects each item with observations, methods, work performed, applicable criteria, unresolved questions, and disposition."
+    },
+    {
+      "question": "Who decides whether tooling returns to production?",
+      "answer": "The responsible manufacturer’s team makes that decision under its own specifications and approval procedures."
+    },
+    {
+      "question": "Does receiving a replacement prove recurrence has been prevented?",
+      "answer": "No. Supply of a replacement and resolution of the original failure mechanism are connected but separate questions."
+    },
+    {
+      "question": "What should follow-up after service measure?",
+      "answer": "Return to the original concern and compare relevant observations under documented conditions, retaining both improvements and recurrence."
+    }
+  ],
+  "components/index.html": [
+    {
+      "question": "What is the first step in identifying a component?",
+      "answer": "Record the machine identity, assembly location, existing marking, and available manual or drawing reference."
+    },
+    {
+      "question": "Does a similar appearance prove compatibility?",
+      "answer": "No. Dimensions, orientation, material, revision, and mating features can differ between similar-looking components."
+    },
+    {
+      "question": "Why photograph the installed assembly?",
+      "answer": "It preserves the part’s position and relationship to adjacent components before removal changes that context."
+    },
+    {
+      "question": "Which information should accompany a close-up of damage?",
+      "answer": "Include an overview, component identity, damage location, and the relevant machine or assembly reference."
+    },
+    {
+      "question": "What do tablet punches do?",
+      "answer": "Punches form the tablet faces and transmit compression load through the tooling system."
+    },
+    {
+      "question": "Which punch features may need identification?",
+      "answer": "The tip, cup, engraving or score detail, barrel, head, and any orientation or locating features relevant to the design."
+    },
+    {
+      "question": "Why keep upper and lower punches distinguishable?",
+      "answer": "Their roles, identities, and service histories need to remain traceable during inspection, maintenance, and setup."
+    },
+    {
+      "question": "Does tablet shape define the full punch specification?",
+      "answer": "No. Shape is only part of the required tooling information; the complete drawing and machine application still matter."
+    },
+    {
+      "question": "Where should a suspected punch crack be routed?",
+      "answer": "Keep the tool identified and follow the site’s isolation and investigation process. Polishing is not a structural repair."
+    },
+    {
+      "question": "What does the tablet die provide?",
+      "answer": "It provides the cavity used for filling and compression and the passage through which the tablet is ejected."
+    },
+    {
+      "question": "Why can one bore measurement be insufficient?",
+      "answer": "A single unexplained diameter does not show where it was taken or describe variation through a worn bore."
+    },
+    {
+      "question": "Which tablet observations can help a die review?",
+      "answer": "Sidewall marks, difficult release, station patterns, and documented ejection behavior can help focus the investigation."
+    },
+    {
+      "question": "What information identifies a feed-frame component?",
+      "answer": "The machine and feeder assembly identity, exact component location, manual reference, orientation, and relevant photographs."
+    },
+    {
+      "question": "Does feeder wear alone prove the cause of weight variation?",
+      "answer": "No. The condition needs to be reviewed alongside sampling, material supply, settings, and the timing of the reported change."
+    },
+    {
+      "question": "What additional identity matters for capsule-machine enquiries?",
+      "answer": "Include the capsule format or size associated with the assembly, alongside the machine, component, and drawing information."
+    },
+    {
+      "question": "What is the difference between condition and compatibility?",
+      "answer": "Condition concerns whether an existing item meets requirements; compatibility concerns whether a proposed item is correct for the application."
+    },
+    {
+      "question": "What makes a dimension interpretable?",
+      "answer": "Name the feature, unit, method, and reference surfaces, ideally using an annotated drawing or photograph."
+    },
+    {
+      "question": "Is a dimension estimated from a photograph a measured specification?",
+      "answer": "No. Label image-based estimates as approximate and identify what requires confirmation before purchase, manufacture, or installation."
+    },
+    {
+      "question": "What should happen when a drawing and fitted part disagree?",
+      "answer": "Preserve both records and resolve the governing specification, revision, and possible service history before selecting a replacement."
+    },
+    {
+      "question": "Why distinguish a catalog identifier from an OEM reference?",
+      "answer": "They serve different identification roles. Treating them as identical can create a false cross-reference."
+    },
+    {
+      "question": "Why retain different numbers found on the part and manual?",
+      "answer": "Their discrepancy may reveal a revision, assembly, or transcription issue that needs resolution."
+    },
+    {
+      "question": "What should be recorded for a partially replaced assembly?",
+      "answer": "Identify the retained and replaced members and any relevant handedness, locating features, mounting positions, or revisions."
+    },
+    {
+      "question": "What should receiving checks compare?",
+      "answer": "Compare the delivered identity, quantity, relevant revision, and agreed records against the confirmed request and specification."
+    },
+    {
+      "question": "Does this guide supply universal installation settings?",
+      "answer": "No. Clearances, adjustments, and installation requirements depend on the machine instructions and authorized site procedure."
+    },
+    {
+      "question": "What should be retained if the same damage returns after replacement?",
+      "answer": "Keep the new identity and observations with the original failure record to support investigation of the assembly or operating conditions."
+    }
+  ],
+  "solutions/index.html": [
+    {
+      "question": "What should a tablet-defect investigation identify first?",
+      "answer": "Record what is observed and where and when it first appears, before assigning a cause."
+    },
+    {
+      "question": "How does sticking differ from picking?",
+      "answer": "Sticking involves broader adhesion to the punch face; picking is localized around features such as lettering or a logo."
+    },
+    {
+      "question": "What distinguishes tablet binding from punch-face sticking?",
+      "answer": "Binding concerns die-wall resistance and release during ejection; punch-face sticking concerns material retained on the tablet-forming face."
+    },
+    {
+      "question": "How does capping differ from lamination?",
+      "answer": "Capping involves separation of a crown, while lamination involves splitting within the tablet body into layers."
+    },
+    {
+      "question": "What is tablet chipping?",
+      "answer": "Chipping is localized loss of edge material and should be recorded separately from crown separation or internal layering."
+    },
+    {
+      "question": "Why record the first confirmed point of damage?",
+      "answer": "It helps distinguish a defect already present at ejection from damage introduced during transfer or a later operation."
+    },
+    {
+      "question": "What is the first route when the defect is unclear?",
+      "answer": "Use the broad compression-defects guide to classify observations and identify the next evidence needed."
+    },
+    {
+      "question": "Why keep acceptable comparison tablets?",
+      "answer": "They provide a reference from a known sampling period for judging the affected condition."
+    },
+    {
+      "question": "What should accompany a defect count?",
+      "answer": "Record the number examined, number affected, category, collection point, and sampling period."
+    },
+    {
+      "question": "Should different defects be combined into one reject figure?",
+      "answer": "Keep separate categories when mechanisms may differ; one combined number can conceal a change from one defect to another."
+    },
+    {
+      "question": "What does a weight-variation investigation examine?",
+      "answer": "It examines variation in measured tablet mass, using sampling, filling and control records while considering any observed material loss or damage."
+    },
+    {
+      "question": "What does a hardness investigation need besides a strength result?",
+      "answer": "It needs the method, sample context, mass, dimensions, and other applicable product requirements."
+    },
+    {
+      "question": "Are dwell time and compression force interchangeable?",
+      "answer": "No. They describe different aspects of compression and must be defined separately in a trial."
+    },
+    {
+      "question": "Why can a speed comparison be difficult to interpret?",
+      "answer": "A speed change can affect more than compression timing, so other changing conditions must be recorded."
+    },
+    {
+      "question": "How should wear and corrosion be distinguished in a tooling enquiry?",
+      "answer": "Describe the actual location and condition before labeling the mechanism; loss of a feature and suspected chemical attack require different evidence."
+    },
+    {
+      "question": "Does a shiny tool prove damage has been resolved?",
+      "answer": "No. Appearance does not establish dimensional conformity or structural integrity."
+    },
+    {
+      "question": "What makes a useful unaffected comparison?",
+      "answer": "It is as similar as practical to the affected condition, with remaining differences explicitly recorded."
+    },
+    {
+      "question": "Why preserve station information when available?",
+      "answer": "It connects recurring observations with specific tools and associated press features."
+    },
+    {
+      "question": "Can station identity be guessed from an untraceable sample?",
+      "answer": "No. If the sampling method does not preserve station identity, record that limitation instead of reconstructing it by assumption."
+    },
+    {
+      "question": "What should a trial question specify?",
+      "answer": "State the proposed cause, the comparison being made, the measured response, and the evidence that would support or weaken the explanation."
+    },
+    {
+      "question": "What happens when several factors change together?",
+      "answer": "The result evaluates the combined change and cannot by itself establish which single factor caused the outcome."
+    },
+    {
+      "question": "Why retain unsuccessful trial records?",
+      "answer": "They show what was tested, under which conditions, and help avoid repeating an unsupported approach."
+    },
+    {
+      "question": "When should investigation extend beyond the tooling?",
+      "answer": "When the evidence points to product behavior, instrumentation, machine condition, or another question that submitted tooling cannot establish."
+    },
+    {
+      "question": "Does a preliminary tooling review approve an entire process?",
+      "answer": "No. Its scope and evidence limits must remain distinct from the manufacturer’s production-approval requirements."
+    },
+    {
+      "question": "What should a support request ask for?",
+      "answer": "Describe the symptom, provide relevant evidence, and state the decision or missing comparison that the review needs to address."
+    }
+  ],
+  "services/die-maintenance.html": [
+    {
+      "question": "What should identify a tablet die before maintenance?",
+      "answer": "Record the die identifier, tooling set, drawing revision, press assignment, material, and coating information. Preserve installation orientation and station history where those details are known."
+    },
+    {
+      "question": "Why does die orientation belong in the inspection record?",
+      "answer": "Orientation connects a finding with its installed position. Without it, a later reviewer may be unable to compare the damaged region with the original production concern."
+    },
+    {
+      "question": "Is a clear bore entrance enough to assess a die?",
+      "answer": "No. A bore entrance may look sound while another region has deposits or wear. The inspection scope should include locations relevant to the compression area and concern."
+    },
+    {
+      "question": "Can a dark band inside a die prove wear?",
+      "answer": "No. The band may involve retained material or a surface change. Record its location, compare after approved cleaning, and obtain relevant measurements before classifying the condition."
+    },
+    {
+      "question": "What should a bore measurement include?",
+      "answer": "Keep the tool identity, measured location, orientation, units, method, instrument, and acceptance basis with the reading. A value without its location is difficult to compare later."
+    },
+    {
+      "question": "Should every bore be judged against one universal tolerance?",
+      "answer": "No. The applicable tooling drawing and acceptance requirements control the comparison. A general online tolerance cannot establish suitability for every die design or application."
+    },
+    {
+      "question": "Why inspect the compression region of a die bore?",
+      "answer": "Wear can be localized where powder is compressed. Examining only the easily reached entrance can leave the region associated with the reported problem unassessed."
+    },
+    {
+      "question": "Does a tablet defect prove that the die caused it?",
+      "answer": "No. The defect identifies a concern, but tooling, installation, and process evidence are needed to evaluate cause. Compare the die finding with corresponding punches and production observations."
+    },
+    {
+      "question": "Can polishing make an oversized bore smaller?",
+      "answer": "No. Polishing removes material and cannot restore an oversized bore to a smaller diameter. Dimensional suitability must be assessed separately from an improved surface appearance."
+    },
+    {
+      "question": "How does cleaning differ from die rework?",
+      "answer": "Cleaning removes retained material. Rework may change the tooling surface or remove metal, so it needs a defined scope and appropriate before-and-after checks."
+    },
+    {
+      "question": "What should happen when a die coating is unidentified?",
+      "answer": "Keep coating identity as an open technical question. Confirm the available records and appropriate treatment instructions before selecting cleaning, polishing, or another operation that could affect it."
+    },
+    {
+      "question": "Why examine a die's seating surfaces?",
+      "answer": "The die assessment also concerns surfaces that locate it in the press. Record visible damage or contamination there and determine whether an installation review is needed."
+    },
+    {
+      "question": "What does a difference between two bore readings mean?",
+      "answer": "It depends on the locations and intended geometry. A designed taper or relief may explain a difference, so compare the readings with the applicable drawing before diagnosing wear."
+    },
+    {
+      "question": "Can an acceptable entrance measurement establish the whole bore's condition?",
+      "answer": "No. It describes the measured location. The report should identify other assessed regions and any locations that remain outside the selected inspection method or scope."
+    },
+    {
+      "question": "What if the available probe cannot assess a shaped bore?",
+      "answer": "Report the limitation and determine whether another method is needed. Do not convert an inaccessible feature or a visual impression into an unsupported dimensional acceptance."
+    },
+    {
+      "question": "Why retain images before and after cleaning?",
+      "answer": "The comparison can help distinguish retained material from a remaining surface feature. It also preserves the original observation when cleaning changes what is visible."
+    },
+    {
+      "question": "What should a die disposition distinguish?",
+      "answer": "Separate acceptable condition against supplied criteria, cleaning needed, additional measurement, a defined rework candidate, and unsuitable condition. Keep unresolved exceptions visible until an authorized decision is recorded."
+    },
+    {
+      "question": "Can a die be reversed to avoid a worn area?",
+      "answer": "Do not assume reversal is permitted. Confirm bore geometry, taper, orientation, and installation requirements against the tooling and press specifications before changing the installed arrangement."
+    },
+    {
+      "question": "What can current measurements establish without an original baseline?",
+      "answer": "They can describe present dimensions and support comparison with an applicable specification. They cannot establish how much the die changed since new or a historical wear rate."
+    },
+    {
+      "question": "Does matching damage on several dies prove a shared cause?",
+      "answer": "No. A repeated pattern helps select the investigation, but shared product, cleaning, storage, or operating exposures still require supporting records before a cause is assigned."
+    },
+    {
+      "question": "What should a die refurbishment quotation define?",
+      "answer": "Identify the tools, surfaces, incoming condition, inspection scope, proposed work, and acceptance basis. Clarify what happens if inspection finds a condition that makes treatment inappropriate."
+    },
+    {
+      "question": "What should the outgoing maintenance record contain?",
+      "answer": "Connect incoming condition, work performed, final observations or measurements, unresolved limitations, and disposition. Identify the quantity assessed and any tools excluded from the completed work."
+    },
+    {
+      "question": "How should accepted dies be packed after maintenance?",
+      "answer": "Use the site's approved protection and packaging to preserve condition and prevent contact between tools. Keep identifiers and status visible so held items cannot enter accepted stock."
+    },
+    {
+      "question": "What follow-up helps evaluate a die maintenance action?",
+      "answer": "Record the next installed station, run context, and recurrence of the original tablet or ejection concern. Use terms comparable with the observations that prompted maintenance."
+    },
+    {
+      "question": "What should accompany a die maintenance request?",
+      "answer": "Provide identified photographs, the applicable specification, known material and coating, measurements, orientation or station information, and a short history of the observed concern."
+    }
+  ],
+  "services/punch-die-maintenance.html": [
+    {
+      "question": "What is the scope of punch and die maintenance?",
+      "answer": "It covers an identified tooling set through removal, cleaning, inspection, defined surface work, storage, and preparation for reuse. Each stage needs its own condition and completion evidence."
+    },
+    {
+      "question": "Why preserve upper and lower punch identities separately?",
+      "answer": "They are distinct members of the installed configuration and may have different findings or histories. Keeping identities separate supports matching information, maintenance decisions, and later investigations."
+    },
+    {
+      "question": "Should a tray position be the only tooling identifier?",
+      "answer": "No. Tray positions can change during work. Preserve tool and set identifiers so measurements, photographs, and service history remain connected to the correct physical component."
+    },
+    {
+      "question": "Why count tooling at removal and transfer?",
+      "answer": "Quantity checks help reconcile what was received, moved, held, or retired. An unexplained difference can prevent a reliable handoff even when the visible tools appear acceptable."
+    },
+    {
+      "question": "What should happen to suspect tools before routine maintenance?",
+      "answer": "Separate and identify them for review. This prevents polishing, mixing, or return to stock from changing the evidence or obscuring an unresolved condition concern."
+    },
+    {
+      "question": "Does a completed cleaning cycle mean a tool is acceptable?",
+      "answer": "No. Cleaning completion establishes a maintenance stage, not every condition requirement. A clean tool may still need dimensional checks, damage assessment, or an authorized disposition."
+    },
+    {
+      "question": "Why examine engraving after cleaning?",
+      "answer": "Retained material can remain in detailed areas and affect observations. Record unresolved residue rather than treating a reading through it as a confirmed measurement of tooling geometry."
+    },
+    {
+      "question": "Must every tool be polished after each campaign?",
+      "answer": "Not automatically. The decision should follow condition, the tooling and coating instructions, and the approved procedure. Unnecessary polishing can remove material without addressing a demonstrated concern."
+    },
+    {
+      "question": "Can coated and uncoated punches use the same polishing procedure?",
+      "answer": "Do not assume so. Identify the coating and tooling instructions before selecting the operation, even when the punches belong to the same production set."
+    },
+    {
+      "question": "What features require attention during punch surface work?",
+      "answer": "Protect the required cup geometry, land, engraving, score details, and functional dimensions. The agreed verification should assess relevant features rather than only the finished surface's shine."
+    },
+    {
+      "question": "When should failure analysis come before repair?",
+      "answer": "When determining the cause of damage is necessary, preserve the tool for the planned investigation before cleaning or repair changes evidence that may matter."
+    },
+    {
+      "question": "What should a maintenance traveler follow?",
+      "answer": "It should follow physical tools through each work stage, identifying completed operations, held items, exclusions, and current location. The next reviewer should not need an undocumented verbal handoff."
+    },
+    {
+      "question": "How should a partial maintenance job be recorded?",
+      "answer": "Record completed work for the tools actually covered and keep remaining actions open. One unresolved item should not disappear under a general set-complete status."
+    },
+    {
+      "question": "Can five inspected punches establish the condition of a full set?",
+      "answer": "No. A limited inspection describes the tools examined. Record the sampling scope and decide whether the findings justify broader assessment before making a set-wide conclusion."
+    },
+    {
+      "question": "What should happen when a punch is replaced during production?",
+      "answer": "Retain the original component's removal and disposition history. Give the replacement its own identity and acceptance record, and update the installed configuration and matching information as required."
+    },
+    {
+      "question": "Can new and used components be combined just because they fit the tray?",
+      "answer": "No. Compare the applicable specification and matching requirements for the intended installation. Quantity, appearance, and tray position do not establish an acceptable tooling configuration."
+    },
+    {
+      "question": "What if the original matching report no longer lists the installed tools?",
+      "answer": "Obtain the appropriate updated assessment or information. Continuing to reference an outdated component list can hide substitutions and weaken the basis of the setup review."
+    },
+    {
+      "question": "What distinguishes a routine recurring task from an unresolved problem?",
+      "answer": "A routine task controls a defined condition under an approved procedure. Recurring unexplained damage requires investigation into why the same finding returns despite repeated maintenance."
+    },
+    {
+      "question": "Why compare the location of recurring damage?",
+      "answer": "Location helps distinguish repeated behavior from unrelated findings. Compare identified regions, affected tools, dates, and exposures before assuming every maintenance event represents the same problem."
+    },
+    {
+      "question": "How should tooling status be shown in storage?",
+      "answer": "Keep accepted, held, awaiting assessment, and retired tooling distinguishable. Physical labels, inventory records, and supporting dispositions should agree before a set is retrieved for production."
+    },
+    {
+      "question": "What should be recorded after a handling incident?",
+      "answer": "Identify affected tooling, the event, observed condition, and required review. Preserve the information even if no damage is immediately visible or the next inspection is later."
+    },
+    {
+      "question": "Does a bright punch face replace dimensional inspection?",
+      "answer": "No. Appearance does not answer a specified dimensional question. Record the required measurement independently and assess visible damage concerns elsewhere on the tool separately."
+    },
+    {
+      "question": "What should close a maintenance cycle?",
+      "answer": "Reconcile quantities and identities, record completed work and findings, and identify unresolved items and their owners. The manufacturing organization then makes its required return-to-production decision."
+    },
+    {
+      "question": "How can the next campaign improve maintenance planning?",
+      "answer": "Link follow-up observations with the condition that prompted maintenance. Comparable records of recurrence or stability help the next review determine which checks remain useful."
+    },
+    {
+      "question": "What should a maintenance request include for a mixed-history set?",
+      "answer": "Identify original tools, replacements, prior restoration or coating groups, available specifications, and observed concerns. Explain which tools are submitted and which members remain outside the proposed work."
+    }
+  ],
+  "services/tablet-press-troubleshooting.html": [
+    {
+      "question": "What makes a tablet press problem statement useful?",
+      "answer": "Identify the observed defect, detection method, timing, affected run segment, and last acceptable result. Include relevant changes between acceptable production and the first observed problem."
+    },
+    {
+      "question": "Why keep tablet weight and strength observations separate?",
+      "answer": "They describe different properties and may not move together. Record each test method and result independently before using their relationship to support a troubleshooting explanation."
+    },
+    {
+      "question": "What baseline information should accompany a press investigation?",
+      "answer": "Record press and tooling identity, product batch, speed, relevant force and feeder information, alarms, sample timing, and recent changes. Distinguish actual readings from setpoints."
+    },
+    {
+      "question": "Does a station-specific defect prove the punch is faulty?",
+      "answer": "No. Station evidence narrows the comparison, but installation and associated press conditions may also matter. Verify the suspected feature before assigning the component as the cause."
+    },
+    {
+      "question": "What does a set-wide change suggest investigating?",
+      "answer": "It provides a reason to review shared material, setup, cleaning, or operating conditions. The distribution guides evidence collection but does not prove a particular shared cause."
+    },
+    {
+      "question": "Why record when a defect first becomes visible?",
+      "answer": "The earliest observation helps locate the investigation boundary. Damage first seen after later handling should not automatically be attributed to compression or the tooling face."
+    },
+    {
+      "question": "What should be recorded around a hopper refill?",
+      "answer": "Preserve relevant samples, timing, supply observations, and any simultaneous changes. A symptom occurring after refill justifies investigation but does not establish that refill alone caused it."
+    },
+    {
+      "question": "Can another press model's parameter numbers be used as instructions?",
+      "answer": "No. Controls, installed configurations, and permitted adjustments vary. Use the manufacturer's documentation and the site's approved process for the actual machine being investigated."
+    },
+    {
+      "question": "Should compression force always be increased first?",
+      "answer": "No. Select an investigation from the confirmed symptom and available evidence. Any adjustment must remain within the approved process and appropriate machine instructions."
+    },
+    {
+      "question": "What makes a controlled trial informative?",
+      "answer": "State the hypothesis, comparison method, permitted change, observation period, and stopping conditions before starting. Record enough baseline evidence to interpret whether the selected result changed."
+    },
+    {
+      "question": "Can a trial identify one cause after several simultaneous changes?",
+      "answer": "Not reliably. The combined result may support an operating decision, but it cannot isolate which individual change produced the improvement without further evidence."
+    },
+    {
+      "question": "Why align machine records with sample timestamps?",
+      "answer": "A signal and a tablet sample must refer to a comparable production interval before their relationship can be interpreted. Misaligned records can create an apparent explanation unsupported by the run."
+    },
+    {
+      "question": "Does an average force trend describe every station?",
+      "answer": "No. Establish whether the recorded channel represents individual stations, averages, or selected events. Aggregated data can leave local behavior outside the available evidence."
+    },
+    {
+      "question": "What should be checked before relying on a machine signal?",
+      "answer": "Identify the sensor, channel, recording scope, and available verification or calibration information. Interpret the signal within its limits and compare it with relevant physical observations."
+    },
+    {
+      "question": "How should conflicting signal and tablet results be handled?",
+      "answer": "Investigate the disagreement in timing, sampling, measurement, or context. Do not select whichever result supports the first explanation while omitting the conflicting evidence."
+    },
+    {
+      "question": "Why distinguish capping, lamination, and edge damage?",
+      "answer": "These observations define different investigation questions. Use representative images and the point of first observation rather than grouping all damaged tablets under one assumed tooling defect."
+    },
+    {
+      "question": "What belongs in a cause-and-evidence log?",
+      "answer": "List each proposed explanation, supporting observations, conflicting evidence, and the next discriminating check. Update the status after a trial instead of keeping an unqualified list of guesses."
+    },
+    {
+      "question": "What should an unsuccessful trial record include?",
+      "answer": "Record the change, baseline, result, operating period, and whether the original symptom was reproduced. A short or inconclusive attempt does not automatically exclude a cause."
+    },
+    {
+      "question": "What if the symptom disappears before a planned trial?",
+      "answer": "Record that event and reconsider what the trial can establish. Without the original symptom, the comparison cannot demonstrate that the proposed change removed it."
+    },
+    {
+      "question": "Why preserve cleaning interruptions in the timeline?",
+      "answer": "They identify an intervention and help show whether improvement lasted. Record the time to recurrence and other changes rather than treating a brief restart as a permanent correction."
+    },
+    {
+      "question": "Can an aggregate reject count explain a deposit problem?",
+      "answer": "Not by itself. Track the deposit location, timing, corresponding tablet face, and relevant operating context so the comparison addresses the condition the intervention was intended to change."
+    },
+    {
+      "question": "When should tooling inspection support press troubleshooting?",
+      "answer": "Use it when the unresolved question concerns observable tool condition or defined dimensions. A broader cause investigation may still need process, installation, or equipment evidence."
+    },
+    {
+      "question": "What should a troubleshooting conclusion distinguish?",
+      "answer": "Separate confirmed findings, supported hypotheses, open alternatives, and the approved action. A practical operating decision should not be presented as stronger causal proof than the investigation provides."
+    },
+    {
+      "question": "How should the correction be followed up?",
+      "answer": "Define comparable observations, relevant operating conditions, and a review period. Retain recurrence evidence and state when changed products or settings limit comparison with the original problem."
+    },
+    {
+      "question": "What should be sent for a preliminary troubleshooting review?",
+      "answer": "Provide the symptom statement, representative samples or photographs, press and tooling identity, relevant records, and the sequence and results of previous attempts to correct the issue."
+    }
+  ],
+  "services/tablet-tooling-preventive-maintenance.html": [
+    {
+      "question": "What is the purpose of a tooling preventive-maintenance plan?",
+      "answer": "It defines when to inspect tooling, what to observe, who responds, and how findings affect status. The schedule should reflect the application and actual condition history."
+    },
+    {
+      "question": "Is one calendar interval appropriate for every tooling set?",
+      "answer": "Not necessarily. Tooling design, use, storage, surface treatment, and condition history can differ. Define intervals through the applicable instructions and approved site procedures."
+    },
+    {
+      "question": "What should the tooling inventory establish first?",
+      "answer": "Identify each set, its assignment, known material and coating, current status, and applicable specifications. A schedule cannot reliably manage tooling whose identity or acceptance state is uncertain."
+    },
+    {
+      "question": "Why keep usage information beside calendar dates?",
+      "answer": "Similar-age sets may have different operating exposure. Reliable campaign, time, or production records help interpret condition history, provided the selected measure is defined consistently."
+    },
+    {
+      "question": "Can incompatible usage counters be combined as tool life?",
+      "answer": "No. Keep the meaning and units of each counter clear. Combining different measures or filling gaps with assumptions creates a history that cannot support a reliable comparison."
+    },
+    {
+      "question": "What is an event-based inspection trigger?",
+      "answer": "It is a defined response to an abnormal event or new concern, such as unexpected damage, unusual exposure, or a storage problem, outside the routine schedule."
+    },
+    {
+      "question": "Should a new condition concern wait for scheduled maintenance?",
+      "answer": "No. Review it through the applicable incident and inspection process. A future planned date does not resolve a newly observed concern about the affected tooling."
+    },
+    {
+      "question": "What makes a scheduled inspection task specific?",
+      "answer": "Name the tools, features, method, record, and response to findings. A vague instruction to check punches does not establish which condition questions were actually assessed."
+    },
+    {
+      "question": "Why document the sampling scope of maintenance inspections?",
+      "answer": "It shows which tools were examined and which were not. The scope matters when using a finding or stable result to make decisions about a larger set."
+    },
+    {
+      "question": "Can changing a measurement method create an apparent trend?",
+      "answer": "Yes, differences in methods or locations can affect comparison. Establish that readings describe equivalent features before interpreting a change over time as tooling wear."
+    },
+    {
+      "question": "What separates an early alert from a rejection criterion?",
+      "answer": "An alert prompts review; a rejection criterion determines an acceptance exception. Keep them distinct so a trend is not automatically treated as failure or ignored because another value passes."
+    },
+    {
+      "question": "What should happen to unresolved maintenance exceptions?",
+      "answer": "Keep them linked to the affected tool, assigned to a reviewer, and visible in its status. Completing a scheduled task should not automatically clear an open condition concern."
+    },
+    {
+      "question": "Why should coating or application changes trigger a plan review?",
+      "answer": "Historical intervals describe earlier conditions. Review whether that evidence still applies and identify relevant early follow-up observations when the tooling surface or application changes."
+    },
+    {
+      "question": "What should a first follow-up after treatment assess?",
+      "answer": "Record the final baseline and focus the follow-up on the original concern and treated areas. Define who reviews the result and what would trigger broader examination."
+    },
+    {
+      "question": "Why group tooling carefully when reviewing maintenance performance?",
+      "answer": "Unrelated tooling can have different use and exposure. Comparable groups make findings interpretable, while unexplained mixing can produce misleading averages and inappropriate interval decisions."
+    },
+    {
+      "question": "Does a stable spare set prove a long operating interval is safe?",
+      "answer": "No. A set that remained in storage supplies different exposure evidence from heavily used tooling. Its history cannot establish suitability under operating conditions it did not experience."
+    },
+    {
+      "question": "What evidence should support a changed inspection interval?",
+      "answer": "Explain the affected tooling group, condition trends, unscheduled findings, relevant usage, and follow-up plan. Preserve the previous interval so later records remain interpretable."
+    },
+    {
+      "question": "Can repeated polishing replace investigation of recurring damage?",
+      "answer": "No. Repeated unexplained damage needs review of its location, history, and possible exposures. Maintenance completion alone does not show why the same finding returns."
+    },
+    {
+      "question": "What should storage checks cover in the maintenance plan?",
+      "answer": "Define protection, identification, retrieval, and a response to uncertain condition or damaged packaging. Keep stored tooling status aligned with the current record and intended preparation for use."
+    },
+    {
+      "question": "What should a completed scheduling reminder link to?",
+      "answer": "It should link to the actual maintenance evidence and disposition. A reminder marked complete does not establish that the required tooling was available, examined, or accepted."
+    },
+    {
+      "question": "Why measure time awaiting a maintenance decision?",
+      "answer": "It distinguishes physical work from delays for records, review, or replacement. Different causes require different improvements and should not all be attributed to inspection duration."
+    },
+    {
+      "question": "What practical record check can reveal a broken handoff?",
+      "answer": "Follow a recent job from removal through findings and disposition to storage. Confirm that identifiers and status remain connected rather than relying solely on an on-time completion percentage."
+    },
+    {
+      "question": "Can an interval change promise a fixed increase in tool life?",
+      "answer": "No. Report observed outcomes under the application and available evidence. A new schedule does not justify a universal lifetime percentage before meaningful follow-up results exist."
+    },
+    {
+      "question": "What makes preventive-maintenance follow-up useful?",
+      "answer": "Compare the actual findings with the reason the schedule changed. Record recurrence, stability, changed conditions, and unresolved evidence gaps rather than only whether another task was completed."
+    },
+    {
+      "question": "What should be provided for a maintenance-program review?",
+      "answer": "Share the inventory structure, current schedule, representative records, and examples of recurring or unexpected findings. These show how the program connects tooling status with actual decisions."
+    }
+  ],
+  "services/tooling-evaluation.html": [
+    {
+      "question": "What does a tooling performance evaluation decide?",
+      "answer": "It determines what evidence supports continued use, further inspection, maintenance, restoration, coating review, or replacement. The review starts with the specific decision the customer needs to make."
+    },
+    {
+      "question": "How is evaluation different from inspection?",
+      "answer": "Evaluation combines evidence to answer a decision. Inspection is one possible activity within it, describing condition or measurements under an agreed scope and acceptance basis."
+    },
+    {
+      "question": "Why define the decision before requesting all records?",
+      "answer": "A specific question identifies the most useful evidence and avoids unfocused collection. The next request should close a meaningful uncertainty rather than gather documents without a decision purpose."
+    },
+    {
+      "question": "What information identifies tooling for evaluation?",
+      "answer": "Provide tooling and press identity, product assignment, applicable specification, and known material and coating. Keep photographs and measurements connected to the actual tools being discussed."
+    },
+    {
+      "question": "Can a photograph establish that a punch is reusable?",
+      "answer": "No. It can support preliminary triage but cannot verify every dimension, material property, or internal condition. The final decision may require physical inspection and additional records."
+    },
+    {
+      "question": "What makes a tooling photograph useful for review?",
+      "answer": "Show tool identity, an overview, and the affected region. Explain location and which tools were photographed so a close-up is not mistaken for evidence about the entire set."
+    },
+    {
+      "question": "How should missing coating or drawing information be handled?",
+      "answer": "Identify the gap explicitly and determine what assessment can resolve it. Do not substitute an assumed material, coating, or acceptance basis simply to complete the review."
+    },
+    {
+      "question": "What separates tooling condition from performance?",
+      "answer": "Condition describes observable or measured tooling attributes. Performance connects those attributes with behavior in the intended application; one does not automatically establish the other."
+    },
+    {
+      "question": "When should a tooling review lead to failure analysis?",
+      "answer": "When the decision requires understanding why damage occurred, a cause investigation may be necessary. Preserve the component and relevant history before work changes the evidence."
+    },
+    {
+      "question": "When is a restoration review appropriate?",
+      "answer": "Use it to determine whether a defined condition can be improved while required tooling attributes remain suitable. A used appearance alone does not establish that restoration is needed or possible."
+    },
+    {
+      "question": "Does evaluation always lead to a service order?",
+      "answer": "No. It can support continued use, a targeted information request, inspection, a process investigation, or a hold. The recommendation should follow the evidence and original decision."
+    },
+    {
+      "question": "Why distinguish commercial urgency from technical suitability?",
+      "answer": "Lead time and availability affect planning but do not establish acceptable tooling condition. Keep those constraints visible without allowing them to replace the required technical evidence."
+    },
+    {
+      "question": "What should alternatives share before comparing their prices?",
+      "answer": "Compare the same tool quantity, specification, condition, inspection basis, and expected documentation. Different assumptions can make similarly named services represent substantially different scopes."
+    },
+    {
+      "question": "Why should quotation exclusions be explicit?",
+      "answer": "They reveal which evidence or work remains outside the service. Without clear exclusions, each party may assume the other has established an acceptance requirement that neither actually assessed."
+    },
+    {
+      "question": "What if a proposal changes after physical inspection?",
+      "answer": "Record the new finding, revised scope, and reason the recommendation changed. The revised proposal should remain linked to the evidence that replaced the initial assumptions."
+    },
+    {
+      "question": "Can age alone establish remaining tooling life?",
+      "answer": "No. Age and appearance do not provide a reliable remaining-life estimate by themselves. State when the available condition and usage evidence does not support such an estimate."
+    },
+    {
+      "question": "What does a preliminary evaluation establish?",
+      "answer": "It may identify the type of problem, important evidence gaps, or the next inspection question. State that limited outcome clearly so it is not mistaken for completed acceptance."
+    },
+    {
+      "question": "How can an evaluation avoid collecting evidence indefinitely?",
+      "answer": "Identify the critical uncertainty and request information that can change the decision. More images or records are useful only when they address a defined unanswered question."
+    },
+    {
+      "question": "What should a recommendation say about uncertainty?",
+      "answer": "Separate findings, assumptions, open questions, and limits. Identify the additional observation that could change the recommendation and who is responsible for the next decision."
+    },
+    {
+      "question": "Can acceptable dimensions alone justify a coating order?",
+      "answer": "No. They address dimensional condition, while coating selection needs the actual surface and application concern. Connect the proposed treatment with evidence of the problem it is intended to address."
+    },
+    {
+      "question": "Why retain different service histories within one set?",
+      "answer": "Original tools, replacements, and previously treated groups may have different condition evidence. A single set-level description can hide those differences and weaken an installation or restoration decision."
+    },
+    {
+      "question": "What should be agreed before tooling is shipped?",
+      "answer": "Confirm item identities, condition documentation, handling instructions, and intended scope. If only a sample is sent, explain its selection and the limits of applying findings to other tools."
+    },
+    {
+      "question": "What should a production comparison record after evaluation?",
+      "answer": "Preserve the baseline, conditions, observation method, result, and limitations. A favorable short comparison does not automatically establish performance for every product or future campaign."
+    },
+    {
+      "question": "Who decides return to production after an evaluation?",
+      "answer": "The manufacturer's responsible manufacturing and quality teams make that decision under their procedures. An evaluation report supplies evidence and recommendations within its agreed scope."
+    },
+    {
+      "question": "What should an evaluation request say first?",
+      "answer": "Describe the decision, the observed concern, the available tooling, and what has already been tried. Identify the records and measurements available before selecting a service or arranging shipment."
+    }
+  ],
+  "services/tablet-tooling-inspection.html": [
+    {
+      "question": "What does tablet tooling inspection establish?",
+      "answer": "It describes observed condition and agreed measurements for the tooling examined. Conclusions depend on the submitted scope, methods, available specifications, and stated inspection limitations."
+    },
+    {
+      "question": "What should define an inspection before equipment is selected?",
+      "answer": "Identify the feature, decision, applicable drawing, acceptance limits, and sample. Then select an appropriate method rather than allowing available equipment to define an incomplete question."
+    },
+    {
+      "question": "Are working length, overall length, and cup depth interchangeable?",
+      "answer": "No. They are distinct measurements. Keep the correct feature definition and method with each reading rather than labeling every measured distance simply as punch length."
+    },
+    {
+      "question": "Should working length be calculated from the other dimensions?",
+      "answer": "Natoli's guidance emphasizes direct working-length measurement rather than subtracting cup depth from overall length. Use the approved method and consistent accessible measurement location for the tooling design."
+    },
+    {
+      "question": "Why does engraving matter to a measurement method?",
+      "answer": "Engraving or score details can affect the accessible measurement location. Record the approved contact point so later readings describe a comparable feature and are not misinterpreted as wear."
+    },
+    {
+      "question": "What should accompany each dimensional reading?",
+      "answer": "Record tool identity, feature, location, units, method, instrument, reference, date, result, and acceptance basis. These details allow another reviewer to understand and compare the measurement."
+    },
+    {
+      "question": "Can visual appearance establish a precise defect depth?",
+      "answer": "No. Report what the examination method actually showed. A photograph or visual impression should not become an unsupported numerical depth, material property, or diagnosis."
+    },
+    {
+      "question": "What should happen when an inspection location is inaccessible?",
+      "answer": "Mark it as unassessed and explain the limitation. Do not treat a blank field or an inaccessible feature as evidence that the condition passed."
+    },
+    {
+      "question": "Does one acceptable dimension establish the condition of the whole punch?",
+      "answer": "No. A dimensional result addresses a specific feature. Visible damage, surface condition, other dimensions, and unresolved concerns elsewhere require their own appropriate assessment."
+    },
+    {
+      "question": "Why compare individual tools as well as the set?",
+      "answer": "A set average can conceal an isolated exception, while one damaged tool may not represent the others. Retain individual results alongside the distribution of findings."
+    },
+    {
+      "question": "What should an inspection report say about sampling?",
+      "answer": "State the received and examined quantities, selection basis, exclusions, and unavailable tools. A limited sample does not automatically establish condition across the complete tooling inventory."
+    },
+    {
+      "question": "Can the worst five tools show how common a defect is?",
+      "answer": "No. Selecting visibly affected tools characterizes that sample but cannot establish prevalence across unexamined members. Record the selection and decide whether broader examination is needed."
+    },
+    {
+      "question": "How should a result near an acceptance limit be handled?",
+      "answer": "Consider method suitability and uncertainty through the responsible measurement procedure. Preserve the original reading and explain repeat checks instead of repeating until a preferred result appears."
+    },
+    {
+      "question": "Can changing methods create apparent dimensional wear?",
+      "answer": "Yes. Different datums, locations, or methods can affect comparison. Reconcile those differences before attributing a change between reports to material lost during service."
+    },
+    {
+      "question": "What separates an inspection finding from a root cause?",
+      "answer": "A finding describes observed or measured condition. A cause explains how it developed and may require equipment, process, material, or historical evidence beyond the inspection itself."
+    },
+    {
+      "question": "Can visual inspection prove that all internal defects are absent?",
+      "answer": "No. Its scope concerns what the method can examine. Suspected structural or material questions may require specialist assessment rather than an unqualified visual acceptance claim."
+    },
+    {
+      "question": "Why preserve both overview and detailed photographs?",
+      "answer": "The overview locates the finding on the identified tool, while the detailed image shows the relevant region. Both help later reviewers interpret the observation without guessing its position."
+    },
+    {
+      "question": "What should incoming and outgoing inspections share?",
+      "answer": "Use comparable identities, locations, methods, units, and acceptance criteria. Explain any changed method so the before-and-after result can be interpreted without assuming equivalence."
+    },
+    {
+      "question": "Does removal of a scratch prove restoration passed every requirement?",
+      "answer": "No. It supports a surface observation. Required dimensional checks, other condition concerns, and the agreed acceptance review remain separate parts of the final assessment."
+    },
+    {
+      "question": "How should a changed visual classification be recorded?",
+      "answer": "Preserve the earlier observation and explain the new evidence, such as cleaning or closer examination. Do not edit the record so the original uncertainty disappears."
+    },
+    {
+      "question": "Why agree condition terminology before inspecting a set?",
+      "answer": "Consistent definitions make findings comparable between reviewers and over time. Identified examples and location descriptions help prevent different labels from producing misleading counts of the same condition."
+    },
+    {
+      "question": "What makes an inspection limitation useful?",
+      "answer": "Explain its practical consequence and next evidence need. A missing drawing, inaccessible surface, or visual-only method should clearly identify which conclusion the inspection did not establish."
+    },
+    {
+      "question": "What should an inspection with no drawing report?",
+      "answer": "It can describe observed condition and recorded dimensions while stating that no supplied acceptance comparison was available. It should not silently replace the missing specification with an assumed value."
+    },
+    {
+      "question": "How should unresolved marks be reported?",
+      "answer": "Use a neutral description, identified image, and examination method. Explain what further assessment could distinguish possibilities instead of declaring the feature either defective or harmless without evidence."
+    },
+    {
+      "question": "What should be provided to define an inspection scope?",
+      "answer": "Share tooling identity and quantity, available specifications, service history, observed concern, and the decision the inspection must support. This determines appropriate observations, measurements, and reporting limits."
+    }
+  ],
+  "services/pharmaceutical-tooling-documentation.html": [
+    {
+      "question": "What must a useful tooling record let a reviewer reconstruct?",
+      "answer": "It should show which tool was involved, what happened, what evidence was collected, and why its status changed, even when the original participants are unavailable."
+    },
+    {
+      "question": "Is a folder of invoices and photographs a complete tooling history?",
+      "answer": "Not if the files cannot be connected to identified tools, events, measurements, and decisions. A collection of documents needs traceable relationships to become a usable history."
+    },
+    {
+      "question": "Why give maintenance and inspection events their own references?",
+      "answer": "Event references connect dates, submitted tools, observations, work, and reviewers. They help distinguish separate activities instead of combining an entire set's history into one undated summary."
+    },
+    {
+      "question": "What should identify an individual tooling component?",
+      "answer": "Retain its physical identifier where available, set relationship, component type, relevant specification, and known material or coating. Keep those details connected to actual service events."
+    },
+    {
+      "question": "How should a replaced punch be documented?",
+      "answer": "Retain the original punch's removal and disposition, then record the replacement identity, acceptance evidence, and installation date. Do not overwrite the original component's history."
+    },
+    {
+      "question": "Why preserve dated station maps?",
+      "answer": "A tool can move between stations. Dated maps show which configuration applied during each event rather than treating its latest position as its entire operating history."
+    },
+    {
+      "question": "Can a replacement inherit the old punch's restoration record?",
+      "answer": "No. The record must distinguish physical components. Occupying the same station or tray position does not give a replacement the removed tool's previous treatment history."
+    },
+    {
+      "question": "What should accompany a stored measurement?",
+      "answer": "Retain the tool, feature, units, location, method, instrument, and applicable acceptance basis. A final number without its measurement context may not support a later comparison."
+    },
+    {
+      "question": "Why keep the specification revision used for each decision?",
+      "answer": "A later revision may differ from the original basis. Retaining the version used preserves how an earlier acceptance or disposition was reached without rewriting its history."
+    },
+    {
+      "question": "Should the original evidence remain after a summary report is written?",
+      "answer": "Yes. Keep the source observations, images, and measurement records linked to the summary so later reviewers can evaluate what the conclusion was based on."
+    },
+    {
+      "question": "How should a corrected record entry be handled?",
+      "answer": "Preserve what changed, why, and who corrected it under the site's procedure. Do not remove the original context or present newly obtained information as an earlier observation."
+    },
+    {
+      "question": "Can missing inspection measurements be filled in from memory?",
+      "answer": "Do not record reconstructed or later information as if measured at the original event. Identify its actual source, timing, and uncertainty so the history remains interpretable."
+    },
+    {
+      "question": "What should an unidentified tool be matched against?",
+      "answer": "Reconcile physical markings, packing lists, supplier records, and prior evidence as available. If several tools remain plausible, keep the relationship uncertain instead of assigning a convenient identifier."
+    },
+    {
+      "question": "Does a service invoice establish dimensional acceptance?",
+      "answer": "No. It can support that a transaction occurred, but acceptance requires the relevant condition evidence and review. An invoice does not replace missing incoming or final measurements."
+    },
+    {
+      "question": "How should a missing service report be addressed?",
+      "answer": "Request available records, confirm the actual work and tool identity, document the gap, and determine what present-condition checks are needed before the next use decision."
+    },
+    {
+      "question": "What should a photograph filename or record identify?",
+      "answer": "Connect the image with the tool, event, and observed location. Preserve an overview where needed so a detailed image can be interpreted without guessing its position."
+    },
+    {
+      "question": "Should cropped or annotated images replace the originals?",
+      "answer": "No. Retain the original and identify the relationship to the edited report image. The annotation explains the observation but should not become the only surviving evidence."
+    },
+    {
+      "question": "What should a measurement spreadsheet preserve?",
+      "answer": "Keep units, feature definitions, identifiers, source records, and calculations with the values. Distinguish measured entries from references or calculated comparisons to avoid misinterpretation."
+    },
+    {
+      "question": "What should be checked when transferring tooling data between systems?",
+      "answer": "Verify that identifiers, units, and values remain correctly associated and meaningful. A successful file transfer does not by itself establish that the technical information was preserved correctly."
+    },
+    {
+      "question": "Is service completion the same as production approval?",
+      "answer": "No. The provider documents agreed work and findings; the manufacturer determines what those results mean for intended use. Record who approved which specific decision."
+    },
+    {
+      "question": "Why define tooling status terms?",
+      "answer": "Terms such as received, inspected, awaiting disposition, and accepted describe different stages. Defined meanings prevent one general approved field from hiding incomplete review or unresolved condition concerns."
+    },
+    {
+      "question": "What should support a tooling status change?",
+      "answer": "Record the responsible reviewer, decision date, and supporting evidence reference. The status should explain what changed and why, not merely display the latest label."
+    },
+    {
+      "question": "What happens when new evidence reopens a completed job?",
+      "answer": "Preserve the earlier decision and document the new evidence and revised conclusion. Reopening should not erase why the tool was previously accepted, held, or returned."
+    },
+    {
+      "question": "Does a particular file format establish regulatory compliance?",
+      "answer": "No. A file format does not establish the required quality controls, record meaning, approval, or retention. The applicable site quality system determines those requirements."
+    },
+    {
+      "question": "What is a practical test of a tooling documentation system?",
+      "answer": "Trace a component replacement or recent maintenance job from physical identity through evidence and disposition. A usable system can reconstruct the sequence without overwriting previous component history."
+    }
+  ],
+  "services/tablet-tooling-failure-analysis.html": [
+    {
+      "question": "What is the starting point of tooling failure analysis?",
+      "answer": "Begin with the observed damage and identified component, then connect it with condition, event history, and surrounding equipment. The visible failure is an observation, not yet a cause."
+    },
+    {
+      "question": "Does every broken punch indicate fatigue?",
+      "answer": "No. Avoid assigning a mechanism from the fact of breakage alone. Evaluate the actual evidence and obtain specialist examination when the question cannot be resolved by the available methods."
+    },
+    {
+      "question": "Why preserve a failed tool before repair?",
+      "answer": "Cleaning or rework can change features important to the investigation. Identify and protect the component, and consult the planned examiner before altering a relevant damaged surface."
+    },
+    {
+      "question": "What should happen to available fragments?",
+      "answer": "Retain them with reliable identity and protect their condition during handling. Their relationship to the failed tool and event should remain visible to the examiner."
+    },
+    {
+      "question": "Why distinguish detection time from failure time?",
+      "answer": "Damage may be discovered after it occurred. Keeping those moments separate prevents the timeline from falsely attributing the failure to the last recorded event before detection."
+    },
+    {
+      "question": "What belongs in the failure timeline?",
+      "answer": "Include the last acceptable observation, discovery, alarms, stoppages, tooling changes, maintenance, cleaning, and relevant product findings. Keep observations linked to their actual sources and dates."
+    },
+    {
+      "question": "What if the tool was cleaned before the investigation started?",
+      "answer": "Record the cleaning method and changed condition. Use the evidence that remains, but state that some original surface information may no longer be available."
+    },
+    {
+      "question": "Can a photograph establish material chemistry or metallurgy?",
+      "answer": "No. Material-related conclusions may require appropriate specialist examination. A visual image should not be presented as proof of a material property or mechanism that was not tested."
+    },
+    {
+      "question": "Why list competing explanations?",
+      "answer": "A short hypothesis list helps identify which observations could distinguish possible causes. It reduces the risk of collecting only evidence that supports the first suggested explanation."
+    },
+    {
+      "question": "What should a hypothesis table contain?",
+      "answer": "Record the proposed explanation, supporting evidence, conflicting observations, and the next discriminating check. Update it as results arrive instead of presenting every possibility as an established cause."
+    },
+    {
+      "question": "Does damage repeated at one station prove misalignment?",
+      "answer": "No. The pattern supports a focused installation and equipment review, but a cause still needs relevant evidence rather than an inference from location alone."
+    },
+    {
+      "question": "What can similar damage across several stations suggest reviewing?",
+      "answer": "It provides a reason to examine shared exposures and conditions, including relevant product or maintenance history. The distribution guides investigation without proving a specific common mechanism."
+    },
+    {
+      "question": "Why compare the failed tool with other identified tools?",
+      "answer": "Comparison can show whether the condition is isolated or repeated and whether histories differ. Keep the design, service context, and limitations of the comparison clear."
+    },
+    {
+      "question": "Can analysis of the worst tool describe the whole inventory?",
+      "answer": "Not automatically. Record specimen selection and which comparison tools were examined. A detailed finding on one specimen does not establish prevalence across every tool with the same number."
+    },
+    {
+      "question": "Can the largest visible mark be assumed to have initiated failure?",
+      "answer": "No. Additional damage can occur after the original event during motion or handling. Preserve the earliest observations and distinguish the known sequence from uncertain later changes."
+    },
+    {
+      "question": "What should happen when a specialized test is proposed?",
+      "answer": "Agree what question it will answer and use an appropriate qualified provider. Do not claim the test or a confirmed mechanism unless the examination actually occurred and supports it."
+    },
+    {
+      "question": "How should an uncertain failure conclusion be described?",
+      "answer": "Distinguish confirmed cause, a supported likely explanation, and unresolved failure. Identify important alternatives and the limits of the available evidence in ordinary language."
+    },
+    {
+      "question": "Can a corrective action be practical without a fully proven cause?",
+      "answer": "Yes, but label its purpose and uncertainty accurately. A precautionary or operational measure should not be presented as a verified root-cause correction without supporting evidence."
+    },
+    {
+      "question": "Does replacing the tool establish why it failed?",
+      "answer": "No. Replacement may restore availability, but it does not explain the original damage. Preserve the failed tool's findings and connect the replacement with the follow-up investigation."
+    },
+    {
+      "question": "What should each corrective action connect to?",
+      "answer": "Link the proposed action with the specific finding it addresses, the acceptance basis where relevant, and the planned observation that will show whether the intended result occurred."
+    },
+    {
+      "question": "Why retain unsuccessful trials and contrary observations?",
+      "answer": "They show the limits of the explanation and help prevent repeated unproductive work. Omitting them can make the final conclusion appear stronger than the investigation supports."
+    },
+    {
+      "question": "What should follow-up after a correction record?",
+      "answer": "Use comparable damage locations, observation methods, and relevant operating conditions. Define the review period and document differences that limit comparison with the original failure."
+    },
+    {
+      "question": "Does a successful short trial prove a tool's remaining lifetime?",
+      "answer": "No. It supplies evidence for the tested conditions and duration. A brief favorable result should not become an unqualified lifetime or recurrence-prevention claim."
+    },
+    {
+      "question": "Should closing an administrative action erase an open technical question?",
+      "answer": "No. Preserve unresolved uncertainties that still matter to the application. Later evidence may justify reopening the explanation even after a practical corrective action has been completed."
+    },
+    {
+      "question": "What should a failure-analysis request include?",
+      "answer": "Provide component identity, preserved damage and fragments where available, photographs, specification, event timeline, operating and maintenance history, and the decision the investigation needs to support."
+    }
+  ],
+  "services/tablet-punch-coatings.html": [
+    {
+      "question": "What should a coating recommendation explain first?",
+      "answer": "It should identify the observed application problem, why the proposed treatment is a candidate, and how the intended result will be evaluated under relevant conditions."
+    },
+    {
+      "question": "Does one anti-stick coating suit every formulation?",
+      "answer": "No. Formulation and surface interactions matter. Coating selection should consider the actual product, tooling, cleaning method, and observed release problem rather than assuming a universal treatment."
+    },
+    {
+      "question": "Is coating hardness alone enough to select an anti-stick treatment?",
+      "answer": "No. Hardness does not establish application suitability. Ask how the candidate surface addresses the specific concern and what comparison will evaluate its performance."
+    },
+    {
+      "question": "Are hard chrome plating and chromium nitride the same specification?",
+      "answer": "No. Hard chromium plating and chromium nitride are different treatments. Use the actual coating specification and supplier information rather than assuming similar names describe interchangeable surfaces."
+    },
+    {
+      "question": "Can a bright finish prove good tablet release?",
+      "answer": "No. Appearance alone does not establish release behavior. Surface chemistry, roughness, visual condition, and observed performance in the application all need to be considered."
+    },
+    {
+      "question": "Can a single roughness value establish the best coating?",
+      "answer": "No. A roughness value does not describe every relevant surface property or production interaction. Interpret it with the measurement method, surface condition, and application evidence."
+    },
+    {
+      "question": "What should identify an existing coated punch?",
+      "answer": "Keep the tool, substrate, coating, previous surface work, dimensions, and service history distinguishable. A coating name alone does not establish the underlying material or remaining geometry."
+    },
+    {
+      "question": "What if the current coating cannot be identified?",
+      "answer": "Keep that uncertainty open in the scope. Review available records and determine what assessment is needed before choosing preparation, removal, or another treatment."
+    },
+    {
+      "question": "Can a coating name on an invoice prove a production defect improved?",
+      "answer": "No. It identifies a transaction or treatment record, not the application's performance. Improvement requires relevant observations from a defined comparison under recorded conditions."
+    },
+    {
+      "question": "Does a good production run identify an unknown coating's composition?",
+      "answer": "No. The run supplies performance observations, not material identification. Keep treatment records, condition inspection, and production comparisons separate while linking them to the tooling."
+    },
+    {
+      "question": "What should a proposal say about treated surfaces?",
+      "answer": "Identify the surfaces included and any exclusions. A quotation for one region should not be interpreted as approval to treat the entire punch without a defined scope."
+    },
+    {
+      "question": "Can existing coated punches automatically be treated again?",
+      "answer": "No. Review current integrity, geometry, dimensions, coating history, and proposed preparation before deciding whether another treatment is suitable for the intended application."
+    },
+    {
+      "question": "What should be clarified before removing an existing coating?",
+      "answer": "Define the known coating, substrate, preparation scope, and checks needed to preserve required tooling attributes. Clarify which findings would stop or change the proposed work."
+    },
+    {
+      "question": "Does a new coating remove the need to replace damaged tooling?",
+      "answer": "Not in every case. The tool must remain suitable in integrity, geometry, and dimensions; a surface-treatment proposal does not resolve every unacceptable condition."
+    },
+    {
+      "question": "Why inspect before selecting a coating treatment?",
+      "answer": "Inspection can clarify starting condition, relevant dimensions, and unresolved surface concerns. It helps determine whether the proposed treatment addresses a suitable tool and a defined application question."
+    },
+    {
+      "question": "What should a coating production comparison define?",
+      "answer": "Record the original concern, baseline, samples, operating conditions, observation period, and required checks. Decide how the intended result will be recognized before treating the set."
+    },
+    {
+      "question": "What observations are useful for a sticking comparison?",
+      "answer": "Track deposit location and timing, corresponding tablet-face condition, and cleaning interruptions under recorded conditions. An overall production figure alone may not answer the specific release question."
+    },
+    {
+      "question": "Why compare tooling histories before comparing coatings?",
+      "answer": "Different prior restoration, wear, or preparation can affect the comparison. Keep starting conditions known so an observed difference is not attributed to coating alone without justification."
+    },
+    {
+      "question": "Can data from another formulation guarantee the same result?",
+      "answer": "No. Such evidence may help explain a candidate treatment, but differences in product, tooling, operation, and observation methods limit its direct application to another press run."
+    },
+    {
+      "question": "What if batch and speed change during the coating comparison?",
+      "answer": "State that multiple conditions changed. The result may support further evaluation but cannot establish an isolated coating effect without a comparison addressing those differences."
+    },
+    {
+      "question": "Should coating trials promise a fixed percentage improvement?",
+      "answer": "Only report what supported observations establish for the tested conditions. A short or confounded comparison does not justify a universal percentage benefit for future production."
+    },
+    {
+      "question": "What should the outgoing coating record contain?",
+      "answer": "Identify the tooling, treatment performed, surfaces covered, agreed inspection findings, handling information, and limitations. Connect it with the customer's subsequent application and use review."
+    },
+    {
+      "question": "Why keep cleaning instructions with coated tooling records?",
+      "answer": "A later undocumented preparation can weaken comparison with the original treatment result. Keep the agreed handling and cleaning information available for the next campaign."
+    },
+    {
+      "question": "Who approves coated tooling for production use?",
+      "answer": "The manufacturer's responsible teams retain process qualification, product disposition, and return-to-production decisions. A treatment record supplies evidence within its scope rather than replacing those reviews."
+    },
+    {
+      "question": "What should be sent for a coating discussion?",
+      "answer": "Provide press and tooling details, known substrate and coating records, defect photographs, run history, cleaning information, and previous treatment results before agreeing further assessment or shipment."
+    }
+  ],
+  "services/tablet-punch-restoration.html": [
+    {
+      "question": "What does tablet punch restoration evaluate?",
+      "answer": "It assesses whether a defined damage condition can be addressed while required geometry, dimensions, and integrity remain suitable. The decision should follow documented condition and application needs."
+    },
+    {
+      "question": "How does restoration differ from routine polishing?",
+      "answer": "Restoration considers a defined damage and recovery decision. Polishing is a narrower surface operation; neither should be selected solely because a used tool looks dull."
+    },
+    {
+      "question": "Should inspection precede material removal?",
+      "answer": "Yes. Establish incoming condition, required features, and the acceptance basis before work changes the tool. Otherwise the evidence needed to judge the proposed recovery may be lost."
+    },
+    {
+      "question": "Can a cracked punch be made suitable through cosmetic work?",
+      "answer": "No. Surface appearance does not restore structural integrity. A suspected crack requires a hold and assessment under the manufacturer's disposition process before further use is considered."
+    },
+    {
+      "question": "Does the most visible damage always control the decision?",
+      "answer": "No. Location and the affected requirement matter. A small feature near a critical edge may need a different decision from a larger mark elsewhere."
+    },
+    {
+      "question": "Which tablet-forming features need protection during restoration?",
+      "answer": "Consider cup geometry, land, edges, engraving, and score details against the supplied requirements. The work scope should identify what must remain acceptable as clearly as what will change."
+    },
+    {
+      "question": "What should happen before treating an apparent scratch?",
+      "answer": "Identify its location and distinguish retained material from a remaining surface feature through the agreed assessment. Determine whether removing it would compromise a required tooling attribute."
+    },
+    {
+      "question": "Can every worn punch be restored?",
+      "answer": "No. Unacceptable remaining geometry, integrity concerns, or unresolved limitations may make restoration inappropriate. The tool's current condition and intended use control the decision."
+    },
+    {
+      "question": "Why record prior restoration history?",
+      "answer": "Previous work helps interpret current measurements and surface condition. Keep earlier incoming and final results linked to the physical tool rather than assuming every member of a set has the same history."
+    },
+    {
+      "question": "Can missing history be used to estimate material already removed?",
+      "answer": "No. Record the limitation and assess present condition without inventing a restoration allowance. Current measurements do not establish undocumented changes from earlier work."
+    },
+    {
+      "question": "What should identify a coated tool before restoration?",
+      "answer": "Confirm the physical tool, known substrate, existing coating, previous treatment, and proposed work. An unidentified coating should remain an open question before preparation or removal is selected."
+    },
+    {
+      "question": "Does a mirror finish prove restoration quality?",
+      "answer": "No. Required dimensions, geometry, local defects, and relevant condition findings remain separate from shine. A brighter surface cannot substitute for the agreed acceptance evidence."
+    },
+    {
+      "question": "Can average roughness describe every pit or scratch?",
+      "answer": "No. Where roughness measurement is included, interpret it with dimensional and visual findings. Record the method and locations rather than treating one average as a complete condition description."
+    },
+    {
+      "question": "What should a restoration quotation define?",
+      "answer": "Identify tooling quantity, incoming condition, surfaces, inspection basis, proposed work, verification, reporting, and exclusions. Clarify what happens if incoming findings make the proposed treatment inappropriate."
+    },
+    {
+      "question": "Are two restoration quotations automatically equivalent?",
+      "answer": "No. One may cover only polishing while another includes broader assessment and conditional rework. Compare actual scope and documentation before comparing prices and turnaround expectations."
+    },
+    {
+      "question": "What are the two parts of final restoration verification?",
+      "answer": "Confirm whether the intended condition changed and whether required tooling attributes remain acceptable. Evidence of surface improvement does not replace dimensional or other agreed condition checks."
+    },
+    {
+      "question": "Should outgoing measurements use a comparable basis?",
+      "answer": "Yes. Preserve identity, relevant locations, methods, units, and acceptance criteria. Explain changes so the before-and-after comparison does not assume that different measurements are equivalent."
+    },
+    {
+      "question": "Does improved surface appearance prove fewer production interruptions?",
+      "answer": "No. Surface condition is a service observation. A claim about interruptions or deposits needs follow-up production observations under recorded application conditions and an appropriate comparison."
+    },
+    {
+      "question": "What should a restoration production follow-up record?",
+      "answer": "Track the original concern, operating conditions, observation method, and duration. State when product or setup changes limit comparison with the condition that prompted the work."
+    },
+    {
+      "question": "Can a brief favorable run establish remaining tool life?",
+      "answer": "No. It supports only the observed conditions and duration. Avoid turning a short comparison into an unqualified lifetime, universal benefit, or like-new claim."
+    },
+    {
+      "question": "What if inspection changes a restoration recommendation to replacement?",
+      "answer": "Record the finding and why the original work no longer answers the question. Preserve the condition history so replacement does not erase the reason for the decision."
+    },
+    {
+      "question": "How should a partly restored set be documented?",
+      "answer": "Identify tools treated, accepted without treatment, replaced, or removed. Update component histories and relevant matching information rather than assigning one uniform restoration history to the entire set."
+    },
+    {
+      "question": "What should remain outside an unqualified restoration claim?",
+      "answer": "Any surface, dimension, material property, or internal condition not assessed should remain outside the conclusion. State those boundaries so a completion record is not read more broadly than supported."
+    },
+    {
+      "question": "Who approves restored tooling for the next campaign?",
+      "answer": "The manufacturer's responsible teams review suitability and authorize return to production under their procedures. The restoration report provides findings and evidence within the agreed service scope."
+    },
+    {
+      "question": "What should accompany a restoration request?",
+      "answer": "Send identified photographs, available specifications, measurements, coating and prior-work records, the production concern, and previous corrective actions. Agree the evaluation scope before shipment or treatment begins."
+    }
+  ],
+  "solutions/tablet-punch-corrosion.html": [
+    {
+      "question": "What should happen when corrosion is found on a tablet punch?",
+      "answer": "Identify and hold the affected tooling for assessment, retain its production and maintenance history, and arrange inspection after approved cleaning. The disposition must address both the damage and the exposure associated with it."
+    },
+    {
+      "question": "Does a rust-colored stain prove that metal has been lost?",
+      "answer": "No. Color alone cannot distinguish removable residue, persistent discoloration and actual surface damage. Compare the condition before and after approved cleaning, then assess the relevant surface and dimensional requirements."
+    },
+    {
+      "question": "Which locations should a corrosion photograph identify?",
+      "answer": "Identify the cup, engraving, barrel, head or matching die location involved. Include tool identity and orientation so that close-up photographs can be connected to the complete component and its inspection record."
+    },
+    {
+      "question": "Why photograph the tools before cleaning?",
+      "answer": "The initial photographs preserve the distribution and location of deposits or discoloration. A second set after approved cleaning helps distinguish removable material from a persistent mark, pit or other underlying condition."
+    },
+    {
+      "question": "What inspection points help locate a corrosion exposure?",
+      "answer": "Compare observations after removal from production, after cleaning and drying, and after storage. Differences between those points help narrow the exposure review, provided the inspections covered comparable surfaces and conditions."
+    },
+    {
+      "question": "Can the formulation contribute to tooling corrosion?",
+      "answer": "Some formulations can react with tooling steel. Treat this as a mechanism to investigate using the actual product and tool records, rather than proof that a particular ingredient caused an individual finding."
+    },
+    {
+      "question": "Which cleaning details belong in a corrosion investigation?",
+      "answer": "Retain the cleaner identity, prepared concentration, contact time, temperature, rinse method and tooling material or coating specification. These details support a compatibility review for the actual cleaning and tooling combination."
+    },
+    {
+      "question": "Is a cleaner suitable for every coated and uncoated punch?",
+      "answer": "No. A cleaning method acceptable for one tool surface is not automatically suitable for another. Confirm compatibility for the actual steel, coating and cleaning conditions before changing the process."
+    },
+    {
+      "question": "Why review drying separately from washing?",
+      "answer": "A completed wash does not by itself establish that difficult locations were dried. Check how the approved drying cycle and loading arrangement address key slots, punch cups, die bores and other relevant features."
+    },
+    {
+      "question": "Can storage explain corrosion discovered before the next campaign?",
+      "answer": "Storage is one possible exposure period, but the earlier inspection must first establish what condition was present after cleaning. Compare hold time, protection, trays and handling before assigning the cause."
+    },
+    {
+      "question": "Does damage on one tray mean the entire steel grade is unsuitable?",
+      "answer": "No. A tray-specific pattern warrants comparison of its loading, handling, protection and storage history with unaffected tools. The distribution can guide the investigation without proving a material-selection problem."
+    },
+    {
+      "question": "What makes corrosion inside engraving different from a barrel stain?",
+      "answer": "The affected features have different functions and requirements. Engraving assessment must preserve the intended tablet detail, while a barrel finding needs to be located relative to its working contacts and applicable specification."
+    },
+    {
+      "question": "How should coating loss and substrate corrosion be recorded?",
+      "answer": "Record them as separate findings, including the boundary and location of the affected areas. Coating identity, maintenance history and examination of the actual surface are needed before assigning a mechanism."
+    },
+    {
+      "question": "Can a photograph establish the depth of a pit?",
+      "answer": "A photograph can document location and appearance but may not establish depth or remaining material. Identify any inspection limitation and obtain the relevant assessment before deciding whether corrective work is acceptable."
+    },
+    {
+      "question": "When can light surface corrosion be restored?",
+      "answer": "Some light surface conditions may be recoverable by skilled work when the required dimensions and geometry can be retained. The proposed scope should include inspection before treatment and verification afterward."
+    },
+    {
+      "question": "Why is a shiny finish insufficient for acceptance?",
+      "answer": "Removing visible discoloration does not demonstrate acceptable dimensions, geometry or integrity. The final condition must be compared with the requirements for the actual feature, including any limitation in the inspection method."
+    },
+    {
+      "question": "Can a new coating replace material lost through pitting?",
+      "answer": "No. A coating does not recreate missing geometry or establish that the underlying tool is suitable. Assess the substrate, remaining dimensions and likely exposure before considering a new treatment."
+    },
+    {
+      "question": "When might replacement be necessary after corrosion?",
+      "answer": "Replacement may be necessary when the affected tooling cannot meet its requirements after the proposed work. Record the specific reason and disposition so that a rejected tool cannot be confused with an available spare."
+    },
+    {
+      "question": "How should a corrosion-resistant material be selected?",
+      "answer": "Provide the supplier with the actual formulation exposure, cleaning conditions, existing material and documented damage. The specification must address corrosion, wear and mechanical requirements together, rather than selecting a grade by name alone."
+    },
+    {
+      "question": "What information should accompany a storage protectant review?",
+      "answer": "Identify the product used, how coverage is checked, storage conditions and the approved removal process before production. Keep protection status separate from inspection and release status throughout handling and storage."
+    },
+    {
+      "question": "How can inspectors distinguish an old pit from a new event?",
+      "answer": "Retain an annotated photograph or other traceable location reference and document the earlier disposition. Later inspections can then compare the same feature rather than assuming every visible mark is new damage."
+    },
+    {
+      "question": "Should a tray receive one general corrosion disposition?",
+      "answer": "Individual tools may need different dispositions. Preserve tool-specific findings and acceptance decisions so that an acceptable item does not mask another tool requiring repair, replacement or further examination."
+    },
+    {
+      "question": "What should a corrosion repair request specify?",
+      "answer": "Describe the affected area, applicable requirements and proposed work. Identify protected features, the inspection needed before material removal and the findings that would require review before the repair continues."
+    },
+    {
+      "question": "How should recurrence be checked after corrective work?",
+      "answer": "Inspect the originally affected locations under comparable conditions through the relevant cleaning and storage cycle. Record when discoloration or damage reappears so the follow-up addresses the exposure period actually involved."
+    },
+    {
+      "question": "Does completed polishing prove that corrosion has been prevented?",
+      "answer": "No. Completed surface work and prevention of recurrence are different conclusions. Keep any unresolved exposure question open and retain the follow-up observations needed to evaluate the cleaning, handling or storage correction."
+    }
+  ],
+  "solutions/tablet-punch-cracking.html": [
+    {
+      "question": "Can polishing repair a cracked tablet punch?",
+      "answer": "No. Polishing cannot restore structural continuity in cracked tooling. Hold the affected tool for assessment and establish the appropriate investigation, replacement and associated equipment review before any return-to-service decision."
+    },
+    {
+      "question": "How should a suspected crack be described?",
+      "answer": "Identify its exact location, orientation and appearance, including the cup edge, engraving, tip, section transition, barrel or head. Keep these observations separate from an unconfirmed explanation of how the damage developed."
+    },
+    {
+      "question": "Does a cracked tablet prove that the punch is cracked?",
+      "answer": "No. Tablet capping or lamination can occur without a structural tool defect. Inspect the tooling itself and use the appropriate tablet-defect investigation when the evidence concerns product separation rather than a punch crack."
+    },
+    {
+      "question": "What photographs are useful after a punch failure?",
+      "answer": "Include the complete punch for identification and detailed views of the damaged region. Retain orientation relative to the key or tablet shape where available, without disturbing the surface needed for further examination."
+    },
+    {
+      "question": "Why should fracture surfaces be protected from further contact?",
+      "answer": "Cleaning, rubbing or forcing fragments together can obscure the original condition. Preserve the pieces and their handling history so that the responsible specialist can determine what examination remains useful."
+    },
+    {
+      "question": "Which operating records should be retained after a fracture?",
+      "answer": "Retain press, set and station identity, upper or lower position, run timing, last acceptable inspection, available force records and the sequence of alarms or stops associated with the event."
+    },
+    {
+      "question": "How should missing punch fragments be handled in the investigation?",
+      "answer": "Account for missing fragments through the site's equipment and product assessment process. The responsible personnel determine containment and restart requirements; a photograph of the remaining punch cannot resolve those decisions."
+    },
+    {
+      "question": "Should only the broken punch be examined?",
+      "answer": "Not necessarily. Consider the paired punch, matching die and associated station when defining inspection scope. Their condition and history may provide evidence that is lost if the review focuses only on replacement of the broken item."
+    },
+    {
+      "question": "Is the machine's maximum force the allowable force for every punch?",
+      "answer": "No. The press rating does not establish the capacity of each tool design. Obtain the supplier's rating for the actual punch geometry, material, configuration and drawing revision before comparing operating records."
+    },
+    {
+      "question": "Which design features can affect a punch's force capacity?",
+      "answer": "Material properties, cup geometry, local stress concentrations and the land around the cup affect allowable loading. Engraving and geometric transitions therefore belong in the tool-specific review rather than a generic machine-force comparison."
+    },
+    {
+      "question": "Can a force limit be borrowed from a similar-looking punch?",
+      "answer": "No. A similar outline does not establish matching geometry, material or rating. Use the specification for the actual tool and confirm the units and meaning of the recorded production force."
+    },
+    {
+      "question": "Why include previous polishing and rework in a cracking investigation?",
+      "answer": "Earlier surface work may have changed the tool's measured condition. Retain reconditioning records and verify the present geometry rather than assuming the original drawing alone describes the installed punch."
+    },
+    {
+      "question": "Will a harder steel automatically prevent another crack?",
+      "answer": "No. Material selection involves wear resistance, toughness and loading requirements. Ask which property addresses the observed failure and how the proposed replacement remains suitable for the specific design and application."
+    },
+    {
+      "question": "Does an old punch automatically indicate fatigue failure?",
+      "answer": "No. Service age alone cannot establish a fatigue mechanism. Distinguish the observed damage from the working theory and retain the loading history, earlier inspections and specialist examination needed to assess that theory."
+    },
+    {
+      "question": "Does a crack beside an engraving prove that the design is defective?",
+      "answer": "No. The location makes the feature relevant, but the investigation must also establish supplied and current tool condition. Design conformity and the mechanism of damage are connected questions, not interchangeable conclusions."
+    },
+    {
+      "question": "What can a fracture photograph fail to establish?",
+      "answer": "A photograph may show gross appearance without revealing where fracture began or how it progressed. Report those limitations, particularly when the surface or fragments were altered after the failure."
+    },
+    {
+      "question": "Why compare failures by station and tooling set?",
+      "answer": "Repeated damage at one station and damage following one design across presses suggest different next comparisons. Preserve both identifiers so that the equipment and tooling reviews address the actual distribution of events."
+    },
+    {
+      "question": "Should a suspect punch be moved to another station for diagnosis?",
+      "answer": "No. Do not reinstall or relocate damaged tooling merely to reproduce the fault. Resolve the relevant condition and equipment questions before the responsible team considers any authorized production trial."
+    },
+    {
+      "question": "Does a failure immediately after changeover prove installation caused it?",
+      "answer": "No. Timing makes setup and handling records relevant but does not identify the cause. Compare tool identity, drawing revision, material, inspection status and station observations before attributing the failure to installation."
+    },
+    {
+      "question": "Why compare drawing revisions after a tooling replacement?",
+      "answer": "A familiar tablet shape does not establish an identical tool specification. Confirm the revision, material and supplier rating for the replacement so that the intended application is evaluated against the actual item."
+    },
+    {
+      "question": "What should a dimensional review of a failed punch answer?",
+      "answer": "It should establish the relevant present geometry against applicable requirements. That result does not automatically explain the fracture sequence, which may require a separate failure investigation and additional evidence."
+    },
+    {
+      "question": "How should additional specialist testing be defined?",
+      "answer": "State the question each proposed method should answer and preserve the relevant damaged material. Interpret the results alongside fracture location and operating history rather than treating one isolated measurement as a complete explanation."
+    },
+    {
+      "question": "What should a replacement recommendation explain?",
+      "answer": "It should connect the selected specification to the investigation findings. State whether the change concerns material, geometry or another requirement, and explain the evidence supporting either a revision or an identical replacement."
+    },
+    {
+      "question": "How should a replacement punch be accepted into the retained set?",
+      "answer": "Confirm its identity, drawing revision and relevant dimensions against the intended tooling and machine configuration. Define the incoming inspection and accompanying records before relying on appearance or new condition alone."
+    },
+    {
+      "question": "What evidence is needed to close a cracking investigation?",
+      "answer": "Document the original event, supporting findings, replacement or equipment action and relevant follow-up. State what was verified and what remains uncertain rather than treating a short successful restart as proof of lifetime performance."
+    }
+  ],
+  "solutions/tablet-punch-wear.html": [
+    {
+      "question": "What is the starting point for a tablet punch wear assessment?",
+      "answer": "Identify the exact feature that changed and compare it with the drawing, accepted baseline and service history. Include the paired die and observed production symptom before deciding whether reconditioning or replacement is justified."
+    },
+    {
+      "question": "Does loss of shine mean a punch is worn out?",
+      "answer": "No. A dull appearance does not establish dimensional loss or acceptability. Inspect the relevant surface and geometry, distinguish retained residue from damage, and compare measurements with the actual tooling requirements."
+    },
+    {
+      "question": "Where can wear occur besides the punch cup?",
+      "answer": "Wear can affect the tip edge, engraving, barrel, head and matching die bore. Record the location and direction of each finding because those features involve different working interfaces and inspection questions."
+    },
+    {
+      "question": "Why separate corrosion and cracking from routine wear?",
+      "answer": "A pit may require an exposure investigation, while a suspected crack requires an integrity decision. Grouping these findings under a general polishing instruction can leave the relevant mechanism and acceptance question unresolved."
+    },
+    {
+      "question": "What is the land on a tablet punch?",
+      "answer": "The land is the narrow flat feature around the cup edge. Its condition belongs in the tip inspection because erosion can leave a thin edge and contribute to J-hook formation."
+    },
+    {
+      "question": "Can repeated reconditioning change punch dimensions?",
+      "answer": "Yes. Material-removing work can change the present geometry, including cup depth and overall length. Retain the repair history and verify the relevant dimensions instead of assuming each polishing cycle leaves the tool unchanged."
+    },
+    {
+      "question": "Should every punch use the same land width or repair allowance?",
+      "answer": "No. Use the requirements for the actual design and any agreed rework limits. A generic value does not establish what geometry must be retained on every tablet shape or tool specification."
+    },
+    {
+      "question": "Does a tablet defect prove that tooling wear caused it?",
+      "answer": "No. Tablet appearance is supporting evidence. Compare the symptom with identified physical findings and production history, and continue the investigation when inspection does not support the proposed wear mechanism."
+    },
+    {
+      "question": "Which dimensions belong in a wear record?",
+      "answer": "Include the dimensions required by the drawing and inspection plan, such as working length, cup depth, overall length and relevant tip dimensions. Preserve tool identity and the measurement method for each result."
+    },
+    {
+      "question": "Why examine the measurement distribution across a set?",
+      "answer": "A set-wide average can conceal an individual tool requiring attention. Compare each item and the relationship among tools, especially when new replacements are mixed with components having different reconditioning histories."
+    },
+    {
+      "question": "Is a pass-or-fail inspection result enough for wear trending?",
+      "answer": "Not always. Retain numerical results and applicable limits when tracking change over time. A simple acceptance label may not show whether a particular feature is stable or approaching a review point."
+    },
+    {
+      "question": "Why inspect the die when a punch appears worn?",
+      "answer": "The punch operates with the die, and die-bore abnormalities can contribute to buildup or binding. Retain the inspection location and method for the paired die rather than treating the punch as an isolated component."
+    },
+    {
+      "question": "Which investigation fits difficult ejection with tablet-band marks?",
+      "answer": "Use the die-wall binding investigation alongside tooling inspection. Compare tablet, die and relevant punch findings before deciding whether surface work, equipment review or another controlled investigation is the appropriate next step."
+    },
+    {
+      "question": "How does localized wear differ from a set-wide pattern?",
+      "answer": "A new mark on one tool after changeover suggests different comparisons from a repeated feature across most punches. Preserve the distribution and station history rather than replacing those observations with an average condition."
+    },
+    {
+      "question": "What should a punch restoration proposal specify?",
+      "answer": "Identify the area to be worked, protected geometry, final inspection and findings that would stop the repair. The scope should explain how the tool will retain its requirements after material-removing work."
+    },
+    {
+      "question": "Can polishing restore dimensions already lost through wear?",
+      "answer": "No. Polishing removes material; it cannot recreate missing geometry. The tool must retain acceptable dimensions, profile and integrity after the proposed work for restoration to be a suitable option."
+    },
+    {
+      "question": "Does a more wear-resistant material always make a better punch?",
+      "answer": "No. Material selection must balance the actual abrasion exposure with toughness, geometry and load requirements. A harder or more wear-resistant grade should be assessed for the specific tooling application."
+    },
+    {
+      "question": "Why is calendar age a weak measure of tooling exposure?",
+      "answer": "Sets of the same age may have very different production volumes, products and maintenance histories. Compare actual use and measured condition before assigning an inspection interval or assuming the same remaining life."
+    },
+    {
+      "question": "How should measurements before and after polishing be compared?",
+      "answer": "Identify which results were taken before or after material-removing work and retain the method used. A change associated with reconditioning needs to be distinguished from a change observed during production exposure."
+    },
+    {
+      "question": "What should be checked before calculating a wear rate?",
+      "answer": "Confirm that the same feature, orientation, instrument and reference method support comparison. Resolve relevant measurement limitations before presenting a precise rate, particularly when the reported change is difficult to distinguish reliably."
+    },
+    {
+      "question": "Can a short wear trend guarantee remaining campaigns?",
+      "answer": "No. Exposure, operating conditions and observed rates may change, and one measurement does not cover every failure mode. Use the trend to justify review points rather than guarantee a remaining production count."
+    },
+    {
+      "question": "Why retain upper and lower punch identities during inspection?",
+      "answer": "Upper and lower tools can have different features and requirements. Compare each against the correct drawing and retain its role so that an average across unlike tools does not conceal a mismatch."
+    },
+    {
+      "question": "How should multiple tips on one punch be recorded?",
+      "answer": "Preserve individual tip identity as well as punch identity. A whole-punch status can hide a condition confined to one tip, so the inspection plan should address the actual supplied configuration."
+    },
+    {
+      "question": "Does a brief improvement after polishing confirm the wear diagnosis?",
+      "answer": "No. Compare the treated feature, resulting dimensions, paired die and later recurrence. The same brief improvement can occur in different circumstances and does not establish that punch wear was the only contributor."
+    },
+    {
+      "question": "Should replacement lead time change the acceptance limit for worn tooling?",
+      "answer": "No. Keep acceptance separate from purchasing constraints. Document acceptable, recoverable, rejected and unresolved items so that restoration or replacement decisions follow the actual condition rather than the urgency of supply."
+    }
+  ],
+  "solutions/tablet-binding.html": [
+    {
+      "question": "What distinguishes tablet binding from punch-face sticking?",
+      "answer": "Binding concerns the tablet's interaction with the die wall and ejection, while punch-face sticking involves material retained on a forming face. Identify the location and stage of the problem before choosing corrective work."
+    },
+    {
+      "question": "Does a high ejection force prove that the die is damaged?",
+      "answer": "No. Consider tablet geometry, formulation, lubrication, process conditions and physical die condition together. Compare like measurements and retain the limitations before attributing a force reading to a damaged surface."
+    },
+    {
+      "question": "Which tablet photographs help investigate binding?",
+      "answer": "Include both faces, the band, edge damage and the sampling location. Pair the images with die identity so that a visible mark can be compared with the actual working surface and production history."
+    },
+    {
+      "question": "Why retain the point where a tablet was sampled?",
+      "answer": "A mark found after takeoff or transfer may need comparison at an earlier stage. The sampling location helps distinguish where damage was observed from where it was actually created."
+    },
+    {
+      "question": "What should an ejection record identify?",
+      "answer": "Retain units, sensor or method, available station information and timing. State whether the result is a peak, average or trace so that unlike measurements are not presented as directly comparable."
+    },
+    {
+      "question": "Which factors can influence tablet ejection force?",
+      "answer": "Research identifies tablet dimensions, compact–die friction and residual die-wall stress as important contributors. Keep these conditions with the reading rather than treating ejection force as a measurement of surface condition alone."
+    },
+    {
+      "question": "Why compare ejection against a successful run of the same product?",
+      "answer": "A comparable product, geometry, tooling design and measurement method reduce unexplained differences. A force value from an unrelated tablet may not provide a meaningful baseline for the observed ejection problem."
+    },
+    {
+      "question": "How does rising force during a run differ from high force at startup?",
+      "answer": "These patterns describe different timing. Preserve the trend and associated conditions so the investigation can compare the onset and progression, rather than reducing every case to one maximum reading."
+    },
+    {
+      "question": "Where should the die bore be inspected?",
+      "answer": "Examine the actual working region and compare it with the rest of the bore after approved cleaning. Record the location and orientation of deposits, scoring, pits or other observed changes."
+    },
+    {
+      "question": "Why document the die before cleaning?",
+      "answer": "Initial observations preserve deposits and their distribution. Comparing them with the cleaned surface helps distinguish retained material from an underlying condition and keeps evidence available for the later tooling decision."
+    },
+    {
+      "question": "Does a smoother or harder die automatically solve binding?",
+      "answer": "No. Ejection behavior depends on the application, including formulation and lubrication conditions. A material or finish change needs a defined purpose and comparison rather than a universal assumption about improvement."
+    },
+    {
+      "question": "What is needed before die-bore rework is considered?",
+      "answer": "Obtain the applicable drawing, measurements, surface requirements and remaining allowance. Define how the finished condition will be checked and identify any area the available inspection cannot reliably assess."
+    },
+    {
+      "question": "Can punch polishing correct a die-wall problem?",
+      "answer": "Do not assume it can. The proposed intervention should address the location supported by evidence. Punch-face deposits and die-wall findings must be distinguished before selecting a surface service."
+    },
+    {
+      "question": "Why is adding more lubricant an incomplete response to binding?",
+      "answer": "First establish the lubricant grade, quantity, addition sequence and mixing history. Any proposed change needs an authorized study and product-quality checks, rather than a quantity chosen from the ejection symptom alone."
+    },
+    {
+      "question": "What should accompany a proposed lubricant change?",
+      "answer": "Define the study, baseline, acceptance checks and responsible approval. A reduction in ejection resistance does not by itself demonstrate that the modified product still meets all required attributes."
+    },
+    {
+      "question": "How should press speed be treated in a binding review?",
+      "answer": "Record speed with the ejection and product observations. Research supports examining its interaction with friction, but does not provide a universal instruction to increase or decrease speed by a fixed amount."
+    },
+    {
+      "question": "Why separate tooling, lubricant and speed changes during evaluation?",
+      "answer": "Several simultaneous changes may improve the run without showing which change mattered. Define the comparison and its limitations before attributing the result to a particular die treatment or process adjustment."
+    },
+    {
+      "question": "How is mechanical punch tightness different from tablet ejection resistance?",
+      "answer": "A punch that does not travel freely in its guide or die presents a different observation from a tablet resisting release. Identify the movement and press-cycle stage before selecting the investigation route."
+    },
+    {
+      "question": "Can formulation lubricant resolve every mechanically tight punch?",
+      "answer": "No. Do not assume a formulation change addresses a fit or setup problem. Retain tool and station identity and request the relevant equipment assessment under the machine manufacturer's instructions."
+    },
+    {
+      "question": "Should ejection force, stress and work be grouped as one measurement?",
+      "answer": "No. Retain the original quantity, units and calculation basis. Ask what each result describes and whether the measurement methods support comparison before combining them in a single trend or acceptance statement."
+    },
+    {
+      "question": "Does one station repeatedly marking tablet bands prove a rough bore?",
+      "answer": "No. The pattern supports a local comparison, but the die, paired tooling and sampling stage still need assessment. A corresponding deposit or abnormality must be documented rather than assumed."
+    },
+    {
+      "question": "What if no die abnormality matches the tablet mark?",
+      "answer": "Record the limits of the inspection and reconsider the sampling stage and alternative locations where damage could occur. An unsupported die explanation should not be retained merely because it was proposed first."
+    },
+    {
+      "question": "Which details define a proposed replacement die?",
+      "answer": "Retain the actual drawing revision, bore requirements and material or coating identity. Matching a nominal size or catalog photograph does not establish every relationship required for the installed tooling set."
+    },
+    {
+      "question": "Why preserve the old die's inspection record after replacement?",
+      "answer": "It provides a reference if the new condition behaves differently or the same symptom returns. Without that baseline, later observations may be attributed to the replacement without a useful comparison."
+    },
+    {
+      "question": "How should success be verified after a binding correction?",
+      "answer": "Compare ejection behavior, tablet-band marks, edge damage and required product-quality results over a relevant run period. A short startup trial may not address a defect that previously appeared later."
+    }
+  ],
+  "solutions/tablet-sticking.html": [
+    {
+      "question": "What is tablet sticking?",
+      "answer": "Tablet sticking is formulation adhering to the punch face during compression. Identify the deposit location and progression, then compare the corresponding tablets and tooling before choosing a surface or process intervention."
+    },
+    {
+      "question": "How does picking differ from broad punch-face sticking?",
+      "answer": "Picking is localized material loss associated with retained product around details such as lettering or a logo. A broader film and a repeatedly damaged character require separate observations even when both occur together."
+    },
+    {
+      "question": "Does a clean startup rule out a sticking problem?",
+      "answer": "No. Material can accumulate over repeated compression cycles. Retain the time to onset and compare a relevant run period rather than treating the appearance of the first tablets as a complete evaluation."
+    },
+    {
+      "question": "What should be compared when only a few stations show buildup?",
+      "answer": "Compare affected and unaffected tools from the same run, retaining station identity, dimensions, condition and service history. The distribution guides inspection but does not establish a tooling-only cause by itself."
+    },
+    {
+      "question": "Do chipped tablet-edge photographs prove picking?",
+      "answer": "No. Missing edge material shows a defect but does not establish its cause. The sampling stage and corresponding punch condition are needed before classifying the damage as picking or another mechanism."
+    },
+    {
+      "question": "Why photograph deposits before cleaning the punches?",
+      "answer": "The photographs preserve where material collected and how it was distributed. Follow approved procedures and pair those observations with the cleaned surface so that residue is not confused with underlying damage."
+    },
+    {
+      "question": "What should be inspected after the tooling is cleaned and dried?",
+      "answer": "Inspect the actual face under suitable lighting and magnification for residue, scratches, pitting, corrosion and other damage. Compare findings with the applicable surface and geometry requirements before selecting corrective work."
+    },
+    {
+      "question": "Can polishing improve every sticking problem?",
+      "answer": "No. Controlled polishing may help recoverable surface damage when dimensions and geometry can be preserved. It does not automatically resolve formulation or process contributors and is not a repair for cracked tooling."
+    },
+    {
+      "question": "Does a mirror finish guarantee formulation release?",
+      "answer": "No. Shine alone does not establish how a surface will interact with the actual formulation. Judge the finish against its specification and application, then evaluate performance through an appropriate comparison."
+    },
+    {
+      "question": "Which batch records help investigate sticking?",
+      "answer": "Compare the affected and successful runs using recorded moisture observations, ingredients, processing, storage and relevant changes. The records identify questions for controlled study rather than justify guessing a batch adjustment."
+    },
+    {
+      "question": "What information is needed before changing magnesium stearate concentration?",
+      "answer": "Retain lubricant grade, quantity, addition sequence and mixing history alongside product requirements. A universal concentration cannot be selected from a sticking complaint because formulation and processing conditions influence the comparison."
+    },
+    {
+      "question": "Why record compression force and press speed together?",
+      "answer": "Both belong in the run history and may affect the observed response. Evaluate them alongside tablet quality within the approved process or an authorized study rather than applying a universal setting recipe."
+    },
+    {
+      "question": "What makes a useful engraving inspection for localized picking?",
+      "answer": "Identify the exact detail involved and compare affected and unaffected tools with the approved geometry. Retain evidence of product collection and surface condition instead of treating the whole face as one undifferentiated surface."
+    },
+    {
+      "question": "Should engraving be deepened or rounded to test whether sticking improves?",
+      "answer": "No. Geometry changes require engineering review and preservation of intended tablet detail. Uncontrolled removal of material can turn a reconditioning attempt into an undocumented change of the tool design."
+    },
+    {
+      "question": "How should a coating be selected for a sticking application?",
+      "answer": "Consider the formulation, tooling material, existing surface, cleaning environment and process. The recommendation should explain which observed issue the treatment addresses and how its performance will be evaluated."
+    },
+    {
+      "question": "Can one coating be assumed to suit every formulation?",
+      "answer": "No. Coating properties and formulation interactions differ. A successful result for another product does not establish suitability for the current tooling and operating conditions without an appropriate application review."
+    },
+    {
+      "question": "Why record the interval between cleaning and a sticking trial?",
+      "answer": "Surface preparation and subsequent exposure can affect sticking behavior in research comparisons. Retain the preparation-to-use interval so an unexplained handling difference is not attributed solely to the tool treatment."
+    },
+    {
+      "question": "Does surface-aging research establish a production hold time?",
+      "answer": "No. The cited S7 steel study supports recording and controlling surface history in comparisons. It does not prescribe a universal hold time or authorize exposure outside the approved tooling procedure."
+    },
+    {
+      "question": "What should accompany a punch reconditioning enquiry?",
+      "answer": "Describe the defect, affected tools and decision needed, with drawings or inspection records where available. Agree protected features, assessment scope, acceptance basis and handling requirements before shipping the set."
+    },
+    {
+      "question": "Does filming that returns after cleaning identify its cause?",
+      "answer": "No. It establishes recurrence after cleaning, but does not distinguish surface, formulation and changing run conditions by itself. Compare where the film starts, its timing and the relevant preparation and production records."
+    },
+    {
+      "question": "Why preserve early buildup observations rather than only the worst deposit?",
+      "answer": "The initial pattern can show where material began collecting and how it spread. A photograph taken only after heavy buildup may conceal information needed to compare tools or evaluate the progression."
+    },
+    {
+      "question": "Can a short treatment trial confirm prevention of late-run filming?",
+      "answer": "Not by itself. The trial needs a justified observation window and comparable conditions that address the original onset pattern, together with the required product-quality checks and recorded limitations."
+    },
+    {
+      "question": "What does a combined polishing-and-coating trial fail to isolate?",
+      "answer": "It combines more than one surface change. Preserve the pre-treatment inspection and work history, and avoid claiming an independent coating effect when the comparison cannot distinguish it from the other changes."
+    },
+    {
+      "question": "How should treated and comparison tools be documented?",
+      "answer": "Retain identities, positions, preparation histories and exposure periods. Differences in handling or observation can complicate interpretation, so explain them before attributing the outcome solely to the proposed treatment."
+    },
+    {
+      "question": "What should an inconclusive sticking trial lead to?",
+      "answer": "Identify the unanswered question, such as surface conformity, observation duration or process comparability. The next action should close that evidence gap rather than repeat treatment without improving the basis for interpretation."
+    }
+  ],
+  "solutions/tablet-sticking-picking.html": [
+    {
+      "question": "What distinction starts a sticking-versus-picking investigation?",
+      "answer": "Locate where material remains and where it is missing. Broad punch-face deposits indicate a different observation from localized loss around lettering or a logo, even when the two defects appear together."
+    },
+    {
+      "question": "Can sticking and picking occur on the same tablet?",
+      "answer": "Yes. Record broad deposits and localized loss separately so an improvement in one category does not conceal a remaining problem in the other during treatment selection or trial evaluation."
+    },
+    {
+      "question": "Why pair tablet photographs with the corresponding punches?",
+      "answer": "The pairing connects the visible defect with the actual tool feature and identity. Without it, a damaged tablet alone cannot establish whether the same local condition repeats at one station."
+    },
+    {
+      "question": "Which guide fits a broad film across the punch face?",
+      "answer": "Use the tablet sticking investigation for broad deposits and their progression. Retain timing, surface history and run conditions rather than treating the film as proof of a single formulation or tooling cause."
+    },
+    {
+      "question": "Which guide fits repeated loss around a tablet letter?",
+      "answer": "Use the tablet picking investigation and inspect the corresponding engraving. Compare retained material, surface condition and intended geometry before deciding whether a design review or recoverable surface work is justified."
+    },
+    {
+      "question": "What if the main problem is difficult ejection or band marking?",
+      "answer": "Begin with the die-wall binding investigation and retain the sampling stage. Do not automatically classify a sidewall mark or release problem as punch-face sticking without the corresponding evidence."
+    },
+    {
+      "question": "Should every missing tablet edge be called picking?",
+      "answer": "No. Establish where and when the damage appears and inspect the corresponding tooling. Missing material may be observed after another operation, so appearance alone is insufficient to classify the mechanism."
+    },
+    {
+      "question": "Which records preserve the timing of a sticking or picking defect?",
+      "answer": "Record the first observed defect, sampling interval, run duration and related operating conditions. Distinguish continuous observation from occasional samples so that the reported onset does not imply more precision than the evidence supports."
+    },
+    {
+      "question": "Why retain acceptable samples during a defect investigation?",
+      "answer": "Acceptable samples provide a comparison for the intended face and detail under identified conditions. Preserve collection points and tooling identity so they remain meaningful alongside affected samples and inspection results."
+    },
+    {
+      "question": "What should be compared between affected and unaffected punches?",
+      "answer": "Compare surface condition, dimensions, cleaning history, coating identity and prior work within the same campaign where practical. A localized difference guides the next inspection without excluding other contributors automatically."
+    },
+    {
+      "question": "How should localized picking around engraving be examined?",
+      "answer": "Identify the exact feature and compare it with the approved drawing after appropriate cleaning. Record whether the same location collects material across several tools, rather than treating every local defect as identical."
+    },
+    {
+      "question": "Can a polishing tool be used to improvise a different logo?",
+      "answer": "No. Changes to lettering or geometry require review and preservation of the required tablet identity. Reconditioning should not become an undocumented design change made simply to see whether the defect improves."
+    },
+    {
+      "question": "What should be checked before restoring a picking-related surface?",
+      "answer": "Establish that inspection supports recoverable damage and that sufficient allowance remains to retain the required geometry. Repeated polishing cannot recreate an engraving or profile already outside its requirements."
+    },
+    {
+      "question": "Why evaluate broad buildup over successive cycles?",
+      "answer": "Sticking can develop through accumulation during repeated compression. An acceptable brief restart therefore gives limited evidence about a defect that appeared later in the original production record."
+    },
+    {
+      "question": "Which formulation and process records belong in the comparison?",
+      "answer": "Retain lubricant addition and mixing, moisture observations, ingredient changes, compression conditions and speed. Compare with an acceptable campaign where available and label missing information instead of assuming conditions stayed constant."
+    },
+    {
+      "question": "Does the comparison guide prescribe a lubricant level or compression force?",
+      "answer": "No. Formulation and quality personnel define authorized studies and acceptance requirements. The guide helps identify which recorded differences deserve investigation without supplying universal operating adjustments for an unidentified product."
+    },
+    {
+      "question": "How should a proposed intervention be connected to the defect?",
+      "answer": "State the observation it addresses and the requirements it must preserve. A generic instruction to polish or coat is incomplete without the supported surface, geometry or formulation question behind that choice."
+    },
+    {
+      "question": "Why can simultaneous formulation, engraving and coating changes be inconclusive?",
+      "answer": "The combined project may improve the result without isolating each contribution. An appropriate study design and stated limitations are needed before assigning the improvement to a single treatment or feature."
+    },
+    {
+      "question": "Should upper and lower tablet faces be combined into one finding?",
+      "answer": "Keep them separate initially and retain their tooling identities. A deposit on one face and local damage on the other may involve different features, and lost orientation limits the comparison."
+    },
+    {
+      "question": "Why collect typical defects as well as the most severe example?",
+      "answer": "The worst rejected tablet may not represent the pattern responsible for most interruptions. Retain representative samples and their collection points so the investigation addresses distribution as well as severity."
+    },
+    {
+      "question": "What if filming improves but one engraved letter still picks?",
+      "answer": "Record the two outcomes separately. Investigate the remaining local feature while preserving the broader surface result, rather than declaring the complete problem solved from an overall reduction in rejected tablets."
+    },
+    {
+      "question": "How can evidence weaken an engraving-damage theory?",
+      "answer": "Compare the actual feature and surface with acceptable tools and the drawing. If the inspection does not support the proposed difference, document its limits and identify another justified comparison instead of retaining an unsupported diagnosis."
+    },
+    {
+      "question": "Why keep records that conflict with the first explanation?",
+      "answer": "A complete investigation must account for the whole pattern. Concurrent batch, tooling or cleaning changes can prevent a simple attribution, and conflicting observations help identify where the proposed cause remains uncertain."
+    },
+    {
+      "question": "What should a successful trial demonstrate beyond cleaner tooling?",
+      "answer": "It should address the original defect over comparable conditions and an appropriate observation period while preserving all required product attributes. Improvement in appearance alone cannot replace the responsible team's full acceptance requirements."
+    },
+    {
+      "question": "How should the outcome of a sticking-and-picking review be stated?",
+      "answer": "Identify the defect evaluated, change made, comparison used and observation period. Preserve remaining uncertainty and avoid extending a result to another formulation, machine or tooling configuration outside the actual review."
+    }
+  ],
+  "solutions/dwell-time-optimization.html": [
+    {
+      "question": "What is dwell time in tablet compression?",
+      "answer": "Dwell time describes the near-peak part of the compression cycle as the punch head passes beneath the roller. Confirm the definition used by the equipment or tooling supplier."
+    },
+    {
+      "question": "Is dwell time the same as the entire compression cycle?",
+      "answer": "No. Loading, the near-peak interval and unloading describe different portions of the cycle. Retain the complete force-time profile when comparing configurations, not only the reported dwell duration."
+    },
+    {
+      "question": "Which tooling feature is relevant to dwell?",
+      "answer": "The punch-head geometry interacts with the compression roller. Identify the actual head-flat drawing and tooling revision; the tablet-forming cup is a different feature with a different function."
+    },
+    {
+      "question": "How does press speed enter a dwell investigation?",
+      "answer": "On the same machine and geometry, changing rotational speed changes the time beneath the roller. Record speed with the configuration and compare the resulting tablet properties."
+    },
+    {
+      "question": "Does equal hourly output mean equal dwell time?",
+      "answer": "No. Output can differ with station count and tooling configuration. Compare turret speed, active stations, head geometry and the relevant machine profile before judging two runs equivalent."
+    },
+    {
+      "question": "Does longer dwell always make a better tablet?",
+      "answer": "No. Material response depends on the formulation and compression conditions. Treat longer dwell as a hypothesis to evaluate against strength, defects and the other required product attributes."
+    },
+    {
+      "question": "What information is needed to compare two presses?",
+      "answer": "Retain the press identities, active station counts, tooling standards, head drawings, speeds and compression records. Add material identity, tablet geometry and the test methods used for comparison."
+    },
+    {
+      "question": "Why retain the force-time trace?",
+      "answer": "A trace can show whether loading or release changed along with the near-peak interval. Label the time scale, force units and measurement method so the comparison remains interpretable."
+    },
+    {
+      "question": "Can a screenshot establish an exact dwell value?",
+      "answer": "Only if its scale and underlying measurement are suitable for that purpose. Do not infer a precise duration from a stretched image or a trace lacking a readable time axis."
+    },
+    {
+      "question": "What should be checked about a reported dwell number?",
+      "answer": "Identify whether the duration is measured or calculated and which definition it uses. Keep the original record and note any missing geometry, timing or software information."
+    },
+    {
+      "question": "Why can a slower run complicate the diagnosis?",
+      "answer": "A speed change can also affect filling. If tablet mass changes with the trial, improved strength or fewer caps cannot be attributed to additional dwell alone."
+    },
+    {
+      "question": "Which product measurements belong beside a dwell trial?",
+      "answer": "Retain individual weight, thickness, the applicable mechanical tests and defect observations. Compare samples from equivalent periods and document any changes in material, filling or test method."
+    },
+    {
+      "question": "Should precompression records be included?",
+      "answer": "Yes. Keep precompression and main-compression information together. Similar near-peak durations do not establish that the complete compression sequences or their effects on the product are equivalent."
+    },
+    {
+      "question": "Why does unloading belong in the record?",
+      "answer": "A timing comparison may also change the release portion of the cycle. Preserve that information so an observed fracture improvement is not assigned automatically to dwell alone."
+    },
+    {
+      "question": "How should a dwell trial question be written?",
+      "answer": "State the proposed timing change, the specific defect or property being evaluated and the requirements that must remain acceptable. Define the comparable baseline before collecting the trial results."
+    },
+    {
+      "question": "What does a combined setup trial establish?",
+      "answer": "When speed, filling or several compression settings change together, the result evaluates that combination. It does not isolate the contribution of dwell without further suitable comparisons."
+    },
+    {
+      "question": "How should capping during a speed trial be recorded?",
+      "answer": "Record crown separation separately from other defects, with the sampling period and number examined. Keep mass and compression-time records alongside the counts to interpret the change."
+    },
+    {
+      "question": "Can a short successful run resolve a late-onset problem?",
+      "answer": "Not by itself. State the observation period and compare it with the historical onset of the defect. A trial ending before that period leaves recurrence unresolved."
+    },
+    {
+      "question": "What if the intended dwell change does not improve the defect?",
+      "answer": "Retain the negative result and check whether the trial tested the original hypothesis adequately. Use it to refine the next comparison rather than assuming a larger adjustment must work."
+    },
+    {
+      "question": "Can an existing punch head be ground to increase dwell?",
+      "answer": "Do not improvise a head modification. A different head design requires appropriate manufacturer review of compatibility, geometry, load requirements, identification and the measurements controlling acceptance."
+    },
+    {
+      "question": "What should an extended-head-flat proposal contain?",
+      "answer": "Request the existing and proposed drawings, the intended profile change, relevant equipment conditions and acceptance requirements. A general claim of more dwell does not establish application suitability."
+    },
+    {
+      "question": "Does punch-face polishing demonstrate a dwell change?",
+      "answer": "No. Surface work and head geometry address different questions. Record polishing or coating changes separately so a release improvement is not attributed to compression timing without evidence."
+    },
+    {
+      "question": "Why identify the trial tooling revision?",
+      "answer": "The run record must distinguish the trial configuration from the original set. Accurate identity and receiving inspection help future orders reproduce the configuration that was actually evaluated."
+    },
+    {
+      "question": "How should a successful operating window be reported?",
+      "answer": "State the product, tooling revision, conditions, observed quality and output demonstrated. Include interruptions and remaining limits rather than extending the conclusion to untested speeds or materials."
+    },
+    {
+      "question": "What belongs in a dwell-related tooling inquiry?",
+      "answer": "Send the press model, head drawing if available, recorded speed range, tablet measurements and specific defect. Identify the decision needed and the gaps requiring additional measurement or manufacturer review."
+    }
+  ],
+  "solutions/tablet-capping.html": [
+    {
+      "question": "What is tablet capping?",
+      "answer": "Capping is separation of a tablet crown from the remaining body. Record which face is involved and preserve the fracture pattern before deciding which mechanism requires investigation."
+    },
+    {
+      "question": "How is capping different from lamination?",
+      "answer": "Capping involves a separated crown, while lamination describes layers splitting within the tablet body. Keep the categories distinct so trial results address the actual observed defect."
+    },
+    {
+      "question": "Is a small missing rim piece always capping?",
+      "answer": "No. Record localized edge loss as edge damage until the pattern is established. A small chip should not automatically be counted as separation of an entire crown."
+    },
+    {
+      "question": "What photographs help a capping investigation?",
+      "answer": "Include both faces, a side view, the remaining body and any identifiable detached crown. Retain orientation, sampling point and tooling identity wherever the available records support them."
+    },
+    {
+      "question": "Why locate the first confirmed damaged sample?",
+      "answer": "It helps identify which process stage deserves closer observation. A capped tablet found in a collection container does not establish that the crown separated at compression."
+    },
+    {
+      "question": "Can later separation establish the exact moment a crack began?",
+      "answer": "No. Record when separation was first observed and the sample history. A defect can become visible later, so timing evidence should not be overstated."
+    },
+    {
+      "question": "How should delayed capping samples be labeled?",
+      "answer": "Keep the collection time, collection point, later observation time and intervening handling or storage conditions. Distinguish spontaneous separation from a tablet deliberately broken during laboratory examination."
+    },
+    {
+      "question": "Does capping always mean trapped air?",
+      "answer": "No. Appearance alone does not identify one cause. Review the compression sequence, material history, tooling condition and unloading evidence before selecting an explanation or trial."
+    },
+    {
+      "question": "Why collect more than peak compression force?",
+      "answer": "The compression history includes how force is applied and released. Retain precompression, main compression, speed and available traces rather than representing the entire cycle with one maximum."
+    },
+    {
+      "question": "Should unloading be considered when investigating capping?",
+      "answer": "Yes. The release portion of the cycle belongs in the evidence review. This does not authorize changing ejection or release mechanisms without equipment-specific engineering assessment."
+    },
+    {
+      "question": "Is increasing force a universal capping remedy?",
+      "answer": "No. Define which observation a proposed change will test and which product requirements must remain satisfied. More force should not replace investigating the actual fracture evidence."
+    },
+    {
+      "question": "What material records should be compared?",
+      "answer": "Compare the affected batch with an appropriate successful campaign using material identities, granulation observations, moisture records and lubricant processing history. Missing information should remain identified as a gap."
+    },
+    {
+      "question": "What does a station-specific pattern suggest?",
+      "answer": "It supports a focused comparison of corresponding tools and equipment records. It does not prove that formulation or shared process conditions are irrelevant to the defect."
+    },
+    {
+      "question": "Can a loose sample be assigned to the nearest inspected punch?",
+      "answer": "No. Retain station identity only when the sampling or production records establish it. If that link is missing, state the limitation instead of inventing one."
+    },
+    {
+      "question": "Which tooling features belong in a capping review?",
+      "answer": "Compare the implicated cup, rim and working surfaces with their approved requirements. Include the relevant die information and keep findings connected to individual tool identities."
+    },
+    {
+      "question": "Why distinguish deposits from permanent tooling damage?",
+      "answer": "Deposits describe the condition during production, while post-cleaning damage describes the underlying tool. Keeping both observations prevents cleaning from erasing evidence or confusing residue with lost geometry."
+    },
+    {
+      "question": "What should a capping restoration proposal specify?",
+      "answer": "Identify the recoverable condition, the feature to be worked, protected dimensions and acceptance checks. The proposal should also state which findings would make restoration unsuitable."
+    },
+    {
+      "question": "Can polishing prevent every separated crown?",
+      "answer": "No. Polishing is a candidate only where tooling findings support it and requirements can be retained. It does not automatically resolve material or compression-cycle causes."
+    },
+    {
+      "question": "Does capping after a tool change prove the new set is defective?",
+      "answer": "No. Compare drawings and measurements alongside the material lot, setup and other changeover events. The timing identifies an important comparison but does not establish causation."
+    },
+    {
+      "question": "What can an approved reference-set comparison establish?",
+      "answer": "It can help evaluate whether the observed pattern changes with the set under agreed conditions. Differences in material, setup or sampling limit conclusions about the tooling alone."
+    },
+    {
+      "question": "Why include tablet mass beside capping counts?",
+      "answer": "A mass change can complicate a claim that compression timing alone improved the defect. Retain weight, thickness and applicable mechanical results from the relevant sampling period."
+    },
+    {
+      "question": "How should the capping rate be compared?",
+      "answer": "Keep the number examined beside the number showing the defined defect. Use consistent sampling periods and categories, and preserve time or station patterns instead of reporting only an average."
+    },
+    {
+      "question": "What if the crown remains partially attached after a trial?",
+      "answer": "Use the same severity definitions as the baseline and record the remaining condition. Do not recategorize partial separation as acceptable merely because the appearance has improved."
+    },
+    {
+      "question": "What does a trial with no observed capping demonstrate?",
+      "answer": "It supports the sample size, period and stages examined. State those limits and plan follow-up around the original recurrence pattern rather than promising every future campaign will remain unaffected."
+    },
+    {
+      "question": "What should be sent for a capping tooling review?",
+      "answer": "Send the fracture photographs, sampling stage, press and tooling details, relevant measurements and changes already tried. Explain which decision the review needs to support before shipping a set."
+    }
+  ],
+  "solutions/tablet-chipping.html": [
+    {
+      "question": "What is tablet chipping?",
+      "answer": "Tablet chipping is localized loss of material from an edge. Identify the affected location and the first stage where damage is confirmed before selecting a tooling or equipment remedy."
+    },
+    {
+      "question": "Is edge chipping the same as picking?",
+      "answer": "No. Picking concerns localized loss associated with retained material at punch detail. An edge chip needs its own location and timing investigation rather than an automatic picking label."
+    },
+    {
+      "question": "How is chipping different from capping?",
+      "answer": "Chipping removes a localized edge piece; capping separates a crown from the tablet body. Record the actual pattern and keep both categories visible if they occur together."
+    },
+    {
+      "question": "Which edge locations should be recorded?",
+      "answer": "Distinguish upper rim, lower rim, band, corners and score-related locations. Use a consistent orientation reference so the same feature can be compared across tablets, tools and process stages."
+    },
+    {
+      "question": "What photographs are useful for edge damage?",
+      "answer": "Show the missing portion and the surrounding intact edge, with orientation and an appropriate scale. Include acceptable comparison tablets and preserve the sampling point and time."
+    },
+    {
+      "question": "Can a photograph alone identify why an edge broke?",
+      "answer": "No. It documents the visible damage but cannot establish the contact, material response or tool condition responsible. Pair images with the process route and corresponding inspection evidence."
+    },
+    {
+      "question": "Why compare samples before and after a transfer?",
+      "answer": "The comparison helps narrow where damage first becomes detectable. Use comparable operating periods and approved sampling methods so the collection process does not introduce a different impact."
+    },
+    {
+      "question": "Does finding chips after coating prove coating caused them?",
+      "answer": "No. Preserve upstream samples and handling history. Damage may have existed earlier or become visible later, so the discovery point is not automatically the point of origin."
+    },
+    {
+      "question": "What can upper-edge damage prompt an inspector to review?",
+      "answer": "Manufacturer guidance identifies take-off positioning as a relevant inspection area. Compare the installed arrangement with the press instructions; the location alone does not establish a required adjustment."
+    },
+    {
+      "question": "What can lower-edge damage prompt an inspector to review?",
+      "answer": "Review the relevant lower-punch, die-table and discharge relationships using equipment instructions. Record the actual setup and contact evidence before concluding that any one component caused the chip."
+    },
+    {
+      "question": "Should every chip trigger higher compression force?",
+      "answer": "No. Compare the damage stage and applicable mechanical tests first. A force change must be evaluated against other product attributes and tooling limits, not appearance alone."
+    },
+    {
+      "question": "Does a passing hardness result guarantee resistance to chipping?",
+      "answer": "No. Breaking force, friability and observed handling damage provide different evidence. Assess the applicable product requirements and the operation where the edge damage develops."
+    },
+    {
+      "question": "Why inspect the matching punch and die?",
+      "answer": "Relate the tablet location to the actual cup, land, score and die information. Keep deposits, permanent damage and measured geometry distinct before deciding whether restoration is justified."
+    },
+    {
+      "question": "Can a tablet corner be rounded during routine polishing to stop chips?",
+      "answer": "A geometry change needs the appropriate design review. Restoration should preserve specified features; a better-looking trial is not an acceptable repair if the required tablet shape has changed."
+    },
+    {
+      "question": "Why keep a score or identifier’s function in the review?",
+      "answer": "The feature may serve a product requirement that cannot simply be removed. Any alternative should preserve its required function and include the appropriate product and tooling checks."
+    },
+    {
+      "question": "What should a downstream chipping record include?",
+      "answer": "Retain the product route, contact points, equipment configuration, timing and matched samples. Include relevant changes in chutes, containers or orientation when they coincide with the observed damage."
+    },
+    {
+      "question": "How can a station pattern help?",
+      "answer": "A confirmed pattern directs comparison toward corresponding tools and equipment records. If tablet-to-station identity is unavailable, state that limitation rather than assigning a cause from appearance."
+    },
+    {
+      "question": "What if incoming tablets already have small chips?",
+      "answer": "Keep that baseline visible when assessing downstream damage. Distinguish new damage from possible enlargement where evidence permits, instead of assuming every downstream defect began at the transfer."
+    },
+    {
+      "question": "Why avoid modifying several transfers simultaneously?",
+      "answer": "A combined change may improve output without identifying which contact mattered. Preserve each configuration and use a defined comparison when the investigation needs to isolate a particular stage."
+    },
+    {
+      "question": "What should a chipping trial measure?",
+      "answer": "Record the defined chip categories, number examined, sampling stages and relevant product tests. Compare equivalent conditions and include the period when the original damage tended to appear."
+    },
+    {
+      "question": "Can fewer chips in a smaller sample establish improvement?",
+      "answer": "Not without a valid comparison. Keep the denominator and sampling method beside each count so a reduced observation effort is not mistaken for a lower defect rate."
+    },
+    {
+      "question": "How should different chipping patterns be reported?",
+      "answer": "Retain upper-edge, lower-edge, corner and other relevant categories separately. Improvement in one pattern should not conceal another persistent defect or a new fracture mode."
+    },
+    {
+      "question": "What does a brief successful startup establish?",
+      "answer": "It supports only the conditions and period sampled. If damage historically developed later or downstream, the verification must address those stages before the investigation is considered resolved."
+    },
+    {
+      "question": "What should a restoration request explain?",
+      "answer": "State the observed condition, implicated feature, available measurements and protected geometry. Ask whether recovery is technically suitable before selecting polishing, coating or replacement as the predetermined answer."
+    },
+    {
+      "question": "What information belongs in a chipping inquiry?",
+      "answer": "Send face and side photographs, first confirmed damage stage, tablet shape, press and tooling identities, station information and previous trial outcomes. Include downstream equipment details where relevant."
+    }
+  ],
+  "solutions/tablet-hardness-optimization.html": [
+    {
+      "question": "What does tablet hardness usually mean?",
+      "answer": "In routine tablet testing, hardness commonly means the force needed to fracture a tablet under a defined test arrangement. Keep units, orientation and test method with the result."
+    },
+    {
+      "question": "Is tablet hardness the same as punch steel hardness?",
+      "answer": "No. Tablet breaking force and the hardness of tooling steel or coating describe different properties. Keep their measurements and purposes separate in the investigation record."
+    },
+    {
+      "question": "Is the goal to produce the hardest possible tablet?",
+      "answer": "No. The goal is consistent mechanical performance while satisfying the product’s other requirements. Define the acceptable product window rather than maximizing the number reported by the tester."
+    },
+    {
+      "question": "Can different tablet shapes be compared by breaking force alone?",
+      "answer": "Not automatically. Geometry affects the relationship between breaking force and material strength. Ask which method is suitable when tablet dimensions or shape change between comparisons."
+    },
+    {
+      "question": "Is one hardness target suitable for every tablet?",
+      "answer": "No. Use the approved product requirements and development evidence for the particular shape, size and release design. This guide does not supply a universal breaking-force target."
+    },
+    {
+      "question": "Which other attributes belong in a hardness trial?",
+      "answer": "Include mass, dimensions, appearance, relevant mechanical tests and the applicable disintegration or dissolution requirements. A strength increase that compromises another required attribute is not a complete success."
+    },
+    {
+      "question": "What should be checked before interpreting a new hardness trend?",
+      "answer": "Review instrument checks, sample identity, test method, orientation and handling history. Confirm that the apparent shift is not explained by a measurement or sampling difference."
+    },
+    {
+      "question": "Why retain individual hardness readings?",
+      "answer": "An average can hide unusually weak tablets or a wider spread. Keep individual results and sampling periods so isolated failures are not lost within a stable batch average."
+    },
+    {
+      "question": "Why pair hardness with weight and thickness?",
+      "answer": "Those measurements help separate changes in mass or geometry from changes in mechanical response. Use corresponding sample periods and identify whether tests used the same tablets or different samples."
+    },
+    {
+      "question": "Can one tablet’s weight be assigned to another tablet’s hardness reading?",
+      "answer": "No. Preserve actual identity where measurements can be paired. If different tablets supplied the tests, report the group relationship without inventing an individual pairing."
+    },
+    {
+      "question": "How do compression force and breaking force differ?",
+      "answer": "Compression force describes the applied manufacturing condition, while breaking force describes a finished-tablet test. Keep them in separate fields even when both use units of force."
+    },
+    {
+      "question": "Why distinguish compression pressure from force?",
+      "answer": "Pressure involves how force relates to an area. Record the quantity and units actually used so an equipment setting is not confused with a different calculated or tested value."
+    },
+    {
+      "question": "Does increasing compression force always increase tablet strength?",
+      "answer": "No. Response depends on the material and conditions and can level off. Assess the actual response alongside defects and product requirements rather than assuming proportional improvement."
+    },
+    {
+      "question": "Why include dwell when hardness changes at higher output?",
+      "answer": "A speed change can affect compression timing and filling. Retain both sets of evidence so the review does not attribute the strength change to one mechanism without support."
+    },
+    {
+      "question": "What if higher hardness is accompanied by capping?",
+      "answer": "Report the strength and crown-separation results separately. A higher average does not resolve the overall product problem if the revised setup introduces or worsens another required defect measure."
+    },
+    {
+      "question": "Why record the time between sampling and testing?",
+      "answer": "A comparison using different sample ages has an additional variable. Keep collection, testing and handling records so an observed change is not attributed automatically to the press adjustment."
+    },
+    {
+      "question": "How should visibly damaged samples be handled in the record?",
+      "answer": "Keep their condition identified and state whether they were included in the routine comparison or examined separately. Do not silently treat a capped or mishandled specimen as an ordinary result."
+    },
+    {
+      "question": "Which material records help explain an unexplained strength shift?",
+      "answer": "Compare approved material identities, blend and granulation records, moisture observations and lubrication history with a suitable successful campaign. Separate recorded differences from proposed mechanisms requiring investigation."
+    },
+    {
+      "question": "Does stable mass prove a strength change comes from the formulation?",
+      "answer": "No. Stable mass narrows one comparison but does not establish the cause. Review measurement, geometry, compression history and tooling evidence before selecting a material explanation."
+    },
+    {
+      "question": "What tooling evidence belongs in a hardness review?",
+      "answer": "Retain approved drawings, set identities, relevant cup and land measurements, condition findings and service records. Connect station-related observations to actual tools where traceability permits."
+    },
+    {
+      "question": "Is polishing a general method for increasing tablet hardness?",
+      "answer": "No. A surface intervention needs a finding that supports it. Polishing should not replace investigation of mass, geometry, material behavior or the compression conditions affecting strength."
+    },
+    {
+      "question": "Can a laboratory comparison reproduce every production condition?",
+      "answer": "Not automatically. State which equipment and conditions the comparison represents and what remains different. A useful result needs its scope and transfer limitations recorded."
+    },
+    {
+      "question": "How should a combined optimization trial be described?",
+      "answer": "List every changed variable and report the outcome for the combination evaluated. Do not claim the trial isolated one setting when material, tooling or operating conditions also changed."
+    },
+    {
+      "question": "What defines a useful successful outcome?",
+      "answer": "Demonstrate the required mechanical performance, other product attributes and consistency over the relevant period. State tested conditions and unresolved limits rather than reporting only the highest average."
+    },
+    {
+      "question": "What should accompany a hardness evaluation request?",
+      "answer": "Send the trend with units and method, corresponding weight and thickness, defect photographs, press and tooling details, and changes since the acceptable baseline. Identify the decision requiring support."
+    }
+  ],
+  "solutions/tablet-lamination.html": [
+    {
+      "question": "What is tablet lamination?",
+      "answer": "Lamination describes separation within the tablet body into layers. Record the fracture location, number of visible planes and sampling history before assigning a process or tooling cause."
+    },
+    {
+      "question": "How does lamination differ from capping?",
+      "answer": "Capping separates a crown from the body, while lamination involves internal layers. Keep the fracture categories distinct so the investigation and verification address the correct observed pattern."
+    },
+    {
+      "question": "Which views help document lamination?",
+      "answer": "Use side and face photographs with consistent orientation. Include an intact comparison tablet and preserve the sampling point, time and conditions under which separation was observed."
+    },
+    {
+      "question": "Does a visible split prove air entrapment?",
+      "answer": "No. Air-related behavior is one hypothesis that may require investigation. Compare the actual compression, material, tooling and timing evidence rather than diagnosing from appearance alone."
+    },
+    {
+      "question": "Does more precompression always prevent lamination?",
+      "answer": "No universal setting follows from the cited research. Review the product and equipment evidence and define an authorized trial that preserves the applicable requirements."
+    },
+    {
+      "question": "Why include unloading information?",
+      "answer": "The release portion of compression can matter to the investigation. Keep available cycle records so a profile change is not reduced to only its peak force or precompression setting."
+    },
+    {
+      "question": "What changes when the product is deliberately multilayered?",
+      "answer": "Identify whether separation occurs at the intended interface or within a layer. Preserve the layer sequence and corresponding records instead of treating every split as the same single-layer problem."
+    },
+    {
+      "question": "Which bilayer records should remain separate?",
+      "answer": "Retain first-layer and final-compression histories with layer identities and available layer-weight observations. A single general force value may not describe the events relevant to the fracture."
+    },
+    {
+      "question": "Can keeping an interface intact still leave a failed product?",
+      "answer": "Yes. A change may move cracking inside one layer or affect another requirement. Report each fracture pattern and relevant product result rather than declaring success from the interface alone."
+    },
+    {
+      "question": "How should deliberately broken samples be identified?",
+      "answer": "Label the examination method and distinguish those samples from spontaneous production failures. A revealed fracture can supply evidence without being counted silently as naturally occurring lamination."
+    },
+    {
+      "question": "Can loose fragments be assumed to belong to one tablet?",
+      "answer": "Only when identity can be established. Keep uncertain associations labeled as uncertain so the fracture description does not rely on pieces that may come from different tablets."
+    },
+    {
+      "question": "What is a suitable lamination baseline?",
+      "answer": "Prefer an acceptable run of the same product and tooling design. Document differences in material, equipment, sampling or testing so the comparison does not imply equivalence that was not established."
+    },
+    {
+      "question": "What should a lamination comparison record contain?",
+      "answer": "Keep fracture timing and location, compression history, speed, batch processing and tooling specification. Retain original observations and measurement methods instead of only a conclusion that conditions were normal."
+    },
+    {
+      "question": "Does a tapered die automatically resolve lamination?",
+      "answer": "No. Published results depend on formulation and configuration. Any geometry proposal needs the relevant specification, compatibility review and product-specific evaluation rather than a universal die-taper recommendation."
+    },
+    {
+      "question": "Can punch–die clearance be changed from a web recommendation?",
+      "answer": "Do not improvise a clearance or penetration change. Obtain the applicable design and equipment review, including dimensions, compatibility and the process requirements controlling any proposed trial."
+    },
+    {
+      "question": "When is reconditioning worth assessing?",
+      "answer": "Consider it when a recoverable physical condition is identified and required geometry and integrity can remain acceptable. The proposal should specify the work and how acceptance will be verified."
+    },
+    {
+      "question": "Does replacing a tooling set prove the old set caused lamination?",
+      "answer": "No. If material or setup also changed, the result applies to the combination. Compare measured differences and trial conditions before assigning the improvement to tooling alone."
+    },
+    {
+      "question": "How should competing explanations be compared?",
+      "answer": "For each hypothesis, state supporting observations, missing information and a comparison that could challenge it. Use contradictory results to refine the next question instead of hiding them."
+    },
+    {
+      "question": "Does a missing force trace show unloading was normal?",
+      "answer": "No. Missing information remains a limitation. Identify what the available method can establish and which further measurement is necessary for a decision about the cycle."
+    },
+    {
+      "question": "Can a surface photograph confirm internal integrity?",
+      "answer": "Not for every internal condition. The responsible laboratory should define any additional examination needed, with the method and its detection limits retained in the investigation."
+    },
+    {
+      "question": "Why verify later processing stages?",
+      "answer": "If separation originally became apparent after transfer, coating or handling, a clean discharge sample is incomplete evidence. Include appropriate comparisons around the stage where the historical problem appeared."
+    },
+    {
+      "question": "Can an improvised harsh handling test replace the original observation?",
+      "answer": "Not without establishing what it measures. A different test may create another fracture pattern; use a suitable assessment defined by the responsible laboratory for the investigation question."
+    },
+    {
+      "question": "How should several simultaneous changes be reported?",
+      "answer": "State that the trial assessed their combined effect and identify the limits of attribution. A successful result does not prove that either individual change would work alone."
+    },
+    {
+      "question": "What belongs in the lamination closeout?",
+      "answer": "Retain the original split pattern, evidence, approved changes, sample counts, stages examined and remaining limits. Keep material and tooling identities so later campaigns can reproduce the evaluated conditions."
+    },
+    {
+      "question": "What should accompany a lamination inquiry?",
+      "answer": "Send side-view fracture photographs, sampling history, press and tooling details, material and layer information where relevant, and previous trial results. Explain which inspection or decision the review should support."
+    }
+  ],
+  "solutions/tablet-weight-variation.html": [
+    {
+      "question": "What does tablet weight variation describe?",
+      "answer": "It describes differences in individual tablet mass over the population or run being assessed. Keep individual readings and sample times so changes in average and spread can be distinguished."
+    },
+    {
+      "question": "Can a stable average hide a weight problem?",
+      "answer": "Yes. Light and heavy tablets can become more frequent while the average stays similar. Review the individual distribution and applicable requirements instead of relying only on the mean."
+    },
+    {
+      "question": "Does stable tablet mass establish drug-content uniformity?",
+      "answer": "No. Weight is useful process evidence but does not by itself demonstrate the required drug-content result. Use the applicable product evidence for that conclusion."
+    },
+    {
+      "question": "What should be checked before interpreting a weight trend?",
+      "answer": "Verify the balance, sample identity and weighing method. Record the collection stage and time so samples before and after an operation that changes mass are not mixed."
+    },
+    {
+      "question": "Why retain the sampling location?",
+      "answer": "A sample of accepted output may differ from the population before rejection. Record the collection point and control state so the result is interpreted for the population actually examined."
+    },
+    {
+      "question": "What production events should be marked on the trend?",
+      "answer": "Mark startup, replenishment, stops, restarts and adjustments with available timing information. These events help distinguish a recurring transition problem from persistent variation during steady operation."
+    },
+    {
+      "question": "How does die filling affect tablet weight?",
+      "answer": "The material retained in the die determines the quantity available to form the tablet. Interpret nominal filling settings alongside material behavior, feeder configuration and actual operating conditions."
+    },
+    {
+      "question": "Does one nominal fill setting guarantee one tablet mass?",
+      "answer": "No. The filling result also depends on material and operating behavior. Record the actual mass distribution rather than assuming equal settings establish equivalent fills."
+    },
+    {
+      "question": "Why review the feed frame separately?",
+      "answer": "Its design and operating conditions influence material residence and filling behavior. Include paddle or wheel configuration, feeder settings, supply observations and changes since the successful baseline."
+    },
+    {
+      "question": "Which material observations support a filling review?",
+      "answer": "Compare relevant flow, density, particle-size and material-handling records with the production pattern. A recorded difference can guide investigation without authorizing an unapproved formulation change."
+    },
+    {
+      "question": "Does a force indication directly measure tablet mass?",
+      "answer": "Not necessarily. Presses use different control strategies. Confirm the installed method and retain actual weight samples beside the machine trend before interpreting its signal as a mass result."
+    },
+    {
+      "question": "Why identify the press control mode?",
+      "answer": "The reviewer needs to know which signal drives adjustment and what was held constant. Equal force indications do not establish equivalent filling or tablet properties on different machines."
+    },
+    {
+      "question": "What if the controller repeatedly adjusts in opposite directions?",
+      "answer": "Retain the event history, settings and corresponding mass samples for equipment-specific review. Do not disable rejection or overwrite established limits merely to obtain a smoother display."
+    },
+    {
+      "question": "Why align machine and balance timestamps?",
+      "answer": "Different clock bases can create a false apparent delay or association. Document any reliable offset and label estimated times rather than presenting them as precise control evidence."
+    },
+    {
+      "question": "Does variation after replenishment prove the refill caused it?",
+      "answer": "No. Replenishment may coincide with other events. Separate supply interruptions, stops and adjustments, compare repeated observations, and preserve counterexamples before selecting an explanation."
+    },
+    {
+      "question": "Can tablets in a collection bag be assigned to press stations?",
+      "answer": "Only if a valid sampling or production link preserves that identity. Do not infer the station from bag order or an unsupported timing assumption."
+    },
+    {
+      "question": "What if station identity is unavailable?",
+      "answer": "Use valid time-period, set and measurement information, and state the limitation. Ask whether approved equipment diagnostics can narrow the issue before replacing a particular tool as the assumed cause."
+    },
+    {
+      "question": "Which components belong in a confirmed station review?",
+      "answer": "Keep the upper punch, lower punch and die identities together with relevant measurements, installation and service history. Compare the actual components against their approved set requirements."
+    },
+    {
+      "question": "Is polishing a universal correction for inconsistent filling?",
+      "answer": "No. A restoration proposal needs a measured recoverable condition linked to the problem. Inconsistent mass may require material, feeder or control investigation rather than surface work."
+    },
+    {
+      "question": "What should a weight-variation trial question specify?",
+      "answer": "Define the suspected mechanism, the observation that could test it, comparable conditions and sampling plan. Record all changes and the requirements that must remain satisfied during the trial."
+    },
+    {
+      "question": "Why measure mechanical properties during a speed comparison?",
+      "answer": "Changing speed can alter compression timing as well as filling. An acceptable weight result does not establish that hardness, fractures or other required product attributes remain unchanged."
+    },
+    {
+      "question": "What should be compared when transferring a product between presses?",
+      "answer": "Record material, tooling geometry, filling arrangement, control mode and test methods for each setup. Equal nominal output or force does not demonstrate equivalent filling conditions."
+    },
+    {
+      "question": "Why retain tuning and rejection history during transfer?",
+      "answer": "A final acceptable sample can hide repeated adjustments or earlier rejected output. Keep the full operating history so the review describes the conditions under which suitability was actually demonstrated."
+    },
+    {
+      "question": "What belongs in the weight investigation closeout?",
+      "answer": "Retain the original pattern, supporting evidence, approved change, resulting distribution and unresolved limits. Separate improved average mass from reduced variability and identify the product and setup assessed."
+    },
+    {
+      "question": "What should accompany a weight-related tooling inquiry?",
+      "answer": "Send the weight trend, press model, tooling identities, feeder setup and confirmed station observations. Include measurements and previous changes so the review can identify the decision needing support."
+    }
+  ],
+  "solutions/tablet-compression-defects.html": [
+    {
+      "question": "What is the first step in a tablet-defect investigation?",
+      "answer": "Describe the observed pattern and where it first appears. Preserve the tablet, tooling and run evidence before selecting a remedy or assigning every defect to one cause."
+    },
+    {
+      "question": "Why distinguish sticking from picking?",
+      "answer": "Sticking concerns material on the punch face; picking involves localized loss around punch detail. Keep their locations and patterns separate so improvement in one does not hide the other."
+    },
+    {
+      "question": "How does capping differ from lamination?",
+      "answer": "Capping separates a crown, while lamination splits the tablet body into layers. Use the observed fracture plane and sampling history to select the appropriate investigation."
+    },
+    {
+      "question": "Should every missing edge be called picking?",
+      "answer": "No. Localized edge loss may be chipping or another fracture pattern. Record location and timing rather than assuming punch-detail adhesion caused material found missing later."
+    },
+    {
+      "question": "Why agree a common defect vocabulary?",
+      "answer": "Different teams may use the same label for different patterns. Definitions and representative images make counts comparable across production, inspection and later verification."
+    },
+    {
+      "question": "What if the defect cannot yet be classified?",
+      "answer": "Keep a literal description and an uncertain category. Record location, appearance and sampling stage so classification can improve later without rewriting the meaning of the original baseline."
+    },
+    {
+      "question": "How should two defects on one tablet be counted?",
+      "answer": "Keep both observations visible using the agreed method and explain the denominators. Total rejection count and the frequency of each individual defect answer different questions."
+    },
+    {
+      "question": "What should an incident record identify?",
+      "answer": "Retain product or project reference, batch, press, tooling set, station information, sample time and collection stage. Include the last documented acceptable sample and known evidence gaps."
+    },
+    {
+      "question": "Why photograph tooling before and after cleaning?",
+      "answer": "The first view records the production condition and the second shows what remains on the tool. Deposits and permanent surface damage should not be confused or substituted for one another."
+    },
+    {
+      "question": "What makes a close-up photograph insufficient?",
+      "answer": "Without identity, orientation and sampling history, a detailed image may not connect to a drawing or run. Include an overall view and retain the examination method and limitations."
+    },
+    {
+      "question": "Does a photograph review equal a physical tooling inspection?",
+      "answer": "No. A preliminary image review may identify the next examination, but it cannot automatically establish dimensions, structural integrity or deposit composition needed for a firm decision."
+    },
+    {
+      "question": "What can a defect limited to a few stations suggest?",
+      "answer": "It supports comparing corresponding tools, condition and service history. It does not establish that shared material or process factors are irrelevant to those observations."
+    },
+    {
+      "question": "What should be reviewed when many stations are affected?",
+      "answer": "Compare shared material history, equipment setup, processing records and the common tooling specification. Avoid replacing isolated parts solely because they are easier to change than the shared conditions."
+    },
+    {
+      "question": "Does downstream discovery prove downstream origin?",
+      "answer": "No. Compare samples before and after the relevant stage and retain timing. The point where damage becomes visible is not automatically the point where it began."
+    },
+    {
+      "question": "Why preserve a time-dependent defect trend?",
+      "answer": "A startup sample may miss buildup or damage that develops later. Record onset, interruptions and adjustments so the verification can cover the historical recurrence period."
+    },
+    {
+      "question": "Can acceptable appearance establish acceptable tablet quality?",
+      "answer": "No. Keep weight, mechanical and other required product results beside visual observations. A better-looking tablet does not establish every product requirement or determine batch disposition."
+    },
+    {
+      "question": "Why separate mass and strength investigations from visual defects?",
+      "answer": "Their measurements can vary even when tablets look acceptable. Keep corresponding sampling periods and use the appropriate filling or mechanical review instead of assuming one visible defect explains everything."
+    },
+    {
+      "question": "Can one campaign require two different investigations?",
+      "answer": "Yes. For example, localized logo loss and later transfer chips need distinct evidence comparisons. Preserve shared conditions without assuming both complaints have the same cause."
+    },
+    {
+      "question": "When does polishing belong in the plan?",
+      "answer": "Consider it when an identified surface condition is recoverable and the required geometry can be retained. Define the work, protected features and acceptance measurements before treating it as a remedy."
+    },
+    {
+      "question": "What should a coating proposal explain?",
+      "answer": "Identify the observed behavior it aims to change, the application conditions and how performance will be evaluated. A coating name alone does not answer those questions."
+    },
+    {
+      "question": "When should replacement or redesign be considered?",
+      "answer": "Consider it when tooling cannot meet requirements or the proposed recovery is unsuitable. Preserve the evidence supporting that decision rather than assuming every component can be restored."
+    },
+    {
+      "question": "What should every proposed corrective action connect?",
+      "answer": "Connect the observed finding to the intended intervention and a suitable verification. Define which feature, defect or behavior will be assessed so the result answers a specific question."
+    },
+    {
+      "question": "What if several changes are implemented together?",
+      "answer": "Record the full combination and its limitations. Improved output can support that setup without establishing the individual contribution of tooling, formulation, handling or operating changes."
+    },
+    {
+      "question": "How should an unsuccessful trial be used?",
+      "answer": "Preserve the negative result and reconsider the explanation. Repeating the same intervention without an evidence-based reason does not resolve the question the trial failed to answer."
+    },
+    {
+      "question": "What makes a useful investigation closeout?",
+      "answer": "State the original observation, supporting evidence, change, verification result and remaining limits. Keep tooling and batch references so the next campaign can use the conclusion appropriately."
+    }
+  ]
+}
