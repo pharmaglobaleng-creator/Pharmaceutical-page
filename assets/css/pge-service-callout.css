@@ -1,0 +1,78 @@
+/* Service messages share a layout while each page keeps its own topic and H1. */
+.pge-service-callout {
+  margin: 0;
+  padding: 42px 0;
+  border-bottom: 1px solid #22d3ee38;
+  background: radial-gradient(ellipse at 12% 10%, #622ab124, transparent 60%), linear-gradient(115deg, #10162d, #081425);
+  color: #f8fbff;
+}
+.pge-service-callout .pge-callout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 285px;
+  align-items: center;
+  gap: 48px;
+  width: min(1060px, calc(100% - 34px));
+  margin: 0 auto;
+}
+.pge-service-callout .pge-callout-label {
+  margin: 0 0 12px;
+  color: #53def0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.pge-service-callout .pge-callout-title {
+  max-width: 680px;
+  margin: 0 0 16px;
+  color: #f8fbff;
+  font-size: clamp(29px, 3.6vw, 43px);
+  font-weight: 850;
+  letter-spacing: -.03em;
+  line-height: 1.12;
+}
+.pge-service-callout .pge-callout-copy {
+  max-width: 700px;
+  margin: 0;
+  color: #c6d2e5;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.pge-service-callout .pge-callout-action {
+  padding-left: 28px;
+  border-left: 1px solid #ffffff21;
+}
+.pge-service-callout .pge-callout-call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 82px;
+  padding: 15px 12px;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #862bec, #157aff);
+  box-shadow: 0 12px 30px #0076ff23;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.pge-service-callout .pge-callout-call span { font-size: 14px; font-weight: 750; }
+.pge-service-callout .pge-callout-call strong { color: #fff; font-size: 21px; font-weight: 850; white-space: nowrap; }
+.pge-service-callout .pge-callout-call:hover { filter: brightness(1.1); }
+.pge-service-callout .pge-callout-call:focus-visible { outline: 3px solid #53def0; outline-offset: 5px; }
+.pge-service-callout .pge-callout-note {
+  margin: 14px 0 0;
+  color: #aebdd4;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .pge-service-callout { padding: 30px 0; }
+  .pge-service-callout .pge-callout-layout { grid-template-columns: 1fr; gap: 23px; }
+  .pge-service-callout .pge-callout-action { max-width: 420px; padding: 0; border: 0; }
+  .pge-service-callout .pge-callout-copy { font-size: 16px; }
+  .pge-service-callout .pge-callout-call { min-height: 72px; }
+  .pge-service-callout .pge-callout-note { text-align: left; }
+}
