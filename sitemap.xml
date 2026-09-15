@@ -129,6 +129,7 @@
 
   <url>
     <loc>https://pharmaglobaleng.com/solutions/tablet-picking.html</loc>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -16729,5 +16730,17 @@
   <url>
     <loc>https://pharmaglobaleng.com/about/</loc>
     <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/solutions/tablet-punch-filming.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/services/tablet-press-sticking-troubleshooting.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 </urlset>
