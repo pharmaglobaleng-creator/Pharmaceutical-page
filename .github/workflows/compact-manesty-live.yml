@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/compact-manesty-live.yml'
+      - 'scripts/compact_manesty_live.py'
   workflow_dispatch:
 
 permissions:
