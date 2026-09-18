@@ -1,0 +1,100 @@
+name: Live site browser health
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-site-browser-health.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Chromium
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Test live PharmaGlobalEng in Chromium
+        run: |
+          cat > /tmp/live_health.py <<'PY'
+          import asyncio, json
+          from playwright.async_api import async_playwright
+
+          BASE = "https://pharmaglobaleng.com"
+          ROUTES = ["/", "/parts/", "/parts/manesty/", "/parts/fette/"]
+          PROFILES = [
+              ("desktop", {"viewport": {"width": 1440, "height": 900}}),
+              ("mobile", {"viewport": {"width": 390, "height": 844}, "is_mobile": True, "has_touch": True}),
+          ]
+
+          async def main():
+              report = []
+              async with async_playwright() as p:
+                  browser = await p.chromium.launch()
+                  for profile, opts in PROFILES:
+                      context = await browser.new_context(**opts)
+                      for route in ROUTES:
+                          page = await context.new_page()
+                          console_errors, page_errors, failed, bad = [], [], [], []
+                          page.on("console", lambda msg: console_errors.append(msg.text) if msg.type == "error" else None)
+                          page.on("pageerror", lambda exc: page_errors.append(str(exc)))
+                          page.on("requestfailed", lambda req: failed.append({"url": req.url, "type": req.resource_type, "error": req.failure}))
+                          page.on("response", lambda res: bad.append({"url": res.url, "status": res.status, "type": res.request.resource_type}) if res.status >= 400 and res.request.resource_type in {"document","script","stylesheet","image"} else None)
+                          error = None
+                          try:
+                              response = await page.goto(BASE + route, wait_until="networkidle", timeout=60000)
+                              await page.wait_for_timeout(1500)
+                              status = response.status if response else None
+                              title = await page.title()
+                              body = (await page.locator("body").inner_text())[:500]
+                              html_len = len(await page.content())
+                          except Exception as exc:
+                              status, title, body, html_len = None, "", "", 0
+                              error = repr(exc)
+                          item = {
+                              "profile": profile, "route": route, "status": status, "title": title,
+                              "body_preview": body, "html_length": html_len, "navigation_error": error,
+                              "console_errors": console_errors[:20], "page_errors": page_errors[:20],
+                              "failed_requests": failed[:30], "bad_responses": bad[:30],
+                          }
+                          report.append(item)
+                          print(json.dumps(item, indent=2))
+                          await page.close()
+                      await context.close()
+                  await browser.close()
+
+              failures = []
+              for item in report:
+                  if item["status"] != 200 or item["navigation_error"] or item["page_errors"]:
+                      failures.append(item)
+                  critical_bad = [x for x in item["bad_responses"] if x["type"] in {"document","script","stylesheet"}]
+                  critical_failed = [x for x in item["failed_requests"] if x["type"] in {"document","script","stylesheet"}]
+                  if critical_bad or critical_failed:
+                      failures.append(item)
+              with open("/tmp/live-health.json","w") as f:
+                  json.dump(report, f, indent=2)
+              if failures:
+                  raise SystemExit(f"Live browser health failed for {len(failures)} checks")
+              print("Live browser health passed.")
+          asyncio.run(main())
+          PY
+          python /tmp/live_health.py
+
+      - name: Upload browser report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-site-browser-health
+          path: /tmp/live-health.json
+          retention-days: 7
+          if-no-files-found: ignore
