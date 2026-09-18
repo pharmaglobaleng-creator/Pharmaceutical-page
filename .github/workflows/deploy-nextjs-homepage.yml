@@ -53,6 +53,9 @@ jobs:
 
       - name: Verify main has not changed unexpectedly and deploy atomically
         run: |
+          # npm install may create untracked lock/cache files on this migration branch.
+          # Remove only untracked next-app build/install artifacts before switching branches.
+          git clean -fd next-app
           git fetch origin main
           git checkout main
           git reset --hard origin/main
