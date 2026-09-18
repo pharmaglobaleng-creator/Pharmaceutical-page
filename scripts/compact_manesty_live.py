@@ -8,13 +8,24 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "next-app" / "data" / "parts-catalog.json"
 PUBLIC_JSON = ROOT / "catalog-data" / "manesty.json"
 ORIGINAL_DIR = ROOT / "assets" / "images" / "parts" / "manesty"
-OPT_DIR = ROOT / "assets" / "images" / "catalog-thumbs" / "manesty-light-v1"
+THUMBS_DIR = ROOT / "assets" / "images" / "catalog-thumbs"
+OPT_DIR = THUMBS_DIR / "manesty-light-v1"
 TEXT_SUFFIXES = {".html", ".json", ".xml", ".txt", ".js", ".jsx", ".mjs", ".css", ".csv", ".md", ".yml", ".yaml"}
 OLD_PREFIX = "/assets/images/parts/manesty/"
 NEW_PREFIX = "/assets/images/catalog-thumbs/manesty-light-v1/"
 
 def fail(msg):
     raise SystemExit(msg)
+
+def iter_text_files():
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        if ".git" in path.parts or "node_modules" in path.parts:
+            continue
+        if path.suffix.lower() not in TEXT_SUFFIXES:
+            continue
+        yield path
 
 if not DATA.exists():
     fail(f"Missing catalog data: {DATA}")
@@ -50,17 +61,9 @@ if len(mapping) != 1000:
 DATA.write_text(json.dumps(data, indent=2) + "\n")
 PUBLIC_JSON.write_text(json.dumps(parts, separators=(",", ":")))
 
-# Use an exact alternation of the 1,000 known source URLs. This catches the same
-# URL inside relative src attributes, absolute metadata URLs, JSON-LD and text.
 pattern = re.compile("|".join(sorted((re.escape(k) for k in mapping), key=len, reverse=True)))
 changed = []
-for path in ROOT.rglob("*"):
-    if not path.is_file():
-        continue
-    if ".git" in path.parts or "node_modules" in path.parts:
-        continue
-    if path.suffix.lower() not in TEXT_SUFFIXES:
-        continue
+for path in iter_text_files():
     try:
         raw = path.read_text()
     except UnicodeDecodeError:
@@ -71,13 +74,7 @@ for path in ROOT.rglob("*"):
         changed.append(path)
 
 leftovers = []
-for path in ROOT.rglob("*"):
-    if not path.is_file():
-        continue
-    if ".git" in path.parts or "node_modules" in path.parts:
-        continue
-    if path.suffix.lower() not in TEXT_SUFFIXES:
-        continue
+for path in iter_text_files():
     try:
         raw = path.read_text()
     except UnicodeDecodeError:
@@ -93,6 +90,29 @@ if missing:
 
 subprocess.run(["git", "rm", "-r", "--", str(ORIGINAL_DIR.relative_to(ROOT))], cwd=ROOT, check=True)
 
+# Prune only generated catalog thumbnails that are no longer referenced anywhere
+# in the textual site output. Originals outside catalog-thumbs are never touched.
+thumb_ref = re.compile(r"/assets/images/catalog-thumbs/[A-Za-z0-9._/\-]+")
+referenced = set()
+for path in iter_text_files():
+    try:
+        raw = path.read_text()
+    except UnicodeDecodeError:
+        continue
+    referenced.update(m.group(0) for m in thumb_ref.finditer(raw))
+
+removed_thumb_bytes = 0
+removed_thumb_files = 0
+for path in sorted(THUMBS_DIR.rglob("*")):
+    if not path.is_file():
+        continue
+    url = "/" + str(path.relative_to(ROOT)).replace("\\", "/")
+    if url in referenced:
+        continue
+    removed_thumb_bytes += path.stat().st_size
+    removed_thumb_files += 1
+    subprocess.run(["git", "rm", "-f", "--", str(path.relative_to(ROOT))], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
+
 tracked = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).split(b"\0")
 size = 0
 for rel in tracked:
@@ -104,6 +124,8 @@ for rel in tracked:
 print(json.dumps({
     "manesty_records": len(parts),
     "rewritten_text_files": len(changed),
+    "unreferenced_thumbnail_files_removed": removed_thumb_files,
+    "unreferenced_thumbnail_mb_removed": round(removed_thumb_bytes / 1_000_000, 1),
     "tracked_worktree_bytes_after_compaction": size,
     "tracked_worktree_mb_after_compaction": round(size / 1_000_000, 1),
 }, indent=2))
@@ -118,5 +140,10 @@ checks = [
 for p in checks:
     if not p.exists() or p.stat().st_size == 0:
         fail(f"Integrity check failed: {p}")
+
+# Final referenced-thumbnail integrity pass.
+for url in referenced:
+    if not (ROOT / url.lstrip("/")).exists():
+        fail(f"Referenced thumbnail missing after pruning: {url}")
 
 print("Manesty compaction validation passed.")
