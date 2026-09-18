@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/live-site-browser-health.yml'
+      - 'index.html'
+      - 'index.txt'
+      - '__next*.txt'
+      - '_next/**'
   workflow_dispatch:
 
 permissions:
