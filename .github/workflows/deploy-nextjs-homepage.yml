@@ -60,14 +60,16 @@ jobs:
           git checkout main
           git reset --hard origin/main
 
-          rm -rf _next
+          # Keep catalog-specific Next.js chunks already published on main.
+          # Homepage builds add/replace only the chunks they own.
+          mkdir -p _next
           rm -f index.txt __next.__PAGE__.txt __next._full.txt __next._tree.txt
           cp /tmp/pge-next-production/index.html index.html
           cp /tmp/pge-next-production/index.txt index.txt
           cp /tmp/pge-next-production/__next.__PAGE__.txt __next.__PAGE__.txt
           cp /tmp/pge-next-production/__next._full.txt __next._full.txt
           cp /tmp/pge-next-production/__next._tree.txt __next._tree.txt
-          cp -R /tmp/pge-next-production/_next _next
+          cp -R /tmp/pge-next-production/_next/. _next/
           mkdir -p assets/images
           cp /tmp/pge-next-production/assets/images/pge-animated-logo.svg assets/images/pge-animated-logo.svg
 
