@@ -1,0 +1,24 @@
+/* Approved PGE header: one small logo, one international call link, no overlay. */
+[data-pge-header="v1"] .pge-header-identity{display:flex;align-items:center;flex-wrap:nowrap;gap:28px;min-width:0;flex-shrink:0;font-family:Arial,Helvetica,sans-serif}
+[data-pge-header="v1"] a.pge-header-brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin:0;padding:0;color:#f8fbff;text-decoration:none;white-space:nowrap;flex-shrink:0}
+[data-pge-header="v1"] .pge-header-logo{display:block;width:34px;height:30px;max-width:none;object-fit:cover;flex:none;padding:0;border:1px solid #87a4fa;border-radius:8px;background:#f5f5f7;box-shadow:0 0 14px #568cff1f}
+[data-pge-header="v1"] .pge-header-wordmark{font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:900;line-height:1.1;letter-spacing:-.035em;color:#f8fbff}
+[data-pge-header="v1"] .pge-header-wordmark>span{color:#22d3ee}
+[data-pge-header="v1"] a.pge-header-phone{position:static;display:inline-flex;align-items:center;min-height:44px;flex:none;margin:0;padding:0;border:0;background:none;box-shadow:none;color:#f8fbff;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:800;line-height:1.1;letter-spacing:-.025em;white-space:nowrap;text-decoration:none}
+[data-pge-header="v1"] a.pge-header-phone:hover{color:#22d3ee}
+[data-pge-header="v1"] .pge-header-identity a:focus-visible{outline:3px solid #22d3ee;outline-offset:4px;border-radius:5px}
+header[data-pge-header="v1"]>.nav,header[data-pge-header="v1"]>.nav-shell,header[data-pge-header="v1"]>.pc-header-inner,header[data-pge-header="v1"]>.container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;min-height:76px;padding-block:10px;box-sizing:border-box}
+header[data-pge-header="v1"]>.container{width:min(1220px,calc(100% - 34px));margin-inline:auto}
+header[data-pge-header="v1"]>.container>nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px}
+header[data-pge-header="v1"]>.nav>.nav-links{flex-wrap:wrap;gap:8px 16px}
+header[data-pge-header="v1"]>.nav-shell>.primary-nav{flex-basis:100%}
+header[data-pge-header="v1"]>.nav-shell>.primary-nav>.nav-list{flex-wrap:wrap}
+header[data-pge-header="v1"]>.pc-header-inner>.pc-cart-trigger{margin-left:auto}
+.pge-header-bar{margin:0;background:#030611;color:#f8fbff;border-bottom:1px solid #ffffff1a;font-family:Arial,Helvetica,sans-serif}
+.pge-header-shell{width:min(1220px,calc(100% - 34px));margin:auto;min-height:76px;padding-block:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;box-sizing:border-box}
+.pge-basic-nav{display:flex;flex-wrap:wrap;gap:20px}
+.pge-basic-nav a{display:inline-flex;align-items:center;min-height:44px;color:#edf3ff;text-decoration:none;font-size:14px;font-weight:700}
+@media(max-width:1250px){header[data-pge-header="v1"]>.nav>.nav-links{flex-basis:100%;padding-top:8px;border-top:1px solid #ffffff1a}header[data-pge-header="v1"]>.nav>.nav-links .hide{display:inline-flex}}
+@media(min-width:1051px) and (max-width:1220px){header[data-pge-header="v1"] .pc-desktop-nav{order:3;flex-basis:100%;padding-top:8px;border-top:1px solid #ffffff1a}}
+@media(max-width:700px){[data-pge-header="v1"] .pge-header-identity{gap:14px;flex-basis:100%}[data-pge-header="v1"] a.pge-header-brand{gap:8px}[data-pge-header="v1"] .pge-header-logo{width:28px;height:27px;border-radius:7px}[data-pge-header="v1"] .pge-header-wordmark{font-size:17px}[data-pge-header="v1"] a.pge-header-phone{font-size:13px}header[data-pge-header="v1"]>.nav,header[data-pge-header="v1"]>.nav-shell,header[data-pge-header="v1"]>.pc-header-inner,header[data-pge-header="v1"]>.container,.pge-header-shell{width:calc(100% - 24px);min-height:64px;gap:4px 12px;padding-block:8px}header[data-pge-header="v1"]>.nav>.nav-links{width:100%;justify-content:flex-start;gap:6px 18px;padding-top:8px}header[data-pge-header="v1"]>.nav>.nav-links a{display:inline-flex;align-items:center;min-height:40px;font-size:13px}header[data-pge-header="v1"]>.nav-shell>.menu-toggle{margin-left:auto}header[data-pge-header="v1"]>.pc-header-inner>.pc-cart-trigger{margin-left:auto}.pge-basic-nav{width:100%;border-top:1px solid #ffffff1a;padding-top:6px}}
+@media(max-width:360px){[data-pge-header="v1"] .pge-header-identity{gap:12px}[data-pge-header="v1"] a.pge-header-brand{gap:6px}[data-pge-header="v1"] .pge-header-logo{width:25px;height:25px}[data-pge-header="v1"] .pge-header-wordmark{font-size:15px}[data-pge-header="v1"] a.pge-header-phone{font-size:12px}}

@@ -7,7 +7,7 @@ function getAttribute(attrs, name) {
 }
 
 function readLegacyHomepage() {
-  const sourcePath = path.join(process.cwd(), '..', 'index.html');
+  const sourcePath = path.join(process.cwd(), 'source', 'homepage.html');
   const source = fs.readFileSync(sourcePath, 'utf8');
 
   const bodyMatch = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
