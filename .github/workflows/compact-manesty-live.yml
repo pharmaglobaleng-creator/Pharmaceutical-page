@@ -1,0 +1,64 @@
+name: Compact published Manesty assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/compact-manesty-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: compact-published-manesty-assets
+  cancel-in-progress: false
+
+jobs:
+  compact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Verify current branch head
+        run: |
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+
+      - name: Switch Manesty delivery to existing optimized WebP files
+        run: python3 scripts/compact_manesty_live.py
+
+      - name: Validate no broken Manesty source references
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('.')
+          data = json.loads((root/'next-app/data/parts-catalog.json').read_text())
+          rows = [p for p in data['parts'] if p.get('brand') == 'manesty']
+          assert len(rows) == 1000
+          for p in rows:
+              image = p.get('image','')
+              assert image.startswith('/assets/images/catalog-thumbs/manesty-light-v1/')
+              assert (root/image.lstrip('/')).exists(), (p.get('sku'), image)
+          assert not (root/'assets/images/parts/manesty').exists()
+          print('Validated 1000 optimized Manesty image references.')
+          PY
+
+      - name: Commit production compaction
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "Production is already compacted."
+            exit 0
+          fi
+          git commit -m "Compact Manesty assets below GitHub Pages size limit"
+          git push origin HEAD:main
