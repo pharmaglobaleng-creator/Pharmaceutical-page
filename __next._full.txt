@@ -1,9 +1,10 @@
 1:"$Sreact.fragment"
-2:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
-3:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
-a:I[68027,["/_next/static/chunks/3fntmmi971322.js"],"default",1]
-:HL["/_next/static/chunks/1ywccti8eh6rv.css","style"]
-4:T3462,
+2:I[79520,["/_next/static/chunks/44oxwbh__ebkl.js"],""]
+3:I[39756,["/_next/static/chunks/44oxwbh__ebkl.js"],"default"]
+4:I[37457,["/_next/static/chunks/44oxwbh__ebkl.js"],"default"]
+b:I[68027,["/_next/static/chunks/44oxwbh__ebkl.js"],"default",1]
+:HL["/_next/static/chunks/2ill3uo_nn06r.css","style"]
+5:T3462,
 :root {
   --bg:#030611;
   --panel:#071126;
@@ -376,14 +377,14 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
     right: 12px;
   }
 }
-0:{"P":null,"c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1ywccti8eh6rv.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3fntmmi971322.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en-US","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5",["$L6","$L7"]],null,"$L8"]}],{},null,false,null]},null,false,null],"$L9",false]],"m":"$undefined","G":["$a",["$Lb"]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"U_j5tVTX8c-77PeHKVfZ1"}
-f:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
-10:"$Sreact.suspense"
-12:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
-14:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
-c:Taa93,
+0:{"P":null,"c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2ill3uo_nn06r.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/44oxwbh__ebkl.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en-US","children":["$","body",null,{"children":[["$","$L2",null,{"id":"pge-analytics","src":"/assets/js/pge-analytics.js","strategy":"afterInteractive"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://pharmaglobaleng.com/#organization\",\"name\":\"PharmaGlobalEng\",\"url\":\"https://pharmaglobaleng.com/\",\"description\":\"Pharmaceutical tablet tooling, replacement parts, restoration, precision polishing, surface engineering, coatings, and tablet compression support.\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pharmaglobaleng.com/assets/images/about-pge-logo.svg\"}},{\"@type\":\"WebSite\",\"@id\":\"https://pharmaglobaleng.com/#website\",\"url\":\"https://pharmaglobaleng.com/\",\"name\":\"PharmaGlobalEng\",\"publisher\":{\"@id\":\"https://pharmaglobaleng.com/#organization\"},\"inLanguage\":\"en-US\"}]}"}}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],"$L6",["$L7","$L8"]],null,"$L9"]}],{},null,false,null]},null,false,null],"$La",false]],"m":"$undefined","G":["$b",["$Lc"]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"2edeqz5ov0QSXRjBvORGS"}
+10:I[97367,["/_next/static/chunks/44oxwbh__ebkl.js"],"OutletBoundary"]
+11:"$Sreact.suspense"
+13:I[97367,["/_next/static/chunks/44oxwbh__ebkl.js"],"ViewportBoundary"]
+15:I[97367,["/_next/static/chunks/44oxwbh__ebkl.js"],"MetadataBoundary"]
+d:Taa93,
 
-<header data-pge-header="v1" class="site-header">
+<header class="site-header" data-pge-header="v1">
   <div class="nav-shell">
     <div class="pge-header-identity"><a class="pge-header-brand" href="/" aria-label="PharmaGlobalEng home"><img class="pge-header-logo" src="/assets/images/pge-header-logo.webp" width="34" height="30" alt="" decoding="async"><span class="pge-header-wordmark">PharmaGlobal<span>Eng</span></span></a><a class="pge-header-phone" href="tel:+17324397849" aria-label="Call PharmaGlobalEng at +1 (732) 439-7849">+1 (732) 439-7849</a></div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
@@ -547,9 +548,9 @@ c:Taa93,
 
 <p class="kicker">About PharmaGlobalEng</p>
 
-<h1 class="authority-title">
+<h2 class="authority-title">
 Worldwide Pharmaceutical Tablet Tooling Engineering Support
-</h1>
+</h2>
 
 <p class="authority-lead">
 PharmaGlobalEng provides pharmaceutical tablet tooling restoration,
@@ -824,8 +825,8 @@ Contact PharmaGlobalEng
 </main>
 
 
-5:["$","div",null,{"style":{"display":"contents"},"dangerouslySetInnerHTML":{"__html":"$c"}}]
-d:T304f,
+6:["$","div",null,{"style":{"display":"contents"},"dangerouslySetInnerHTML":{"__html":"$d"}}]
+e:T304f,
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -1152,8 +1153,8 @@ d:T304f,
     }
   ]
 }
-6:["$","script","0",{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$d"}}]
-e:Teb9,
+7:["$","script","0",{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$e"}}]
+f:Teb9,
 (() => {
   const nav = document.querySelector('.primary-nav');
   const menuToggle = document.querySelector('.menu-toggle');
@@ -1254,10 +1255,11 @@ e:Teb9,
     });
   }
 })();
-7:["$","script","1",{"type":"$undefined","dangerouslySetInnerHTML":{"__html":"$e"}}]
-8:["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]
-9:["$","$1","h",{"children":[null,["$","$L12",null,{"children":"$L13"}],["$","div",null,{"hidden":true,"children":["$","$L14",null,{"children":["$","$10",null,{"name":"Next.Metadata","children":"$L15"}]}]}],null]}]
-b:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1ywccti8eh6rv.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
-13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-11:null
-15:[["$","title","0",{"children":"Pharmaceutical Tablet Tooling & Surface Engineering | PharmaGlobalEng"}],["$","meta","1",{"name":"description","content":"PharmaGlobalEng provides worldwide pharmaceutical tablet tooling restoration, precision polishing, surface engineering, coatings, engraving optimization, and tablet sticking and picking solutions for manufacturers across global markets."}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"canonical","href":"https://pharmaglobaleng.com/"}],["$","meta","4",{"property":"og:title","content":"Pharmaceutical Tablet Tooling & Surface Engineering | PharmaGlobalEng"}],["$","meta","5",{"property":"og:description","content":"Worldwide tablet tooling restoration, precision polishing, coatings, surface engineering, and compression-performance support for pharmaceutical manufacturers."}],["$","meta","6",{"property":"og:url","content":"https://pharmaglobaleng.com/"}],["$","meta","7",{"property":"og:site_name","content":"PharmaGlobalEng"}],["$","meta","8",{"property":"og:image","content":"https://pharmaglobaleng.com/assets/images/pharmaglobaleng-homepage.jpg"}],["$","meta","9",{"property":"og:image:alt","content":"PharmaGlobalEng pharmaceutical tablet tooling and surface engineering homepage"}],["$","meta","10",{"property":"og:type","content":"website"}],["$","meta","11",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","12",{"name":"twitter:title","content":"Pharmaceutical Tablet Tooling & Surface Engineering | PharmaGlobalEng"}],["$","meta","13",{"name":"twitter:description","content":"Worldwide pharmaceutical tablet tooling restoration, precision polishing, coatings, and surface engineering support."}],["$","meta","14",{"name":"twitter:image","content":"https://pharmaglobaleng.com/assets/images/pharmaglobaleng-homepage.jpg"}]]
+8:["$","script","1",{"type":"$undefined","dangerouslySetInnerHTML":{"__html":"$f"}}]
+9:["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]
+a:["$","$1","h",{"children":[null,["$","$L13",null,{"children":"$L14"}],["$","div",null,{"hidden":true,"children":["$","$L15",null,{"children":["$","$11",null,{"name":"Next.Metadata","children":"$L16"}]}]}],null]}]
+c:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2ill3uo_nn06r.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+17:I[27201,["/_next/static/chunks/44oxwbh__ebkl.js"],"IconMark"]
+12:null
+16:[["$","title","0",{"children":"Tablet Tooling, Polishing & Coatings | PharmaGlobalEng"}],["$","meta","1",{"name":"description","content":"Restore tablet punches and dies with PharmaGlobalEng. Precision polishing, coatings and tooling support to address sticking and picking. Serving manufacturers worldwide."}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"canonical","href":"https://pharmaglobaleng.com/"}],["$","meta","4",{"property":"og:title","content":"Tablet Tooling, Polishing & Coatings | PharmaGlobalEng"}],["$","meta","5",{"property":"og:description","content":"Worldwide tablet tooling restoration, precision polishing, coatings, surface engineering, and compression-performance support for pharmaceutical manufacturers."}],["$","meta","6",{"property":"og:url","content":"https://pharmaglobaleng.com/"}],["$","meta","7",{"property":"og:site_name","content":"PharmaGlobalEng"}],["$","meta","8",{"property":"og:image","content":"https://pharmaglobaleng.com/assets/images/pharmaglobaleng-homepage.webp"}],["$","meta","9",{"property":"og:image:alt","content":"PharmaGlobalEng pharmaceutical tablet tooling and surface engineering homepage"}],["$","meta","10",{"property":"og:type","content":"website"}],["$","meta","11",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","12",{"name":"twitter:title","content":"Tablet Tooling, Polishing & Coatings | PharmaGlobalEng"}],["$","meta","13",{"name":"twitter:description","content":"Worldwide pharmaceutical tablet tooling restoration, precision polishing, coatings, and surface engineering support."}],["$","meta","14",{"name":"twitter:image","content":"https://pharmaglobaleng.com/assets/images/pharmaglobaleng-homepage.webp"}],["$","link","15",{"rel":"icon","href":"/assets/images/pge-header-logo.webp"}],["$","$L17","16",{}]]
