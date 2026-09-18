@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import json
-import os
 import re
 import subprocess
 from pathlib import Path
@@ -48,12 +47,12 @@ for p in parts:
 if len(mapping) != 1000:
     fail(f"Expected 1000 distinct Manesty image mappings, found {len(mapping)}")
 
-# Update generated public Manesty JSON from the canonical data.
 DATA.write_text(json.dumps(data, indent=2) + "\n")
 PUBLIC_JSON.write_text(json.dumps(parts, separators=(",", ":")))
 
-# Rewrite only exact Manesty image URLs throughout textual site files.
-pattern = re.compile(r"/assets/images/parts/manesty/[^\s\"'<>),]+")
+# Use an exact alternation of the 1,000 known source URLs. This catches the same
+# URL inside relative src attributes, absolute metadata URLs, JSON-LD and text.
+pattern = re.compile("|".join(sorted((re.escape(k) for k in mapping), key=len, reverse=True)))
 changed = []
 for path in ROOT.rglob("*"):
     if not path.is_file():
@@ -66,12 +65,11 @@ for path in ROOT.rglob("*"):
         raw = path.read_text()
     except UnicodeDecodeError:
         continue
-    new_raw = pattern.sub(lambda m: mapping.get(m.group(0), m.group(0)), raw)
+    new_raw = pattern.sub(lambda m: mapping[m.group(0)], raw)
     if new_raw != raw:
         path.write_text(new_raw)
         changed.append(path)
 
-# Confirm every old URL has been removed from public/textual output.
 leftovers = []
 for path in ROOT.rglob("*"):
     if not path.is_file():
@@ -89,14 +87,12 @@ for path in ROOT.rglob("*"):
 if leftovers:
     fail("Old Manesty image references remain: " + ", ".join(leftovers[:25]))
 
-# Ensure every replacement file exists before removing originals.
 missing = [new for new in mapping.values() if not (ROOT / new.lstrip("/")).exists()]
 if missing:
     fail("Missing replacement files: " + ", ".join(missing[:10]))
 
 subprocess.run(["git", "rm", "-r", "--", str(ORIGINAL_DIR.relative_to(ROOT))], cwd=ROOT, check=True)
 
-# Conservative published-tree budget. The prior Pages artifact was ~1.53 GB.
 tracked = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).split(b"\0")
 size = 0
 for rel in tracked:
@@ -114,7 +110,6 @@ print(json.dumps({
 if size >= 950_000_000:
     fail(f"Compacted worktree is still too large: {size} bytes")
 
-# Basic integrity checks on representative surfaces.
 checks = [
     ROOT / "parts" / "manesty" / "index.html",
     ROOT / "catalog-data" / "manesty.json",
