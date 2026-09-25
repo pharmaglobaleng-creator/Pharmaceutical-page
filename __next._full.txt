@@ -4,7 +4,7 @@
 4:I[37457,["/_next/static/chunks/44oxwbh__ebkl.js"],"default"]
 b:I[68027,["/_next/static/chunks/44oxwbh__ebkl.js"],"default",1]
 :HL["/_next/static/chunks/2ill3uo_nn06r.css","style"]
-5:T3462,
+5:T3b9c,
 :root {
   --bg:#030611;
   --panel:#071126;
@@ -185,76 +185,54 @@ body{
   outline:3px solid var(--cyan);
   outline-offset:3px;
 }
-.service-card-link{
-  --card-rx:0deg;
-  --card-ry:0deg;
-  --light-x:50%;
-  --light-y:50%;
-  z-index:4;
-  border-radius:16px;
-  transform-style:preserve-3d;
-  transform:perspective(620px) rotateX(var(--card-rx)) rotateY(var(--card-ry)) translateZ(0) scale(1);
-  transition:transform .12s ease,box-shadow .18s ease,backdrop-filter .18s ease;
-  will-change:transform;
-}
-.service-card-link::before,.service-card-link::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:inherit;
-  pointer-events:none;
-  opacity:0;
-  transition:opacity .18s ease;
-}
-.service-card-link::before{
-  background:radial-gradient(circle at var(--light-x) var(--light-y),rgba(255,255,255,.5) 0,rgba(34,211,238,.28) 12%,rgba(121,76,255,.18) 27%,transparent 52%);
-  mix-blend-mode:screen;
-}
-.service-card-link::after{
-  inset:-3px;
-  border:2px solid rgba(34,211,238,.86);
-  box-shadow:inset 0 0 24px rgba(157,53,255,.55),0 0 28px rgba(34,211,238,.72),0 26px 55px rgba(121,76,255,.48);
-}
-.service-card-link:hover,.service-card-link:focus-visible{
-  z-index:12;
-  transform:perspective(620px) rotateX(var(--card-rx)) rotateY(var(--card-ry)) translateZ(54px) scale(1.075);
-  backdrop-filter:brightness(1.28) saturate(1.38) contrast(1.05);
-  box-shadow:0 34px 65px rgba(0,0,0,.72);
-}
-.service-card-link:hover::before,.service-card-link:hover::after,
-.service-card-link:focus-visible::before,.service-card-link:focus-visible::after{opacity:1}
-.tablet-punch-cursor{
-  position:absolute;
-  z-index:30;
-  width:34px;
-  height:48px;
-  color:#f6fbff;
-  opacity:0;
-  pointer-events:none;
-  transform:translate(-12px,-8px) rotate(-28deg);
-  filter:drop-shadow(0 7px 8px rgba(34,211,238,.85)) drop-shadow(0 0 15px rgba(157,53,255,.7));
-  transition:opacity .12s ease;
-}
-.visual-shell.punch-effects-active,.visual-shell.punch-effects-active .service-card-link{cursor:none}
-.visual-shell.punch-effects-active:hover .tablet-punch-cursor{opacity:1}
-.service-card-1{left:2.75%;top:34.7%;width:22.1%;height:14.6%}
-.service-card-2{left:26.3%;top:34.7%;width:21.5%;height:14.6%}
-.service-card-3{left:49.3%;top:34.7%;width:22.2%;height:14.6%}
-.service-card-4{left:73%;top:34.7%;width:24.2%;height:14.6%}
-.service-card-5{left:2.75%;top:50.35%;width:22.1%;height:14.75%}
-.service-card-6{left:26.3%;top:50.35%;width:21.5%;height:14.75%}
-.service-card-7{left:49.3%;top:50.35%;width:22.2%;height:14.75%}
-.service-card-8{left:73%;top:50.35%;width:24.2%;height:14.75%}
-.home-link{left:29.8%;top:1.2%;width:4.8%;height:3.3%}
-.services-link{left:36.4%;top:1.2%;width:8%;height:3.3%}
-.solutions-link{left:46.1%;top:1.2%;width:8%;height:3.3%}
-.knowledge-link{left:55.5%;top:1.2%;width:13%;height:3.3%}
-.about-link{left:70.1%;top:1.2%;width:7%;height:3.3%}
-.contact-link{left:78%;top:1.2%;width:6%;height:3.3%}
-.header-cta{left:84.7%;top:.75%;width:13.2%;height:3.8%}
-.hero-cta{left:3%;top:25.2%;width:19%;height:4.2%}
-.hero-services{left:24.1%;top:25.2%;width:18%;height:4.2%}
-.bottom-cta{left:17%;top:93%;width:17%;height:3%}
+.home-live{--home-line:rgba(132,110,255,.3);width:min(1320px,calc(100% - 48px));margin:0 auto;padding:44px 0 64px;cursor:auto}
+.home-live a{color:inherit;text-decoration:none;cursor:pointer}
+.home-live a:focus-visible{outline:3px solid #22d3ee;outline-offset:5px}
+.home-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center;padding:18px 0 56px}
+.home-eyebrow{color:#63d8f0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin:0 0 20px}
+.home-hero h1{font-size:clamp(36px,4.5vw,66px);line-height:1.06;letter-spacing:-.04em;margin:0 0 24px}
+.home-hero h1 span{color:#b38aff}
+.home-intro{font-size:18px;line-height:1.75;color:#c4c8d8;max-width:600px}
+.home-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.home-live .home-button{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:50px;padding:14px 22px;border:1px solid #7961ca;border-radius:10px;font-weight:750;background:#0c1225}
+.home-live .home-button.primary{background:linear-gradient(110deg,#7f27d4,#5346db);border-color:#ac7cf2}
+.home-live .home-button:hover{background:#262044;border-color:#22d3ee}
+.home-art{display:block;border:1px solid var(--home-line);border-radius:22px;overflow:hidden;background:#020510}
+.home-art-crop{position:relative;display:block;aspect-ratio:524/428;overflow:hidden}
+.home-art-crop img{position:absolute;width:195.420%;max-width:none;height:auto;left:-95.420%;top:-18.692%;margin:0}
+.home-art-caption{display:flex;justify-content:space-between;gap:12px;padding:18px 22px;background:#091023;color:#dcd5fa;font-size:14px}
+.home-art:hover{border-color:#22d3ee}
+.home-section{padding:40px 0;border-top:1px solid var(--home-line)}
+.home-section h2,.home-panel h2,.home-contact h2{font-size:clamp(28px,3vw,40px);line-height:1.16;letter-spacing:-.025em;margin:0 0 18px}
+.home-service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:30px}
+.home-service{display:flex;flex-direction:column;gap:14px;padding:24px;border:1px solid var(--home-line);border-radius:16px;background:linear-gradient(145deg,#101329,#060b19);min-height:238px}
+.home-service:hover,.home-industries a:hover,.home-problems a:hover{border-color:#22d3ee;background:#101c32}
+.home-service .home-number{color:#9b8ad3;font:13px/1.4 monospace;letter-spacing:.1em}
+.home-service h3{font-size:20px;line-height:1.3;margin:0}
+.home-service p{font-size:15px;line-height:1.65;color:#c4c8d8;margin:0}
+.home-service .home-more{color:#bcb0ff;font-weight:700;font-size:14px;margin-top:auto;padding-top:8px}
+.home-support{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 48px}
+.home-support a{padding:20px;border:1px solid var(--home-line);border-radius:12px;color:#e8e4ff;font-size:15px;background:#090e20}
+.home-support a:hover{border-color:#22d3ee}
+.home-support small{display:block;color:#aeb9cf;line-height:1.6;margin-top:5px}
+.home-panels{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}
+.home-panel{padding:30px;border:1px solid var(--home-line);border-radius:18px;background:linear-gradient(145deg,#101329,#060b19)}
+.home-problems{list-style:none;margin:24px 0;padding:0;display:grid;gap:8px}
+.home-problems a{display:flex;justify-content:space-between;gap:16px;padding:12px 14px;border:1px solid #253047;border-radius:8px;min-height:46px;font-size:15px}
+.home-problems a span{color:#53d0e9}
+.home-industries{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.home-industries a{display:flex;align-items:center;min-height:90px;line-height:1.5;padding:18px;border:1px solid #253047;border-radius:10px}
+.home-panel>p:not(.home-eyebrow){color:#c4c8d8;line-height:1.7}
+.home-contact{margin-top:32px;padding:36px;border:1px solid #6e46b3;border-radius:18px;background:linear-gradient(110deg,#1c1235,#071a2b)}
+.home-contact>p{color:#c4c8d8;line-height:1.7}
+.home-contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.home-contact-grid a{display:block;padding:20px;border:1px solid #4e4777;border-radius:12px;background:#080e20;overflow-wrap:anywhere}
+.home-contact-grid a:hover{border-color:#22d3ee}
+.home-contact-grid strong{display:block;margin-bottom:8px;font-size:17px}
+.home-contact-grid span{color:#b9d4e5;font-size:15px;line-height:1.6}
+.fact-card{position:relative}.fact-card a{display:inline-block;margin-top:12px;color:#22d3ee;font-size:14px;font-weight:700;text-decoration:none}.fact-card a::after{content:"";position:absolute;inset:0;border-radius:inherit}.fact-card:focus-within{outline:3px solid #22d3ee;outline-offset:3px}
+@media(max-width:1000px){.home-service-grid{grid-template-columns:repeat(2,1fr)}.home-hero{gap:24px}.home-support{grid-template-columns:repeat(2,1fr)}.home-panels{grid-template-columns:1fr}.home-contact-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.home-live{width:calc(100% - 32px);padding-top:24px}.home-hero{grid-template-columns:1fr;padding-bottom:30px}.home-hero h1{font-size:38px}.home-service-grid{grid-template-columns:1fr}.home-service{min-height:0}.home-panel,.home-contact{padding:22px}.home-industries{grid-template-columns:1fr 1fr}.home-actions{flex-direction:column}.home-support{grid-template-columns:1fr 1fr}.home-support a{padding:15px}.home-intro{font-size:17px}}
 .faq-section{
   max-width:1100px;
   margin:0 auto;
@@ -292,19 +270,6 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
   overflow:hidden!important;clip:rect(0,0,0,0)!important;
   white-space:nowrap!important;border:0!important;
 }
-@media(max-width:700px){
-  .visual-shell{overflow-x:auto}
-  .masterpiece{min-width:920px}
-  .hotspot{display:none}
-  .service-card-link{display:block}
-  .tablet-punch-cursor{display:none}
-}
-@media(pointer:coarse),(prefers-reduced-motion:reduce){
-  .tablet-punch-cursor{display:none}
-  .visual-shell.punch-effects-active,.visual-shell.punch-effects-active .service-card-link{cursor:auto}
-  .service-card-link{transform:none!important;transition:none}
-}
-
 /* Premium semantic homepage content */
 .authority-section{padding:96px 24px;position:relative;overflow:hidden;background:#030611}
 .authority-section.alt{background:#050a18}
@@ -382,7 +347,7 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
 11:"$Sreact.suspense"
 13:I[97367,["/_next/static/chunks/44oxwbh__ebkl.js"],"ViewportBoundary"]
 15:I[97367,["/_next/static/chunks/44oxwbh__ebkl.js"],"MetadataBoundary"]
-d:Taa93,
+d:Td627,
 
 <header class="site-header" data-pge-header="v1">
   <div class="nav-shell">
@@ -506,42 +471,31 @@ d:Taa93,
 </nav>
 
 <main id="home">
-  <section class="visual-shell" aria-label="PharmaGlobalEng homepage">
-    <img
-      class="pge-animated-logo"
-      src="/assets/images/pge-animated-logo.svg"
-      width="300"
-      height="300"
-      loading="eager"
-      decoding="async"
-      alt="Pharma Global Eng PGE pharmaceutical parts and coating logo"
-    >
-    <img class="masterpiece" src="/assets/images/pharmaglobaleng-homepage.webp" width="1024" height="1536" fetchpriority="high" decoding="async" alt="PharmaGlobalEng pharmaceutical tablet tooling and surface engineering homepage with chrome tooling, purple and blue lighting, service cards, company metrics, industry solutions, and contact calls to action">
-
-    <span class="tablet-punch-cursor" aria-hidden="true">
-      <svg viewBox="0 0 44 62" width="34" height="48">
-        <defs>
-          <linearGradient id="cursor-steel" x1="0" x2="1">
-            <stop offset="0" stop-color="#68788f"/>
-            <stop offset=".28" stop-color="#f8fbff"/>
-            <stop offset=".55" stop-color="#94a5ba"/>
-            <stop offset=".78" stop-color="#ffffff"/>
-            <stop offset="1" stop-color="#59697e"/>
-          </linearGradient>
-        </defs>
-        <path d="M14 3h16l3 9-5 7v24l8 8-4 8H12l-4-8 8-8V19l-5-7z" fill="url(#cursor-steel)" stroke="currentColor" stroke-width="1.3"/>
-        <path d="M15 11h17M16 41h12M11 51h24" fill="none" stroke="#d9f8ff" stroke-width="1.5"/>
-      </svg>
-    </span>
-    <a class="hotspot service-card-link service-card-1" href="/solutions/tablet-sticking-picking.html" aria-label="Tablet Sticking and Picking Solutions"></a>
-    <a class="hotspot service-card-link service-card-2" href="/services/tablet-punch-restoration.html" aria-label="Tablet Punch Restoration"></a>
-    <a class="hotspot service-card-link service-card-3" href="/services/tablet-punch-polishing.html" aria-label="Precision Polishing"></a>
-    <a class="hotspot service-card-link service-card-4" href="/services/engraving-optimization.html" aria-label="Engraving and Embossing Optimization"></a>
-    <a class="hotspot service-card-link service-card-5" href="/services/surface-engineering.html" aria-label="Surface Engineering"></a>
-    <a class="hotspot service-card-link service-card-6" href="/services/tablet-punch-coatings.html" aria-label="Coatings and Surface Optimization"></a>
-    <a class="hotspot service-card-link service-card-7" href="/services/tooling-evaluation.html" aria-label="Tooling Evaluation and Consulting"></a>
-    <a class="hotspot service-card-link service-card-8" href="/services/pharmaceutical-tablet-compression-tooling.html" aria-label="Compression Tooling Support"></a>
-  </section>
+  <section class="home-live" aria-label="PharmaGlobalEng engineering services">
+<div class="home-hero">
+  <div><p class="home-eyebrow">Pharmaceutical tooling &amp; surface engineering</p>
+  <h1>Advanced Solutions for Tablet Compression <span>Performance</span></h1>
+  <p class="home-intro">Tablet punch restoration, precision polishing, coatings, and practical support for sticking and picking. Tell us what you’re seeing in production. We’ll help identify the next step.</p>
+  <div class="home-actions"><a class="home-button primary" href="/contact.html">Request an Evaluation <span aria-hidden="true">→</span></a><a class="home-button" href="/services/">Explore Our Services <span aria-hidden="true">→</span></a></div></div>
+  <a class="home-art" href="/services/pharmaceutical-tablet-compression-tooling.html" aria-label="Explore tablet compression tooling">
+    <span class="home-art-crop"><img src="/assets/images/pharmaglobaleng-homepage.webp" width="1024" height="1536" fetchpriority="high" decoding="async" alt="Illustration of tablet punches and dies"></span>
+    <span class="home-art-caption">Tablet tooling &amp; surface engineering <span aria-hidden="true">↗</span></span>
+  </a>
+</div>
+<div class="home-section"><p class="home-eyebrow">Our expertise</p><h2>Pharmaceutical Engineering Services</h2><div class="home-service-grid"><a class="home-service" href="/solutions/tablet-sticking-picking.html"><span class="home-number" aria-hidden="true">01</span><h3>Tablet Sticking and Picking Solutions</h3><p>Investigate punch-face adhesion, product buildup, and picking around logos and engraving.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a><a class="home-service" href="/services/tablet-punch-restoration.html"><span class="home-number" aria-hidden="true">02</span><h3>Tablet Punch Restoration</h3><p>Evaluate worn or damaged punches and recover serviceable tooling where condition allows.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a><a class="home-service" href="/services/tablet-punch-polishing.html"><span class="home-number" aria-hidden="true">03</span><h3>Precision Polishing</h3><p>Refine contact surfaces while protecting critical dimensions, edges, and engraving.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a><a class="home-service" href="/services/engraving-optimization.html"><span class="home-number" aria-hidden="true">04</span><h3>Engraving and Embossing Optimization</h3><p>Review engraving geometry and surface condition to address product retention.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a><a class="home-service" href="/services/surface-engineering.html"><span class="home-number" aria-hidden="true">05</span><h3>Surface Engineering</h3><p>Improve functional surfaces for release, cleanability, wear, and corrosion resistance.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a><a class="home-service" href="/services/tablet-punch-coatings.html"><span class="home-number" aria-hidden="true">06</span><h3>Coatings and Surface Optimization</h3><p>Select coating options around your tooling, formulation, cleaning, and operating conditions.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a><a class="home-service" href="/services/tooling-evaluation.html"><span class="home-number" aria-hidden="true">07</span><h3>Tooling Evaluation and Consulting</h3><p>Start with your tooling photos, defect history, and production requirements.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a><a class="home-service" href="/services/pharmaceutical-tablet-compression-tooling.html"><span class="home-number" aria-hidden="true">08</span><h3>Compression Tooling Support</h3><p>Get application-specific support for compression tooling and tablet quality.</p><span class="home-more">Explore service <span aria-hidden="true">→</span></span></a></div></div>
+<div class="home-support">
+<a href="/about/">Engineering-led support<small>Meet PharmaGlobalEng →</small></a>
+<a href="/services/tablet-tooling-inspection.html">Tooling inspection<small>Understand the condition →</small></a>
+<a href="/parts/">Replacement parts<small>Explore the parts catalog →</small></a>
+<a href="/contact.html">Worldwide inquiries<small>Discuss your project →</small></a>
+</div>
+<div class="home-panels">
+<div class="home-panel"><p class="home-eyebrow">Problems we solve</p><h2>Solving Complex Tablet Compression Challenges</h2><ul class="home-problems"><li><a href="/solutions/tablet-sticking-picking.html">Tablet sticking to punch faces<span aria-hidden="true">→</span></a></li><li><a href="/solutions/tablet-picking.html">Tablet picking and logo picking<span aria-hidden="true">→</span></a></li><li><a href="/solutions/poor-tablet-release.html">Poor tablet release<span aria-hidden="true">→</span></a></li><li><a href="/solutions/tablet-punch-wear.html">Premature tooling wear<span aria-hidden="true">→</span></a></li><li><a href="/solutions/tablet-punch-corrosion.html">Corrosion and surface damage<span aria-hidden="true">→</span></a></li><li><a href="/services/engraving-optimization.html">Engraving wear and product buildup<span aria-hidden="true">→</span></a></li><li><a href="/solutions/tablet-compression-defects.html">Inconsistent tablet appearance<span aria-hidden="true">→</span></a></li><li><a href="/solutions/compression-defects.html">Compression defects<span aria-hidden="true">→</span></a></li></ul><a class="home-button" href="/solutions/">View All Solutions <span aria-hidden="true">→</span></a></div>
+<div class="home-panel"><p class="home-eyebrow">Industries we serve</p><h2>Supporting Manufacturers Worldwide</h2><p>Application-specific tooling and surface engineering support for solid-dose manufacturing. Select your industry to discuss your requirements.</p><div class="home-industries"><a href="/contact.html">Pharmaceutical manufacturing<span class="sr-only"> — discuss engineering support</span></a><a href="/contact.html">Nutraceuticals<span class="sr-only"> — discuss engineering support</span></a><a href="/contact.html">Biotechnology<span class="sr-only"> — discuss engineering support</span></a><a href="/contact.html">Veterinary pharma<span class="sr-only"> — discuss engineering support</span></a><a href="/contact.html">Contract manufacturing<span class="sr-only"> — discuss engineering support</span></a><a href="/contact.html">Research &amp; development<span class="sr-only"> — discuss engineering support</span></a></div></div>
+</div>
+<div class="home-contact"><p class="home-eyebrow">Start with your tooling challenge</p><h2>Ready to Improve Your Tablet Compression Performance?</h2><p>Share the component, the problem, and your objective. Photos and service history help us begin a preliminary review.</p><a class="home-button primary" href="/contact.html">Request a Tooling Evaluation <span aria-hidden="true">→</span></a>
+<div class="home-contact-grid"><a href="tel:+17324397849"><strong>Call Us</strong><span>+1 (732) 439-7849</span></a><a href="mailto:info@pharmaglobaleng.com"><strong>Email Us</strong><span>info@pharmaglobaleng.com</span></a><a href="mailto:info@pharmaglobaleng.com?subject=Tooling%20photo%20review"><strong>Send Tooling Photos</strong><span>Attach your photos to an email for review →</span></a></div></div>
+</section>
 
 <section id="about" class="authority-section">
 <div class="authority-wrap">
@@ -705,7 +659,7 @@ Contact PharmaGlobalEng
       <h2 class="authority-title">50 Engineering Facts About Tablet Tooling, Sticking, Picking, Restoration, and Surface Performance</h2>
       <p class="authority-lead">These concise technical facts establish clear definitions and practical engineering context. Dedicated pages will expand each topic with diagrams, examples, troubleshooting considerations, and related services.</p>
       <div class="facts-grid">
-        <article class="fact-card"><strong>Tablet sticking</strong><span>Tablet sticking is adhesion across a broader punch-face area and may produce buildup, poor appearance, interrupted release, and unstable production.</span></article><article class="fact-card"><strong>Tablet picking</strong><span>Tablet picking is localized adhesion, commonly concentrated in lettering, logos, score lines, or other recessed punch-face features.</span></article><article class="fact-card"><strong>Sticking and picking differ</strong><span>Sticking usually affects a wider contact area, while picking is concentrated around engraved or recessed geometry.</span></article><article class="fact-card"><strong>Root causes interact</strong><span>Formulation properties, moisture, lubrication, heat, press speed, tooling geometry, and surface condition can interact rather than act independently.</span></article><article class="fact-card"><strong>Surface condition matters</strong><span>Punch-face scratches, pits, corrosion, roughness, and retained product sites can influence adhesion and tablet release.</span></article><article class="fact-card"><strong>Geometry matters</strong><span>Cup depth, compound radii, edge transitions, embossing, and score-line geometry can change local product flow and release behavior.</span></article><article class="fact-card"><strong>Engraving can retain product</strong><span>Narrow spacing, deep recesses, sharp internal corners, and rough engraving walls can increase product-retention risk.</span></article><article class="fact-card"><strong>Polishing must be controlled</strong><span>Improper polishing can soften engraving, round edges, change dimensions, or remove material from critical features.</span></article><article class="fact-card"><strong>Restoration is conditional</strong><span>Tooling should be restored only when remaining dimensions, geometry, structural integrity, and functional limits remain acceptable.</span></article><article class="fact-card"><strong>Replacement is sometimes necessary</strong><span>Cracks, severe edge loss, critical dimensional change, or unrecoverable coating and substrate damage may require replacement.</span></article><article class="fact-card"><strong>Coatings are application-specific</strong><span>No coating is universally best; the formulation, substrate, cleaning method, geometry, and operating environment must be considered.</span></article><article class="fact-card"><strong>CrN is a hard coating</strong><span>Chromium nitride may provide wear, corrosion, and surface-performance benefits in suitable pharmaceutical tooling applications.</span></article><article class="fact-card"><strong>DLC is a coating family</strong><span>Diamond-like carbon coatings are carbon-based surfaces used for low-friction and wear-resistant performance in appropriate applications.</span></article><article class="fact-card"><strong>TiN is not a universal fix</strong><span>Titanium nitride can improve hardness and wear behavior, but it does not automatically resolve every sticking mechanism.</span></article><article class="fact-card"><strong>TiCN has distinct properties</strong><span>Titanium carbonitride offers a different hardness and friction profile and should be selected around the actual application.</span></article><article class="fact-card"><strong>PVD changes the surface system</strong><span>A PVD coating adds a thin engineered layer; performance still depends on substrate condition, preparation, geometry, and service conditions.</span></article><article class="fact-card"><strong>Moisture can increase adhesion</strong><span>Excess moisture or hygroscopic behavior may increase tackiness and influence sticking during compression.</span></article><article class="fact-card"><strong>Low moisture can also matter</strong><span>Over-dry granulation may change compactability, lubrication behavior, and tablet-release characteristics.</span></article><article class="fact-card"><strong>Lubricant blending matters</strong><span>Magnesium stearate level and blending time can influence lubrication, tablet strength, ejection, and sticking behavior.</span></article><article class="fact-card"><strong>Anti-adherents are formulation tools</strong><span>Colloidal silicon dioxide and other anti-adherents may help in some formulations, but tooling and process conditions still require evaluation.</span></article><article class="fact-card"><strong>Binder concentration matters</strong><span>Higher binder levels may increase cohesive and adhesive behavior depending on the formulation and processing route.</span></article><article class="fact-card"><strong>Powder rheology matters</strong><span>Flow, cohesiveness, particle size, and deformation behavior affect die fill, compression, and contact with tooling surfaces.</span></article><article class="fact-card"><strong>Compression force matters</strong><span>Changing compression force can alter tablet density, contact stress, heat generation, and release behavior.</span></article><article class="fact-card"><strong>Dwell time matters</strong><span>The time under peak compression influences consolidation and may affect release behavior in formulation-dependent ways.</span></article><article class="fact-card"><strong>Press speed matters</strong><span>Higher speed changes dwell time, heat accumulation, material flow, and the time available for release.</span></article><article class="fact-card"><strong>Heat can intensify sticking</strong><span>Frictional and process heat may soften or increase tackiness in susceptible materials.</span></article><article class="fact-card"><strong>Filming is not identical to sticking</strong><span>Punch-face filming can create a progressive residue layer and may appear differently from immediate adhesive sticking.</span></article><article class="fact-card"><strong>Corrosion changes performance</strong><span>Corrosion can create pits and irregularities that retain product and accelerate wear or cleaning difficulty.</span></article><article class="fact-card"><strong>Wear can alter tablet quality</strong><span>Worn embossing, cup geometry, edges, or die bores can affect appearance, release, weight consistency, and tooling life.</span></article><article class="fact-card"><strong>Cleaning can damage surfaces</strong><span>Aggressive methods, incompatible chemicals, and abrasive cleaning can change finish, attack coatings, or damage engraving.</span></article><article class="fact-card"><strong>Inspection frequency is risk-based</strong><span>Inspection intervals should reflect production volume, formulation abrasiveness, cleaning, coating history, and prior defects.</span></article><article class="fact-card"><strong>Photography supports triage</strong><span>Clear photographs can support preliminary evaluation, although final recommendations may require physical inspection.</span></article><article class="fact-card"><strong>Surface roughness is not one number</strong><span>An Ra value alone does not fully describe directionality, isolated defects, waviness, pits, or functional contact behavior.</span></article><article class="fact-card"><strong>Lower Ra is not always better</strong><span>An extremely low average roughness does not guarantee better release if geometry, chemistry, coating, or localized defects dominate.</span></article><article class="fact-card"><strong>Tooling metal can interact</strong><span>Substrate composition, hardness, corrosion resistance, and surface condition influence how tooling behaves in production.</span></article><article class="fact-card"><strong>Embossing font matters</strong><span>Character width, spacing, islands, internal corners, and stroke geometry can affect product retention and picking.</span></article><article class="fact-card"><strong>Pre-picking features require control</strong><span>Pre-picking or relief features must balance product release with legibility, strength, and critical tablet design requirements.</span></article><article class="fact-card"><strong>Tablet design affects manufacturability</strong><span>Logo placement, score lines, cup geometry, land, edge design, and embossing should be reviewed for compression performance.</span></article><article class="fact-card"><strong>Feed frames affect powder behavior</strong><span>Feed-frame condition and contact surfaces can influence powder flow, buildup, wear, and consistency before compression.</span></article><article class="fact-card"><strong>Dies also require evaluation</strong><span>Die-bore wear, corrosion, finish, and dimensional condition affect fill, compaction, ejection, and tablet consistency.</span></article><article class="fact-card"><strong>Capsule components have similar concerns</strong><span>Product adhesion, wear, corrosion, cleanability, and dimensional condition also matter in capsule-machine components.</span></article><article class="fact-card"><strong>Stainless contact parts can be restored</strong><span>Chutes, hoppers, and product-contact components may benefit from controlled restoration when dimensions and function remain acceptable.</span></article><article class="fact-card"><strong>Restoration can reduce replacement cost</strong><span>Recovering serviceable tooling may extend useful life and defer replacement when restoration is technically appropriate.</span></article><article class="fact-card"><strong>Restoration cannot create missing integrity</strong><span>Surface improvement cannot compensate for unsafe cracks, unacceptable dimensional loss, or compromised structural features.</span></article><article class="fact-card"><strong>A coating can fail for many reasons</strong><span>Poor substrate preparation, unsuitable coating choice, edge condition, cleaning, impact, corrosion, and application mismatch can all contribute.</span></article><article class="fact-card"><strong>The visible defect may be a symptom</strong><span>Sticking, picking, corrosion, or wear may indicate a broader formulation, process, tooling, or cleaning problem.</span></article><article class="fact-card"><strong>Evaluation should begin with evidence</strong><span>Tooling photos, tablet images, defect location, press conditions, formulation observations, coating history, and cleaning details improve diagnosis.</span></article><article class="fact-card"><strong>Application-specific recommendations are stronger</strong><span>Recommendations should be based on the actual formulation, tooling geometry, surface condition, and operating environment.</span></article><article class="fact-card"><strong>Surface engineering is broader than polishing</strong><span>It can include inspection, restoration, controlled refinement, engraving optimization, coating evaluation, and performance analysis.</span></article><article class="fact-card"><strong>Consistent release supports consistent production</strong><span>Cleaner release can help reduce buildup, interruptions, cosmetic defects, and variability when tooling surface condition is a contributing factor.</span></article>
+        <article class="fact-card"><strong>Tablet sticking</strong><span>Tablet sticking is adhesion across a broader punch-face area and may produce buildup, poor appearance, interrupted release, and unstable production.</span><a href="/solutions/tablet-sticking-picking.html" aria-label="Read more about Tablet sticking">Read more →</a></article><article class="fact-card"><strong>Tablet picking</strong><span>Tablet picking is localized adhesion, commonly concentrated in lettering, logos, score lines, or other recessed punch-face features.</span><a href="/solutions/tablet-picking.html" aria-label="Read more about Tablet picking">Read more →</a></article><article class="fact-card"><strong>Sticking and picking differ</strong><span>Sticking usually affects a wider contact area, while picking is concentrated around engraved or recessed geometry.</span><a href="/solutions/tablet-picking.html" aria-label="Read more about Sticking and picking differ">Read more →</a></article><article class="fact-card"><strong>Root causes interact</strong><span>Formulation properties, moisture, lubrication, heat, press speed, tooling geometry, and surface condition can interact rather than act independently.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Root causes interact">Read more →</a></article><article class="fact-card"><strong>Surface condition matters</strong><span>Punch-face scratches, pits, corrosion, roughness, and retained product sites can influence adhesion and tablet release.</span><a href="/services/surface-engineering.html" aria-label="Read more about Surface condition matters">Read more →</a></article><article class="fact-card"><strong>Geometry matters</strong><span>Cup depth, compound radii, edge transitions, embossing, and score-line geometry can change local product flow and release behavior.</span><a href="/services/engraving-optimization.html" aria-label="Read more about Geometry matters">Read more →</a></article><article class="fact-card"><strong>Engraving can retain product</strong><span>Narrow spacing, deep recesses, sharp internal corners, and rough engraving walls can increase product-retention risk.</span><a href="/services/engraving-optimization.html" aria-label="Read more about Engraving can retain product">Read more →</a></article><article class="fact-card"><strong>Polishing must be controlled</strong><span>Improper polishing can soften engraving, round edges, change dimensions, or remove material from critical features.</span><a href="/services/tablet-punch-polishing.html" aria-label="Read more about Polishing must be controlled">Read more →</a></article><article class="fact-card"><strong>Restoration is conditional</strong><span>Tooling should be restored only when remaining dimensions, geometry, structural integrity, and functional limits remain acceptable.</span><a href="/services/tablet-punch-restoration.html" aria-label="Read more about Restoration is conditional">Read more →</a></article><article class="fact-card"><strong>Replacement is sometimes necessary</strong><span>Cracks, severe edge loss, critical dimensional change, or unrecoverable coating and substrate damage may require replacement.</span><a href="/services/tooling-evaluation.html" aria-label="Read more about Replacement is sometimes necessary">Read more →</a></article><article class="fact-card"><strong>Coatings are application-specific</strong><span>No coating is universally best; the formulation, substrate, cleaning method, geometry, and operating environment must be considered.</span><a href="/services/tablet-punch-coatings.html" aria-label="Read more about Coatings are application-specific">Read more →</a></article><article class="fact-card"><strong>CrN is a hard coating</strong><span>Chromium nitride may provide wear, corrosion, and surface-performance benefits in suitable pharmaceutical tooling applications.</span><a href="/coatings/chromium-nitride-crn.html" aria-label="Read more about CrN is a hard coating">Read more →</a></article><article class="fact-card"><strong>DLC is a coating family</strong><span>Diamond-like carbon coatings are carbon-based surfaces used for low-friction and wear-resistant performance in appropriate applications.</span><a href="/coatings/diamond-like-carbon-dlc.html" aria-label="Read more about DLC is a coating family">Read more →</a></article><article class="fact-card"><strong>TiN is not a universal fix</strong><span>Titanium nitride can improve hardness and wear behavior, but it does not automatically resolve every sticking mechanism.</span><a href="/coatings/titanium-nitride-tin.html" aria-label="Read more about TiN is not a universal fix">Read more →</a></article><article class="fact-card"><strong>TiCN has distinct properties</strong><span>Titanium carbonitride offers a different hardness and friction profile and should be selected around the actual application.</span><a href="/coatings/titanium-carbonitride-ticn.html" aria-label="Read more about TiCN has distinct properties">Read more →</a></article><article class="fact-card"><strong>PVD changes the surface system</strong><span>A PVD coating adds a thin engineered layer; performance still depends on substrate condition, preparation, geometry, and service conditions.</span><a href="/services/tablet-punch-coatings.html" aria-label="Read more about PVD changes the surface system">Read more →</a></article><article class="fact-card"><strong>Moisture can increase adhesion</strong><span>Excess moisture or hygroscopic behavior may increase tackiness and influence sticking during compression.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Moisture can increase adhesion">Read more →</a></article><article class="fact-card"><strong>Low moisture can also matter</strong><span>Over-dry granulation may change compactability, lubrication behavior, and tablet-release characteristics.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Low moisture can also matter">Read more →</a></article><article class="fact-card"><strong>Lubricant blending matters</strong><span>Magnesium stearate level and blending time can influence lubrication, tablet strength, ejection, and sticking behavior.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Lubricant blending matters">Read more →</a></article><article class="fact-card"><strong>Anti-adherents are formulation tools</strong><span>Colloidal silicon dioxide and other anti-adherents may help in some formulations, but tooling and process conditions still require evaluation.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Anti-adherents are formulation tools">Read more →</a></article><article class="fact-card"><strong>Binder concentration matters</strong><span>Higher binder levels may increase cohesive and adhesive behavior depending on the formulation and processing route.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Binder concentration matters">Read more →</a></article><article class="fact-card"><strong>Powder rheology matters</strong><span>Flow, cohesiveness, particle size, and deformation behavior affect die fill, compression, and contact with tooling surfaces.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Powder rheology matters">Read more →</a></article><article class="fact-card"><strong>Compression force matters</strong><span>Changing compression force can alter tablet density, contact stress, heat generation, and release behavior.</span><a href="/solutions/compression-force-optimization.html" aria-label="Read more about Compression force matters">Read more →</a></article><article class="fact-card"><strong>Dwell time matters</strong><span>The time under peak compression influences consolidation and may affect release behavior in formulation-dependent ways.</span><a href="/solutions/dwell-time-optimization.html" aria-label="Read more about Dwell time matters">Read more →</a></article><article class="fact-card"><strong>Press speed matters</strong><span>Higher speed changes dwell time, heat accumulation, material flow, and the time available for release.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Press speed matters">Read more →</a></article><article class="fact-card"><strong>Heat can intensify sticking</strong><span>Frictional and process heat may soften or increase tackiness in susceptible materials.</span><a href="/solutions/tablet-sticking-picking.html" aria-label="Read more about Heat can intensify sticking">Read more →</a></article><article class="fact-card"><strong>Filming is not identical to sticking</strong><span>Punch-face filming can create a progressive residue layer and may appear differently from immediate adhesive sticking.</span><a href="/solutions/tablet-sticking-picking.html" aria-label="Read more about Filming is not identical to sticking">Read more →</a></article><article class="fact-card"><strong>Corrosion changes performance</strong><span>Corrosion can create pits and irregularities that retain product and accelerate wear or cleaning difficulty.</span><a href="/solutions/tablet-punch-corrosion.html" aria-label="Read more about Corrosion changes performance">Read more →</a></article><article class="fact-card"><strong>Wear can alter tablet quality</strong><span>Worn embossing, cup geometry, edges, or die bores can affect appearance, release, weight consistency, and tooling life.</span><a href="/solutions/tablet-punch-wear.html" aria-label="Read more about Wear can alter tablet quality">Read more →</a></article><article class="fact-card"><strong>Cleaning can damage surfaces</strong><span>Aggressive methods, incompatible chemicals, and abrasive cleaning can change finish, attack coatings, or damage engraving.</span><a href="/services/surface-engineering.html" aria-label="Read more about Cleaning can damage surfaces">Read more →</a></article><article class="fact-card"><strong>Inspection frequency is risk-based</strong><span>Inspection intervals should reflect production volume, formulation abrasiveness, cleaning, coating history, and prior defects.</span><a href="/services/tablet-tooling-inspection.html" aria-label="Read more about Inspection frequency is risk-based">Read more →</a></article><article class="fact-card"><strong>Photography supports triage</strong><span>Clear photographs can support preliminary evaluation, although final recommendations may require physical inspection.</span><a href="/services/tooling-evaluation.html" aria-label="Read more about Photography supports triage">Read more →</a></article><article class="fact-card"><strong>Surface roughness is not one number</strong><span>An Ra value alone does not fully describe directionality, isolated defects, waviness, pits, or functional contact behavior.</span><a href="/services/surface-engineering.html" aria-label="Read more about Surface roughness is not one number">Read more →</a></article><article class="fact-card"><strong>Lower Ra is not always better</strong><span>An extremely low average roughness does not guarantee better release if geometry, chemistry, coating, or localized defects dominate.</span><a href="/services/surface-engineering.html" aria-label="Read more about Lower Ra is not always better">Read more →</a></article><article class="fact-card"><strong>Tooling metal can interact</strong><span>Substrate composition, hardness, corrosion resistance, and surface condition influence how tooling behaves in production.</span><a href="/solutions/tool-steel-selection.html" aria-label="Read more about Tooling metal can interact">Read more →</a></article><article class="fact-card"><strong>Embossing font matters</strong><span>Character width, spacing, islands, internal corners, and stroke geometry can affect product retention and picking.</span><a href="/services/engraving-optimization.html" aria-label="Read more about Embossing font matters">Read more →</a></article><article class="fact-card"><strong>Pre-picking features require control</strong><span>Pre-picking or relief features must balance product release with legibility, strength, and critical tablet design requirements.</span><a href="/solutions/tablet-picking.html" aria-label="Read more about Pre-picking features require control">Read more →</a></article><article class="fact-card"><strong>Tablet design affects manufacturability</strong><span>Logo placement, score lines, cup geometry, land, edge design, and embossing should be reviewed for compression performance.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Tablet design affects manufacturability">Read more →</a></article><article class="fact-card"><strong>Feed frames affect powder behavior</strong><span>Feed-frame condition and contact surfaces can influence powder flow, buildup, wear, and consistency before compression.</span><a href="/components/feed-frames.html" aria-label="Read more about Feed frames affect powder behavior">Read more →</a></article><article class="fact-card"><strong>Dies also require evaluation</strong><span>Die-bore wear, corrosion, finish, and dimensional condition affect fill, compaction, ejection, and tablet consistency.</span><a href="/components/tablet-dies.html" aria-label="Read more about Dies also require evaluation">Read more →</a></article><article class="fact-card"><strong>Capsule components have similar concerns</strong><span>Product adhesion, wear, corrosion, cleanability, and dimensional condition also matter in capsule-machine components.</span><a href="/components/capsule-machine-components.html" aria-label="Read more about Capsule components have similar concerns">Read more →</a></article><article class="fact-card"><strong>Stainless contact parts can be restored</strong><span>Chutes, hoppers, and product-contact components may benefit from controlled restoration when dimensions and function remain acceptable.</span><a href="/services/tablet-punch-restoration.html" aria-label="Read more about Stainless contact parts can be restored">Read more →</a></article><article class="fact-card"><strong>Restoration can reduce replacement cost</strong><span>Recovering serviceable tooling may extend useful life and defer replacement when restoration is technically appropriate.</span><a href="/services/tablet-punch-restoration.html" aria-label="Read more about Restoration can reduce replacement cost">Read more →</a></article><article class="fact-card"><strong>Restoration cannot create missing integrity</strong><span>Surface improvement cannot compensate for unsafe cracks, unacceptable dimensional loss, or compromised structural features.</span><a href="/services/tablet-punch-restoration.html" aria-label="Read more about Restoration cannot create missing integrity">Read more →</a></article><article class="fact-card"><strong>A coating can fail for many reasons</strong><span>Poor substrate preparation, unsuitable coating choice, edge condition, cleaning, impact, corrosion, and application mismatch can all contribute.</span><a href="/services/tablet-punch-coatings.html" aria-label="Read more about A coating can fail for many reasons">Read more →</a></article><article class="fact-card"><strong>The visible defect may be a symptom</strong><span>Sticking, picking, corrosion, or wear may indicate a broader formulation, process, tooling, or cleaning problem.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about The visible defect may be a symptom">Read more →</a></article><article class="fact-card"><strong>Evaluation should begin with evidence</strong><span>Tooling photos, tablet images, defect location, press conditions, formulation observations, coating history, and cleaning details improve diagnosis.</span><a href="/services/tooling-evaluation.html" aria-label="Read more about Evaluation should begin with evidence">Read more →</a></article><article class="fact-card"><strong>Application-specific recommendations are stronger</strong><span>Recommendations should be based on the actual formulation, tooling geometry, surface condition, and operating environment.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Application-specific recommendations are stronger">Read more →</a></article><article class="fact-card"><strong>Surface engineering is broader than polishing</strong><span>It can include inspection, restoration, controlled refinement, engraving optimization, coating evaluation, and performance analysis.</span><a href="/services/tablet-punch-polishing.html" aria-label="Read more about Surface engineering is broader than polishing">Read more →</a></article><article class="fact-card"><strong>Consistent release supports consistent production</strong><span>Cleaner release can help reduce buildup, interruptions, cosmetic defects, and variability when tooling surface condition is a contributing factor.</span><a href="/services/tablet-press-troubleshooting.html" aria-label="Read more about Consistent release supports consistent production">Read more →</a></article>
       </div>
     </div>
   </section>
@@ -1154,7 +1108,7 @@ e:T304f,
   ]
 }
 7:["$","script","0",{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$e"}}]
-f:Teb9,
+f:T84c,
 (() => {
   const nav = document.querySelector('.primary-nav');
   const menuToggle = document.querySelector('.menu-toggle');
@@ -1221,39 +1175,7 @@ f:Teb9,
     }
   });
 
-  const visualShell = document.querySelector('.visual-shell');
-  const punchCursor = visualShell?.querySelector('.tablet-punch-cursor');
-  const serviceCards = visualShell ? [...visualShell.querySelectorAll('.service-card-link')] : [];
-  const allowsEffects = window.matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches;
 
-  if (visualShell && punchCursor && allowsEffects) {
-    visualShell.classList.add('punch-effects-active');
-
-    visualShell.addEventListener('pointermove', (event) => {
-      const shellRect = visualShell.getBoundingClientRect();
-      punchCursor.style.left = `${event.clientX - shellRect.left}px`;
-      punchCursor.style.top = `${event.clientY - shellRect.top}px`;
-    });
-
-    serviceCards.forEach((card) => {
-      card.addEventListener('pointermove', (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
-        const y = Math.min(1, Math.max(0, (event.clientY - rect.top) / rect.height));
-        card.style.setProperty('--card-rx', `${((.5 - y) * 30).toFixed(2)}deg`);
-        card.style.setProperty('--card-ry', `${((x - .5) * 36).toFixed(2)}deg`);
-        card.style.setProperty('--light-x', `${(x * 100).toFixed(1)}%`);
-        card.style.setProperty('--light-y', `${(y * 100).toFixed(1)}%`);
-      });
-
-      card.addEventListener('pointerleave', () => {
-        card.style.setProperty('--card-rx', '0deg');
-        card.style.setProperty('--card-ry', '0deg');
-        card.style.setProperty('--light-x', '50%');
-        card.style.setProperty('--light-y', '50%');
-      });
-    });
-  }
 })();
 8:["$","script","1",{"type":"$undefined","dangerouslySetInnerHTML":{"__html":"$f"}}]
 9:["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]
