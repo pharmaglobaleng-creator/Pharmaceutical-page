@@ -1951,28 +1951,28 @@
       "answer": "The pairing connects the visible defect with the actual tool feature and identity. Without it, a damaged tablet alone cannot establish whether the same local condition repeats at one station."
     },
     {
-      "question": "Which guide fits a broad film across the punch face?",
-      "answer": "Use the tablet sticking investigation for broad deposits and their progression. Retain timing, surface history and run conditions rather than treating the film as proof of a single formulation or tooling cause."
+      "question": "What can cause a broad film across several punch faces?",
+      "answer": "Formulation, process conditions and tool surfaces can all contribute. Compare batch and moisture records, lubricant history, compression settings and inspected surfaces before selecting a controlled correction."
     },
     {
-      "question": "Which guide fits repeated loss around a tablet letter?",
-      "answer": "Use the tablet picking investigation and inspect the corresponding engraving. Compare retained material, surface condition and intended geometry before deciding whether a design review or recoverable surface work is justified."
+      "question": "Why does picking recur around the same letter or logo?",
+      "answer": "A repeated local defect warrants comparison of the corresponding engraving, retained material and approved drawing. Check whether it affects every matching feature or only selected tools before deciding between design review and surface recovery."
     },
     {
       "question": "What if the main problem is difficult ejection or band marking?",
       "answer": "Begin with the die-wall binding investigation and retain the sampling stage. Do not automatically classify a sidewall mark or release problem as punch-face sticking without the corresponding evidence."
     },
     {
-      "question": "Should every missing tablet edge be called picking?",
-      "answer": "No. Establish where and when the damage appears and inspect the corresponding tooling. Missing material may be observed after another operation, so appearance alone is insufficient to classify the mechanism."
+      "question": "How is die-wall binding different from punch-face sticking?",
+      "answer": "Binding concerns release at the die wall and may involve band marks or difficult ejection. Punch-face sticking concerns deposits on the punch. Preserve the location and sampling stage rather than treating both as the same defect."
     },
     {
       "question": "Which records preserve the timing of a sticking or picking defect?",
       "answer": "Record the first observed defect, sampling interval, run duration and related operating conditions. Distinguish continuous observation from occasional samples so that the reported onset does not imply more precision than the evidence supports."
     },
     {
-      "question": "Why retain acceptable samples during a defect investigation?",
-      "answer": "Acceptable samples provide a comparison for the intended face and detail under identified conditions. Preserve collection points and tooling identity so they remain meaningful alongside affected samples and inspection results."
+      "question": "Should we increase lubricant to stop sticking?",
+      "answer": "Not automatically. Lubrication can reduce adhesion but can also reduce tablet tensile strength. Review addition and mixing records, and have the formulation team evaluate changes with the required product-quality tests."
     },
     {
       "question": "What should be compared between affected and unaffected punches?",
@@ -1983,52 +1983,52 @@
       "answer": "Identify the exact feature and compare it with the approved drawing after appropriate cleaning. Record whether the same location collects material across several tools, rather than treating every local defect as identical."
     },
     {
-      "question": "Can a polishing tool be used to improvise a different logo?",
-      "answer": "No. Changes to lettering or geometry require review and preservation of the required tablet identity. Reconditioning should not become an undocumented design change made simply to see whether the defect improves."
+      "question": "Can pre-pick or tapered engraving help with picking?",
+      "answer": "They are design options for selected character features. Have the tooling supplier review the affected geometry and preserve required tablet identity; do not improvise an engraving change during polishing."
     },
     {
       "question": "What should be checked before restoring a picking-related surface?",
       "answer": "Establish that inspection supports recoverable damage and that sufficient allowance remains to retain the required geometry. Repeated polishing cannot recreate an engraving or profile already outside its requirements."
     },
     {
-      "question": "Why evaluate broad buildup over successive cycles?",
-      "answer": "Sticking can develop through accumulation during repeated compression. An acceptable brief restart therefore gives limited evidence about a defect that appeared later in the original production record."
+      "question": "Does a mirror-polished punch always release better?",
+      "answer": "No. Some products respond better to a different finish. Evaluate the proposed surface with the actual formulation and dimensional requirements instead of selecting it by visual shine alone."
     },
     {
       "question": "Which formulation and process records belong in the comparison?",
       "answer": "Retain lubricant addition and mixing, moisture observations, ingredient changes, compression conditions and speed. Compare with an acceptable campaign where available and label missing information instead of assuming conditions stayed constant."
     },
     {
-      "question": "Does the comparison guide prescribe a lubricant level or compression force?",
-      "answer": "No. Formulation and quality personnel define authorized studies and acceptance requirements. The guide helps identify which recorded differences deserve investigation without supplying universal operating adjustments for an unidentified product."
+      "question": "Will increasing compression force always reduce sticking?",
+      "answer": "No. Research with some APIs found more sticking at higher pressure. Evaluate the response within approved conditions and check product quality as well as punch deposits before accepting a force change."
     },
     {
-      "question": "How should a proposed intervention be connected to the defect?",
-      "answer": "State the observation it addresses and the requirements it must preserve. A generic instruction to polish or coat is incomplete without the supported surface, geometry or formulation question behind that choice."
+      "question": "Can we compare dwell time using press RPM alone?",
+      "answer": "No. Press and tooling geometry also affect dwell time. Record the machine, head configuration and speed so a comparison does not assume that equal RPM means equal compression history."
     },
     {
-      "question": "Why can simultaneous formulation, engraving and coating changes be inconclusive?",
-      "answer": "The combined project may improve the result without isolating each contribution. An appropriate study design and stated limitations are needed before assigning the improvement to a single treatment or feature."
+      "question": "Is there a universal moisture target for preventing sticking?",
+      "answer": "No. Define moisture measurements and any conditioning study for the formulation. Compare the same test method and sampling point, and retain storage, hold-time and environmental records."
     },
     {
-      "question": "Should upper and lower tablet faces be combined into one finding?",
-      "answer": "Keep them separate initially and retain their tooling identities. A deposit on one face and local damage on the other may involve different features, and lost orientation limits the comparison."
+      "question": "Which punch coating is best for sticking and picking?",
+      "answer": "There is no universal choice. Evaluate the candidate with the formulation, tool material, existing treatment, dimensions and cleaning requirements. Verify release and surface condition over a representative run."
     },
     {
-      "question": "Why collect typical defects as well as the most severe example?",
-      "answer": "The worst rejected tablet may not represent the pattern responsible for most interruptions. Retain representative samples and their collection points so the investigation addresses distribution as well as severity."
+      "question": "Does good powder flow rule out sticking?",
+      "answer": "No. Flow behavior alone does not establish punch release. Review available particle-property and material-change information alongside the tablet and tooling evidence."
     },
     {
       "question": "What if filming improves but one engraved letter still picks?",
       "answer": "Record the two outcomes separately. Investigate the remaining local feature while preserving the broader surface result, rather than declaring the complete problem solved from an overall reduction in rejected tablets."
     },
     {
-      "question": "How can evidence weaken an engraving-damage theory?",
-      "answer": "Compare the actual feature and surface with acceptable tools and the drawing. If the inspection does not support the proposed difference, document its limits and identify another justified comparison instead of retaining an unsupported diagnosis."
+      "question": "Can we change the formulation, coating and engraving together?",
+      "answer": "A designed study may include multiple changes, but a combined improvement alone cannot establish which change caused it. State what the comparison can resolve and retain any uncertainty."
     },
     {
-      "question": "Why keep records that conflict with the first explanation?",
-      "answer": "A complete investigation must account for the whole pattern. Concurrent batch, tooling or cleaning changes can prevent a simple attribution, and conflicting observations help identify where the proposed cause remains uncertain."
+      "question": "What should be included in a request for tooling evaluation?",
+      "answer": "Send paired tablet and punch photographs, tooling identity, drawing requirements, surface-treatment history and relevant production records. State whether the decision concerns surface recovery, engraving, coating or further process investigation."
     },
     {
       "question": "What should a successful trial demonstrate beyond cleaner tooling?",
