@@ -312,6 +312,27 @@ details p{color:var(--muted);line-height:1.7;margin-bottom:0}
 .premium-card h3{margin:0 0 11px;font-size:22px}
 .premium-card p{margin:0;color:var(--muted);line-height:1.7}
 .premium-card a{display:inline-block;margin-top:17px;color:var(--cyan);font-weight:800;text-decoration:none}
+.premium-card,.component-card,.global-card{position:relative;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.premium-card:has(a),.component-card:has(.card-overlay-link),.global-card:has(.card-overlay-link){cursor:pointer}
+.premium-card:has(a):hover,.component-card:has(.card-overlay-link):hover,.global-card:has(.card-overlay-link):hover,
+.premium-card:has(a):focus-within,.component-card:has(.card-overlay-link):focus-within,.global-card:has(.card-overlay-link):focus-within{
+  transform:translateY(-3px);
+  border-color:rgba(34,211,238,.62);
+  box-shadow:0 24px 60px rgba(0,0,0,.35),0 0 0 1px rgba(34,211,238,.14)
+}
+.premium-card>a::after,.card-overlay-link{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  border-radius:inherit;
+}
+.premium-card>a:focus-visible{outline:none}
+.premium-card:has(a:focus-visible),.component-card:has(.card-overlay-link:focus-visible),.global-card:has(.card-overlay-link:focus-visible){
+  outline:3px solid var(--cyan);
+  outline-offset:3px;
+}
+.card-overlay-link{display:block;text-decoration:none}
 .insight{margin-top:44px;padding:30px 32px;border:1px solid rgba(34,211,238,.35);border-radius:22px;background:linear-gradient(135deg,rgba(22,141,255,.13),rgba(157,53,255,.1))}
 .insight strong{display:block;margin-bottom:10px;color:var(--cyan);font-size:14px;letter-spacing:.12em;text-transform:uppercase}
 .insight p{margin:0;font-size:19px;line-height:1.75}
@@ -652,14 +673,14 @@ Contact PharmaGlobalEng
       <h2 class="authority-title">Precision Components Used Across Solid-Dose Manufacturing</h2>
       <p class="authority-lead">PharmaGlobalEng supports pharmaceutical and nutraceutical manufacturers with evaluation, restoration, surface refinement, and performance-focused engineering for tooling and product-contact components.</p>
       <div class="component-grid">
-        <article class="component-card"><strong>Tablet Punches</strong><span>Upper and lower punches, tips, cups, lands, embossing, score lines, and critical contact surfaces.</span></article>
-        <article class="component-card"><strong>Tablet Dies</strong><span>Die bores, entry areas, wear patterns, corrosion, ejection surfaces, and dimensional condition.</span></article>
-        <article class="component-card"><strong>Feed Frames</strong><span>Powder-contact surfaces, buildup areas, wear, cleanability, and product-flow considerations.</span></article>
-        <article class="component-card"><strong>Capsule Components</strong><span>Product-contact and machine components where adhesion, corrosion, wear, and surface condition influence performance.</span></article>
-        <article class="component-card"><strong>Chutes &amp; Hoppers</strong><span>Stainless product-transfer surfaces requiring controlled refinement, restoration, or improved cleanability.</span></article>
-        <article class="component-card"><strong>Product-Contact Parts</strong><span>Specialized pharmaceutical manufacturing components with demanding surface, cleaning, and wear requirements.</span></article>
-        <article class="component-card"><strong>Compression Tooling</strong><span>Application-specific support for tooling performance, inspection, restoration, and release-related challenges.</span></article>
-        <article class="component-card"><strong>Restoration Projects</strong><span>Before-and-after evaluation of components removed from service because of corrosion, wear, or surface damage.</span></article>
+        <article class="component-card"><strong>Tablet Punches</strong><span>Upper and lower punches, tips, cups, lands, embossing, score lines, and critical contact surfaces.</span><a class="card-overlay-link" href="/components/tablet-punches.html" aria-label="Open Tablet Punches"></a></article>
+        <article class="component-card"><strong>Tablet Dies</strong><span>Die bores, entry areas, wear patterns, corrosion, ejection surfaces, and dimensional condition.</span><a class="card-overlay-link" href="/components/tablet-dies.html" aria-label="Open Tablet Dies"></a></article>
+        <article class="component-card"><strong>Feed Frames</strong><span>Powder-contact surfaces, buildup areas, wear, cleanability, and product-flow considerations.</span><a class="card-overlay-link" href="/components/feed-frames.html" aria-label="Open Feed Frames"></a></article>
+        <article class="component-card"><strong>Capsule Components</strong><span>Product-contact and machine components where adhesion, corrosion, wear, and surface condition influence performance.</span><a class="card-overlay-link" href="/components/capsule-machine-components.html" aria-label="Open Capsule Machine Components"></a></article>
+        <article class="component-card"><strong>Chutes &amp; Hoppers</strong><span>Stainless product-transfer surfaces requiring controlled refinement, restoration, or improved cleanability.</span><a class="card-overlay-link" href="/components/" aria-label="Open Chutes and Hoppers"></a></article>
+        <article class="component-card"><strong>Product-Contact Parts</strong><span>Specialized pharmaceutical manufacturing components with demanding surface, cleaning, and wear requirements.</span><a class="card-overlay-link" href="/parts/" aria-label="Open Product Contact Parts"></a></article>
+        <article class="component-card"><strong>Compression Tooling</strong><span>Application-specific support for tooling performance, inspection, restoration, and release-related challenges.</span><a class="card-overlay-link" href="/services/pharmaceutical-tablet-compression-tooling.html" aria-label="Open Compression Tooling"></a></article>
+        <article class="component-card"><strong>Restoration Projects</strong><span>Before-and-after evaluation of components removed from service because of corrosion, wear, or surface damage.</span><a class="card-overlay-link" href="/services/tablet-punch-restoration.html" aria-label="Open Restoration Projects"></a></article>
       </div>
     </div>
   </section>
@@ -711,14 +732,17 @@ Contact PharmaGlobalEng
         <article class="global-card">
           <strong>Remote Preliminary Evaluation</strong>
           <span>International customers can submit tooling photographs, tablet images, defect descriptions, coating history, cleaning methods, press conditions, and desired outcomes for an initial technical review.</span>
+          <a class="card-overlay-link" href="/contact.html" aria-label="Open Remote Preliminary Evaluation"></a>
         </article>
         <article class="global-card">
           <strong>Global Project Coordination</strong>
           <span>Projects can be coordinated around shipment planning, documentation, technical objectives, restoration scope, inspection findings, and return requirements.</span>
+          <a class="card-overlay-link" href="/contact.html" aria-label="Open Global Project Coordination"></a>
         </article>
         <article class="global-card">
           <strong>International Technical Communication</strong>
           <span>Clear engineering summaries, application details, visual documentation, and structured recommendations help support communication across teams, plants, suppliers, and regions.</span>
+          <a class="card-overlay-link" href="/contact.html" aria-label="Open International Technical Communication"></a>
         </article>
       </div>
 
