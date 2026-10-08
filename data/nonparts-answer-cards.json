@@ -1253,8 +1253,8 @@
       "answer": "Keep the tool, substrate, coating, previous surface work, dimensions, and service history distinguishable. A coating name alone does not establish the underlying material or remaining geometry."
     },
     {
-      "question": "What if the current coating cannot be identified?",
-      "answer": "Keep that uncertainty open in the scope. Review available records and determine what assessment is needed before choosing preparation, removal, or another treatment."
+      "question": "Does a surface change after cleaning prove the punch coating failed?",
+      "answer": "No. Record the location, tool identity, prior condition and cleaning cycle, then use an appropriate inspection to distinguish residue, substrate damage and coating damage. Timing alone does not establish the cause. Confirm the coating specification and supplier compatibility guidance before another treatment."
     },
     {
       "question": "Can a coating name on an invoice prove a production defect improved?",
@@ -1273,8 +1273,8 @@
       "answer": "No. Review current integrity, geometry, dimensions, coating history, and proposed preparation before deciding whether another treatment is suitable for the intended application."
     },
     {
-      "question": "What should be clarified before removing an existing coating?",
-      "answer": "Define the known coating, substrate, preparation scope, and checks needed to preserve required tooling attributes. Clarify which findings would stop or change the proposed work."
+      "question": "What records help investigate coating damage after cleaning?",
+      "answer": "Retain coating and substrate identity, previous surface work, before-and-after photographs, cleaning chemistry, concentration, temperature, exposure, rinse, drying and handling records. Compare affected and acceptable tools with similar histories. Mark unknowns explicitly rather than inferring coating identity from color."
     },
     {
       "question": "Does a new coating remove the need to replace damaged tooling?",
@@ -1313,8 +1313,8 @@
       "answer": "Identify the tooling, treatment performed, surfaces covered, agreed inspection findings, handling information, and limitations. Connect it with the customer's subsequent application and use review."
     },
     {
-      "question": "Why keep cleaning instructions with coated tooling records?",
-      "answer": "A later undocumented preparation can weaken comparison with the original treatment result. Keep the agreed handling and cleaning information available for the next campaign."
+      "question": "Should suspected coating damage be polished or recoated immediately?",
+      "answer": "First establish the observed condition and disposition. Extra polishing can change the surface or critical features, and recoating does not explain the original problem. Agree inspection, compatibility, permitted preparation and acceptance checks with the responsible supplier and site team before selecting work."
     },
     {
       "question": "Who approves coated tooling for production use?",
@@ -1379,12 +1379,12 @@
       "answer": "No. Where roughness measurement is included, interpret it with dimensional and visual findings. Record the method and locations rather than treating one average as a complete condition description."
     },
     {
-      "question": "What should a restoration quotation define?",
-      "answer": "Identify tooling quantity, incoming condition, surfaces, inspection basis, proposed work, verification, reporting, and exclusions. Clarify what happens if incoming findings make the proposed treatment inappropriate."
+      "question": "What information is needed to quote punch restoration versus replacement?",
+      "answer": "Provide tool type, quantity, drawing and engraving requirements, material and coating records, photographs, and available inspection results. Ask each supplier to identify included assessment, work, acceptance checks, documentation, delivery and exclusions. Feasibility and price depend on the agreed condition and scope."
     },
     {
-      "question": "Are two restoration quotations automatically equivalent?",
-      "answer": "No. One may cover only polishing while another includes broader assessment and conditional rework. Compare actual scope and documentation before comparing prices and turnaround expectations."
+      "question": "How should restoration and replacement quotes be compared?",
+      "answer": "Compare the same quantity, specification and acceptance requirements, then separate inspection, surface work, coating, documentation and delivery costs. Keep internal downtime estimates and assumptions separate. A lower total is not a saving if the quoted scopes differ or restoration cannot meet the tooling requirements."
     },
     {
       "question": "What are the two parts of final restoration verification?",
@@ -1403,8 +1403,8 @@
       "answer": "Track the original concern, operating conditions, observation method, and duration. State when product or setup changes limit comparison with the condition that prompted the work."
     },
     {
-      "question": "Can a brief favorable run establish remaining tool life?",
-      "answer": "No. It supports only the observed conditions and duration. Avoid turning a short comparison into an unqualified lifetime, universal benefit, or like-new claim."
+      "question": "Can restoration savings or remaining tool life be guaranteed from photographs?",
+      "answer": "Photographs can support an initial discussion but cannot establish every dimension, damage depth or remaining restoration allowance. Confirm suitability through the agreed inspection and compare actual quotes. Do not infer guaranteed savings or remaining campaigns from improved appearance or a short successful run."
     },
     {
       "question": "What if inspection changes a restoration recommendation to replacement?",
@@ -1947,8 +1947,8 @@
       "answer": "Yes. Record broad deposits and localized loss separately so an improvement in one category does not conceal a remaining problem in the other during treatment selection or trial evaluation."
     },
     {
-      "question": "Why pair tablet photographs with the corresponding punches?",
-      "answer": "The pairing connects the visible defect with the actual tool feature and identity. Without it, a damaged tablet alone cannot establish whether the same local condition repeats at one station."
+      "question": "Why can tablet sticking appear after a manufacturing-site transfer?",
+      "answer": "A receiving site can differ in materials, equipment, tooling, process conditions or handling despite prior successful production. The IQ Consortium review identifies transfers as a setting where sticking can emerge. Compare the operations systematically instead of assuming an earlier low-risk assessment excludes the problem."
     },
     {
       "question": "What causes pharmaceutical tablet sticking?",
@@ -1967,8 +1967,8 @@
       "answer": "Binding concerns release at the die wall and may involve band marks or difficult ejection. Punch-face sticking concerns deposits on the punch. Preserve the location and sampling stage rather than treating both as the same defect."
     },
     {
-      "question": "Which records preserve the timing of a sticking or picking defect?",
-      "answer": "Record the first observed defect, sampling interval, run duration and related operating conditions. Distinguish continuous observation from occasional samples so that the reported onset does not imply more precision than the evidence supports."
+      "question": "What should be compared when picking starts at a new manufacturing site?",
+      "answer": "Compare material and lubrication records, moisture methods, tooling and coating history, engraving, press and dwell conditions, feeder setup, environment and hold times. Align sampling stages and defect definitions. Record missing data separately from confirmed differences before selecting a trial."
     },
     {
       "question": "Should we increase lubricant to stop sticking?",
@@ -2027,8 +2027,8 @@
       "answer": "A designed study may include multiple changes, but a combined improvement alone cannot establish which change caused it. State what the comparison can resolve and retain any uncertainty."
     },
     {
-      "question": "What should be included in a request for tooling evaluation?",
-      "answer": "Send paired tablet and punch photographs, tooling identity, drawing requirements, surface-treatment history and relevant production records. State whether the decision concerns surface recovery, engraving, coating or further process investigation."
+      "question": "Does a successful short transfer trial rule out later sticking?",
+      "answer": "No. Compare the trial duration and conditions with the period when buildup previously appeared. Record first deposits, localized picking, cleaning interruptions and required product-quality results. A clean startup supports only that observation; it does not establish sustained performance across a longer campaign."
     },
     {
       "question": "What should a successful trial demonstrate beyond cleaner tooling?",
