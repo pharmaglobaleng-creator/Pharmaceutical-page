@@ -919,8 +919,8 @@
   ],
   "services/tablet-tooling-inspection.html": [
     {
-      "question": "What does tablet tooling inspection establish?",
-      "answer": "It describes observed condition and agreed measurements for the tooling examined. Conclusions depend on the submitted scope, methods, available specifications, and stated inspection limitations."
+      "question": "How should tablet tooling defects be evaluated?",
+      "answer": "Identify the tool and affected feature, document its condition, then distinguish deposits from damage after approved cleaning. Compare dimensions and local findings with the applicable drawing or specification, retaining individual results across the set. Report the method, acceptance criteria and unassessed areas. Inspection supports disposition; it does not by itself prove the production root cause."
     },
     {
       "question": "What should define an inspection before equipment is selected?",
@@ -1229,8 +1229,8 @@
       "answer": "It should identify the observed application problem, why the proposed treatment is a candidate, and how the intended result will be evaluated under relevant conditions."
     },
     {
-      "question": "Does one anti-stick coating suit every formulation?",
-      "answer": "No. Formulation and surface interactions matter. Coating selection should consider the actual product, tooling, cleaning method, and observed release problem rather than assuming a universal treatment."
+      "question": "What is the best coating for tablet punches?",
+      "answer": "There is no single best coating for every tablet formulation. Select for the actual release, wear or corrosion problem, then assess substrate compatibility, coating thickness, geometry and cleaning requirements. Compare candidates using representative production conditions and inspect the treated surface afterward. Hardness or a coating name alone cannot establish the best choice."
     },
     {
       "question": "Is coating hardness alone enough to select an anti-stick treatment?",
@@ -1355,8 +1355,8 @@
       "answer": "Identify its location and distinguish retained material from a remaining surface feature through the agreed assessment. Determine whether removing it would compromise a required tooling attribute."
     },
     {
-      "question": "Can every worn punch be restored?",
-      "answer": "No. Unacceptable remaining geometry, integrity concerns, or unresolved limitations may make restoration inappropriate. The tool's current condition and intended use control the decision."
+      "question": "When should tablet punches be restored rather than replaced?",
+      "answer": "Consider restoration when inspection finds recoverable surface damage and the punch can retain its required dimensions, geometry and structural integrity. Cracks, unacceptable dimensional loss or irrecoverable engraving damage require a replacement or disposition decision. Compare incoming measurements, proposed material removal and post-work acceptance checks before weighing service cost and lead time."
     },
     {
       "question": "Why record prior restoration history?",
@@ -1633,8 +1633,8 @@
   ],
   "solutions/tablet-punch-wear.html": [
     {
-      "question": "What is the starting point for a tablet punch wear assessment?",
-      "answer": "Identify the exact feature that changed and compare it with the drawing, accepted baseline and service history. Include the paired die and observed production symptom before deciding whether reconditioning or replacement is justified."
+      "question": "How can tablet tooling wear be reduced?",
+      "answer": "Reduce avoidable wear through correct setup, compatible cleaning and lubrication, careful handling, protected storage and condition-based inspection. Track individual tools and recurring station patterns against comparable measurements. Match material or surface-treatment changes to the observed wear mechanism. Polishing cannot replace missing material, and no maintenance routine guarantees a fixed tool life."
     },
     {
       "question": "Does loss of shine mean a punch is worn out?",
@@ -1837,8 +1837,8 @@
   ],
   "solutions/tablet-sticking.html": [
     {
-      "question": "What is tablet sticking?",
-      "answer": "Tablet sticking is formulation adhering to the punch face during compression. Identify the deposit location and progression, then compare the corresponding tablets and tooling before choosing a surface or process intervention."
+      "question": "What causes tablet sticking, and how can it be fixed?",
+      "answer": "Tablet sticking occurs when formulation adheres to the punch face. Investigate material moisture, lubricant distribution, punch condition and compression history against an acceptable run. Cleaning, controlled surface work, coating evaluation or a formulation/process trial may be appropriate, depending on the finding. Verify the selected correction over a representative run while checking required tablet quality."
     },
     {
       "question": "How does picking differ from broad punch-face sticking?",
