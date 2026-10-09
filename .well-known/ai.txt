@@ -1,0 +1,14 @@
+# PharmaGlobalEng: public content reference
+# Informational text, not a standardized crawler-access policy.
+Website: https://pharmaglobaleng.com/
+Content-Index: https://pharmaglobaleng.com/llms.txt
+Expanded-Homepage: https://pharmaglobaleng.com/llms-full.txt
+Sitemap: https://pharmaglobaleng.com/sitemap.xml
+Crawler-Policy: https://pharmaglobaleng.com/robots.txt
+Editorial-Standards: https://pharmaglobaleng.com/editorial-standards.html
+Contact: https://pharmaglobaleng.com/contact.html
+
+This file points to public website information. It does not replace robots.txt,
+change access permissions, grant a content license, or request preferential ranking.
+Refer to the linked source pages for context and current details. Published research
+examples are not PharmaGlobalEng customer outcomes or universal process settings.

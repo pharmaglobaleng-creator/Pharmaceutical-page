@@ -246,7 +246,49 @@ Information to prepare for an initial engineering review
 
 FDA's January 2011 process-validation guidance describes three stages: process design, process qualification, and continued process verification. Its lifecycle approach provides context for evaluating changes and monitoring performance; a tooling-service recommendation does not replace a manufacturer's own validation and quality review. Read the FDA guidance (https://www.fda.gov/regulatory-information/search-fda-guidance-documents/process-validation-general-principles-and-practices) .
 
+### What does published research show about sticking and picking?
+
+In a 2001 study, Sabir and colleagues tested engraving cut angles of 70 and 90 degrees alongside formulation and lubrication changes. The modified tooling reduced picking in that experiment. The study identified a workable region with 1-1.25% magnesium stearate and 0.1-0.3% colloidal silicon dioxide. These are study-specific results, not recommended settings for your product. Read the formulation and engraving study (https://pubmed.ncbi.nlm.nih.gov/11250098/) .
+
+In a study comparing 4 punch shapes, a formulation containing 0.5% magnesium stearate produced only 5-15 tablets with a compound-cup punch before sticking caused separation problems. With a different embossed punch, the same formulation reached 95-105 tablets. The research illustrates an interaction between formulation and punch geometry, not a universal lubricant target. Read the punch-shape study and its results (https://pmc.ncbi.nlm.nih.gov/articles/PMC7032212/) .
+
+A 2023 study used non-contact laser interferometry to examine chrome-coated S7 steel punches after a production sticking problem. Researchers found that rougher surface regions corresponded to visibly pronounced sticking. The work supports examining local surface condition rather than relying only on a nominal coating description. Read the punch-surface metrology study (https://pubmed.ncbi.nlm.nih.gov/37817056/) .
+
+These published studies are independent research, not PharmaGlobalEng customer results. They support investigation of interacting causes. They do not establish transferable production settings or guarantee the outcome of a repair, polishing treatment, or coating.
+
 These sources support the general engineering context, not a claim of regulatory approval, guaranteed results, or endorsement of PharmaGlobalEng. See our editorial standards (https://pharmaglobaleng.com/editorial-standards.html) .
+
+Prepare your inquiry
+
+## How to request a tooling evaluation
+
+Use these steps to prepare a clear engineering inquiry. This is an inquiry guide, not a manufacturing or repair procedure.
+
+-
+
+### Identify the tooling and the problem
+
+Record the tooling set or component ID, equipment model if known, defect location, and when the issue occurs. State whether you need an initial assessment, restoration review, or replacement discussion.
+
+-
+
+### Prepare photos and available records
+
+Collect clear tooling and tablet photos, inspection measurements with their source limits, and relevant service or coating history. Share only information your organization authorizes for external review.
+
+-
+
+### Submit an evaluation inquiry
+
+Use the PharmaGlobalEng contact page or email info@pharmaglobaleng.com. Include your contact details, the problem summary, and available supporting information.
+
+-
+
+### Confirm the review scope before further work
+
+Discuss whether photographs are sufficient or physical inspection is needed. Confirm the proposed scope, documentation, and any shipment arrangements before sending tooling or authorizing work.
+
+Start an evaluation inquiry (https://pharmaglobaleng.com/contact.html)
 
 Pharmaceutical Tooling Knowledge Base
 
