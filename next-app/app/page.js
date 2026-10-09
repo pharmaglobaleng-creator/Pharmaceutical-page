@@ -17,6 +17,18 @@ function readLegacyHomepage() {
     content: m[2] || '',
   }));
 
+  // The shared layout owns the Organization and WebSite entities.
+  // Retain only page-specific entities from the published homepage input.
+  for (const script of scripts) {
+    if (getAttribute(script.attrs, 'type') !== 'application/ld+json') continue;
+    const data = JSON.parse(script.content);
+    if (!Array.isArray(data['@graph'])) continue;
+    data['@graph'] = data['@graph'].filter((entity) =>
+      !['https://pharmaglobaleng.com/#organization', 'https://pharmaglobaleng.com/#website'].includes(entity['@id'])
+    );
+    script.content = data['@graph'].length ? JSON.stringify(data).replace(/</g, '\\u003c') : '';
+  }
+
   let body = bodyMatch ? bodyMatch[1] : '';
   body = body.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
 
@@ -30,7 +42,7 @@ export default function HomePage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
       <div style={{ display: 'contents' }} dangerouslySetInnerHTML={{ __html: body }} />
-      {scripts.map((script, index) => {
+      {scripts.filter((script) => script.content || getAttribute(script.attrs, 'src')).map((script, index) => {
         const src = getAttribute(script.attrs, 'src');
         const type = getAttribute(script.attrs, 'type');
         if (src) return <script key={index} src={src} type={type} />;
