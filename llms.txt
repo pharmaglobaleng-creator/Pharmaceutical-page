@@ -24,3 +24,6 @@ Individual part records use PharmaGlobalEng SKU identifiers and, only when suppo
 - [Pharmaceutical Tooling Documentation](https://pharmaglobaleng.com/services/pharmaceutical-tooling-documentation.html)
 
 These resources provide engineering guidance, direct answers, inspection and decision workflows, internal links, and structured data. The site is designed to publish source-supported information rather than unsupported specifications or search-engine-targeted filler.
+
+## Expanded text reference
+- [Expanded homepage content](https://pharmaglobaleng.com/llms-full.txt): The homepage’s published text, FAQs, technical context, and source links. This is not a full catalog export.
