@@ -5,7 +5,7 @@ import Script from 'next/script';
 export const metadata = {
   metadataBase: new URL('https://pharmaglobaleng.com'),
   title: 'Tablet Tooling, Polishing & Coatings | PharmaGlobalEng',
-  description: 'Restore tablet punches and dies with PharmaGlobalEng. Precision polishing, coatings and tooling support to address sticking and picking. Serving manufacturers worldwide.',
+  description: 'Tablet tooling restoration, polishing, coatings and engineering support from PharmaGlobalEng. Explore sticking, picking and tooling evaluation services.',
   alternates: { canonical: '/' },
   icons: { icon: '/assets/images/pge-header-logo.webp' },
   openGraph: {
