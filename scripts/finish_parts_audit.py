@@ -37,6 +37,8 @@ def correct_stokes_source(changes):
 
 def polish(text,sku):
     import polish_part_page_copy as p
+    from enforce_unique_part_titles import concise_title, get_title, set_title_fields
+    text=set_title_fields(text,concise_title(get_title(text)))
     description=p.complete_description(text,sku)
     text=p.clean_residual_placeholders(text)
     text=p.set_description_meta(text,'description',description)

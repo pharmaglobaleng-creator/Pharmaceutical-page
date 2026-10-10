@@ -76,6 +76,7 @@ jobs:
           python -m unittest discover -s scripts -p 'test_*guidance.py'
           python -m unittest discover -s scripts -p 'test_part_identity_normalization.py'
           python -m unittest discover -s scripts -p 'test_editorial_product_pages.py'
+          python -m unittest discover -s scripts -p 'test_finish_parts_audit_titles.py'
       - name: Preserve source snapshot and patch for independent review
         run: |
           python - <<'PY'
@@ -110,4 +111,9 @@ jobs:
           retention-days: 14
       - name: Display summary
         if: always()
-        run: cat audit-output/parts-audit.md >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          if [ -f audit-output/parts-audit.md ]; then
+            cat audit-output/parts-audit.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Audit stopped before a report was generated. See the failing step above." >> "$GITHUB_STEP_SUMMARY"
+          fi
