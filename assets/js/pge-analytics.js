@@ -2,6 +2,28 @@
 (function () {
   'use strict';
 
+  // Navigation works independently of analytics consent, network, and hostname.
+  function addSectionShortcuts() {
+    if (!['/', '/index.html'].includes(window.location.pathname)) return;
+    if (document.querySelector('.pge-section-shortcuts')) return;
+    var target = document.querySelector('#home');
+    if (!target) return;
+    var nav = document.createElement('nav');
+    nav.className = 'pge-section-shortcuts';
+    nav.setAttribute('aria-label', 'Explore this page');
+    [['/parts/', 'Find replacement parts'], ['#components', 'Components'],
+      ['#evidence-and-evaluation', 'Research and evidence'],
+      ['#request-evaluation-guide', 'Request an evaluation'],
+      ['#technical-library', 'Technical guides'], ['#faq', 'FAQs']].forEach(function (item) {
+      if (item[0][0] === '#' && !document.getElementById(item[0].slice(1))) return;
+      var link = document.createElement('a');
+      link.href = item[0]; link.textContent = item[1]; nav.appendChild(link);
+    });
+    target.prepend(nav);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addSectionShortcuts, {once:true});
+  else addSectionShortcuts();
+
   if (!['pharmaglobaleng.com', 'www.pharmaglobaleng.com'].includes(window.location.hostname)) return;
   if (window.pgeAnalyticsInitialized) return;
   window.pgeAnalyticsInitialized = true;
@@ -12,6 +34,20 @@
   window.gtag('config', 'G-1ES31F0R1F', {
     allow_google_signals: false,
     allow_ad_personalization_signals: false
+  });
+
+  // Count inquiry intent, never message contents, addresses, or form values.
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link || event.defaultPrevented) return;
+    var href = link.getAttribute('href') || '';
+    var method = /^tel:/i.test(href) ? 'phone' : /^mailto:/i.test(href) ? 'email' : '';
+    if (!method) return;
+    window.gtag('event', 'inquiry_click', {
+      contact_method: method,
+      page_path: window.location.pathname,
+      inquiry_context: link.classList.contains('pge-cart-email') ? 'quote_cart' : 'page'
+    });
   });
 
   var tag = document.createElement('script');

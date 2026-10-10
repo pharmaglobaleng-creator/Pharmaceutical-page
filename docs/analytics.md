@@ -25,3 +25,17 @@ source / medium = google / organic** when examining organic Google visits.
 Locations are approximate; visits are not the same metric as Search Console
 clicks. Reporting begins after installation and cannot recreate historical
 visitors. Use Realtime to verify initial data collection.
+
+## Inquiry intent (October 2026)
+
+The shared loader records `inquiry_click` for phone and email links on the
+production domain. Parameters are `contact_method` (phone/email), `page_path`
+(pathname only), and `inquiry_context` (quote_cart/page). It never includes link
+URLs, email subjects/bodies, phone numbers, customer names, or form fields.
+These events measure clicks, not completed calls, sent emails, or received leads.
+Canceled clicks are excluded; the initialization guard prevents duplicate listeners.
+Existing cart events and enhanced page-view measurement remain separate.
+
+The loader also adds homepage section shortcuts independently of analytics
+initialization. These shortcuts require JavaScript; existing navigation remains
+available without it. The header stylesheet controls their presentation.
