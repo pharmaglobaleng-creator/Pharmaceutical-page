@@ -178,7 +178,11 @@ def public_pages(root):
         rel=p.relative_to(root).as_posix()
         if rel.startswith(SKIP_PREFIXES):continue
         text=p.read_text(encoding='utf-8')
-        if rel in SKIP_FILES or re.search(r'<meta\b[^>]*http-equiv=["\']refresh["\']',text,re.I):
+        is_google_verification = (
+            re.fullmatch(r'google[0-9a-f]+\.html', rel) is not None
+            and text.strip() == f'google-site-verification: {rel}'
+        )
+        if is_google_verification or rel in SKIP_FILES or re.search(r'<meta\b[^>]*http-equiv=["\']refresh["\']',text,re.I):
             excluded.append(rel);continue
         pages.append(p)
     return pages,excluded
