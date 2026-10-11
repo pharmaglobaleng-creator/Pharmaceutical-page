@@ -1,0 +1,46 @@
+{
+  "site": "https://pharmaglobaleng.com",
+  "date": "2026-10-11",
+  "audit_snapshot": "6acb43d017c82d81d808af16",
+  "implemented": {
+    "distinct_part_titles": 22,
+    "email_link_pages": 4497,
+    "catalog_pagination_pages": 133,
+    "toolkit_contextual_link": true
+  },
+  "validation": {
+    "sitemap_urls": 4859,
+    "canonical_errors": 0,
+    "noindex_in_sitemap": 0,
+    "missing_sitemap_targets": 0,
+    "invalid_jsonld": 0
+  },
+  "retained_with_reason": [
+    {
+      "issue": "Product rich-result eligibility",
+      "reason": "Quotation-only catalog has no verified public prices or reviews. Valid Product data retained; no fabricated offers or ratings."
+    },
+    {
+      "issue": "Blocked filtered search and legacy aliases",
+      "reason": "Intentional exclusions preserved. No noindex URLs found in sitemap."
+    },
+    {
+      "issue": "Low word count and text/HTML ratio",
+      "reason": "No automatic filler. Additional part-specific technical claims require verified drawings, specifications or primary-source research."
+    },
+    {
+      "issue": "Minification notices",
+      "reason": "Not treated as proof of a performance or indexing failure; unchanged to avoid untested asset rewrites."
+    },
+    {
+      "issue": "Backlink authority and search positions",
+      "reason": "Not code errors. Relevant earned references and measurement remain ongoing work."
+    }
+  ],
+  "pending": [
+    "Public deployment verification",
+    "Fresh Semrush crawl; existing scores and issue counts remain historical",
+    "Part-specific evidence enrichment",
+    "Review remaining content-optimization flags with detailed report evidence"
+  ]
+}

@@ -56,6 +56,9 @@ if (newEntries.length) sitemap = sitemap.replace('</urlset>', newEntries.join('\
 fs.writeFileSync(path.join(out, 'sitemap.xml'), sitemap);
 // Manufacturer selection uses native links/search and a small optional cart.
 execFileSync('python3', [path.join(root, 'scripts/optimize_catalog_entry.py'), '--root', out], { stdio: 'inherit' });
+// Keep all numbered catalog routes directly reachable after export.
+execFileSync('python3', [path.join(root, 'scripts/improve_catalog_navigation.py'), '--root', out], { stdio: 'inherit' });
+execFileSync('python3', [path.join(root, 'scripts/protect_contact_links.py'), '--root', out], { stdio: 'inherit' });
 publish.push('sitemap.xml');
 fs.writeFileSync(path.join(app, '.catalog-publish-files.json'), JSON.stringify([...new Set(publish)].sort()));
 fs.writeFileSync(path.join(app, '.catalog-routes.json'), JSON.stringify(routes));

@@ -7,6 +7,7 @@ on:
       - 'scripts/normalize_part_pages_for_search.py'
       - 'scripts/polish_part_page_copy.py'
       - 'scripts/enforce_unique_part_titles.py'
+      - 'scripts/protect_contact_links.py'
       - 'catalog-data/**'
       - 'data/kikusui-parts.csv'
       - 'data/oem-cross-reference-audit.csv'
@@ -55,6 +56,9 @@ jobs:
       - name: Verify unique concise titles after audit
         run: python scripts/enforce_unique_part_titles.py
 
+      - name: Preserve direct public email links after generation
+        run: python scripts/protect_contact_links.py
+
       - name: Verify patch formatting
         run: git diff --check
 
@@ -69,5 +73,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- 'parts/**/index.html' 'docs/parts-search-quality-audit.md'
+          git add -u -- '*.html'
           git commit -m "Normalize part pages for search quality"
           git push origin HEAD:main

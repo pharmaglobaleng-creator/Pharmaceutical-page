@@ -36,7 +36,8 @@ function Schema({ route, details }) {
 
 function Pagination({ route }) {
   if (route.pages <= 1) return null;
-  const numbers = [...new Set([1, route.pages, ...Array.from({ length: 5 }, (_, i) => route.page + i - 2).filter(n => n > 0 && n <= route.pages)])].sort((a,b) => a-b);
+  // Every numbered page is reachable directly; the largest catalog has 40 pages.
+  const numbers = Array.from({ length: route.pages }, (_, i) => i + 1);
   return <nav className="pc-pagination" aria-label="Catalog pages">{route.page > 1 && <a className="pc-page-number" href={catalogPath(route.brand, route.model, route.page - 1)} rel="prev">← Previous</a>}{numbers.map((n,i) => <span className="pc-page-group" key={n}>{i > 0 && n > numbers[i-1] + 1 && <span className="pc-ellipsis" aria-hidden="true">…</span>}<a className="pc-page-number" href={catalogPath(route.brand, route.model, n)} aria-current={n === route.page ? 'page' : undefined} aria-label={`Page ${n}`}>{n}</a></span>)}{route.page < route.pages && <a className="pc-page-number" href={catalogPath(route.brand, route.model, route.page + 1)} rel="next">Next →</a>}</nav>;
 }
 

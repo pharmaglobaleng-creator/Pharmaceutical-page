@@ -58,6 +58,12 @@ def get_title(text: str) -> str:
     return clean(match.group(1)) if match else ""
 
 
+def duplicate_key(title: str) -> str:
+    # Spacing, hyphens and a trailing ellipsis do not meaningfully distinguish
+    # catalog titles. Keep explicit supplier identifiers when these collide.
+    return re.sub(r"[^a-z0-9]", "", clean(title).casefold())
+
+
 def part_name(text: str, sku: str) -> str:
     match = re.search(r"<h1[^>]*>(.*?)</h1>", text, re.I | re.S)
     value = clean(match.group(1)) if match else sku
@@ -100,7 +106,7 @@ def main() -> int:
     for path in paths:
         text = path.read_text(encoding="utf-8")
         texts[path] = text
-        groups[get_title(text).casefold()].append(path)
+        groups[duplicate_key(get_title(text))].append(path)
 
     duplicate_groups = [group for key, group in groups.items() if key and len(group) > 1]
     changed = 0
@@ -124,7 +130,7 @@ def main() -> int:
 
     shortened_groups: dict[str, list[Path]] = defaultdict(list)
     for path in paths:
-        shortened_groups[get_title(texts[path]).casefold()].append(path)
+        shortened_groups[duplicate_key(get_title(texts[path]))].append(path)
     for group in shortened_groups.values():
         if len(group) > 1:
             for path in group:
@@ -140,7 +146,7 @@ def main() -> int:
     overlong = []
     for path in paths:
         title = get_title(path.read_text(encoding="utf-8"))
-        key = title.casefold()
+        key = duplicate_key(title)
         if key in final_titles:
             duplicates.append((final_titles[key], path, title))
         else:
