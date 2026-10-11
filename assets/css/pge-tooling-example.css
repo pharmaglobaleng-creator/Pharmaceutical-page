@@ -1,0 +1,7 @@
+/* Scoped service illustration: preserves surrounding page layouts. */
+.pge-tooling-example{max-width:1120px;margin:48px auto;padding:0 24px;color:inherit}
+.pge-tooling-example figure{margin:0 0 24px}
+.pge-tooling-example img{display:block;width:100%;height:auto;border-radius:12px}
+.pge-tooling-example figcaption{font-size:14px;line-height:1.6;margin-top:10px}
+.pge-tooling-example p{line-height:1.7}
+.pge-tooling-example a{text-decoration:underline;text-underline-offset:3px}
