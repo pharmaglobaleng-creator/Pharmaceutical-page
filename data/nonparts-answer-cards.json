@@ -1225,8 +1225,8 @@
   ],
   "services/tablet-punch-coatings.html": [
     {
-      "question": "What should a coating recommendation explain first?",
-      "answer": "It should identify the observed application problem, why the proposed treatment is a candidate, and how the intended result will be evaluated under relevant conditions."
+      "question": "How do I choose a coating for tablet punches?",
+      "answer": "Choose a tablet punch coating based on the formulation, punch material, wear pattern, cleaning method, and problem you need to address. No coating works best for every application. Assess the tooling’s condition first, compare suitable options, and verify performance through an agreed trial before treating the full tool set."
     },
     {
       "question": "What is the best coating for tablet punches?",
@@ -1355,8 +1355,8 @@
       "answer": "Identify its location and distinguish retained material from a remaining surface feature through the agreed assessment. Determine whether removing it would compromise a required tooling attribute."
     },
     {
-      "question": "When should tablet punches be restored rather than replaced?",
-      "answer": "Consider restoration when inspection finds recoverable surface damage and the punch can retain its required dimensions, geometry and structural integrity. Cracks, unacceptable dimensional loss or irrecoverable engraving damage require a replacement or disposition decision. Compare incoming measurements, proposed material removal and post-work acceptance checks before weighing service cost and lead time."
+      "question": "Can worn tablet punches be restored instead of replaced?",
+      "answer": "Some worn tablet punches can be restored if their condition and dimensions remain suitable for service. Superficial surface damage may respond to controlled polishing or restoration. Cracks, substantial material loss, or wear beyond acceptable limits may require replacement. Inspection determines whether restoration is appropriate."
     },
     {
       "question": "Why record prior restoration history?",
@@ -1955,8 +1955,8 @@
       "answer": "Sticking can involve API and excipient properties, moisture, lubricant distribution, punch condition, surface chemistry and compression conditions. Compare batch records and inspected tools with an acceptable run before assigning a cause. A punch deposit alone does not prove that the tooling is defective."
     },
     {
-      "question": "Why does picking recur around the same letter or logo?",
-      "answer": "A repeated local defect warrants comparison of the corresponding engraving, retained material and approved drawing. Check whether it affects every matching feature or only selected tools before deciding between design review and surface recovery."
+      "question": "What can help prevent powder sticking inside punch logos?",
+      "answer": "Reducing powder sticking inside punch logos requires identifying whether the cause involves the tooling, formulation, or operating conditions. Cleaning, controlled polishing, engraving review, or a suitable coating may help when tooling contributes to the problem. Moisture, lubrication, and process conditions also need assessment; polishing alone will not resolve every case."
     },
     {
       "question": "What if the main problem is difficult ejection or band marking?",
