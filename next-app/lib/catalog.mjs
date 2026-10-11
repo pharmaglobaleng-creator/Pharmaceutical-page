@@ -38,7 +38,9 @@ export function routeDetails(route) {
   const model = manufacturer?.models.find(m => m.slug === route.model);
   const subject = manufacturer ? `${manufacturer.name}${model ? ` ${model.name}` : ''}` : '';
   const name = route.kind === 'home' ? 'Pharmaceutical Processing Replacement Parts' : route.kind === 'search' ? 'Search Replacement Parts' : `${subject} Replacement Parts`;
-  const title = `${name}${route.page > 1 ? ` — Page ${route.page}` : ''} | PharmaGlobalEng`;
+  // Keep the model and page number visible in these long pagination titles.
+  const titleName = route.brand === 'manesty' && route.page > 1 && ['betapress', 'layerpress'].includes(route.model) ? `${subject} Parts` : name;
+  const title = `${titleName}${route.page > 1 ? ` — Page ${route.page}` : ''} | PharmaGlobalEng`;
   const description = route.kind === 'home' ? 'Browse independent pharmaceutical-processing replacement components by manufacturer and machine model. View existing PGE identifiers, images, and catalog-supplied references, then request a quote.' : route.kind === 'search' ? 'Search the PharmaGlobalEng replacement-parts catalog by part name, machine model, OEM reference, or PGE number.' : `Browse ${route.total.toLocaleString('en-US')} independent replacement-part records for ${subject}.${route.page > 1 ? ` Page ${route.page} of ${route.pages}.` : ''} Compare existing part references and images; confirm compatibility during quotation.`;
   const wanted = new Set(route.skus || []);
   return { manufacturer, model, subject, name, title, description, products: data.parts.filter(p => wanted.has(p.sku)) };
