@@ -1,0 +1,39 @@
+TABLET COATING TRIAL RECORD — BLANK PLANNING TEMPLATE
+PharmaGlobalEng | https://pharmaglobaleng.com/services/tablet-punch-coatings.html#customer-coating-result
+
+Use within your approved investigation and production procedures. No result is implied. Do not share confidential formulation or customer information without permission.
+
+1. TOOL AND PROBLEM
+Tool/set ID:
+Press/model:
+Punch face or engraving region affected:
+Sticking/picking observations and matching tablet/punch photographs:
+Incoming inspection findings and acceptance requirements:
+Existing surface treatment (or unknown):
+
+2. BEFORE TREATMENT
+Observation dates and elapsed production time:
+Batch sizes and number of batches:
+Number of tablets inspected / number with the defined defect:
+Cleaning interruptions and reasons:
+Relevant operating conditions and formulation identifier:
+
+3. TREATMENT
+Provider, treatment identifier and date:
+Surfaces included; protected geometry:
+Post-treatment inspection results and limitations:
+
+4. AFTER TREATMENT
+Observation dates and elapsed production time:
+Batch sizes and number of batches:
+Number of tablets inspected / number with the same defined defect:
+Cleaning interruptions and reasons:
+Other changes to equipment, formulation or operating conditions:
+Are the before/after periods comparable? Explain:
+
+5. REVIEW AND PUBLICATION
+What do the records support, and what remains unknown?
+Who reviewed the comparison and when?
+Customer permission for publishing text, photographs and results:
+
+Keep batch counts separate from throughput, tool life and defect-rate claims.
