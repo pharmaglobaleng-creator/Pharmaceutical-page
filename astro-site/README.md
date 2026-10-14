@@ -1,6 +1,6 @@
 # PharmaGlobalEng Astro migration — non-parts pages
 
-Review preview only. Production HTML and the parts store are not changed by this branch.
+Approved non-parts Astro source. Generated HTML is published at the existing root URLs; the parts store remains separate.
 
 ## Scope
 
@@ -39,11 +39,11 @@ The migration validator compares content and metadata against existing productio
 - The homepage must not load the Next.js runtime.
 - Manual preview checks cover navigation, narrow layout, contact links, FAQ expansion and the engineering diagnostic tool.
 
-## Publishing later
+## Publishing updates
 
-Do not publish this branch as the Pages root: it deliberately retains the existing root files. Once the preview is approved, build and copy only the 75 allowlisted `dist` HTML files to their original repository paths. Keep the `parts/`, `_next/`, catalog data and shared asset files untouched. Review the final diff, disable/reconcile the old manual Next.js homepage deployment before future use, then publish through the existing GitHub Pages setup. No automatic deployment has been enabled by this migration.
+Build and copy only the 75 allowlisted `dist` HTML files to their original repository paths. Include the assessment checklist PDF in resources/engineering-toolkit/. Keep the `parts/`, `_next/`, catalog data and shared asset files untouched. Review the final diff and publish through the existing GitHub Pages setup. The legacy Next.js homepage workflow is retired; do not run old branch versions of it. No automatic deployment has been enabled by this migration.
 
-Recheck origin/main before staging; changes after the migration baseline must be carried forward. Rollback is the reverse of the eventual HTML-only publication commit.
+Recheck origin/main before staging; changes after the migration baseline must be carried forward. Rollback requires restoring the generated root HTML from the pre-migration revision; retain the separately maintained parts store.
 
 ## Semantic structure
 

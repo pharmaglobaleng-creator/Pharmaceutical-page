@@ -1,4 +1,4 @@
-name: Deploy Validated Next.js Homepage
+name: Retired Next.js homepage deployment
 
 on:
   push:
@@ -18,6 +18,8 @@ concurrency:
 
 jobs:
   validate-and-deploy:
+    # Homepage is maintained in astro-site. Retained for historical reference only.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout migration branch with history
