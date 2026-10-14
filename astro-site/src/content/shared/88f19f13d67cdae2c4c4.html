@@ -1,0 +1,51 @@
+<style>
+/* Contact-only styles; shared website styles and other pages are unchanged. */
+.contact-page .skip-link{position:fixed;top:8px;left:16px;z-index:100;padding:12px 18px;background:#f8fbff;color:#030611;border-radius:8px;transform:translateY(-160%)}
+.contact-page .skip-link:focus{transform:translateY(0)}
+.contact-page a:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}
+.contact-page .nav-links{flex-wrap:wrap;gap:18px}
+.contact-page .nav-links a{display:inline-flex;align-items:center;min-height:44px}
+.contact-page .hero{padding:48px 0 64px}
+.contact-page .contact-hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(350px,.9fr);align-items:center;gap:48px}
+.contact-page h1{font-size:clamp(32px,5.2vw,65px);line-height:1.07;letter-spacing:-.045em}
+.contact-page .contact-accent{color:var(--cyan)}
+.contact-page .contact-welcome{max-width:680px;margin:24px 0 16px;font-size:clamp(20px,2.1vw,25px);line-height:1.5;color:#f8fbff}
+.contact-page .contact-intro{max-width:650px;margin:0;color:var(--muted);font-size:18px}
+.contact-page .contact-note{margin:18px 0 0;color:var(--muted);font-size:14px}
+.contact-page .contact-panel{padding:30px;border:1px solid rgba(34,211,238,.34);border-radius:22px;background:linear-gradient(145deg,rgba(18,26,59,.97),rgba(5,13,32,.98));box-shadow:var(--shadow)}
+.contact-page .contact-panel h2{font-size:28px;line-height:1.2;letter-spacing:-.02em}
+.contact-page .contact-details{margin:22px 0 0}
+.contact-page .contact-details>div{padding:20px 0;border-top:1px solid var(--line)}
+.contact-page .contact-details>div:last-child{padding-bottom:0}
+.contact-page .contact-details dt{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.contact-page .contact-details dd{margin:4px 0 0}
+.contact-page .contact-details a{display:inline-block;padding:5px 0;color:#f8fbff;font-size:clamp(16px,1.65vw,21px);font-weight:800;line-height:1.5;text-decoration-thickness:1px;text-underline-offset:5px;overflow-wrap:anywhere}
+.contact-page .contact-details .contact-phone{font-size:clamp(26px,2.6vw,34px);letter-spacing:-.025em;white-space:nowrap;text-decoration:none}
+.contact-page .contact-details a:hover{color:var(--cyan)}
+.contact-page .contact-detail-note{display:block;color:var(--muted);font-size:14px;line-height:1.6}
+.contact-page .section{padding:68px 0}
+.contact-page .section-head{max-width:850px;margin-bottom:28px}
+.contact-page .section-head h2,.contact-page .contact-shipping h2,.contact-page .final-cta h2{font-size:clamp(29px,3.8vw,44px);line-height:1.14}
+.contact-page .section-head p{margin:16px 0 0;color:var(--muted);font-size:18px}
+.contact-page .contact-service{display:flex;flex-direction:column;min-width:0}
+.contact-page .contact-service h3,.contact-page .contact-checklist h3{font-size:22px;margin:0 0 14px}
+.contact-page .contact-service .contact-service-link{margin-top:auto;padding-top:24px;display:inline-flex;align-items:center;min-height:44px;color:var(--cyan);font-weight:800;text-underline-offset:4px}
+.contact-page .contact-checklist{padding:28px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025);min-width:0}
+.contact-page .contact-checklist ul{margin:0;padding-left:20px;color:var(--muted)}
+.contact-page .contact-checklist li+li{margin-top:12px}
+.contact-page .contact-checklist strong{color:var(--text)}
+.contact-page .contact-checklist .contact-note a{color:var(--cyan);text-underline-offset:4px}
+.contact-page .contact-shipping{margin-top:28px;padding:26px 28px;border:1px solid rgba(34,211,238,.23);border-left:4px solid var(--cyan);border-radius:0 16px 16px 0;background:rgba(34,211,238,.035)}
+.contact-page .contact-shipping h2{font-size:24px}
+.contact-page .contact-shipping p{color:var(--muted);margin:12px 0 0}
+.contact-page .contact-shipping strong{color:var(--text)}
+.contact-page .contact-quick-links{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:20px}
+.contact-page .contact-quick-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--cyan);text-underline-offset:4px}
+.contact-page .final-cta{padding:64px 0}
+.contact-page .final-cta .actions{justify-content:center}
+.contact-page footer{padding-bottom:110px}
+@media(max-width:1050px){.contact-page .nav{flex-wrap:wrap;gap:6px;padding:14px 0}.contact-page .nav-links{gap:8px 18px}.contact-page .contact-hero-grid{gap:26px}.contact-page h1{font-size:clamp(32px,4.5vw,50px)}}
+@media(max-width:850px){.contact-page .contact-hero-grid{grid-template-columns:1fr}.contact-page .contact-panel{max-width:620px;width:100%}.contact-page .grid-3{grid-template-columns:1fr}.contact-page .grid-2{grid-template-columns:1fr}.contact-page h1{font-size:clamp(32px,7vw,58px)}}
+@media(max-width:640px){.contact-page .site-header{position:relative}.contact-page .nav-links{gap:4px 14px}.contact-page .nav-links a{font-size:13px}.contact-page .hero{padding:30px 0 44px}.contact-page .section,.contact-page .final-cta{padding:46px 0}.contact-page .contact-panel,.contact-page .card,.contact-page .contact-checklist{padding:22px}.contact-page .contact-shipping{padding:22px}.contact-page .actions .btn{flex:1 1 220px;text-align:center;padding:12px 18px}.contact-page .contact-details a{font-size:18px}.contact-page .footer{flex-direction:column;gap:12px}.contact-page .footer a{min-height:44px;display:inline-flex;align-items:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.contact-page *{transition:none!important}}
+</style>

@@ -1,0 +1,715 @@
+[
+  {
+    "path": "about/index.html",
+    "head": "pages/about__index.head.html",
+    "body": "pages/about__index.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "about-restored-images"
+    }
+  },
+  {
+    "path": "coatings/chromium-nitride-crn.html",
+    "head": "pages/coatings__chromium-nitride-crn.head.html",
+    "body": "pages/coatings__chromium-nitride-crn.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "pge-landing-page"
+    }
+  },
+  {
+    "path": "coatings/diamond-like-carbon-dlc.html",
+    "head": "pages/coatings__diamond-like-carbon-dlc.head.html",
+    "body": "pages/coatings__diamond-like-carbon-dlc.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "pge-landing-page"
+    }
+  },
+  {
+    "path": "coatings/index.html",
+    "head": "pages/coatings__index.head.html",
+    "body": "pages/coatings__index.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "coatings/titanium-carbonitride-ticn.html",
+    "head": "pages/coatings__titanium-carbonitride-ticn.head.html",
+    "body": "pages/coatings__titanium-carbonitride-ticn.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "coatings/titanium-nitride-tin.html",
+    "head": "pages/coatings__titanium-nitride-tin.head.html",
+    "body": "pages/coatings__titanium-nitride-tin.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "components/capsule-machine-components.html",
+    "head": "pages/components__capsule-machine-components.head.html",
+    "body": "pages/components__capsule-machine-components.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "components/feed-frames.html",
+    "head": "pages/components__feed-frames.head.html",
+    "body": "pages/components__feed-frames.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "components/index.html",
+    "head": "pages/components__index.head.html",
+    "body": "pages/components__index.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "components/tablet-dies.html",
+    "head": "pages/components__tablet-dies.head.html",
+    "body": "pages/components__tablet-dies.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "components/tablet-punches.html",
+    "head": "pages/components__tablet-punches.head.html",
+    "body": "pages/components__tablet-punches.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "contact.html",
+    "head": "pages/contact.head.html",
+    "body": "pages/contact.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "contact-page"
+    }
+  },
+  {
+    "path": "editorial-standards.html",
+    "head": "pages/editorial-standards.head.html",
+    "body": "pages/editorial-standards.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "index.html",
+    "head": "pages/index.head.html",
+    "body": "pages/index.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "knowledge-center/equipment-materials.html",
+    "head": "pages/knowledge-center__equipment-materials.head.html",
+    "body": "pages/knowledge-center__equipment-materials.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "fact-library-page"
+    }
+  },
+  {
+    "path": "knowledge-center/index.html",
+    "head": "pages/knowledge-center__index.head.html",
+    "body": "pages/knowledge-center__index.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "knowledge-center/laboratory.html",
+    "head": "pages/knowledge-center__laboratory.head.html",
+    "body": "pages/knowledge-center__laboratory.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "fact-library-page"
+    }
+  },
+  {
+    "path": "knowledge-center/packaging-holding.html",
+    "head": "pages/knowledge-center__packaging-holding.head.html",
+    "body": "pages/knowledge-center__packaging-holding.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "fact-library-page"
+    }
+  },
+  {
+    "path": "knowledge-center/pharmaceutical-tooling-documentation-change-control.html",
+    "head": "pages/knowledge-center__pharmaceutical-tooling-documentation-change-control.head.html",
+    "body": "pages/knowledge-center__pharmaceutical-tooling-documentation-change-control.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "knowledge-center/pharmaceutical-tooling-surface-engineering-guide.html",
+    "head": "pages/knowledge-center__pharmaceutical-tooling-surface-engineering-guide.head.html",
+    "body": "pages/knowledge-center__pharmaceutical-tooling-surface-engineering-guide.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "knowledge-center/production.html",
+    "head": "pages/knowledge-center__production.head.html",
+    "body": "pages/knowledge-center__production.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "fact-library-page"
+    }
+  },
+  {
+    "path": "knowledge-center/quality-facilities.html",
+    "head": "pages/knowledge-center__quality-facilities.head.html",
+    "body": "pages/knowledge-center__quality-facilities.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "fact-library-page"
+    }
+  },
+  {
+    "path": "knowledge-center/records-returns.html",
+    "head": "pages/knowledge-center__records-returns.head.html",
+    "body": "pages/knowledge-center__records-returns.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {
+      "class": "fact-library-page"
+    }
+  },
+  {
+    "path": "knowledge-center/tablet-defect-investigation-evidence-guide.html",
+    "head": "pages/knowledge-center__tablet-defect-investigation-evidence-guide.head.html",
+    "body": "pages/knowledge-center__tablet-defect-investigation-evidence-guide.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "knowledge-center/tablet-tooling-inspection-measurement-guide.html",
+    "head": "pages/knowledge-center__tablet-tooling-inspection-measurement-guide.head.html",
+    "body": "pages/knowledge-center__tablet-tooling-inspection-measurement-guide.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "knowledge-center/tablet-tooling-lifecycle-guide.html",
+    "head": "pages/knowledge-center__tablet-tooling-lifecycle-guide.head.html",
+    "body": "pages/knowledge-center__tablet-tooling-lifecycle-guide.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "resources/engineering-toolkit/diagnostic-wizard.html",
+    "head": "pages/resources__engineering-toolkit__diagnostic-wizard.head.html",
+    "body": "pages/resources__engineering-toolkit__diagnostic-wizard.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "resources/engineering-toolkit/index.html",
+    "head": "pages/resources__engineering-toolkit__index.head.html",
+    "body": "pages/resources__engineering-toolkit__index.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "resources/engineering-toolkit/tooling-inspection-checklist.html",
+    "head": "pages/resources__engineering-toolkit__tooling-inspection-checklist.head.html",
+    "body": "pages/resources__engineering-toolkit__tooling-inspection-checklist.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/die-maintenance.html",
+    "head": "pages/services__die-maintenance.head.html",
+    "body": "pages/services__die-maintenance.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/engraving-optimization.html",
+    "head": "pages/services__engraving-optimization.head.html",
+    "body": "pages/services__engraving-optimization.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "pge-landing-page"
+    }
+  },
+  {
+    "path": "services/index.html",
+    "head": "pages/services__index.head.html",
+    "body": "pages/services__index.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/microfinish-surface-engineering.html",
+    "head": "pages/services__microfinish-surface-engineering.head.html",
+    "body": "pages/services__microfinish-surface-engineering.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "pge-landing-page"
+    }
+  },
+  {
+    "path": "services/pharmaceutical-tablet-compression-tooling.html",
+    "head": "pages/services__pharmaceutical-tablet-compression-tooling.head.html",
+    "body": "pages/services__pharmaceutical-tablet-compression-tooling.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/pharmaceutical-tooling-documentation.html",
+    "head": "pages/services__pharmaceutical-tooling-documentation.head.html",
+    "body": "pages/services__pharmaceutical-tooling-documentation.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/punch-die-maintenance.html",
+    "head": "pages/services__punch-die-maintenance.head.html",
+    "body": "pages/services__punch-die-maintenance.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/surface-engineering.html",
+    "head": "pages/services__surface-engineering.head.html",
+    "body": "pages/services__surface-engineering.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "surface-page"
+    }
+  },
+  {
+    "path": "services/tablet-press-sticking-troubleshooting.html",
+    "head": "pages/services__tablet-press-sticking-troubleshooting.head.html",
+    "body": "pages/services__tablet-press-sticking-troubleshooting.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "pge-landing-page"
+    }
+  },
+  {
+    "path": "services/tablet-press-troubleshooting.html",
+    "head": "pages/services__tablet-press-troubleshooting.head.html",
+    "body": "pages/services__tablet-press-troubleshooting.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/tablet-punch-coatings.html",
+    "head": "pages/services__tablet-punch-coatings.head.html",
+    "body": "pages/services__tablet-punch-coatings.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "coatings-page"
+    }
+  },
+  {
+    "path": "services/tablet-punch-polishing.html",
+    "head": "pages/services__tablet-punch-polishing.head.html",
+    "body": "pages/services__tablet-punch-polishing.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "polishing-page"
+    }
+  },
+  {
+    "path": "services/tablet-punch-restoration.html",
+    "head": "pages/services__tablet-punch-restoration.head.html",
+    "body": "pages/services__tablet-punch-restoration.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "restoration-page"
+    }
+  },
+  {
+    "path": "services/tablet-tooling-failure-analysis.html",
+    "head": "pages/services__tablet-tooling-failure-analysis.head.html",
+    "body": "pages/services__tablet-tooling-failure-analysis.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/tablet-tooling-inspection.html",
+    "head": "pages/services__tablet-tooling-inspection.head.html",
+    "body": "pages/services__tablet-tooling-inspection.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/tablet-tooling-lifecycle-management.html",
+    "head": "pages/services__tablet-tooling-lifecycle-management.head.html",
+    "body": "pages/services__tablet-tooling-lifecycle-management.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/tablet-tooling-preventive-maintenance.html",
+    "head": "pages/services__tablet-tooling-preventive-maintenance.head.html",
+    "body": "pages/services__tablet-tooling-preventive-maintenance.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "services/tooling-evaluation.html",
+    "head": "pages/services__tooling-evaluation.head.html",
+    "body": "pages/services__tooling-evaluation.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/compression-defects.html",
+    "head": "pages/solutions__compression-defects.head.html",
+    "body": "pages/solutions__compression-defects.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/compression-force-optimization.html",
+    "head": "pages/solutions__compression-force-optimization.head.html",
+    "body": "pages/solutions__compression-force-optimization.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/corrosion-and-wear.html",
+    "head": "pages/solutions__corrosion-and-wear.head.html",
+    "body": "pages/solutions__corrosion-and-wear.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/dwell-time-optimization.html",
+    "head": "pages/solutions__dwell-time-optimization.head.html",
+    "body": "pages/solutions__dwell-time-optimization.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/index.html",
+    "head": "pages/solutions__index.head.html",
+    "body": "pages/solutions__index.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/poor-tablet-release.html",
+    "head": "pages/solutions__poor-tablet-release.head.html",
+    "body": "pages/solutions__poor-tablet-release.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/powder-adhesion.html",
+    "head": "pages/solutions__powder-adhesion.head.html",
+    "body": "pages/solutions__powder-adhesion.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-binding.html",
+    "head": "pages/solutions__tablet-binding.head.html",
+    "body": "pages/solutions__tablet-binding.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-capping.html",
+    "head": "pages/solutions__tablet-capping.head.html",
+    "body": "pages/solutions__tablet-capping.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-chipping.html",
+    "head": "pages/solutions__tablet-chipping.head.html",
+    "body": "pages/solutions__tablet-chipping.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-compression-defects.html",
+    "head": "pages/solutions__tablet-compression-defects.head.html",
+    "body": "pages/solutions__tablet-compression-defects.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-hardness-optimization.html",
+    "head": "pages/solutions__tablet-hardness-optimization.head.html",
+    "body": "pages/solutions__tablet-hardness-optimization.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-lamination.html",
+    "head": "pages/solutions__tablet-lamination.head.html",
+    "body": "pages/solutions__tablet-lamination.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-picking.html",
+    "head": "pages/solutions__tablet-picking.head.html",
+    "body": "pages/solutions__tablet-picking.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-punch-abrasion.html",
+    "head": "pages/solutions__tablet-punch-abrasion.head.html",
+    "body": "pages/solutions__tablet-punch-abrasion.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-punch-corrosion.html",
+    "head": "pages/solutions__tablet-punch-corrosion.head.html",
+    "body": "pages/solutions__tablet-punch-corrosion.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-punch-cracking.html",
+    "head": "pages/solutions__tablet-punch-cracking.head.html",
+    "body": "pages/solutions__tablet-punch-cracking.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-punch-fatigue.html",
+    "head": "pages/solutions__tablet-punch-fatigue.head.html",
+    "body": "pages/solutions__tablet-punch-fatigue.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-punch-filming.html",
+    "head": "pages/solutions__tablet-punch-filming.head.html",
+    "body": "pages/solutions__tablet-punch-filming.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "pge-landing-page"
+    }
+  },
+  {
+    "path": "solutions/tablet-punch-galling.html",
+    "head": "pages/solutions__tablet-punch-galling.head.html",
+    "body": "pages/solutions__tablet-punch-galling.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-punch-scuffing.html",
+    "head": "pages/solutions__tablet-punch-scuffing.head.html",
+    "body": "pages/solutions__tablet-punch-scuffing.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-punch-wear.html",
+    "head": "pages/solutions__tablet-punch-wear.head.html",
+    "body": "pages/solutions__tablet-punch-wear.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-sticking-picking.html",
+    "head": "pages/solutions__tablet-sticking-picking.head.html",
+    "body": "pages/solutions__tablet-sticking-picking.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-sticking.html",
+    "head": "pages/solutions__tablet-sticking.head.html",
+    "body": "pages/solutions__tablet-sticking.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-weight-variation.html",
+    "head": "pages/solutions__tablet-weight-variation.head.html",
+    "body": "pages/solutions__tablet-weight-variation.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tool-steel-selection.html",
+    "head": "pages/solutions__tool-steel-selection.head.html",
+    "body": "pages/solutions__tool-steel-selection.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {
+      "class": "pge-landing-page"
+    }
+  },
+  {
+    "path": "tablet-punch-coatings.html",
+    "head": "pages/tablet-punch-coatings.head.html",
+    "body": "pages/tablet-punch-coatings.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "tablet-tooling.html",
+    "head": "pages/tablet-tooling.head.html",
+    "body": "pages/tablet-tooling.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  }
+]

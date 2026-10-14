@@ -1,0 +1,633 @@
+{
+  "6e43ebb849c05cd269b3": {
+    "type": "style",
+    "pages": [
+      "about/index.html"
+    ]
+  },
+  "acdac0585fe84ab74d95": {
+    "type": "header",
+    "pages": [
+      "about/index.html"
+    ]
+  },
+  "80b9b071e2e2c6e7b919": {
+    "type": "footer",
+    "pages": [
+      "about/index.html"
+    ]
+  },
+  "7b969ee1f3ec377e4b9c": {
+    "type": "header",
+    "pages": [
+      "coatings/chromium-nitride-crn.html",
+      "coatings/diamond-like-carbon-dlc.html",
+      "services/engraving-optimization.html",
+      "services/microfinish-surface-engineering.html",
+      "services/tablet-press-sticking-troubleshooting.html",
+      "solutions/tablet-punch-filming.html",
+      "solutions/tool-steel-selection.html"
+    ]
+  },
+  "c14c5522387c4e5a256a": {
+    "type": "footer",
+    "pages": [
+      "coatings/chromium-nitride-crn.html",
+      "coatings/diamond-like-carbon-dlc.html",
+      "services/die-maintenance.html",
+      "services/engraving-optimization.html",
+      "services/microfinish-surface-engineering.html",
+      "services/pharmaceutical-tablet-compression-tooling.html",
+      "services/punch-die-maintenance.html",
+      "services/surface-engineering.html",
+      "services/tablet-press-sticking-troubleshooting.html",
+      "services/tablet-press-troubleshooting.html",
+      "services/tablet-punch-coatings.html",
+      "services/tablet-punch-polishing.html",
+      "services/tablet-punch-restoration.html",
+      "services/tablet-tooling-preventive-maintenance.html",
+      "services/tooling-evaluation.html",
+      "solutions/compression-force-optimization.html",
+      "solutions/dwell-time-optimization.html",
+      "solutions/tablet-binding.html",
+      "solutions/tablet-capping.html",
+      "solutions/tablet-chipping.html",
+      "solutions/tablet-compression-defects.html",
+      "solutions/tablet-lamination.html",
+      "solutions/tablet-picking.html",
+      "solutions/tablet-punch-abrasion.html",
+      "solutions/tablet-punch-corrosion.html",
+      "solutions/tablet-punch-cracking.html",
+      "solutions/tablet-punch-fatigue.html",
+      "solutions/tablet-punch-filming.html",
+      "solutions/tablet-punch-galling.html",
+      "solutions/tablet-punch-scuffing.html",
+      "solutions/tablet-punch-wear.html",
+      "solutions/tablet-sticking-picking.html",
+      "solutions/tablet-sticking.html",
+      "solutions/tool-steel-selection.html"
+    ]
+  },
+  "87df5a804f18a23301b4": {
+    "type": "header",
+    "pages": [
+      "coatings/index.html",
+      "editorial-standards.html",
+      "knowledge-center/pharmaceutical-tooling-documentation-change-control.html",
+      "knowledge-center/tablet-defect-investigation-evidence-guide.html",
+      "knowledge-center/tablet-tooling-lifecycle-guide.html"
+    ]
+  },
+  "da0da677fe17b5064373": {
+    "type": "footer",
+    "pages": [
+      "coatings/index.html"
+    ]
+  },
+  "1f6947386337927aed97": {
+    "type": "header",
+    "pages": [
+      "coatings/titanium-carbonitride-ticn.html",
+      "coatings/titanium-nitride-tin.html",
+      "components/capsule-machine-components.html",
+      "components/tablet-dies.html",
+      "components/tablet-punches.html",
+      "solutions/corrosion-and-wear.html",
+      "solutions/poor-tablet-release.html",
+      "solutions/powder-adhesion.html"
+    ]
+  },
+  "e53ff1ff23e1e6f48fac": {
+    "type": "header",
+    "pages": [
+      "coatings/titanium-carbonitride-ticn.html"
+    ]
+  },
+  "345bd047ad1b37175739": {
+    "type": "footer",
+    "pages": [
+      "coatings/titanium-carbonitride-ticn.html",
+      "coatings/titanium-nitride-tin.html",
+      "components/capsule-machine-components.html",
+      "components/tablet-dies.html",
+      "components/tablet-punches.html",
+      "solutions/corrosion-and-wear.html",
+      "solutions/poor-tablet-release.html",
+      "solutions/powder-adhesion.html"
+    ]
+  },
+  "d078372064212f194323": {
+    "type": "header",
+    "pages": [
+      "coatings/titanium-nitride-tin.html"
+    ]
+  },
+  "b93c328a880cf06d425d": {
+    "type": "header",
+    "pages": [
+      "components/capsule-machine-components.html"
+    ]
+  },
+  "a78652d6b59bb2db75e7": {
+    "type": "style",
+    "pages": [
+      "components/feed-frames.html",
+      "solutions/compression-defects.html"
+    ]
+  },
+  "53abda5a3e07d6c1b0c4": {
+    "type": "header",
+    "pages": [
+      "components/feed-frames.html",
+      "resources/engineering-toolkit/diagnostic-wizard.html",
+      "resources/engineering-toolkit/index.html",
+      "resources/engineering-toolkit/tooling-inspection-checklist.html",
+      "services/index.html",
+      "solutions/compression-defects.html"
+    ]
+  },
+  "b71a341c1ca14ed45fd8": {
+    "type": "header",
+    "pages": [
+      "components/feed-frames.html"
+    ]
+  },
+  "246081d4672f11a592fe": {
+    "type": "header",
+    "pages": [
+      "components/index.html"
+    ]
+  },
+  "ec623ad459c8203af91b": {
+    "type": "footer",
+    "pages": [
+      "components/index.html"
+    ]
+  },
+  "ee03d06c8025f56283fe": {
+    "type": "header",
+    "pages": [
+      "components/tablet-dies.html"
+    ]
+  },
+  "113868f8a2255ceea36a": {
+    "type": "header",
+    "pages": [
+      "components/tablet-punches.html"
+    ]
+  },
+  "88f19f13d67cdae2c4c4": {
+    "type": "style",
+    "pages": [
+      "contact.html"
+    ]
+  },
+  "82d4c49cf5a01d1493db": {
+    "type": "header",
+    "pages": [
+      "contact.html"
+    ]
+  },
+  "00cace918d1854d675ef": {
+    "type": "footer",
+    "pages": [
+      "contact.html"
+    ]
+  },
+  "c950a79a4ab8d00711bb": {
+    "type": "footer",
+    "pages": [
+      "editorial-standards.html"
+    ]
+  },
+  "876c0f4e81e186138616": {
+    "type": "style",
+    "pages": [
+      "index.html"
+    ]
+  },
+  "816dcf416031a83e72db": {
+    "type": "header",
+    "pages": [
+      "index.html"
+    ]
+  },
+  "215736656f9819a7fe5a": {
+    "type": "header",
+    "pages": [
+      "knowledge-center/equipment-materials.html",
+      "knowledge-center/laboratory.html",
+      "knowledge-center/packaging-holding.html",
+      "knowledge-center/production.html",
+      "knowledge-center/quality-facilities.html",
+      "knowledge-center/records-returns.html"
+    ]
+  },
+  "d469b27e6954a2e39cec": {
+    "type": "footer",
+    "pages": [
+      "knowledge-center/equipment-materials.html",
+      "knowledge-center/laboratory.html",
+      "knowledge-center/packaging-holding.html",
+      "knowledge-center/production.html",
+      "knowledge-center/quality-facilities.html",
+      "knowledge-center/records-returns.html"
+    ]
+  },
+  "557b49095bbabbe566f5": {
+    "type": "header",
+    "pages": [
+      "knowledge-center/index.html"
+    ]
+  },
+  "bba30234d9390edeaf80": {
+    "type": "footer",
+    "pages": [
+      "knowledge-center/index.html"
+    ]
+  },
+  "b0920e8cf8fe952d3976": {
+    "type": "footer",
+    "pages": [
+      "knowledge-center/pharmaceutical-tooling-documentation-change-control.html",
+      "knowledge-center/pharmaceutical-tooling-surface-engineering-guide.html",
+      "knowledge-center/tablet-defect-investigation-evidence-guide.html",
+      "knowledge-center/tablet-tooling-inspection-measurement-guide.html",
+      "knowledge-center/tablet-tooling-lifecycle-guide.html"
+    ]
+  },
+  "b643c6a3099bc5de3630": {
+    "type": "header",
+    "pages": [
+      "knowledge-center/pharmaceutical-tooling-surface-engineering-guide.html"
+    ]
+  },
+  "f171863d69e862b64d15": {
+    "type": "header",
+    "pages": [
+      "knowledge-center/tablet-tooling-inspection-measurement-guide.html"
+    ]
+  },
+  "36f129e058a7f2116a3f": {
+    "type": "style",
+    "pages": [
+      "resources/engineering-toolkit/diagnostic-wizard.html"
+    ]
+  },
+  "7aaa7dbe708cb21d19ab": {
+    "type": "style",
+    "pages": [
+      "resources/engineering-toolkit/index.html",
+      "resources/engineering-toolkit/tooling-inspection-checklist.html"
+    ]
+  },
+  "3b349b386ba6de838db5": {
+    "type": "header",
+    "pages": [
+      "services/die-maintenance.html"
+    ]
+  },
+  "e4735c156978b7d089de": {
+    "type": "header",
+    "pages": [
+      "services/index.html"
+    ]
+  },
+  "ce18bfca46820351502b": {
+    "type": "header",
+    "pages": [
+      "services/pharmaceutical-tablet-compression-tooling.html"
+    ]
+  },
+  "487cd85aa05e03bfbcfc": {
+    "type": "header",
+    "pages": [
+      "services/pharmaceutical-tooling-documentation.html",
+      "services/tablet-tooling-lifecycle-management.html",
+      "solutions/tablet-hardness-optimization.html"
+    ]
+  },
+  "b706d7bf0f3552455020": {
+    "type": "footer",
+    "pages": [
+      "services/pharmaceutical-tooling-documentation.html"
+    ]
+  },
+  "d648a4528fc902b7579e": {
+    "type": "header",
+    "pages": [
+      "services/punch-die-maintenance.html"
+    ]
+  },
+  "088095e059039406e301": {
+    "type": "style",
+    "pages": [
+      "services/surface-engineering.html"
+    ]
+  },
+  "377efadc7db1e9c5bd44": {
+    "type": "header",
+    "pages": [
+      "services/surface-engineering.html"
+    ]
+  },
+  "a6791a9437c2066c3503": {
+    "type": "header",
+    "pages": [
+      "services/tablet-press-troubleshooting.html"
+    ]
+  },
+  "ad4ef92410237b094cd4": {
+    "type": "style",
+    "pages": [
+      "services/tablet-punch-coatings.html"
+    ]
+  },
+  "8b6e402c9847c2df7207": {
+    "type": "style",
+    "pages": [
+      "services/tablet-punch-coatings.html",
+      "services/tablet-punch-polishing.html",
+      "solutions/tablet-binding.html",
+      "solutions/tablet-capping.html",
+      "solutions/tablet-compression-defects.html",
+      "solutions/tablet-lamination.html",
+      "solutions/tablet-picking.html"
+    ]
+  },
+  "c70c700295199e0c82ab": {
+    "type": "header",
+    "pages": [
+      "services/tablet-punch-coatings.html"
+    ]
+  },
+  "52c5131fdf1e8f1b4038": {
+    "type": "style",
+    "pages": [
+      "services/tablet-punch-polishing.html"
+    ]
+  },
+  "1133d0366fb26e704ba5": {
+    "type": "header",
+    "pages": [
+      "services/tablet-punch-polishing.html"
+    ]
+  },
+  "96ab2cd437fe5d77831d": {
+    "type": "style",
+    "pages": [
+      "services/tablet-punch-restoration.html"
+    ]
+  },
+  "55e42eea2c7c0a58a88b": {
+    "type": "header",
+    "pages": [
+      "services/tablet-punch-restoration.html"
+    ]
+  },
+  "773b622ad7ce02395a8e": {
+    "type": "header",
+    "pages": [
+      "services/tablet-tooling-failure-analysis.html",
+      "tablet-tooling.html"
+    ]
+  },
+  "589f4935c93394ad1f8e": {
+    "type": "footer",
+    "pages": [
+      "services/tablet-tooling-failure-analysis.html"
+    ]
+  },
+  "e2122f12e61b6b30bfdf": {
+    "type": "header",
+    "pages": [
+      "services/tablet-tooling-inspection.html"
+    ]
+  },
+  "1c128ed0e83390ec236a": {
+    "type": "footer",
+    "pages": [
+      "services/tablet-tooling-inspection.html"
+    ]
+  },
+  "2413c271e0be6e5442e7": {
+    "type": "footer",
+    "pages": [
+      "services/tablet-tooling-lifecycle-management.html"
+    ]
+  },
+  "7b1c7473acb73d554981": {
+    "type": "header",
+    "pages": [
+      "services/tablet-tooling-preventive-maintenance.html"
+    ]
+  },
+  "34d22e50350e48921d27": {
+    "type": "header",
+    "pages": [
+      "services/tooling-evaluation.html"
+    ]
+  },
+  "e683fac115e7f0b48fa3": {
+    "type": "header",
+    "pages": [
+      "solutions/compression-defects.html"
+    ]
+  },
+  "1cc3ddcff20733e7b492": {
+    "type": "header",
+    "pages": [
+      "solutions/compression-force-optimization.html"
+    ]
+  },
+  "9cb66b09765189dac551": {
+    "type": "header",
+    "pages": [
+      "solutions/corrosion-and-wear.html"
+    ]
+  },
+  "246d001f372d08852274": {
+    "type": "header",
+    "pages": [
+      "solutions/dwell-time-optimization.html"
+    ]
+  },
+  "d7be163da81410f4da5d": {
+    "type": "header",
+    "pages": [
+      "solutions/index.html"
+    ]
+  },
+  "7d8a945f82843802785c": {
+    "type": "footer",
+    "pages": [
+      "solutions/index.html"
+    ]
+  },
+  "fe97669babca3d1dca60": {
+    "type": "header",
+    "pages": [
+      "solutions/poor-tablet-release.html"
+    ]
+  },
+  "6e0a98eef2a33460b94e": {
+    "type": "header",
+    "pages": [
+      "solutions/powder-adhesion.html"
+    ]
+  },
+  "d801b1bb02a9b68d0675": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-binding.html"
+    ]
+  },
+  "5370013cabe9508d5580": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-capping.html"
+    ]
+  },
+  "b0543013ad90f94fccb2": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-chipping.html"
+    ]
+  },
+  "2af9c9b29a91f10010bb": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-compression-defects.html"
+    ]
+  },
+  "46ab12d8822e368123ab": {
+    "type": "footer",
+    "pages": [
+      "solutions/tablet-hardness-optimization.html"
+    ]
+  },
+  "cfd2f14c0ef871a30803": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-lamination.html"
+    ]
+  },
+  "da20e032b8cde3020c6d": {
+    "type": "style",
+    "pages": [
+      "solutions/tablet-picking.html",
+      "solutions/tablet-sticking.html"
+    ]
+  },
+  "fe848ba4617fac7531db": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-picking.html",
+      "solutions/tablet-sticking.html"
+    ]
+  },
+  "53b0eb3a9df90fa94c12": {
+    "type": "style",
+    "pages": [
+      "solutions/tablet-punch-abrasion.html",
+      "solutions/tablet-punch-galling.html",
+      "solutions/tablet-punch-scuffing.html"
+    ]
+  },
+  "63f1f08c642ad6aad3e4": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-punch-abrasion.html"
+    ]
+  },
+  "db6ee1845a55c60b1853": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-punch-corrosion.html"
+    ]
+  },
+  "50b7a8a3ef39abbf8e25": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-punch-cracking.html"
+    ]
+  },
+  "291d4bbf20d24ea66490": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-punch-fatigue.html"
+    ]
+  },
+  "015607d7b8ba53754eaa": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-punch-galling.html"
+    ]
+  },
+  "c05fbddc3421d455116b": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-punch-scuffing.html"
+    ]
+  },
+  "0ae363fa5d1c8b441f4f": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-punch-wear.html"
+    ]
+  },
+  "59f4e0f85dc00f8991aa": {
+    "type": "style",
+    "pages": [
+      "solutions/tablet-sticking-picking.html"
+    ]
+  },
+  "625fcbfac81455375567": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-sticking-picking.html"
+    ]
+  },
+  "4724f2dbdb74857eddb2": {
+    "type": "style",
+    "pages": [
+      "solutions/tablet-sticking.html"
+    ]
+  },
+  "a9aedc91ca7a266b66de": {
+    "type": "style",
+    "pages": [
+      "solutions/tablet-sticking.html"
+    ]
+  },
+  "4d23a6647671999e5ace": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-sticking.html"
+    ]
+  },
+  "73b6e585c1cd4ef353c9": {
+    "type": "header",
+    "pages": [
+      "solutions/tablet-weight-variation.html"
+    ]
+  },
+  "e984e818b31b156715f0": {
+    "type": "footer",
+    "pages": [
+      "solutions/tablet-weight-variation.html"
+    ]
+  },
+  "8167e185e3406c543c10": {
+    "type": "style",
+    "pages": [
+      "tablet-tooling.html"
+    ]
+  },
+  "6602580d37bc1ca3df0a": {
+    "type": "footer",
+    "pages": [
+      "tablet-tooling.html"
+    ]
+  }
+}

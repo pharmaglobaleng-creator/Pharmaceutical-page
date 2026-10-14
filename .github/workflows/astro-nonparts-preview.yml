@@ -1,0 +1,23 @@
+name: Validate Astro non-parts preview
+on:
+  pull_request:
+    paths: ['astro-site/**', '.github/workflows/astro-nonparts-preview.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: astro-site/package-lock.json
+      - run: npm ci
+        working-directory: astro-site
+      - run: npm run build
+        working-directory: astro-site

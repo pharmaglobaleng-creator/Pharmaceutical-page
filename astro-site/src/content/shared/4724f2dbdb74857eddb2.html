@@ -1,0 +1,37 @@
+<style>/* Article styles are scoped so the site's shared header and footer stay unchanged. */
+html{scroll-padding-top:110px}
+.skip{position:fixed;left:1rem;top:-8rem;z-index:100;background:#fff;color:#172437;padding:.75rem 1rem;border-radius:6px}.skip:focus{top:1rem}
+.crumbs{width:min(940px,calc(100% - 40px));margin:2rem auto 0;font-size:.875rem;color:var(--muted)}.crumbs a{color:var(--cyan)}
+#main{width:min(940px,calc(100% - 40px));margin:0 auto;padding:2rem 0 4rem;font-size:18px;line-height:1.75;color:var(--text)}
+#main a{color:var(--cyan);text-underline-offset:3px}#main a:hover{text-decoration-thickness:2px}#main a:focus-visible,#main [tabindex]:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}
+#main h1{max-width:900px;margin:0 0 1.6rem;font-size:clamp(2.1rem,4.8vw,3.6rem);line-height:1.12;letter-spacing:-.035em}
+#main h2{margin:0 0 .9rem;font-size:clamp(1.45rem,3vw,2rem);line-height:1.3;letter-spacing:-.02em}
+#main p{margin:.7rem 0 1rem}#main .eyebrow{margin:0 0 1rem;font-size:.76rem;letter-spacing:.1em}
+#main .lead{max-width:none;margin:0 0 1rem;font-size:1.18rem;line-height:1.7;color:var(--muted)}
+#main .article-head{padding-bottom:1.8rem;border-bottom:1px solid var(--line)}
+#main section,#main aside.related{margin-top:2.5rem}
+#main .ref{font-size:.68em;line-height:0;vertical-align:super;margin-left:.28em;white-space:nowrap}#main .ref a{text-decoration:none}
+#main .table-wrap{overflow-x:auto;margin:1.4rem 0;border:1px solid var(--line);border-radius:10px}
+#main table{width:100%;min-width:480px;border-collapse:collapse;background:var(--bg-alt);font-size:1rem;line-height:1.55}
+#main caption{text-align:left;font-size:.9rem;padding:.7rem;color:var(--muted)}
+#main th,#main td{text-align:left;vertical-align:top;padding:.9rem;border-top:1px solid var(--line);border-bottom:0}
+#main th{background:var(--panel);color:var(--text);font-weight:700;text-transform:none;letter-spacing:normal;font-size:1rem}
+#main td{color:var(--muted)}#main th:first-child,#main td:first-child{width:38%}#main td:first-child{font-weight:700;color:var(--text)}
+#main .small{font-size:.87rem;color:var(--muted)}
+#main .contact{padding:1.6rem 1.8rem;border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:0 12px 12px 0;background:var(--bg-alt)}
+#main .contact-links{font-size:1.15rem;font-weight:700;overflow-wrap:anywhere}
+#main .related{display:block;padding-top:1.5rem;border-top:1px solid var(--line)}#main .related h2,#main .references h2{font-size:1.25rem}
+#main .related p{font-size:1rem}#main .related a{display:inline;padding:0;border:0;border-radius:0;background:none;text-decoration:underline;font-weight:inherit}
+#main .references{padding:1.4rem;border:1px solid var(--line);border-radius:12px;font-size:.85rem;line-height:1.65;color:var(--muted)}#main .references ol{padding-left:1.3rem}#main .references li{padding:.25rem 0}
+#main .defect-examples{padding-top:1.4rem;border-top:1px solid var(--line)}
+#main .defect-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin:1.4rem 0}
+#main .defect-photo{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg-alt);min-width:0}
+#main .defect-photo-stage{height:320px;padding:10px;display:flex;align-items:center;justify-content:center;background:var(--panel)}
+#main .defect-photo-stage img{display:block;max-width:100%;max-height:300px;width:auto;height:auto;object-fit:contain}
+#main .defect-photo figcaption{padding:1.05rem 1.15rem;font-size:.92rem;line-height:1.6}
+#main .defect-photo figcaption>strong{display:block;font-size:1rem;line-height:1.35}#main .defect-photo figcaption p{margin:.65rem 0}
+#main .photo-credit{font-size:.76rem;line-height:1.55;color:var(--muted)}#main .photo-format{font-size:.73rem;color:var(--muted)}#main .photo-credit a{overflow-wrap:anywhere}
+@media(max-width:650px){#main{font-size:17px;padding-top:1.5rem}#main .defect-photo-grid{grid-template-columns:1fr;gap:1.2rem}#main .defect-photo-stage{height:300px}#main .defect-photo-stage img{max-height:280px}#main .contact{padding:1.2rem}#main .eyebrow{font-size:.68rem}#main .lead{font-size:1.08rem}.crumbs{font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:white;color:black}.site-header,.crumbs,body>footer,.skip{display:none}#main{width:100%;padding:0;font-size:11pt;color:black}#main h1{font-size:25pt}#main h2{font-size:15pt;break-after:avoid}#main a,#main p,#main td,#main .small,#main .lead,#main .photo-credit,#main .photo-format{color:black}#main table,#main th,#main .contact,#main .defect-photo,#main .defect-photo-stage{background:white}#main .defect-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#main .defect-photo{break-inside:avoid}#main .defect-photo-stage{height:180px}#main .defect-photo-stage img{max-height:160px}#main .references{font-size:9pt}}
+</style>

@@ -1,0 +1,9 @@
+---
+// All fragments are trusted, version-controlled site content, never user input.
+const { htmlAttributes, bodyAttributes, head, body } = Astro.props;
+---
+<!doctype html>
+<html {...htmlAttributes}>
+  <head><Fragment set:html={head} /></head>
+  <body {...bodyAttributes}><Fragment set:html={body} /></body>
+</html>

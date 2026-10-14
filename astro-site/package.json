@@ -1,0 +1,16 @@
+{
+  "name": "pharmaglobaleng-astro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/stage-public.mjs && astro build && node scripts/restore-directory-urls.mjs && node scripts/validate-build.mjs",
+    "preview": "astro preview --host 127.0.0.1",
+    "dev": "node scripts/stage-public.mjs && astro dev --host 127.0.0.1"
+  },
+  "dependencies": {
+    "astro": "7.3.8"
+  },
+  "devDependencies": {
+    "cheerio": "1.2.0"
+  }
+}

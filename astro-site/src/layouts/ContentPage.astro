@@ -1,0 +1,12 @@
+---
+import Document from './Document.astro';
+import manifest from '../content/manifest.json';
+const { path } = Astro.props;
+const page = manifest.find(item => item.path === path);
+if (!page) throw new Error(`Unknown page: ${path}`);
+const fragments = import.meta.glob('../content/**/*.html', { query: '?raw', import: 'default', eager: true });
+const expand = (value) => value.replace(/<!--PGE_SHARED:([a-f0-9]+)-->/g, (_, hash) => fragments[`../content/shared/${hash}.html`]);
+const head = expand(fragments[`../content/${page.head}`]);
+const body = expand(fragments[`../content/${page.body}`]);
+---
+<Document htmlAttributes={page.htmlAttributes} bodyAttributes={page.bodyAttributes} head={head} body={body} />
