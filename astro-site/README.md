@@ -44,3 +44,7 @@ The migration validator compares content and metadata against existing productio
 Do not publish this branch as the Pages root: it deliberately retains the existing root files. Once the preview is approved, build and copy only the 75 allowlisted `dist` HTML files to their original repository paths. Keep the `parts/`, `_next/`, catalog data and shared asset files untouched. Review the final diff, disable/reconcile the old manual Next.js homepage deployment before future use, then publish through the existing GitHub Pages setup. No automatic deployment has been enabled by this migration.
 
 Recheck origin/main before staging; changes after the migration baseline must be carried forward. Rollback is the reverse of the eventual HTML-only publication commit.
+
+## Semantic structure
+
+`validate-semantics.mjs` audits all content pages at build time; the original redirect is excluded. Keep one H1 and main landmark per content page. Use headings by section depth, label navigation purpose, and give table headers the correct scope. Main landmarks use `tabindex="-1"` so skip links can move keyboard focus without adding a stop to the tab sequence. The shared document layout contains the focus-only skip-link styling and a narrow card-heading compatibility rule; it does not change the site-wide assets or the parts store.

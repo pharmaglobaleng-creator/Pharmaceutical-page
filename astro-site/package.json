@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/stage-public.mjs && astro build && node scripts/restore-directory-urls.mjs && node scripts/validate-build.mjs",
+    "build": "node scripts/stage-public.mjs && astro build && node scripts/restore-directory-urls.mjs && node scripts/validate-build.mjs && node scripts/validate-semantics.mjs",
     "preview": "astro preview --host 127.0.0.1",
     "dev": "node scripts/stage-public.mjs && astro dev --host 127.0.0.1"
   },

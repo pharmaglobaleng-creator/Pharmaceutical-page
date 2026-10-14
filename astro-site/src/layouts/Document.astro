@@ -4,6 +4,14 @@ const { htmlAttributes, bodyAttributes, head, body } = Astro.props;
 ---
 <!doctype html>
 <html {...htmlAttributes}>
-  <head><Fragment set:html={head} /></head>
+  <head>
+    <Fragment set:html={head} />
+    <style is:inline>
+      .pge-semantic-skip { position:fixed; top:12px; left:12px; z-index:10000; padding:12px 18px; background:#fff; color:#071126; font:700 16px/1.4 Arial,sans-serif; border:2px solid #168dff; border-radius:6px; transform:translateY(-200%); }
+      .pge-semantic-skip:focus { transform:translateY(0); }
+      /* Preserve the original card appearance after correcting heading levels. */
+      .pge-landing-page .guide-service-options h2.pge-semantic-card-heading { margin:0 0 10px; font-size:20px; line-height:1.22; letter-spacing:normal; font-weight:700; }
+    </style>
+  </head>
   <body {...bodyAttributes}><Fragment set:html={body} /></body>
 </html>
