@@ -711,5 +711,14 @@
       "lang": "en-US"
     },
     "bodyAttributes": {}
+  },
+  {
+    "path": "solutions/tablet-sticking-picking-investigation.html",
+    "head": "pages/solutions__tablet-sticking-picking-investigation.head.html",
+    "body": "pages/solutions__tablet-sticking-picking-investigation.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
   }
 ]
