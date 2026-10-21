@@ -1,12 +1,22 @@
 ---
 import Document from './Document.astro';
 import manifest from '../content/manifest.json';
+import { escapeHtml, industryNewsUrl, publishedIndustryNews } from '../lib/industry-news.js';
 const { path } = Astro.props;
 const page = manifest.find(item => item.path === path);
 if (!page) throw new Error(`Unknown page: ${path}`);
 const fragments = import.meta.glob('../content/**/*.html', { query: '?raw', import: 'default', eager: true });
 const expand = (value) => value.replace(/<!--PGE_SHARED:([a-f0-9]+)-->/g, (_, hash) => fragments[`../content/shared/${hash}.html`]);
 const head = expand(fragments[`../content/${page.head}`]);
-const body = expand(fragments[`../content/${page.body}`]);
+let body = expand(fragments[`../content/${page.body}`]);
+let finalHead = head;
+if (page.path === 'index.html') {
+  finalHead += '<link rel="alternate" type="application/rss+xml" title="PharmaGlobalEng Industry Updates" href="/industry-news.xml">';
+  if (publishedIndustryNews.length) {
+    const cards = publishedIndustryNews.slice(0, 3).map((article) => `<article class="card"><h3><a href="${industryNewsUrl(article.slug).replace('https://pharmaglobaleng.com', '')}">${escapeHtml(article.title)}</a></h3><p>${escapeHtml(article.summary)}</p><p class="small">Published ${new Date(article.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</p></article>`).join('');
+    const latestNews = `<section class="section alt" data-pge-latest-news="true" aria-labelledby="pge-latest-news-title"><div class="wrap"><h2 id="pge-latest-news-title">Latest Industry Updates</h2><p>Source-checked updates and practical context for pharmaceutical tablet manufacturing and tooling.</p><div class="grid">${cards}</div><p><a href="/industry-news.xml">Subscribe to the RSS feed</a></p></div></section>`;
+    body = body.replace('</main>', `${latestNews}</main>`);
+  }
+}
 ---
-<Document htmlAttributes={page.htmlAttributes} bodyAttributes={page.bodyAttributes} head={head} body={body} />
+<Document htmlAttributes={page.htmlAttributes} bodyAttributes={page.bodyAttributes} head={finalHead} body={body} />

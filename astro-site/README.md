@@ -41,7 +41,7 @@ The migration validator compares content and metadata against existing productio
 
 ## Publishing updates
 
-Build and copy only the 75 allowlisted `dist` HTML files to their original repository paths. Include the assessment checklist PDF in resources/engineering-toolkit/. Keep the `parts/`, `_next/`, catalog data and shared asset files untouched. Review the final diff and publish through the existing GitHub Pages setup. The legacy Next.js homepage workflow is retired; do not run old branch versions of it. No automatic deployment has been enabled by this migration.
+Build and copy the 75 allowlisted `dist` HTML files to their original repository paths. When reviewed industry-news records exist, also publish the generated `dist/industry-news/*.html` files, `dist/industry-news.xml`, and `dist/industry-news-sitemap.xml`. Keep the `parts/`, `_next/`, catalog data and shared asset files untouched. Review the final diff and publish through the existing GitHub Pages setup. The legacy Next.js homepage workflow is retired; do not run old branch versions of it. No automatic deployment has been enabled by this migration.
 
 Recheck origin/main before staging; changes after the migration baseline must be carried forward. Rollback requires restoring the generated root HTML from the pre-migration revision; retain the separately maintained parts store.
 

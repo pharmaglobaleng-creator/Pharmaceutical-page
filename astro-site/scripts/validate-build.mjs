@@ -11,6 +11,9 @@ function snapshot(html) {
  const $=load(html);
  // The only added visible wording is a keyboard-focus-only accessibility link.
  $('[data-pge-semantic-skip]').remove();
+ // Editorial discovery additions are generated only from reviewed, published news records.
+ $('[data-pge-latest-news]').remove();
+ $('link[rel="alternate"][type="application/rss+xml"]').remove();
  const text=selector=>$(selector).map((i,e)=>norm($(e).text())).get();
  const attrs=selector=>$(selector).map((i,e)=>{const a={...e.attribs};if(a.charset)a.charset=a.charset.toLowerCase();return JSON.stringify(a,Object.keys(a).sort());}).get();
  const scripts=$('script').filter((i,e)=>e.attribs.type!=='application/ld+json'&&!String(e.attribs.src||'').startsWith('/_next/')&&!$(e).text().includes('self.__next_f')&&e.attribs.src!=='/assets/js/pge-analytics.js').map((i,e)=>({src:e.attribs.src||null,text:$(e).text()})).get();
