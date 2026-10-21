@@ -10,6 +10,8 @@ Astro renders the pages through `Document.astro` and `ContentPage.astro`. Editab
 
 The homepage no longer loads Next.js JavaScript or React hydration data. Its existing CSS remains available in `_next/` because the independent parts application still needs that directory. The existing native navigation script and a direct deferred analytics script remain active.
 
+Industry updates live as Markdown files with validated frontmatter under `src/content/news/`. One shared dynamic route renders them with the site template; published entries also appear in the homepage news section, RSS feed, and supplemental sitemap.
+
 ## Build and review
 
 Use Node 22 or newer supported by the pinned Astro version.

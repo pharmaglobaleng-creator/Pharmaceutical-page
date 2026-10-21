@@ -63,7 +63,7 @@ Technical reviewer name/role (if needed and confirmed):
 
 ## Site implementation notes
 
-The current Astro site does not use a Markdown blog collection for these pages. An article should be added through the existing page workflow: create the page route, add its content fragments and manifest entry, render the static HTML output, link it from a relevant hub, and add the public URL to the sitemap. Review the generated page and final diff before publication. Keep it unpublished until its source links, factual claims, and company claims have been checked. Use qualified technical review for engineering recommendations.
+Industry updates are Markdown files in `astro-site/src/content/news/`. Add one `.md` file with the validated frontmatter fields, then set `status: "published"` only after a human editor checks source links, factual claims, and company claims. Astro's shared dynamic route renders the Markdown with the site's template, and the build updates the homepage card, RSS feed, and supplemental sitemap. Use qualified technical review for engineering recommendations; do not imply a review that did not occur.
 
 The sitemap helps discovery but does not guarantee crawling or indexing. Confirm the public URL after deployment, then check indexing separately in Search Console.
 
@@ -71,6 +71,6 @@ The sitemap helps discovery but does not guarantee crawling or indexing. Confirm
 
 The Astro source has an RSS 2.0 feed at `/industry-news.xml` and a supplemental standard sitemap at `/industry-news-sitemap.xml`. The homepage advertises the feed and shows up to three recent news cards only when a record is published. Add a corresponding `Sitemap:` line to `robots.txt` when deploying these routes. These are discovery aids; none guarantees crawling, indexing, or ranking.
 
-News records live in `astro-site/src/content/industry-news.json`. Only records with `status: "published"`, a valid slug and date, visible author attribution, a summary, and article HTML are emitted as pages, feed items, sitemap URLs, or homepage links. Keep records in draft status until a human editor has checked sources, factual claims, and company statements. Use qualified technical review for engineering recommendations. Do not use a Google News sitemap or the Google Indexing API as an instant-indexing shortcut.
+News records are Markdown files in `astro-site/src/content/news/`, validated by the Astro content collection schema. Only entries with `status: "published"` are emitted as pages, feed items, sitemap URLs, or homepage links. Keep drafts at `status: "draft"` until a human editor has checked sources, factual claims, and company statements. Do not use a Google News sitemap or the Google Indexing API as an instant-indexing shortcut.
 
 During deployment, publish generated article pages plus both XML outputs, and separately verify that the main sitemap and article URLs are publicly accessible. Search Console URL inspection may request a crawl but cannot guarantee indexing.

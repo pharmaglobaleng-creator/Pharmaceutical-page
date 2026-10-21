@@ -8,6 +8,7 @@ const roots = new Set(['assets','parts','catalog-data','data','resources','_next
 rmSync('public', { recursive: true, force: true });
 for (const file of files) {
   if (pages.has(file)) continue;
+  if (['industry-news.xml','industry-news-sitemap.xml'].includes(file)) continue;
   const top = file.split('/')[0];
   const rootStatic = !file.includes('/') && (/\.(html|xml|txt|ico|png|webmanifest)$/.test(file) || ['CNAME','.nojekyll'].includes(file));
   if (!roots.has(top) && !rootStatic) continue;

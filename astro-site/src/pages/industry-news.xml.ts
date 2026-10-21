@@ -1,17 +1,19 @@
 import { escapeXml, industryNewsUrl, publishedIndustryNews } from '../lib/industry-news.js';
+import { getCollection } from 'astro:content';
 
 export const prerender = true;
 
-export function GET() {
-  const latestDate = publishedIndustryNews[0]?.publishedAt;
+export async function GET() {
+  const articles = publishedIndustryNews(await getCollection('industryNews'));
+  const latestDate = articles[0]?.data.publishedAt;
   const lastBuildDate = latestDate ? `<lastBuildDate>${new Date(latestDate).toUTCString()}</lastBuildDate>` : '';
-  const items = publishedIndustryNews.map((article) => `
+  const items = articles.map((entry) => `
     <item>
-      <title>${escapeXml(article.title)}</title>
-      <link>${escapeXml(industryNewsUrl(article.slug))}</link>
-      <guid isPermaLink="true">${escapeXml(industryNewsUrl(article.slug))}</guid>
-      <description>${escapeXml(article.summary)}</description>
-      <pubDate>${new Date(article.publishedAt).toUTCString()}</pubDate>
+      <title>${escapeXml(entry.data.title)}</title>
+      <link>${escapeXml(industryNewsUrl(entry.id))}</link>
+      <guid isPermaLink="true">${escapeXml(industryNewsUrl(entry.id))}</guid>
+      <description>${escapeXml(entry.data.description)}</description>
+      <pubDate>${new Date(entry.data.publishedAt).toUTCString()}</pubDate>
     </item>`).join('');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

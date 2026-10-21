@@ -1,31 +1,40 @@
 ---
+import { getCollection, render } from 'astro:content';
 import Document from '../../layouts/Document.astro';
 import { escapeHtml, industryNewsUrl, jsonLd, publishedIndustryNews } from '../../lib/industry-news.js';
 
-export function getStaticPaths() {
-  return publishedIndustryNews.map((article) => ({
-    params: { slug: article.slug },
+export async function getStaticPaths() {
+  return publishedIndustryNews(await getCollection('industryNews')).map((article) => ({
+    params: { slug: article.id },
     props: { article },
   }));
 }
 
 const { article } = Astro.props;
-const canonical = industryNewsUrl(article.slug);
-const safeTitle = escapeHtml(article.title);
-const safeSummary = escapeHtml(article.summary);
+const { Content } = await render(article);
+const canonical = industryNewsUrl(article.id);
+const safeTitle = escapeHtml(article.data.title);
+const safeSummary = escapeHtml(article.data.description);
 const schema = jsonLd({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: article.title,
-  description: article.summary,
+  headline: article.data.title,
+  description: article.data.description,
   mainEntityOfPage: canonical,
-  datePublished: article.publishedAt,
-  ...(article.modifiedAt ? { dateModified: article.modifiedAt } : {}),
-  author: { '@type': 'Organization', name: article.authorName, url: 'https://pharmaglobaleng.com/' },
+  datePublished: article.data.publishedAt,
+  author: { '@type': 'Organization', name: article.data.authorName, url: 'https://pharmaglobaleng.com/' },
   publisher: { '@type': 'Organization', name: 'PharmaGlobalEng', url: 'https://pharmaglobaleng.com/' },
 });
 const head = `<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="index,follow"><title>${safeTitle} | PharmaGlobalEng</title><meta name="description" content="${safeSummary}"><link rel="canonical" href="${canonical}"><link rel="stylesheet" href="/assets/css/pharmaglobaleng.css"><script type="application/ld+json">${schema}</script><style>.industry-news{max-width:900px;margin:3rem auto;padding:clamp(1.25rem,4vw,3.5rem);background:#fff;border:1px solid #d9e2e8;border-radius:12px;color:#243442;font:17px/1.72 system-ui,-apple-system,"Segoe UI",sans-serif}.industry-news h1,.industry-news h2{color:#12324b;line-height:1.25}.industry-news h1{font-size:clamp(2rem,5vw,3rem)}.industry-news h2{margin-top:2rem}.industry-news a{color:#075d91;text-underline-offset:3px}.industry-news .byline{color:#586b78;font-size:.9rem}.industry-news .source-note{padding:1rem;border-left:4px solid #176b9c;background:#f3f7f9}@media(max-width:600px){.industry-news{margin:1rem;padding:1.25rem;font-size:16px}}</style>`;
-const dateLabel = new Date(article.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
-const body = `<main id="main-content" tabindex="-1"><article class="industry-news"><p class="eyebrow">PharmaGlobalEng · Industry update</p><h1>${safeTitle}</h1><p class="byline">By ${escapeHtml(article.authorName)} · Published ${dateLabel}</p>${article.bodyHtml}</article></main>`;
+const dateLabel = new Date(article.data.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
-<Document htmlAttributes={{ lang: 'en-US' }} bodyAttributes={{}} head={head} body={body} />
+<Document htmlAttributes={{ lang: 'en-US' }} bodyAttributes={{}} head={head}>
+  <main id="main-content" tabindex="-1">
+    <article class="industry-news">
+      <p class="eyebrow">PharmaGlobalEng · Industry update</p>
+      <h1>{article.data.title}</h1>
+      <p class="byline">By {article.data.authorName} · Published {dateLabel}</p>
+      <Content />
+    </article>
+  </main>
+</Document>
