@@ -96,6 +96,15 @@
     "bodyAttributes": {}
   },
   {
+    "path": "components/tablet-press-replacement-parts.html",
+    "head": "pages/components__tablet-press-replacement-parts.head.html",
+    "body": "pages/components__tablet-press-replacement-parts.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
     "path": "components/tablet-punches.html",
     "head": "pages/components__tablet-punches.head.html",
     "body": "pages/components__tablet-punches.body.html",
@@ -230,6 +239,15 @@
     "path": "knowledge-center/tablet-defect-investigation-evidence-guide.html",
     "head": "pages/knowledge-center__tablet-defect-investigation-evidence-guide.head.html",
     "body": "pages/knowledge-center__tablet-defect-investigation-evidence-guide.body.html",
+    "htmlAttributes": {
+      "lang": "en-US"
+    },
+    "bodyAttributes": {}
+  },
+  {
+    "path": "knowledge-center/tablet-tooling-format-compatibility.html",
+    "head": "pages/knowledge-center__tablet-tooling-format-compatibility.head.html",
+    "body": "pages/knowledge-center__tablet-tooling-format-compatibility.body.html",
     "htmlAttributes": {
       "lang": "en-US"
     },
@@ -657,6 +675,15 @@
     "bodyAttributes": {}
   },
   {
+    "path": "solutions/tablet-sticking-picking-investigation.html",
+    "head": "pages/solutions__tablet-sticking-picking-investigation.head.html",
+    "body": "pages/solutions__tablet-sticking-picking-investigation.body.html",
+    "htmlAttributes": {
+      "lang": "en"
+    },
+    "bodyAttributes": {}
+  },
+  {
     "path": "solutions/tablet-sticking-picking.html",
     "head": "pages/solutions__tablet-sticking-picking.head.html",
     "body": "pages/solutions__tablet-sticking-picking.body.html",
@@ -709,15 +736,6 @@
     "body": "pages/tablet-tooling.body.html",
     "htmlAttributes": {
       "lang": "en-US"
-    },
-    "bodyAttributes": {}
-  },
-  {
-    "path": "solutions/tablet-sticking-picking-investigation.html",
-    "head": "pages/solutions__tablet-sticking-picking-investigation.head.html",
-    "body": "pages/solutions__tablet-sticking-picking-investigation.body.html",
-    "htmlAttributes": {
-      "lang": "en"
     },
     "bodyAttributes": {}
   }
