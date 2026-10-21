@@ -37,7 +37,7 @@
 
   <url>
     <loc>https://pharmaglobaleng.com/components/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -204,7 +204,7 @@
 
   <url>
     <loc>https://pharmaglobaleng.com/solutions/tool-steel-selection.html</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -231,7 +231,7 @@
 
   <url>
     <loc>https://pharmaglobaleng.com/services/tablet-tooling-preventive-maintenance.html</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -343,8 +343,10 @@
 
   <url><loc>https://pharmaglobaleng.com/knowledge-center/tablet-tooling-lifecycle-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
   <url><loc>https://pharmaglobaleng.com/knowledge-center/tablet-defect-investigation-evidence-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
-  <url><loc>https://pharmaglobaleng.com/knowledge-center/tablet-tooling-inspection-measurement-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
-  <url><loc>https://pharmaglobaleng.com/knowledge-center/pharmaceutical-tooling-surface-engineering-guide.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://pharmaglobaleng.com/knowledge-center/tablet-tooling-inspection-measurement-guide.html</loc>
+    <lastmod>2026-10-21</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://pharmaglobaleng.com/knowledge-center/pharmaceutical-tooling-surface-engineering-guide.html</loc>
+    <lastmod>2026-10-21</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
   <url><loc>https://pharmaglobaleng.com/knowledge-center/pharmaceutical-tooling-documentation-change-control.html</loc><changefreq>yearly</changefreq><priority>0.70</priority></url>
 
   <url><loc>https://pharmaglobaleng.com/parts/kikusui/</loc>
@@ -16800,4 +16802,16 @@
   <url><loc>https://pharmaglobaleng.com/resources/engineering-toolkit/diagnostic-wizard.html</loc></url>
   <url><loc>https://pharmaglobaleng.com/resources/engineering-toolkit/tooling-inspection-checklist.html</loc></url>
   <url><loc>https://pharmaglobaleng.com/solutions/tablet-sticking-picking-investigation.html</loc><lastmod>2026-10-17</lastmod></url>
+  <url>
+    <loc>https://pharmaglobaleng.com/components/tablet-press-replacement-parts.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pharmaglobaleng.com/knowledge-center/tablet-tooling-format-compatibility.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
 </urlset>
