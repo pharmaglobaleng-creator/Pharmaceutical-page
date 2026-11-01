@@ -1,5 +1,6 @@
 # Public search and AI retrieval crawlers
-# These rules allow crawling; they do not guarantee indexing or citations.
+# Allow discovery and user-requested retrieval; keep model-training crawlers
+# governed by the Cloudflare-managed content signals and bot controls.
 
 User-agent: Googlebot
 Allow: /
@@ -20,15 +21,6 @@ User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: Claude-User
-Allow: /
-
-# Optional: allows Anthropic to collect content for model training.
-User-agent: ClaudeBot
-Allow: /
-
-# Optional: allows Google-Extended use for Gemini training/grounding.
-# Google Search and AI Overviews rely on Googlebot, not Google-Extended.
-User-agent: Google-Extended
 Allow: /
 
 User-agent: *
